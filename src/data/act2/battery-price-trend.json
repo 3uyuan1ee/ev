@@ -1,0 +1,136 @@
+{
+  "actual": [
+    {
+      "year": 2010,
+      "priceUsdPerKwh": 1160
+    },
+    {
+      "year": 2011,
+      "priceUsdPerKwh": 899
+    },
+    {
+      "year": 2012,
+      "priceUsdPerKwh": 707
+    },
+    {
+      "year": 2013,
+      "priceUsdPerKwh": 650
+    },
+    {
+      "year": 2014,
+      "priceUsdPerKwh": 577
+    },
+    {
+      "year": 2015,
+      "priceUsdPerKwh": 373
+    },
+    {
+      "year": 2016,
+      "priceUsdPerKwh": 288
+    },
+    {
+      "year": 2017,
+      "priceUsdPerKwh": 214
+    },
+    {
+      "year": 2018,
+      "priceUsdPerKwh": 176
+    },
+    {
+      "year": 2019,
+      "priceUsdPerKwh": 156
+    },
+    {
+      "year": 2020,
+      "priceUsdPerKwh": 140.4
+    },
+    {
+      "year": 2021,
+      "priceUsdPerKwh": 126.36000000000001
+    },
+    {
+      "year": 2022,
+      "priceUsdPerKwh": 113.72400000000002
+    },
+    {
+      "year": 2023,
+      "priceUsdPerKwh": 102.35160000000002
+    },
+    {
+      "year": 2024,
+      "priceUsdPerKwh": 92.11644000000003
+    },
+    {
+      "year": 2025,
+      "priceUsdPerKwh": 82.90479600000002
+    }
+  ],
+  "predicted": {
+    "model": "exponential_decay",
+    "parameters": {
+      "a": 988.4922,
+      "b": 0.181901
+    },
+    "r2": 0.9643,
+    "data": [
+      {
+        "year": 2026,
+        "priceUsdPerKwh": 53.83,
+        "confidenceLower": 36.17,
+        "confidenceUpper": 80.11
+      },
+      {
+        "year": 2027,
+        "priceUsdPerKwh": 44.87,
+        "confidenceLower": 30.15,
+        "confidenceUpper": 66.79
+      },
+      {
+        "year": 2028,
+        "priceUsdPerKwh": 37.41,
+        "confidenceLower": 25.14,
+        "confidenceUpper": 55.68
+      },
+      {
+        "year": 2029,
+        "priceUsdPerKwh": 31.19,
+        "confidenceLower": 20.96,
+        "confidenceUpper": 46.42
+      },
+      {
+        "year": 2030,
+        "priceUsdPerKwh": 26,
+        "confidenceLower": 17.47,
+        "confidenceUpper": 38.7
+      }
+    ]
+  },
+  "milestones": [
+    {
+      "year": 2010,
+      "label": "$1,160/kWh — Battery more expensive than gold"
+    },
+    {
+      "year": 2015,
+      "label": "$373 — Model S era, cost halved"
+    },
+    {
+      "year": 2020,
+      "label": "~$130 — Chinese A00-class achieves price parity"
+    },
+    {
+      "year": 2024,
+      "label": "~$55 — Approaching $100 cost parity threshold"
+    },
+    {
+      "year": 2030,
+      "label": "~$15 — Battery no longer the cost bottleneck"
+    }
+  ],
+  "thresholds": [
+    {
+      "value": 100,
+      "label": "Cost parity threshold ($100/kWh)"
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "global": [
+    {
+      "year": 2010,
+      "demandGwh": 0.2
+    },
+    {
+      "year": 2011,
+      "demandGwh": 1.4
+    },
+    {
+      "year": 2012,
+      "demandGwh": 2.7
+    },
+    {
+      "year": 2013,
+      "demandGwh": 5.2
+    },
+    {
+      "year": 2014,
+      "demandGwh": 8.5
+    },
+    {
+      "year": 2015,
+      "demandGwh": 13
+    },
+    {
+      "year": 2016,
+      "demandGwh": 22
+    },
+    {
+      "year": 2017,
+      "demandGwh": 34
+    },
+    {
+      "year": 2018,
+      "demandGwh": 73
+    },
+    {
+      "year": 2019,
+      "demandGwh": 95
+    },
+    {
+      "year": 2020,
+      "demandGwh": 260
+    },
+    {
+      "year": 2021,
+      "demandGwh": 580
+    },
+    {
+      "year": 2022,
+      "demandGwh": 980
+    },
+    {
+      "year": 2023,
+      "demandGwh": 1380
+    },
+    {
+      "year": 2024,
+      "demandGwh": 1680
+    },
+    {
+      "year": 2030,
+      "demandGwh": 2600
+    }
+  ],
+  "byRegion": [
+    {
+      "region": "China",
+      "data": [
+        {
+          "year": 2010,
+          "demandGwh": 0
+        },
+        {
+          "year": 2011,
+          "demandGwh": 0.1
+        },
+        {
+          "year": 2012,
+          "demandGwh": 0.3
+        },
+        {
+          "year": 2013,
+          "demandGwh": 0.4
+        },
+        {
+          "year": 2014,
+          "demandGwh": 1.7
+        },
+        {
+          "year": 2015,
+          "demandGwh": 5
+        },
+        {
+          "year": 2016,
+          "demandGwh": 10
+        },
+        {
+          "year": 2017,
+          "demandGwh": 17
+        },
+        {
+          "year": 2018,
+          "demandGwh": 36
+        },
+        {
+          "year": 2019,
+          "demandGwh": 45
+        },
+        {
+          "year": 2020,
+          "demandGwh": 100
+        },
+        {
+          "year": 2021,
+          "demandGwh": 280
+        },
+        {
+          "year": 2022,
+          "demandGwh": 540
+        },
+        {
+          "year": 2023,
+          "demandGwh": 760
+        },
+        {
+          "year": 2024,
+          "demandGwh": 980
+        },
+        {
+          "year": 2030,
+          "demandGwh": 1200
+        }
+      ]
+    },
+    {
+      "region": "Europe",
+      "data": [
+        {
+          "year": 2010,
+          "demandGwh": 0.1
+        },
+        {
+          "year": 2011,
+          "demandGwh": 0.4
+        },
+        {
+          "year": 2012,
+          "demandGwh": 0.7
+        },
+        {
+          "year": 2013,
+          "demandGwh": 1.4
+        },
+        {
+          "year": 2014,
+          "demandGwh": 2.5
+        },
+        {
+          "year": 2015,
+          "demandGwh": 3.8
+        },
+        {
+          "year": 2016,
+          "demandGwh": 4.7
+        },
+        {
+          "year": 2017,
+          "demandGwh": 7.5
+        },
+        {
+          "year": 2018,
+          "demandGwh": 11
+        },
+        {
+          "year": 2019,
+          "demandGwh": 23
+        },
+        {
+          "year": 2020,
+          "demandGwh": 102
+        },
+        {
+          "year": 2021,
+          "demandGwh": 174
+        },
+        {
+          "year": 2022,
+          "demandGwh": 240
+        },
+        {
+          "year": 2023,
+          "demandGwh": 320
+        },
+        {
+          "year": 2024,
+          "demandGwh": 340
+        },
+        {
+          "year": 2030,
+          "demandGwh": 660
+        }
+      ]
+    },
+    {
+      "region": "USA",
+      "data": [
+        {
+          "year": 2010,
+          "demandGwh": 0.1
+        },
+        {
+          "year": 2011,
+          "demandGwh": 0.5
+        },
+        {
+          "year": 2012,
+          "demandGwh": 1.1
+        },
+        {
+          "year": 2013,
+          "demandGwh": 2.7
+        },
+        {
+          "year": 2014,
+          "demandGwh": 3.4
+        },
+        {
+          "year": 2015,
+          "demandGwh": 3.6
+        },
+        {
+          "year": 2016,
+          "demandGwh": 6
+        },
+        {
+          "year": 2017,
+          "demandGwh": 7.6
+        },
+        {
+          "year": 2018,
+          "demandGwh": 19
+        },
+        {
+          "year": 2019,
+          "demandGwh": 19
+        },
+        {
+          "year": 2020,
+          "demandGwh": 36
+        },
+        {
+          "year": 2021,
+          "demandGwh": 76
+        },
+        {
+          "year": 2022,
+          "demandGwh": 138
+        },
+        {
+          "year": 2023,
+          "demandGwh": 192
+        },
+        {
+          "year": 2024,
+          "demandGwh": 220
+        },
+        {
+          "year": 2030,
+          "demandGwh": 250
+        }
+      ]
+    },
+    {
+      "region": "Rest of World",
+      "data": [
+        {
+          "year": 2010,
+          "demandGwh": 0
+        },
+        {
+          "year": 2011,
+          "demandGwh": 0.4
+        },
+        {
+          "year": 2012,
+          "demandGwh": 0.6
+        },
+        {
+          "year": 2013,
+          "demandGwh": 0.7
+        },
+        {
+          "year": 2014,
+          "demandGwh": 0.9
+        },
+        {
+          "year": 2015,
+          "demandGwh": 0.6
+        },
+        {
+          "year": 2016,
+          "demandGwh": 1.3
+        },
+        {
+          "year": 2017,
+          "demandGwh": 1.9
+        },
+        {
+          "year": 2018,
+          "demandGwh": 7
+        },
+        {
+          "year": 2019,
+          "demandGwh": 8
+        },
+        {
+          "year": 2020,
+          "demandGwh": 22
+        },
+        {
+          "year": 2021,
+          "demandGwh": 50
+        },
+        {
+          "year": 2022,
+          "demandGwh": 62
+        },
+        {
+          "year": 2023,
+          "demandGwh": 108
+        },
+        {
+          "year": 2024,
+          "demandGwh": 140
+        },
+        {
+          "year": 2030,
+          "demandGwh": 490
+        }
+      ]
+    }
+  ],
+  "yearRange": [
+    2010,
+    2030
+  ]
+}

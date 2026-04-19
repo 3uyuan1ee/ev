@@ -1,0 +1,344 @@
+{
+  "parameter": "Oil displacement",
+  "unit": "million lge",
+  "yearRange": [
+    2010,
+    2035
+  ],
+  "regions": [
+    {
+      "region": "China",
+      "data": [
+        {
+          "year": 2010,
+          "value": 6,
+          "percentage": 24
+        },
+        {
+          "year": 2011,
+          "value": 15,
+          "percentage": 17
+        },
+        {
+          "year": 2012,
+          "value": 27,
+          "percentage": 14.2
+        },
+        {
+          "year": 2013,
+          "value": 51,
+          "percentage": 12.1
+        },
+        {
+          "year": 2014,
+          "value": 150,
+          "percentage": 18.1
+        },
+        {
+          "year": 2015,
+          "value": 480,
+          "percentage": 32
+        },
+        {
+          "year": 2016,
+          "value": 620,
+          "percentage": 29.5
+        },
+        {
+          "year": 2017,
+          "value": 1500,
+          "percentage": 42.9
+        },
+        {
+          "year": 2018,
+          "value": 2900,
+          "percentage": 48.3
+        },
+        {
+          "year": 2019,
+          "value": 3900,
+          "percentage": 48.1
+        },
+        {
+          "year": 2020,
+          "value": 4500,
+          "percentage": 45.9
+        },
+        {
+          "year": 2021,
+          "value": 8800,
+          "percentage": 48.9
+        },
+        {
+          "year": 2022,
+          "value": 14000,
+          "percentage": 50
+        },
+        {
+          "year": 2023,
+          "value": 22000,
+          "percentage": 51.2
+        },
+        {
+          "year": 2024,
+          "value": 31000,
+          "percentage": 53.4
+        }
+      ]
+    },
+    {
+      "region": "USA",
+      "data": [
+        {
+          "year": 2010,
+          "value": 9,
+          "percentage": 36
+        },
+        {
+          "year": 2011,
+          "value": 37,
+          "percentage": 42
+        },
+        {
+          "year": 2012,
+          "value": 87,
+          "percentage": 45.8
+        },
+        {
+          "year": 2013,
+          "value": 240,
+          "percentage": 57.1
+        },
+        {
+          "year": 2014,
+          "value": 460,
+          "percentage": 55.4
+        },
+        {
+          "year": 2015,
+          "value": 630,
+          "percentage": 42
+        },
+        {
+          "year": 2016,
+          "value": 880,
+          "percentage": 41.9
+        },
+        {
+          "year": 2017,
+          "value": 1100,
+          "percentage": 31.4
+        },
+        {
+          "year": 2018,
+          "value": 1700,
+          "percentage": 28.3
+        },
+        {
+          "year": 2019,
+          "value": 2300,
+          "percentage": 28.4
+        },
+        {
+          "year": 2020,
+          "value": 2500,
+          "percentage": 25.5
+        },
+        {
+          "year": 2021,
+          "value": 4000,
+          "percentage": 22.2
+        },
+        {
+          "year": 2022,
+          "value": 6200,
+          "percentage": 22.1
+        },
+        {
+          "year": 2023,
+          "value": 9300,
+          "percentage": 21.6
+        },
+        {
+          "year": 2024,
+          "value": 12000,
+          "percentage": 20.7
+        }
+      ]
+    },
+    {
+      "region": "Europe",
+      "data": [
+        {
+          "year": 2010,
+          "value": 6,
+          "percentage": 24
+        },
+        {
+          "year": 2011,
+          "value": 17,
+          "percentage": 19.3
+        },
+        {
+          "year": 2012,
+          "value": 37,
+          "percentage": 19.5
+        },
+        {
+          "year": 2013,
+          "value": 73,
+          "percentage": 17.4
+        },
+        {
+          "year": 2014,
+          "value": 150,
+          "percentage": 18.1
+        },
+        {
+          "year": 2015,
+          "value": 270,
+          "percentage": 18
+        },
+        {
+          "year": 2016,
+          "value": 450,
+          "percentage": 21.4
+        },
+        {
+          "year": 2017,
+          "value": 660,
+          "percentage": 18.9
+        },
+        {
+          "year": 2018,
+          "value": 920,
+          "percentage": 15.3
+        },
+        {
+          "year": 2019,
+          "value": 1400,
+          "percentage": 17.3
+        },
+        {
+          "year": 2020,
+          "value": 2000,
+          "percentage": 20.4
+        },
+        {
+          "year": 2021,
+          "value": 3800,
+          "percentage": 21.1
+        },
+        {
+          "year": 2022,
+          "value": 5700,
+          "percentage": 20.4
+        },
+        {
+          "year": 2023,
+          "value": 8900,
+          "percentage": 20.7
+        },
+        {
+          "year": 2024,
+          "value": 10000,
+          "percentage": 17.2
+        }
+      ]
+    }
+  ],
+  "globalTotal": [
+    {
+      "year": 2010,
+      "value": 25
+    },
+    {
+      "year": 2011,
+      "value": 88
+    },
+    {
+      "year": 2012,
+      "value": 190
+    },
+    {
+      "year": 2013,
+      "value": 420
+    },
+    {
+      "year": 2014,
+      "value": 830
+    },
+    {
+      "year": 2015,
+      "value": 1500
+    },
+    {
+      "year": 2016,
+      "value": 2100
+    },
+    {
+      "year": 2017,
+      "value": 3500
+    },
+    {
+      "year": 2018,
+      "value": 6000
+    },
+    {
+      "year": 2019,
+      "value": 8100
+    },
+    {
+      "year": 2020,
+      "value": 9800
+    },
+    {
+      "year": 2021,
+      "value": 18000
+    },
+    {
+      "year": 2022,
+      "value": 28000
+    },
+    {
+      "year": 2023,
+      "value": 43000
+    },
+    {
+      "year": 2024,
+      "value": 58000
+    }
+  ],
+  "projectedTotal": [
+    {
+      "year": 2020,
+      "value": 9800,
+      "isProjection": true
+    },
+    {
+      "year": 2021,
+      "value": 18000,
+      "isProjection": true
+    },
+    {
+      "year": 2022,
+      "value": 28000,
+      "isProjection": true
+    },
+    {
+      "year": 2023,
+      "value": 43000,
+      "isProjection": true
+    },
+    {
+      "year": 2024,
+      "value": 58000,
+      "isProjection": true
+    },
+    {
+      "year": 2030,
+      "value": 210000,
+      "isProjection": true
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "vehicleTypes": [
+    {
+      "id": "subcompact_sedan",
+      "label": "Subcompact Sedan",
+      "msrp": { "icev": 22000, "bev": 29000, "phev": 26000, "hev": 24000 },
+      "depreciation": {
+        "icev": { "slope": -0.12, "intercept": 1.0 },
+        "bev": { "slope": -0.15, "intercept": 1.0 },
+        "phev": { "slope": -0.13, "intercept": 1.0 },
+        "hev": { "slope": -0.12, "intercept": 1.0 }
+      },
+      "annualCosts": {
+        "icev": { "fuel": 1500, "insurance": 1400, "maintenance": 800, "repair": 400, "tax": 300 },
+        "bev": { "fuel": 550, "insurance": 1600, "maintenance": 500, "repair": 200, "tax": 200 },
+        "phev": { "fuel": 900, "insurance": 1500, "maintenance": 650, "repair": 350, "tax": 250 },
+        "hev": { "fuel": 1100, "insurance": 1400, "maintenance": 700, "repair": 380, "tax": 300 }
+      },
+      "fuelEfficiency": { "icev": 7.5, "bev": 14.0, "phev": 4.5, "hev": 5.0 },
+      "batteryCapacityKwh": 40,
+      "manufacturingEmissions": { "icev": 7.0, "bev": 12.0, "phev": 10.0, "hev": 7.5 }
+    },
+    {
+      "id": "midsize_sedan",
+      "label": "Midsize Sedan",
+      "msrp": { "icev": 28000, "bev": 39000, "phev": 33000, "hev": 30000 },
+      "depreciation": {
+        "icev": { "slope": -0.11, "intercept": 1.0 },
+        "bev": { "slope": -0.14, "intercept": 1.0 },
+        "phev": { "slope": -0.12, "intercept": 1.0 },
+        "hev": { "slope": -0.11, "intercept": 1.0 }
+      },
+      "annualCosts": {
+        "icev": { "fuel": 1800, "insurance": 1700, "maintenance": 900, "repair": 500, "tax": 400 },
+        "bev": { "fuel": 650, "insurance": 1900, "maintenance": 550, "repair": 250, "tax": 250 },
+        "phev": { "fuel": 1100, "insurance": 1800, "maintenance": 700, "repair": 400, "tax": 350 },
+        "hev": { "fuel": 1300, "insurance": 1700, "maintenance": 800, "repair": 450, "tax": 400 }
+      },
+      "fuelEfficiency": { "icev": 8.0, "bev": 16.0, "phev": 5.0, "hev": 5.5 },
+      "batteryCapacityKwh": 60,
+      "manufacturingEmissions": { "icev": 8.5, "bev": 14.5, "phev": 12.0, "hev": 9.0 }
+    },
+    {
+      "id": "compact_suv",
+      "label": "Compact SUV",
+      "msrp": { "icev": 32000, "bev": 44000, "phev": 38000, "hev": 34000 },
+      "depreciation": {
+        "icev": { "slope": -0.10, "intercept": 1.0 },
+        "bev": { "slope": -0.13, "intercept": 1.0 },
+        "phev": { "slope": -0.11, "intercept": 1.0 },
+        "hev": { "slope": -0.10, "intercept": 1.0 }
+      },
+      "annualCosts": {
+        "icev": { "fuel": 2200, "insurance": 1900, "maintenance": 1000, "repair": 550, "tax": 450 },
+        "bev": { "fuel": 750, "insurance": 2100, "maintenance": 600, "repair": 300, "tax": 300 },
+        "phev": { "fuel": 1300, "insurance": 2000, "maintenance": 750, "repair": 450, "tax": 400 },
+        "hev": { "fuel": 1600, "insurance": 1900, "maintenance": 850, "repair": 500, "tax": 450 }
+      },
+      "fuelEfficiency": { "icev": 9.5, "bev": 18.0, "phev": 6.0, "hev": 6.5 },
+      "batteryCapacityKwh": 65,
+      "manufacturingEmissions": { "icev": 10.0, "bev": 16.0, "phev": 13.5, "hev": 10.5 }
+    },
+    {
+      "id": "midsize_suv",
+      "label": "Midsize SUV",
+      "msrp": { "icev": 42000, "bev": 54000, "phev": 48000, "hev": 44000 },
+      "depreciation": {
+        "icev": { "slope": -0.10, "intercept": 1.0 },
+        "bev": { "slope": -0.13, "intercept": 1.0 },
+        "phev": { "slope": -0.11, "intercept": 1.0 },
+        "hev": { "slope": -0.10, "intercept": 1.0 }
+      },
+      "annualCosts": {
+        "icev": { "fuel": 2800, "insurance": 2200, "maintenance": 1100, "repair": 600, "tax": 550 },
+        "bev": { "fuel": 900, "insurance": 2500, "maintenance": 650, "repair": 350, "tax": 350 },
+        "phev": { "fuel": 1600, "insurance": 2400, "maintenance": 800, "repair": 500, "tax": 500 },
+        "hev": { "fuel": 2000, "insurance": 2200, "maintenance": 950, "repair": 550, "tax": 550 }
+      },
+      "fuelEfficiency": { "icev": 11.0, "bev": 20.0, "phev": 7.0, "hev": 7.5 },
+      "batteryCapacityKwh": 80,
+      "manufacturingEmissions": { "icev": 12.0, "bev": 18.5, "phev": 15.5, "hev": 12.5 }
+    },
+    {
+      "id": "pickup_truck",
+      "label": "Pickup Truck",
+      "msrp": { "icev": 45000, "bev": 60000, "phev": 52000, "hev": 47000 },
+      "depreciation": {
+        "icev": { "slope": -0.09, "intercept": 1.0 },
+        "bev": { "slope": -0.12, "intercept": 1.0 },
+        "phev": { "slope": -0.10, "intercept": 1.0 },
+        "hev": { "slope": -0.09, "intercept": 1.0 }
+      },
+      "annualCosts": {
+        "icev": { "fuel": 3200, "insurance": 2400, "maintenance": 1200, "repair": 700, "tax": 600 },
+        "bev": { "fuel": 1050, "insurance": 2700, "maintenance": 700, "repair": 400, "tax": 400 },
+        "phev": { "fuel": 1900, "insurance": 2600, "maintenance": 900, "repair": 550, "tax": 550 },
+        "hev": { "fuel": 2400, "insurance": 2400, "maintenance": 1050, "repair": 650, "tax": 600 }
+      },
+      "fuelEfficiency": { "icev": 12.5, "bev": 22.0, "phev": 8.0, "hev": 8.5 },
+      "batteryCapacityKwh": 100,
+      "manufacturingEmissions": { "icev": 14.0, "bev": 21.0, "phev": 17.5, "hev": 14.5 }
+    }
+  ],
+  "cities": [
+    { "name": "Seattle", "state": "WA", "fuelPricePerLiter": 1.12, "electricityPricePerKwh": 0.11 },
+    { "name": "San Francisco", "state": "CA", "fuelPricePerLiter": 1.45, "electricityPricePerKwh": 0.25 },
+    { "name": "Los Angeles", "state": "CA", "fuelPricePerLiter": 1.38, "electricityPricePerKwh": 0.22 },
+    { "name": "New York City", "state": "NY", "fuelPricePerLiter": 1.05, "electricityPricePerKwh": 0.20 },
+    { "name": "Houston", "state": "TX", "fuelPricePerLiter": 0.82, "electricityPricePerKwh": 0.12 },
+    { "name": "Dallas", "state": "TX", "fuelPricePerLiter": 0.80, "electricityPricePerKwh": 0.11 },
+    { "name": "Chicago", "state": "IL", "fuelPricePerLiter": 1.02, "electricityPricePerKwh": 0.14 },
+    { "name": "Cleveland", "state": "OH", "fuelPricePerLiter": 0.92, "electricityPricePerKwh": 0.13 },
+    { "name": "Atlanta", "state": "GA", "fuelPricePerLiter": 0.88, "electricityPricePerKwh": 0.12 },
+    { "name": "Miami", "state": "FL", "fuelPricePerLiter": 0.95, "electricityPricePerKwh": 0.12 },
+    { "name": "Denver", "state": "CO", "fuelPricePerLiter": 1.00, "electricityPricePerKwh": 0.13 },
+    { "name": "Phoenix", "state": "AZ", "fuelPricePerLiter": 0.92, "electricityPricePerKwh": 0.13 },
+    { "name": "Portland", "state": "OR", "fuelPricePerLiter": 1.15, "electricityPricePerKwh": 0.11 },
+    { "name": "Boston", "state": "MA", "fuelPricePerLiter": 1.08, "electricityPricePerKwh": 0.24 },
+    { "name": "Minneapolis", "state": "MN", "fuelPricePerLiter": 0.98, "electricityPricePerKwh": 0.14 },
+    { "name": "Detroit", "state": "MI", "fuelPricePerLiter": 0.95, "electricityPricePerKwh": 0.16 },
+    { "name": "Philadelphia", "state": "PA", "fuelPricePerLiter": 1.00, "electricityPricePerKwh": 0.15 }
+  ],
+  "chargingStrategies": [
+    { "id": "no_public", "label": "No Public Charging", "homePercent": 100, "publicPercent": 0, "publicCostMultiplier": 1.0 },
+    { "id": "rare_public", "label": "Rare Public", "homePercent": 90, "publicPercent": 10, "publicCostMultiplier": 1.5 },
+    { "id": "occasional", "label": "Occasional (base case)", "homePercent": 80, "publicPercent": 20, "publicCostMultiplier": 1.5 },
+    { "id": "frequent_public", "label": "Frequent Public", "homePercent": 50, "publicPercent": 50, "publicCostMultiplier": 2.0 },
+    { "id": "all_public", "label": "All Public Charging", "homePercent": 0, "publicPercent": 100, "publicCostMultiplier": 2.5 }
+  ],
+  "carbonFactors": {
+    "fuelCO2PerLiter": 2.31,
+    "gridCO2PerKwh": 0.39,
+    "batteryCO2PerKwh": 70
+  },
+  "usedVehicleDepreciation": {
+    "year3": 0.55,
+    "year6": 0.38
+  }
+}

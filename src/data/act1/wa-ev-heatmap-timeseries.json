@@ -1,0 +1,3845 @@
+{
+  "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "frames": {
+    "2010": [
+      {
+        "county": "King",
+        "registrations": 28,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 2,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 5,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 1,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 3,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 1,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 3,
+        "bevRatio": 0.6667,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 1,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 6,
+        "bevRatio": 0.8333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 2,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 3,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 4,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2011": [
+      {
+        "county": "King",
+        "registrations": 376,
+        "bevRatio": 0.9255,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 4,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 43,
+        "bevRatio": 0.8372,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 93,
+        "bevRatio": 0.8925,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 10,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 35,
+        "bevRatio": 0.8857,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 3,
+        "bevRatio": 0.6667,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 13,
+        "bevRatio": 0.7692,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 2,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 1,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 31,
+        "bevRatio": 0.8065,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 3,
+        "bevRatio": 0.6667,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 3,
+        "bevRatio": 0.6667,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 52,
+        "bevRatio": 0.9231,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 2,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 69,
+        "bevRatio": 0.913,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 14,
+        "bevRatio": 0.8571,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 4,
+        "bevRatio": 0.75,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 12,
+        "bevRatio": 0.8333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 11,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 4,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 4,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 4,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 17,
+        "bevRatio": 0.8824,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 36,
+        "bevRatio": 0.9167,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 2,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 2,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 2,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 1,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 1,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2012": [
+      {
+        "county": "King",
+        "registrations": 969,
+        "bevRatio": 0.6821,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 29,
+        "bevRatio": 0.3793,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 113,
+        "bevRatio": 0.5664,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 263,
+        "bevRatio": 0.6464,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 40,
+        "bevRatio": 0.525,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 113,
+        "bevRatio": 0.6283,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 7,
+        "bevRatio": 0.8571,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 47,
+        "bevRatio": 0.5319,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 10,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 9,
+        "bevRatio": 0.5556,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 84,
+        "bevRatio": 0.5714,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 8,
+        "bevRatio": 0.375,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 16,
+        "bevRatio": 0.375,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 8,
+        "bevRatio": 0.375,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 180,
+        "bevRatio": 0.5944,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 6,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 202,
+        "bevRatio": 0.5693,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 41,
+        "bevRatio": 0.561,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 18,
+        "bevRatio": 0.5556,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 35,
+        "bevRatio": 0.5429,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 50,
+        "bevRatio": 0.6,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 20,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 7,
+        "bevRatio": 0.5714,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 17,
+        "bevRatio": 0.4706,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 2,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 44,
+        "bevRatio": 0.75,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 99,
+        "bevRatio": 0.697,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 11,
+        "bevRatio": 0.3636,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 8,
+        "bevRatio": 0.375,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 17,
+        "bevRatio": 0.3529,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 2,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 5,
+        "bevRatio": 0.2,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 1,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 3,
+        "bevRatio": 0.6667,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2013": [
+      {
+        "county": "King",
+        "registrations": 2905,
+        "bevRatio": 0.6954,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 54,
+        "bevRatio": 0.4259,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 302,
+        "bevRatio": 0.5828,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 802,
+        "bevRatio": 0.6471,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 106,
+        "bevRatio": 0.5094,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 297,
+        "bevRatio": 0.6397,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 16,
+        "bevRatio": 0.4375,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 115,
+        "bevRatio": 0.5217,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 26,
+        "bevRatio": 0.4231,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 26,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 219,
+        "bevRatio": 0.5205,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 34,
+        "bevRatio": 0.6176,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 35,
+        "bevRatio": 0.3714,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 14,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 502,
+        "bevRatio": 0.6434,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 26,
+        "bevRatio": 0.5769,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 568,
+        "bevRatio": 0.5581,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 100,
+        "bevRatio": 0.59,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 45,
+        "bevRatio": 0.5111,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 84,
+        "bevRatio": 0.5238,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 108,
+        "bevRatio": 0.5185,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 42,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 16,
+        "bevRatio": 0.5625,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 42,
+        "bevRatio": 0.4762,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 5,
+        "bevRatio": 0.6,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 96,
+        "bevRatio": 0.7813,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 323,
+        "bevRatio": 0.6997,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 36,
+        "bevRatio": 0.4722,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 14,
+        "bevRatio": 0.3571,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 53,
+        "bevRatio": 0.3774,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 5,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 11,
+        "bevRatio": 0.3636,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 3,
+        "bevRatio": 0.3333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 1,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 3,
+        "bevRatio": 0.3333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 3,
+        "bevRatio": 0.6667,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 2,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2014": [
+      {
+        "county": "King",
+        "registrations": 4520,
+        "bevRatio": 0.6476,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 81,
+        "bevRatio": 0.3951,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 469,
+        "bevRatio": 0.548,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 1201,
+        "bevRatio": 0.592,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 155,
+        "bevRatio": 0.471,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 447,
+        "bevRatio": 0.5794,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 26,
+        "bevRatio": 0.3077,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 168,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 32,
+        "bevRatio": 0.4688,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 38,
+        "bevRatio": 0.4737,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 328,
+        "bevRatio": 0.4665,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 56,
+        "bevRatio": 0.5714,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 55,
+        "bevRatio": 0.4,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 16,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 705,
+        "bevRatio": 0.5773,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 40,
+        "bevRatio": 0.55,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 891,
+        "bevRatio": 0.5185,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 123,
+        "bevRatio": 0.5447,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 61,
+        "bevRatio": 0.5246,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 113,
+        "bevRatio": 0.5044,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 167,
+        "bevRatio": 0.491,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 58,
+        "bevRatio": 0.4655,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 22,
+        "bevRatio": 0.4545,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 63,
+        "bevRatio": 0.3968,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 10,
+        "bevRatio": 0.7,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 147,
+        "bevRatio": 0.7483,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 450,
+        "bevRatio": 0.64,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 56,
+        "bevRatio": 0.4107,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 20,
+        "bevRatio": 0.35,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 76,
+        "bevRatio": 0.3684,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 6,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 14,
+        "bevRatio": 0.2857,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 4,
+        "bevRatio": 0.25,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 1,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 3,
+        "bevRatio": 0.3333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 5,
+        "bevRatio": 0.4,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 7,
+        "bevRatio": 0.1429,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Ferry",
+        "registrations": 2,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Garfield",
+        "registrations": 1,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2015": [
+      {
+        "county": "King",
+        "registrations": 6828,
+        "bevRatio": 0.693,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 101,
+        "bevRatio": 0.4356,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 664,
+        "bevRatio": 0.5964,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 1742,
+        "bevRatio": 0.6361,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 224,
+        "bevRatio": 0.5313,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 644,
+        "bevRatio": 0.6351,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 33,
+        "bevRatio": 0.3939,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 239,
+        "bevRatio": 0.5732,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 46,
+        "bevRatio": 0.5435,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 50,
+        "bevRatio": 0.52,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 474,
+        "bevRatio": 0.5211,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 103,
+        "bevRatio": 0.6893,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 70,
+        "bevRatio": 0.3857,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 20,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 999,
+        "bevRatio": 0.6096,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 48,
+        "bevRatio": 0.5833,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 1279,
+        "bevRatio": 0.5582,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 172,
+        "bevRatio": 0.5756,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 84,
+        "bevRatio": 0.5119,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 149,
+        "bevRatio": 0.5369,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 224,
+        "bevRatio": 0.4732,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 84,
+        "bevRatio": 0.4643,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 25,
+        "bevRatio": 0.44,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 102,
+        "bevRatio": 0.4314,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 11,
+        "bevRatio": 0.7273,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 213,
+        "bevRatio": 0.784,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 667,
+        "bevRatio": 0.6867,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 70,
+        "bevRatio": 0.4571,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 23,
+        "bevRatio": 0.3913,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 102,
+        "bevRatio": 0.4412,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 14,
+        "bevRatio": 0.4286,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 22,
+        "bevRatio": 0.3636,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 4,
+        "bevRatio": 0.25,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 1,
+        "bevRatio": 1,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 5,
+        "bevRatio": 0.4,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 6,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 9,
+        "bevRatio": 0.2222,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Ferry",
+        "registrations": 4,
+        "bevRatio": 0.25,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Garfield",
+        "registrations": 1,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2016": [
+      {
+        "county": "King",
+        "registrations": 9656,
+        "bevRatio": 0.701,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 143,
+        "bevRatio": 0.4615,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 876,
+        "bevRatio": 0.5833,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 2321,
+        "bevRatio": 0.6514,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 292,
+        "bevRatio": 0.5548,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 886,
+        "bevRatio": 0.64,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 42,
+        "bevRatio": 0.4048,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 304,
+        "bevRatio": 0.6086,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 67,
+        "bevRatio": 0.6119,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 68,
+        "bevRatio": 0.5735,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 637,
+        "bevRatio": 0.54,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 142,
+        "bevRatio": 0.7324,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 86,
+        "bevRatio": 0.4535,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 24,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 1325,
+        "bevRatio": 0.6362,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 51,
+        "bevRatio": 0.6078,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 1734,
+        "bevRatio": 0.5727,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 211,
+        "bevRatio": 0.5972,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 109,
+        "bevRatio": 0.5413,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 177,
+        "bevRatio": 0.5367,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 288,
+        "bevRatio": 0.4861,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 112,
+        "bevRatio": 0.4554,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 33,
+        "bevRatio": 0.4848,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 126,
+        "bevRatio": 0.4206,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 12,
+        "bevRatio": 0.75,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 279,
+        "bevRatio": 0.7957,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 846,
+        "bevRatio": 0.6761,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 89,
+        "bevRatio": 0.4831,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 26,
+        "bevRatio": 0.3846,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 140,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 24,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 27,
+        "bevRatio": 0.4074,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 4,
+        "bevRatio": 0.25,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 2,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 5,
+        "bevRatio": 0.4,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 7,
+        "bevRatio": 0.4286,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 11,
+        "bevRatio": 0.2727,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Ferry",
+        "registrations": 4,
+        "bevRatio": 0.25,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Garfield",
+        "registrations": 2,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2017": [
+      {
+        "county": "King",
+        "registrations": 13665,
+        "bevRatio": 0.6632,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 190,
+        "bevRatio": 0.4526,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 1342,
+        "bevRatio": 0.582,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 3125,
+        "bevRatio": 0.6134,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 409,
+        "bevRatio": 0.5232,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 1217,
+        "bevRatio": 0.5949,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 59,
+        "bevRatio": 0.3898,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 422,
+        "bevRatio": 0.5545,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 94,
+        "bevRatio": 0.5957,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 96,
+        "bevRatio": 0.5521,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 885,
+        "bevRatio": 0.5153,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 202,
+        "bevRatio": 0.7277,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 106,
+        "bevRatio": 0.4528,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 48,
+        "bevRatio": 0.3542,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 1928,
+        "bevRatio": 0.5783,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 67,
+        "bevRatio": 0.5821,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 2422,
+        "bevRatio": 0.5314,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 295,
+        "bevRatio": 0.5525,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 156,
+        "bevRatio": 0.5064,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 260,
+        "bevRatio": 0.5346,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 420,
+        "bevRatio": 0.4667,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 157,
+        "bevRatio": 0.414,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 46,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 161,
+        "bevRatio": 0.4037,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 17,
+        "bevRatio": 0.7059,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 372,
+        "bevRatio": 0.7796,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 1099,
+        "bevRatio": 0.6224,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 118,
+        "bevRatio": 0.4661,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 42,
+        "bevRatio": 0.4286,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 195,
+        "bevRatio": 0.4872,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 33,
+        "bevRatio": 0.4242,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 43,
+        "bevRatio": 0.3488,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 6,
+        "bevRatio": 0.3333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 5,
+        "bevRatio": 0.8,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 6,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 11,
+        "bevRatio": 0.3636,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 15,
+        "bevRatio": 0.3333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Ferry",
+        "registrations": 4,
+        "bevRatio": 0.25,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Garfield",
+        "registrations": 2,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2018": [
+      {
+        "county": "King",
+        "registrations": 21469,
+        "bevRatio": 0.6926,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 271,
+        "bevRatio": 0.5166,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 1860,
+        "bevRatio": 0.5887,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 4618,
+        "bevRatio": 0.6488,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 589,
+        "bevRatio": 0.5518,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 1707,
+        "bevRatio": 0.5964,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 88,
+        "bevRatio": 0.4432,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 596,
+        "bevRatio": 0.5688,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 140,
+        "bevRatio": 0.6429,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 138,
+        "bevRatio": 0.5435,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 1206,
+        "bevRatio": 0.5348,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 299,
+        "bevRatio": 0.7124,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 153,
+        "bevRatio": 0.4967,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 72,
+        "bevRatio": 0.375,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 2707,
+        "bevRatio": 0.5973,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 95,
+        "bevRatio": 0.6105,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 3446,
+        "bevRatio": 0.5563,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 394,
+        "bevRatio": 0.5635,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 232,
+        "bevRatio": 0.5172,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 356,
+        "bevRatio": 0.5309,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 597,
+        "bevRatio": 0.4858,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 214,
+        "bevRatio": 0.472,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 61,
+        "bevRatio": 0.5738,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 220,
+        "bevRatio": 0.4273,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 22,
+        "bevRatio": 0.6818,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 445,
+        "bevRatio": 0.7708,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 1455,
+        "bevRatio": 0.633,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 168,
+        "bevRatio": 0.5357,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 70,
+        "bevRatio": 0.4714,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 268,
+        "bevRatio": 0.5299,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 55,
+        "bevRatio": 0.4727,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 65,
+        "bevRatio": 0.3692,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 11,
+        "bevRatio": 0.4545,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 6,
+        "bevRatio": 0.8333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 11,
+        "bevRatio": 0.3636,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 12,
+        "bevRatio": 0.4167,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 21,
+        "bevRatio": 0.2381,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Ferry",
+        "registrations": 8,
+        "bevRatio": 0.625,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Garfield",
+        "registrations": 2,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2019": [
+      {
+        "county": "King",
+        "registrations": 27053,
+        "bevRatio": 0.7243,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 328,
+        "bevRatio": 0.5549,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 2318,
+        "bevRatio": 0.6087,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 5741,
+        "bevRatio": 0.6901,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 724,
+        "bevRatio": 0.605,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 2068,
+        "bevRatio": 0.6238,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 106,
+        "bevRatio": 0.5094,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 720,
+        "bevRatio": 0.6139,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 178,
+        "bevRatio": 0.6798,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 153,
+        "bevRatio": 0.5425,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 1441,
+        "bevRatio": 0.5697,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 361,
+        "bevRatio": 0.7368,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 177,
+        "bevRatio": 0.5367,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 90,
+        "bevRatio": 0.4889,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 3322,
+        "bevRatio": 0.6325,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 121,
+        "bevRatio": 0.6694,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 4258,
+        "bevRatio": 0.6003,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 471,
+        "bevRatio": 0.6051,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 278,
+        "bevRatio": 0.5576,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 444,
+        "bevRatio": 0.5608,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 734,
+        "bevRatio": 0.5381,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 254,
+        "bevRatio": 0.5118,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 87,
+        "bevRatio": 0.6207,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 262,
+        "bevRatio": 0.4847,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 23,
+        "bevRatio": 0.6957,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 526,
+        "bevRatio": 0.7852,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 1742,
+        "bevRatio": 0.651,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 207,
+        "bevRatio": 0.5894,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 84,
+        "bevRatio": 0.5238,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 328,
+        "bevRatio": 0.5732,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 71,
+        "bevRatio": 0.5634,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 84,
+        "bevRatio": 0.4405,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 13,
+        "bevRatio": 0.4615,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 6,
+        "bevRatio": 0.8333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 19,
+        "bevRatio": 0.4211,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 13,
+        "bevRatio": 0.4615,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 23,
+        "bevRatio": 0.3043,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Ferry",
+        "registrations": 10,
+        "bevRatio": 0.7,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Garfield",
+        "registrations": 2,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2020": [
+      {
+        "county": "King",
+        "registrations": 32971,
+        "bevRatio": 0.7503,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 392,
+        "bevRatio": 0.5918,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 2755,
+        "bevRatio": 0.6258,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 6989,
+        "bevRatio": 0.7243,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 859,
+        "bevRatio": 0.6426,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 2461,
+        "bevRatio": 0.657,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 121,
+        "bevRatio": 0.5537,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 853,
+        "bevRatio": 0.6448,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 217,
+        "bevRatio": 0.7235,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 183,
+        "bevRatio": 0.6011,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 1697,
+        "bevRatio": 0.6099,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 430,
+        "bevRatio": 0.7628,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 213,
+        "bevRatio": 0.6056,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 99,
+        "bevRatio": 0.5152,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 3980,
+        "bevRatio": 0.6636,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 142,
+        "bevRatio": 0.7113,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 5131,
+        "bevRatio": 0.6406,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 538,
+        "bevRatio": 0.6375,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 349,
+        "bevRatio": 0.6218,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 498,
+        "bevRatio": 0.5823,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 885,
+        "bevRatio": 0.5887,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 299,
+        "bevRatio": 0.5418,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 105,
+        "bevRatio": 0.6667,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 292,
+        "bevRatio": 0.5103,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 28,
+        "bevRatio": 0.6786,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 580,
+        "bevRatio": 0.7828,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 2018,
+        "bevRatio": 0.6749,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 247,
+        "bevRatio": 0.6235,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 103,
+        "bevRatio": 0.5825,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 377,
+        "bevRatio": 0.6127,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 81,
+        "bevRatio": 0.5679,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 98,
+        "bevRatio": 0.4694,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 21,
+        "bevRatio": 0.5714,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 6,
+        "bevRatio": 0.8333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 24,
+        "bevRatio": 0.5,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 21,
+        "bevRatio": 0.619,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 24,
+        "bevRatio": 0.3333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Ferry",
+        "registrations": 14,
+        "bevRatio": 0.7143,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Garfield",
+        "registrations": 2,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2021": [
+      {
+        "county": "King",
+        "registrations": 42842,
+        "bevRatio": 0.7664,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 517,
+        "bevRatio": 0.6228,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 3334,
+        "bevRatio": 0.6533,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 9107,
+        "bevRatio": 0.7526,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 1073,
+        "bevRatio": 0.6636,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 3093,
+        "bevRatio": 0.676,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 150,
+        "bevRatio": 0.6067,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 1060,
+        "bevRatio": 0.6783,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 297,
+        "bevRatio": 0.7374,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 232,
+        "bevRatio": 0.6121,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 2173,
+        "bevRatio": 0.6263,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 518,
+        "bevRatio": 0.7799,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 264,
+        "bevRatio": 0.6402,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 122,
+        "bevRatio": 0.5656,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 5163,
+        "bevRatio": 0.681,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 177,
+        "bevRatio": 0.7345,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 6554,
+        "bevRatio": 0.6779,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 627,
+        "bevRatio": 0.6475,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 455,
+        "bevRatio": 0.6549,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 621,
+        "bevRatio": 0.6248,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 1090,
+        "bevRatio": 0.6083,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 381,
+        "bevRatio": 0.5801,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 140,
+        "bevRatio": 0.65,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 366,
+        "bevRatio": 0.5574,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 35,
+        "bevRatio": 0.6,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 644,
+        "bevRatio": 0.7811,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 2435,
+        "bevRatio": 0.7014,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 302,
+        "bevRatio": 0.6589,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 127,
+        "bevRatio": 0.5748,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 451,
+        "bevRatio": 0.6275,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 109,
+        "bevRatio": 0.6055,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 114,
+        "bevRatio": 0.4561,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 30,
+        "bevRatio": 0.6,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 7,
+        "bevRatio": 0.8571,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 30,
+        "bevRatio": 0.5333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 25,
+        "bevRatio": 0.64,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 27,
+        "bevRatio": 0.3704,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Ferry",
+        "registrations": 18,
+        "bevRatio": 0.7778,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Garfield",
+        "registrations": 3,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2022": [
+      {
+        "county": "King",
+        "registrations": 57827,
+        "bevRatio": 0.7926,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 678,
+        "bevRatio": 0.6652,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 4243,
+        "bevRatio": 0.6887,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 12400,
+        "bevRatio": 0.7821,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 1346,
+        "bevRatio": 0.6984,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 3947,
+        "bevRatio": 0.7051,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 201,
+        "bevRatio": 0.6517,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 1340,
+        "bevRatio": 0.7157,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 403,
+        "bevRatio": 0.7593,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 307,
+        "bevRatio": 0.6612,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 2929,
+        "bevRatio": 0.6671,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 669,
+        "bevRatio": 0.7967,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 360,
+        "bevRatio": 0.7,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 153,
+        "bevRatio": 0.6144,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 6823,
+        "bevRatio": 0.7036,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 234,
+        "bevRatio": 0.7479,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 8592,
+        "bevRatio": 0.7136,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 753,
+        "bevRatio": 0.6799,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 591,
+        "bevRatio": 0.6717,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 746,
+        "bevRatio": 0.6421,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 1414,
+        "bevRatio": 0.657,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 474,
+        "bevRatio": 0.5802,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 185,
+        "bevRatio": 0.6865,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 432,
+        "bevRatio": 0.5833,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 47,
+        "bevRatio": 0.6383,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 741,
+        "bevRatio": 0.7922,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 2994,
+        "bevRatio": 0.7255,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 407,
+        "bevRatio": 0.7052,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 170,
+        "bevRatio": 0.6412,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 577,
+        "bevRatio": 0.662,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 130,
+        "bevRatio": 0.6308,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 150,
+        "bevRatio": 0.4667,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 37,
+        "bevRatio": 0.5946,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 14,
+        "bevRatio": 0.9286,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 41,
+        "bevRatio": 0.5854,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 33,
+        "bevRatio": 0.697,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 33,
+        "bevRatio": 0.4242,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Ferry",
+        "registrations": 23,
+        "bevRatio": 0.8261,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Garfield",
+        "registrations": 3,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2023": [
+      {
+        "county": "King",
+        "registrations": 78736,
+        "bevRatio": 0.8061,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 830,
+        "bevRatio": 0.6807,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 5391,
+        "bevRatio": 0.7279,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 17228,
+        "bevRatio": 0.8175,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 1638,
+        "bevRatio": 0.7277,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 4911,
+        "bevRatio": 0.7269,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 260,
+        "bevRatio": 0.6885,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 1650,
+        "bevRatio": 0.7382,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 501,
+        "bevRatio": 0.7844,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 359,
+        "bevRatio": 0.6741,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 3668,
+        "bevRatio": 0.6838,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 861,
+        "bevRatio": 0.8084,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 452,
+        "bevRatio": 0.7058,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 192,
+        "bevRatio": 0.6458,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 8811,
+        "bevRatio": 0.7284,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 291,
+        "bevRatio": 0.7698,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 11484,
+        "bevRatio": 0.7479,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 873,
+        "bevRatio": 0.6953,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 759,
+        "bevRatio": 0.6943,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 916,
+        "bevRatio": 0.6703,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 1785,
+        "bevRatio": 0.6835,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 593,
+        "bevRatio": 0.5885,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 238,
+        "bevRatio": 0.7353,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 532,
+        "bevRatio": 0.6259,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 62,
+        "bevRatio": 0.6129,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 842,
+        "bevRatio": 0.8005,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 3653,
+        "bevRatio": 0.7462,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 508,
+        "bevRatio": 0.7126,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 211,
+        "bevRatio": 0.6872,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 705,
+        "bevRatio": 0.695,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 164,
+        "bevRatio": 0.6646,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 176,
+        "bevRatio": 0.483,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 45,
+        "bevRatio": 0.6667,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 18,
+        "bevRatio": 0.9444,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 49,
+        "bevRatio": 0.6327,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 41,
+        "bevRatio": 0.7073,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 39,
+        "bevRatio": 0.4872,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Ferry",
+        "registrations": 24,
+        "bevRatio": 0.8333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Garfield",
+        "registrations": 3,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ],
+    "2024": [
+      {
+        "county": "King",
+        "registrations": 79075,
+        "bevRatio": 0.8046,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Yakima",
+        "registrations": 835,
+        "bevRatio": 0.6778,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Thurston",
+        "registrations": 5403,
+        "bevRatio": 0.7266,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Snohomish",
+        "registrations": 17307,
+        "bevRatio": 0.8156,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Island",
+        "registrations": 1640,
+        "bevRatio": 0.7268,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kitsap",
+        "registrations": 4923,
+        "bevRatio": 0.7264,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whitman",
+        "registrations": 262,
+        "bevRatio": 0.6908,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skagit",
+        "registrations": 1658,
+        "bevRatio": 0.737,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Kittitas",
+        "registrations": 503,
+        "bevRatio": 0.7833,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Walla Walla",
+        "registrations": 360,
+        "bevRatio": 0.675,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Spokane",
+        "registrations": 3690,
+        "bevRatio": 0.6808,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Chelan",
+        "registrations": 863,
+        "bevRatio": 0.8065,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grant",
+        "registrations": 452,
+        "bevRatio": 0.7058,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Stevens",
+        "registrations": 193,
+        "bevRatio": 0.6425,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clark",
+        "registrations": 8849,
+        "bevRatio": 0.7272,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Douglas",
+        "registrations": 294,
+        "bevRatio": 0.7687,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pierce",
+        "registrations": 11542,
+        "bevRatio": 0.7462,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Jefferson",
+        "registrations": 875,
+        "bevRatio": 0.6949,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Cowlitz",
+        "registrations": 762,
+        "bevRatio": 0.6942,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Clallam",
+        "registrations": 920,
+        "bevRatio": 0.6696,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Benton",
+        "registrations": 1800,
+        "bevRatio": 0.6794,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lewis",
+        "registrations": 598,
+        "bevRatio": 0.5853,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Klickitat",
+        "registrations": 239,
+        "bevRatio": 0.7322,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Grays Harbor",
+        "registrations": 533,
+        "bevRatio": 0.6248,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Asotin",
+        "registrations": 63,
+        "bevRatio": 0.619,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "San Juan",
+        "registrations": 844,
+        "bevRatio": 0.7998,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Whatcom",
+        "registrations": 3668,
+        "bevRatio": 0.7451,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Franklin",
+        "registrations": 511,
+        "bevRatio": 0.7104,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Okanogan",
+        "registrations": 211,
+        "bevRatio": 0.6872,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Mason",
+        "registrations": 706,
+        "bevRatio": 0.6941,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Skamania",
+        "registrations": 164,
+        "bevRatio": 0.6646,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pacific",
+        "registrations": 177,
+        "bevRatio": 0.4859,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Pend Oreille",
+        "registrations": 47,
+        "bevRatio": 0.6383,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Columbia",
+        "registrations": 18,
+        "bevRatio": 0.9444,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Wahkiakum",
+        "registrations": 49,
+        "bevRatio": 0.6327,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Adams",
+        "registrations": 41,
+        "bevRatio": 0.7073,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Lincoln",
+        "registrations": 39,
+        "bevRatio": 0.4872,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Ferry",
+        "registrations": 24,
+        "bevRatio": 0.8333,
+        "centerLat": 0,
+        "centerLon": 0
+      },
+      {
+        "county": "Garfield",
+        "registrations": 3,
+        "bevRatio": 0,
+        "centerLat": 0,
+        "centerLon": 0
+      }
+    ]
+  }
+}

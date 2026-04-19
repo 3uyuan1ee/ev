@@ -1,0 +1,88 @@
+{
+  "countries": [
+    {
+      "country": "China",
+      "iso3": "CHN",
+      "gridCO2PerKwh": 0.54,
+      "avgEnergyConsumptionKwh": 18.8,
+      "co2ReductionMt": 150.8,
+      "evCarbonAdvantage": 36.9
+    },
+    {
+      "country": "Canada",
+      "iso3": "CAN",
+      "gridCO2PerKwh": 0.13,
+      "avgEnergyConsumptionKwh": 18,
+      "co2ReductionMt": 150.2,
+      "evCarbonAdvantage": 85.5
+    },
+    {
+      "country": "Australia",
+      "iso3": "AUS",
+      "gridCO2PerKwh": 0.58,
+      "avgEnergyConsumptionKwh": 18.9,
+      "co2ReductionMt": 156.5,
+      "evCarbonAdvantage": 31.9
+    },
+    {
+      "country": "Germany",
+      "iso3": "DEU",
+      "gridCO2PerKwh": 0.35,
+      "avgEnergyConsumptionKwh": 18.4,
+      "co2ReductionMt": 150.7,
+      "evCarbonAdvantage": 60
+    },
+    {
+      "country": "India",
+      "iso3": "IND",
+      "gridCO2PerKwh": 0.72,
+      "avgEnergyConsumptionKwh": 18.3,
+      "co2ReductionMt": 151,
+      "evCarbonAdvantage": 18.2
+    },
+    {
+      "country": "United States",
+      "iso3": "USA",
+      "gridCO2PerKwh": 0.39,
+      "avgEnergyConsumptionKwh": 18.7,
+      "co2ReductionMt": 147.2,
+      "evCarbonAdvantage": 54.7
+    },
+    {
+      "country": "Norway",
+      "iso3": "NOR",
+      "gridCO2PerKwh": 0.03,
+      "avgEnergyConsumptionKwh": 18.5,
+      "co2ReductionMt": 158.2,
+      "evCarbonAdvantage": 96.6
+    },
+    {
+      "country": "France",
+      "iso3": "FRA",
+      "gridCO2PerKwh": 0.06,
+      "avgEnergyConsumptionKwh": 18.4,
+      "co2ReductionMt": 159.1,
+      "evCarbonAdvantage": 93.1
+    },
+    {
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "gridCO2PerKwh": 0.23,
+      "avgEnergyConsumptionKwh": 18.6,
+      "co2ReductionMt": 154.6,
+      "evCarbonAdvantage": 73.4
+    },
+    {
+      "country": "Japan",
+      "iso3": "JPN",
+      "gridCO2PerKwh": 0.47,
+      "avgEnergyConsumptionKwh": 18.6,
+      "co2ReductionMt": 153.9,
+      "evCarbonAdvantage": 45.7
+    }
+  ],
+  "globalAverage": {
+    "gridCO2PerKwh": 0.35,
+    "evCarbonAdvantage": 59.6
+  }
+}

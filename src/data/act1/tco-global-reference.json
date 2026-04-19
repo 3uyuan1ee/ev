@@ -1,0 +1,3480 @@
+{
+  "lastUpdated": 2025,
+  "countries": [
+    {
+      "country": "Australia",
+      "region": "Oceania",
+      "iso3": "AUS",
+      "latestFuelPricePerLiter": 1.32,
+      "latestElectricityPricePerKwh": 0.258,
+      "latestEvSubsidyUsd": 2011,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.09,
+          "electricityPrice": 0.149,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0067,
+          "chargingStations": 0
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.09,
+          "electricityPrice": 0.163,
+          "evSubsidy": 0,
+          "evMarketShare": 0.02,
+          "chargingStations": 105
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.067,
+          "electricityPrice": 0.177,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0267,
+          "chargingStations": 191
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.033,
+          "electricityPrice": 0.192,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0567,
+          "chargingStations": 306
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 0.993,
+          "electricityPrice": 0.207,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0833,
+          "chargingStations": 408
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 0.983,
+          "electricityPrice": 0.216,
+          "evSubsidy": 0,
+          "evMarketShare": 0.1233,
+          "chargingStations": 562
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.003,
+          "electricityPrice": 0.218,
+          "evSubsidy": 0,
+          "evMarketShare": 0.16,
+          "chargingStations": 1017
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.05,
+          "electricityPrice": 0.218,
+          "evSubsidy": 0,
+          "evMarketShare": 0.29,
+          "chargingStations": 1540
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.11,
+          "electricityPrice": 0.218,
+          "evSubsidy": 0,
+          "evMarketShare": 0.42,
+          "chargingStations": 2046
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.17,
+          "electricityPrice": 0.219,
+          "evSubsidy": 0,
+          "evMarketShare": 0.7733,
+          "chargingStations": 2610
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.267,
+          "electricityPrice": 0.218,
+          "evSubsidy": 0,
+          "evMarketShare": 0.67,
+          "chargingStations": 3031
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.397,
+          "electricityPrice": 0.223,
+          "evSubsidy": 1002,
+          "evMarketShare": 1.8733,
+          "chargingStations": 4245
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.46,
+          "electricityPrice": 0.23,
+          "evSubsidy": 1999,
+          "evMarketShare": 7.4733,
+          "chargingStations": 4928
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.47,
+          "electricityPrice": 0.238,
+          "evSubsidy": 1998,
+          "evMarketShare": 7.3433,
+          "chargingStations": 6741
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.39,
+          "electricityPrice": 0.247,
+          "evSubsidy": 2027,
+          "evMarketShare": 8.9033,
+          "chargingStations": 10083
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.32,
+          "electricityPrice": 0.258,
+          "evSubsidy": 2011,
+          "evMarketShare": 11.2833,
+          "chargingStations": 13357
+        }
+      ]
+    },
+    {
+      "country": "Austria",
+      "region": "Other",
+      "iso3": "",
+      "latestFuelPricePerLiter": 1.6,
+      "latestElectricityPricePerKwh": 0.277,
+      "latestEvSubsidyUsd": 5068,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.25,
+          "electricityPrice": 0.183,
+          "evSubsidy": 0,
+          "evMarketShare": 0.02,
+          "chargingStations": 106
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.223,
+          "electricityPrice": 0.181,
+          "evSubsidy": 570,
+          "evMarketShare": 0.0367,
+          "chargingStations": 245
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.207,
+          "electricityPrice": 0.185,
+          "evSubsidy": 1145,
+          "evMarketShare": 0.0667,
+          "chargingStations": 399
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.2,
+          "electricityPrice": 0.192,
+          "evSubsidy": 1707,
+          "evMarketShare": 0.09,
+          "chargingStations": 515
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.197,
+          "electricityPrice": 0.196,
+          "evSubsidy": 2323,
+          "evMarketShare": 0.27,
+          "chargingStations": 1521
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.193,
+          "electricityPrice": 0.202,
+          "evSubsidy": 2801,
+          "evMarketShare": 0.41,
+          "chargingStations": 2292
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.2,
+          "electricityPrice": 0.207,
+          "evSubsidy": 3445,
+          "evMarketShare": 0.85,
+          "chargingStations": 3438
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.207,
+          "electricityPrice": 0.214,
+          "evSubsidy": 3997,
+          "evMarketShare": 1.37,
+          "chargingStations": 4874
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.227,
+          "electricityPrice": 0.214,
+          "evSubsidy": 4486,
+          "evMarketShare": 2.0333,
+          "chargingStations": 6365
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.313,
+          "electricityPrice": 0.215,
+          "evSubsidy": 5026,
+          "evMarketShare": 2.8367,
+          "chargingStations": 8257
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.453,
+          "electricityPrice": 0.238,
+          "evSubsidy": 5141,
+          "evMarketShare": 10.1467,
+          "chargingStations": 10082
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.647,
+          "electricityPrice": 0.286,
+          "evSubsidy": 5048,
+          "evMarketShare": 18.1267,
+          "chargingStations": 13094
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.737,
+          "electricityPrice": 0.326,
+          "evSubsidy": 5053,
+          "evMarketShare": 17.8167,
+          "chargingStations": 16353
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.757,
+          "electricityPrice": 0.333,
+          "evSubsidy": 5032,
+          "evMarketShare": 17.0533,
+          "chargingStations": 20878
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.68,
+          "electricityPrice": 0.308,
+          "evSubsidy": 5071,
+          "evMarketShare": 21.7933,
+          "chargingStations": 26311
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.6,
+          "electricityPrice": 0.277,
+          "evSubsidy": 5068,
+          "evMarketShare": 23.5267,
+          "chargingStations": 28762
+        }
+      ]
+    },
+    {
+      "country": "Belgium",
+      "region": "Europe",
+      "iso3": "BEL",
+      "latestFuelPricePerLiter": 1.86,
+      "latestElectricityPricePerKwh": 0.305,
+      "latestEvSubsidyUsd": 0,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.53,
+          "electricityPrice": 0.216,
+          "evSubsidy": 0,
+          "evMarketShare": 0.02,
+          "chargingStations": 101
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.493,
+          "electricityPrice": 0.223,
+          "evSubsidy": 705,
+          "evMarketShare": 0.0367,
+          "chargingStations": 221
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.477,
+          "electricityPrice": 0.228,
+          "evSubsidy": 1388,
+          "evMarketShare": 0.0633,
+          "chargingStations": 380
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.44,
+          "electricityPrice": 0.232,
+          "evSubsidy": 2108,
+          "evMarketShare": 0.0933,
+          "chargingStations": 512
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.433,
+          "electricityPrice": 0.236,
+          "evSubsidy": 2822,
+          "evMarketShare": 0.3367,
+          "chargingStations": 1241
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.427,
+          "electricityPrice": 0.24,
+          "evSubsidy": 3577,
+          "evMarketShare": 0.5667,
+          "chargingStations": 2036
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.447,
+          "electricityPrice": 0.246,
+          "evSubsidy": 3536,
+          "evMarketShare": 1.0567,
+          "chargingStations": 3544
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.493,
+          "electricityPrice": 0.254,
+          "evSubsidy": 3486,
+          "evMarketShare": 1.4667,
+          "chargingStations": 4987
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.52,
+          "electricityPrice": 0.266,
+          "evSubsidy": 3543,
+          "evMarketShare": 2.4633,
+          "chargingStations": 6279
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.59,
+          "electricityPrice": 0.274,
+          "evSubsidy": 3471,
+          "evMarketShare": 3.2567,
+          "chargingStations": 7817
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.733,
+          "electricityPrice": 0.298,
+          "evSubsidy": 3535,
+          "evMarketShare": 9.6133,
+          "chargingStations": 12649
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.893,
+          "electricityPrice": 0.33,
+          "evSubsidy": 3520,
+          "evMarketShare": 19.5933,
+          "chargingStations": 17869
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 2.007,
+          "electricityPrice": 0.356,
+          "evSubsidy": 3484,
+          "evMarketShare": 20.7767,
+          "chargingStations": 21777
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.983,
+          "electricityPrice": 0.351,
+          "evSubsidy": 1753,
+          "evMarketShare": 21.42,
+          "chargingStations": 29142
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.93,
+          "electricityPrice": 0.328,
+          "evSubsidy": 0,
+          "evMarketShare": 22.5667,
+          "chargingStations": 36474
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.86,
+          "electricityPrice": 0.305,
+          "evSubsidy": 0,
+          "evMarketShare": 19.19,
+          "chargingStations": 41981
+        }
+      ]
+    },
+    {
+      "country": "Brazil",
+      "region": "South America",
+      "iso3": "BRA",
+      "latestFuelPricePerLiter": 1.17,
+      "latestElectricityPricePerKwh": 0.13,
+      "latestEvSubsidyUsd": 0,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.28,
+          "electricityPrice": 0.123,
+          "evSubsidy": 0,
+          "evMarketShare": 0,
+          "chargingStations": 0
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.213,
+          "electricityPrice": 0.127,
+          "evSubsidy": 0,
+          "evMarketShare": 0,
+          "chargingStations": 21
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.147,
+          "electricityPrice": 0.129,
+          "evSubsidy": 0,
+          "evMarketShare": 0,
+          "chargingStations": 39
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.11,
+          "electricityPrice": 0.133,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0033,
+          "chargingStations": 58
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.067,
+          "electricityPrice": 0.136,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0067,
+          "chargingStations": 82
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.06,
+          "electricityPrice": 0.137,
+          "evSubsidy": 0,
+          "evMarketShare": 0.02,
+          "chargingStations": 103
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.05,
+          "electricityPrice": 0.134,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0267,
+          "chargingStations": 158
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.067,
+          "electricityPrice": 0.128,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0367,
+          "chargingStations": 234
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.083,
+          "electricityPrice": 0.123,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0567,
+          "chargingStations": 309
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.16,
+          "electricityPrice": 0.117,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0767,
+          "chargingStations": 615
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.22,
+          "electricityPrice": 0.114,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0933,
+          "chargingStations": 991
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.303,
+          "electricityPrice": 0.114,
+          "evSubsidy": 0,
+          "evMarketShare": 0.2233,
+          "chargingStations": 2165
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.307,
+          "electricityPrice": 0.116,
+          "evSubsidy": 0,
+          "evMarketShare": 0.87,
+          "chargingStations": 2851
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.303,
+          "electricityPrice": 0.119,
+          "evSubsidy": 0,
+          "evMarketShare": 1.8867,
+          "chargingStations": 6245
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.24,
+          "electricityPrice": 0.124,
+          "evSubsidy": 0,
+          "evMarketShare": 2.6133,
+          "chargingStations": 10131
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.17,
+          "electricityPrice": 0.13,
+          "evSubsidy": 0,
+          "evMarketShare": 3.7533,
+          "chargingStations": 16549
+        }
+      ]
+    },
+    {
+      "country": "Canada",
+      "region": "North America",
+      "iso3": "CAN",
+      "latestFuelPricePerLiter": 1.32,
+      "latestElectricityPricePerKwh": 0.13,
+      "latestEvSubsidyUsd": 4999,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 0.94,
+          "electricityPrice": 0.076,
+          "evSubsidy": 2986,
+          "evMarketShare": 0.0067,
+          "chargingStations": 102
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 0.91,
+          "electricityPrice": 0.084,
+          "evSubsidy": 3428,
+          "evMarketShare": 0.11,
+          "chargingStations": 410
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 0.877,
+          "electricityPrice": 0.09,
+          "evSubsidy": 3779,
+          "evMarketShare": 0.2133,
+          "chargingStations": 732
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 0.85,
+          "electricityPrice": 0.094,
+          "evSubsidy": 4233,
+          "evMarketShare": 0.29,
+          "chargingStations": 1030
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 0.82,
+          "electricityPrice": 0.096,
+          "evSubsidy": 4631,
+          "evMarketShare": 0.3533,
+          "chargingStations": 2044
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 0.827,
+          "electricityPrice": 0.098,
+          "evSubsidy": 5012,
+          "evMarketShare": 0.4567,
+          "chargingStations": 3012
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 0.857,
+          "electricityPrice": 0.1,
+          "evSubsidy": 4937,
+          "evMarketShare": 0.5967,
+          "chargingStations": 4351
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 0.923,
+          "electricityPrice": 0.102,
+          "evSubsidy": 4949,
+          "evMarketShare": 1.28,
+          "chargingStations": 6308
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 0.997,
+          "electricityPrice": 0.105,
+          "evSubsidy": 4920,
+          "evMarketShare": 2.0067,
+          "chargingStations": 9677
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.103,
+          "electricityPrice": 0.107,
+          "evSubsidy": 4987,
+          "evMarketShare": 2.5933,
+          "chargingStations": 12901
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.263,
+          "electricityPrice": 0.109,
+          "evSubsidy": 4968,
+          "evMarketShare": 3.2967,
+          "chargingStations": 16296
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.45,
+          "electricityPrice": 0.113,
+          "evSubsidy": 5000,
+          "evMarketShare": 5.0967,
+          "chargingStations": 19547
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.537,
+          "electricityPrice": 0.119,
+          "evSubsidy": 4982,
+          "evMarketShare": 7.8767,
+          "chargingStations": 22584
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.52,
+          "electricityPrice": 0.123,
+          "evSubsidy": 5040,
+          "evMarketShare": 10.36,
+          "chargingStations": 27273
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.413,
+          "electricityPrice": 0.126,
+          "evSubsidy": 5099,
+          "evMarketShare": 12.48,
+          "chargingStations": 39111
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.32,
+          "electricityPrice": 0.13,
+          "evSubsidy": 4999,
+          "evMarketShare": 15.0567,
+          "chargingStations": 48202
+        }
+      ]
+    },
+    {
+      "country": "China",
+      "region": "Asia-Pacific",
+      "iso3": "CHN",
+      "latestFuelPricePerLiter": 1.18,
+      "latestElectricityPricePerKwh": 0.09,
+      "latestEvSubsidyUsd": 0,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 0.98,
+          "electricityPrice": 0.08,
+          "evSubsidy": 7963,
+          "evMarketShare": 0.0067,
+          "chargingStations": 530
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 0.97,
+          "electricityPrice": 0.08,
+          "evSubsidy": 8082,
+          "evMarketShare": 0.0367,
+          "chargingStations": 1862
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 0.97,
+          "electricityPrice": 0.079,
+          "evSubsidy": 8199,
+          "evMarketShare": 0.0567,
+          "chargingStations": 3516
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 0.98,
+          "electricityPrice": 0.079,
+          "evSubsidy": 8275,
+          "evMarketShare": 0.1933,
+          "chargingStations": 5042
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 0.993,
+          "electricityPrice": 0.078,
+          "evSubsidy": 8487,
+          "evMarketShare": 0.2967,
+          "chargingStations": 28663
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.007,
+          "electricityPrice": 0.079,
+          "evSubsidy": 8615,
+          "evMarketShare": 0.7467,
+          "chargingStations": 50663
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.017,
+          "electricityPrice": 0.081,
+          "evSubsidy": 8174,
+          "evMarketShare": 1.2133,
+          "chargingStations": 128594
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.033,
+          "electricityPrice": 0.081,
+          "evSubsidy": 7859,
+          "evMarketShare": 2.3033,
+          "chargingStations": 212120
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.057,
+          "electricityPrice": 0.08,
+          "evSubsidy": 7500,
+          "evMarketShare": 3.78,
+          "chargingStations": 379142
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.097,
+          "electricityPrice": 0.08,
+          "evSubsidy": 6445,
+          "evMarketShare": 3.6867,
+          "chargingStations": 508926
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.15,
+          "electricityPrice": 0.08,
+          "evSubsidy": 5443,
+          "evMarketShare": 4.73,
+          "chargingStations": 886513
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.227,
+          "electricityPrice": 0.081,
+          "evSubsidy": 4503,
+          "evMarketShare": 12.5133,
+          "chargingStations": 1173925
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.267,
+          "electricityPrice": 0.083,
+          "evSubsidy": 3542,
+          "evMarketShare": 21.13,
+          "chargingStations": 1869115
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.28,
+          "electricityPrice": 0.085,
+          "evSubsidy": 0,
+          "evMarketShare": 25.2467,
+          "chargingStations": 2593024
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.233,
+          "electricityPrice": 0.088,
+          "evSubsidy": 0,
+          "evMarketShare": 22.835,
+          "chargingStations": 3761208
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.18,
+          "electricityPrice": 0.09,
+          "evSubsidy": 0,
+          "evMarketShare": 14.24,
+          "chargingStations": 4338106
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "region": "Europe",
+      "iso3": "FRA",
+      "latestFuelPricePerLiter": 1.84,
+      "latestElectricityPricePerKwh": 0.251,
+      "latestEvSubsidyUsd": 3998,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.5,
+          "electricityPrice": 0.138,
+          "evSubsidy": 4999,
+          "evMarketShare": 0.0067,
+          "chargingStations": 97
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.487,
+          "electricityPrice": 0.147,
+          "evSubsidy": 5318,
+          "evMarketShare": 0.15,
+          "chargingStations": 719
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.463,
+          "electricityPrice": 0.152,
+          "evSubsidy": 5540,
+          "evMarketShare": 0.29,
+          "chargingStations": 1431
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.413,
+          "electricityPrice": 0.158,
+          "evSubsidy": 5793,
+          "evMarketShare": 0.5533,
+          "chargingStations": 2015
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.383,
+          "electricityPrice": 0.165,
+          "evSubsidy": 6048,
+          "evMarketShare": 0.7833,
+          "chargingStations": 5561
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.36,
+          "electricityPrice": 0.171,
+          "evSubsidy": 6161,
+          "evMarketShare": 1.0733,
+          "chargingStations": 8799
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.39,
+          "electricityPrice": 0.177,
+          "evSubsidy": 6340,
+          "evMarketShare": 1.2233,
+          "chargingStations": 12854
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.443,
+          "electricityPrice": 0.183,
+          "evSubsidy": 6219,
+          "evMarketShare": 1.57,
+          "chargingStations": 15971
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.5,
+          "electricityPrice": 0.19,
+          "evSubsidy": 6034,
+          "evMarketShare": 2.0067,
+          "chargingStations": 23412
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.587,
+          "electricityPrice": 0.197,
+          "evSubsidy": 5855,
+          "evMarketShare": 2.5867,
+          "chargingStations": 30154
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.707,
+          "electricityPrice": 0.201,
+          "evSubsidy": 6985,
+          "evMarketShare": 11.5533,
+          "chargingStations": 45766
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.893,
+          "electricityPrice": 0.209,
+          "evSubsidy": 6537,
+          "evMarketShare": 17.1467,
+          "chargingStations": 52476
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.97,
+          "electricityPrice": 0.218,
+          "evSubsidy": 6079,
+          "evMarketShare": 20.2833,
+          "chargingStations": 79878
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.983,
+          "electricityPrice": 0.23,
+          "evSubsidy": 5468,
+          "evMarketShare": 20.61,
+          "chargingStations": 126194
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.9,
+          "electricityPrice": 0.24,
+          "evSubsidy": 5020,
+          "evMarketShare": 23.1,
+          "chargingStations": 152618
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.84,
+          "electricityPrice": 0.251,
+          "evSubsidy": 3998,
+          "evMarketShare": 23.97,
+          "chargingStations": 171174
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "region": "Europe",
+      "iso3": "DEU",
+      "latestFuelPricePerLiter": 1.85,
+      "latestElectricityPricePerKwh": 0.373,
+      "latestEvSubsidyUsd": 0,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.52,
+          "electricityPrice": 0.27,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0067,
+          "chargingStations": 207
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.517,
+          "electricityPrice": 0.276,
+          "evSubsidy": 662,
+          "evMarketShare": 0.0567,
+          "chargingStations": 797
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.513,
+          "electricityPrice": 0.283,
+          "evSubsidy": 1322,
+          "evMarketShare": 0.0933,
+          "chargingStations": 1454
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.487,
+          "electricityPrice": 0.29,
+          "evSubsidy": 2010,
+          "evMarketShare": 0.2433,
+          "chargingStations": 1939
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.45,
+          "electricityPrice": 0.298,
+          "evSubsidy": 2667,
+          "evMarketShare": 0.42,
+          "chargingStations": 3925
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.44,
+          "electricityPrice": 0.304,
+          "evSubsidy": 3376,
+          "evMarketShare": 0.54,
+          "chargingStations": 5744
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.427,
+          "electricityPrice": 0.308,
+          "evSubsidy": 4026,
+          "evMarketShare": 0.6833,
+          "chargingStations": 9544
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.427,
+          "electricityPrice": 0.317,
+          "evSubsidy": 4670,
+          "evMarketShare": 1.2033,
+          "chargingStations": 13550
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.44,
+          "electricityPrice": 0.325,
+          "evSubsidy": 5353,
+          "evMarketShare": 1.6867,
+          "chargingStations": 22949
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.543,
+          "electricityPrice": 0.338,
+          "evSubsidy": 5938,
+          "evMarketShare": 2.82,
+          "chargingStations": 32917
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.703,
+          "electricityPrice": 0.357,
+          "evSubsidy": 8952,
+          "evMarketShare": 12.2833,
+          "chargingStations": 44062
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.887,
+          "electricityPrice": 0.376,
+          "evSubsidy": 7584,
+          "evMarketShare": 24.2867,
+          "chargingStations": 52606
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.99,
+          "electricityPrice": 0.37904,
+          "evSubsidy": 6000,
+          "evMarketShare": 20.565,
+          "chargingStations": 85692
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 2.007,
+          "electricityPrice": 0.37904,
+          "evSubsidy": 4586,
+          "evMarketShare": 19.13,
+          "chargingStations": 125189
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.933,
+          "electricityPrice": 0.379,
+          "evSubsidy": 0,
+          "evMarketShare": 20.91,
+          "chargingStations": 147077
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.85,
+          "electricityPrice": 0.373,
+          "evSubsidy": 0,
+          "evMarketShare": 21.585,
+          "chargingStations": 185439
+        }
+      ]
+    },
+    {
+      "country": "India",
+      "region": "Asia-Pacific",
+      "iso3": "IND",
+      "latestFuelPricePerLiter": 1.24,
+      "latestElectricityPricePerKwh": 0.091,
+      "latestEvSubsidyUsd": 3018,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 0.77,
+          "electricityPrice": 0.067,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0033,
+          "chargingStations": 0
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 0.82,
+          "electricityPrice": 0.071,
+          "evSubsidy": 363,
+          "evMarketShare": 0.0067,
+          "chargingStations": 38
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 0.87,
+          "electricityPrice": 0.074,
+          "evSubsidy": 719,
+          "evMarketShare": 0.0067,
+          "chargingStations": 72
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 0.91,
+          "electricityPrice": 0.075,
+          "evSubsidy": 1089,
+          "evMarketShare": 0.0067,
+          "chargingStations": 118
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 0.95,
+          "electricityPrice": 0.077,
+          "evSubsidy": 1437,
+          "evMarketShare": 0.0367,
+          "chargingStations": 147
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 0.977,
+          "electricityPrice": 0.079,
+          "evSubsidy": 1803,
+          "evMarketShare": 0.0467,
+          "chargingStations": 206
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.013,
+          "electricityPrice": 0.08,
+          "evSubsidy": 1841,
+          "evMarketShare": 0.0767,
+          "chargingStations": 413
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.027,
+          "electricityPrice": 0.08,
+          "evSubsidy": 1885,
+          "evMarketShare": 0.09,
+          "chargingStations": 609
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.063,
+          "electricityPrice": 0.08,
+          "evSubsidy": 1964,
+          "evMarketShare": 0.11,
+          "chargingStations": 821
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.087,
+          "electricityPrice": 0.08,
+          "evSubsidy": 2001,
+          "evMarketShare": 0.15,
+          "chargingStations": 1426
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.13,
+          "electricityPrice": 0.081,
+          "evSubsidy": 2139,
+          "evMarketShare": 0.15,
+          "chargingStations": 1987
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.193,
+          "electricityPrice": 0.081,
+          "evSubsidy": 2376,
+          "evMarketShare": 0.3667,
+          "chargingStations": 2820
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.227,
+          "electricityPrice": 0.085,
+          "evSubsidy": 2486,
+          "evMarketShare": 0.94,
+          "chargingStations": 6618
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.273,
+          "electricityPrice": 0.088,
+          "evSubsidy": 2741,
+          "evMarketShare": 1.4867,
+          "chargingStations": 12051
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.253,
+          "electricityPrice": 0.09,
+          "evSubsidy": 3015,
+          "evMarketShare": 1.9967,
+          "chargingStations": 21023
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.24,
+          "electricityPrice": 0.091,
+          "evSubsidy": 3018,
+          "evMarketShare": 2.98,
+          "chargingStations": 34475
+        }
+      ]
+    },
+    {
+      "country": "Indonesia",
+      "region": "Asia-Pacific",
+      "iso3": "IDN",
+      "latestFuelPricePerLiter": 0.85,
+      "latestElectricityPricePerKwh": 0.086,
+      "latestEvSubsidyUsd": 1506,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 0.4829,
+          "electricityPrice": 0.06699,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0033,
+          "chargingStations": 0
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 0.4829,
+          "electricityPrice": 0.06699,
+          "evSubsidy": 115,
+          "evMarketShare": 0,
+          "chargingStations": 6
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 0.4829,
+          "electricityPrice": 0.06699,
+          "evSubsidy": 234,
+          "evMarketShare": 0,
+          "chargingStations": 12
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 0.4829,
+          "electricityPrice": 0.06699,
+          "evSubsidy": 344,
+          "evMarketShare": 0.0033,
+          "chargingStations": 18
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 0.483,
+          "electricityPrice": 0.068,
+          "evSubsidy": 455,
+          "evMarketShare": 0.0067,
+          "chargingStations": 25
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 0.513,
+          "electricityPrice": 0.071,
+          "evSubsidy": 579,
+          "evMarketShare": 0.0067,
+          "chargingStations": 33
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 0.553,
+          "electricityPrice": 0.072,
+          "evSubsidy": 686,
+          "evMarketShare": 0.02,
+          "chargingStations": 38
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 0.597,
+          "electricityPrice": 0.075,
+          "evSubsidy": 797,
+          "evMarketShare": 0.02,
+          "chargingStations": 44
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 0.647,
+          "electricityPrice": 0.075,
+          "evSubsidy": 909,
+          "evMarketShare": 0.0267,
+          "chargingStations": 49
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 0.71,
+          "electricityPrice": 0.078,
+          "evSubsidy": 1043,
+          "evMarketShare": 0.0767,
+          "chargingStations": 131
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 0.777,
+          "electricityPrice": 0.079,
+          "evSubsidy": 1143,
+          "evMarketShare": 0.0833,
+          "chargingStations": 195
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 0.85,
+          "electricityPrice": 0.081,
+          "evSubsidy": 1284,
+          "evMarketShare": 0.2133,
+          "chargingStations": 488
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 0.897,
+          "electricityPrice": 0.085,
+          "evSubsidy": 1389,
+          "evMarketShare": 0.8867,
+          "chargingStations": 1453
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 0.917,
+          "electricityPrice": 0.087,
+          "evSubsidy": 1526,
+          "evMarketShare": 1.5767,
+          "chargingStations": 2818
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 0.887,
+          "electricityPrice": 0.088,
+          "evSubsidy": 1470,
+          "evMarketShare": 2.6067,
+          "chargingStations": 6436
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 0.85,
+          "electricityPrice": 0.086,
+          "evSubsidy": 1506,
+          "evMarketShare": 3.64,
+          "chargingStations": 9977
+        }
+      ]
+    },
+    {
+      "country": "Italy",
+      "region": "Other",
+      "iso3": "",
+      "latestFuelPricePerLiter": 1.89,
+      "latestElectricityPricePerKwh": 0.326,
+      "latestEvSubsidyUsd": 2975,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.48,
+          "electricityPrice": 0.226,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0067,
+          "chargingStations": 47
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.513,
+          "electricityPrice": 0.227,
+          "evSubsidy": 664,
+          "evMarketShare": 0.02,
+          "chargingStations": 209
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.527,
+          "electricityPrice": 0.231,
+          "evSubsidy": 1327,
+          "evMarketShare": 0.0267,
+          "chargingStations": 343
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.53,
+          "electricityPrice": 0.239,
+          "evSubsidy": 2021,
+          "evMarketShare": 0.0767,
+          "chargingStations": 517
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.547,
+          "electricityPrice": 0.244,
+          "evSubsidy": 2613,
+          "evMarketShare": 0.0967,
+          "chargingStations": 1246
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.563,
+          "electricityPrice": 0.251,
+          "evSubsidy": 3313,
+          "evMarketShare": 0.1233,
+          "chargingStations": 1768
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.577,
+          "electricityPrice": 0.252,
+          "evSubsidy": 4042,
+          "evMarketShare": 0.13,
+          "chargingStations": 3104
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.567,
+          "electricityPrice": 0.258,
+          "evSubsidy": 4682,
+          "evMarketShare": 0.29,
+          "chargingStations": 3817
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.593,
+          "electricityPrice": 0.259,
+          "evSubsidy": 5407,
+          "evMarketShare": 0.4767,
+          "chargingStations": 6437
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.653,
+          "electricityPrice": 0.267,
+          "evSubsidy": 5962,
+          "evMarketShare": 0.83,
+          "chargingStations": 9006
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.79,
+          "electricityPrice": 0.295,
+          "evSubsidy": 5901,
+          "evMarketShare": 4.34,
+          "chargingStations": 12642
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.96,
+          "electricityPrice": 0.349,
+          "evSubsidy": 5459,
+          "evMarketShare": 9.27,
+          "chargingStations": 22496
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 2.043,
+          "electricityPrice": 0.37904,
+          "evSubsidy": 5047,
+          "evMarketShare": 8.05,
+          "chargingStations": 34576
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 2.053,
+          "electricityPrice": 0.37904,
+          "evSubsidy": 4499,
+          "evMarketShare": 7.8133,
+          "chargingStations": 48063
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.963,
+          "electricityPrice": 0.352,
+          "evSubsidy": 3973,
+          "evMarketShare": 9.0233,
+          "chargingStations": 65326
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.89,
+          "electricityPrice": 0.326,
+          "evSubsidy": 2975,
+          "evMarketShare": 11.3233,
+          "chargingStations": 77783
+        }
+      ]
+    },
+    {
+      "country": "Japan",
+      "region": "Asia-Pacific",
+      "iso3": "JPN",
+      "latestFuelPricePerLiter": 1.37,
+      "latestElectricityPricePerKwh": 0.258,
+      "latestEvSubsidyUsd": 6576,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.29,
+          "electricityPrice": 0.18,
+          "evSubsidy": 4452,
+          "evMarketShare": 0.0367,
+          "chargingStations": 991
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.26,
+          "electricityPrice": 0.19,
+          "evSubsidy": 4308,
+          "evMarketShare": 0.29,
+          "chargingStations": 2318
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.24,
+          "electricityPrice": 0.197,
+          "evSubsidy": 4154,
+          "evMarketShare": 0.45,
+          "chargingStations": 3571
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.207,
+          "electricityPrice": 0.203,
+          "evSubsidy": 3902,
+          "evMarketShare": 0.5033,
+          "chargingStations": 4680
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.16,
+          "electricityPrice": 0.209,
+          "evSubsidy": 3697,
+          "evMarketShare": 0.5133,
+          "chargingStations": 13099
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.13,
+          "electricityPrice": 0.217,
+          "evSubsidy": 3494,
+          "evMarketShare": 0.5333,
+          "chargingStations": 20717
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.137,
+          "electricityPrice": 0.222,
+          "evSubsidy": 3570,
+          "evMarketShare": 0.45,
+          "chargingStations": 25175
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.17,
+          "electricityPrice": 0.223,
+          "evSubsidy": 3740,
+          "evMarketShare": 0.67,
+          "chargingStations": 29590
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.213,
+          "electricityPrice": 0.221,
+          "evSubsidy": 3892,
+          "evMarketShare": 0.8867,
+          "chargingStations": 29251
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.26,
+          "electricityPrice": 0.219,
+          "evSubsidy": 3954,
+          "evMarketShare": 0.7667,
+          "chargingStations": 30023
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.317,
+          "electricityPrice": 0.223,
+          "evSubsidy": 4560,
+          "evMarketShare": 0.6067,
+          "chargingStations": 29846
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.343,
+          "electricityPrice": 0.229,
+          "evSubsidy": 5215,
+          "evMarketShare": 0.94,
+          "chargingStations": 32130
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.367,
+          "electricityPrice": 0.238,
+          "evSubsidy": 5776,
+          "evMarketShare": 1.9433,
+          "chargingStations": 30952
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.367,
+          "electricityPrice": 0.241,
+          "evSubsidy": 6209,
+          "evMarketShare": 2.96,
+          "chargingStations": 36092
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.373,
+          "electricityPrice": 0.248,
+          "evSubsidy": 6500,
+          "evMarketShare": 3.92,
+          "chargingStations": 41956
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.37,
+          "electricityPrice": 0.258,
+          "evSubsidy": 6576,
+          "evMarketShare": 5.42,
+          "chargingStations": 49260
+        }
+      ]
+    },
+    {
+      "country": "Mexico",
+      "region": "North America",
+      "iso3": "MEX",
+      "latestFuelPricePerLiter": 1.13,
+      "latestElectricityPricePerKwh": 0.101,
+      "latestEvSubsidyUsd": 0,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 0.71,
+          "electricityPrice": 0.092,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0033,
+          "chargingStations": 0
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 0.723,
+          "electricityPrice": 0.088,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0067,
+          "chargingStations": 36
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 0.747,
+          "electricityPrice": 0.084,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0067,
+          "chargingStations": 76
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 0.757,
+          "electricityPrice": 0.084,
+          "evSubsidy": 0,
+          "evMarketShare": 0.02,
+          "chargingStations": 112
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 0.777,
+          "electricityPrice": 0.081,
+          "evSubsidy": 0,
+          "evMarketShare": 0.02,
+          "chargingStations": 150
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 0.8,
+          "electricityPrice": 0.08,
+          "evSubsidy": 0,
+          "evMarketShare": 0.02,
+          "chargingStations": 191
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 0.847,
+          "electricityPrice": 0.079,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0267,
+          "chargingStations": 216
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 0.897,
+          "electricityPrice": 0.078,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0467,
+          "chargingStations": 250
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 0.953,
+          "electricityPrice": 0.078,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0633,
+          "chargingStations": 288
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1,
+          "electricityPrice": 0.079,
+          "evSubsidy": 0,
+          "evMarketShare": 0.1033,
+          "chargingStations": 630
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.083,
+          "electricityPrice": 0.081,
+          "evSubsidy": 0,
+          "evMarketShare": 0.2067,
+          "chargingStations": 939
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.157,
+          "electricityPrice": 0.083,
+          "evSubsidy": 0,
+          "evMarketShare": 0.4567,
+          "chargingStations": 1443
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.227,
+          "electricityPrice": 0.086,
+          "evSubsidy": 0,
+          "evMarketShare": 1.1967,
+          "chargingStations": 2059
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.213,
+          "electricityPrice": 0.091,
+          "evSubsidy": 0,
+          "evMarketShare": 1.66,
+          "chargingStations": 3540
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.177,
+          "electricityPrice": 0.096,
+          "evSubsidy": 0,
+          "evMarketShare": 2.4733,
+          "chargingStations": 4744
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.13,
+          "electricityPrice": 0.101,
+          "evSubsidy": 0,
+          "evMarketShare": 3.0967,
+          "chargingStations": 7945
+        }
+      ]
+    },
+    {
+      "country": "Netherlands",
+      "region": "Europe",
+      "iso3": "NLD",
+      "latestFuelPricePerLiter": 2.08,
+      "latestElectricityPricePerKwh": 0.279,
+      "latestEvSubsidyUsd": 2934,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.75,
+          "electricityPrice": 0.197,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0567,
+          "chargingStations": 304
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.67,
+          "electricityPrice": 0.199,
+          "evSubsidy": 669,
+          "evMarketShare": 0.5667,
+          "chargingStations": 2175
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.62,
+          "electricityPrice": 0.2,
+          "evSubsidy": 1334,
+          "evMarketShare": 1.1,
+          "chargingStations": 3835
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.63,
+          "electricityPrice": 0.199,
+          "evSubsidy": 1953,
+          "evMarketShare": 2.2667,
+          "chargingStations": 5912
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.63,
+          "electricityPrice": 0.198,
+          "evSubsidy": 2641,
+          "evMarketShare": 3.34,
+          "chargingStations": 12010
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.637,
+          "electricityPrice": 0.2,
+          "evSubsidy": 3343,
+          "evMarketShare": 4.2467,
+          "chargingStations": 17818
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.637,
+          "electricityPrice": 0.205,
+          "evSubsidy": 4051,
+          "evMarketShare": 5.17,
+          "chargingStations": 25616
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.67,
+          "electricityPrice": 0.209,
+          "evSubsidy": 4083,
+          "evMarketShare": 5.6267,
+          "chargingStations": 31883
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.717,
+          "electricityPrice": 0.211,
+          "evSubsidy": 4104,
+          "evMarketShare": 5.5167,
+          "chargingStations": 42365
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.807,
+          "electricityPrice": 0.213,
+          "evSubsidy": 4053,
+          "evMarketShare": 14.1033,
+          "chargingStations": 51265
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.96,
+          "electricityPrice": 0.242,
+          "evSubsidy": 3985,
+          "evMarketShare": 17.9467,
+          "chargingStations": 70476
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 2.153,
+          "electricityPrice": 0.287,
+          "evSubsidy": 3444,
+          "evMarketShare": 16.6833,
+          "chargingStations": 88840
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 2.153,
+          "electricityPrice": 0.325,
+          "evSubsidy": 2910,
+          "evMarketShare": 22.4,
+          "chargingStations": 114826
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 2.153,
+          "electricityPrice": 0.33,
+          "evSubsidy": 2962,
+          "evMarketShare": 21.14,
+          "chargingStations": 145934
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 2.153,
+          "electricityPrice": 0.306,
+          "evSubsidy": 2947,
+          "evMarketShare": 22.75,
+          "chargingStations": 174072
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 2.08,
+          "electricityPrice": 0.279,
+          "evSubsidy": 2934,
+          "evMarketShare": 24.685,
+          "chargingStations": 196516
+        }
+      ]
+    },
+    {
+      "country": "Norway",
+      "region": "Europe",
+      "iso3": "NOR",
+      "latestFuelPricePerLiter": 2.04,
+      "latestElectricityPricePerKwh": 0.144,
+      "latestEvSubsidyUsd": 0,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.8,
+          "electricityPrice": 0.12,
+          "evSubsidy": 0,
+          "evMarketShare": 0.27,
+          "chargingStations": 205
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.767,
+          "electricityPrice": 0.113,
+          "evSubsidy": 0,
+          "evMarketShare": 1.4733,
+          "chargingStations": 797
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.713,
+          "electricityPrice": 0.108,
+          "evSubsidy": 0,
+          "evMarketShare": 2.6233,
+          "chargingStations": 1367
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.637,
+          "electricityPrice": 0.103,
+          "evSubsidy": 0,
+          "evMarketShare": 7.4767,
+          "chargingStations": 1841
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.61,
+          "electricityPrice": 0.098,
+          "evSubsidy": 0,
+          "evMarketShare": 11.7133,
+          "chargingStations": 4086
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.593,
+          "electricityPrice": 0.092,
+          "evSubsidy": 0,
+          "evMarketShare": 13.2533,
+          "chargingStations": 5738
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.62,
+          "electricityPrice": 0.088,
+          "evSubsidy": 0,
+          "evMarketShare": 14.6733,
+          "chargingStations": 8227
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.647,
+          "electricityPrice": 0.086,
+          "evSubsidy": 0,
+          "evMarketShare": 21.6167,
+          "chargingStations": 9998
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.683,
+          "electricityPrice": 0.084,
+          "evSubsidy": 0,
+          "evMarketShare": 20.19,
+          "chargingStations": 11916
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.747,
+          "electricityPrice": 0.082,
+          "evSubsidy": 0,
+          "evMarketShare": 14.67,
+          "chargingStations": 14779
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.887,
+          "electricityPrice": 0.097,
+          "evSubsidy": 0,
+          "evMarketShare": 19.2,
+          "chargingStations": 17949
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 2.063,
+          "electricityPrice": 0.131,
+          "evSubsidy": 0,
+          "evMarketShare": 23.5,
+          "chargingStations": 19829
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 2.143,
+          "electricityPrice": 0.159,
+          "evSubsidy": 0,
+          "evMarketShare": 31.43,
+          "chargingStations": 24419
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 2.153,
+          "electricityPrice": 0.168,
+          "evSubsidy": 0,
+          "evMarketShare": 29.93,
+          "chargingStations": 29628
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 2.09,
+          "electricityPrice": 0.155,
+          "evSubsidy": 0,
+          "evMarketShare": 28.81,
+          "chargingStations": 33158
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 2.04,
+          "electricityPrice": 0.144,
+          "evSubsidy": 0,
+          "evMarketShare": 30.15,
+          "chargingStations": 35915
+        }
+      ]
+    },
+    {
+      "country": "Poland",
+      "region": "Other",
+      "iso3": "",
+      "latestFuelPricePerLiter": 1.48,
+      "latestElectricityPricePerKwh": 0.218,
+      "latestEvSubsidyUsd": 4658,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.26,
+          "electricityPrice": 0.143,
+          "evSubsidy": 0,
+          "evMarketShare": 0.01,
+          "chargingStations": 0
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.22,
+          "electricityPrice": 0.142,
+          "evSubsidy": 461,
+          "evMarketShare": 0.01,
+          "chargingStations": 33
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.187,
+          "electricityPrice": 0.14,
+          "evSubsidy": 908,
+          "evMarketShare": 0.0233,
+          "chargingStations": 69
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.153,
+          "electricityPrice": 0.139,
+          "evSubsidy": 1382,
+          "evMarketShare": 0.0233,
+          "chargingStations": 108
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.127,
+          "electricityPrice": 0.141,
+          "evSubsidy": 1820,
+          "evMarketShare": 0.0267,
+          "chargingStations": 131
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.113,
+          "electricityPrice": 0.143,
+          "evSubsidy": 2277,
+          "evMarketShare": 0.0633,
+          "chargingStations": 153
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.12,
+          "electricityPrice": 0.146,
+          "evSubsidy": 2813,
+          "evMarketShare": 0.11,
+          "chargingStations": 193
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.133,
+          "electricityPrice": 0.153,
+          "evSubsidy": 3230,
+          "evMarketShare": 0.2333,
+          "chargingStations": 493
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.157,
+          "electricityPrice": 0.161,
+          "evSubsidy": 3696,
+          "evMarketShare": 0.3667,
+          "chargingStations": 839
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.237,
+          "electricityPrice": 0.17,
+          "evSubsidy": 4064,
+          "evMarketShare": 0.4633,
+          "chargingStations": 1260
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.367,
+          "electricityPrice": 0.176,
+          "evSubsidy": 4593,
+          "evMarketShare": 2.08,
+          "chargingStations": 1992
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.52,
+          "electricityPrice": 0.183,
+          "evSubsidy": 4576,
+          "evMarketShare": 4.23,
+          "chargingStations": 2871
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.587,
+          "electricityPrice": 0.192,
+          "evSubsidy": 4565,
+          "evMarketShare": 5.45,
+          "chargingStations": 3706
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.573,
+          "electricityPrice": 0.201,
+          "evSubsidy": 4615,
+          "evMarketShare": 6.4867,
+          "chargingStations": 6012
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.517,
+          "electricityPrice": 0.21,
+          "evSubsidy": 4544,
+          "evMarketShare": 7.0167,
+          "chargingStations": 7734
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.48,
+          "electricityPrice": 0.218,
+          "evSubsidy": 4658,
+          "evMarketShare": 8.4567,
+          "chargingStations": 10596
+        }
+      ]
+    },
+    {
+      "country": "Portugal",
+      "region": "Other",
+      "iso3": "",
+      "latestFuelPricePerLiter": 1.71,
+      "latestElectricityPricePerKwh": 0.233,
+      "latestEvSubsidyUsd": 3961,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.41,
+          "electricityPrice": 0.169,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0233,
+          "chargingStations": 49
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.38,
+          "electricityPrice": 0.181,
+          "evSubsidy": 376,
+          "evMarketShare": 0.0567,
+          "chargingStations": 429
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.38,
+          "electricityPrice": 0.192,
+          "evSubsidy": 749,
+          "evMarketShare": 0.0833,
+          "chargingStations": 875
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.38,
+          "electricityPrice": 0.204,
+          "evSubsidy": 1095,
+          "evMarketShare": 0.16,
+          "chargingStations": 1243
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.357,
+          "electricityPrice": 0.212,
+          "evSubsidy": 1508,
+          "evMarketShare": 0.5333,
+          "chargingStations": 1363
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.347,
+          "electricityPrice": 0.217,
+          "evSubsidy": 1870,
+          "evMarketShare": 0.7733,
+          "chargingStations": 1501
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.373,
+          "electricityPrice": 0.218,
+          "evSubsidy": 2291,
+          "evMarketShare": 1.01,
+          "chargingStations": 1739
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.437,
+          "electricityPrice": 0.217,
+          "evSubsidy": 2498,
+          "evMarketShare": 1.2667,
+          "chargingStations": 1932
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.447,
+          "electricityPrice": 0.219,
+          "evSubsidy": 2757,
+          "evMarketShare": 2.8567,
+          "chargingStations": 2257
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.527,
+          "electricityPrice": 0.219,
+          "evSubsidy": 2984,
+          "evMarketShare": 4.1267,
+          "chargingStations": 3013
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.64,
+          "electricityPrice": 0.222,
+          "evSubsidy": 3333,
+          "evMarketShare": 9.4567,
+          "chargingStations": 3578
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.813,
+          "electricityPrice": 0.224,
+          "evSubsidy": 3685,
+          "evMarketShare": 13.6633,
+          "chargingStations": 5374
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.893,
+          "electricityPrice": 0.23,
+          "evSubsidy": 4001,
+          "evMarketShare": 16.81,
+          "chargingStations": 6903
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.903,
+          "electricityPrice": 0.233,
+          "evSubsidy": 4041,
+          "evMarketShare": 19.2,
+          "chargingStations": 10197
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.83,
+          "electricityPrice": 0.235,
+          "evSubsidy": 4012,
+          "evMarketShare": 22.4,
+          "chargingStations": 13503
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.71,
+          "electricityPrice": 0.233,
+          "evSubsidy": 3961,
+          "evMarketShare": 24.26,
+          "chargingStations": 17905
+        }
+      ]
+    },
+    {
+      "country": "South Korea",
+      "region": "Asia-Pacific",
+      "iso3": "KOR",
+      "latestFuelPricePerLiter": 1.51,
+      "latestElectricityPricePerKwh": 0.13,
+      "latestEvSubsidyUsd": 5060,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.4,
+          "electricityPrice": 0.078,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0067,
+          "chargingStations": 94
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.347,
+          "electricityPrice": 0.084,
+          "evSubsidy": 1253,
+          "evMarketShare": 0.02,
+          "chargingStations": 226
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.303,
+          "electricityPrice": 0.089,
+          "evSubsidy": 2566,
+          "evMarketShare": 0.0267,
+          "chargingStations": 362
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.26,
+          "electricityPrice": 0.094,
+          "evSubsidy": 3736,
+          "evMarketShare": 0.11,
+          "chargingStations": 522
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.237,
+          "electricityPrice": 0.097,
+          "evSubsidy": 4893,
+          "evMarketShare": 0.1667,
+          "chargingStations": 1746
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.22,
+          "electricityPrice": 0.1,
+          "evSubsidy": 5367,
+          "evMarketShare": 0.3533,
+          "chargingStations": 2993
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.233,
+          "electricityPrice": 0.101,
+          "evSubsidy": 5706,
+          "evMarketShare": 0.5867,
+          "chargingStations": 5735
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.25,
+          "electricityPrice": 0.101,
+          "evSubsidy": 6151,
+          "evMarketShare": 1.0733,
+          "chargingStations": 9749
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.27,
+          "electricityPrice": 0.101,
+          "evSubsidy": 6456,
+          "evMarketShare": 1.68,
+          "chargingStations": 22623
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.327,
+          "electricityPrice": 0.099,
+          "evSubsidy": 6351,
+          "evMarketShare": 2.2467,
+          "chargingStations": 31425
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.41,
+          "electricityPrice": 0.101,
+          "evSubsidy": 6386,
+          "evMarketShare": 2.2133,
+          "chargingStations": 56558
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.527,
+          "electricityPrice": 0.103,
+          "evSubsidy": 5930,
+          "evMarketShare": 5.1433,
+          "chargingStations": 91122
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.573,
+          "electricityPrice": 0.111,
+          "evSubsidy": 5455,
+          "evMarketShare": 9.5667,
+          "chargingStations": 127353
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.587,
+          "electricityPrice": 0.117,
+          "evSubsidy": 5356,
+          "evMarketShare": 10.3767,
+          "chargingStations": 172705
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.547,
+          "electricityPrice": 0.125,
+          "evSubsidy": 5171,
+          "evMarketShare": 12.6167,
+          "chargingStations": 211626
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.51,
+          "electricityPrice": 0.13,
+          "evSubsidy": 5060,
+          "evMarketShare": 14.4833,
+          "chargingStations": 249268
+        }
+      ]
+    },
+    {
+      "country": "Spain",
+      "region": "Other",
+      "iso3": "",
+      "latestFuelPricePerLiter": 1.59,
+      "latestElectricityPricePerKwh": 0.256,
+      "latestEvSubsidyUsd": 6986,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.21,
+          "electricityPrice": 0.181,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0067,
+          "chargingStations": 51
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.187,
+          "electricityPrice": 0.191,
+          "evSubsidy": 684,
+          "evMarketShare": 0.02,
+          "chargingStations": 194
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.173,
+          "electricityPrice": 0.198,
+          "evSubsidy": 1392,
+          "evMarketShare": 0.0367,
+          "chargingStations": 343
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.17,
+          "electricityPrice": 0.206,
+          "evSubsidy": 2102,
+          "evMarketShare": 0.1233,
+          "chargingStations": 513
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.17,
+          "electricityPrice": 0.216,
+          "evSubsidy": 2788,
+          "evMarketShare": 0.1667,
+          "chargingStations": 1289
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.173,
+          "electricityPrice": 0.221,
+          "evSubsidy": 3514,
+          "evMarketShare": 0.27,
+          "chargingStations": 2016
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.2,
+          "electricityPrice": 0.22,
+          "evSubsidy": 3964,
+          "evMarketShare": 0.3533,
+          "chargingStations": 2922
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.237,
+          "electricityPrice": 0.216,
+          "evSubsidy": 4460,
+          "evMarketShare": 0.69,
+          "chargingStations": 3895
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.273,
+          "electricityPrice": 0.217,
+          "evSubsidy": 5013,
+          "evMarketShare": 1.01,
+          "chargingStations": 5672
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.34,
+          "electricityPrice": 0.219,
+          "evSubsidy": 5540,
+          "evMarketShare": 1.3833,
+          "chargingStations": 8112
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.48,
+          "electricityPrice": 0.24,
+          "evSubsidy": 6020,
+          "evMarketShare": 3.8567,
+          "chargingStations": 10324
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.673,
+          "electricityPrice": 0.28,
+          "evSubsidy": 6568,
+          "evMarketShare": 6.8133,
+          "chargingStations": 15373
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.797,
+          "electricityPrice": 0.307,
+          "evSubsidy": 7044,
+          "evMarketShare": 7.68,
+          "chargingStations": 23376
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.813,
+          "electricityPrice": 0.309,
+          "evSubsidy": 7094,
+          "evMarketShare": 7.82,
+          "chargingStations": 32345
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.72,
+          "electricityPrice": 0.281,
+          "evSubsidy": 7109,
+          "evMarketShare": 9.4933,
+          "chargingStations": 42696
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.59,
+          "electricityPrice": 0.256,
+          "evSubsidy": 6986,
+          "evMarketShare": 11.09,
+          "chargingStations": 50087
+        }
+      ]
+    },
+    {
+      "country": "Sweden",
+      "region": "Europe",
+      "iso3": "SWE",
+      "latestFuelPricePerLiter": 1.93,
+      "latestElectricityPricePerKwh": 0.141,
+      "latestEvSubsidyUsd": 0,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.56,
+          "electricityPrice": 0.132,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0267,
+          "chargingStations": 109
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.513,
+          "electricityPrice": 0.124,
+          "evSubsidy": 2235,
+          "evMarketShare": 0.1867,
+          "chargingStations": 432
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.483,
+          "electricityPrice": 0.117,
+          "evSubsidy": 4560,
+          "evMarketShare": 0.3533,
+          "chargingStations": 720
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.447,
+          "electricityPrice": 0.111,
+          "evSubsidy": 4548,
+          "evMarketShare": 0.8767,
+          "chargingStations": 974
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.437,
+          "electricityPrice": 0.106,
+          "evSubsidy": 4539,
+          "evMarketShare": 1.1967,
+          "chargingStations": 1843
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.43,
+          "electricityPrice": 0.102,
+          "evSubsidy": 4442,
+          "evMarketShare": 2.3067,
+          "chargingStations": 2970
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.437,
+          "electricityPrice": 0.1,
+          "evSubsidy": 4903,
+          "evMarketShare": 3.2667,
+          "chargingStations": 4094
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.467,
+          "electricityPrice": 0.1,
+          "evSubsidy": 5281,
+          "evMarketShare": 5.29,
+          "chargingStations": 5258
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.497,
+          "electricityPrice": 0.101,
+          "evSubsidy": 5618,
+          "evMarketShare": 7.01,
+          "chargingStations": 7633
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.617,
+          "electricityPrice": 0.101,
+          "evSubsidy": 5894,
+          "evMarketShare": 10.6467,
+          "chargingStations": 10289
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.757,
+          "electricityPrice": 0.114,
+          "evSubsidy": 5725,
+          "evMarketShare": 22.4067,
+          "chargingStations": 14330
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.983,
+          "electricityPrice": 0.14,
+          "evSubsidy": 5412,
+          "evMarketShare": 26.98,
+          "chargingStations": 15476
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 2.093,
+          "electricityPrice": 0.164,
+          "evSubsidy": 5061,
+          "evMarketShare": 17.45,
+          "chargingStations": 21283
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 2.097,
+          "electricityPrice": 0.168,
+          "evSubsidy": 2456,
+          "evMarketShare": 16.14,
+          "chargingStations": 29553
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 2,
+          "electricityPrice": 0.155,
+          "evSubsidy": 0,
+          "evMarketShare": 17.7,
+          "chargingStations": 35576
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.93,
+          "electricityPrice": 0.141,
+          "evSubsidy": 0,
+          "evMarketShare": 18.27,
+          "chargingStations": 45844
+        }
+      ]
+    },
+    {
+      "country": "Switzerland",
+      "region": "Other",
+      "iso3": "",
+      "latestFuelPricePerLiter": 1.79,
+      "latestElectricityPricePerKwh": 0.232,
+      "latestEvSubsidyUsd": 0,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.4,
+          "electricityPrice": 0.158,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0267,
+          "chargingStations": 98
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.417,
+          "electricityPrice": 0.162,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0767,
+          "chargingStations": 230
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.407,
+          "electricityPrice": 0.167,
+          "evSubsidy": 0,
+          "evMarketShare": 0.1233,
+          "chargingStations": 361
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.373,
+          "electricityPrice": 0.172,
+          "evSubsidy": 0,
+          "evMarketShare": 0.15,
+          "chargingStations": 468
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.347,
+          "electricityPrice": 0.177,
+          "evSubsidy": 0,
+          "evMarketShare": 0.68,
+          "chargingStations": 1271
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.343,
+          "electricityPrice": 0.179,
+          "evSubsidy": 0,
+          "evMarketShare": 1.12,
+          "chargingStations": 2022
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.387,
+          "electricityPrice": 0.181,
+          "evSubsidy": 0,
+          "evMarketShare": 1.4567,
+          "chargingStations": 2937
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.427,
+          "electricityPrice": 0.183,
+          "evSubsidy": 0,
+          "evMarketShare": 1.79,
+          "chargingStations": 3886
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.47,
+          "electricityPrice": 0.189,
+          "evSubsidy": 0,
+          "evMarketShare": 2.7167,
+          "chargingStations": 5609
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.527,
+          "electricityPrice": 0.192,
+          "evSubsidy": 0,
+          "evMarketShare": 3.9133,
+          "chargingStations": 6779
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.653,
+          "electricityPrice": 0.198,
+          "evSubsidy": 0,
+          "evMarketShare": 9.7133,
+          "chargingStations": 9057
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.817,
+          "electricityPrice": 0.202,
+          "evSubsidy": 0,
+          "evMarketShare": 16.69,
+          "chargingStations": 12084
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.937,
+          "electricityPrice": 0.211,
+          "evSubsidy": 0,
+          "evMarketShare": 21.2233,
+          "chargingStations": 15350
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.93,
+          "electricityPrice": 0.219,
+          "evSubsidy": 0,
+          "evMarketShare": 22.2967,
+          "chargingStations": 18901
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.867,
+          "electricityPrice": 0.227,
+          "evSubsidy": 0,
+          "evMarketShare": 23.52,
+          "chargingStations": 23201
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.79,
+          "electricityPrice": 0.232,
+          "evSubsidy": 0,
+          "evMarketShare": 19.02,
+          "chargingStations": 28251
+        }
+      ]
+    },
+    {
+      "country": "Thailand",
+      "region": "Asia-Pacific",
+      "iso3": "THA",
+      "latestFuelPricePerLiter": 1.11,
+      "latestElectricityPricePerKwh": 0.12,
+      "latestEvSubsidyUsd": 2519,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 0.9,
+          "electricityPrice": 0.069,
+          "evSubsidy": 0,
+          "evMarketShare": 0,
+          "chargingStations": 0
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 0.883,
+          "electricityPrice": 0.073,
+          "evSubsidy": 251,
+          "evMarketShare": 0.0067,
+          "chargingStations": 13
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 0.87,
+          "electricityPrice": 0.077,
+          "evSubsidy": 500,
+          "evMarketShare": 0.0067,
+          "chargingStations": 24
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 0.867,
+          "electricityPrice": 0.081,
+          "evSubsidy": 751,
+          "evMarketShare": 0.0067,
+          "chargingStations": 36
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 0.857,
+          "electricityPrice": 0.085,
+          "evSubsidy": 1002,
+          "evMarketShare": 0.0067,
+          "chargingStations": 48
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 0.867,
+          "electricityPrice": 0.089,
+          "evSubsidy": 1242,
+          "evMarketShare": 0.02,
+          "chargingStations": 62
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 0.883,
+          "electricityPrice": 0.093,
+          "evSubsidy": 1499,
+          "evMarketShare": 0.0267,
+          "chargingStations": 77
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 0.927,
+          "electricityPrice": 0.095,
+          "evSubsidy": 1745,
+          "evMarketShare": 0.0467,
+          "chargingStations": 92
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 0.97,
+          "electricityPrice": 0.096,
+          "evSubsidy": 2004,
+          "evMarketShare": 0.0467,
+          "chargingStations": 107
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.017,
+          "electricityPrice": 0.098,
+          "evSubsidy": 2238,
+          "evMarketShare": 0.14,
+          "chargingStations": 293
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.077,
+          "electricityPrice": 0.099,
+          "evSubsidy": 2479,
+          "evMarketShare": 0.2333,
+          "chargingStations": 504
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.13,
+          "electricityPrice": 0.103,
+          "evSubsidy": 2732,
+          "evMarketShare": 0.6367,
+          "chargingStations": 975
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.207,
+          "electricityPrice": 0.107,
+          "evSubsidy": 2988,
+          "evMarketShare": 2.7233,
+          "chargingStations": 2746
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.203,
+          "electricityPrice": 0.113,
+          "evSubsidy": 3009,
+          "evMarketShare": 8.2767,
+          "chargingStations": 8246
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.18,
+          "electricityPrice": 0.117,
+          "evSubsidy": 2487,
+          "evMarketShare": 11.2633,
+          "chargingStations": 15198
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.11,
+          "electricityPrice": 0.12,
+          "evSubsidy": 2519,
+          "evMarketShare": 13.5233,
+          "chargingStations": 25686
+        }
+      ]
+    },
+    {
+      "country": "Turkey",
+      "region": "Other",
+      "iso3": "",
+      "latestFuelPricePerLiter": 1.02,
+      "latestElectricityPricePerKwh": 0.1,
+      "latestEvSubsidyUsd": 3515,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.56,
+          "electricityPrice": 0.102,
+          "evSubsidy": 0,
+          "evMarketShare": 0.0033,
+          "chargingStations": 0
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.533,
+          "electricityPrice": 0.101,
+          "evSubsidy": 270,
+          "evMarketShare": 0,
+          "chargingStations": 13
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.487,
+          "electricityPrice": 0.101,
+          "evSubsidy": 541,
+          "evMarketShare": 0.0033,
+          "chargingStations": 26
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.43,
+          "electricityPrice": 0.101,
+          "evSubsidy": 819,
+          "evMarketShare": 0.01,
+          "chargingStations": 39
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.393,
+          "electricityPrice": 0.102,
+          "evSubsidy": 1067,
+          "evMarketShare": 0.0067,
+          "chargingStations": 48
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.36,
+          "electricityPrice": 0.1,
+          "evSubsidy": 1374,
+          "evMarketShare": 0.0067,
+          "chargingStations": 65
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.307,
+          "electricityPrice": 0.095,
+          "evSubsidy": 1620,
+          "evMarketShare": 0.02,
+          "chargingStations": 75
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.2,
+          "electricityPrice": 0.089,
+          "evSubsidy": 1911,
+          "evMarketShare": 0.0367,
+          "chargingStations": 85
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.097,
+          "electricityPrice": 0.082,
+          "evSubsidy": 2189,
+          "evMarketShare": 0.0633,
+          "chargingStations": 102
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.033,
+          "electricityPrice": 0.075,
+          "evSubsidy": 2425,
+          "evMarketShare": 0.1667,
+          "chargingStations": 298
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.017,
+          "electricityPrice": 0.074,
+          "evSubsidy": 2697,
+          "evMarketShare": 0.25,
+          "chargingStations": 477
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.043,
+          "electricityPrice": 0.077,
+          "evSubsidy": 2977,
+          "evMarketShare": 0.6067,
+          "chargingStations": 952
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.07,
+          "electricityPrice": 0.083,
+          "evSubsidy": 3235,
+          "evMarketShare": 1.0167,
+          "chargingStations": 3026
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.083,
+          "electricityPrice": 0.088,
+          "evSubsidy": 3517,
+          "evMarketShare": 6.0667,
+          "chargingStations": 9970
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.06,
+          "electricityPrice": 0.094,
+          "evSubsidy": 3486,
+          "evMarketShare": 8.8833,
+          "chargingStations": 18314
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.02,
+          "electricityPrice": 0.1,
+          "evSubsidy": 3515,
+          "evMarketShare": 10.1,
+          "chargingStations": 27835
+        }
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "region": "Europe",
+      "iso3": "GBR",
+      "latestFuelPricePerLiter": 1.7,
+      "latestElectricityPricePerKwh": 0.311,
+      "latestEvSubsidyUsd": 0,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 1.43,
+          "electricityPrice": 0.158,
+          "evSubsidy": 5030,
+          "evMarketShare": 0.03,
+          "chargingStations": 104
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 1.4,
+          "electricityPrice": 0.168,
+          "evSubsidy": 5006,
+          "evMarketShare": 0.0633,
+          "chargingStations": 605
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 1.39,
+          "electricityPrice": 0.176,
+          "evSubsidy": 5017,
+          "evMarketShare": 0.1033,
+          "chargingStations": 1046
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 1.38,
+          "electricityPrice": 0.187,
+          "evSubsidy": 5083,
+          "evMarketShare": 0.3367,
+          "chargingStations": 1441
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 1.367,
+          "electricityPrice": 0.202,
+          "evSubsidy": 4930,
+          "evMarketShare": 0.4967,
+          "chargingStations": 3169
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 1.373,
+          "electricityPrice": 0.213,
+          "evSubsidy": 4971,
+          "evMarketShare": 0.8567,
+          "chargingStations": 5211
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 1.387,
+          "electricityPrice": 0.219,
+          "evSubsidy": 4599,
+          "evMarketShare": 1.4,
+          "chargingStations": 8891
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 1.387,
+          "electricityPrice": 0.222,
+          "evSubsidy": 4266,
+          "evMarketShare": 1.8033,
+          "chargingStations": 11246
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 1.397,
+          "electricityPrice": 0.228,
+          "evSubsidy": 3826,
+          "evMarketShare": 2.3233,
+          "chargingStations": 18600
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 1.463,
+          "electricityPrice": 0.234,
+          "evSubsidy": 3485,
+          "evMarketShare": 3.05,
+          "chargingStations": 24654
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 1.627,
+          "electricityPrice": 0.257,
+          "evSubsidy": 2955,
+          "evMarketShare": 10.1833,
+          "chargingStations": 36758
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.783,
+          "electricityPrice": 0.29,
+          "evSubsidy": 2539,
+          "evMarketShare": 17.6767,
+          "chargingStations": 43790
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.883,
+          "electricityPrice": 0.32,
+          "evSubsidy": 1485,
+          "evMarketShare": 21.2867,
+          "chargingStations": 46365
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.883,
+          "electricityPrice": 0.328,
+          "evSubsidy": 0,
+          "evMarketShare": 19.9567,
+          "chargingStations": 56485
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.81,
+          "electricityPrice": 0.32,
+          "evSubsidy": 0,
+          "evMarketShare": 20.4967,
+          "chargingStations": 68445
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 1.7,
+          "electricityPrice": 0.311,
+          "evSubsidy": 0,
+          "evMarketShare": 23.6033,
+          "chargingStations": 82665
+        }
+      ]
+    },
+    {
+      "country": "United States",
+      "region": "North America",
+      "iso3": "USA",
+      "latestFuelPricePerLiter": 0.94,
+      "latestElectricityPricePerKwh": 0.168,
+      "latestEvSubsidyUsd": 7446,
+      "latestYear": 2025,
+      "yearlyData": [
+        {
+          "year": 2010,
+          "fuelPrice": 0.79,
+          "electricityPrice": 0.119,
+          "evSubsidy": 7536,
+          "evMarketShare": 0.1067,
+          "chargingStations": 500
+        },
+        {
+          "year": 2011,
+          "fuelPrice": 0.733,
+          "electricityPrice": 0.121,
+          "evSubsidy": 7513,
+          "evMarketShare": 0.1933,
+          "chargingStations": 2327
+        },
+        {
+          "year": 2012,
+          "fuelPrice": 0.693,
+          "electricityPrice": 0.124,
+          "evSubsidy": 7430,
+          "evMarketShare": 0.3367,
+          "chargingStations": 4176
+        },
+        {
+          "year": 2013,
+          "fuelPrice": 0.66,
+          "electricityPrice": 0.128,
+          "evSubsidy": 7442,
+          "evMarketShare": 0.5233,
+          "chargingStations": 6925
+        },
+        {
+          "year": 2014,
+          "fuelPrice": 0.637,
+          "electricityPrice": 0.129,
+          "evSubsidy": 7419,
+          "evMarketShare": 0.6633,
+          "chargingStations": 10926
+        },
+        {
+          "year": 2015,
+          "fuelPrice": 0.623,
+          "electricityPrice": 0.128,
+          "evSubsidy": 7450,
+          "evMarketShare": 0.7733,
+          "chargingStations": 14121
+        },
+        {
+          "year": 2016,
+          "fuelPrice": 0.647,
+          "electricityPrice": 0.128,
+          "evSubsidy": 7530,
+          "evMarketShare": 0.83,
+          "chargingStations": 17343
+        },
+        {
+          "year": 2017,
+          "fuelPrice": 0.66,
+          "electricityPrice": 0.13,
+          "evSubsidy": 7430,
+          "evMarketShare": 1.4733,
+          "chargingStations": 20826
+        },
+        {
+          "year": 2018,
+          "fuelPrice": 0.69,
+          "electricityPrice": 0.13,
+          "evSubsidy": 7392,
+          "evMarketShare": 1.7733,
+          "chargingStations": 31182
+        },
+        {
+          "year": 2019,
+          "fuelPrice": 0.763,
+          "electricityPrice": 0.131,
+          "evSubsidy": 7619,
+          "evMarketShare": 1.7633,
+          "chargingStations": 43795
+        },
+        {
+          "year": 2020,
+          "fuelPrice": 0.903,
+          "electricityPrice": 0.133,
+          "evSubsidy": 7564,
+          "evMarketShare": 2.2467,
+          "chargingStations": 41745
+        },
+        {
+          "year": 2021,
+          "fuelPrice": 1.107,
+          "electricityPrice": 0.139,
+          "evSubsidy": 7498,
+          "evMarketShare": 3.81,
+          "chargingStations": 50615
+        },
+        {
+          "year": 2022,
+          "fuelPrice": 1.193,
+          "electricityPrice": 0.147,
+          "evSubsidy": 7502,
+          "evMarketShare": 6.3933,
+          "chargingStations": 57225
+        },
+        {
+          "year": 2023,
+          "fuelPrice": 1.18,
+          "electricityPrice": 0.154,
+          "evSubsidy": 7587,
+          "evMarketShare": 8.29,
+          "chargingStations": 67646
+        },
+        {
+          "year": 2024,
+          "fuelPrice": 1.05,
+          "electricityPrice": 0.162,
+          "evSubsidy": 7476,
+          "evMarketShare": 10.0433,
+          "chargingStations": 94953
+        },
+        {
+          "year": 2025,
+          "fuelPrice": 0.94,
+          "electricityPrice": 0.168,
+          "evSubsidy": 7446,
+          "evMarketShare": 11.5367,
+          "chargingStations": 131267
+        }
+      ]
+    }
+  ]
+}

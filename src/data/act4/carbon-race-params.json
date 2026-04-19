@@ -1,0 +1,88 @@
+{
+  "source": "Woody_2026 + literature averages + IEA grid data",
+  "vehicleProfiles": [
+    {
+      "id": "compact",
+      "label": "Compact",
+      "icev": {
+        "manufacturingEmissionsTonnes": 7.0,
+        "annualEmissionsTonnesPerYear": 4.2
+      },
+      "bev": {
+        "manufacturingEmissionsTonnes": 12.0,
+        "batteryEmissionsTonnes": 5.0,
+        "annualEmissionsTonnesPerYear": 1.8
+      },
+      "hev": {
+        "manufacturingEmissionsTonnes": 7.5,
+        "annualEmissionsTonnesPerYear": 3.2
+      },
+      "phev": {
+        "manufacturingEmissionsTonnes": 10.0,
+        "annualEmissionsTonnesPerYear": 2.8
+      },
+      "defaultCrossoverYear": 2
+    },
+    {
+      "id": "midsize",
+      "label": "Midsize",
+      "icev": {
+        "manufacturingEmissionsTonnes": 9.0,
+        "annualEmissionsTonnesPerYear": 5.1
+      },
+      "bev": {
+        "manufacturingEmissionsTonnes": 14.5,
+        "batteryEmissionsTonnes": 5.6,
+        "annualEmissionsTonnesPerYear": 2.1
+      },
+      "hev": {
+        "manufacturingEmissionsTonnes": 9.5,
+        "annualEmissionsTonnesPerYear": 3.8
+      },
+      "phev": {
+        "manufacturingEmissionsTonnes": 12.5,
+        "annualEmissionsTonnesPerYear": 3.2
+      },
+      "defaultCrossoverYear": 2
+    },
+    {
+      "id": "suv",
+      "label": "SUV",
+      "icev": {
+        "manufacturingEmissionsTonnes": 12.0,
+        "annualEmissionsTonnesPerYear": 6.5
+      },
+      "bev": {
+        "manufacturingEmissionsTonnes": 18.5,
+        "batteryEmissionsTonnes": 6.5,
+        "annualEmissionsTonnesPerYear": 2.6
+      },
+      "hev": {
+        "manufacturingEmissionsTonnes": 12.5,
+        "annualEmissionsTonnesPerYear": 5.0
+      },
+      "phev": {
+        "manufacturingEmissionsTonnes": 15.5,
+        "annualEmissionsTonnesPerYear": 4.2
+      },
+      "defaultCrossoverYear": 3
+    }
+  ],
+  "gridCleanlinessPresets": [
+    { "label": "Norway (98% clean)", "cleanPercent": 98, "co2PerKwh": 0.03, "country": "Norway" },
+    { "label": "France (90% clean)", "cleanPercent": 90, "co2PerKwh": 0.06, "country": "France" },
+    { "label": "United Kingdom (55% clean)", "cleanPercent": 55, "co2PerKwh": 0.23, "country": "United Kingdom" },
+    { "label": "United States (40% clean)", "cleanPercent": 40, "co2PerKwh": 0.39, "country": "United States" },
+    { "label": "Germany (45% clean)", "cleanPercent": 45, "co2PerKwh": 0.35, "country": "Germany" },
+    { "label": "Japan (35% clean)", "cleanPercent": 35, "co2PerKwh": 0.47, "country": "Japan" },
+    { "label": "China (30% clean)", "cleanPercent": 30, "co2PerKwh": 0.54, "country": "China" },
+    { "label": "India (25% clean)", "cleanPercent": 25, "co2PerKwh": 0.72, "country": "India" },
+    { "label": "Australia (30% clean)", "cleanPercent": 30, "co2PerKwh": 0.58, "country": "Australia" }
+  ],
+  "formula": {
+    "annualBevEmissions": "mileage * bevKwhPer100km / 100 * gridCO2PerKwh / 1000",
+    "annualIcevEmissions": "mileage * icevLitersPer100km / 100 * fuelCO2PerLiter / 1000",
+    "crossoverYear": "ceil((bevMfg - icevMfg) / (icevAnnual - bevAnnual))",
+    "defaultMileage": 15000
+  }
+}

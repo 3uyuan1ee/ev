@@ -1,0 +1,71 @@
+{
+  "brandColors": {
+    "Tesla": "#CC0000",
+    "BYD": "#00539B",
+    "Volkswagen": "#001E50",
+    "BMW": "#0066B1",
+    "Hyundai": "#002C5F",
+    "Kia": "#05141F",
+    "Ford": "#1A3668",
+    "Toyota": "#EB0A1E",
+    "Nissan": "#C3002F",
+    "Mercedes": "#231F20"
+  },
+  "costComponentColors": {
+    "bev": {
+      "purchase": "rgba(34, 197, 94, 0.4)",
+      "energy": "rgba(59, 130, 246, 0.6)",
+      "maintenance": "rgba(139, 92, 246, 0.5)",
+      "insurance": "rgba(236, 72, 153, 0.5)",
+      "tax": "rgba(107, 114, 128, 0.4)"
+    },
+    "icev": {
+      "purchase": "rgba(148, 163, 184, 0.4)",
+      "energy": "rgba(245, 158, 11, 0.6)",
+      "maintenance": "rgba(239, 68, 68, 0.5)",
+      "insurance": "rgba(236, 72, 153, 0.5)",
+      "tax": "rgba(107, 114, 128, 0.4)"
+    }
+  },
+  "thresholdLines": {
+    "breakeven": "#F97316",
+    "battery100": "#EF4444"
+  },
+  "powertrainColors": {
+    "bev": "#22C55E",
+    "icev": "#EF4444",
+    "phev": "#F59E0B",
+    "hev": "#94A3B8"
+  },
+  "actColors": {
+    "act1": {
+      "primary": "#F59E0B",
+      "secondary": "#EF4444",
+      "gradient": "linear-gradient(135deg, #F59E0B, #EF4444)"
+    },
+    "act2": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "gradient": "linear-gradient(135deg, #3B82F6, #8B5CF6)"
+    },
+    "act3": {
+      "primary": "#22C55E",
+      "secondary": "#3B82F6",
+      "gradient": "linear-gradient(135deg, #22C55E, #3B82F6)"
+    },
+    "act4": {
+      "primary": "#22C55E",
+      "secondary": "#059669",
+      "gradient": "linear-gradient(135deg, #22C55E, #059669)"
+    }
+  },
+  "regulationScore": {
+    "stops": [
+      { "value": 0, "color": "#FEE2E2" },
+      { "value": 40, "color": "#FECACA" },
+      { "value": 60, "color": "#FDE68A" },
+      { "value": 75, "color": "#A7F3D0" },
+      { "value": 85, "color": "#059669" }
+    ]
+  }
+}

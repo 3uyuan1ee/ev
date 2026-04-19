@@ -1,0 +1,2995 @@
+{
+  "model": {
+    "type": "multiple_linear_regression",
+    "features": [
+      {
+        "name": "ev_subsidy_usd",
+        "label": "Subsidy (USD)",
+        "transform": "raw",
+        "range": {
+          "min": 0,
+          "max": 8952,
+          "default": 2910.94,
+          "step": 89.52
+        },
+        "coefficient": -0.00067991
+      },
+      {
+        "name": "charging_stations",
+        "label": "Charging Stations",
+        "transform": "log",
+        "range": {
+          "min": 0,
+          "max": 4338106,
+          "default": 56938.98,
+          "step": 43381.06
+        },
+        "coefficient": 0.61101467
+      },
+      {
+        "name": "fuel_price_usd_per_liter",
+        "label": "Fuel Price (USD/L)",
+        "transform": "raw",
+        "range": {
+          "min": 0.48,
+          "max": 2.15,
+          "default": 1.34,
+          "step": 0.0167
+        },
+        "coefficient": 4.67459818
+      },
+      {
+        "name": "electricity_price_usd_per_kwh",
+        "label": "Electricity Price (USD/kWh)",
+        "transform": "raw",
+        "range": {
+          "min": 0.07,
+          "max": 0.38,
+          "default": 0.17,
+          "step": 0.0031
+        },
+        "coefficient": -6.44434705
+      },
+      {
+        "name": "emission_regulation_score",
+        "label": "Regulation Score",
+        "transform": "raw",
+        "range": {
+          "min": 19.48,
+          "max": 95.6,
+          "default": 58.76,
+          "step": 1
+        },
+        "coefficient": 0.24836625
+      },
+      {
+        "name": "gdp_per_capita",
+        "label": "GDP per Capita (USD)",
+        "transform": "log",
+        "range": {
+          "min": 1359,
+          "max": 103437,
+          "default": 35651.53,
+          "step": 1020.78
+        },
+        "coefficient": -1.74219299
+      }
+    ],
+    "intercept": 0.04444506,
+    "r2": 0.6545,
+    "rmse": 4.4626,
+    "n": 400
+  },
+  "actualVsPredicted": [
+    {
+      "country": "Australia",
+      "year": 2010,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -7.1879,
+      "residual": 7.1945
+    },
+    {
+      "country": "Australia",
+      "year": 2011,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": -4.3569,
+      "residual": 4.3769
+    },
+    {
+      "country": "Australia",
+      "year": 2012,
+      "actualMarketShare": 0.0267,
+      "predictedMarketShare": -4.0343,
+      "residual": 4.061
+    },
+    {
+      "country": "Australia",
+      "year": 2013,
+      "actualMarketShare": 0.0567,
+      "predictedMarketShare": -3.6536,
+      "residual": 3.7103
+    },
+    {
+      "country": "Australia",
+      "year": 2014,
+      "actualMarketShare": 0.0833,
+      "predictedMarketShare": -3.7418,
+      "residual": 3.8251
+    },
+    {
+      "country": "Australia",
+      "year": 2015,
+      "actualMarketShare": 0.1233,
+      "predictedMarketShare": -2.9782,
+      "residual": 3.1015
+    },
+    {
+      "country": "Australia",
+      "year": 2016,
+      "actualMarketShare": 0.16,
+      "predictedMarketShare": -2.3886,
+      "residual": 2.5486
+    },
+    {
+      "country": "Australia",
+      "year": 2017,
+      "actualMarketShare": 0.29,
+      "predictedMarketShare": -1.4645,
+      "residual": 1.7545
+    },
+    {
+      "country": "Australia",
+      "year": 2018,
+      "actualMarketShare": 0.42,
+      "predictedMarketShare": -0.3501,
+      "residual": 0.7701
+    },
+    {
+      "country": "Australia",
+      "year": 2019,
+      "actualMarketShare": 0.7733,
+      "predictedMarketShare": 0.6277,
+      "residual": 0.1456
+    },
+    {
+      "country": "Australia",
+      "year": 2020,
+      "actualMarketShare": 0.67,
+      "predictedMarketShare": 1.6643,
+      "residual": -0.9943
+    },
+    {
+      "country": "Australia",
+      "year": 2021,
+      "actualMarketShare": 1.8733,
+      "predictedMarketShare": 2.0558,
+      "residual": -0.1824
+    },
+    {
+      "country": "Australia",
+      "year": 2022,
+      "actualMarketShare": 7.4733,
+      "predictedMarketShare": 2.8866,
+      "residual": 4.5867
+    },
+    {
+      "country": "Australia",
+      "year": 2023,
+      "actualMarketShare": 7.3433,
+      "predictedMarketShare": 3.753,
+      "residual": 3.5904
+    },
+    {
+      "country": "Australia",
+      "year": 2024,
+      "actualMarketShare": 8.9033,
+      "predictedMarketShare": 4.37,
+      "residual": 4.5333
+    },
+    {
+      "country": "Australia",
+      "year": 2025,
+      "actualMarketShare": 11.2833,
+      "predictedMarketShare": 5.0384,
+      "residual": 6.245
+    },
+    {
+      "country": "Austria",
+      "year": 2010,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": 2.6537,
+      "residual": -2.6337
+    },
+    {
+      "country": "Austria",
+      "year": 2011,
+      "actualMarketShare": 0.0367,
+      "predictedMarketShare": 3.0737,
+      "residual": -3.037
+    },
+    {
+      "country": "Austria",
+      "year": 2012,
+      "actualMarketShare": 0.0667,
+      "predictedMarketShare": 3.3431,
+      "residual": -3.2765
+    },
+    {
+      "country": "Austria",
+      "year": 2013,
+      "actualMarketShare": 0.09,
+      "predictedMarketShare": 3.6165,
+      "residual": -3.5265
+    },
+    {
+      "country": "Austria",
+      "year": 2014,
+      "actualMarketShare": 0.27,
+      "predictedMarketShare": 4.2229,
+      "residual": -3.9529
+    },
+    {
+      "country": "Austria",
+      "year": 2015,
+      "actualMarketShare": 0.41,
+      "predictedMarketShare": 4.537,
+      "residual": -4.127
+    },
+    {
+      "country": "Austria",
+      "year": 2016,
+      "actualMarketShare": 0.85,
+      "predictedMarketShare": 5.0789,
+      "residual": -4.2289
+    },
+    {
+      "country": "Austria",
+      "year": 2017,
+      "actualMarketShare": 1.37,
+      "predictedMarketShare": 5.547,
+      "residual": -4.177
+    },
+    {
+      "country": "Austria",
+      "year": 2018,
+      "actualMarketShare": 2.0333,
+      "predictedMarketShare": 6.3625,
+      "residual": -4.3291
+    },
+    {
+      "country": "Austria",
+      "year": 2019,
+      "actualMarketShare": 2.8367,
+      "predictedMarketShare": 6.9315,
+      "residual": -4.0948
+    },
+    {
+      "country": "Austria",
+      "year": 2020,
+      "actualMarketShare": 10.1467,
+      "predictedMarketShare": 8.3879,
+      "residual": 1.7588
+    },
+    {
+      "country": "Austria",
+      "year": 2021,
+      "actualMarketShare": 18.1267,
+      "predictedMarketShare": 9.871,
+      "residual": 8.2557
+    },
+    {
+      "country": "Austria",
+      "year": 2022,
+      "actualMarketShare": 17.8167,
+      "predictedMarketShare": 10.6928,
+      "residual": 7.1239
+    },
+    {
+      "country": "Austria",
+      "year": 2023,
+      "actualMarketShare": 17.0533,
+      "predictedMarketShare": 11.4751,
+      "residual": 5.5782
+    },
+    {
+      "country": "Austria",
+      "year": 2024,
+      "actualMarketShare": 21.7933,
+      "predictedMarketShare": 12.0191,
+      "residual": 9.7742
+    },
+    {
+      "country": "Austria",
+      "year": 2025,
+      "actualMarketShare": 23.5267,
+      "predictedMarketShare": 12.4451,
+      "residual": 11.0816
+    },
+    {
+      "country": "Belgium",
+      "year": 2010,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": 3.6377,
+      "residual": -3.6177
+    },
+    {
+      "country": "Belgium",
+      "year": 2011,
+      "actualMarketShare": 0.0367,
+      "predictedMarketShare": 3.7087,
+      "residual": -3.6721
+    },
+    {
+      "country": "Belgium",
+      "year": 2012,
+      "actualMarketShare": 0.0633,
+      "predictedMarketShare": 3.9921,
+      "residual": -3.9287
+    },
+    {
+      "country": "Belgium",
+      "year": 2013,
+      "actualMarketShare": 0.0933,
+      "predictedMarketShare": 4.1573,
+      "residual": -4.0639
+    },
+    {
+      "country": "Belgium",
+      "year": 2014,
+      "actualMarketShare": 0.3367,
+      "predictedMarketShare": 4.6606,
+      "residual": -4.3239
+    },
+    {
+      "country": "Belgium",
+      "year": 2015,
+      "actualMarketShare": 0.5667,
+      "predictedMarketShare": 4.9065,
+      "residual": -4.3398
+    },
+    {
+      "country": "Belgium",
+      "year": 2016,
+      "actualMarketShare": 1.0567,
+      "predictedMarketShare": 5.7293,
+      "residual": -4.6726
+    },
+    {
+      "country": "Belgium",
+      "year": 2017,
+      "actualMarketShare": 1.4667,
+      "predictedMarketShare": 7.259,
+      "residual": -5.7923
+    },
+    {
+      "country": "Belgium",
+      "year": 2018,
+      "actualMarketShare": 2.4633,
+      "predictedMarketShare": 7.501,
+      "residual": -5.0377
+    },
+    {
+      "country": "Belgium",
+      "year": 2019,
+      "actualMarketShare": 3.2567,
+      "predictedMarketShare": 8.9766,
+      "residual": -5.72
+    },
+    {
+      "country": "Belgium",
+      "year": 2020,
+      "actualMarketShare": 9.6133,
+      "predictedMarketShare": 10.1822,
+      "residual": -0.5689
+    },
+    {
+      "country": "Belgium",
+      "year": 2021,
+      "actualMarketShare": 19.5933,
+      "predictedMarketShare": 11.5257,
+      "residual": 8.0676
+    },
+    {
+      "country": "Belgium",
+      "year": 2022,
+      "actualMarketShare": 20.7767,
+      "predictedMarketShare": 12.5812,
+      "residual": 8.1955
+    },
+    {
+      "country": "Belgium",
+      "year": 2023,
+      "actualMarketShare": 21.42,
+      "predictedMarketShare": 14.5435,
+      "residual": 6.8765
+    },
+    {
+      "country": "Belgium",
+      "year": 2024,
+      "actualMarketShare": 22.5667,
+      "predictedMarketShare": 16.1612,
+      "residual": 6.4055
+    },
+    {
+      "country": "Belgium",
+      "year": 2025,
+      "actualMarketShare": 19.19,
+      "predictedMarketShare": 16.4564,
+      "residual": 2.7336
+    },
+    {
+      "country": "Brazil",
+      "year": 2010,
+      "actualMarketShare": 0,
+      "predictedMarketShare": -5.4945,
+      "residual": 5.4945
+    },
+    {
+      "country": "Brazil",
+      "year": 2011,
+      "actualMarketShare": 0,
+      "predictedMarketShare": -3.7974,
+      "residual": 3.7974
+    },
+    {
+      "country": "Brazil",
+      "year": 2012,
+      "actualMarketShare": 0,
+      "predictedMarketShare": -3.1049,
+      "residual": 3.1049
+    },
+    {
+      "country": "Brazil",
+      "year": 2013,
+      "actualMarketShare": 0.0033,
+      "predictedMarketShare": -3.0534,
+      "residual": 3.0568
+    },
+    {
+      "country": "Brazil",
+      "year": 2014,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -2.3163,
+      "residual": 2.3229
+    },
+    {
+      "country": "Brazil",
+      "year": 2015,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": -1.7054,
+      "residual": 1.7254
+    },
+    {
+      "country": "Brazil",
+      "year": 2016,
+      "actualMarketShare": 0.0267,
+      "predictedMarketShare": -1.3677,
+      "residual": 1.3943
+    },
+    {
+      "country": "Brazil",
+      "year": 2017,
+      "actualMarketShare": 0.0367,
+      "predictedMarketShare": 0.1547,
+      "residual": -0.118
+    },
+    {
+      "country": "Brazil",
+      "year": 2018,
+      "actualMarketShare": 0.0567,
+      "predictedMarketShare": 0.3584,
+      "residual": -0.3018
+    },
+    {
+      "country": "Brazil",
+      "year": 2019,
+      "actualMarketShare": 0.0767,
+      "predictedMarketShare": 1.6131,
+      "residual": -1.5365
+    },
+    {
+      "country": "Brazil",
+      "year": 2020,
+      "actualMarketShare": 0.0933,
+      "predictedMarketShare": 2.8397,
+      "residual": -2.7464
+    },
+    {
+      "country": "Brazil",
+      "year": 2021,
+      "actualMarketShare": 0.2233,
+      "predictedMarketShare": 3.9864,
+      "residual": -3.763
+    },
+    {
+      "country": "Brazil",
+      "year": 2022,
+      "actualMarketShare": 0.87,
+      "predictedMarketShare": 5.1043,
+      "residual": -4.2343
+    },
+    {
+      "country": "Brazil",
+      "year": 2023,
+      "actualMarketShare": 1.8867,
+      "predictedMarketShare": 6.0589,
+      "residual": -4.1723
+    },
+    {
+      "country": "Brazil",
+      "year": 2024,
+      "actualMarketShare": 2.6133,
+      "predictedMarketShare": 7.3225,
+      "residual": -4.7091
+    },
+    {
+      "country": "Brazil",
+      "year": 2025,
+      "actualMarketShare": 3.7533,
+      "predictedMarketShare": 7.9427,
+      "residual": -4.1894
+    },
+    {
+      "country": "Canada",
+      "year": 2010,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -3.3074,
+      "residual": 3.314
+    },
+    {
+      "country": "Canada",
+      "year": 2011,
+      "actualMarketShare": 0.11,
+      "predictedMarketShare": -2.9835,
+      "residual": 3.0935
+    },
+    {
+      "country": "Canada",
+      "year": 2012,
+      "actualMarketShare": 0.2133,
+      "predictedMarketShare": -2.5104,
+      "residual": 2.7237
+    },
+    {
+      "country": "Canada",
+      "year": 2013,
+      "actualMarketShare": 0.29,
+      "predictedMarketShare": -2.3291,
+      "residual": 2.6191
+    },
+    {
+      "country": "Canada",
+      "year": 2014,
+      "actualMarketShare": 0.3533,
+      "predictedMarketShare": -1.6418,
+      "residual": 1.9951
+    },
+    {
+      "country": "Canada",
+      "year": 2015,
+      "actualMarketShare": 0.4567,
+      "predictedMarketShare": -1.3806,
+      "residual": 1.8372
+    },
+    {
+      "country": "Canada",
+      "year": 2016,
+      "actualMarketShare": 0.5967,
+      "predictedMarketShare": -0.4592,
+      "residual": 1.0559
+    },
+    {
+      "country": "Canada",
+      "year": 2017,
+      "actualMarketShare": 1.28,
+      "predictedMarketShare": 1.042,
+      "residual": 0.238
+    },
+    {
+      "country": "Canada",
+      "year": 2018,
+      "actualMarketShare": 2.0067,
+      "predictedMarketShare": 1.853,
+      "residual": 0.1536
+    },
+    {
+      "country": "Canada",
+      "year": 2019,
+      "actualMarketShare": 2.5933,
+      "predictedMarketShare": 2.9038,
+      "residual": -0.3104
+    },
+    {
+      "country": "Canada",
+      "year": 2020,
+      "actualMarketShare": 3.2967,
+      "predictedMarketShare": 4.5553,
+      "residual": -1.2586
+    },
+    {
+      "country": "Canada",
+      "year": 2021,
+      "actualMarketShare": 5.0967,
+      "predictedMarketShare": 5.803,
+      "residual": -0.7064
+    },
+    {
+      "country": "Canada",
+      "year": 2022,
+      "actualMarketShare": 7.8767,
+      "predictedMarketShare": 7.1726,
+      "residual": 0.7041
+    },
+    {
+      "country": "Canada",
+      "year": 2023,
+      "actualMarketShare": 10.36,
+      "predictedMarketShare": 8.1015,
+      "residual": 2.2585
+    },
+    {
+      "country": "Canada",
+      "year": 2024,
+      "actualMarketShare": 12.48,
+      "predictedMarketShare": 8.6198,
+      "residual": 3.8602
+    },
+    {
+      "country": "Canada",
+      "year": 2025,
+      "actualMarketShare": 15.0567,
+      "predictedMarketShare": 9.0656,
+      "residual": 5.991
+    },
+    {
+      "country": "China",
+      "year": 2010,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -4.6824,
+      "residual": 4.689
+    },
+    {
+      "country": "China",
+      "year": 2011,
+      "actualMarketShare": 0.0367,
+      "predictedMarketShare": -3.4944,
+      "residual": 3.5311
+    },
+    {
+      "country": "China",
+      "year": 2012,
+      "actualMarketShare": 0.0567,
+      "predictedMarketShare": -2.0927,
+      "residual": 2.1493
+    },
+    {
+      "country": "China",
+      "year": 2013,
+      "actualMarketShare": 0.1933,
+      "predictedMarketShare": -1.1958,
+      "residual": 1.3892
+    },
+    {
+      "country": "China",
+      "year": 2014,
+      "actualMarketShare": 0.2967,
+      "predictedMarketShare": 0.4284,
+      "residual": -0.1317
+    },
+    {
+      "country": "China",
+      "year": 2015,
+      "actualMarketShare": 0.7467,
+      "predictedMarketShare": 1.5955,
+      "residual": -0.8488
+    },
+    {
+      "country": "China",
+      "year": 2016,
+      "actualMarketShare": 1.2133,
+      "predictedMarketShare": 3.5048,
+      "residual": -2.2914
+    },
+    {
+      "country": "China",
+      "year": 2017,
+      "actualMarketShare": 2.3033,
+      "predictedMarketShare": 5.0765,
+      "residual": -2.7732
+    },
+    {
+      "country": "China",
+      "year": 2018,
+      "actualMarketShare": 3.78,
+      "predictedMarketShare": 7.1199,
+      "residual": -3.3399
+    },
+    {
+      "country": "China",
+      "year": 2019,
+      "actualMarketShare": 3.6867,
+      "predictedMarketShare": 8.9692,
+      "residual": -5.2825
+    },
+    {
+      "country": "China",
+      "year": 2020,
+      "actualMarketShare": 4.73,
+      "predictedMarketShare": 11.3487,
+      "residual": -6.6187
+    },
+    {
+      "country": "China",
+      "year": 2021,
+      "actualMarketShare": 12.5133,
+      "predictedMarketShare": 13.2109,
+      "residual": -0.6975
+    },
+    {
+      "country": "China",
+      "year": 2022,
+      "actualMarketShare": 21.13,
+      "predictedMarketShare": 14.9006,
+      "residual": 6.2294
+    },
+    {
+      "country": "China",
+      "year": 2023,
+      "actualMarketShare": 25.2467,
+      "predictedMarketShare": 18.5527,
+      "residual": 6.6939
+    },
+    {
+      "country": "China",
+      "year": 2024,
+      "actualMarketShare": 22.835,
+      "predictedMarketShare": 19.1883,
+      "residual": 3.6467
+    },
+    {
+      "country": "China",
+      "year": 2025,
+      "actualMarketShare": 14.24,
+      "predictedMarketShare": 19.3965,
+      "residual": -5.1565
+    },
+    {
+      "country": "France",
+      "year": 2010,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": 0.5579,
+      "residual": -0.5512
+    },
+    {
+      "country": "France",
+      "year": 2011,
+      "actualMarketShare": 0.15,
+      "predictedMarketShare": 2.3414,
+      "residual": -2.1914
+    },
+    {
+      "country": "France",
+      "year": 2012,
+      "actualMarketShare": 0.29,
+      "predictedMarketShare": 2.5347,
+      "residual": -2.2447
+    },
+    {
+      "country": "France",
+      "year": 2013,
+      "actualMarketShare": 0.5533,
+      "predictedMarketShare": 2.7498,
+      "residual": -2.1964
+    },
+    {
+      "country": "France",
+      "year": 2014,
+      "actualMarketShare": 0.7833,
+      "predictedMarketShare": 3.5782,
+      "residual": -2.7949
+    },
+    {
+      "country": "France",
+      "year": 2015,
+      "actualMarketShare": 1.0733,
+      "predictedMarketShare": 4.4074,
+      "residual": -3.334
+    },
+    {
+      "country": "France",
+      "year": 2016,
+      "actualMarketShare": 1.2233,
+      "predictedMarketShare": 5.3184,
+      "residual": -4.095
+    },
+    {
+      "country": "France",
+      "year": 2017,
+      "actualMarketShare": 1.57,
+      "predictedMarketShare": 6.0579,
+      "residual": -4.4879
+    },
+    {
+      "country": "France",
+      "year": 2018,
+      "actualMarketShare": 2.0067,
+      "predictedMarketShare": 7.803,
+      "residual": -5.7963
+    },
+    {
+      "country": "France",
+      "year": 2019,
+      "actualMarketShare": 2.5867,
+      "predictedMarketShare": 9.1639,
+      "residual": -6.5772
+    },
+    {
+      "country": "France",
+      "year": 2020,
+      "actualMarketShare": 11.5533,
+      "predictedMarketShare": 9.5651,
+      "residual": 1.9882
+    },
+    {
+      "country": "France",
+      "year": 2021,
+      "actualMarketShare": 17.1467,
+      "predictedMarketShare": 11.3849,
+      "residual": 5.7618
+    },
+    {
+      "country": "France",
+      "year": 2022,
+      "actualMarketShare": 20.2833,
+      "predictedMarketShare": 12.6171,
+      "residual": 7.6663
+    },
+    {
+      "country": "France",
+      "year": 2023,
+      "actualMarketShare": 20.61,
+      "predictedMarketShare": 14.2053,
+      "residual": 6.4047
+    },
+    {
+      "country": "France",
+      "year": 2024,
+      "actualMarketShare": 23.1,
+      "predictedMarketShare": 14.4614,
+      "residual": 8.6386
+    },
+    {
+      "country": "France",
+      "year": 2025,
+      "actualMarketShare": 23.97,
+      "predictedMarketShare": 15.0511,
+      "residual": 8.9189
+    },
+    {
+      "country": "Germany",
+      "year": 2010,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": 3.6948,
+      "residual": -3.6881
+    },
+    {
+      "country": "Germany",
+      "year": 2011,
+      "actualMarketShare": 0.0567,
+      "predictedMarketShare": 4.4105,
+      "residual": -4.3539
+    },
+    {
+      "country": "Germany",
+      "year": 2012,
+      "actualMarketShare": 0.0933,
+      "predictedMarketShare": 4.9402,
+      "residual": -4.8469
+    },
+    {
+      "country": "Germany",
+      "year": 2013,
+      "actualMarketShare": 0.2433,
+      "predictedMarketShare": 5.3911,
+      "residual": -5.1477
+    },
+    {
+      "country": "Germany",
+      "year": 2014,
+      "actualMarketShare": 0.42,
+      "predictedMarketShare": 5.224,
+      "residual": -4.804
+    },
+    {
+      "country": "Germany",
+      "year": 2015,
+      "actualMarketShare": 0.54,
+      "predictedMarketShare": 5.3243,
+      "residual": -4.7843
+    },
+    {
+      "country": "Germany",
+      "year": 2016,
+      "actualMarketShare": 0.6833,
+      "predictedMarketShare": 5.4818,
+      "residual": -4.7984
+    },
+    {
+      "country": "Germany",
+      "year": 2017,
+      "actualMarketShare": 1.2033,
+      "predictedMarketShare": 6.2512,
+      "residual": -5.0479
+    },
+    {
+      "country": "Germany",
+      "year": 2018,
+      "actualMarketShare": 1.6867,
+      "predictedMarketShare": 6.5612,
+      "residual": -4.8746
+    },
+    {
+      "country": "Germany",
+      "year": 2019,
+      "actualMarketShare": 2.82,
+      "predictedMarketShare": 7.262,
+      "residual": -4.442
+    },
+    {
+      "country": "Germany",
+      "year": 2020,
+      "actualMarketShare": 12.2833,
+      "predictedMarketShare": 7.1018,
+      "residual": 5.1816
+    },
+    {
+      "country": "Germany",
+      "year": 2021,
+      "actualMarketShare": 24.2867,
+      "predictedMarketShare": 9.1355,
+      "residual": 15.1511
+    },
+    {
+      "country": "Germany",
+      "year": 2022,
+      "actualMarketShare": 20.565,
+      "predictedMarketShare": 11.348,
+      "residual": 9.217
+    },
+    {
+      "country": "Germany",
+      "year": 2023,
+      "actualMarketShare": 19.13,
+      "predictedMarketShare": 13.5176,
+      "residual": 5.6124
+    },
+    {
+      "country": "Germany",
+      "year": 2024,
+      "actualMarketShare": 20.91,
+      "predictedMarketShare": 16.6204,
+      "residual": 4.2896
+    },
+    {
+      "country": "Germany",
+      "year": 2025,
+      "actualMarketShare": 21.585,
+      "predictedMarketShare": 17.0628,
+      "residual": 4.5222
+    },
+    {
+      "country": "India",
+      "year": 2010,
+      "actualMarketShare": 0.0033,
+      "predictedMarketShare": -4.5191,
+      "residual": 4.5224
+    },
+    {
+      "country": "India",
+      "year": 2011,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -2.2952,
+      "residual": 2.3018
+    },
+    {
+      "country": "India",
+      "year": 2012,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -2.0884,
+      "residual": 2.0951
+    },
+    {
+      "country": "India",
+      "year": 2013,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -1.3828,
+      "residual": 1.3895
+    },
+    {
+      "country": "India",
+      "year": 2014,
+      "actualMarketShare": 0.0367,
+      "predictedMarketShare": -0.8306,
+      "residual": 0.8673
+    },
+    {
+      "country": "India",
+      "year": 2015,
+      "actualMarketShare": 0.0467,
+      "predictedMarketShare": -0.5342,
+      "residual": 0.5809
+    },
+    {
+      "country": "India",
+      "year": 2016,
+      "actualMarketShare": 0.0767,
+      "predictedMarketShare": 0.4762,
+      "residual": -0.3996
+    },
+    {
+      "country": "India",
+      "year": 2017,
+      "actualMarketShare": 0.09,
+      "predictedMarketShare": 1.7056,
+      "residual": -1.6156
+    },
+    {
+      "country": "India",
+      "year": 2018,
+      "actualMarketShare": 0.11,
+      "predictedMarketShare": 1.9457,
+      "residual": -1.8357
+    },
+    {
+      "country": "India",
+      "year": 2019,
+      "actualMarketShare": 0.15,
+      "predictedMarketShare": 3.632,
+      "residual": -3.482
+    },
+    {
+      "country": "India",
+      "year": 2020,
+      "actualMarketShare": 0.15,
+      "predictedMarketShare": 4.7283,
+      "residual": -4.5783
+    },
+    {
+      "country": "India",
+      "year": 2021,
+      "actualMarketShare": 0.3667,
+      "predictedMarketShare": 5.5872,
+      "residual": -5.2205
+    },
+    {
+      "country": "India",
+      "year": 2022,
+      "actualMarketShare": 0.94,
+      "predictedMarketShare": 7.134,
+      "residual": -6.194
+    },
+    {
+      "country": "India",
+      "year": 2023,
+      "actualMarketShare": 1.4867,
+      "predictedMarketShare": 8.4803,
+      "residual": -6.9936
+    },
+    {
+      "country": "India",
+      "year": 2024,
+      "actualMarketShare": 1.9967,
+      "predictedMarketShare": 8.6944,
+      "residual": -6.6977
+    },
+    {
+      "country": "India",
+      "year": 2025,
+      "actualMarketShare": 2.98,
+      "predictedMarketShare": 10.1557,
+      "residual": -7.1757
+    },
+    {
+      "country": "Indonesia",
+      "year": 2010,
+      "actualMarketShare": 0.0033,
+      "predictedMarketShare": -7.3071,
+      "residual": 7.3105
+    },
+    {
+      "country": "Indonesia",
+      "year": 2011,
+      "actualMarketShare": 0,
+      "predictedMarketShare": -6.2114,
+      "residual": 6.2114
+    },
+    {
+      "country": "Indonesia",
+      "year": 2012,
+      "actualMarketShare": 0,
+      "predictedMarketShare": -5.8945,
+      "residual": 5.8945
+    },
+    {
+      "country": "Indonesia",
+      "year": 2013,
+      "actualMarketShare": 0.0033,
+      "predictedMarketShare": -5.7295,
+      "residual": 5.7328
+    },
+    {
+      "country": "Indonesia",
+      "year": 2014,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -5.3535,
+      "residual": 5.3602
+    },
+    {
+      "country": "Indonesia",
+      "year": 2015,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -4.9764,
+      "residual": 4.983
+    },
+    {
+      "country": "Indonesia",
+      "year": 2016,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": -4.197,
+      "residual": 4.217
+    },
+    {
+      "country": "Indonesia",
+      "year": 2017,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": -3.6555,
+      "residual": 3.6755
+    },
+    {
+      "country": "Indonesia",
+      "year": 2018,
+      "actualMarketShare": 0.0267,
+      "predictedMarketShare": -3.4328,
+      "residual": 3.4595
+    },
+    {
+      "country": "Indonesia",
+      "year": 2019,
+      "actualMarketShare": 0.0767,
+      "predictedMarketShare": -1.84,
+      "residual": 1.9167
+    },
+    {
+      "country": "Indonesia",
+      "year": 2020,
+      "actualMarketShare": 0.0833,
+      "predictedMarketShare": -1.0188,
+      "residual": 1.1022
+    },
+    {
+      "country": "Indonesia",
+      "year": 2021,
+      "actualMarketShare": 0.2133,
+      "predictedMarketShare": 0.2949,
+      "residual": -0.0816
+    },
+    {
+      "country": "Indonesia",
+      "year": 2022,
+      "actualMarketShare": 0.8867,
+      "predictedMarketShare": 2.2842,
+      "residual": -1.3976
+    },
+    {
+      "country": "Indonesia",
+      "year": 2023,
+      "actualMarketShare": 1.5767,
+      "predictedMarketShare": 3.0939,
+      "residual": -1.5172
+    },
+    {
+      "country": "Indonesia",
+      "year": 2024,
+      "actualMarketShare": 2.6067,
+      "predictedMarketShare": 4.2157,
+      "residual": -1.609
+    },
+    {
+      "country": "Indonesia",
+      "year": 2025,
+      "actualMarketShare": 3.64,
+      "predictedMarketShare": 5.2365,
+      "residual": -1.5965
+    },
+    {
+      "country": "Italy",
+      "year": 2010,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": 1.9382,
+      "residual": -1.9315
+    },
+    {
+      "country": "Italy",
+      "year": 2011,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": 3.0713,
+      "residual": -3.0513
+    },
+    {
+      "country": "Italy",
+      "year": 2012,
+      "actualMarketShare": 0.0267,
+      "predictedMarketShare": 3.3647,
+      "residual": -3.338
+    },
+    {
+      "country": "Italy",
+      "year": 2013,
+      "actualMarketShare": 0.0767,
+      "predictedMarketShare": 3.5276,
+      "residual": -3.4509
+    },
+    {
+      "country": "Italy",
+      "year": 2014,
+      "actualMarketShare": 0.0967,
+      "predictedMarketShare": 4.2406,
+      "residual": -4.1439
+    },
+    {
+      "country": "Italy",
+      "year": 2015,
+      "actualMarketShare": 0.1233,
+      "predictedMarketShare": 4.3757,
+      "residual": -4.2523
+    },
+    {
+      "country": "Italy",
+      "year": 2016,
+      "actualMarketShare": 0.13,
+      "predictedMarketShare": 4.8511,
+      "residual": -4.7211
+    },
+    {
+      "country": "Italy",
+      "year": 2017,
+      "actualMarketShare": 0.29,
+      "predictedMarketShare": 4.7927,
+      "residual": -4.5027
+    },
+    {
+      "country": "Italy",
+      "year": 2018,
+      "actualMarketShare": 0.4767,
+      "predictedMarketShare": 5.8124,
+      "residual": -5.3357
+    },
+    {
+      "country": "Italy",
+      "year": 2019,
+      "actualMarketShare": 0.83,
+      "predictedMarketShare": 6.401,
+      "residual": -5.571
+    },
+    {
+      "country": "Italy",
+      "year": 2020,
+      "actualMarketShare": 4.34,
+      "predictedMarketShare": 8.192,
+      "residual": -3.852
+    },
+    {
+      "country": "Italy",
+      "year": 2021,
+      "actualMarketShare": 9.27,
+      "predictedMarketShare": 9.4759,
+      "residual": -0.2059
+    },
+    {
+      "country": "Italy",
+      "year": 2022,
+      "actualMarketShare": 8.05,
+      "predictedMarketShare": 11.2305,
+      "residual": -3.1805
+    },
+    {
+      "country": "Italy",
+      "year": 2023,
+      "actualMarketShare": 7.8133,
+      "predictedMarketShare": 12.0568,
+      "residual": -4.2435
+    },
+    {
+      "country": "Italy",
+      "year": 2024,
+      "actualMarketShare": 9.0233,
+      "predictedMarketShare": 13.2294,
+      "residual": -4.2061
+    },
+    {
+      "country": "Italy",
+      "year": 2025,
+      "actualMarketShare": 11.3233,
+      "predictedMarketShare": 14.2505,
+      "residual": -2.9271
+    },
+    {
+      "country": "Japan",
+      "year": 2010,
+      "actualMarketShare": 0.0367,
+      "predictedMarketShare": -0.4375,
+      "residual": 0.4742
+    },
+    {
+      "country": "Japan",
+      "year": 2011,
+      "actualMarketShare": 0.29,
+      "predictedMarketShare": 0.1884,
+      "residual": 0.1016
+    },
+    {
+      "country": "Japan",
+      "year": 2012,
+      "actualMarketShare": 0.45,
+      "predictedMarketShare": 1.0801,
+      "residual": -0.6301
+    },
+    {
+      "country": "Japan",
+      "year": 2013,
+      "actualMarketShare": 0.5033,
+      "predictedMarketShare": 1.685,
+      "residual": -1.1817
+    },
+    {
+      "country": "Japan",
+      "year": 2014,
+      "actualMarketShare": 0.5133,
+      "predictedMarketShare": 2.5652,
+      "residual": -2.0518
+    },
+    {
+      "country": "Japan",
+      "year": 2015,
+      "actualMarketShare": 0.5333,
+      "predictedMarketShare": 3.0823,
+      "residual": -2.5489
+    },
+    {
+      "country": "Japan",
+      "year": 2016,
+      "actualMarketShare": 0.45,
+      "predictedMarketShare": 3.4424,
+      "residual": -2.9924
+    },
+    {
+      "country": "Japan",
+      "year": 2017,
+      "actualMarketShare": 0.67,
+      "predictedMarketShare": 4.2062,
+      "residual": -3.5362
+    },
+    {
+      "country": "Japan",
+      "year": 2018,
+      "actualMarketShare": 0.8867,
+      "predictedMarketShare": 4.7227,
+      "residual": -3.836
+    },
+    {
+      "country": "Japan",
+      "year": 2019,
+      "actualMarketShare": 0.7667,
+      "predictedMarketShare": 4.9315,
+      "residual": -4.1649
+    },
+    {
+      "country": "Japan",
+      "year": 2020,
+      "actualMarketShare": 0.6067,
+      "predictedMarketShare": 5.8228,
+      "residual": -5.2161
+    },
+    {
+      "country": "Japan",
+      "year": 2021,
+      "actualMarketShare": 0.94,
+      "predictedMarketShare": 6.043,
+      "residual": -5.103
+    },
+    {
+      "country": "Japan",
+      "year": 2022,
+      "actualMarketShare": 1.9433,
+      "predictedMarketShare": 6.3417,
+      "residual": -4.3983
+    },
+    {
+      "country": "Japan",
+      "year": 2023,
+      "actualMarketShare": 2.96,
+      "predictedMarketShare": 7.0696,
+      "residual": -4.1096
+    },
+    {
+      "country": "Japan",
+      "year": 2024,
+      "actualMarketShare": 3.92,
+      "predictedMarketShare": 7.3561,
+      "residual": -3.4361
+    },
+    {
+      "country": "Japan",
+      "year": 2025,
+      "actualMarketShare": 5.42,
+      "predictedMarketShare": 8.2499,
+      "residual": -2.8299
+    },
+    {
+      "country": "Mexico",
+      "year": 2010,
+      "actualMarketShare": 0.0033,
+      "predictedMarketShare": -8.2199,
+      "residual": 8.2232
+    },
+    {
+      "country": "Mexico",
+      "year": 2011,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -5.4518,
+      "residual": 5.4585
+    },
+    {
+      "country": "Mexico",
+      "year": 2012,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -4.9125,
+      "residual": 4.9192
+    },
+    {
+      "country": "Mexico",
+      "year": 2013,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": -4.2036,
+      "residual": 4.2236
+    },
+    {
+      "country": "Mexico",
+      "year": 2014,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": -3.6089,
+      "residual": 3.6289
+    },
+    {
+      "country": "Mexico",
+      "year": 2015,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": -3.2252,
+      "residual": 3.2452
+    },
+    {
+      "country": "Mexico",
+      "year": 2016,
+      "actualMarketShare": 0.0267,
+      "predictedMarketShare": -2.4151,
+      "residual": 2.4418
+    },
+    {
+      "country": "Mexico",
+      "year": 2017,
+      "actualMarketShare": 0.0467,
+      "predictedMarketShare": -1.6509,
+      "residual": 1.6975
+    },
+    {
+      "country": "Mexico",
+      "year": 2018,
+      "actualMarketShare": 0.0633,
+      "predictedMarketShare": -0.6618,
+      "residual": 0.7251
+    },
+    {
+      "country": "Mexico",
+      "year": 2019,
+      "actualMarketShare": 0.1033,
+      "predictedMarketShare": 0.2185,
+      "residual": -0.1151
+    },
+    {
+      "country": "Mexico",
+      "year": 2020,
+      "actualMarketShare": 0.2067,
+      "predictedMarketShare": 1.6132,
+      "residual": -1.4065
+    },
+    {
+      "country": "Mexico",
+      "year": 2021,
+      "actualMarketShare": 0.4567,
+      "predictedMarketShare": 2.9179,
+      "residual": -2.4612
+    },
+    {
+      "country": "Mexico",
+      "year": 2022,
+      "actualMarketShare": 1.1967,
+      "predictedMarketShare": 3.9072,
+      "residual": -2.7105
+    },
+    {
+      "country": "Mexico",
+      "year": 2023,
+      "actualMarketShare": 1.66,
+      "predictedMarketShare": 4.6706,
+      "residual": -3.0106
+    },
+    {
+      "country": "Mexico",
+      "year": 2024,
+      "actualMarketShare": 2.4733,
+      "predictedMarketShare": 5.3657,
+      "residual": -2.8924
+    },
+    {
+      "country": "Mexico",
+      "year": 2025,
+      "actualMarketShare": 3.0967,
+      "predictedMarketShare": 6.1535,
+      "residual": -3.0568
+    },
+    {
+      "country": "Netherlands",
+      "year": 2010,
+      "actualMarketShare": 0.0567,
+      "predictedMarketShare": 6.7935,
+      "residual": -6.7368
+    },
+    {
+      "country": "Netherlands",
+      "year": 2011,
+      "actualMarketShare": 0.5667,
+      "predictedMarketShare": 8.1895,
+      "residual": -7.6228
+    },
+    {
+      "country": "Netherlands",
+      "year": 2012,
+      "actualMarketShare": 1.1,
+      "predictedMarketShare": 8.0696,
+      "residual": -6.9696
+    },
+    {
+      "country": "Netherlands",
+      "year": 2013,
+      "actualMarketShare": 2.2667,
+      "predictedMarketShare": 8.584,
+      "residual": -6.3173
+    },
+    {
+      "country": "Netherlands",
+      "year": 2014,
+      "actualMarketShare": 3.34,
+      "predictedMarketShare": 8.9049,
+      "residual": -5.5649
+    },
+    {
+      "country": "Netherlands",
+      "year": 2015,
+      "actualMarketShare": 4.2467,
+      "predictedMarketShare": 9.2183,
+      "residual": -4.9716
+    },
+    {
+      "country": "Netherlands",
+      "year": 2016,
+      "actualMarketShare": 5.17,
+      "predictedMarketShare": 9.4155,
+      "residual": -4.2455
+    },
+    {
+      "country": "Netherlands",
+      "year": 2017,
+      "actualMarketShare": 5.6267,
+      "predictedMarketShare": 10.4942,
+      "residual": -4.8675
+    },
+    {
+      "country": "Netherlands",
+      "year": 2018,
+      "actualMarketShare": 5.5167,
+      "predictedMarketShare": 11.2608,
+      "residual": -5.7442
+    },
+    {
+      "country": "Netherlands",
+      "year": 2019,
+      "actualMarketShare": 14.1033,
+      "predictedMarketShare": 12.6228,
+      "residual": 1.4806
+    },
+    {
+      "country": "Netherlands",
+      "year": 2020,
+      "actualMarketShare": 17.9467,
+      "predictedMarketShare": 13.5984,
+      "residual": 4.3483
+    },
+    {
+      "country": "Netherlands",
+      "year": 2021,
+      "actualMarketShare": 16.6833,
+      "predictedMarketShare": 15.3144,
+      "residual": 1.3689
+    },
+    {
+      "country": "Netherlands",
+      "year": 2022,
+      "actualMarketShare": 22.4,
+      "predictedMarketShare": 16.5675,
+      "residual": 5.8325
+    },
+    {
+      "country": "Netherlands",
+      "year": 2023,
+      "actualMarketShare": 21.14,
+      "predictedMarketShare": 16.6482,
+      "residual": 4.4918
+    },
+    {
+      "country": "Netherlands",
+      "year": 2024,
+      "actualMarketShare": 22.75,
+      "predictedMarketShare": 17.3433,
+      "residual": 5.4067
+    },
+    {
+      "country": "Netherlands",
+      "year": 2025,
+      "actualMarketShare": 24.685,
+      "predictedMarketShare": 17.7148,
+      "residual": 6.9702
+    },
+    {
+      "country": "Norway",
+      "year": 2010,
+      "actualMarketShare": 0.27,
+      "predictedMarketShare": 8.4704,
+      "residual": -8.2004
+    },
+    {
+      "country": "Norway",
+      "year": 2011,
+      "actualMarketShare": 1.4733,
+      "predictedMarketShare": 9.9094,
+      "residual": -8.436
+    },
+    {
+      "country": "Norway",
+      "year": 2012,
+      "actualMarketShare": 2.6233,
+      "predictedMarketShare": 10.6733,
+      "residual": -8.05
+    },
+    {
+      "country": "Norway",
+      "year": 2013,
+      "actualMarketShare": 7.4767,
+      "predictedMarketShare": 11.2313,
+      "residual": -3.7547
+    },
+    {
+      "country": "Norway",
+      "year": 2014,
+      "actualMarketShare": 11.7133,
+      "predictedMarketShare": 12.2356,
+      "residual": -0.5223
+    },
+    {
+      "country": "Norway",
+      "year": 2015,
+      "actualMarketShare": 13.2533,
+      "predictedMarketShare": 13.092,
+      "residual": 0.1614
+    },
+    {
+      "country": "Norway",
+      "year": 2016,
+      "actualMarketShare": 14.6733,
+      "predictedMarketShare": 14.1278,
+      "residual": 0.5456
+    },
+    {
+      "country": "Norway",
+      "year": 2017,
+      "actualMarketShare": 21.6167,
+      "predictedMarketShare": 14.8547,
+      "residual": 6.762
+    },
+    {
+      "country": "Norway",
+      "year": 2018,
+      "actualMarketShare": 20.19,
+      "predictedMarketShare": 15.7251,
+      "residual": 4.4649
+    },
+    {
+      "country": "Norway",
+      "year": 2019,
+      "actualMarketShare": 14.67,
+      "predictedMarketShare": 16.0591,
+      "residual": -1.3891
+    },
+    {
+      "country": "Norway",
+      "year": 2020,
+      "actualMarketShare": 19.2,
+      "predictedMarketShare": 17.1064,
+      "residual": 2.0936
+    },
+    {
+      "country": "Norway",
+      "year": 2021,
+      "actualMarketShare": 23.5,
+      "predictedMarketShare": 17.8158,
+      "residual": 5.6842
+    },
+    {
+      "country": "Norway",
+      "year": 2022,
+      "actualMarketShare": 31.43,
+      "predictedMarketShare": 18.8383,
+      "residual": 12.5917
+    },
+    {
+      "country": "Norway",
+      "year": 2023,
+      "actualMarketShare": 29.93,
+      "predictedMarketShare": 19.0031,
+      "residual": 10.9269
+    },
+    {
+      "country": "Norway",
+      "year": 2024,
+      "actualMarketShare": 28.81,
+      "predictedMarketShare": 18.952,
+      "residual": 9.858
+    },
+    {
+      "country": "Norway",
+      "year": 2025,
+      "actualMarketShare": 30.15,
+      "predictedMarketShare": 18.8128,
+      "residual": 11.3372
+    },
+    {
+      "country": "Poland",
+      "year": 2010,
+      "actualMarketShare": 0.01,
+      "predictedMarketShare": -2.643,
+      "residual": 2.653
+    },
+    {
+      "country": "Poland",
+      "year": 2011,
+      "actualMarketShare": 0.01,
+      "predictedMarketShare": -0.7363,
+      "residual": 0.7463
+    },
+    {
+      "country": "Poland",
+      "year": 2012,
+      "actualMarketShare": 0.0233,
+      "predictedMarketShare": -0.3825,
+      "residual": 0.4058
+    },
+    {
+      "country": "Poland",
+      "year": 2013,
+      "actualMarketShare": 0.0233,
+      "predictedMarketShare": -0.0503,
+      "residual": 0.0736
+    },
+    {
+      "country": "Poland",
+      "year": 2014,
+      "actualMarketShare": 0.0267,
+      "predictedMarketShare": -0.309,
+      "residual": 0.3357
+    },
+    {
+      "country": "Poland",
+      "year": 2015,
+      "actualMarketShare": 0.0633,
+      "predictedMarketShare": 0.0376,
+      "residual": 0.0258
+    },
+    {
+      "country": "Poland",
+      "year": 2016,
+      "actualMarketShare": 0.11,
+      "predictedMarketShare": 0.1646,
+      "residual": -0.0546
+    },
+    {
+      "country": "Poland",
+      "year": 2017,
+      "actualMarketShare": 0.2333,
+      "predictedMarketShare": 0.9724,
+      "residual": -0.739
+    },
+    {
+      "country": "Poland",
+      "year": 2018,
+      "actualMarketShare": 0.3667,
+      "predictedMarketShare": 1.5857,
+      "residual": -1.2191
+    },
+    {
+      "country": "Poland",
+      "year": 2019,
+      "actualMarketShare": 0.4633,
+      "predictedMarketShare": 2.8819,
+      "residual": -2.4186
+    },
+    {
+      "country": "Poland",
+      "year": 2020,
+      "actualMarketShare": 2.08,
+      "predictedMarketShare": 3.8266,
+      "residual": -1.7466
+    },
+    {
+      "country": "Poland",
+      "year": 2021,
+      "actualMarketShare": 4.23,
+      "predictedMarketShare": 5.2593,
+      "residual": -1.0293
+    },
+    {
+      "country": "Poland",
+      "year": 2022,
+      "actualMarketShare": 5.45,
+      "predictedMarketShare": 6.424,
+      "residual": -0.974
+    },
+    {
+      "country": "Poland",
+      "year": 2023,
+      "actualMarketShare": 6.4867,
+      "predictedMarketShare": 7.4419,
+      "residual": -0.9553
+    },
+    {
+      "country": "Poland",
+      "year": 2024,
+      "actualMarketShare": 7.0167,
+      "predictedMarketShare": 7.4337,
+      "residual": -0.417
+    },
+    {
+      "country": "Poland",
+      "year": 2025,
+      "actualMarketShare": 8.4567,
+      "predictedMarketShare": 8.2402,
+      "residual": 0.2165
+    },
+    {
+      "country": "Portugal",
+      "year": 2010,
+      "actualMarketShare": 0.0233,
+      "predictedMarketShare": 2.7241,
+      "residual": -2.7008
+    },
+    {
+      "country": "Portugal",
+      "year": 2011,
+      "actualMarketShare": 0.0567,
+      "predictedMarketShare": 3.8216,
+      "residual": -3.7649
+    },
+    {
+      "country": "Portugal",
+      "year": 2012,
+      "actualMarketShare": 0.0833,
+      "predictedMarketShare": 4.3221,
+      "residual": -4.2388
+    },
+    {
+      "country": "Portugal",
+      "year": 2013,
+      "actualMarketShare": 0.16,
+      "predictedMarketShare": 4.3465,
+      "residual": -4.1865
+    },
+    {
+      "country": "Portugal",
+      "year": 2014,
+      "actualMarketShare": 0.5333,
+      "predictedMarketShare": 5.0078,
+      "residual": -4.4745
+    },
+    {
+      "country": "Portugal",
+      "year": 2015,
+      "actualMarketShare": 0.7733,
+      "predictedMarketShare": 4.8443,
+      "residual": -4.071
+    },
+    {
+      "country": "Portugal",
+      "year": 2016,
+      "actualMarketShare": 1.01,
+      "predictedMarketShare": 5.6793,
+      "residual": -4.6693
+    },
+    {
+      "country": "Portugal",
+      "year": 2017,
+      "actualMarketShare": 1.2667,
+      "predictedMarketShare": 6.2915,
+      "residual": -5.0248
+    },
+    {
+      "country": "Portugal",
+      "year": 2018,
+      "actualMarketShare": 2.8567,
+      "predictedMarketShare": 6.8299,
+      "residual": -3.9733
+    },
+    {
+      "country": "Portugal",
+      "year": 2019,
+      "actualMarketShare": 4.1267,
+      "predictedMarketShare": 7.9831,
+      "residual": -3.8565
+    },
+    {
+      "country": "Portugal",
+      "year": 2020,
+      "actualMarketShare": 9.4567,
+      "predictedMarketShare": 8.8143,
+      "residual": 0.6423
+    },
+    {
+      "country": "Portugal",
+      "year": 2021,
+      "actualMarketShare": 13.6633,
+      "predictedMarketShare": 10.3021,
+      "residual": 3.3613
+    },
+    {
+      "country": "Portugal",
+      "year": 2022,
+      "actualMarketShare": 16.81,
+      "predictedMarketShare": 11.3689,
+      "residual": 5.4411
+    },
+    {
+      "country": "Portugal",
+      "year": 2023,
+      "actualMarketShare": 19.2,
+      "predictedMarketShare": 11.9286,
+      "residual": 7.2714
+    },
+    {
+      "country": "Portugal",
+      "year": 2024,
+      "actualMarketShare": 22.4,
+      "predictedMarketShare": 12.637,
+      "residual": 9.763
+    },
+    {
+      "country": "Portugal",
+      "year": 2025,
+      "actualMarketShare": 24.26,
+      "predictedMarketShare": 13.153,
+      "residual": 11.107
+    },
+    {
+      "country": "South Korea",
+      "year": 2010,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": 1.7886,
+      "residual": -1.782
+    },
+    {
+      "country": "South Korea",
+      "year": 2011,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": 1.8647,
+      "residual": -1.8447
+    },
+    {
+      "country": "South Korea",
+      "year": 2012,
+      "actualMarketShare": 0.0267,
+      "predictedMarketShare": 1.2754,
+      "residual": -1.2488
+    },
+    {
+      "country": "South Korea",
+      "year": 2013,
+      "actualMarketShare": 0.11,
+      "predictedMarketShare": 1.0728,
+      "residual": -0.9628
+    },
+    {
+      "country": "South Korea",
+      "year": 2014,
+      "actualMarketShare": 0.1667,
+      "predictedMarketShare": 1.3651,
+      "residual": -1.1985
+    },
+    {
+      "country": "South Korea",
+      "year": 2015,
+      "actualMarketShare": 0.3533,
+      "predictedMarketShare": 1.335,
+      "residual": -0.9817
+    },
+    {
+      "country": "South Korea",
+      "year": 2016,
+      "actualMarketShare": 0.5867,
+      "predictedMarketShare": 2.5941,
+      "residual": -2.0075
+    },
+    {
+      "country": "South Korea",
+      "year": 2017,
+      "actualMarketShare": 1.0733,
+      "predictedMarketShare": 3.7003,
+      "residual": -2.6269
+    },
+    {
+      "country": "South Korea",
+      "year": 2018,
+      "actualMarketShare": 1.68,
+      "predictedMarketShare": 4.6093,
+      "residual": -2.9293
+    },
+    {
+      "country": "South Korea",
+      "year": 2019,
+      "actualMarketShare": 2.2467,
+      "predictedMarketShare": 5.9647,
+      "residual": -3.7181
+    },
+    {
+      "country": "South Korea",
+      "year": 2020,
+      "actualMarketShare": 2.2133,
+      "predictedMarketShare": 7.1463,
+      "residual": -4.933
+    },
+    {
+      "country": "South Korea",
+      "year": 2021,
+      "actualMarketShare": 5.1433,
+      "predictedMarketShare": 9.2803,
+      "residual": -4.1369
+    },
+    {
+      "country": "South Korea",
+      "year": 2022,
+      "actualMarketShare": 9.5667,
+      "predictedMarketShare": 10.6044,
+      "residual": -1.0377
+    },
+    {
+      "country": "South Korea",
+      "year": 2023,
+      "actualMarketShare": 10.3767,
+      "predictedMarketShare": 11.219,
+      "residual": -0.8423
+    },
+    {
+      "country": "South Korea",
+      "year": 2024,
+      "actualMarketShare": 12.6167,
+      "predictedMarketShare": 11.8761,
+      "residual": 0.7406
+    },
+    {
+      "country": "South Korea",
+      "year": 2025,
+      "actualMarketShare": 14.4833,
+      "predictedMarketShare": 12.8443,
+      "residual": 1.639
+    },
+    {
+      "country": "Spain",
+      "year": 2010,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": 0.7444,
+      "residual": -0.7377
+    },
+    {
+      "country": "Spain",
+      "year": 2011,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": 1.3439,
+      "residual": -1.3239
+    },
+    {
+      "country": "Spain",
+      "year": 2012,
+      "actualMarketShare": 0.0367,
+      "predictedMarketShare": 1.2269,
+      "residual": -1.1903
+    },
+    {
+      "country": "Spain",
+      "year": 2013,
+      "actualMarketShare": 0.1233,
+      "predictedMarketShare": 2.046,
+      "residual": -1.9227
+    },
+    {
+      "country": "Spain",
+      "year": 2014,
+      "actualMarketShare": 0.1667,
+      "predictedMarketShare": 2.4883,
+      "residual": -2.3217
+    },
+    {
+      "country": "Spain",
+      "year": 2015,
+      "actualMarketShare": 0.27,
+      "predictedMarketShare": 2.5942,
+      "residual": -2.3242
+    },
+    {
+      "country": "Spain",
+      "year": 2016,
+      "actualMarketShare": 0.3533,
+      "predictedMarketShare": 2.9358,
+      "residual": -2.5825
+    },
+    {
+      "country": "Spain",
+      "year": 2017,
+      "actualMarketShare": 0.69,
+      "predictedMarketShare": 3.9527,
+      "residual": -3.2627
+    },
+    {
+      "country": "Spain",
+      "year": 2018,
+      "actualMarketShare": 1.01,
+      "predictedMarketShare": 4.3737,
+      "residual": -3.3637
+    },
+    {
+      "country": "Spain",
+      "year": 2019,
+      "actualMarketShare": 1.3833,
+      "predictedMarketShare": 5.4704,
+      "residual": -4.087
+    },
+    {
+      "country": "Spain",
+      "year": 2020,
+      "actualMarketShare": 3.8567,
+      "predictedMarketShare": 6.2972,
+      "residual": -2.4405
+    },
+    {
+      "country": "Spain",
+      "year": 2021,
+      "actualMarketShare": 6.8133,
+      "predictedMarketShare": 7.5917,
+      "residual": -0.7784
+    },
+    {
+      "country": "Spain",
+      "year": 2022,
+      "actualMarketShare": 7.68,
+      "predictedMarketShare": 8.7081,
+      "residual": -1.0281
+    },
+    {
+      "country": "Spain",
+      "year": 2023,
+      "actualMarketShare": 7.82,
+      "predictedMarketShare": 9.4378,
+      "residual": -1.6178
+    },
+    {
+      "country": "Spain",
+      "year": 2024,
+      "actualMarketShare": 9.4933,
+      "predictedMarketShare": 9.7059,
+      "residual": -0.2126
+    },
+    {
+      "country": "Spain",
+      "year": 2025,
+      "actualMarketShare": 11.09,
+      "predictedMarketShare": 10.1954,
+      "residual": 0.8946
+    },
+    {
+      "country": "Sweden",
+      "year": 2010,
+      "actualMarketShare": 0.0267,
+      "predictedMarketShare": 6.4343,
+      "residual": -6.4076
+    },
+    {
+      "country": "Sweden",
+      "year": 2011,
+      "actualMarketShare": 0.1867,
+      "predictedMarketShare": 6.011,
+      "residual": -5.8243
+    },
+    {
+      "country": "Sweden",
+      "year": 2012,
+      "actualMarketShare": 0.3533,
+      "predictedMarketShare": 5.3258,
+      "residual": -4.9724
+    },
+    {
+      "country": "Sweden",
+      "year": 2013,
+      "actualMarketShare": 0.8767,
+      "predictedMarketShare": 6.1171,
+      "residual": -5.2404
+    },
+    {
+      "country": "Sweden",
+      "year": 2014,
+      "actualMarketShare": 1.1967,
+      "predictedMarketShare": 6.8111,
+      "residual": -5.6145
+    },
+    {
+      "country": "Sweden",
+      "year": 2015,
+      "actualMarketShare": 2.3067,
+      "predictedMarketShare": 7.9983,
+      "residual": -5.6916
+    },
+    {
+      "country": "Sweden",
+      "year": 2016,
+      "actualMarketShare": 3.2667,
+      "predictedMarketShare": 8.1501,
+      "residual": -4.8835
+    },
+    {
+      "country": "Sweden",
+      "year": 2017,
+      "actualMarketShare": 5.29,
+      "predictedMarketShare": 8.8085,
+      "residual": -3.5185
+    },
+    {
+      "country": "Sweden",
+      "year": 2018,
+      "actualMarketShare": 7.01,
+      "predictedMarketShare": 9.7498,
+      "residual": -2.7398
+    },
+    {
+      "country": "Sweden",
+      "year": 2019,
+      "actualMarketShare": 10.6467,
+      "predictedMarketShare": 10.4937,
+      "residual": 0.1529
+    },
+    {
+      "country": "Sweden",
+      "year": 2020,
+      "actualMarketShare": 22.4067,
+      "predictedMarketShare": 12.6734,
+      "residual": 9.7333
+    },
+    {
+      "country": "Sweden",
+      "year": 2021,
+      "actualMarketShare": 26.98,
+      "predictedMarketShare": 13.9262,
+      "residual": 13.0538
+    },
+    {
+      "country": "Sweden",
+      "year": 2022,
+      "actualMarketShare": 17.45,
+      "predictedMarketShare": 14.9519,
+      "residual": 2.4981
+    },
+    {
+      "country": "Sweden",
+      "year": 2023,
+      "actualMarketShare": 16.14,
+      "predictedMarketShare": 17.0565,
+      "residual": -0.9165
+    },
+    {
+      "country": "Sweden",
+      "year": 2024,
+      "actualMarketShare": 17.7,
+      "predictedMarketShare": 18.7337,
+      "residual": -1.0337
+    },
+    {
+      "country": "Sweden",
+      "year": 2025,
+      "actualMarketShare": 18.27,
+      "predictedMarketShare": 19.2566,
+      "residual": -0.9866
+    },
+    {
+      "country": "Switzerland",
+      "year": 2010,
+      "actualMarketShare": 0.0267,
+      "predictedMarketShare": 3.2529,
+      "residual": -3.2262
+    },
+    {
+      "country": "Switzerland",
+      "year": 2011,
+      "actualMarketShare": 0.0767,
+      "predictedMarketShare": 4.1306,
+      "residual": -4.0539
+    },
+    {
+      "country": "Switzerland",
+      "year": 2012,
+      "actualMarketShare": 0.1233,
+      "predictedMarketShare": 4.7107,
+      "residual": -4.5874
+    },
+    {
+      "country": "Switzerland",
+      "year": 2013,
+      "actualMarketShare": 0.15,
+      "predictedMarketShare": 5.3504,
+      "residual": -5.2004
+    },
+    {
+      "country": "Switzerland",
+      "year": 2014,
+      "actualMarketShare": 0.68,
+      "predictedMarketShare": 6.4849,
+      "residual": -5.8049
+    },
+    {
+      "country": "Switzerland",
+      "year": 2015,
+      "actualMarketShare": 1.12,
+      "predictedMarketShare": 6.8518,
+      "residual": -5.7318
+    },
+    {
+      "country": "Switzerland",
+      "year": 2016,
+      "actualMarketShare": 1.4567,
+      "predictedMarketShare": 8.2099,
+      "residual": -6.7532
+    },
+    {
+      "country": "Switzerland",
+      "year": 2017,
+      "actualMarketShare": 1.79,
+      "predictedMarketShare": 9.3444,
+      "residual": -7.5544
+    },
+    {
+      "country": "Switzerland",
+      "year": 2018,
+      "actualMarketShare": 2.7167,
+      "predictedMarketShare": 10.4842,
+      "residual": -7.7676
+    },
+    {
+      "country": "Switzerland",
+      "year": 2019,
+      "actualMarketShare": 3.9133,
+      "predictedMarketShare": 11.0471,
+      "residual": -7.1338
+    },
+    {
+      "country": "Switzerland",
+      "year": 2020,
+      "actualMarketShare": 9.7133,
+      "predictedMarketShare": 12.5951,
+      "residual": -2.8817
+    },
+    {
+      "country": "Switzerland",
+      "year": 2021,
+      "actualMarketShare": 16.69,
+      "predictedMarketShare": 14.032,
+      "residual": 2.658
+    },
+    {
+      "country": "Switzerland",
+      "year": 2022,
+      "actualMarketShare": 21.2233,
+      "predictedMarketShare": 14.8858,
+      "residual": 6.3375
+    },
+    {
+      "country": "Switzerland",
+      "year": 2023,
+      "actualMarketShare": 22.2967,
+      "predictedMarketShare": 15.6531,
+      "residual": 6.6436
+    },
+    {
+      "country": "Switzerland",
+      "year": 2024,
+      "actualMarketShare": 23.52,
+      "predictedMarketShare": 15.8575,
+      "residual": 7.6625
+    },
+    {
+      "country": "Switzerland",
+      "year": 2025,
+      "actualMarketShare": 19.02,
+      "predictedMarketShare": 16.2501,
+      "residual": 2.7699
+    },
+    {
+      "country": "Thailand",
+      "year": 2010,
+      "actualMarketShare": 0,
+      "predictedMarketShare": -5.9242,
+      "residual": 5.9242
+    },
+    {
+      "country": "Thailand",
+      "year": 2011,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -4.7107,
+      "residual": 4.7173
+    },
+    {
+      "country": "Thailand",
+      "year": 2012,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -3.8744,
+      "residual": 3.8811
+    },
+    {
+      "country": "Thailand",
+      "year": 2013,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -3.6788,
+      "residual": 3.6855
+    },
+    {
+      "country": "Thailand",
+      "year": 2014,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -3.2756,
+      "residual": 3.2823
+    },
+    {
+      "country": "Thailand",
+      "year": 2015,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": -2.7046,
+      "residual": 2.7246
+    },
+    {
+      "country": "Thailand",
+      "year": 2016,
+      "actualMarketShare": 0.0267,
+      "predictedMarketShare": -2.5448,
+      "residual": 2.5715
+    },
+    {
+      "country": "Thailand",
+      "year": 2017,
+      "actualMarketShare": 0.0467,
+      "predictedMarketShare": -2.1259,
+      "residual": 2.1725
+    },
+    {
+      "country": "Thailand",
+      "year": 2018,
+      "actualMarketShare": 0.0467,
+      "predictedMarketShare": -1.3971,
+      "residual": 1.4438
+    },
+    {
+      "country": "Thailand",
+      "year": 2019,
+      "actualMarketShare": 0.14,
+      "predictedMarketShare": -0.0152,
+      "residual": 0.1552
+    },
+    {
+      "country": "Thailand",
+      "year": 2020,
+      "actualMarketShare": 0.2333,
+      "predictedMarketShare": 1.0712,
+      "residual": -0.8379
+    },
+    {
+      "country": "Thailand",
+      "year": 2021,
+      "actualMarketShare": 0.6367,
+      "predictedMarketShare": 2.3391,
+      "residual": -1.7024
+    },
+    {
+      "country": "Thailand",
+      "year": 2022,
+      "actualMarketShare": 2.7233,
+      "predictedMarketShare": 4.491,
+      "residual": -1.7677
+    },
+    {
+      "country": "Thailand",
+      "year": 2023,
+      "actualMarketShare": 8.2767,
+      "predictedMarketShare": 5.2781,
+      "residual": 2.9986
+    },
+    {
+      "country": "Thailand",
+      "year": 2024,
+      "actualMarketShare": 11.2633,
+      "predictedMarketShare": 6.7629,
+      "residual": 4.5004
+    },
+    {
+      "country": "Thailand",
+      "year": 2025,
+      "actualMarketShare": 13.5233,
+      "predictedMarketShare": 7.9177,
+      "residual": 5.6056
+    },
+    {
+      "country": "Turkey",
+      "year": 2010,
+      "actualMarketShare": 0.0033,
+      "predictedMarketShare": -3.3481,
+      "residual": 3.3515
+    },
+    {
+      "country": "Turkey",
+      "year": 2011,
+      "actualMarketShare": 0,
+      "predictedMarketShare": -1.5585,
+      "residual": 1.5585
+    },
+    {
+      "country": "Turkey",
+      "year": 2012,
+      "actualMarketShare": 0.0033,
+      "predictedMarketShare": -1.3051,
+      "residual": 1.3084
+    },
+    {
+      "country": "Turkey",
+      "year": 2013,
+      "actualMarketShare": 0.01,
+      "predictedMarketShare": -1.0594,
+      "residual": 1.0694
+    },
+    {
+      "country": "Turkey",
+      "year": 2014,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -1.2271,
+      "residual": 1.2338
+    },
+    {
+      "country": "Turkey",
+      "year": 2015,
+      "actualMarketShare": 0.0067,
+      "predictedMarketShare": -0.9288,
+      "residual": 0.9354
+    },
+    {
+      "country": "Turkey",
+      "year": 2016,
+      "actualMarketShare": 0.02,
+      "predictedMarketShare": -0.2807,
+      "residual": 0.3007
+    },
+    {
+      "country": "Turkey",
+      "year": 2017,
+      "actualMarketShare": 0.0367,
+      "predictedMarketShare": -0.3293,
+      "residual": 0.366
+    },
+    {
+      "country": "Turkey",
+      "year": 2018,
+      "actualMarketShare": 0.0633,
+      "predictedMarketShare": 0.0526,
+      "residual": 0.0107
+    },
+    {
+      "country": "Turkey",
+      "year": 2019,
+      "actualMarketShare": 0.1667,
+      "predictedMarketShare": 0.9572,
+      "residual": -0.7905
+    },
+    {
+      "country": "Turkey",
+      "year": 2020,
+      "actualMarketShare": 0.25,
+      "predictedMarketShare": 1.7222,
+      "residual": -1.4722
+    },
+    {
+      "country": "Turkey",
+      "year": 2021,
+      "actualMarketShare": 0.6067,
+      "predictedMarketShare": 2.6108,
+      "residual": -2.0041
+    },
+    {
+      "country": "Turkey",
+      "year": 2022,
+      "actualMarketShare": 1.0167,
+      "predictedMarketShare": 4.078,
+      "residual": -3.0613
+    },
+    {
+      "country": "Turkey",
+      "year": 2023,
+      "actualMarketShare": 6.0667,
+      "predictedMarketShare": 5.2314,
+      "residual": 0.8353
+    },
+    {
+      "country": "Turkey",
+      "year": 2024,
+      "actualMarketShare": 8.8833,
+      "predictedMarketShare": 6.2112,
+      "residual": 2.6722
+    },
+    {
+      "country": "Turkey",
+      "year": 2025,
+      "actualMarketShare": 10.1,
+      "predictedMarketShare": 6.9012,
+      "residual": 3.1988
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2010,
+      "actualMarketShare": 0.03,
+      "predictedMarketShare": 0.3697,
+      "residual": -0.3397
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2011,
+      "actualMarketShare": 0.0633,
+      "predictedMarketShare": 1.682,
+      "residual": -1.6187
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2012,
+      "actualMarketShare": 0.1033,
+      "predictedMarketShare": 2.5384,
+      "residual": -2.435
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2013,
+      "actualMarketShare": 0.3367,
+      "predictedMarketShare": 2.9183,
+      "residual": -2.5816
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2014,
+      "actualMarketShare": 0.4967,
+      "predictedMarketShare": 3.456,
+      "residual": -2.9593
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2015,
+      "actualMarketShare": 0.8567,
+      "predictedMarketShare": 4.3166,
+      "residual": -3.4599
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2016,
+      "actualMarketShare": 1.4,
+      "predictedMarketShare": 6.2228,
+      "residual": -4.8228
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2017,
+      "actualMarketShare": 1.8033,
+      "predictedMarketShare": 7.068,
+      "residual": -5.2646
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2018,
+      "actualMarketShare": 2.3233,
+      "predictedMarketShare": 8.2769,
+      "residual": -5.9535
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2019,
+      "actualMarketShare": 3.05,
+      "predictedMarketShare": 9.782,
+      "residual": -6.732
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2020,
+      "actualMarketShare": 10.1833,
+      "predictedMarketShare": 11.491,
+      "residual": -1.3077
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2021,
+      "actualMarketShare": 17.6767,
+      "predictedMarketShare": 13.4224,
+      "residual": 4.2543
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2022,
+      "actualMarketShare": 21.2867,
+      "predictedMarketShare": 14.9406,
+      "residual": 6.3461
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2023,
+      "actualMarketShare": 19.9567,
+      "predictedMarketShare": 16.2354,
+      "residual": 3.7213
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2024,
+      "actualMarketShare": 20.4967,
+      "predictedMarketShare": 16.6062,
+      "residual": 3.8905
+    },
+    {
+      "country": "United Kingdom",
+      "year": 2025,
+      "actualMarketShare": 23.6033,
+      "predictedMarketShare": 16.9826,
+      "residual": 6.6207
+    },
+    {
+      "country": "United States",
+      "year": 2010,
+      "actualMarketShare": 0.1067,
+      "predictedMarketShare": -7.1277,
+      "residual": 7.2344
+    },
+    {
+      "country": "United States",
+      "year": 2011,
+      "actualMarketShare": 0.1933,
+      "predictedMarketShare": -6.2181,
+      "residual": 6.4114
+    },
+    {
+      "country": "United States",
+      "year": 2012,
+      "actualMarketShare": 0.3367,
+      "predictedMarketShare": -5.7988,
+      "residual": 6.1355
+    },
+    {
+      "country": "United States",
+      "year": 2013,
+      "actualMarketShare": 0.5233,
+      "predictedMarketShare": -5.0556,
+      "residual": 5.5789
+    },
+    {
+      "country": "United States",
+      "year": 2014,
+      "actualMarketShare": 0.6633,
+      "predictedMarketShare": -4.8351,
+      "residual": 5.4984
+    },
+    {
+      "country": "United States",
+      "year": 2015,
+      "actualMarketShare": 0.7733,
+      "predictedMarketShare": -4.0848,
+      "residual": 4.8581
+    },
+    {
+      "country": "United States",
+      "year": 2016,
+      "actualMarketShare": 0.83,
+      "predictedMarketShare": -3.6227,
+      "residual": 4.4527
+    },
+    {
+      "country": "United States",
+      "year": 2017,
+      "actualMarketShare": 1.4733,
+      "predictedMarketShare": -2.8064,
+      "residual": 4.2797
+    },
+    {
+      "country": "United States",
+      "year": 2018,
+      "actualMarketShare": 1.7733,
+      "predictedMarketShare": -2.4327,
+      "residual": 4.206
+    },
+    {
+      "country": "United States",
+      "year": 2019,
+      "actualMarketShare": 1.7633,
+      "predictedMarketShare": -1.2335,
+      "residual": 2.9968
+    },
+    {
+      "country": "United States",
+      "year": 2020,
+      "actualMarketShare": 2.2467,
+      "predictedMarketShare": -0.5582,
+      "residual": 2.8049
+    },
+    {
+      "country": "United States",
+      "year": 2021,
+      "actualMarketShare": 3.81,
+      "predictedMarketShare": 1.503,
+      "residual": 2.307
+    },
+    {
+      "country": "United States",
+      "year": 2022,
+      "actualMarketShare": 6.3933,
+      "predictedMarketShare": 2.5358,
+      "residual": 3.8575
+    },
+    {
+      "country": "United States",
+      "year": 2023,
+      "actualMarketShare": 8.29,
+      "predictedMarketShare": 2.8362,
+      "residual": 5.4538
+    },
+    {
+      "country": "United States",
+      "year": 2024,
+      "actualMarketShare": 10.0433,
+      "predictedMarketShare": 3.3612,
+      "residual": 6.6821
+    },
+    {
+      "country": "United States",
+      "year": 2025,
+      "actualMarketShare": 11.5367,
+      "predictedMarketShare": 3.7323,
+      "residual": 7.8044
+    }
+  ],
+  "sensitivityAnalysis": [
+    {
+      "feature": "emission_regulation_score",
+      "label": "Regulation Score",
+      "partialR2": 0.0401,
+      "marginalEffect": 0.248366,
+      "importanceRank": 1
+    },
+    {
+      "feature": "ev_subsidy_usd",
+      "label": "Subsidy (USD)",
+      "partialR2": 0.0332,
+      "marginalEffect": 0.00068,
+      "importanceRank": 2
+    },
+    {
+      "feature": "gdp_per_capita",
+      "label": "GDP per Capita (USD)",
+      "partialR2": 0.0208,
+      "marginalEffect": 1.742193,
+      "importanceRank": 3
+    },
+    {
+      "feature": "charging_stations",
+      "label": "Charging Stations",
+      "partialR2": 0.0112,
+      "marginalEffect": 0.611015,
+      "importanceRank": 4
+    },
+    {
+      "feature": "fuel_price_usd_per_liter",
+      "label": "Fuel Price (USD/L)",
+      "partialR2": 0.0105,
+      "marginalEffect": 4.674598,
+      "importanceRank": 5
+    },
+    {
+      "feature": "electricity_price_usd_per_kwh",
+      "label": "Electricity Price (USD/kWh)",
+      "partialR2": 0.0023,
+      "marginalEffect": 6.444347,
+      "importanceRank": 6
+    }
+  ],
+  "timeProjection": [
+    {
+      "year": 2010,
+      "globalAvgMarketShare": 0.0277
+    },
+    {
+      "year": 2011,
+      "globalAvgMarketShare": 0.1377
+    },
+    {
+      "year": 2012,
+      "globalAvgMarketShare": 0.2448
+    },
+    {
+      "year": 2013,
+      "globalAvgMarketShare": 0.5679
+    },
+    {
+      "year": 2014,
+      "globalAvgMarketShare": 0.8888
+    },
+    {
+      "year": 2015,
+      "globalAvgMarketShare": 1.1484
+    },
+    {
+      "year": 2016,
+      "globalAvgMarketShare": 1.4167
+    },
+    {
+      "year": 2017,
+      "globalAvgMarketShare": 2.0633
+    },
+    {
+      "year": 2018,
+      "globalAvgMarketShare": 2.4628
+    },
+    {
+      "year": 2019,
+      "globalAvgMarketShare": 3.0892
+    },
+    {
+      "year": 2020,
+      "globalAvgMarketShare": 6.3024
+    },
+    {
+      "year": 2021,
+      "globalAvgMarketShare": 9.8616
+    },
+    {
+      "year": 2022,
+      "globalAvgMarketShare": 11.7295
+    },
+    {
+      "year": 2023,
+      "globalAvgMarketShare": 12.5811
+    },
+    {
+      "year": 2024,
+      "globalAvgMarketShare": 14.0086
+    },
+    {
+      "year": 2025,
+      "globalAvgMarketShare": 14.7297
+    }
+  ]
+}

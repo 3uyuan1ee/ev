@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "preprocess": "node scripts/preprocess.js",
+    "dev": "npm run preprocess && vite",
+    "build": "npm run preprocess && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -13,8 +14,10 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.6",
+    "papaparse": "^5.5.3",
     "vite": "^8.0.8",
-    "vite-plugin-vue-devtools": "^8.1.1"
+    "vite-plugin-vue-devtools": "^8.1.1",
+    "xlsx": "^0.18.5"
   },
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
