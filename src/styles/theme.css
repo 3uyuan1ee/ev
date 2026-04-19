@@ -1,0 +1,64 @@
+/* ============================================================
+   Dark / Light Theme Overrides
+   ============================================================ */
+
+[data-theme="dark"] {
+  --color-bg-primary: #2A2830;
+  --color-bg-card: #33303A;
+  --color-bg-chart: #3A3640;
+  --color-bg-secondary: #3F3B48;
+
+  --color-text-primary: #EAE7DC;
+  --color-text-secondary: #B0A8A0;
+  --color-text-tertiary: #7B7570;
+
+  --color-border: #4A4550;
+  --color-grid-line: rgba(234, 231, 220, 0.08);
+  --color-overlay: rgba(0, 0, 0, 0.6);
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-tooltip: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  /* Brightness boost for chart colors in dark mode */
+  --color-ev: #A8A7D0;
+  --color-icev: #F07568;
+  --color-accent: #F09A8E;
+  --color-info: #A8A7D0;
+  --color-success: #A8A7D0;
+  --color-danger: #F07568;
+  --color-error: #F07568;
+  --color-highlight: #F09A8E;
+
+  /* Act colors boosted for dark */
+  --color-act1: #A8A7D0;
+  --color-act2: #F09A8E;
+  --color-act3: #E8D4B8;
+  --color-act4: #F07568;
+
+  /* Chart palette boosted */
+  --chart-color-1: #A8A7D0;
+  --chart-color-2: #F09A8E;
+  --chart-color-3: #F07568;
+  --chart-color-4: #E8D4B8;
+  --chart-color-5: #D5D0C5;
+  --chart-color-6: #9493BE;
+  --chart-color-7: #E88A7E;
+  --chart-color-8: #DA6860;
+  --chart-color-9: #D4C4A2;
+  --chart-color-10: #C4BFB5;
+
+  /* Region colors boosted */
+  --color-region-europe: #A8A7D0;
+  --color-region-asia-pacific: #F07568;
+  --color-region-north-america: #F09A8E;
+  --color-region-south-america: #E8D4B8;
+  --color-region-oceania: #9493BE;
+  --color-region-other: #B0A8A0;
+
+  /* Powertrain boosted */
+  --color-powertrain-bev: #A8A7D0;
+  --color-powertrain-icev: #F07568;
+  --color-powertrain-hev: #E8D4B8;
+  --color-powertrain-phev: #F09A8E;
+}

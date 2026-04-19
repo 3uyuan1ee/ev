@@ -1,0 +1,169 @@
+/* ============================================================
+   Design Tokens — CSS Custom Properties
+   Five-color palette: Sand, Wheat, Mauve, Coral, Crimson
+   ============================================================ */
+
+:root {
+  /* ---- Colors: Five-Color Palette ---- */
+  --color-sand: #EAE7DC;
+  --color-wheat: #D8C3A5;
+  --color-mauve: #8E8DBA;
+  --color-coral: #E98074;
+  --color-crimson: #E85A4F;
+
+  /* ---- Colors: Derived / Extended ---- */
+  --color-mauve-dark: #7A79A8;
+  --color-coral-dark: #D06A5E;
+  --color-crimson-dark: #C94A45;
+  --color-wheat-dark: #C4B08A;
+  --color-sand-dark: #D5D0C5;
+
+  /* ---- Colors: Background ---- */
+  --color-bg-primary: #EAE7DC;
+  --color-bg-card: #FFFFFF;
+  --color-bg-chart: #FFFFFF;
+  --color-bg-secondary: #D8C3A5;
+
+  /* ---- Colors: Primary & Accent ---- */
+  --color-primary: #8E8DBA;
+  --color-accent: #E98074;
+  --color-info: #8E8DBA;
+  --color-ev: #8E8DBA;
+  --color-icev: #E85A4F;
+
+  /* ---- Colors: Semantic ---- */
+  --color-success: #8E8DBA;
+  --color-warning: #E98074;
+  --color-danger: #E85A4F;
+  --color-error: #E85A4F;
+  --color-neutral: #9B9590;
+  --color-highlight: #E98074;
+
+  /* ---- Colors: Text ---- */
+  --color-text-primary: #3A3630;
+  --color-text-secondary: #6B6560;
+  --color-text-tertiary: #9B9590;
+
+  /* ---- Colors: UI ---- */
+  --color-border: #D8C3A5;
+  --color-grid-line: rgba(58, 54, 48, 0.06);
+  --color-focus-ring: #8E8DBA;
+  --color-overlay: rgba(58, 54, 48, 0.4);
+
+  /* ---- Colors: Act (solid, no gradients) ---- */
+  --color-act1: #8E8DBA;
+  --color-act2: #E98074;
+  --color-act3: #D8C3A5;
+  --color-act4: #E85A4F;
+
+  /* ---- Colors: Powertrain ---- */
+  --color-powertrain-bev: #8E8DBA;
+  --color-powertrain-icev: #E85A4F;
+  --color-powertrain-hev: #D8C3A5;
+  --color-powertrain-phev: #E98074;
+
+  /* ---- Colors: Cost Components (TCO) ---- */
+  --color-cost-purchase: #8E8DBA;
+  --color-cost-energy-ev: #8E8DBA;
+  --color-cost-energy-ice: #E85A4F;
+  --color-cost-maintenance-ev: #E98074;
+  --color-cost-maintenance-ice: #E98074;
+  --color-cost-insurance: #D8C3A5;
+  --color-cost-tax: #9B9590;
+  --color-breakeven: #E98074;
+
+  /* ---- Colors: Chart Palette (10 colors) ---- */
+  --chart-color-1: #8E8DBA;
+  --chart-color-2: #E98074;
+  --chart-color-3: #E85A4F;
+  --chart-color-4: #D8C3A5;
+  --chart-color-5: #EAE7DC;
+  --chart-color-6: #7A79A8;
+  --chart-color-7: #D06A5E;
+  --chart-color-8: #C94A45;
+  --chart-color-9: #C4B08A;
+  --chart-color-10: #D5D0C5;
+
+  /* ---- Colors: Region ---- */
+  --color-region-europe: #8E8DBA;
+  --color-region-asia-pacific: #E85A4F;
+  --color-region-north-america: #E98074;
+  --color-region-south-america: #D8C3A5;
+  --color-region-oceania: #7A79A8;
+  --color-region-other: #9B9590;
+
+  /* ---- Typography ---- */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-cn: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+
+  --font-size-display: 4rem;
+  --font-size-h1: 2.25rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.25rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  --font-size-caption: 0.75rem;
+  --font-size-micro: 0.625rem;
+
+  --line-height-display: 1.1;
+  --line-height-h1: 1.25;
+  --line-height-h2: 1.3;
+  --line-height-h3: 1.35;
+  --line-height-body: 1.6;
+  --line-height-small: 1.5;
+  --line-height-caption: 1.4;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* ---- Spacing (8px grid) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  --space-10: 64px;
+  --space-12: 96px;
+
+  /* ---- Shadows ---- */
+  --shadow-card: 0 1px 3px rgba(58, 54, 48, 0.1), 0 1px 2px rgba(58, 54, 48, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(58, 54, 48, 0.1), 0 2px 4px rgba(58, 54, 48, 0.06);
+  --shadow-tooltip: 0 4px 16px rgba(58, 54, 48, 0.12);
+
+  /* ---- Border Radius ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ---- Chart ---- */
+  --chart-padding-top: 24px;
+  --chart-padding-right: 24px;
+  --chart-padding-bottom: 48px;
+  --chart-padding-left: 60px;
+
+  /* ---- Animation ---- */
+  --duration-micro: 150ms;
+  --duration-data: 300ms;
+  --duration-content: 500ms;
+  --duration-entrance: 800ms;
+  --duration-narrative: 1500ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: ease-in-out;
+
+  /* ---- Z-index ---- */
+  --z-base: 0;
+  --z-card: 10;
+  --z-sticky: 100;
+  --z-progress: 1000;
+  --z-overlay: 2000;
+  --z-modal: 3000;
+  --z-tooltip: 4000;
+}

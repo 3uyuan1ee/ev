@@ -13,59 +13,63 @@
   },
   "costComponentColors": {
     "bev": {
-      "purchase": "rgba(34, 197, 94, 0.4)",
-      "energy": "rgba(59, 130, 246, 0.6)",
-      "maintenance": "rgba(139, 92, 246, 0.5)",
-      "insurance": "rgba(236, 72, 153, 0.5)",
-      "tax": "rgba(107, 114, 128, 0.4)"
+      "purchase": "rgba(142, 141, 186, 0.4)",
+      "energy": "rgba(142, 141, 186, 0.7)",
+      "maintenance": "rgba(233, 128, 116, 0.5)",
+      "insurance": "rgba(216, 195, 165, 0.6)",
+      "tax": "rgba(142, 141, 186, 0.3)"
     },
     "icev": {
-      "purchase": "rgba(148, 163, 184, 0.4)",
-      "energy": "rgba(245, 158, 11, 0.6)",
-      "maintenance": "rgba(239, 68, 68, 0.5)",
-      "insurance": "rgba(236, 72, 153, 0.5)",
-      "tax": "rgba(107, 114, 128, 0.4)"
+      "purchase": "rgba(148, 140, 130, 0.4)",
+      "energy": "rgba(232, 90, 79, 0.6)",
+      "maintenance": "rgba(233, 128, 116, 0.5)",
+      "insurance": "rgba(216, 195, 165, 0.6)",
+      "tax": "rgba(148, 140, 130, 0.3)"
     }
   },
   "thresholdLines": {
-    "breakeven": "#F97316",
-    "battery100": "#EF4444"
+    "breakeven": "#E98074",
+    "battery100": "#E85A4F"
   },
   "powertrainColors": {
-    "bev": "#22C55E",
-    "icev": "#EF4444",
-    "phev": "#F59E0B",
-    "hev": "#94A3B8"
+    "bev": "#8E8DBA",
+    "icev": "#E85A4F",
+    "phev": "#E98074",
+    "hev": "#D8C3A5"
   },
   "actColors": {
     "act1": {
-      "primary": "#F59E0B",
-      "secondary": "#EF4444",
-      "gradient": "linear-gradient(135deg, #F59E0B, #EF4444)"
+      "primary": "#8E8DBA"
     },
     "act2": {
-      "primary": "#3B82F6",
-      "secondary": "#8B5CF6",
-      "gradient": "linear-gradient(135deg, #3B82F6, #8B5CF6)"
+      "primary": "#E98074"
     },
     "act3": {
-      "primary": "#22C55E",
-      "secondary": "#3B82F6",
-      "gradient": "linear-gradient(135deg, #22C55E, #3B82F6)"
+      "primary": "#D8C3A5"
     },
     "act4": {
-      "primary": "#22C55E",
-      "secondary": "#059669",
-      "gradient": "linear-gradient(135deg, #22C55E, #059669)"
+      "primary": "#E85A4F"
     }
   },
+  "regionColors": {
+    "Europe": "#8E8DBA",
+    "Asia-Pacific": "#E85A4F",
+    "North America": "#E98074",
+    "South America": "#D8C3A5",
+    "Oceania": "#7A79A8",
+    "Other": "#9B9590"
+  },
+  "chartPalette": [
+    "#8E8DBA", "#E98074", "#E85A4F", "#D8C3A5", "#EAE7DC",
+    "#7A79A8", "#D06A5E", "#C94A45", "#C4B08A", "#D5D0C5"
+  ],
   "regulationScore": {
     "stops": [
-      { "value": 0, "color": "#FEE2E2" },
-      { "value": 40, "color": "#FECACA" },
-      { "value": 60, "color": "#FDE68A" },
-      { "value": 75, "color": "#A7F3D0" },
-      { "value": 85, "color": "#059669" }
+      { "value": 0, "color": "#E85A4F" },
+      { "value": 40, "color": "#E98074" },
+      { "value": 60, "color": "#D8C3A5" },
+      { "value": 75, "color": "#C4B08A" },
+      { "value": 85, "color": "#8E8DBA" }
     ]
   }
 }
