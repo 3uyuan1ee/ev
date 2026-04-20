@@ -5,6 +5,7 @@ import { useI18n } from '@/i18n/useI18n'
 const { t } = useI18n()
 const sentinelRef = ref(null)
 const progress = ref(0)
+const showModal = ref(false)
 
 function onScroll() {
   if (!sentinelRef.value) return
@@ -35,32 +36,47 @@ onUnmounted(() => {
       class="end-content"
       :style="{ transform: `translateY(${(1 - progress) * 80}px)` }"
     >
-      <div class="end-label">{{ t('app.endLabel') }}</div>
-      <h2 class="end-title">{{ t('app.endTitle') }}</h2>
-      <p class="end-body">{{ t('app.endBody1') }}</p>
-      <p class="end-body">{{ t('app.endBody2') }}</p>
+      <div class="end-label">Epilogue</div>
 
-      <div class="end-divider" />
-
-      <div class="research-section">
-        <h3 class="research-heading">{{ t('app.endResearchTitle') }}</h3>
-        <p class="research-text">{{ t('app.endResearchQuestion') }}</p>
-        <p class="research-text">{{ t('app.endResearchDesign') }}</p>
-        <p class="research-text research-sources">{{ t('app.endResearchSources') }}</p>
+      <div class="end-links">
+        <button class="end-link" @click="showModal = true">{{ t('app.endResearchTitle') }}</button>
+        <span class="end-separator">·</span>
+        <a class="end-link" href="https://github.com/3uyuan1ee" target="_blank" rel="noopener">@3uyuan1ee</a>
       </div>
-
-      <div class="end-divider" />
-
-      <a
-        class="end-github"
-        href="https://github.com/3uyuan1ee"
-        target="_blank"
-        rel="noopener"
-      >
-        @3uyuan1ee
-      </a>
     </div>
   </div>
+
+  <!-- Research Modal -->
+  <Teleport to="body">
+    <Transition name="modal">
+      <div v-if="showModal" class="modal-overlay" @click.self="showModal = false">
+        <div class="modal-panel">
+          <button class="modal-close" @click="showModal = false">&times;</button>
+
+          <h2 class="modal-title">{{ t('app.endResearchTitle') }}</h2>
+
+          <div class="modal-block">
+            <h3 class="modal-subtitle">Research Question</h3>
+            <p class="modal-text">{{ t('app.endResearchQuestion') }}</p>
+          </div>
+
+          <div class="modal-block">
+            <h3 class="modal-subtitle">Design Decisions</h3>
+            <p class="modal-text">{{ t('app.endResearchDesign') }}</p>
+          </div>
+
+          <div class="modal-block">
+            <h3 class="modal-subtitle">Data Sources</h3>
+            <p class="modal-text modal-sources">{{ t('app.endResearchSources') }}</p>
+          </div>
+
+          <div class="modal-footer">
+            <a class="end-github" href="https://github.com/3uyuan1ee" target="_blank" rel="noopener">@3uyuan1ee</a>
+          </div>
+        </div>
+      </div>
+    </Transition>
+  </Teleport>
 </template>
 
 <style scoped>
@@ -94,7 +110,6 @@ onUnmounted(() => {
   position: relative;
   z-index: 1;
   text-align: center;
-  max-width: 640px;
   padding: var(--space-10) var(--space-6);
   will-change: transform;
 }
@@ -105,74 +120,140 @@ onUnmounted(() => {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 600;
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-6);
 }
 
-.end-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: var(--space-8);
-  letter-spacing: 0.02em;
+.end-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
 }
 
-.end-body {
-  font-size: var(--font-size-body);
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.8;
-  font-weight: 300;
-  margin-bottom: var(--space-5);
-}
-
-.end-divider {
-  width: 40px;
-  height: 1px;
-  background: var(--color-coral);
-  margin: var(--space-8) auto;
-}
-
-/* Research section */
-.research-section {
-  text-align: left;
-  margin-bottom: var(--space-4);
-}
-
-.research-heading {
-  font-size: var(--font-size-caption);
-  color: var(--color-coral);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-weight: 600;
-  margin-bottom: var(--space-4);
-}
-
-.research-text {
+.end-link {
   font-size: var(--font-size-small);
   color: rgba(255, 255, 255, 0.5);
-  line-height: 1.7;
-  margin-bottom: var(--space-3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0;
 }
 
-.research-sources {
-  font-size: var(--font-size-caption);
-  color: rgba(255, 255, 255, 0.35);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: var(--space-3);
+.end-link:hover {
+  color: var(--color-coral);
 }
 
-/* GitHub link */
+.end-separator {
+  color: rgba(255, 255, 255, 0.2);
+}
+
 .end-github {
-  display: inline-block;
   font-size: var(--font-size-caption);
   color: var(--color-coral);
-  cursor: pointer;
   text-decoration: none;
   opacity: 0.7;
   transition: opacity 0.2s ease;
-  letter-spacing: 0.05em;
 }
 
 .end-github:hover {
   opacity: 1;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: var(--space-6);
+  backdrop-filter: blur(4px);
+}
+
+.modal-panel {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: var(--space-8) var(--space-6);
+  position: relative;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-4);
+  font-size: 1.5rem;
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--color-text-primary);
+}
+
+.modal-title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-6);
+}
+
+.modal-block {
+  margin-bottom: var(--space-5);
+}
+
+.modal-subtitle {
+  font-size: var(--font-size-caption);
+  color: var(--color-info);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2);
+}
+
+.modal-text {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.modal-sources {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-tertiary);
+}
+
+.modal-footer {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  text-align: right;
+}
+
+/* Modal transition */
+.modal-enter-active {
+  transition: opacity 0.25s ease;
+}
+
+.modal-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
 }
 </style>
