@@ -1,6 +1,8 @@
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from '@/i18n/useI18n'
 
+const { t } = useI18n()
 const sentinelRef = ref(null)
 const progress = ref(0)
 
@@ -8,7 +10,6 @@ function onScroll() {
   if (!sentinelRef.value) return
   const rect = sentinelRef.value.getBoundingClientRect()
   const vh = window.innerHeight
-  // progress 0 → 1 as sentinel top goes from bottom-of-viewport to past-top
   const raw = 1 - rect.top / vh
   progress.value = Math.max(0, Math.min(1, raw))
 }
@@ -34,26 +35,30 @@ onUnmounted(() => {
       class="end-content"
       :style="{ transform: `translateY(${(1 - progress) * 80}px)` }"
     >
-      <div class="end-label">Epilogue</div>
-      <h2 class="end-title">The Road Ahead</h2>
-      <p class="end-body">
-        电动化不是一个简单的"好与坏"的故事。
-        它关乎经济账能否算清、电池能否跌破成本线、政策能否精准发力、电网能否跟上步伐。
-      </p>
-      <p class="end-body">
-        数据给出了方向，但每个国家、每个人都在选择自己的路径。
-      </p>
+      <div class="end-label">{{ t('app.endLabel') }}</div>
+      <h2 class="end-title">{{ t('app.endTitle') }}</h2>
+      <p class="end-body">{{ t('app.endBody1') }}</p>
+      <p class="end-body">{{ t('app.endBody2') }}</p>
 
       <div class="end-divider" />
 
-      <div class="end-credits">
-        <p class="credit-line">The EV Crossroads — An Interactive Data Documentary</p>
-        <p class="credit-line">Vue 3 + ECharts + D3.js | Data as of April 2026</p>
+      <div class="research-section">
+        <h3 class="research-heading">{{ t('app.endResearchTitle') }}</h3>
+        <p class="research-text">{{ t('app.endResearchQuestion') }}</p>
+        <p class="research-text">{{ t('app.endResearchDesign') }}</p>
+        <p class="research-text research-sources">{{ t('app.endResearchSources') }}</p>
       </div>
 
-      <div class="end-scroll-top" @click="window.scrollTo({ top: 0, behavior: 'smooth' })">
-        &#8593; Back to the beginning
-      </div>
+      <div class="end-divider" />
+
+      <a
+        class="end-github"
+        href="https://github.com/3uyuan1ee"
+        target="_blank"
+        rel="noopener"
+      >
+        @3uyuan1ee
+      </a>
     </div>
   </div>
 </template>
@@ -126,27 +131,48 @@ onUnmounted(() => {
   margin: var(--space-8) auto;
 }
 
-.end-credits {
-  margin-bottom: var(--space-8);
+/* Research section */
+.research-section {
+  text-align: left;
+  margin-bottom: var(--space-4);
 }
 
-.credit-line {
+.research-heading {
   font-size: var(--font-size-caption);
-  color: rgba(255, 255, 255, 0.25);
-  margin: 4px 0;
+  color: var(--color-coral);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  margin-bottom: var(--space-4);
 }
 
-.end-scroll-top {
+.research-text {
+  font-size: var(--font-size-small);
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  margin-bottom: var(--space-3);
+}
+
+.research-sources {
+  font-size: var(--font-size-caption);
+  color: rgba(255, 255, 255, 0.35);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: var(--space-3);
+}
+
+/* GitHub link */
+.end-github {
   display: inline-block;
   font-size: var(--font-size-caption);
   color: var(--color-coral);
   cursor: pointer;
-  opacity: 0.6;
+  text-decoration: none;
+  opacity: 0.7;
   transition: opacity 0.2s ease;
-  margin-top: var(--space-4);
+  letter-spacing: 0.05em;
 }
 
-.end-scroll-top:hover {
+.end-github:hover {
   opacity: 1;
 }
 </style>
