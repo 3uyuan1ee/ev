@@ -7,6 +7,7 @@ import ThemeToggle from '@/components/common/ThemeToggle.vue'
 import LangToggle from '@/components/common/LangToggle.vue'
 import ScenarioBoard from '@/components/common/ScenarioBoard.vue'
 import HeroCover from '@/components/common/HeroCover.vue'
+import EndCover from '@/components/common/EndCover.vue'
 
 // Lazy-load act sections for code splitting
 const Act1Section = defineAsyncComponent(() => import('@/components/act1/Act1Section.vue'))
@@ -78,35 +79,12 @@ const { t } = useI18n()
     <Act4Section />
   </section>
 
+  <!-- End Cover -->
+  <EndCover />
+
   <!-- Footer -->
   <footer class="footer-section" role="contentinfo">
     <div class="section-inner">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h3 class="footer-heading">{{ t('app.footerHeading') }}</h3>
-          <p class="footer-text">
-            {{ t('app.footerText') }}
-          </p>
-        </div>
-        <div class="footer-col">
-          <h3 class="footer-heading">{{ t('app.footerDataSources') }}</h3>
-          <ul class="footer-list">
-            <li>{{ t('app.footerDataSource1') }}</li>
-            <li>{{ t('app.footerDataSource2') }}</li>
-            <li>{{ t('app.footerDataSource3') }}</li>
-            <li>{{ t('app.footerDataSource4') }}</li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3 class="footer-heading">{{ t('app.footerMethodology') }}</h3>
-          <ul class="footer-list">
-            <li>{{ t('app.footerMethod1') }}</li>
-            <li>{{ t('app.footerMethod2') }}</li>
-            <li>{{ t('app.footerMethod3') }}</li>
-            <li>{{ t('app.footerMethod4') }}</li>
-          </ul>
-        </div>
-      </div>
       <div class="footer-bottom">
         <p class="text-caption">
           {{ t('app.footerBottom') }}
@@ -132,60 +110,11 @@ const { t } = useI18n()
 }
 
 .footer-section {
-  padding: var(--space-10) 0 var(--space-6);
+  padding: var(--space-6) 0;
   border-top: 1px solid var(--color-border);
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-  margin-bottom: var(--space-6);
-}
-
-@media (min-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr;
-  }
-}
-
-.footer-heading {
-  font-size: var(--font-size-body);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-2);
-}
-
-.footer-text {
-  font-size: var(--font-size-small);
-  color: var(--color-text-secondary);
-  line-height: 1.6;
-}
-
-.footer-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-list li {
-  font-size: var(--font-size-small);
-  color: var(--color-text-secondary);
-  padding: 2px 0;
-  position: relative;
-  padding-left: 12px;
-}
-
-.footer-list li::before {
-  content: '·';
-  position: absolute;
-  left: 0;
-  color: var(--color-text-tertiary);
 }
 
 .footer-bottom {
-  padding-top: var(--space-4);
-  border-top: 1px solid var(--color-border);
   text-align: center;
 }
 </style>

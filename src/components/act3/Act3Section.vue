@@ -47,6 +47,7 @@ function closeTimeline() {
       <NarrativeSection>
         <p v-html="t('act3.narrativeP1')" />
         <p v-html="t('act3.narrativeP2')" />
+        <p v-html="t('act3.narrativeP3')" />
       </NarrativeSection>
 
       <!-- Global Ranking Heatmap with Timeline -->

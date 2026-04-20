@@ -26,6 +26,7 @@ const { t } = useI18n()
       <NarrativeSection>
         <p v-html="t('act2.narrativeP1')" />
         <p v-html="t('act2.narrativeP2')" />
+        <p v-html="t('act2.narrativeP3')" />
       </NarrativeSection>
 
       <!-- Battery Price Chart -->

@@ -44,7 +44,7 @@ const powertrainLabels = computed(() =>
   <div class="act1-section">
     <div class="section-inner">
       <!-- Insight Card -->
-      <InsightCard class="act1-insight" pdf-url="/woody-2026.pdf">
+      <InsightCard class="act1-insight">
         <template #icon><Zap :size="20" /></template>
         <template #title>{{ t('act1.insightTitle') }}</template>
         <span v-html="t('act1.insightBody')" />

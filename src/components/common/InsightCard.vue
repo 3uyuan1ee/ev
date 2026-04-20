@@ -1,13 +1,7 @@
 <script setup>
 import { useTheme } from '@/composables/useTheme'
-import { useI18n } from '@/i18n/useI18n'
 
 const { isDark } = useTheme()
-const { t } = useI18n()
-
-defineProps({
-  pdfUrl: { type: String, default: '' },
-})
 </script>
 
 <template>
@@ -22,9 +16,6 @@ defineProps({
       <p class="insight-body">
         <slot />
       </p>
-      <a v-if="pdfUrl" class="insight-expand" :href="pdfUrl" target="_blank" rel="noopener">
-        {{ t('insight.expandButton') }}
-      </a>
     </div>
   </div>
 </template>
@@ -61,21 +52,6 @@ defineProps({
   font-size: var(--font-size-small);
   color: var(--color-text-secondary);
   line-height: var(--line-height-small);
-}
-
-.insight-expand {
-  display: inline-block;
-  margin-top: var(--space-3);
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-info);
-  cursor: pointer;
-  text-decoration: none;
-  transition: color var(--duration-micro) ease-out;
-}
-
-.insight-expand:hover {
-  color: var(--color-accent);
 }
 
 @media (max-width: 479px) {

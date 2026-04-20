@@ -61,6 +61,24 @@ a:hover {
   color: var(--color-accent);
 }
 
+/* Citation links (rendered via v-html) */
+a.cite {
+  color: var(--color-info);
+  font-size: 0.85em;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color-info);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+a.cite:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  border-bottom-style: solid;
+}
+
 /* Focus */
 :focus-visible {
   outline: 3px solid var(--color-focus-ring);
