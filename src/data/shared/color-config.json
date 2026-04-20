@@ -11,6 +11,13 @@
     "Nissan": "#C3002F",
     "Mercedes": "#231F20"
   },
+  "costComponents": {
+    "purchase": "#8E8DBA",
+    "energy": "#E85A4F",
+    "maintenance": "#E98074",
+    "insurance": "#D8C3A5",
+    "tax": "#9B9590"
+  },
   "costComponentColors": {
     "bev": {
       "purchase": "rgba(142, 141, 186, 0.4)",
@@ -25,6 +32,20 @@
       "maintenance": "rgba(233, 128, 116, 0.5)",
       "insurance": "rgba(216, 195, 165, 0.6)",
       "tax": "rgba(148, 140, 130, 0.3)"
+    },
+    "hev": {
+      "purchase": "rgba(196, 176, 138, 0.4)",
+      "energy": "rgba(196, 176, 138, 0.7)",
+      "maintenance": "rgba(233, 128, 116, 0.5)",
+      "insurance": "rgba(216, 195, 165, 0.6)",
+      "tax": "rgba(196, 176, 138, 0.3)"
+    },
+    "phev": {
+      "purchase": "rgba(233, 128, 116, 0.4)",
+      "energy": "rgba(233, 128, 116, 0.7)",
+      "maintenance": "rgba(233, 128, 116, 0.5)",
+      "insurance": "rgba(216, 195, 165, 0.6)",
+      "tax": "rgba(233, 128, 116, 0.3)"
     }
   },
   "thresholdLines": {

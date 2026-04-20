@@ -1,11 +1,15 @@
 <script setup>
 import InsightCard from '@/components/common/InsightCard.vue'
 import NarrativeSection from '@/components/common/NarrativeSection.vue'
+import DataSourceBadge from '@/components/common/DataSourceBadge.vue'
 import ChartContainer from '@/components/common/ChartContainer.vue'
 import CarbonRacePanel from './CarbonRacePanel.vue'
 import GridCleanlinessChart from './GridCleanlinessChart.vue'
 import EmissionReductionChart from './EmissionReductionChart.vue'
 import { Leaf, Zap } from 'lucide-vue-next'
+import { useI18n } from '@/i18n/useI18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -14,30 +18,23 @@ import { Leaf, Zap } from 'lucide-vue-next'
       <!-- Insight -->
       <InsightCard>
         <template #icon><Leaf :size="20" /></template>
-        <template #title>电动车的"碳债"在 2-3 年内就能还清</template>
-        虽然电池制造过程产生额外碳排放（约 5-6.5 吨 CO₂），
-        但得益于更低的年度运行排放，<strong class="highlight-number">BEV 在 2-3 年内即可追平 ICEV</strong>。
-        在清洁电网地区（如挪威、法国），这一优势更为显著。
+        <template #title>{{ t('act4.insightTitle') }}</template>
+        <span v-html="t('act4.insightBody')"></span>
       </InsightCard>
 
       <!-- Narrative -->
       <NarrativeSection>
-        <p>
-          "电动车不也是用电吗？电从哪来？"这是一个关键问题。
-          全生命周期碳排放分析表明，即便在以煤炭发电为主的中国和印度，
-          电动车的碳排放仍<strong>低于同级别燃油车</strong>——只是优势幅度不同。
-        </p>
-        <p>
-          在挪威（98% 清洁电力），电动车的碳优势高达 <strong>96.6%</strong>；
-          而在印度（25% 清洁电力），这一数字降至 <strong>18.2%</strong>。
-          电网的清洁程度，直接决定了电动车的环保"投资回报率"。
-        </p>
+        <p v-html="t('act4.narrativeP1')"></p>
+        <p v-html="t('act4.narrativeP2')"></p>
       </NarrativeSection>
 
       <!-- Carbon Race -->
       <div class="chart-section">
-        <h2 class="chart-title">Carbon Race: BEV vs ICEV</h2>
-        <p class="chart-desc">Cumulative lifecycle CO₂ emissions — watch the crossover point</p>
+        <div class="chart-title-row">
+          <h2 class="chart-title">{{ t('act4.carbonRaceTitle') }}</h2>
+          <DataSourceBadge source-key="dataSource.act4" />
+        </div>
+        <p class="chart-desc">{{ t('act4.carbonRaceDesc') }}</p>
         <ChartContainer :min-height="400">
           <template #default>
             <CarbonRacePanel />
@@ -50,9 +47,9 @@ import { Leaf, Zap } from 'lucide-vue-next'
         <div class="chart-section">
           <h2 class="chart-title">
             <Zap :size="18" style="vertical-align: middle; margin-right: 4px;" />
-            Grid Cleanliness & EV Carbon Advantage
+            {{ t('act4.gridChartTitle') }}
           </h2>
-          <p class="chart-desc">EV carbon advantage by country — driven by grid CO₂ intensity</p>
+          <p class="chart-desc">{{ t('act4.gridChartDesc') }}</p>
           <ChartContainer :min-height="380">
             <template #default>
               <GridCleanlinessChart />
@@ -61,8 +58,8 @@ import { Leaf, Zap } from 'lucide-vue-next'
         </div>
 
         <div class="chart-section">
-          <h2 class="chart-title">Global Oil Displacement by EVs</h2>
-          <p class="chart-desc">Million liters of gasoline equivalent saved, by region (2010-2024)</p>
+          <h2 class="chart-title">{{ t('act4.emissionChartTitle') }}</h2>
+          <p class="chart-desc">{{ t('act4.emissionChartDesc') }}</p>
           <ChartContainer :min-height="380">
             <template #default>
               <EmissionReductionChart />
@@ -76,11 +73,17 @@ import { Leaf, Zap } from 'lucide-vue-next'
 
 <style scoped>
 .act4-section {
-  padding: var(--space-10) 0;
+  padding: var(--space-6) 0;
 }
 
 .chart-section {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+
+.chart-title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
 .chart-title {

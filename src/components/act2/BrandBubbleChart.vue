@@ -4,8 +4,10 @@ import EChartsWrapper from '@/components/charts/EChartsWrapper.vue'
 import brandCompetition from '@/data/act2/brand-competition.json'
 import colorConfig from '@/data/shared/color-config.json'
 import { useChartTheme } from '@/composables/useChartTheme'
+import { useI18n } from '@/i18n/useI18n'
 
 const { themeConfig, chartPalette } = useChartTheme()
+const { t } = useI18n()
 
 const props = defineProps({
   height: { type: String, default: '400px' },
@@ -22,8 +24,15 @@ const filteredData = computed(() => {
   )
 })
 
-const countryOptions = brandCompetition.countries.map(c => ({ value: c, label: c }))
-const vehicleTypeOptions = brandCompetition.vehicleTypes.map(v => ({ value: v, label: v }))
+const brandVehicleLabelMap = {
+  Car: 'act2.brandVehicleCar',
+  SUV: 'act2.brandVehicleSuv',
+  Truck: 'act2.brandVehicleTruck',
+  Bus: 'act2.brandVehicleBus',
+}
+
+const countryOptions = computed(() => brandCompetition.countries.map(c => ({ value: c, label: c })))
+const vehicleTypeOptions = computed(() => brandCompetition.vehicleTypes.map(v => ({ value: v, label: t(brandVehicleLabelMap[v] || v) })))
 
 const option = computed(() => {
   const textColor = themeConfig.value.textStyle.color
@@ -45,10 +54,10 @@ const option = computed(() => {
         const d = filteredData.value[params.dataIndex]
         if (!d) return ''
         return `<b>${d.brand}</b><br/>
-          Sales: ${(d.salesUnits / 1e6).toFixed(1)}M units<br/>
-          Avg Price: $${d.avgPriceUsd.toLocaleString()}<br/>
-          Battery: ${d.batteryCapacityKwh} kWh<br/>
-          Range: ${d.rangeKm} km`
+          ${t('chart.brandTooltipSales', { value: (d.salesUnits / 1e6).toFixed(1) })}<br/>
+          ${t('chart.brandTooltipAvgPrice', { value: d.avgPriceUsd.toLocaleString() })}<br/>
+          ${t('chart.brandTooltipBattery', { value: d.batteryCapacityKwh })}<br/>
+          ${t('chart.brandTooltipRange', { value: d.rangeKm })}`
       },
     },
     grid: {
@@ -59,7 +68,7 @@ const option = computed(() => {
     },
     xAxis: {
       ...themeConfig.value.xAxis,
-      name: 'Sales (units)',
+      name: t('chart.brandXAxisName'),
       nameLocation: 'middle',
       nameGap: 30,
       type: 'value',
@@ -67,7 +76,7 @@ const option = computed(() => {
     },
     yAxis: {
       ...themeConfig.value.yAxis,
-      name: 'Avg Price (USD)',
+      name: t('chart.brandYAxisName'),
       nameLocation: 'middle',
       nameGap: 50,
       type: 'value',

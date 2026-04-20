@@ -2,6 +2,9 @@
 import { computed } from 'vue'
 import { useScenarioStore } from '@/composables/useScenarioStore'
 import { X, Trash2, ChevronRight, ChevronLeft } from 'lucide-vue-next'
+import { useI18n } from '@/i18n/useI18n'
+
+const { t } = useI18n()
 
 const { state, scenarioCount, canAdd, removeScenario, clearAll, closeBoard } = useScenarioStore()
 
@@ -34,15 +37,15 @@ function formatParams(scenario) {
   <Transition name="slide">
     <aside v-if="state.isOpen" class="scenario-board">
       <div class="board-header">
-        <h3 class="board-title">Saved Scenarios</h3>
+        <h3 class="board-title">{{ t('scenario.boardTitle') }}</h3>
         <button class="close-btn" @click="closeBoard">
           <ChevronRight :size="18" />
         </button>
       </div>
 
       <div v-if="scenarioCount === 0" class="board-empty">
-        <p>No scenarios saved yet.</p>
-        <p class="text-caption">Use the "Save" button in any act to add scenarios for comparison.</p>
+        <p>{{ t('scenario.emptyMessage') }}</p>
+        <p class="text-caption">{{ t('scenario.emptyHint') }}</p>
       </div>
 
       <div v-else class="board-list">
@@ -53,14 +56,14 @@ function formatParams(scenario) {
         >
           <div class="card-header">
             <span class="card-act-badge" :class="`act-${scenario.act}`">
-              Act {{ scenario.act }}
+              {{ t('scenario.actBadge', { act: scenario.act }) }}
             </span>
             <span class="card-time">{{ formattedTime(scenario.timestamp) }}</span>
             <button class="card-remove" @click="removeScenario(scenario.id)">
               <X :size="14" />
             </button>
           </div>
-          <div class="card-label">{{ scenario.label || 'Unnamed Scenario' }}</div>
+          <div class="card-label">{{ scenario.label || t('scenario.unnamedScenario') }}</div>
           <div class="card-params">
             <span v-for="(part, i) in formatParams(scenario)" :key="i" class="param-line">
               {{ part }}
@@ -72,7 +75,7 @@ function formatParams(scenario) {
       <div v-if="scenarioCount > 0" class="board-footer">
         <button class="clear-btn" @click="clearAll">
           <Trash2 :size="14" />
-          Clear All
+          {{ t('scenario.clearAll') }}
         </button>
       </div>
     </aside>

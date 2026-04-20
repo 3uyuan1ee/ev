@@ -6,33 +6,42 @@ import SelectControl from '@/components/common/SelectControl.vue'
 import SliderControl from '@/components/common/SliderControl.vue'
 import ToggleControl from '@/components/common/ToggleControl.vue'
 import ControlPanel from '@/components/common/ControlPanel.vue'
+import { useI18n } from '@/i18n/useI18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
   controls: { type: Object, required: true },
 })
 
-const emit = defineEmits([
-  'update:vehicleType', 'update:powertrainPair', 'update:condition',
-  'update:city', 'update:annualMileage', 'update:chargingStrategy',
-  'update:ownershipYears', 'update:subsidy',
-])
+const vehicleLabelMap = {
+  subcompact_sedan: 'act1.vehicleSubcompactSedan',
+  midsize_sedan: 'act1.vehicleMidsizeSedan',
+  compact_suv: 'act1.vehicleCompactSuv',
+  midsize_suv: 'act1.vehicleMidsizeSuv',
+  pickup_truck: 'act1.vehiclePickupTruck',
+}
 
 const vehicleOptions = computed(() =>
-  tcoModelParams.vehicleTypes.map(v => ({ value: v.id, label: v.label }))
+  tcoModelParams.vehicleTypes.map(v => ({ value: v.id, label: t(vehicleLabelMap[v.id] || v.label) }))
 )
 
-const cityOptions = computed(() =>
-  tcoModelParams.cities.map(c => ({ value: c.name, label: `${c.name}, ${c.state}` }))
-)
+const conditionOptions = computed(() => [
+  { value: 'new', label: t('act1.conditionNew'), color: colorConfig.actColors.act1.primary },
+  { value: 'used_3yr', label: t('act1.conditionUsed3yr'), color: colorConfig.powertrainColors.bev },
+  { value: 'used_6yr', label: t('act1.conditionUsed6yr'), color: colorConfig.actColors.act2.primary },
+])
 
-const conditionOptions = [
-  { value: 'new', label: 'New', color: colorConfig.actColors.act1.primary },
-  { value: 'used_3yr', label: 'Used 3yr', color: colorConfig.powertrainColors.bev },
-  { value: 'used_6yr', label: 'Used 6yr', color: colorConfig.actColors.act2.primary },
-]
+const chargingLabelMap = {
+  no_public: 'act1.chargingNoPublic',
+  rare_public: 'act1.chargingRarePublic',
+  occasional: 'act1.chargingOccasional',
+  frequent_public: 'act1.chargingFrequentPublic',
+  all_public: 'act1.chargingAllPublic',
+}
 
 const chargingOptions = computed(() =>
-  tcoModelParams.chargingStrategies.map(s => ({ value: s.id, label: s.label }))
+  tcoModelParams.chargingStrategies.map(s => ({ value: s.id, label: t(chargingLabelMap[s.id] || s.label) }))
 )
 
 const powertrainOptions = [
@@ -44,75 +53,68 @@ const powertrainOptions = [
 </script>
 
 <template>
-  <ControlPanel title="TCO Parameters" :collapsible="true" :default-open="true">
+  <ControlPanel :title="t('act1.controlsTitle')" :collapsible="true" :default-open="true">
     <SelectControl
-      label="Vehicle Type"
+      :label="t('act1.vehicleTypeLabel')"
       :model-value="controls.vehicleType"
       :options="vehicleOptions"
-      @update:model-value="emit('update:vehicleType', $event)"
+      @update:model-value="controls.vehicleType = $event"
     />
 
     <ToggleControl
-      :model-value="controls.powertrainPair"
+      :model-value="controls.powertrains"
       :options="powertrainOptions"
       :multiple="true"
-      @update:model-value="emit('update:powertrainPair', $event)"
+      @update:model-value="controls.powertrains = $event"
     />
 
     <div class="control-row">
-      <span class="control-label">Condition</span>
+      <span class="control-label">{{ t('act1.conditionLabel') }}</span>
       <ToggleControl
         :model-value="[controls.condition]"
         :options="conditionOptions"
-        @update:model-value="emit('update:condition', $event[0])"
+        @update:model-value="controls.condition = $event[0]"
       />
     </div>
 
-    <SelectControl
-      label="City"
-      :model-value="controls.city"
-      :options="cityOptions"
-      @update:model-value="emit('update:city', $event)"
-    />
-
     <SliderControl
-      label="Annual Mileage"
+      :label="t('act1.annualMileageLabel')"
       :model-value="controls.annualMileage"
       :min="10000"
       :max="25000"
       :step="1000"
-      unit="km/yr"
-      :format-value="v => `${(v / 1000).toFixed(0)}k km/yr`"
-      @update:model-value="emit('update:annualMileage', $event)"
+      :unit="t('act1.annualMileageUnit')"
+      :format-value="v => t('act1.annualMileageFormat', { value: (v / 1000).toFixed(0) })"
+      @update:model-value="controls.annualMileage = $event"
     />
 
     <SelectControl
-      label="Charging Strategy"
+      :label="t('act1.chargingStrategyLabel')"
       :model-value="controls.chargingStrategy"
       :options="chargingOptions"
-      @update:model-value="emit('update:chargingStrategy', $event)"
+      @update:model-value="controls.chargingStrategy = $event"
     />
 
     <SliderControl
-      label="Ownership Period"
+      :label="t('act1.ownershipPeriodLabel')"
       :model-value="controls.ownershipYears"
       :min="1"
       :max="15"
       :step="1"
-      unit="years"
-      :format-value="v => `${v} yr${v > 1 ? 's' : ''}`"
-      @update:model-value="emit('update:ownershipYears', $event)"
+      :unit="t('act1.ownershipPeriodUnit')"
+      :format-value="v => t('act1.ownershipPeriodFormat', { value: v, plural: v > 1 ? 's' : '' })"
+      @update:model-value="controls.ownershipYears = $event"
     />
 
     <SliderControl
-      label="EV Subsidy"
+      :label="t('act1.evSubsidyLabel')"
       :model-value="controls.subsidy || 7500"
       :min="0"
       :max="10000"
       :step="500"
-      unit="USD"
-      :format-value="v => `$${v.toLocaleString()}`"
-      @update:model-value="emit('update:subsidy', $event)"
+      :unit="t('act1.evSubsidyUnit')"
+      :format-value="v => t('act1.evSubsidyFormat', { value: v.toLocaleString() })"
+      @update:model-value="controls.subsidy = $event"
     />
   </ControlPanel>
 </template>

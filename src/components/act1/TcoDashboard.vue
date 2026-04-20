@@ -1,23 +1,39 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import StackedAreaChart from '@/components/charts/StackedAreaChart.vue'
 import DonutChart from '@/components/charts/DonutChart.vue'
 import ChartContainer from '@/components/common/ChartContainer.vue'
-import { Zap, Fuel } from 'lucide-vue-next'
+import { useI18n } from '@/i18n/useI18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
-  series1: { type: Object, required: true },
-  series2: { type: Object, required: true },
+  allSeries: { type: Array, required: true },
   breakevenYear: { type: Number, default: null },
+  pt2LeadsFromStart: { type: Boolean, default: false },
   totalSavings: { type: Number, default: 0 },
   powertrainLabels: { type: Array, default: () => ['ICEV', 'BEV'] },
+  cheapestLabel: { type: String, default: '' },
+  mostExpensiveLabel: { type: String, default: '' },
+  breakevenPt1Label: { type: String, default: '' },
+  breakevenPt2Label: { type: String, default: '' },
 })
 
 const selectedYear = ref(7)
 
-// Powertrain labels for display
-const pt1Label = computed(() => props.powertrainLabels[0] || 'ICEV')
-const pt2Label = computed(() => props.powertrainLabels[1] || 'BEV')
+// Sync selectedYear with ownership period changes
+watch(() => props.allSeries[0]?.data?.yearlyData?.length, (len, oldLen) => {
+  if (!len) return
+  const maxYear = len - 1
+  // If data grew (user increased ownership years), auto-select the new max
+  if (oldLen && len > oldLen) {
+    selectedYear.value = maxYear
+  }
+  // If data shrank (user decreased ownership years), clamp to new max
+  if (selectedYear.value >= len) {
+    selectedYear.value = maxYear
+  }
+})
 
 const savingsColor = computed(() => props.totalSavings > 0 ? 'var(--color-ev)' : 'var(--color-danger)')
 </script>
@@ -27,36 +43,40 @@ const savingsColor = computed(() => props.totalSavings > 0 ? 'var(--color-ev)' :
     <!-- Summary stats -->
     <div class="tco-summary">
       <div v-if="breakevenYear !== null" class="summary-stat breakeven">
-        <span class="stat-label">Breakeven Point</span>
+        <span class="stat-label">{{ t('chart.breakevenPoint') }}</span>
         <span class="stat-value" :style="{ color: 'var(--color-accent)' }">
-          Year {{ breakevenYear.toFixed(1) }}
+          {{ t('chart.breakevenYearFormat', { year: breakevenYear.toFixed(1) }) }}
         </span>
-        <span class="stat-detail">BEV total cost catches up to ICEV</span>
+        <span class="stat-detail">{{ t('chart.breakevenDetail', { pt2Label: breakevenPt2Label, pt1Label: breakevenPt1Label }) }}</span>
+      </div>
+      <div v-else-if="pt2LeadsFromStart" class="summary-stat no-breakeven">
+        <span class="stat-label">{{ t('chart.breakevenNA') }}</span>
+        <span class="stat-value" :style="{ color: 'var(--color-success)' }">&#10003;</span>
+        <span class="stat-detail">{{ t('chart.breakevenCheaperFromStart', { label: breakevenPt1Label }) }}</span>
       </div>
       <div v-else class="summary-stat no-breakeven">
-        <span class="stat-label">Breakeven</span>
+        <span class="stat-label">{{ t('chart.breakevenNA') }}</span>
         <span class="stat-value" style="color: var(--color-text-tertiary)">N/A</span>
-        <span class="stat-detail">No crossing within ownership period</span>
+        <span class="stat-detail">{{ t('chart.breakevenNADetail') }}</span>
       </div>
 
       <div class="summary-stat savings">
-        <span class="stat-label">Total Savings</span>
+        <span class="stat-label">{{ t('chart.totalSavings') }}</span>
         <span class="stat-value" :style="{ color: savingsColor }">
           {{ totalSavings > 0 ? '+' : '' }}${{ Math.abs(Math.round(totalSavings)).toLocaleString() }}
         </span>
         <span class="stat-detail">
-          {{ totalSavings > 0 ? pt2Label : pt1Label }} saves more over the ownership period
+          {{ t('chart.savingsDetailMulti', { cheapest: cheapestLabel, mostExpensive: mostExpensiveLabel }) }}
         </span>
       </div>
     </div>
 
-    <!-- Main chart: stacked area -->
+    <!-- Main chart: stacked area with N powertrain lines -->
     <div class="tco-main-chart">
       <ChartContainer :min-height="400">
         <template #default="{ width }">
           <StackedAreaChart
-            :series1="series1"
-            :series2="series2"
+            :all-series="allSeries"
             :powertrain-labels="powertrainLabels"
             :breakeven-year="breakevenYear"
             :selected-year="selectedYear"
@@ -70,27 +90,15 @@ const savingsColor = computed(() => props.totalSavings > 0 ? 'var(--color-ev)' :
     <!-- Donut chart: cost composition -->
     <div class="tco-donut">
       <div class="donut-header">
-        <h3 class="donut-title">Cost Composition</h3>
-        <div class="donut-year-selector">
-          <button
-            v-for="y in [3, 5, 7, 10]"
-            :key="y"
-            class="year-btn"
-            :class="{ active: selectedYear === y }"
-            @click="selectedYear = y"
-          >
-            {{ y }}yr
-          </button>
-        </div>
+        <h3 class="donut-title">{{ t('chart.costComposition') }}</h3>
       </div>
-      <ChartContainer :min-height="260">
-        <template #default>
+      <ChartContainer :min-height="320">
+        <template #default="{ width }">
           <DonutChart
-            :series1="series1"
-            :series2="series2"
+            :all-series="allSeries"
             :powertrain-labels="powertrainLabels"
             :selected-year="selectedYear"
-            height="260px"
+            :height="width < 480 ? '280px' : '350px'"
           />
         </template>
       </ChartContainer>
@@ -111,6 +119,10 @@ const savingsColor = computed(() => props.totalSavings > 0 ? 'var(--color-ev)' :
   }
 
   .tco-main-chart {
+    grid-column: 1 / -1;
+  }
+
+  .tco-donut {
     grid-column: 1 / -1;
   }
 }
@@ -163,32 +175,5 @@ const savingsColor = computed(() => props.totalSavings > 0 ? 'var(--color-ev)' :
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-secondary);
-}
-
-.donut-year-selector {
-  display: flex;
-  gap: var(--space-1);
-}
-
-.year-btn {
-  padding: 2px var(--space-2);
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-caption);
-  color: var(--color-text-secondary);
-  background: transparent;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: all var(--duration-micro) ease-out;
-}
-
-.year-btn:hover {
-  background: var(--color-bg-card);
-  border-color: var(--color-border);
-}
-
-.year-btn.active {
-  background: var(--color-info);
-  color: var(--color-bg-primary);
-  border-color: transparent;
 }
 </style>

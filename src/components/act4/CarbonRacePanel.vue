@@ -4,8 +4,10 @@ import EChartsWrapper from '@/components/charts/EChartsWrapper.vue'
 import { useChartTheme } from '@/composables/useChartTheme'
 import colorConfig from '@/data/shared/color-config.json'
 import { useCarbonRace } from '@/composables/act4/useCarbonRace'
+import { useI18n } from '@/i18n/useI18n'
 
 const { themeConfig } = useChartTheme()
+const { t } = useI18n()
 
 const powertrainColors = colorConfig.powertrainColors
 const crossoverColor = '#8E8DBA'  // mauve from chartPalette[0]
@@ -41,19 +43,20 @@ const chartOption = computed(() => {
     tooltip: {
       trigger: 'axis',
       formatter(params) {
-        let html = `<strong>Year ${params[0].axisValue}</strong><br/>`
+        let html = `<strong>${t('chart.carbonTooltipYear', { year: params[0].axisValue })}</strong><br/>`
         params.forEach(p => {
           html += `${p.marker} ${p.seriesName}: <strong>${p.value.toFixed(1)}t CO₂</strong><br/>`
         })
         if (params.length >= 2) {
           const diff = params[1].value - params[0].value
-          html += `<br/>BEV ${diff <= 0 ? 'saves' : 'costs'}: <strong>${Math.abs(diff).toFixed(1)}t</strong>`
+          const action = diff <= 0 ? t('chart.carbonTooltipSaves') : t('chart.carbonTooltipCosts')
+          html += `<br/>BEV ${action}: <strong>${Math.abs(diff).toFixed(1)}t</strong>`
         }
         return html
       }
     },
     legend: {
-      data: ['ICEV Cumulative', 'BEV Cumulative'],
+      data: [t('chart.carbonLegendICEV'), t('chart.carbonLegendBEV')],
       top: 0,
       ...themeConfig.value.legend
     },
@@ -66,21 +69,21 @@ const chartOption = computed(() => {
     xAxis: {
       type: 'category',
       data: years,
-      name: 'Years of Ownership',
+      name: t('chart.carbonXAxisName'),
       axisLabel: {
-        formatter: v => v === 0 ? 'Purchase' : `Yr ${v}`
+        formatter: v => v === 0 ? t('chart.carbonXAxisPurchase') : t('chart.carbonXAxisYearFormat', { year: v })
       }
     },
     yAxis: {
       type: 'value',
-      name: 'Cumulative CO₂ (tonnes)',
+      name: t('chart.carbonYAxisName'),
       axisLabel: {
         formatter: '{value}t'
       }
     },
     series: [
       {
-        name: 'ICEV Cumulative',
+        name: t('chart.carbonLegendICEV'),
         type: 'line',
         data: icevSeries,
         smooth: false,
@@ -93,7 +96,7 @@ const chartOption = computed(() => {
         }
       },
       {
-        name: 'BEV Cumulative',
+        name: t('chart.carbonLegendBEV'),
         type: 'line',
         data: bevSeries,
         smooth: false,
@@ -108,7 +111,7 @@ const chartOption = computed(() => {
           symbol: 'none',
           lineStyle: { color: crossoverColor, type: 'dashed', width: 2 },
           label: {
-            formatter: `Crossover: Year ${co}`,
+            formatter: t('chart.carbonCrossoverMarker', { year: co }),
             position: 'insideEndTop',
             fontSize: 12,
             fontWeight: 'bold'
@@ -132,8 +135,26 @@ const chartOption = computed(() => {
   }
 })
 
-const vehicleOptions = profiles.map(p => ({ id: p.id, label: p.label }))
-const presetOptions = presets.map(p => p.label)
+const vehicleLabelMap = {
+  compact: 'act4.raceVehicleCompact',
+  midsize: 'act4.raceVehicleMidsize',
+  suv: 'act4.raceVehicleSuv',
+}
+
+const gridPresetLabelMap = {
+  'Norway (98% clean)': 'act4.gridPresetNorway',
+  'France (90% clean)': 'act4.gridPresetFrance',
+  'United Kingdom (55% clean)': 'act4.gridPresetUk',
+  'United States (40% clean)': 'act4.gridPresetUs',
+  'Germany (45% clean)': 'act4.gridPresetGermany',
+  'Japan (35% clean)': 'act4.gridPresetJapan',
+  'China (30% clean)': 'act4.gridPresetChina',
+  'India (25% clean)': 'act4.gridPresetIndia',
+  'Australia (30% clean)': 'act4.gridPresetAustralia',
+}
+
+const vehicleOptions = computed(() => profiles.map(p => ({ id: p.id, label: t(vehicleLabelMap[p.id] || p.label) })))
+const presetOptions = computed(() => presets.map(p => ({ value: p.label, label: t(gridPresetLabelMap[p.label] || p.label) })))
 </script>
 
 <template>
@@ -141,7 +162,7 @@ const presetOptions = presets.map(p => p.label)
     <!-- Controls -->
     <div class="race-controls">
       <div class="control-group">
-        <label class="control-label">Vehicle Type</label>
+        <label class="control-label">{{ t('act4.raceVehicleType') }}</label>
         <div class="btn-group">
           <button
             v-for="v in vehicleOptions"
@@ -156,9 +177,9 @@ const presetOptions = presets.map(p => p.label)
       </div>
 
       <div class="control-group">
-        <label class="control-label">Grid Cleanliness</label>
+        <label class="control-label">{{ t('act4.raceGridCleanliness') }}</label>
         <select class="preset-select" :value="selectedPreset" @change="setPreset($event.target.value)">
-          <option v-for="opt in presetOptions" :key="opt" :value="opt">{{ opt }}</option>
+          <option v-for="opt in presetOptions" :key="opt.value" :value="opt.value">{{ opt.label }}</option>
         </select>
       </div>
     </div>
@@ -166,19 +187,19 @@ const presetOptions = presets.map(p => p.label)
     <!-- Summary Stats -->
     <div class="race-stats">
       <div class="stat-card">
-        <span class="stat-label">Crossover Year</span>
+        <span class="stat-label">{{ t('act4.raceCrossoverYear') }}</span>
         <span class="stat-value stat-crossover">
-          {{ crossoverYear !== null ? `Year ${crossoverYear}` : '15+ years' }}
+          {{ crossoverYear !== null ? t('act4.raceCrossoverFormat', { year: crossoverYear }) : t('act4.raceCrossoverFallback') }}
         </span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">Grid CO₂</span>
+        <span class="stat-label">{{ t('act4.raceGridCO2') }}</span>
         <span class="stat-value">{{ gridPreset.co2PerKwh }} kg/kWh</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">Lifetime Savings ({{ MAX_YEARS }}yr)</span>
+        <span class="stat-label">{{ t('act4.raceLifetimeSavings', { years: MAX_YEARS }) }}</span>
         <span class="stat-value" :class="{ positive: lifetimeSavings > 0, negative: lifetimeSavings < 0 }">
-          {{ lifetimeSavings > 0 ? '' : '' }}{{ lifetimeSavings }}t CO₂
+          {{ lifetimeSavings }}t CO₂
         </span>
       </div>
     </div>

@@ -9,7 +9,7 @@ import {
   TitleComponent, TooltipComponent, LegendComponent,
   GridComponent, DataZoomComponent, ToolboxComponent,
   MarkLineComponent, MarkPointComponent, GeoComponent,
-  VisualMapComponent,
+  VisualMapComponent, GraphicComponent,
 } from 'echarts/components'
 import { useChartTheme } from '@/composables/useChartTheme'
 
@@ -20,7 +20,7 @@ use([
   TitleComponent, TooltipComponent, LegendComponent,
   GridComponent, DataZoomComponent, ToolboxComponent,
   MarkLineComponent, MarkPointComponent, GeoComponent,
-  VisualMapComponent,
+  VisualMapComponent, GraphicComponent,
 ])
 
 const props = defineProps({

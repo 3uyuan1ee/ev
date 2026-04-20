@@ -4,8 +4,10 @@ import EChartsWrapper from '@/components/charts/EChartsWrapper.vue'
 import { useChartTheme } from '@/composables/useChartTheme'
 import colorConfig from '@/data/shared/color-config.json'
 import gridData from '@/data/act4/grid-cleanliness-comparison.json'
+import { useI18n } from '@/i18n/useI18n'
 
 const { themeConfig } = useChartTheme()
+const { t } = useI18n()
 
 const chartPalette = colorConfig.chartPalette
 
@@ -39,10 +41,10 @@ const chartOption = computed(() => {
         const idx = params[0].dataIndex
         const c = sorted[idx]
         return `<strong>${c.country}</strong><br/>
-          EV Carbon Advantage: <strong>${c.evCarbonAdvantage}%</strong><br/>
-          Grid CO₂: ${c.gridCO2PerKwh} kg/kWh<br/>
-          Energy Use: ${c.avgEnergyConsumptionKwh} kWh/100km<br/>
-          CO₂ Reduction: ${c.co2ReductionMt} Mt/year`
+          ${t('chart.gridTooltipAdvantage')}: <strong>${c.evCarbonAdvantage}%</strong><br/>
+          ${t('chart.gridTooltipCO2')}: ${c.gridCO2PerKwh} kg/kWh<br/>
+          ${t('chart.gridTooltipEnergy')}: ${c.avgEnergyConsumptionKwh} kWh/100km<br/>
+          ${t('chart.gridTooltipReduction')}: ${c.co2ReductionMt} Mt/year`
       }
     },
     grid: {
@@ -53,7 +55,7 @@ const chartOption = computed(() => {
     },
     xAxis: {
       type: 'value',
-      name: 'EV Carbon Advantage (%)',
+      name: t('chart.gridXAxisName'),
       max: 100,
       axisLabel: { formatter: '{value}%' }
     },
@@ -83,7 +85,7 @@ const chartOption = computed(() => {
           silent: true,
           symbol: 'none',
           lineStyle: { color: markLineColor, type: 'dashed' },
-          label: { formatter: `Global Avg: ${globalAvg}%`, position: 'insideEndTop' },
+          label: { formatter: t('chart.gridGlobalAvgLabel', { value: globalAvg }), position: 'insideEndTop' },
           data: [{ xAxis: globalAvg }]
         }
       }

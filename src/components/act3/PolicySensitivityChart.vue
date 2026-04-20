@@ -3,10 +3,25 @@ import { computed } from 'vue'
 import EChartsWrapper from '@/components/charts/EChartsWrapper.vue'
 import { useChartTheme } from '@/composables/useChartTheme'
 import { usePolicySandbox } from '@/composables/act3/usePolicySandbox'
+import { useI18n } from '@/i18n/useI18n'
 import colorConfig from '@/data/shared/color-config.json'
 
 const { sensitivityData } = usePolicySandbox()
 const { themeConfig } = useChartTheme()
+const { t } = useI18n()
+
+const featureLabelMap = {
+  ev_subsidy_usd: 'act3.featureEvSubsidy',
+  charging_stations: 'act3.featureChargingStations',
+  fuel_price_usd_per_liter: 'act3.featureFuelPrice',
+  electricity_price_usd_per_kwh: 'act3.featureElectricityPrice',
+  emission_regulation_score: 'act3.featureRegulationScore',
+  gdp_per_capita: 'act3.featureGdpPerCapita'
+}
+
+function featureLabel(name) {
+  return featureLabelMap[name] ? t(featureLabelMap[name]) : name
+}
 
 const positiveColor = colorConfig.chartPalette[0]  // #8E8DBA (Mauve = positive/success)
 const negativeColor = colorConfig.powertrainColors.icev  // #E85A4F (Crimson = negative/danger)
@@ -16,7 +31,7 @@ const chartOption = computed(() => {
   const data = sensitivityData.value
   if (!data.length) return {}
 
-  const labels = data.map(d => d.label)
+  const labels = data.map(d => featureLabel(d.name))
   const deltas = data.map(d => d.delta)
   const maxAbs = Math.max(...deltas.map(Math.abs), 1)
 
@@ -28,8 +43,8 @@ const chartOption = computed(() => {
   return {
     ...themeConfig.value,
     title: {
-      text: 'Policy Sensitivity Analysis',
-      subtext: 'Impact on EV market share when each factor moves from min to max',
+      text: t('chart.sensitivityTitle'),
+      subtext: t('chart.sensitivitySubtitle'),
       left: 'center',
       ...themeConfig.value.title
     },
@@ -39,11 +54,11 @@ const chartOption = computed(() => {
       formatter(params) {
         const d = data[params[0].dataIndex]
         if (!d) return ''
-        const direction = d.delta >= 0 ? 'increases' : 'decreases'
+        const direction = d.delta >= 0 ? t('chart.sensitivityTooltipIncreases') : t('chart.sensitivityTooltipDecreases')
         return `<strong>${d.label}</strong><br/>
-          At min: ${d.atMin.toFixed(1)}%<br/>
-          At max: ${d.atMax.toFixed(1)}%<br/>
-          Impact: <strong>${direction} by ${Math.abs(d.delta).toFixed(1)}pp</strong>`
+          ${t('chart.sensitivityTooltipAtMin')} ${d.atMin.toFixed(1)}%<br/>
+          ${t('chart.sensitivityTooltipAtMax')} ${d.atMax.toFixed(1)}%<br/>
+          ${t('chart.sensitivityTooltipImpact')} <strong>${direction} ${Math.abs(d.delta).toFixed(1)}pp</strong>`
       }
     },
     grid: {
@@ -54,7 +69,7 @@ const chartOption = computed(() => {
     },
     xAxis: {
       type: 'value',
-      name: 'Impact (percentage points)',
+      name: t('chart.sensitivityXAxisName'),
       max: Math.ceil(maxAbs) + 2,
       min: -Math.ceil(maxAbs) - 2,
       axisLabel: {

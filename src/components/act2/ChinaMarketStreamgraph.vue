@@ -4,11 +4,13 @@ import * as d3 from 'd3'
 import chinaMarketStructure from '@/data/act2/china-market-structure.json'
 import colorConfig from '@/data/shared/color-config.json'
 import { useChartTheme } from '@/composables/useChartTheme'
+import { useI18n } from '@/i18n/useI18n'
 
 const { themeConfig, chartPalette } = useChartTheme()
+const { t } = useI18n()
 
 const props = defineProps({
-  height: { type: String, default: '350px' },
+  height: { type: String, default: '420px' },
 })
 
 const svgRef = ref(null)
@@ -33,8 +35,8 @@ function renderStreamgraph() {
   if (!container) return
 
   const width = container.clientWidth
-  const height = 350
-  const margin = { top: 20, right: 20, bottom: 40, left: 50 }
+  const height = 420
+  const margin = { top: 20, right: 20, bottom: 60, left: 50 }
 
   d3.select(container).selectAll('*').remove()
 
@@ -114,7 +116,7 @@ function renderStreamgraph() {
 
   // Legend
   const legend = svg.append('g')
-    .attr('transform', `translate(${margin.left}, ${height - 8})`)
+    .attr('transform', `translate(${margin.left}, ${height - 12})`)
     .selectAll('g')
     .data(classes)
     .join('g')
@@ -145,7 +147,7 @@ onMounted(() => {
   <div>
     <div ref="svgRef" :style="{ height }" class="streamgraph-container" />
     <div v-if="selectedClass" class="model-panel">
-      <h4 class="model-title">{{ selectedClass }} Class Models</h4>
+      <h4 class="model-title">{{ t('act2.streamgraphModelTitle', { class: selectedClass }) }}</h4>
       <div class="model-list">
         <div v-for="model in representativeModels" :key="model.name" class="model-item">
           <span class="model-name">{{ model.name }}</span>
@@ -159,7 +161,7 @@ onMounted(() => {
 <style scoped>
 .streamgraph-container {
   width: 100%;
-  min-height: 300px;
+  min-height: 420px;
   background: var(--color-bg-chart);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);

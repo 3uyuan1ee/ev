@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import EChartsWrapper from '@/components/charts/EChartsWrapper.vue'
 import { useChartTheme } from '@/composables/useChartTheme'
+import { useI18n } from '@/i18n/useI18n'
 import colorConfig from '@/data/shared/color-config.json'
 
 const props = defineProps({
@@ -11,6 +12,7 @@ const props = defineProps({
 const emit = defineEmits(['close'])
 
 const { themeConfig } = useChartTheme()
+const { t } = useI18n()
 
 const chartOption = computed(() => {
   if (!props.timeline) return {}
@@ -34,7 +36,7 @@ const chartOption = computed(() => {
       axisPointer: { type: 'cross' }
     },
     legend: {
-      data: ['Market Share %', 'Subsidy (USD)', 'Regulation Score'],
+      data: [t('chart.timelineLegendMarketShare'), t('chart.timelineLegendSubsidy'), t('chart.timelineLegendRegulation')],
       top: 0,
       ...themeConfig.value.legend
     },
@@ -52,20 +54,20 @@ const chartOption = computed(() => {
     yAxis: [
       {
         type: 'value',
-        name: 'Market Share %',
+        name: t('chart.timelineYAxisMarketShare'),
         position: 'left',
         axisLabel: { formatter: '{value}%' }
       },
       {
         type: 'value',
-        name: 'Regulation Score',
+        name: t('chart.timelineYAxisRegulation'),
         position: 'right',
         max: 100
       }
     ],
     series: [
       {
-        name: 'Market Share %',
+        name: t('chart.timelineLegendMarketShare'),
         type: 'bar',
         data: shares,
         itemStyle: {
@@ -75,7 +77,7 @@ const chartOption = computed(() => {
         barMaxWidth: 20
       },
       {
-        name: 'Subsidy (USD)',
+        name: t('chart.timelineLegendSubsidy'),
         type: 'line',
         data: subsidies,
         yAxisIndex: 0,
@@ -88,7 +90,7 @@ const chartOption = computed(() => {
         }
       },
       {
-        name: 'Regulation Score',
+        name: t('chart.timelineLegendRegulation'),
         type: 'line',
         data: regulation,
         yAxisIndex: 1,

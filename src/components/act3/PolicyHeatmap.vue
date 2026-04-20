@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import EChartsWrapper from '@/components/charts/EChartsWrapper.vue'
 import { useChartTheme } from '@/composables/useChartTheme'
+import { useI18n } from '@/i18n/useI18n'
 import colorConfig from '@/data/shared/color-config.json'
 
 const props = defineProps({
@@ -12,6 +13,7 @@ const props = defineProps({
 const emit = defineEmits(['select-country'])
 
 const { themeConfig } = useChartTheme()
+const { t } = useI18n()
 
 const regionColors = colorConfig.regionColors
 
@@ -27,8 +29,8 @@ const chartOption = computed(() => {
   return {
     ...themeConfig.value,
     title: {
-      text: `EV Market Share by Country`,
-      subtext: `Hover to see details, click to drill down`,
+      text: t('chart.heatmapTitle'),
+      subtext: t('chart.heatmapSubtitle'),
       left: 'center',
       ...themeConfig.value.title
     },
@@ -40,11 +42,11 @@ const chartOption = computed(() => {
         const item = data[d.dataIndex]
         if (!item) return ''
         return `<strong>${item.country}</strong><br/>
-          Market Share: <strong>${item.evMarketShare.toFixed(2)}%</strong><br/>
-          EV Sales: ${item.evSales?.toLocaleString() || 'N/A'}<br/>
-          Charging Stations: ${item.chargingStations?.toLocaleString() || 'N/A'}<br/>
-          Subsidy: $${item.evSubsidyUsd?.toLocaleString() || 0}<br/>
-          Regulation Score: ${item.emissionRegulationScore?.toFixed(1) || 'N/A'}`
+          ${t('chart.heatmapTooltipMarketShare')} <strong>${item.evMarketShare.toFixed(2)}%</strong><br/>
+          ${t('chart.heatmapTooltipEvSales')} ${item.evSales?.toLocaleString() || 'N/A'}<br/>
+          ${t('chart.heatmapTooltipChargingStations')} ${item.chargingStations?.toLocaleString() || 'N/A'}<br/>
+          ${t('chart.heatmapTooltipSubsidy')} $${item.evSubsidyUsd?.toLocaleString() || 0}<br/>
+          ${t('chart.heatmapTooltipRegulationScore')} ${item.emissionRegulationScore?.toFixed(1) || 'N/A'}`
       }
     },
     grid: {
@@ -55,7 +57,7 @@ const chartOption = computed(() => {
     },
     xAxis: {
       type: 'value',
-      name: 'Market Share (%)',
+      name: t('chart.heatmapXAxisName'),
       max: Math.ceil(maxVal / 5) * 5 + 5,
       axisLabel: {
         formatter: '{value}%'

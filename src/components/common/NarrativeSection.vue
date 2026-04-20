@@ -32,8 +32,7 @@ const { target, isVisible } = createAnimation()
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-4);
-  max-width: 680px;
+  margin-bottom: var(--space-3);
 }
 
 .narrative-section :deep(p:last-child) {

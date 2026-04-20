@@ -1,6 +1,9 @@
 <script setup>
 import { computed } from 'vue'
 import { DollarSign, Zap, Scale, Leaf } from 'lucide-vue-next'
+import { useI18n } from '@/i18n/useI18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
   activeAct: {
@@ -11,12 +14,12 @@ const props = defineProps({
 
 const emit = defineEmits(['navigate'])
 
-const acts = [
-  { id: 1, label: '成本', icon: DollarSign, color: 'act-1' },
-  { id: 2, label: '产业', icon: Zap, color: 'act-2' },
-  { id: 3, label: '政策', icon: Scale, color: 'act-3' },
-  { id: 4, label: '环保', icon: Leaf, color: 'act-4' },
-]
+const acts = computed(() => [
+  { id: 1, label: t('progress.act1Label'), icon: DollarSign, color: 'act-1' },
+  { id: 2, label: t('progress.act2Label'), icon: Zap, color: 'act-2' },
+  { id: 3, label: t('progress.act3Label'), icon: Scale, color: 'act-3' },
+  { id: 4, label: t('progress.act4Label'), icon: Leaf, color: 'act-4' },
+])
 
 const progressPercent = computed(() => {
   return ((props.activeAct - 1) / 3) * 100
@@ -35,7 +38,7 @@ const progressPercent = computed(() => {
           { active: activeAct === act.id },
           { visited: activeAct > act.id },
         ]"
-        :aria-label="`Navigate to Act ${act.id}: ${act.label}`"
+        :aria-label="t('progress.ariaNavigateAct', { id: act.id, label: act.label })"
         @click="emit('navigate', act.id)"
       >
         <component :is="act.icon" :size="16" class="act-icon" />
@@ -98,24 +101,25 @@ const progressPercent = computed(() => {
 }
 
 .act-btn.active {
-  color: var(--color-bg-primary);
+  color: #FFFFFF;
   border-color: transparent;
 }
 
 .act-btn.active.act-1 {
-  background: var(--gradient-act1);
+  background: var(--color-act1);
 }
 
 .act-btn.active.act-2 {
-  background: var(--gradient-act2);
+  background: var(--color-act2);
 }
 
 .act-btn.active.act-3 {
-  background: var(--gradient-act3);
+  background: var(--color-act3);
+  color: var(--color-text-primary);
 }
 
 .act-btn.active.act-4 {
-  background: var(--gradient-act4);
+  background: var(--color-act4);
 }
 
 .act-btn.visited {

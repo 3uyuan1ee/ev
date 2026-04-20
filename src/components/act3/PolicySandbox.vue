@@ -1,9 +1,25 @@
 <script setup>
 import { computed, toRefs } from 'vue'
 import { usePolicySandbox } from '@/composables/act3/usePolicySandbox'
+import { useI18n } from '@/i18n/useI18n'
 import SliderControl from '@/components/common/SliderControl.vue'
 
 const { sliderValues, predictedShare, defaultShare, featureImportance, model, resetToDefaults } = usePolicySandbox()
+const { t } = useI18n()
+
+// Map data-file feature names to i18n keys
+const featureLabelMap = {
+  ev_subsidy_usd: 'act3.featureEvSubsidy',
+  charging_stations: 'act3.featureChargingStations',
+  fuel_price_usd_per_liter: 'act3.featureFuelPrice',
+  electricity_price_usd_per_kwh: 'act3.featureElectricityPrice',
+  emission_regulation_score: 'act3.featureRegulationScore',
+  gdp_per_capita: 'act3.featureGdpPerCapita'
+}
+
+function featureLabel(name) {
+  return featureLabelMap[name] ? t(featureLabelMap[name]) : name
+}
 
 const shareDiff = computed(() => {
   const diff = predictedShare.value - defaultShare.value
@@ -30,7 +46,7 @@ function formatValue(name, val) {
 const sliderConfigs = computed(() => {
   return model.features.map(f => ({
     name: f.name,
-    label: f.label,
+    label: featureLabel(f.name),
     min: f.range.min,
     max: f.range.max,
     step: f.range.step,
@@ -48,33 +64,33 @@ const topFeatures = computed(() => featureImportance.value.slice(0, 3))
     <!-- Predicted Share Display -->
     <div class="prediction-display">
       <div class="prediction-main">
-        <span class="prediction-label">Predicted EV Market Share</span>
+        <span class="prediction-label">{{ t('act3.sandboxPredictedLabel') }}</span>
         <div class="prediction-value">
           <span class="prediction-number">{{ sharePercent }}%</span>
           <span
             class="prediction-diff"
             :class="{ positive: shareDiff >= 0, negative: shareDiff < 0 }"
           >
-            {{ shareDiff >= 0 ? '+' : '' }}{{ shareDiff.toFixed(1) }}pp vs default
+            {{ t('act3.sandboxDiffFormat', { sign: shareDiff >= 0 ? '+' : '', diff: shareDiff.toFixed(1) }) }}
           </span>
         </div>
       </div>
       <div class="prediction-meta">
         <span class="meta-item">
-          Model R² = {{ model.r2 }} &middot; n = {{ model.n }}
+          {{ t('act3.sandboxModelMeta', { r2: model.r2, n: model.n }) }}
         </span>
       </div>
     </div>
 
     <!-- Key Drivers -->
     <div class="drivers-summary">
-      <span class="drivers-title">Top Drivers:</span>
+      <span class="drivers-title">{{ t('act3.sandboxTopDrivers') }}:</span>
       <span
         v-for="feat in topFeatures"
         :key="feat.name"
         class="driver-badge"
       >
-        {{ feat.label }}
+        {{ featureLabel(feat.name) }}
         <span class="driver-direction">{{ feat.impact >= 0 ? '↑' : '↓' }}</span>
       </span>
     </div>
@@ -96,7 +112,7 @@ const topFeatures = computed(() => featureImportance.value.slice(0, 3))
 
     <!-- Reset -->
     <button class="reset-btn" @click="resetToDefaults">
-      Reset to Defaults
+      {{ t('act3.sandboxResetButton') }}
     </button>
   </div>
 </template>

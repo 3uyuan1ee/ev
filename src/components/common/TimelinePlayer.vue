@@ -1,6 +1,9 @@
 <script setup>
 import { computed } from 'vue'
 import { Play, Pause, SkipBack, SkipForward } from 'lucide-vue-next'
+import { useI18n } from '@/i18n/useI18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
   modelValue: { type: Number, required: true },
@@ -55,14 +58,14 @@ function cycleSpeed() {
     </div>
 
     <div class="timeline-controls">
-      <button class="timeline-btn" @click="goToStart" title="Go to start">
+      <button class="timeline-btn" @click="goToStart" :title="t('timeline.goToStart')">
         <SkipBack :size="16" />
       </button>
-      <button class="timeline-btn timeline-btn-play" @click="togglePlay" :title="isPlaying ? 'Pause' : 'Play'">
+      <button class="timeline-btn timeline-btn-play" @click="togglePlay" :title="isPlaying ? t('timeline.pause') : t('timeline.play')">
         <Pause v-if="isPlaying" :size="18" />
         <Play v-else :size="18" />
       </button>
-      <button class="timeline-btn" @click="goToEnd" title="Go to end">
+      <button class="timeline-btn" @click="goToEnd" :title="t('timeline.goToEnd')">
         <SkipForward :size="16" />
       </button>
 
@@ -79,7 +82,7 @@ function cycleSpeed() {
         <div class="timeline-progress" :style="{ width: progress + '%' }"></div>
       </div>
 
-      <button class="timeline-btn timeline-speed" @click="cycleSpeed" title="Playback speed">
+      <button class="timeline-btn timeline-speed" @click="cycleSpeed" :title="t('timeline.playbackSpeed')">
         {{ speed }}x
       </button>
     </div>

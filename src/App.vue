@@ -1,9 +1,12 @@
 <script setup>
 import { defineAsyncComponent } from 'vue'
 import { useActiveAct } from '@/composables/useActiveAct'
+import { useI18n } from '@/i18n/useI18n'
 import ProgressTracker from '@/components/common/ProgressTracker.vue'
 import ThemeToggle from '@/components/common/ThemeToggle.vue'
+import LangToggle from '@/components/common/LangToggle.vue'
 import ScenarioBoard from '@/components/common/ScenarioBoard.vue'
+import HeroCover from '@/components/common/HeroCover.vue'
 
 // Lazy-load act sections for code splitting
 const Act1Section = defineAsyncComponent(() => import('@/components/act1/Act1Section.vue'))
@@ -12,6 +15,7 @@ const Act3Section = defineAsyncComponent(() => import('@/components/act3/Act3Sec
 const Act4Section = defineAsyncComponent(() => import('@/components/act4/Act4Section.vue'))
 
 const { activeAct, setRef, scrollToAct } = useActiveAct()
+const { t } = useI18n()
 </script>
 
 <template>
@@ -20,61 +24,55 @@ const { activeAct, setRef, scrollToAct } = useActiveAct()
     @navigate="scrollToAct"
   />
   <ThemeToggle class="theme-toggle-btn" />
+  <LangToggle class="lang-toggle-btn" />
   <ScenarioBoard />
 
-  <!-- Hero / Title -->
-  <header class="hero-section" role="banner">
-    <div class="section-inner">
-      <h1 class="hero-title">电动化十字路口</h1>
-      <p class="hero-subtitle">
-        电动车 vs 燃油车：成本、产业、政策、环保——四维数据驱动的交互式探索
-      </p>
-    </div>
-  </header>
+  <!-- Hero Cover -->
+  <HeroCover />
 
   <!-- Act 1 -->
-  <section :ref="setRef(0)" id="act-1" class="act-section" aria-label="Act 1: TCO Calculator">
+  <section :ref="setRef(0)" id="act-1" class="act-section" :aria-label="t('app.ariaAct1')">
     <div class="act-header">
       <div class="section-inner">
-        <span class="act-number act-1" aria-hidden="true">第一幕</span>
-        <h2>电动车真的便宜吗？</h2>
-        <p class="act-subtitle">从总拥有成本的视角，算清电动车和燃油车的经济账</p>
+        <span class="act-number act-1" aria-hidden="true">{{ t('app.act1Number') }}</span>
+        <h2>{{ t('app.act1Title') }}</h2>
+        <p class="act-subtitle">{{ t('app.act1Subtitle') }}</p>
       </div>
     </div>
     <Act1Section />
   </section>
 
   <!-- Act 2 -->
-  <section :ref="setRef(1)" id="act-2" class="act-section" aria-label="Act 2: Battery and Market">
+  <section :ref="setRef(1)" id="act-2" class="act-section" :aria-label="t('app.ariaAct2')">
     <div class="act-header">
       <div class="section-inner">
-        <span class="act-number act-2" aria-hidden="true">第二幕</span>
-        <h2>电池和研发如何重塑产业？</h2>
-        <p class="act-subtitle">电池成本下降、市场竞争格局与中国市场结构变迁</p>
+        <span class="act-number act-2" aria-hidden="true">{{ t('app.act2Number') }}</span>
+        <h2>{{ t('app.act2Title') }}</h2>
+        <p class="act-subtitle">{{ t('app.act2Subtitle') }}</p>
       </div>
     </div>
     <Act2Section />
   </section>
 
   <!-- Act 3 -->
-  <section :ref="setRef(2)" id="act-3" class="act-section" aria-label="Act 3: Policy Explorer">
+  <section :ref="setRef(2)" id="act-3" class="act-section" :aria-label="t('app.ariaAct3')">
     <div class="act-header">
       <div class="section-inner">
-        <span class="act-number act-3" aria-hidden="true">第三幕</span>
-        <h2>谁在推动，谁在阻碍？</h2>
-        <p class="act-subtitle">全球政策力度、市场渗透率与基础设施的博弈</p>
+        <span class="act-number act-3" aria-hidden="true">{{ t('app.act3Number') }}</span>
+        <h2>{{ t('app.act3Title') }}</h2>
+        <p class="act-subtitle">{{ t('app.act3Subtitle') }}</p>
       </div>
     </div>
     <Act3Section />
   </section>
 
   <!-- Act 4 -->
-  <section :ref="setRef(3)" id="act-4" class="act-section" aria-label="Act 4: Carbon Race">
+  <section :ref="setRef(3)" id="act-4" class="act-section" :aria-label="t('app.ariaAct4')">
     <div class="act-header">
       <div class="section-inner">
-        <span class="act-number act-4" aria-hidden="true">第四幕</span>
-        <h2>蓝天之下，谁更干净？</h2>
-        <p class="act-subtitle">全生命周期碳排放对比——从电池制造到上路行驶</p>
+        <span class="act-number act-4" aria-hidden="true">{{ t('app.act4Number') }}</span>
+        <h2>{{ t('app.act4Title') }}</h2>
+        <p class="act-subtitle">{{ t('app.act4Subtitle') }}</p>
       </div>
     </div>
     <Act4Section />
@@ -85,34 +83,33 @@ const { activeAct, setRef, scrollToAct } = useActiveAct()
     <div class="section-inner">
       <div class="footer-grid">
         <div class="footer-col">
-          <h3 class="footer-heading">电动化十字路口</h3>
+          <h3 class="footer-heading">{{ t('app.footerHeading') }}</h3>
           <p class="footer-text">
-            一个关于全球电动汽车 vs 燃油车的交互式数据文档项目。
-            通过四幕结构，从经济、产业、政策、环保四个维度探索电动化的真相。
+            {{ t('app.footerText') }}
           </p>
         </div>
         <div class="footer-col">
-          <h3 class="footer-heading">数据来源</h3>
+          <h3 class="footer-heading">{{ t('app.footerDataSources') }}</h3>
           <ul class="footer-list">
-            <li>IEA Global EV Data Explorer 2025</li>
-            <li>Woody et al. 2026 — Lifecycle Emissions</li>
-            <li>Washington State Dept. of Transportation</li>
-            <li>World Bank Open Data</li>
+            <li>{{ t('app.footerDataSource1') }}</li>
+            <li>{{ t('app.footerDataSource2') }}</li>
+            <li>{{ t('app.footerDataSource3') }}</li>
+            <li>{{ t('app.footerDataSource4') }}</li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3 class="footer-heading">方法论</h3>
+          <h3 class="footer-heading">{{ t('app.footerMethodology') }}</h3>
           <ul class="footer-list">
-            <li>TCO 模型：逐年累积折旧 + 城市加权能源成本</li>
-            <li>电池预测：指数衰减模型 (R²=0.96)</li>
-            <li>政策沙盘：OLS 多元线性回归 (R²=0.65, n=400)</li>
-            <li>碳排竞速：Woody 2026 全生命周期参数</li>
+            <li>{{ t('app.footerMethod1') }}</li>
+            <li>{{ t('app.footerMethod2') }}</li>
+            <li>{{ t('app.footerMethod3') }}</li>
+            <li>{{ t('app.footerMethod4') }}</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p class="text-caption">
-          Built with Vue 3 + ECharts + D3.js | Data as of April 2026
+          {{ t('app.footerBottom') }}
         </p>
       </div>
     </div>
@@ -127,26 +124,11 @@ const { activeAct, setRef, scrollToAct } = useActiveAct()
   z-index: var(--z-progress);
 }
 
-.hero-section {
-  padding-top: calc(60px + var(--space-12));
-  padding-bottom: var(--space-10);
-  text-align: center;
-}
-
-.hero-title {
-  font-size: var(--font-size-display);
-  font-weight: var(--font-weight-extrabold);
-  line-height: var(--line-height-display);
-  margin-bottom: var(--space-4);
-  color: var(--color-primary);
-}
-
-.hero-subtitle {
-  font-size: var(--font-size-h3);
-  color: var(--color-text-secondary);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: var(--line-height-h3);
+.lang-toggle-btn {
+  position: fixed;
+  top: var(--space-3);
+  right: calc(var(--space-4) + 44px);
+  z-index: var(--z-progress);
 }
 
 .footer-section {

@@ -1,11 +1,15 @@
 <script setup>
 import InsightCard from '@/components/common/InsightCard.vue'
 import NarrativeSection from '@/components/common/NarrativeSection.vue'
+import DataSourceBadge from '@/components/common/DataSourceBadge.vue'
 import ChartContainer from '@/components/common/ChartContainer.vue'
 import BatteryPriceChart from './BatteryPriceChart.vue'
 import ChinaMarketStreamgraph from './ChinaMarketStreamgraph.vue'
 import BrandBubbleChart from './BrandBubbleChart.vue'
 import { TrendingDown, Zap } from 'lucide-vue-next'
+import { useI18n } from '@/i18n/useI18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -14,27 +18,23 @@ import { TrendingDown, Zap } from 'lucide-vue-next'
       <!-- Insight -->
       <InsightCard>
         <template #icon><TrendingDown :size="20" /></template>
-        <template #title>电池成本 15 年降了 90%，但这只是开始</template>
-        从 2010 年的 $1,160/kWh 到 2025 年的约 $83/kWh，电池成本呈指数级下降。
-        预计到 2030 年将降至 <strong class="highlight-number">$26/kWh</strong>，届时电池将不再是电动车的成本瓶颈。
+        <template #title>{{ t('act2.insightTitle') }}</template>
+        <span v-html="t('act2.insightBody')" />
       </InsightCard>
 
       <!-- Narrative -->
       <NarrativeSection>
-        <p>
-          电池是电动车最昂贵的单一组件，占据整车成本的 30-40%。
-          电池成本的变化轨迹，直接决定了电动车何时能与燃油车在<strong>购置价格</strong>上实现平价。
-        </p>
-        <p>
-          中国市场的变化尤为引人注目：曾经以低价微型车（A00级）为主的市场，
-          如今已转向<strong>中高端主流车型</strong>（A级和B级），折射出电动车从"代步工具"到"品质出行"的转型。
-        </p>
+        <p v-html="t('act2.narrativeP1')" />
+        <p v-html="t('act2.narrativeP2')" />
       </NarrativeSection>
 
       <!-- Battery Price Chart -->
       <div class="chart-section">
-        <h2 class="chart-title">Battery Pack Price Trend</h2>
-        <p class="chart-desc">2010-2030: actual prices vs exponential decay prediction (R²=0.96)</p>
+        <div class="chart-title-row">
+          <h2 class="chart-title">{{ t('act2.batteryChartTitle') }}</h2>
+          <DataSourceBadge source-key="dataSource.act2" />
+        </div>
+        <p class="chart-desc">{{ t('act2.batteryChartDesc') }}</p>
         <ChartContainer :min-height="380">
           <template #default>
             <BatteryPriceChart />
@@ -45,9 +45,9 @@ import { TrendingDown, Zap } from 'lucide-vue-next'
       <!-- Two-column: Streamgraph + Bubble -->
       <div class="two-column">
         <div class="chart-section">
-          <h2 class="chart-title">China EV Market Structure</h2>
-          <p class="chart-desc">Vehicle class share evolution, 2016-2023 (click to explore)</p>
-          <ChartContainer :min-height="350">
+          <h2 class="chart-title">{{ t('act2.chinaChartTitle') }}</h2>
+          <p class="chart-desc">{{ t('act2.chinaChartDesc') }}</p>
+          <ChartContainer :min-height="420">
             <template #default>
               <ChinaMarketStreamgraph />
             </template>
@@ -55,8 +55,8 @@ import { TrendingDown, Zap } from 'lucide-vue-next'
         </div>
 
         <div class="chart-section">
-          <h2 class="chart-title">Brand Competition</h2>
-          <p class="chart-desc">10 brands across 10 countries — bubble size = battery capacity</p>
+          <h2 class="chart-title">{{ t('act2.brandChartTitle') }}</h2>
+          <p class="chart-desc">{{ t('act2.brandChartDesc') }}</p>
           <ChartContainer :min-height="350">
             <template #default>
               <BrandBubbleChart />
@@ -70,11 +70,17 @@ import { TrendingDown, Zap } from 'lucide-vue-next'
 
 <style scoped>
 .act2-section {
-  padding: var(--space-10) 0;
+  padding: var(--space-6) 0;
 }
 
 .chart-section {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+
+.chart-title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
 .chart-title {

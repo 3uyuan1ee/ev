@@ -4,24 +4,45 @@ import EChartsWrapper from '@/components/charts/EChartsWrapper.vue'
 import batteryPriceTrend from '@/data/act2/battery-price-trend.json'
 import colorConfig from '@/data/shared/color-config.json'
 import { useChartTheme } from '@/composables/useChartTheme'
+import { useI18n } from '@/i18n/useI18n'
 
 const { themeConfig, chartPalette } = useChartTheme()
+const { t } = useI18n()
 
 const option = computed(() => {
   const actualYears = batteryPriceTrend.actual.map(d => d.year)
   const actualPrices = batteryPriceTrend.actual.map(d => d.priceUsdPerKwh)
 
-  const predictedStart = batteryPriceTrend.actual[batteryPriceTrend.actual.length - 1]
-  const predictedYears = batteryPriceTrend.predicted.data.map(d => d.year)
-  const predictedPrices = batteryPriceTrend.predicted.data.map(d => d.priceUsdPerKwh)
-  const confidenceUpper = batteryPriceTrend.predicted.data.map(d => d.confidenceUpper)
-  const confidenceLower = batteryPriceTrend.predicted.data.map(d => d.confidenceLower)
+  const lastActual = batteryPriceTrend.actual[batteryPriceTrend.actual.length - 1]
+  const predictedData = batteryPriceTrend.predicted.data
 
-  // Connect actual to predicted
-  const connectedPredicted = [predictedStart.priceUsdPerKwh, ...predictedPrices]
-  const connectedYears = [...predictedYears]
-  const connectedUpper = [predictedStart.priceUsdPerKwh, ...confidenceUpper]
-  const connectedLower = [predictedStart.priceUsdPerKwh, ...confidenceLower]
+  // X-axis: merge actual + predicted years
+  const allYears = [...actualYears]
+  for (const d of predictedData) {
+    if (!allYears.includes(d.year)) allYears.push(d.year)
+  }
+
+  // Build category-indexed arrays: value at matching year position, null elsewhere
+  // Predicted line: starts from last actual year (connection point) through predicted years
+  const predictedLineData = allYears.map(yr => {
+    if (yr === lastActual.year) return lastActual.priceUsdPerKwh
+    const pd = predictedData.find(d => d.year === yr)
+    return pd ? pd.priceUsdPerKwh : null
+  })
+
+  // Upper confidence band
+  const upperBandData = allYears.map(yr => {
+    if (yr === lastActual.year) return lastActual.priceUsdPerKwh
+    const pd = predictedData.find(d => d.year === yr)
+    return pd ? pd.confidenceUpper : null
+  })
+
+  // Lower confidence band
+  const lowerBandData = allYears.map(yr => {
+    if (yr === lastActual.year) return lastActual.priceUsdPerKwh
+    const pd = predictedData.find(d => d.year === yr)
+    return pd ? pd.confidenceLower : null
+  })
 
   const primaryColor = chartPalette.value[0]
   const thresholdColor = colorConfig.thresholdLines.battery100
@@ -42,8 +63,8 @@ const option = computed(() => {
         const year = params[0]?.axisValue
         let html = `<b>${year}</b><br/>`
         params.forEach(p => {
-          if (p.value !== undefined && p.value !== null && p.seriesName !== 'Confidence Band') {
-            html += `${p.marker} ${p.seriesName}: <b>$${Math.round(p.value)}/kWh</b><br/>`
+          if (p.value !== undefined && p.value !== null && p.seriesName !== t('chart.batteryConfidenceBand')) {
+            html += `${p.marker} ${t('chart.batteryTooltipFormat', { seriesName: p.seriesName, value: Math.round(p.value) })}<br/>`
           }
         })
         return html
@@ -51,7 +72,7 @@ const option = computed(() => {
     },
     legend: {
       ...themeConfig.value.legend,
-      data: ['Actual', 'Predicted', '$100 Threshold'],
+      data: [t('chart.batteryActual'), t('chart.batteryPredicted'), t('chart.battery100Threshold')],
       bottom: 0,
     },
     grid: {
@@ -63,7 +84,7 @@ const option = computed(() => {
     xAxis: {
       ...themeConfig.value.xAxis,
       type: 'category',
-      data: [...new Set([...actualYears, ...connectedYears])],
+      data: allYears,
       boundaryGap: false,
       axisLabel: { ...themeConfig.value.xAxis.axisLabel, formatter: v => v.toString() },
     },
@@ -76,7 +97,7 @@ const option = computed(() => {
     series: [
       // Actual line
       {
-        name: 'Actual',
+        name: t('chart.batteryActual'),
         type: 'line',
         data: actualPrices,
         lineStyle: { width: 3, color: primaryColor },
@@ -93,39 +114,45 @@ const option = computed(() => {
       },
       // Predicted line (dashed)
       {
-        name: 'Predicted',
+        name: t('chart.batteryPredicted'),
         type: 'line',
-        data: connectedPredicted.map((v, i) => ({
-          value: v,
-          xAxis: i === 0 ? actualYears[actualYears.length - 1] : connectedYears[i - 1],
-        })),
+        data: predictedLineData,
         lineStyle: { width: 2, type: 'dashed', color: primaryColor, opacity: 0.7 },
         itemStyle: { color: primaryColor },
         showSymbol: false,
+        connectNulls: true,
       },
-      // Confidence band
+      // Confidence band upper
       {
-        name: 'Confidence Band',
+        name: t('chart.batteryConfidenceBand'),
         type: 'line',
-        data: connectedUpper,
+        data: upperBandData,
         lineStyle: { opacity: 0 },
-        areaStyle: { color: 'rgba(142, 141, 186, 0.1)' },
+        areaStyle: {
+          color: primaryColor,
+          opacity: 0.08
+        },
         showSymbol: false,
         z: 1,
+        connectNulls: true,
       },
-      // Lower confidence
+      // Lower confidence bound
       {
-        name: 'Lower',
+        name: '_lower',
         type: 'line',
-        data: connectedLower,
+        data: lowerBandData,
         lineStyle: { opacity: 0 },
-        areaStyle: { color: 'rgba(142, 141, 186, 0.1)' },
+        areaStyle: {
+          color: primaryColor,
+          opacity: 0.08
+        },
         showSymbol: false,
         z: 1,
+        connectNulls: true,
       },
       // $100 threshold
       {
-        name: '$100 Threshold',
+        name: t('chart.battery100Threshold'),
         type: 'line',
         markLine: {
           silent: true,
@@ -133,7 +160,7 @@ const option = computed(() => {
           data: [{
             yAxis: 100,
             lineStyle: { color: thresholdColor, type: 'dashed', width: 2 },
-            label: { formatter: '$100/kWh Parity', color: thresholdColor, fontSize: 11, fontWeight: 600 },
+            label: { formatter: t('chart.battery100Parity'), color: thresholdColor, fontSize: 11, fontWeight: 600 },
           }],
         },
         data: [],

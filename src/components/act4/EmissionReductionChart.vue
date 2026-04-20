@@ -4,8 +4,10 @@ import EChartsWrapper from '@/components/charts/EChartsWrapper.vue'
 import { useChartTheme } from '@/composables/useChartTheme'
 import colorConfig from '@/data/shared/color-config.json'
 import emissionData from '@/data/act4/global-ev-emission-reduction.json'
+import { useI18n } from '@/i18n/useI18n'
 
 const { themeConfig } = useChartTheme()
+const { t } = useI18n()
 
 const regionColors = colorConfig.regionColors
 
@@ -57,7 +59,7 @@ const chartOption = computed(() => {
   // Add global total line
   const globalTotal = emissionData.globalTotal
   series.push({
-    name: 'Global Total',
+    name: t('chart.emissionLegendGlobalTotal'),
     type: 'line',
     data: years.map(y => {
       const d = globalTotal.find(dd => dd.year === y)
@@ -84,7 +86,7 @@ const chartOption = computed(() => {
       }
     },
     legend: {
-      data: [...regions.map(r => r.region), 'Global Total'],
+      data: [...regions.map(r => r.region), t('chart.emissionLegendGlobalTotal')],
       top: 0,
       ...themeConfig.value.legend
     },
@@ -101,7 +103,7 @@ const chartOption = computed(() => {
     },
     yAxis: {
       type: 'value',
-      name: 'Oil Displaced (M lge)',
+      name: t('chart.emissionYAxisName'),
       axisLabel: {
         formatter: v => v >= 1000 ? `${(v / 1000).toFixed(0)}B` : `${v}M`
       }
