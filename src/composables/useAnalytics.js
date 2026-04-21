@@ -1,20 +1,24 @@
-import { useStorage } from '@vueuse/core'
+import { ref } from 'vue'
 
 // TODO: Replace with your actual Workers API URL after deployment
 const API_BASE = 'https://ev-api.1481059602.workers.dev/api/v1'
 
-const sessionId = useStorage('ev-session-id', '')
+const STORAGE_KEY = 'ev-session-id'
 
-function ensureSessionId() {
-  if (!sessionId.value) {
-    sessionId.value = crypto.randomUUID()
+function getSessionId() {
+  let id = localStorage.getItem(STORAGE_KEY)
+  if (!id) {
+    id = crypto.randomUUID()
+    localStorage.setItem(STORAGE_KEY, id)
   }
-  return sessionId.value
+  return id
 }
 
 export function useAnalytics() {
+  const sessionId = ref(getSessionId())
+
   async function registerSession() {
-    const sid = ensureSessionId()
+    const sid = sessionId.value
     try {
       await fetch(`${API_BASE}/analytics/session`, {
         method: 'POST',
@@ -32,7 +36,7 @@ export function useAnalytics() {
   }
 
   async function trackPageview(page) {
-    const sid = ensureSessionId()
+    const sid = sessionId.value
     try {
       await fetch(`${API_BASE}/analytics/pageview`, {
         method: 'POST',
