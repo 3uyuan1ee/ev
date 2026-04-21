@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from '@/i18n/useI18n'
+import SurveyWidget from '@/components/survey/SurveyWidget.vue'
 
 const { t } = useI18n()
 const sentinelRef = ref(null)
@@ -43,6 +44,11 @@ onUnmounted(() => {
         <button class="end-link" @click="showModal = true">{{ t('app.endResearchTitle') }}</button>
         <span class="end-separator">·</span>
         <button class="end-link" @click="showDevModal = true">{{ t('app.endDevTitle') }}</button>
+      </div>
+
+      <!-- Survey Widget -->
+      <div class="end-survey">
+        <SurveyWidget />
       </div>
     </div>
   </div>
@@ -197,6 +203,13 @@ onUnmounted(() => {
 
 .end-github:hover {
   opacity: 1;
+}
+
+.end-survey {
+  margin-top: var(--space-8);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Modal */

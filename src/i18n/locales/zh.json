@@ -401,5 +401,13 @@
     "embodiedIntro": "最新分析揭示了排放构成的结构性变化：",
     "embodiedFindings": "运行排放占比从全生命周期的 85% 降至 60%|隐含排放（制造、材料）占比几乎翻倍|在当前趋势下，碳预算面临 2037 年超标的危险|仅靠电网脱碳不够——制造效率同样关键",
     "embodiedSource": "来源：排放转型结构 2026 · Woody et al. 2026 全生命周期参数"
+  },
+  "survey": {
+    "title": "你的声音",
+    "subtitle": "完成问卷，看看其他读者的选择",
+    "submitVote": "提交",
+    "voted": "已投票",
+    "totalVotes": "{count} 人参与",
+    "thankYou": "感谢参与！"
   }
 }

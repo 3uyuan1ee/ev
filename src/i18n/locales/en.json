@@ -401,5 +401,13 @@
     "embodiedIntro": "Recent analysis reveals a structural shift in emission composition:",
     "embodiedFindings": "Operational emissions share declining from 85% to 60% of total lifecycle|Embodied emissions (manufacturing, materials) nearly doubling in share|Carbon budget at risk of exceeding targets by 2037 under current trajectories|Grid decarbonization alone insufficient — manufacturing efficiency also critical",
     "embodiedSource": "Source: Emissions Transition Structure 2026 · Woody et al. 2026 lifecycle parameters"
+  },
+  "survey": {
+    "title": "Your Voice",
+    "subtitle": "Complete the survey and see what other readers chose",
+    "submitVote": "Submit",
+    "voted": "Voted",
+    "totalVotes": "{count} votes",
+    "thankYou": "Thanks for participating!"
   }
 }

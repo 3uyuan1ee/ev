@@ -1,7 +1,8 @@
 <script setup>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent, onMounted, watch } from 'vue'
 import { useActiveAct } from '@/composables/useActiveAct'
 import { useI18n } from '@/i18n/useI18n'
+import { useAnalytics } from '@/composables/useAnalytics'
 import ProgressTracker from '@/components/common/ProgressTracker.vue'
 import ThemeToggle from '@/components/common/ThemeToggle.vue'
 import LangToggle from '@/components/common/LangToggle.vue'
@@ -17,6 +18,19 @@ const Act4Section = defineAsyncComponent(() => import('@/components/act4/Act4Sec
 
 const { activeAct, setRef, scrollToAct } = useActiveAct()
 const { t } = useI18n()
+const { registerSession, trackPageview } = useAnalytics()
+
+// Register visitor session on mount
+onMounted(() => {
+  registerSession()
+})
+
+// Track section views
+watch(activeAct, (newAct) => {
+  if (newAct >= 0) {
+    trackPageview(`act${newAct + 1}`)
+  }
+})
 </script>
 
 <template>
