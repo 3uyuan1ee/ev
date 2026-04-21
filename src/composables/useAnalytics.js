@@ -1,6 +1,5 @@
 import { ref } from 'vue'
 
-// TODO: Replace with your actual Workers API URL after deployment
 const API_BASE = 'https://ev-api.1481059602.workers.dev/api/v1'
 
 const STORAGE_KEY = 'ev-session-id'
@@ -14,6 +13,31 @@ function getSessionId() {
     localStorage.setItem(STORAGE_KEY, id)
   }
   return id
+}
+
+function detectDeviceType() {
+  const ua = navigator.userAgent
+  if (/Mobi|Android.*Mobile|iPhone|iPod/.test(ua)) return 'mobile'
+  if (/Tablet|iPad|Android(?!.*Mobile)/.test(ua)) return 'tablet'
+  return 'desktop'
+}
+
+function detectBrowser() {
+  const ua = navigator.userAgent
+  if (ua.includes('Firefox/')) return 'Firefox'
+  if (ua.includes('Edg/')) return 'Edge'
+  if (ua.includes('OPR/') || ua.includes('Opera')) return 'Opera'
+  if (ua.includes('Chrome/')) return 'Chrome'
+  if (ua.includes('Safari/')) return 'Safari'
+  return 'Other'
+}
+
+function detectTimezone() {
+  try {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone || ''
+  } catch {
+    return ''
+  }
 }
 
 export function useAnalytics() {
@@ -30,6 +54,10 @@ export function useAnalytics() {
           screenResolution: `${screen.width}x${screen.height}`,
           language: navigator.language,
           theme: document.documentElement.getAttribute('data-theme') || 'light',
+          deviceType: detectDeviceType(),
+          browser: detectBrowser(),
+          timezone: detectTimezone(),
+          referrer: document.referrer || '',
         }),
       })
     } catch {
