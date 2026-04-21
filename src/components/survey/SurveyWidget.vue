@@ -1,11 +1,10 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, reactive, onMounted, computed } from 'vue'
 import { useI18n } from '@/i18n/useI18n'
 import { useAnalytics } from '@/composables/useAnalytics'
 import SurveyQuestion from './SurveyQuestion.vue'
 import SurveyResults from './SurveyResults.vue'
 
-// TODO: Replace with your actual Workers API URL after deployment
 const API_BASE = 'https://ev-api.1481059602.workers.dev/api/v1'
 
 const { t, locale } = useI18n()
@@ -15,8 +14,8 @@ const surveys = ref([])
 const loading = ref(true)
 const error = ref('')
 const currentSurveyIndex = ref(0)
-const selectedOptions = ref({})  // { surveyKey: optionId }
-const submittedKeys = ref(new Set())
+const selectedOptions = reactive({})  // { surveyKey: optionId }
+const submittedKeys = reactive(new Set())
 
 const currentSurvey = computed(() => {
   if (!surveys.value.length) return null
@@ -28,7 +27,13 @@ const isLastSurvey = computed(() => {
 })
 
 const allSubmitted = computed(() => {
-  return surveys.value.every(s => submittedKeys.value.has(s.key))
+  return surveys.value.length > 0 && surveys.value.every(s => submittedKeys.has(s.key))
+})
+
+// Check if current survey has been submitted
+const currentSubmitted = computed(() => {
+  if (!currentSurvey.value) return false
+  return submittedKeys.has(currentSurvey.value.key)
 })
 
 onMounted(async () => {
@@ -41,7 +46,7 @@ onMounted(async () => {
     // Mark already-voted surveys as submitted
     for (const s of data.surveys) {
       if (s.hasVoted) {
-        submittedKeys.value.add(s.key)
+        submittedKeys.add(s.key)
       }
     }
   } catch (e) {
@@ -52,11 +57,11 @@ onMounted(async () => {
 })
 
 function selectOption(surveyKey, optionId) {
-  selectedOptions.value[surveyKey] = optionId
+  selectedOptions[surveyKey] = optionId
 }
 
 async function submitVote(surveyKey) {
-  const optionId = selectedOptions.value[surveyKey]
+  const optionId = selectedOptions[surveyKey]
   if (!optionId) return
 
   try {
@@ -65,27 +70,37 @@ async function submitVote(surveyKey) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         sessionId: sessionId.value,
-        optionId,
+        optionId: Number(optionId),
       }),
     })
 
     if (res.status === 409) {
-      // Already voted — just mark as submitted
-      submittedKeys.value.add(surveyKey)
+      submittedKeys.add(surveyKey)
       return
     }
 
-    if (!res.ok) throw new Error('Vote failed')
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}))
+      console.error('Vote failed:', res.status, errData)
+      return
+    }
 
-    submittedKeys.value.add(surveyKey)
+    submittedKeys.add(surveyKey)
 
     // Update vote counts locally
     const survey = surveys.value.find(s => s.key === surveyKey)
     if (survey) {
-      const opt = survey.options.find(o => o.id === optionId)
+      const opt = survey.options.find(o => o.id === Number(optionId))
       if (opt) opt.voteCount++
       survey.totalVotes++
       survey.hasVoted = true
+    }
+
+    // Auto-advance to next question after a short delay
+    if (!isLastSurvey.value) {
+      setTimeout(() => {
+        currentSurveyIndex.value++
+      }, 600)
     }
   } catch (e) {
     console.error('Vote failed:', e)
@@ -119,7 +134,7 @@ function getQuestion(survey) {
       <p>{{ error }}</p>
     </div>
 
-    <!-- All submitted: summary -->
+    <!-- All submitted: show all results -->
     <div v-else-if="allSubmitted" class="survey-complete">
       <p class="complete-text">{{ t('survey.thankYou') }}</p>
       <div class="results-grid">
@@ -133,51 +148,30 @@ function getQuestion(survey) {
       </div>
     </div>
 
-    <!-- Active survey -->
+    <!-- Active survey question -->
     <div v-else-if="currentSurvey" class="survey-active">
       <div class="survey-header">
         <span class="survey-counter">{{ currentSurveyIndex + 1 }} / {{ surveys.length }}</span>
         <span class="survey-total">{{ t('survey.totalVotes', { count: currentSurvey.totalVotes }) }}</span>
       </div>
 
-      <!-- Show results if this survey is already submitted -->
-      <template v-if="submittedKeys.has(currentSurvey.key)">
-        <SurveyResults
-          :survey="currentSurvey"
-          :get-label="getLabel"
-          :get-question="getQuestion"
-        />
-        <button v-if="!isLastSurvey" class="survey-next-btn" @click="nextSurvey">
-          {{ locale === 'zh' ? '下一题 →' : 'Next →' }}
+      <!-- Show question + options -->
+      <SurveyQuestion
+        :question="getQuestion(currentSurvey)"
+        :options="currentSurvey.options"
+        :selected-id="selectedOptions[currentSurvey.key]"
+        :get-label="getLabel"
+        @select="(id) => selectOption(currentSurvey.key, id)"
+      />
+      <div class="survey-actions">
+        <button
+          class="submit-btn"
+          :disabled="!selectedOptions[currentSurvey.key]"
+          @click="submitVote(currentSurvey.key)"
+        >
+          {{ submittedKeys.has(currentSurvey.key) ? t('survey.voted') : t('survey.submitVote') }}
         </button>
-      </template>
-
-      <!-- Show question -->
-      <template v-else>
-        <SurveyQuestion
-          :question="getQuestion(currentSurvey)"
-          :options="currentSurvey.options"
-          :selected-id="selectedOptions[currentSurvey.key]"
-          :get-label="getLabel"
-          @select="(id) => selectOption(currentSurvey.key, id)"
-        />
-        <div class="survey-actions">
-          <button
-            class="submit-btn"
-            :disabled="!selectedOptions[currentSurvey.key]"
-            @click="submitVote(currentSurvey.key)"
-          >
-            {{ t('survey.submitVote') }}
-          </button>
-          <button
-            v-if="!isLastSurvey && submittedKeys.has(currentSurvey.key)"
-            class="next-btn"
-            @click="nextSurvey"
-          >
-            {{ locale === 'zh' ? '下一题 →' : 'Next →' }}
-          </button>
-        </div>
-      </template>
+      </div>
     </div>
   </div>
 </template>
@@ -267,24 +261,6 @@ function getQuestion(survey) {
 
 .submit-btn:not(:disabled):hover {
   opacity: 0.9;
-}
-
-.survey-next-btn,
-.next-btn {
-  padding: 10px 16px;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-small);
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.survey-next-btn:hover,
-.next-btn:hover {
-  color: var(--color-coral);
-  border-color: var(--color-coral);
 }
 
 .survey-complete {
