@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-const API_BASE = 'https://ev-api.1481059602.workers.dev/api/v1'
+const API_BASE = 'https://ev-api.3uyuan1ee.me/api/v1'
 
 const STORAGE_KEY = 'ev-session-id'
 

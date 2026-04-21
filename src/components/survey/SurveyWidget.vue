@@ -5,7 +5,7 @@ import { useAnalytics } from '@/composables/useAnalytics'
 import SurveyQuestion from './SurveyQuestion.vue'
 import SurveyResults from './SurveyResults.vue'
 
-const API_BASE = 'https://ev-api.1481059602.workers.dev/api/v1'
+const API_BASE = 'https://ev-api.3uyuan1ee.me/api/v1'
 
 const { t, locale } = useI18n()
 const { sessionId } = useAnalytics()
