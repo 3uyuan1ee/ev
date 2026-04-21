@@ -207,9 +207,11 @@ onUnmounted(() => {
 
 .end-survey {
   margin-top: var(--space-8);
-  max-width: 520px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  padding: 0 var(--space-6);
 }
 
 /* Modal */

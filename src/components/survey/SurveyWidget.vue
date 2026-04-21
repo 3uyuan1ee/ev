@@ -123,7 +123,7 @@ function getQuestion(survey) {
 </script>
 
 <template>
-  <div class="survey-widget">
+  <div :class="['survey-widget', { 'survey-widget--expanded': allSubmitted }]">
     <!-- Loading state -->
     <div v-if="loading" class="survey-loading">
       <span class="loading-dot" />
@@ -184,6 +184,14 @@ function getQuestion(survey) {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-lg);
+}
+
+.survey-widget--expanded {
+  max-width: 100%;
+  padding: var(--space-6) 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
 .survey-loading {
@@ -271,12 +279,12 @@ function getQuestion(survey) {
   font-size: var(--font-size-body);
   color: var(--color-coral);
   font-weight: var(--font-weight-semibold);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-6);
 }
 
 .results-grid {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
 }
 </style>
