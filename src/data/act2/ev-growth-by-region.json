@@ -1,0 +1,1616 @@
+{
+  "regions": [
+    {
+      "region": "World",
+      "color": "#6B6560",
+      "EV_sales": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 7463
+          },
+          {
+            "year": 2011,
+            "value": 49000
+          },
+          {
+            "year": 2012,
+            "value": 118001
+          },
+          {
+            "year": 2013,
+            "value": 201023
+          },
+          {
+            "year": 2014,
+            "value": 330089
+          },
+          {
+            "year": 2015,
+            "value": 520720
+          },
+          {
+            "year": 2016,
+            "value": 782400
+          },
+          {
+            "year": 2017,
+            "value": 1203500
+          },
+          {
+            "year": 2018,
+            "value": 2054500
+          },
+          {
+            "year": 2019,
+            "value": 2087500
+          },
+          {
+            "year": 2020,
+            "value": 2977600
+          },
+          {
+            "year": 2021,
+            "value": 6616000
+          },
+          {
+            "year": 2022,
+            "value": 10215000
+          },
+          {
+            "year": 2023,
+            "value": 13709000
+          },
+          {
+            "year": 2024,
+            "value": 17505300
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 2977600
+          },
+          {
+            "year": 2021,
+            "value": 6616000
+          },
+          {
+            "year": 2022,
+            "value": 10215000
+          },
+          {
+            "year": 2023,
+            "value": 13709000
+          },
+          {
+            "year": 2024,
+            "value": 17505300
+          },
+          {
+            "year": 2030,
+            "value": 40042000
+          }
+        ]
+      },
+      "EV_stock": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 20426
+          },
+          {
+            "year": 2011,
+            "value": 67526
+          },
+          {
+            "year": 2012,
+            "value": 190026
+          },
+          {
+            "year": 2013,
+            "value": 390027
+          },
+          {
+            "year": 2014,
+            "value": 710087
+          },
+          {
+            "year": 2015,
+            "value": 1250810
+          },
+          {
+            "year": 2016,
+            "value": 2003100
+          },
+          {
+            "year": 2017,
+            "value": 3106800
+          },
+          {
+            "year": 2018,
+            "value": 5111000
+          },
+          {
+            "year": 2019,
+            "value": 7219000
+          },
+          {
+            "year": 2020,
+            "value": 10226000
+          },
+          {
+            "year": 2021,
+            "value": 16342000
+          },
+          {
+            "year": 2022,
+            "value": 26057000
+          },
+          {
+            "year": 2023,
+            "value": 40066000
+          },
+          {
+            "year": 2024,
+            "value": 58070000
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 10226000
+          },
+          {
+            "year": 2021,
+            "value": 16342000
+          },
+          {
+            "year": 2022,
+            "value": 26057000
+          },
+          {
+            "year": 2023,
+            "value": 40066000
+          },
+          {
+            "year": 2024,
+            "value": 58070000
+          },
+          {
+            "year": 2030,
+            "value": 232220000
+          }
+        ]
+      },
+      "EV_sales_share": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 0.01
+          },
+          {
+            "year": 2011,
+            "value": 0.07
+          },
+          {
+            "year": 2012,
+            "value": 0.18
+          },
+          {
+            "year": 2013,
+            "value": 0.29
+          },
+          {
+            "year": 2014,
+            "value": 0.44
+          },
+          {
+            "year": 2015,
+            "value": 0.68
+          },
+          {
+            "year": 2016,
+            "value": 0.96
+          },
+          {
+            "year": 2017,
+            "value": 1.5
+          },
+          {
+            "year": 2018,
+            "value": 2.5
+          },
+          {
+            "year": 2019,
+            "value": 2.7
+          },
+          {
+            "year": 2020,
+            "value": 4.4
+          },
+          {
+            "year": 2021,
+            "value": 9.3
+          },
+          {
+            "year": 2022,
+            "value": 15
+          },
+          {
+            "year": 2023,
+            "value": 18
+          },
+          {
+            "year": 2024,
+            "value": 22
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 4.4
+          },
+          {
+            "year": 2021,
+            "value": 9.3
+          },
+          {
+            "year": 2022,
+            "value": 15
+          },
+          {
+            "year": 2023,
+            "value": 18
+          },
+          {
+            "year": 2024,
+            "value": 22
+          },
+          {
+            "year": 2030,
+            "value": 42
+          }
+        ]
+      },
+      "cagr": 74.1
+    },
+    {
+      "region": "China",
+      "color": "#E85A4F",
+      "EV_sales": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 1440
+          },
+          {
+            "year": 2011,
+            "value": 5120
+          },
+          {
+            "year": 2012,
+            "value": 9860
+          },
+          {
+            "year": 2013,
+            "value": 15730
+          },
+          {
+            "year": 2014,
+            "value": 73000
+          },
+          {
+            "year": 2015,
+            "value": 211000
+          },
+          {
+            "year": 2016,
+            "value": 339000
+          },
+          {
+            "year": 2017,
+            "value": 580000
+          },
+          {
+            "year": 2018,
+            "value": 1090000
+          },
+          {
+            "year": 2019,
+            "value": 1060000
+          },
+          {
+            "year": 2020,
+            "value": 1140000
+          },
+          {
+            "year": 2021,
+            "value": 3250019
+          },
+          {
+            "year": 2022,
+            "value": 5900240
+          },
+          {
+            "year": 2023,
+            "value": 8100520
+          },
+          {
+            "year": 2024,
+            "value": 11300062
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 1140000
+          },
+          {
+            "year": 2021,
+            "value": 3250019
+          },
+          {
+            "year": 2022,
+            "value": 5900240
+          },
+          {
+            "year": 2023,
+            "value": 8100520
+          },
+          {
+            "year": 2024,
+            "value": 11300062
+          },
+          {
+            "year": 2030,
+            "value": 21225000
+          }
+        ]
+      },
+      "EV_stock": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 1940
+          },
+          {
+            "year": 2011,
+            "value": 6960
+          },
+          {
+            "year": 2012,
+            "value": 16920
+          },
+          {
+            "year": 2013,
+            "value": 32600
+          },
+          {
+            "year": 2014,
+            "value": 85000
+          },
+          {
+            "year": 2015,
+            "value": 297000
+          },
+          {
+            "year": 2016,
+            "value": 630000
+          },
+          {
+            "year": 2017,
+            "value": 1210000
+          },
+          {
+            "year": 2018,
+            "value": 2240000
+          },
+          {
+            "year": 2019,
+            "value": 3370000
+          },
+          {
+            "year": 2020,
+            "value": 4490000
+          },
+          {
+            "year": 2021,
+            "value": 7800019
+          },
+          {
+            "year": 2022,
+            "value": 14100240
+          },
+          {
+            "year": 2023,
+            "value": 21800760
+          },
+          {
+            "year": 2024,
+            "value": 34000820
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 4490000
+          },
+          {
+            "year": 2021,
+            "value": 7800019
+          },
+          {
+            "year": 2022,
+            "value": 14100240
+          },
+          {
+            "year": 2023,
+            "value": 21800760
+          },
+          {
+            "year": 2024,
+            "value": 34000820
+          },
+          {
+            "year": 2030,
+            "value": 138078000
+          }
+        ]
+      },
+      "EV_sales_share": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 0.01
+          },
+          {
+            "year": 2011,
+            "value": 0.03
+          },
+          {
+            "year": 2012,
+            "value": 0.07
+          },
+          {
+            "year": 2013,
+            "value": 0.1
+          },
+          {
+            "year": 2014,
+            "value": 0.4
+          },
+          {
+            "year": 2015,
+            "value": 1
+          },
+          {
+            "year": 2016,
+            "value": 1.5
+          },
+          {
+            "year": 2017,
+            "value": 2.4
+          },
+          {
+            "year": 2018,
+            "value": 4.7
+          },
+          {
+            "year": 2019,
+            "value": 5
+          },
+          {
+            "year": 2020,
+            "value": 5.7
+          },
+          {
+            "year": 2021,
+            "value": 15
+          },
+          {
+            "year": 2022,
+            "value": 29
+          },
+          {
+            "year": 2023,
+            "value": 38
+          },
+          {
+            "year": 2024,
+            "value": 48
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 5.7
+          },
+          {
+            "year": 2021,
+            "value": 15
+          },
+          {
+            "year": 2022,
+            "value": 29
+          },
+          {
+            "year": 2023,
+            "value": 38
+          },
+          {
+            "year": 2024,
+            "value": 48
+          },
+          {
+            "year": 2030,
+            "value": 82
+          }
+        ]
+      },
+      "cagr": 89.8
+    },
+    {
+      "region": "United States",
+      "color": "#E98074",
+      "EV_sales": {
+        "historical": [],
+        "projection": []
+      },
+      "EV_stock": {
+        "historical": [],
+        "projection": []
+      },
+      "EV_sales_share": {
+        "historical": [],
+        "projection": []
+      }
+    },
+    {
+      "region": "Europe",
+      "color": "#8E8DBA",
+      "EV_sales": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 1821
+          },
+          {
+            "year": 2011,
+            "value": 11410
+          },
+          {
+            "year": 2012,
+            "value": 28200
+          },
+          {
+            "year": 2013,
+            "value": 59019
+          },
+          {
+            "year": 2014,
+            "value": 96027
+          },
+          {
+            "year": 2015,
+            "value": 162200
+          },
+          {
+            "year": 2016,
+            "value": 233230
+          },
+          {
+            "year": 2017,
+            "value": 320330
+          },
+          {
+            "year": 2018,
+            "value": 390280
+          },
+          {
+            "year": 2019,
+            "value": 570600
+          },
+          {
+            "year": 2020,
+            "value": 1380890
+          },
+          {
+            "year": 2021,
+            "value": 2300920
+          },
+          {
+            "year": 2022,
+            "value": 2601300
+          },
+          {
+            "year": 2023,
+            "value": 3200870
+          },
+          {
+            "year": 2024,
+            "value": 3181100
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 1380890
+          },
+          {
+            "year": 2021,
+            "value": 2300920
+          },
+          {
+            "year": 2022,
+            "value": 2601300
+          },
+          {
+            "year": 2023,
+            "value": 3200870
+          },
+          {
+            "year": 2024,
+            "value": 3181100
+          },
+          {
+            "year": 2030,
+            "value": 9504400
+          }
+        ]
+      },
+      "EV_stock": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 9884
+          },
+          {
+            "year": 2011,
+            "value": 20531
+          },
+          {
+            "year": 2012,
+            "value": 46721
+          },
+          {
+            "year": 2013,
+            "value": 104022
+          },
+          {
+            "year": 2014,
+            "value": 200027
+          },
+          {
+            "year": 2015,
+            "value": 380240
+          },
+          {
+            "year": 2016,
+            "value": 590400
+          },
+          {
+            "year": 2017,
+            "value": 880870
+          },
+          {
+            "year": 2018,
+            "value": 1251100
+          },
+          {
+            "year": 2019,
+            "value": 1772000
+          },
+          {
+            "year": 2020,
+            "value": 3102700
+          },
+          {
+            "year": 2021,
+            "value": 5403600
+          },
+          {
+            "year": 2022,
+            "value": 7804800
+          },
+          {
+            "year": 2023,
+            "value": 11205400
+          },
+          {
+            "year": 2024,
+            "value": 14106100
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 3102700
+          },
+          {
+            "year": 2021,
+            "value": 5403600
+          },
+          {
+            "year": 2022,
+            "value": 7804800
+          },
+          {
+            "year": 2023,
+            "value": 11205400
+          },
+          {
+            "year": 2024,
+            "value": 14106100
+          },
+          {
+            "year": 2030,
+            "value": 50032000
+          }
+        ]
+      },
+      "EV_sales_share": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 0.01
+          },
+          {
+            "year": 2011,
+            "value": 0.07
+          },
+          {
+            "year": 2012,
+            "value": 0.2
+          },
+          {
+            "year": 2013,
+            "value": 0.43
+          },
+          {
+            "year": 2014,
+            "value": 0.68
+          },
+          {
+            "year": 2015,
+            "value": 1
+          },
+          {
+            "year": 2016,
+            "value": 1.4
+          },
+          {
+            "year": 2017,
+            "value": 1.8
+          },
+          {
+            "year": 2018,
+            "value": 2.3
+          },
+          {
+            "year": 2019,
+            "value": 3.3
+          },
+          {
+            "year": 2020,
+            "value": 10
+          },
+          {
+            "year": 2021,
+            "value": 17
+          },
+          {
+            "year": 2022,
+            "value": 21
+          },
+          {
+            "year": 2023,
+            "value": 22
+          },
+          {
+            "year": 2024,
+            "value": 22
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 10
+          },
+          {
+            "year": 2021,
+            "value": 17
+          },
+          {
+            "year": 2022,
+            "value": 21
+          },
+          {
+            "year": 2023,
+            "value": 22
+          },
+          {
+            "year": 2024,
+            "value": 22
+          },
+          {
+            "year": 2030,
+            "value": 58
+          }
+        ]
+      },
+      "cagr": 70.4
+    },
+    {
+      "region": "India",
+      "color": "#D8C3A5",
+      "EV_sales": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 450
+          },
+          {
+            "year": 2011,
+            "value": 1400
+          },
+          {
+            "year": 2012,
+            "value": 190
+          },
+          {
+            "year": 2013,
+            "value": 410
+          },
+          {
+            "year": 2014,
+            "value": 1000
+          },
+          {
+            "year": 2015,
+            "value": 450
+          },
+          {
+            "year": 2016,
+            "value": 730
+          },
+          {
+            "year": 2017,
+            "value": 920
+          },
+          {
+            "year": 2018,
+            "value": 920
+          },
+          {
+            "year": 2019,
+            "value": 687
+          },
+          {
+            "year": 2020,
+            "value": 3143
+          },
+          {
+            "year": 2021,
+            "value": 12051
+          },
+          {
+            "year": 2022,
+            "value": 48025
+          },
+          {
+            "year": 2023,
+            "value": 82270
+          },
+          {
+            "year": 2024,
+            "value": 92095
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 3143
+          },
+          {
+            "year": 2021,
+            "value": 12051
+          },
+          {
+            "year": 2022,
+            "value": 48025
+          },
+          {
+            "year": 2023,
+            "value": 82270
+          },
+          {
+            "year": 2024,
+            "value": 92095
+          },
+          {
+            "year": 2030,
+            "value": 720000
+          }
+        ]
+      },
+      "EV_stock": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 880
+          },
+          {
+            "year": 2011,
+            "value": 1300
+          },
+          {
+            "year": 2012,
+            "value": 2800
+          },
+          {
+            "year": 2013,
+            "value": 2900
+          },
+          {
+            "year": 2014,
+            "value": 3400
+          },
+          {
+            "year": 2015,
+            "value": 4400
+          },
+          {
+            "year": 2016,
+            "value": 4800
+          },
+          {
+            "year": 2017,
+            "value": 7000
+          },
+          {
+            "year": 2018,
+            "value": 7900
+          },
+          {
+            "year": 2019,
+            "value": 8607
+          },
+          {
+            "year": 2020,
+            "value": 12050
+          },
+          {
+            "year": 2021,
+            "value": 23101
+          },
+          {
+            "year": 2022,
+            "value": 72123
+          },
+          {
+            "year": 2023,
+            "value": 150393
+          },
+          {
+            "year": 2024,
+            "value": 240483
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 12050
+          },
+          {
+            "year": 2021,
+            "value": 23101
+          },
+          {
+            "year": 2022,
+            "value": 72123
+          },
+          {
+            "year": 2023,
+            "value": 150393
+          },
+          {
+            "year": 2024,
+            "value": 240483
+          },
+          {
+            "year": 2030,
+            "value": 2490000
+          }
+        ]
+      },
+      "EV_sales_share": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 0.02
+          },
+          {
+            "year": 2011,
+            "value": 0.06
+          },
+          {
+            "year": 2012,
+            "value": 0.01
+          },
+          {
+            "year": 2013,
+            "value": 0.02
+          },
+          {
+            "year": 2014,
+            "value": 0.04
+          },
+          {
+            "year": 2015,
+            "value": 0.02
+          },
+          {
+            "year": 2016,
+            "value": 0.03
+          },
+          {
+            "year": 2017,
+            "value": 0.03
+          },
+          {
+            "year": 2018,
+            "value": 0.03
+          },
+          {
+            "year": 2019,
+            "value": 0.02
+          },
+          {
+            "year": 2020,
+            "value": 0.12
+          },
+          {
+            "year": 2021,
+            "value": 0.41
+          },
+          {
+            "year": 2022,
+            "value": 1.4
+          },
+          {
+            "year": 2023,
+            "value": 2.1
+          },
+          {
+            "year": 2024,
+            "value": 2.1
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 0.12
+          },
+          {
+            "year": 2021,
+            "value": 0.41
+          },
+          {
+            "year": 2022,
+            "value": 1.4
+          },
+          {
+            "year": 2023,
+            "value": 2.1
+          },
+          {
+            "year": 2024,
+            "value": 2.1
+          },
+          {
+            "year": 2030,
+            "value": 14
+          }
+        ]
+      },
+      "cagr": 46.2
+    },
+    {
+      "region": "Norway",
+      "color": "#7A79A8",
+      "EV_sales": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 360
+          },
+          {
+            "year": 2011,
+            "value": 2000
+          },
+          {
+            "year": 2012,
+            "value": 4220
+          },
+          {
+            "year": 2013,
+            "value": 8240
+          },
+          {
+            "year": 2014,
+            "value": 21704
+          },
+          {
+            "year": 2015,
+            "value": 33909
+          },
+          {
+            "year": 2016,
+            "value": 45020
+          },
+          {
+            "year": 2017,
+            "value": 62030
+          },
+          {
+            "year": 2018,
+            "value": 73045
+          },
+          {
+            "year": 2019,
+            "value": 79029
+          },
+          {
+            "year": 2020,
+            "value": 106016
+          },
+          {
+            "year": 2021,
+            "value": 148039
+          },
+          {
+            "year": 2022,
+            "value": 156027
+          },
+          {
+            "year": 2023,
+            "value": 110006
+          },
+          {
+            "year": 2024,
+            "value": 113509
+          }
+        ],
+        "projection": []
+      },
+      "EV_stock": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 2702
+          },
+          {
+            "year": 2011,
+            "value": 3903
+          },
+          {
+            "year": 2012,
+            "value": 8340
+          },
+          {
+            "year": 2013,
+            "value": 15660
+          },
+          {
+            "year": 2014,
+            "value": 35304
+          },
+          {
+            "year": 2015,
+            "value": 69013
+          },
+          {
+            "year": 2016,
+            "value": 114040
+          },
+          {
+            "year": 2017,
+            "value": 180070
+          },
+          {
+            "year": 2018,
+            "value": 247120
+          },
+          {
+            "year": 2019,
+            "value": 330180
+          },
+          {
+            "year": 2020,
+            "value": 490200
+          },
+          {
+            "year": 2021,
+            "value": 630230
+          },
+          {
+            "year": 2022,
+            "value": 790260
+          },
+          {
+            "year": 2023,
+            "value": 900290
+          },
+          {
+            "year": 2024,
+            "value": 960230
+          }
+        ],
+        "projection": []
+      },
+      "EV_sales_share": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 0.28
+          },
+          {
+            "year": 2011,
+            "value": 1.4
+          },
+          {
+            "year": 2012,
+            "value": 3.1
+          },
+          {
+            "year": 2013,
+            "value": 5.8
+          },
+          {
+            "year": 2014,
+            "value": 15
+          },
+          {
+            "year": 2015,
+            "value": 22
+          },
+          {
+            "year": 2016,
+            "value": 29
+          },
+          {
+            "year": 2017,
+            "value": 39
+          },
+          {
+            "year": 2018,
+            "value": 49
+          },
+          {
+            "year": 2019,
+            "value": 56
+          },
+          {
+            "year": 2020,
+            "value": 75
+          },
+          {
+            "year": 2021,
+            "value": 86
+          },
+          {
+            "year": 2022,
+            "value": 89
+          },
+          {
+            "year": 2023,
+            "value": 90
+          },
+          {
+            "year": 2024,
+            "value": 92
+          }
+        ],
+        "projection": []
+      },
+      "cagr": 50.8
+    },
+    {
+      "region": "Rest of the world",
+      "color": "#9B9590",
+      "EV_sales": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 450
+          },
+          {
+            "year": 2011,
+            "value": 587
+          },
+          {
+            "year": 2012,
+            "value": 1295
+          },
+          {
+            "year": 2013,
+            "value": 510
+          },
+          {
+            "year": 2014,
+            "value": 1410
+          },
+          {
+            "year": 2015,
+            "value": 3124
+          },
+          {
+            "year": 2016,
+            "value": 2962
+          },
+          {
+            "year": 2017,
+            "value": 8193
+          },
+          {
+            "year": 2018,
+            "value": 12300
+          },
+          {
+            "year": 2019,
+            "value": 21200
+          },
+          {
+            "year": 2020,
+            "value": 44001
+          },
+          {
+            "year": 2021,
+            "value": 81005
+          },
+          {
+            "year": 2022,
+            "value": 115014
+          },
+          {
+            "year": 2023,
+            "value": 181020
+          },
+          {
+            "year": 2024,
+            "value": 259000
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 171500
+          },
+          {
+            "year": 2021,
+            "value": 322000
+          },
+          {
+            "year": 2022,
+            "value": 531000
+          },
+          {
+            "year": 2023,
+            "value": 884600
+          },
+          {
+            "year": 2024,
+            "value": 1203500
+          },
+          {
+            "year": 2030,
+            "value": 5811000
+          }
+        ]
+      },
+      "EV_stock": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 2900
+          },
+          {
+            "year": 2011,
+            "value": 3117
+          },
+          {
+            "year": 2012,
+            "value": 2198
+          },
+          {
+            "year": 2013,
+            "value": 2750
+          },
+          {
+            "year": 2014,
+            "value": 5170
+          },
+          {
+            "year": 2015,
+            "value": 8624
+          },
+          {
+            "year": 2016,
+            "value": 12383
+          },
+          {
+            "year": 2017,
+            "value": 22380
+          },
+          {
+            "year": 2018,
+            "value": 36012
+          },
+          {
+            "year": 2019,
+            "value": 62002.9
+          },
+          {
+            "year": 2020,
+            "value": 107003.9
+          },
+          {
+            "year": 2021,
+            "value": 199009.9
+          },
+          {
+            "year": 2022,
+            "value": 330023
+          },
+          {
+            "year": 2023,
+            "value": 510041
+          },
+          {
+            "year": 2024,
+            "value": 750041
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 794000
+          },
+          {
+            "year": 2021,
+            "value": 1116000
+          },
+          {
+            "year": 2022,
+            "value": 1587000
+          },
+          {
+            "year": 2023,
+            "value": 2482000
+          },
+          {
+            "year": 2024,
+            "value": 3645000
+          },
+          {
+            "year": 2030,
+            "value": 24687000
+          }
+        ]
+      },
+      "EV_sales_share": {
+        "historical": [
+          {
+            "year": 2010,
+            "value": 0.01
+          },
+          {
+            "year": 2011,
+            "value": 0.01
+          },
+          {
+            "year": 2012,
+            "value": 0.02
+          },
+          {
+            "year": 2013,
+            "value": 0.01
+          },
+          {
+            "year": 2014,
+            "value": 0.02
+          },
+          {
+            "year": 2015,
+            "value": 0.04
+          },
+          {
+            "year": 2016,
+            "value": 0.04
+          },
+          {
+            "year": 2017,
+            "value": 0.11
+          },
+          {
+            "year": 2018,
+            "value": 0.17
+          },
+          {
+            "year": 2019,
+            "value": 0.32
+          },
+          {
+            "year": 2020,
+            "value": 0.76
+          },
+          {
+            "year": 2021,
+            "value": 1.3
+          },
+          {
+            "year": 2022,
+            "value": 1.7
+          },
+          {
+            "year": 2023,
+            "value": 2.7
+          },
+          {
+            "year": 2024,
+            "value": 3.8
+          }
+        ],
+        "projection": [
+          {
+            "year": 2020,
+            "value": 0.87
+          },
+          {
+            "year": 2021,
+            "value": 1.6
+          },
+          {
+            "year": 2022,
+            "value": 2.7
+          },
+          {
+            "year": 2023,
+            "value": 4.1
+          },
+          {
+            "year": 2024,
+            "value": 5.6
+          },
+          {
+            "year": 2030,
+            "value": 18
+          }
+        ]
+      },
+      "cagr": 57.5
+    }
+  ],
+  "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2030
+  ],
+  "data": {},
+  "description": "Global EV Cars data from IEA Global EV Outlook 2025. Historical 2010-2024, STEPS projection to 2030.",
+  "source": "IEA Global EV Data Explorer 2025"
+}

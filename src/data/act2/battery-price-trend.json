@@ -1,136 +1,555 @@
 {
   "actual": [
     {
+      "year": 1991,
+      "priceUsdPerKwh": 9210.23
+    },
+    {
+      "year": 1992,
+      "priceUsdPerKwh": 7388.14
+    },
+    {
+      "year": 1993,
+      "priceUsdPerKwh": 5881.78
+    },
+    {
+      "year": 1994,
+      "priceUsdPerKwh": 6714.45
+    },
+    {
+      "year": 1995,
+      "priceUsdPerKwh": 6301.88
+    },
+    {
+      "year": 1996,
+      "priceUsdPerKwh": 5307.83
+    },
+    {
+      "year": 1997,
+      "priceUsdPerKwh": 4545.29
+    },
+    {
+      "year": 1998,
+      "priceUsdPerKwh": 3656.86
+    },
+    {
+      "year": 1999,
+      "priceUsdPerKwh": 2769.87
+    },
+    {
+      "year": 2000,
+      "priceUsdPerKwh": 2690.63
+    },
+    {
+      "year": 2001,
+      "priceUsdPerKwh": 1878.03
+    },
+    {
+      "year": 2002,
+      "priceUsdPerKwh": 1345.53
+    },
+    {
+      "year": 2003,
+      "priceUsdPerKwh": 1040.37
+    },
+    {
+      "year": 2004,
+      "priceUsdPerKwh": 930.9
+    },
+    {
+      "year": 2005,
+      "priceUsdPerKwh": 802.54
+    },
+    {
+      "year": 2006,
+      "priceUsdPerKwh": 687.3
+    },
+    {
+      "year": 2007,
+      "priceUsdPerKwh": 655.84
+    },
+    {
+      "year": 2008,
+      "priceUsdPerKwh": 687.66
+    },
+    {
+      "year": 2009,
+      "priceUsdPerKwh": 612.58
+    },
+    {
       "year": 2010,
-      "priceUsdPerKwh": 1160
+      "priceUsdPerKwh": 550.72
     },
     {
       "year": 2011,
-      "priceUsdPerKwh": 899
+      "priceUsdPerKwh": 524.6
     },
     {
       "year": 2012,
-      "priceUsdPerKwh": 707
+      "priceUsdPerKwh": 539.69
     },
     {
       "year": 2013,
-      "priceUsdPerKwh": 650
+      "priceUsdPerKwh": 490.89
     },
     {
       "year": 2014,
-      "priceUsdPerKwh": 577
+      "priceUsdPerKwh": 434.27
     },
     {
       "year": 2015,
-      "priceUsdPerKwh": 373
+      "priceUsdPerKwh": 331.94
     },
     {
       "year": 2016,
-      "priceUsdPerKwh": 288
+      "priceUsdPerKwh": 259
     },
     {
       "year": 2017,
-      "priceUsdPerKwh": 214
+      "priceUsdPerKwh": 187
     },
     {
       "year": 2018,
-      "priceUsdPerKwh": 176
+      "priceUsdPerKwh": 157
     },
     {
       "year": 2019,
-      "priceUsdPerKwh": 156
+      "priceUsdPerKwh": 132
     },
     {
       "year": 2020,
-      "priceUsdPerKwh": 140.4
+      "priceUsdPerKwh": 123
     },
     {
       "year": 2021,
-      "priceUsdPerKwh": 126.36000000000001
+      "priceUsdPerKwh": 119
     },
     {
       "year": 2022,
-      "priceUsdPerKwh": 113.72400000000002
+      "priceUsdPerKwh": 132
     },
     {
       "year": 2023,
-      "priceUsdPerKwh": 102.35160000000002
+      "priceUsdPerKwh": 111
     },
     {
       "year": 2024,
-      "priceUsdPerKwh": 92.11644000000003
-    },
-    {
-      "year": 2025,
-      "priceUsdPerKwh": 82.90479600000002
+      "priceUsdPerKwh": 78
     }
   ],
-  "predicted": {
-    "model": "exponential_decay",
-    "parameters": {
-      "a": 988.4922,
-      "b": 0.181901
-    },
-    "r2": 0.9643,
-    "data": [
-      {
-        "year": 2026,
-        "priceUsdPerKwh": 53.83,
-        "confidenceLower": 36.17,
-        "confidenceUpper": 80.11
-      },
-      {
-        "year": 2027,
-        "priceUsdPerKwh": 44.87,
-        "confidenceLower": 30.15,
-        "confidenceUpper": 66.79
-      },
-      {
-        "year": 2028,
-        "priceUsdPerKwh": 37.41,
-        "confidenceLower": 25.14,
-        "confidenceUpper": 55.68
-      },
-      {
-        "year": 2029,
-        "priceUsdPerKwh": 31.19,
-        "confidenceLower": 20.96,
-        "confidenceUpper": 46.42
-      },
-      {
-        "year": 2030,
-        "priceUsdPerKwh": 26,
-        "confidenceLower": 17.47,
-        "confidenceUpper": 38.7
-      }
-    ]
-  },
-  "milestones": [
+  "evStockForContext": [
     {
       "year": 2010,
-      "label": "$1,160/kWh — Battery more expensive than gold"
+      "stock": 87348
+    },
+    {
+      "year": 2011,
+      "stock": 186252
+    },
+    {
+      "year": 2012,
+      "stock": 2225623
+    },
+    {
+      "year": 2013,
+      "stock": 4539265
+    },
+    {
+      "year": 2014,
+      "stock": 7491796
     },
     {
       "year": 2015,
-      "label": "$373 — Model S era, cost halved"
+      "stock": 10859732
+    },
+    {
+      "year": 2016,
+      "stock": 15410758
+    },
+    {
+      "year": 2017,
+      "stock": 20761700
+    },
+    {
+      "year": 2018,
+      "stock": 27999450
+    },
+    {
+      "year": 2019,
+      "stock": 38293971
     },
     {
       "year": 2020,
-      "label": "~$130 — Chinese A00-class achieves price parity"
+      "stock": 49448225
+    },
+    {
+      "year": 2021,
+      "stock": 65800427
+    },
+    {
+      "year": 2022,
+      "stock": 80898940
+    },
+    {
+      "year": 2023,
+      "stock": 111425565
     },
     {
       "year": 2024,
-      "label": "~$55 — Approaching $100 cost parity threshold"
+      "stock": 140210558
+    }
+  ],
+  "models": {
+    "exponential_decay": {
+      "label": "Exponential Decay",
+      "description": "P(t) = a × exp(-b × t) — classical exponential decline",
+      "parameters": {
+        "a": 8467.8579,
+        "b": 0.142252,
+        "year0": 1991
+      },
+      "r2": 0.962554,
+      "aic": 424.6,
+      "data": [
+        {
+          "year": 2025,
+          "priceUsdPerKwh": 67.19,
+          "confidenceLower": 0,
+          "confidenceUpper": null
+        },
+        {
+          "year": 2026,
+          "priceUsdPerKwh": 58.28,
+          "confidenceLower": 0,
+          "confidenceUpper": null
+        },
+        {
+          "year": 2027,
+          "priceUsdPerKwh": 50.55,
+          "confidenceLower": 0,
+          "confidenceUpper": null
+        },
+        {
+          "year": 2028,
+          "priceUsdPerKwh": 43.85,
+          "confidenceLower": 0,
+          "confidenceUpper": null
+        },
+        {
+          "year": 2029,
+          "priceUsdPerKwh": 38.03,
+          "confidenceLower": 0,
+          "confidenceUpper": null
+        },
+        {
+          "year": 2030,
+          "priceUsdPerKwh": 32.99,
+          "confidenceLower": 0,
+          "confidenceUpper": null
+        },
+        {
+          "year": 2031,
+          "priceUsdPerKwh": 28.62,
+          "confidenceLower": 0,
+          "confidenceUpper": null
+        },
+        {
+          "year": 2032,
+          "priceUsdPerKwh": 24.82,
+          "confidenceLower": 0,
+          "confidenceUpper": null
+        },
+        {
+          "year": 2033,
+          "priceUsdPerKwh": 21.53,
+          "confidenceLower": 0,
+          "confidenceUpper": null
+        },
+        {
+          "year": 2034,
+          "priceUsdPerKwh": 18.68,
+          "confidenceLower": 0,
+          "confidenceUpper": null
+        },
+        {
+          "year": 2035,
+          "priceUsdPerKwh": 16.2,
+          "confidenceLower": 0,
+          "confidenceUpper": null
+        }
+      ]
+    },
+    "bounded_exponential": {
+      "label": "Bounded Exponential",
+      "description": "P(t) = 50 + a × exp(-b × t) — price cannot fall below material cost floor ($50/kWh)",
+      "parameters": {
+        "a": 9221.5356,
+        "b": 0.146617,
+        "floor": 50,
+        "year0": 1991
+      },
+      "r2": 0.971943,
+      "aic": 416.79,
+      "data": [
+        {
+          "year": 2025,
+          "priceUsdPerKwh": 113.07,
+          "confidenceLower": 50,
+          "confidenceUpper": 993.47
+        },
+        {
+          "year": 2026,
+          "priceUsdPerKwh": 104.47,
+          "confidenceLower": 50,
+          "confidenceUpper": 984.87
+        },
+        {
+          "year": 2027,
+          "priceUsdPerKwh": 97.04,
+          "confidenceLower": 50,
+          "confidenceUpper": 977.44
+        },
+        {
+          "year": 2028,
+          "priceUsdPerKwh": 90.63,
+          "confidenceLower": 50,
+          "confidenceUpper": 971.02
+        },
+        {
+          "year": 2029,
+          "priceUsdPerKwh": 85.09,
+          "confidenceLower": 50,
+          "confidenceUpper": 965.48
+        },
+        {
+          "year": 2030,
+          "priceUsdPerKwh": 80.3,
+          "confidenceLower": 50,
+          "confidenceUpper": 960.7
+        },
+        {
+          "year": 2031,
+          "priceUsdPerKwh": 76.17,
+          "confidenceLower": 50,
+          "confidenceUpper": 956.57
+        },
+        {
+          "year": 2032,
+          "priceUsdPerKwh": 72.6,
+          "confidenceLower": 50,
+          "confidenceUpper": 953
+        },
+        {
+          "year": 2033,
+          "priceUsdPerKwh": 69.52,
+          "confidenceLower": 50,
+          "confidenceUpper": 949.91
+        },
+        {
+          "year": 2034,
+          "priceUsdPerKwh": 66.86,
+          "confidenceLower": 50,
+          "confidenceUpper": 947.25
+        },
+        {
+          "year": 2035,
+          "priceUsdPerKwh": 64.56,
+          "confidenceLower": 50,
+          "confidenceUpper": 944.95
+        }
+      ]
+    },
+    "experience_curve": {
+      "label": "Experience Curve",
+      "description": "P(x) = a × x^b — price vs cumulative production (Wright's Law), 17.4% cost reduction per doubling",
+      "parameters": {
+        "a": 20200.0517,
+        "b": -0.275816,
+        "doublingRate": 17.4,
+        "yearStart": 2010
+      },
+      "r2": 0.43392,
+      "aic": 150.41,
+      "data": [
+        {
+          "year": 2025,
+          "priceUsdPerKwh": 107.55,
+          "confidenceLower": 1,
+          "confidenceUpper": 390.43
+        },
+        {
+          "year": 2026,
+          "priceUsdPerKwh": 101.13,
+          "confidenceLower": 1,
+          "confidenceUpper": 384.01
+        },
+        {
+          "year": 2027,
+          "priceUsdPerKwh": 95.09,
+          "confidenceLower": 1,
+          "confidenceUpper": 377.98
+        },
+        {
+          "year": 2028,
+          "priceUsdPerKwh": 89.42,
+          "confidenceLower": 1,
+          "confidenceUpper": 372.3
+        },
+        {
+          "year": 2029,
+          "priceUsdPerKwh": 84.08,
+          "confidenceLower": 1,
+          "confidenceUpper": 366.96
+        },
+        {
+          "year": 2030,
+          "priceUsdPerKwh": 79.06,
+          "confidenceLower": 1,
+          "confidenceUpper": 361.95
+        },
+        {
+          "year": 2031,
+          "priceUsdPerKwh": 74.34,
+          "confidenceLower": 1,
+          "confidenceUpper": 357.23
+        },
+        {
+          "year": 2032,
+          "priceUsdPerKwh": 69.9,
+          "confidenceLower": 1,
+          "confidenceUpper": 352.79
+        },
+        {
+          "year": 2033,
+          "priceUsdPerKwh": 65.73,
+          "confidenceLower": 1,
+          "confidenceUpper": 348.62
+        },
+        {
+          "year": 2034,
+          "priceUsdPerKwh": 61.81,
+          "confidenceLower": 1,
+          "confidenceUpper": 344.69
+        },
+        {
+          "year": 2035,
+          "priceUsdPerKwh": 58.12,
+          "confidenceLower": 1,
+          "confidenceUpper": 341
+        }
+      ]
+    }
+  },
+  "predicted": {
+    "model": "exponential_decay",
+    "parameters": {
+      "a": 8467.8579,
+      "b": 0.142252,
+      "year0": 1991
+    },
+    "r2": 0.962554,
+    "data": [
+      {
+        "year": 2025,
+        "priceUsdPerKwh": 67.19,
+        "confidenceLower": 0,
+        "confidenceUpper": null
+      },
+      {
+        "year": 2026,
+        "priceUsdPerKwh": 58.28,
+        "confidenceLower": 0,
+        "confidenceUpper": null
+      },
+      {
+        "year": 2027,
+        "priceUsdPerKwh": 50.55,
+        "confidenceLower": 0,
+        "confidenceUpper": null
+      },
+      {
+        "year": 2028,
+        "priceUsdPerKwh": 43.85,
+        "confidenceLower": 0,
+        "confidenceUpper": null
+      },
+      {
+        "year": 2029,
+        "priceUsdPerKwh": 38.03,
+        "confidenceLower": 0,
+        "confidenceUpper": null
+      },
+      {
+        "year": 2030,
+        "priceUsdPerKwh": 32.99,
+        "confidenceLower": 0,
+        "confidenceUpper": null
+      },
+      {
+        "year": 2031,
+        "priceUsdPerKwh": 28.62,
+        "confidenceLower": 0,
+        "confidenceUpper": null
+      },
+      {
+        "year": 2032,
+        "priceUsdPerKwh": 24.82,
+        "confidenceLower": 0,
+        "confidenceUpper": null
+      },
+      {
+        "year": 2033,
+        "priceUsdPerKwh": 21.53,
+        "confidenceLower": 0,
+        "confidenceUpper": null
+      },
+      {
+        "year": 2034,
+        "priceUsdPerKwh": 18.68,
+        "confidenceLower": 0,
+        "confidenceUpper": null
+      },
+      {
+        "year": 2035,
+        "priceUsdPerKwh": 16.2,
+        "confidenceLower": 0,
+        "confidenceUpper": null
+      }
+    ]
+  },
+  "anomalyYears": [
+    2022
+  ],
+  "milestones": [
+    {
+      "year": 1991,
+      "label": "$9,210/kWh — Lithium-ion era begins"
     },
     {
-      "year": 2030,
-      "label": "~$15 — Battery no longer the cost bottleneck"
+      "year": 2010,
+      "label": "$1,160/kWh — First modern EVs (Nissan Leaf)"
+    },
+    {
+      "year": 2015,
+      "label": "$373 — Tesla Model S era, cost halved"
+    },
+    {
+      "year": 2020,
+      "label": "$140 — Chinese A00-class achieves price parity"
+    },
+    {
+      "year": 2024,
+      "label": "$78 — Below $100 cost parity threshold"
     }
   ],
   "thresholds": [
     {
       "value": 100,
       "label": "Cost parity threshold ($100/kWh)"
+    },
+    {
+      "value": 50,
+      "label": "Material cost floor estimate ($50/kWh)"
     }
   ]
 }

@@ -1,0 +1,1224 @@
+                                                                         Renewable Energy 257 (2026) 124718
+
+
+                                                                      Contents lists available at ScienceDirect
+
+
+                                                                           Renewable Energy
+                                                           journal homepage: www.elsevier.com/locate/renene
+
+
+
+
+Complementary scheduling of hydro-wind-PV-storage systems: Addressing
+flexibility demand for high-penetration variable renewable
+energy integration
+Liang Qiao a , Qiaofeng Tan a,b,* , Xin Wen a,b , Zhenni Wang a,b
+a
+    College of Water Conservancy and Hydropower Engineering, Hohai University, Nanjing, 210098, China
+b
+    Cooperative Innovation Center for Water Safety and Hydro Science, Hohai University, Nanjing, 210098, China
+
+
+
+
+A R T I C L E I N F O                                       A B S T R A C T
+
+Keywords:                                                   The integrated operation of hydro-wind-photovoltaic (PV)-storage hybrid energy systems significantly addresses
+Complementary scheduling                                    the consumption challenge of variable renewable energy (VRE). However, increasing VRE penetration exacer­
+Flexibility demand and supply                               bates flexibility shortages, undermining system reliability and economic efficiency. Therefore, this study pro­
+Hydro-wind-PV-Storage
+                                                            poses a flexibility-based short-term scheduling method that balances operational reliability with revenue
+Reservoir scheduling
+                                                            optimization. Firstly, the uncertainty of VRE output is calculated using the Copula function, which helps quantify
+                                                            the demand for flexibility based on the relationship between this uncertainty and transmission capacity. Sec­
+                                                            ondly, the flexibility supply from conventional and pumped-storage hydropower stations is assessed, and a “day-
+                                                            ahead to real-time” scheduling framework aligns flexibility demand with supply, guiding operational decisions.
+                                                            Finally, a case study in China is conducted and demonstrates the primary findings as follows: (1) Flexibility
+                                                            demand patterns are influenced by VRE output levels and system transmission capacity. During VRE surplus
+                                                            periods, upward flexibility demand shows a bimodal pattern with peaks during PV ramp-up phases. Conversely,
+                                                            during VRE shortages, it displays a unimodal pattern peaking at PV output maxima. (2) Incorporating flexibility
+                                                            improves system reliability by 3.44 % and actual revenue by 1.5 %; while flexibility constraints lead to more
+                                                            conservative scheduling and reduced planned revenues, they enhance reliability, decrease unmet generation
+                                                            penalties, and ultimately increase actual economic returns. (3) Each percent load-loss risk reduction can yield 56
+                                                            million CNY in revenue. Higher confidence increases the demand for flexibility, reducing total generation and
+                                                            planned revenues. However, this also mitigates risk-related losses, resulting in higher realized revenues.
+
+
+
+Nomenclatures                                                                                     (continued )
+
+                                                                                                   Nt
+                                                                                                     VRE,f       upper limit of VRE output interval at time t
+    Abbreviations
+                                                                                                   NVRE,f        forecasted output of VRE at time t
+    PV          Photovoltaic                                                                        t
+                                                                                                    Wind,f
+                                                                                                   Nt            forecasted output of wind power at time t
+    VRE         Variable Renewable Energy
+    MECS        Multi-Energy Complementary System                                                   PV,f
+                                                                                                   Nt            forecasted output of PV power at time t
+    DPSA        Dynamic Programming with Successive Approximation                                   Wind,f
+                                                                                                   Nt            minimum forecasted output of wind power at time t
+    LOLP        Loss of Load Probability                                                                         maximum forecasted output of wind power at time t
+    MLOLD       Maximum Loss of Load Depth                                                         NWind,f
+                                                                                                    t
+
+    MCLOLD      Maximum Constant Loss of Load Duration
+                                                                                                    PV,f
+                                                                                                   Nt            minimum forecasted output of PV power at time t
+    Parameters                                                                                       PV,f        maximum forecasted output of PV power at time t
+                                                                                                   Nt
+    t           number of hours
+                                                                                                   DUPF
+                                                                                                    t
+                                                                                                                 demand for upward power flexibility at time t
+    εVRE        maximum downward deviation of VRE output at time t
+      t
+                                                                                                   DDPF
+                                                                                                    t
+                                                                                                                 demand for downward power flexibility at time t
+    εVRE         maximum upward deviation of VRE output at time t                                                transmission channel’s capacity
+     t                                                                                             NTC
+    NVRE,f
+       t
+                 lower limit of VRE output interval at time t                                      DUEF          demand for upward energy flexibility
+                                                                                                    T12
+
+                                                                (continued on next column)                                                                      (continued on next page)
+
+
+
+
+    * Corresponding author. College of Water Conservancy and Hydropower Engineering, Hohai University, Nanjing, 210098, China.
+      E-mail address: qiaofengtan@126.com (Q. Tan).
+
+https://doi.org/10.1016/j.renene.2025.124718
+Received 9 October 2025; Received in revised form 2 November 2025; Accepted 3 November 2025
+Available online 7 November 2025
+0960-1481/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+L. Qiao et al.                                                                                                                            Renewable Energy 257 (2026) 124718
+
+(continued )                                                                                  regulations, the available sites of pure pumped-storage hydropower
+  DDEF
+   T12
+                 demand for downward energy flexibility                                       stations are limited [5]. Consequently, different approaches, such as
+  VZit           vibration zones of hydropower station i at time t                            constructing pumping stations, reversible units, and upper or lower
+  Si,UPF
+   t
+                 supply of upward power flexibility of hydropower station i at hour t         storage reservoirs, are adopted to retrofit conventional cascade hydro­
+  Si,DPF
+    t
+                 supply of downward power flexibility of hydropower station i at hour t       power plants into hybrid pumped-storage hydropower systems with
+  I1             set of conventional hydropower stations                                      stronger regulation capacity [6]. By coordinating operations with
+  Ni,s           scheduled output of station i at hour t
+   t                                                                                          neighboring VRE plants to stabilize output fluctuations and utilize cur­
+  Ni,s           permitted minimum output of station i at hour t
+   t                                                                                          tailed energy, the systems significantly improve the reliability of the
+                 permitted maximum output of station i at hour t
+  Ni,s
+   t                                                                                          power supply [7,8].
+  Ni,s,in
+   t
+                 scheduled internal input power of pumped-storage hydropower station i            However, mere equipment upgrades are insufficient—the functional
+                 at time t
+                 scheduled external input power of pumped-storage hydropower station i
+                                                                                              positioning of hydropower systems must also undergo a paradigm shift,
+  Ni,s,ex
+   t
+                 at time t                                                                    particularly transitioning from singular energy suppliers to dual pro­
+  I2             set of pumped-storage hydropower stations                                    viders of both instantaneous power regulation and sustained energy
+  ci,s
+   t
+                 scheduled state indicator variables of pumped-storage hydropower             supply. This transformation requires developing more adaptive dispatch
+                 station i at hour t
+                                                                                              strategies that account for the distinct regulation characteristics of in­
+  Ai             comprehensive output coefficient of the hydropower station i
+  ρw             density of water                                                             dividual reservoirs and the operational specificities of hydropower
+  Hit2           maximum permitted water level of reservoir i at time t2                      units. As the penetration of VRE intensifies, the regulation capacity of
+  Vti2           maximum permitted volume of reservoir i at time t2                           hydropower becomes increasingly valuable, necessitating more refined
+  Hit2           minimum permitted water level of reservoir i at time t2                      optimization and scheduling.
+  Vti2           minimum permitted volume of reservoir i at time t2
+  Hit1           water level of reservoir i at hour t1                                        1.2. Literature survey
+  Vti1           volume of reservoir i at hour t1
+  g              gravitational acceleration                                                       Existing research often refers to the adjustment demands generated
+  Ei,in
+   T12
+                 increase in energy storage of reservoir i during period T12                  by wind and PV power as flexibility demands, while the measures taken
+  Ei,out
+   T12
+                 decrease in energy storage of reservoir i during period T12                  by the power system to respond to these demands are termed flexibility
+  ω              economic benefits of the system under various scheduling combinations        supply or flexibility resources [9,10]. As the proportion of wind and PV
+  T              set of hours                                                                 power generation continues to rise, the characteristics of flexibility de­
+  NPV,s
+   t
+                 scheduled on-grid PV power output                                            mands at intra-day, daily, annual, and inter-annual scales are also
+  NWind,s        scheduled on-grid wind power output
+   t                                                                                          changing. At the intra-day and daily scales, as the peak-to-valley dif­
+                 duration of one period
+  Δt
+                                                                                              ference of net load continues to increase, the demand for flexibility
+  pt             electricity price at hour t
+  mit            number of start and stop of the hydropower station i at hour t               manifests as a greater range of output and higher response speed,
+  Csi            cost of start and stop of the hydropower station i at hour t                 although the demand for generation from flexibility is not high [11]. At
+  Si,UPF
+   t
+                 supply of upward power flexibility of station i at hour t                    the annual scale, due to the seasonal differences in wind and solar re­
+  Si,DPF
+    t
+                 supply of downward power flexibility of station i at hour t                  sources [12], the reduction in wind and PV power generation during
+  tpre           a certain hour before hour t                                                 low-demand seasons means that flexibility resources not only have to
+  T1t            period from the beginning hour to hour t                                     play a role in intra-day and daily adjustments but also need to
+  Ni,s           maximum possible output of the pumped-storage hydropower station i at
+   tpre                                                                                       compensate for the seasonal differences in wind and solar generation.
+                 hour tpre
+  Ni,s           minimum possible output or the maximum possible input of the pumped-         For example, Bird et al. [13] summarized short-term measures taken to
+   tpre
+                 storage hydropower station i at hour tpre                                    enhance the flexibility of their power systems, including physical addi­
+  k              iteration number                                                             tions to the system (e.g., storage), grid capacity, institutional changes (e.
+  Rk             system net revenue derived from the corresponding iteration
+                                                                                              g., access to new markets), or operational changes, such as improved
+  εDPSA          allowable error of the iteration results
+  α              coefficient of penalty fee
+                                                                                              forecasting and economic dispatch. International Energy Agency [14]
+  NPV,a          actual on-grid output of the PV power stations at hour t                     proposed measures to provide interannual flexibility by retrofitting
+   t
+  NWind,a
+   t
+                 actual on-grid output of the wind power stations at hour t                   existing thermal and hydropower plants and changing the way they
+  Ni,a
+   t
+                 actual output of hydropower station i at hour t                              operate.
+  Ni,a,ex
+   t
+                 actual external input of pumped-storage hydropower station i at hour t           Consequently, researchers have investigated various methods to
+                                                                                              enhance electricity flexibility from multiple perspectives: (1) Supply
+                                                                                              Side: Increasing the proportion of flexible power sources and optimizing
+1. Introduction                                                                               their operational strategies [15]; (2) Demand Side: Utilizing demand
+                                                                                              response mechanisms [16,17]; (3) Grid Side: Reinforcing the intercon­
+1.1. Motivation                                                                               nection and mutual support capabilities of regional power grids [18].
+                                                                                              Among these technical pathways, demand-side response resources face
+    China is vigorously advancing the development of VRE, with the                            challenges due to their high diversity, dynamism, and uncertainty.
+total capacity of PV and wind power comprising 42.0 %, to establish an                        Moreover, grid-side interconnections are susceptible to the risks of
+eco-friendly, low-carbon electricity system [1,2]. However, VRE’s                             large-scale failures and require substantial infrastructure investments
+inherent intermittency, volatility, and uncertainty will cause a signifi­                     [19]. In contrast, adjustable resources on the supply side offer the power
+cant imbalance between power supply and demand. Moreover, the in­                             system enhanced controllability, efficiency, and significant capacity
+verse distribution between the large-scale VRE base and demand centers                        flexibility, thereby conferring both technological and economic advan­
+decreases the economic feasibility of constructing long-distance trans­                       tages [20].
+mission lines, which restricts the integration of VRE into the grid [3,4].                        Among various adjustable power sources, conventional impound­
+The aforementioned reasons, when combined, will lead to an abundant                           ment hydropower stations stand out as a representative energy source
+curtailment. Hence, power supplies with regulation capacity are                               due to their combination of cleanliness and flexibility. This makes sys­
+considered necessary to facilitate VRE consumption.                                           tems like the hydro-Wind-PV hybrid energy system a prevalent choice
+    Pumped-storage hydropower stations represent the most mature                              [21,22]. Existing research has sufficiently confirmed the feasibility of
+energy storage technology available today. However, due to constraints                        this kind of system and proposed numerous quantitative methods for
+such as water replenishment requirements and environmental                                    hydropower flexibility from various aspects. For example, Zhao et al.
+
+                                                                                          2
+L. Qiao et al.                                                                                                                Renewable Energy 257 (2026) 124718
+
+
+[23] quantified the flexibility demands created by wind and solar gen­              such a system. Section 6 provides conclusions.
+eration based on reliable capacity and stochastic bias, constructing a
+flexibility evaluation framework for the entire complementary system                2. Overview of the system
+composed of the Loss of Flexibility Probability, Loss of Flexibility
+Expectation, and Flexibility Demand Shortage; Thapa et al. [24] iden­                   As illustrated in Fig. 1, a hydro-wind-PV-storage hybrid energy sys­
+tified and quantified the impact of various operating policies, the need to         tem comprises a hybrid pumped-storage hydropower system, a PV
+hold reserves, lag times, and conflicts between different permissions of            power plant, a wind power plant and a control center. The system
+different entities on the flexibility of hydropower. Zhang et al. [25]              connects the wind power plant and PV power plant in series to the
+defined the peak-valley flexibility and adjustment flexibility and posed a          hybrid pumped-storage hydropower station, implementing effective
+coordinated method for sharing hydropower flexibility in an inter­                  regulation and smooth output after hydropower adjustment. Compared
+connected power system.                                                             to traditional hydro-wind-PV hybrid energy systems, this system has the
+    However, as the scale of VRE increases, the shortcomings of con­                following characteristics:
+ventional hydropower stations in directly absorbing curtailment become
+further magnified. Therefore, modification measures aimed at utilizing                (1) The proportion of wind and PV power in the system is very high.
+the water storage capacity of reservoirs are considered an effective way                  One reason for this characteristic is the unequal relationship be­
+to enhance the flexibility of conventional hydropower stations [26]. In                   tween the naturally developable resources of hydropower, wind
+existing research and practices in China, the flexibility retrofit of cascade             power, and solar power. In typical areas such as northwest China,
+hydropower stations through pumped-storage mainly includes three                          wind and solar power resources are abundant, but hydropower
+categories. The first category involves adding pumping systems between                    resources are relatively scarce [34,35]. On the other hand, flex­
+existing upstream and downstream reservoirs, such as the Baishan                          ibility retrofits enhance the regulation capacity of hydropower,
+pumped-storage power station [27]; the second category utilizes the                       providing a double capacity for peak shaving. When the VRE
+reservoirs of existing hydropower plants as upper reservoirs and con­                     generation is insufficient and there is a power shortage, the
+structs new lower reservoirs equipped with reversible units to form                       hybrid pumped-storage hydropower plant converts stored hy­
+pumped-storage power stations, such as in Panjiakou [28] and Xian­                        dropower into electricity. Conversely, when the VRE generation
+ghongdian [29]; the third category involves using the reservoirs of                       is high and there is curtailment, the hybrid pumped-storage plant
+existing hydropower plants as lower reservoirs and building new upper                     absorbs surplus electricity by pumping water from the lower
+reservoirs, like at Shisanling [30] and Taohuasi [31]. These systems are                  reservoir to upper reservoirs, converting the corresponding
+collectively referred to as hybrid pumped-storage hydropower stations,                    electricity into stored hydropower [26,36].
+and systems that operate in conjunction with VRE are known as                         (2) Conventional hydropower stations are retrofitted into hybrid
+hydro-wind-PV-storage hybrid energy systems. Existing research has                        pumped-storage power stations. The development of conven­
+fully demonstrated that hybrid pumped-storage hydropower stations                         tional hydropower in China nears saturation, with over 80 % of
+have stronger flexibility supply and better economic benefits compared                    the projects either built or under construction, leading to a
+to original cascade hydropower stations, which can better alleviate VRE                   slowdown in installed capacity growth [37]. According to sta­
+fluctuations at multiple scales. For example, Jing et al. [32] focused on                 tistics, in 2023 and 2024, the year-on-year growth of installed
+comparing the scenarios applicable to different forms of hydropower                       capacity for conventional hydropower nationwide is projected to
+retrofitting, but did not consider the prediction uncertainty of VRE. Ju                  be only 1.8 % and 2.5 %, respectively [38]. Meanwhile, the ex­
+et al. [33] and Luo et al. [7] respectively analyzed a certain type of                    plosion in installed capacity of VRE continuously increases the
+hydropower transformation, but did not include the construction of a                      demand for flexibility resources, while pure pumped-storage
+new upper reservoir. Moreover, the regulation performance of each                         power stations cannot fully meet this demand due to site con­
+reservoir in the upgraded system and the characteristics of the units                     straints. Therefore, transforming conventional hydropower into
+differ, and further research is needed on how to coordinate the operation                 hybrid pumped-storage power stations can achieve functions
+between different parts under high proportions of VRE integration. In                     such as peak shaving and valley filling, while also having ad­
+particular, existing studies rarely analyze the flexibility of                            vantages like a relatively short construction period and an overall
+hydro-wind-PV-storage hybrid energy systems, and there remains a gap                      improvement in system efficiency, achieving an effect where 1 +
+in understanding how to achieve a balance between flexibility supply                      1 > 2.
+and demand in both power output and generation.                                       (3) The capacity of the transmission channels for external delivery is
+                                                                                          less than the total installed capacity of the entire system. This
+1.3. Contribution                                                                         characteristic arises from two main reasons: on one hand, the
+                                                                                          hybrid energy system is often located far from load centers,
+    This study develops a short-term scheduling method covering the                       resulting in insufficient local consumption capacity and thus
+classification and quantification of the flexibility for a hydro-wind-PV-                 necessitating the construction of long-distance transmission
+storage hybrid energy system with a high proportion of VRE to                             channels to deliver electricity [39]; on the other hand, the output
+improve the system’s performance. The main innovations and contri­                        of wind and PV power is highly volatile. Building transmission
+butions are as follows: (1) define and distinguish between power flexi­                   channels with equal capacity would significantly reduce the uti­
+bility and energy flexibility from both demand side and supply side; (2)                  lization hours of the channels and result in a considerable decline
+quantify and integrate flexibility within the short-term scheduling                       in investment efficiency [40]. Therefore, it is generally planned
+model for the hydro-wind-PV-storage hybrid energy system, investi­                        that the capacity of the external transmission channels is less than
+gating the evolution of the operational modes of the hydropower system;                   the total installed capacity of the system, and energy storage
+(3) evaluate the impacts of the confidence level of uncertainty on the                    systems are strategically integrated to perform intra-day energy
+flexibility and the system’s benefits and risks.                                          time-shifting and reduce curtailment.
+    The remaining sections of the paper are organized as follows: Section
+2 introduces the components of a hydro-wind-PV-storage MECS with a                  3. Mathematic model
+high proportion of VRE and the main principles it follows during its
+short-term operation. Section 3 quantifies flexibility from both supply                 Here, the flexibility of the hydro-wind-PV-storage hybrid energy
+and demand perspectives. Section 4 and Section 5 utilize a case study to            system is quantified from both the demand and supply sides. On the
+analyze the influence of incorporating flexibility on the operation of              demand side, a flexibility demand quantification method is established
+
+                                                                                3
+L. Qiao et al.                                                                                                                             Renewable Energy 257 (2026) 124718
+
+
+
+
+                                                    Fig. 1. The construction of a hydro-wind-PV-storage MECS.
+
+
+using the Copula function, based on the mapping relationship between                 3.1.1. VRE output uncertainty
+the predicted output and the actual output of VRE. On the supply side, a                 Copula function is a statistical method to construct a joint probability
+quantification method is proposed by taking plants as the scheduling                 distribution from multiple univariate marginal distributions, as detailed
+objects and comprehensively considering each plant’s regulation capa­                in Refs. [41,42]. This study employs it to establish the distributional
+bility and each reservoir’s water storage and release capacity.                      relationship between VRE’s forecasted and actual output so that the
+                                                                                     interval of forecasted VRE output can be extracted from the forecasted
+3.1. Quantification of the demand for flexibility                                    curve provided by the plant. Then, the maximum downward and up­
+                                                                                     ward deviation can be derived by taking the difference between the
+    As shown in Fig. 2 (a), the output of VRE is uncertain, represented by           forecasted output and the interval as follows:
+a band interval of predicted information. However, to simplify the                                            (                ) (                  )
+power grid workflow, the plant’s submission of output forecast is a                  εVRE
+                                                                                      t   = NVRE,f
+                                                                                             t     − NtVRE,f = NPV,f
+                                                                                                                t    + NWind,f
+                                                                                                                        t       − NtPV,f + NtWind,f           (1)
+deterministic curve. Although the actual output of VRE falls within the
+band interval, it may not necessarily align with this curve, resulting in            εVRE = NVRE,f
+                                                                                                              (
+                                                                                                   − NtVRE,f = NPV,f + NWind,f −
+                                                                                                                                )      (
+                                                                                                                                           NtPV,f + NtWind,f
+                                                                                                                                                               )
+                                                                                                                                                                                   (2)
+                                                                                      t      t                  t       t
+deviations that constitute the flexibility demand, which specifically in­
+cludes two aspects: power and energy. As illustrated in Fig. 2 (b), the
+                                                                                     where εVRE
+                                                                                            t   and εVRE
+                                                                                                     t   are the maximum downward and upward deviation
+demand for power flexibility is the maximum deviation between actual
+                                                                                                                                     VRE,f           VRE,f
+and forecasted output for each time. The energy aspect, shown in Fig. 2              of VRE output at time t, respectively; Nt               and Nt          are the lower and
+(c), is the cumulation of the maximum deviations across all time.                    upper limit of VRE output interval at time t, respectively; Nt
+                                                                                                                                                                    VRE,f      Wind,f
+                                                                                                                                                                            , Nt
+Additionally, both types of flexibility demand have upward and down­                       PV,f
+                                                                                     and Nt       are the forecasted output of VRE, wind power and PV power at
+ward dimensions, corresponding to whether the forecasted output is
+                                                                                                              Wind,f        Wind,f
+greater than the actual output or the forecasted output is less than the             time t, respectively; Nt          and Nt        are the minimum and maximum
+actual output, respectively.                                                                                                                                       PV,f            PV,f
+                                                                                     forecasted output of wind power at time t, respectively; Nt and Nt
+                                                                                     are the minimum and maximum forecasted output of PV power at time t,
+
+
+
+
+                                                         Fig. 2. Generating process of flexibility demand.
+
+                                                                                 4
+L. Qiao et al.                                                                                                                           Renewable Energy 257 (2026) 124718
+
+
+respectively.                                                                         ⎧
+                                                                                      ⎨ DUPF = NVRE,f − NVRE,f           [                 ]
+                                                                                         t      t        t
+                                                                                                               , if NTC ∈ NtVRE,f , NtVRE,f , NtVRE,f < NTC            (5)
+3.1.2. Demand for power flexibility                                                   ⎩ DDPF = NTC − NVRE,f
+                                                                                          t                 t
+    The deviations of VRE output represented in Eqs. (1) and (2) are not
+equivalent to the demand for power flexibility. The capacity of the
+transmission channel limits the delivery output of VRE. Therefore, the                   (4) As illustrated in Fig. 3. (4), when the transmission channel’s ca­
+difference between the forecasted output and actual output might be                          pacity is higher than the upper limit of the interval, all the de­
+within the curtailment when the VRE output is high. Under this                               viations need regulation to avoid power imbalance.
+circumstance, the deviations don’t involve the balance between gener­                        Consequently, the corresponding demands for upward and
+ation and load, therefore requiring no adjustment. Fig. 3 presents an                        downward power flexibility are:
+example involving a pure VRE power source to elucidate this concept                   ⎧
+further.                                                                              ⎨ DUPF
+                                                                                         t   = NtVRE,f − NVRE,f
+                                                                                                          t
+                                                                                                                    , if NtVRE,f < NTC                                 (6)
+                                                                                      ⎩ DDPF = NVRE,f − NVRE,f
+                                                                                         t      t        t
+   (1) As depicted in Fig. 3. (1), when the lower limit of the interval
+       exceeds the transmission channel’s capacity, the deviation of VRE
+                                                                                      3.1.3. Demand for energy flexibility
+       output doesn’t impact the power balance and the plant can be
+                                                                                         Demand for power flexibility only reflects the demand for power
+       considered a stable power source, providing a constant on-grid
+                                                                                      balance but doesn’t encompass the demand for energy balance.
+       output. As a result, there is no demand for power flexibility in
+                                                                                      Although bidirectional deviation may mitigate opposite adverse effects,
+       this scenario:
+                                                                                      potential extreme scenarios such as prolonged solar or wind droughts
+DUPF
+ t   = DDPF
+        t   = 0, if NtVRE,f > NTC                                           (3)       can deteriorate the system’s working condition when they occur.
+                                                                                      Therefore, it’s essential to quantify the demand for energy flexibility
+where DUPFt   and DDPF
+                   t    are demand for upward and downward power                      which can be expressed as follows:
+flexibility at time t, respectively; NTC is the transmission channel’s                         t2
+                                                                                               ∑  (        )
+capacity.                                                                             DUEF
+                                                                                       T12 =          DUPF
+                                                                                                       t     ⋅ Δt                                                      (7)
+                                                                                               t=t1
+
+   (2) As illustrated in Fig. 3. (2), when the transmission channel’s ca­
+                                                                                               t2
+                                                                                               ∑
+       pacity is within the interval and lower than the forecasted VRE                DDEF
+                                                                                                  (
+                                                                                                      DDEP
+                                                                                                           )
+                                                                                                             ⋅ Δt                                                      (8)
+                                                                                       T12 =           t
+       output, only excessive downward deviations need regulation,                             t=t1
+       meaning there is only demand for downward power flexibility in
+       this scenario:                                                                 where DUEF          DEF
+                                                                                               T12 and DT12 represent the demand for upward and downward
+⎧                                                                                     energy flexibility, respectively; t1 and t2 denote the start and end hours
+⎨ DUPF = NTC − NVRE,f           [                 ]
+   t      t     t
+                      , if NTC ∈ NtVRE,f , NtVRE,f , NtVRE,f ≥ NTC          (4)       of the calculation period, respectively.
+⎩D = 0
+   DPF
+     t
+                                                                                      3.2. Quantification of supply of flexibility
+
+   (3) As shown in Fig. 3. (3), when the transmission channel’s capacity                  Supply of flexibility is the regulation capability of hybrid pumped-
+       is within the interval and higher than the forecasted VRE output,              storage hydropower plants. It includes the rapid adjustment ability of
+       all the downward and partial upward deviations need regulation.                conventional hydropower units and reversible pump-turbines and the
+       Consequently, the corresponding demands for upward and                         energy storage functions of the reservoir groups, providing the supply of
+       downward power flexibility are:                                                power and energy flexibility, respectively.
+
+
+
+
+                                          Fig. 3. Quantification of demand for power flexibility under different scenarios.
+
+                                                                                  5
+L. Qiao et al.                                                                                                                       Renewable Energy 257 (2026) 124718
+
+
+3.2.1. Supply of power flexibility                                                        control and power generation capacity, mitigating the risk of
+   Supply of power flexibility is constrained by factors associated with                  water abandonment in the lower reservoir and subsequently
+units’ features such as installed capacity, vibration zone range, ramping                 increasing overall power generation.
+capability, and start-stop performance [43,44]. To simplify the analysis,
+the supply of power flexibility is quantified with the following                      Based on the assumptions above, higher-priority stations are loaded
+assumptions:                                                                      to their maximum before the next tier is dispatched to meet the
+                                                                                  remaining load. Therefore, the supply of power flexibility that conven­
+   (1) The adjustment rate of conventional hydropower units and                   tional hydropower plant i can provide at hour t is determined by its
+       reversible pump-turbines is rapid, reaching up to 20 % per min­            scheduled output, the available minimum and maximum output and the
+       ute, enabling them to satisfy output variation requirements at an          vibration zones. As shown in Fig. 4(a), the plant cannot operate in the
+       hourly time granularity [43]. Consequently, the limitations on             vibration zone for a long time so its output will drop in one of the stable
+       the supply of power flexibility arising from ramping capability            zones and the accessible supply of power flexibility is intermittent. The
+       and start-stop performance can be disregarded. Moreover,                   supply of upward power flexibility is defined as the difference between
+       pumped-storage hydropower plants can achieve flexible transi­              the available higher output and the scheduled output, while the supply
+       tions between pumping and power generation states for the same             of downward power flexibility is defined as the difference between the
+       reason.                                                                    scheduled output and the available lower output. Specifically, they are
+   (2) Vibration zone range simplification: operation zones of the                expressed as follows:
+       hybrid pumped-storage hydropower plant can generally be                            {⃒ [                 ] i,s               }
+       categorized into stable zones and vibration/prohibited zones.              Si,UPF
+                                                                                    t    = s⃒s ∈ 0, Nti − Ni,s
+                                                                                                           t &Nt + s ∕
+                                                                                                                     ∈ VZi &i ∈ I1                        (9)
+       This study assumes that the vibration zones of the conventional                    {⃒ [              ]                     }
+                                                             {                              ⃒
+       hydropower plant i is fixed, denoted as VZit = VZi = VZi,1 , VZi,2 ,       Si,DPF
+                                                                                   t     = s⃒s ∈ 0, Ni,s
+                                                                                                     t − Nt &Nt − s ∕
+                                                                                                          i   i,s
+                                                                                                                    ∈ VZi &i ∈ I1                                   (10)
+                }
+       …, VZi,m , t = 1, …, T where the superscripts 1, 2, …, m represent
+       the numbers of discrete zones. Likewise, the input prohibited              Where Si,UPF
+                                                                                            t     and Si,DPF
+                                                                                                       t     are supply of upward and downward power
+       zones of pumped-storage hydropower station i is presumed to be             flexibility of conventional hydropower station i at hour t, respectively; I1
+       opposite to its output prohibited zone, denoted as VZi,Pump
+                                                               t     = −          is the set of conventional hydropower stations; Ni,s
+                                                                                                                                   t   represents the
+               {                                 }
+        VZi = − VZi,m , − VZi,m− 1 , …, − VZi,1 . Moreover, this study            scheduled output of station i at hour t; Ni,s               i,s
+                                                                                                                                  t and Nt denote the permitted
+       assumes that all hydroelectric units are fully adjustable in power,        minimum and maximum output of station i at hour t.
+       except in the vibration zone.                                                  As shown in Fig. 4(b), a pumped-storage hydropower station can
+   (3) While the long-term regulation capacity of conventional hydro­             switch states to provide supply of power flexibility exceeding its
+       power is measured by its storage coefficient, its intra-day power          installed capacity. But this function only works in scenarios without
+       flexibility is often weakly contributed by large storage capacity          external input. Otherwise, it should be regarded as a pumping station
+       due to binding constraints such as water availability and storage          with only supply of downward power flexibility when there is external
+       requirements. Consequently, the real-time flexibility of conven­           input. The calculation methods for supply of power flexibility of
+       tional hydropower is predominantly determined by factors like              pumped-storage hydropower station in both directions are as follows:
+       installed capacity and vibration zones. Consequently, for hybrid                    {{ ⃒ [                  ]                                                }
+       pumped-storage power stations, the intra-day dispatch priority of                     s⃒s ∈ 0,Nti,s,in + Nti ,Ni,s,in
+                                                                                                                       t     +s∕
+                                                                                                                               ∈ VZi ,i ∈ I2 ,Nti,s,ex = 0,ci,s
+                                                                                                                                                            t = − 1*
+                                                                                  Si,UPF =
+       each sub-station is determined based on its adjustable capacity,            t        {⃒ [
+                                                                                             s⃒s ∈ 0,Nti − Ni,s
+                                                                                                                 ] i,s,in                               }
+                                                                                                               t , Nt     +s∕ ∈ VZi ,i ∈ I2 ,ci,s
+                                                                                                                                              t ∕ =− 1
+       with those having larger capacity receiving higher priority.
+                                                                                                                                                                    (11)
+   (4) To meet the objectives of reducing power curtailment, the power
+       generation priority among units follows this principle: When the                   {{ ⃒   [               ] i,s                                          }
+                                                                                                       t + Nt , Nt − s ∕
+                                                                                            s⃒s ∈ 0, Ni,s      i
+                                                                                                                             ∈ VZi,Pump , i ∈ I2 , ci,s
+                                                                                                                                                    t ∕  = − 1*
+       lower reservoir has available storage capacity and there is no risk        St
+                                                                                   i,DPF
+                                                                                         = {⃒    [               ]                                              }   (12)
+       of water abandonment, the priority is VRE > pumped storage >                         s⃒s ∈ 0, Nit − Nti,s , − Nti,s − s ∕
+                                                                                                                               ∈ VZi,Pump , i ∈ I2 , ci,s
+                                                                                                                                                        t = − 1
+       conventional hydropower, which is conducive to reducing VRE
+       power curtailment and conventional hydropower can reuse the                where Ni,s,in
+                                                                                          t     and Ni,s,ex
+                                                                                                     t      represent scheduled internal and external input
+       water flow from pumped storage stations for power generation.              power of pumped-storage hydropower station i at time t, respectively; I2
+       Conversely, the priority shifts to conventional hydropower >               is the set of pumped-storage hydropower stations; ci,s t  denotes the
+       VRE > pumped storage. In this situation, the newly constructed             scheduled state indicator variables, where 1,0,-1 represent the sched
+       pumped storage station significantly enhances the system’s flood
+
+
+
+
+                                      Fig. 4. Supply of power flexibility of hybrid pumped-storage hydropower station.
+
+                                                                              6
+L. Qiao et al.                                                                                                                          Renewable Energy 257 (2026) 124718
+
+
+uled state of pumped-storage hydropower station i at hour t is power                       3.3. Day-ahead generation scheduling considering flexibility
+generation, shutdown, and pumping, respectively; * signifies the sce­
+narios of state conversion between the day-ahead schedule and real-time                        As illustrated in Fig. 5, the short-term scheduling process of a hydro-
+schedule.                                                                                  wind-PV-storage hybrid energy system comprises two stages: the day-
+                                                                                           ahead stage, which formulates schedules and corresponds to steps (1)–
+3.2.2. Supply of energy flexibility                                                        (3), and the real-time stage which carries load order out and corresponds
+   Supply of energy flexibility means appropriate water storage within                     to steps (4)–(6). The control center manages this entire process, deter­
+reservoirs to satisfy energy balance. For a reservoir i, the supply of up­                 mining the output priorities and allocating tasks to each subunit based
+ward energy flexibility Si,UEF
+                         T12 during period T12 is defined as the available
+                                                                                           on the reservoir group’s storage conditions. Additionally, the trans­
+water energy currently stored, while the supply of downward energy                         formation of hydropower systems and the shift in scheduling modes
+                                                                                           introduce heightened complexity in the hydraulic and electrical in­
+flexibility Si,DEF
+               T12    represents the additional water energy that can be
+                                                                                           terdependencies within the system compared to traditional scheduling
+stored. The specific calculation methods are as follows:
+                                                                                           models, requiring both conventional and pumped-storage hydropower
+         {⃒ [                                (          )                    ]}
+            ⃒                 (           ) Hti + Hti                                      stations to maintain sufficient operational flexibility supply in day-
+            ⃒
+Si,UEF     s s     0, A        V i
+                                      V i
+                                           g                E i,in
+                                                                     E i,out
+                                                                                (13)
+                                               2      1
+  T12  =    ⃒  ∈        i ρ w       −                     +   T12  −   T12                 ahead scheduling to accommodate real-time VRE fluctuations. The in­
+            ⃒                    t1    t2
+                                                 2
+                                                                                           tegrated framework balances multi-energy coordination while ensuring
+         {⃒ [                          (         )                 ]}                      stability, with its mathematical formulation detailed as follows.
+           ⃒            (           ) Hi + Hi
+           ⃒                             t2   t1
+Si,DEF
+ T12 =    s⃒s ∈ 0, Ai ρw Vti2 − Vti1 g             + Ei,in   i,out
+                                                      T12 − ET12              (14)
+           ⃒                                2                                              3.3.1. Objective function
+                                                                                               Peak-valley electricity prices effectively capture the relationship
+where Ai denotes the comprehensive output coefficient of the hydro­                        between electricity supply and demand in regions lacking a mature
+power station i; ρw is the density of water, Hti2 and Vti2 refer to the                    electricity market, thereby facilitating the rational schedule of the
+maximum permitted water level and its corresponding reservoir ca­                          hydro-wind-PV-storage hybrid energy system. Consequently, this study
+pacity of reservoir i at time t2 ; Hit2 and Vti2 indicate the minimum                      follows peak-valley electricity prices, aiming to optimize economic
+                                                                                           benefits.
+permitted water level and its corresponding volume of reservoir i at hour
+                                                                                                       [(                                                        )
+t2 ; Hit1 and Vti1 represent the water level and its corresponding volume of                         ∑                      ∑           ∑ (                    )
+                                                                                            Max ω =       NPV,s +N Wind,s
+                                                                                                                          +  c   N
+                                                                                                                              i,s i,s
+                                                                                                                                      +  ci,s
+                                                                                                                                              N i,s
+                                                                                                                                                    − N i,s,in
+                                                                                                                                                                   ⋅Δt⋅pt
+reservoir i at hour t1 ; g is the gravitational acceleration; Ei,in
+                                                               T12 denotes the                      t∈T
+                                                                                                            t      t          t
+                                                                                                                           i∈I1
+                                                                                                                                   t      t
+                                                                                                                                       i∈I2
+                                                                                                                                                t       t
+
+                                                                                                                  ]
+increase in energy storage of reservoir i during period T12 , resulting from                          ∑
+inflow replenishment, water pumping, etc.; Ei,out                                                      mit ⋅Csi
+                                              T12 signifies the decrease in
+                                                                                                    −
+                                                                                                          i
+energy storage of reservoir i during period T12 , due to power generation,
+                                                                                                                                                                    (15)
+evaporation, seepage, etc.
+                                                                                           where ω represents the economic benefits of the system under various
+                                                                                           scheduling combinations; T denotes the set of hours; NtPV,s and NWind,s
+                                                                                                                                                            t      are
+
+
+
+
+                                                  Fig. 5. Relationship between the day-ahead and real-time schedule.
+
+                                                                                       7
+L. Qiao et al.                                                                                                                    Renewable Energy 257 (2026) 124718
+
+
+the scheduled on-grid PV and wind power output, respectively; Δt sig­               storage hydropower stations [46]. Unlike conventional dynamic pro­
+nifies 1 h; pt denotes the electricity price at hour t; mit denotes number of       gramming, DPSA decomposes the high-dimensional optimization prob­
+start and stop of the hydropower station i at hour t; Csi denotes cost of           lem into a sequence of one-dimensional subproblems, which
+start and stop of the hydropower station i at hour t.                               significantly reduces computational complexity while preserving solu­
+                                                                                    tion quality. In contrast, other approaches—such as linear programming
+3.3.2. Constraints                                                                  or meta-heuristic algorithms—often struggle to accurately capture dy­
+    The improved model necessitates that the system fulfills not only the           namic inter-reservoir relationships or demand substantial computa­
+general constraints required for the independent operation of each sub-             tional resources. However, the bidirectional flow loop of
+plant as outlined in Ref. [45] but also the constraints related to flexi­           pumped-storage hydropower stations indicates that the operation of
+bility. Considering the supply of power flexibility, the new output con­            the lower reservoir will impact the upper reservoir, disrupting the al­
+straints for conventional hydropower stations can be determined as                  gorithm’s convergence, which typically relies on the general unidirec­
+follows:                                                                            tional discharge relationship between conventional hydropower
+                                                                                    stations. As Fig. 6 shows, the concept of semi-neighborhood search is
+Si,DPF
+ t     + Nit ≤ Ni,s
+                t ≤ Nt − St
+                     i    i,UPF
+                                , i ∈ I1 &ci,s
+                                           t = 1                         (16)       adopted to address this problem and simplify the calculations. Specif­
+                                                                                    ically, the set of hourly states of pumped-storage hydropower stations
+where Si,UPF
+          t    and Si,DPF
+                     t     are the supply of upward and downward power              obtained in the first iteration serves as a reference; then hourly states of
+flexibility of station i at hour t, respectively. They’re determined by both        the stations are kept fixed, and only the output or input values under the
+the station’s regulation capacity and the maximum demand for power                  corresponding working states are optimized in subsequent iterative
+flexibility.                                                                        calculations. Based on this approach, the overall iteration steps are as
+    Furthermore, considering the supply of energy flexibility which                 follows:
+means all the supply of power flexibility has been fully utilized by the
+end of the scheduling hour results in the following:                                    (1) Set the number of reservoirs to be optimized i = 1, 2, …, I, the
+ t
+                                                                                            iteration number k = 1, 2, …, K, and the system net revenue
+ ∑ (                      ) pre
+           Ni,s     i,UPF
+            tpre + Stpre   ⋅Δt ≤ Si,UEF
+                                  T1t , i ∈ I1 &ct = 1
+                                                 i,s                                        derived from the corresponding iteration Rk . Enter the initial
+tpre =1                                                                                     values of different parameters, namely i = 1, k = 1, R1 = 1, and
+                                                                         (17)
+ t
+ ∑ (                      ) pre                                                             the allowable error of the iteration results εDPSA which should be a
+           Ni,s     i,DPF
+            tpre − Stpre   ⋅Δt ≤ Si,DEF          i,s
+                                  T1t , i ∈ I1 &ct = 1                                      positive infinitesimal.
+tpre =1
+                                                                                        (2) When k = 1, use dynamic programming to optimize the opera­
+where t pre represents a certain hour before hour t; T1t represents the                     tion process of reservoir i and record its state at each hour,
+period from the beginning hour to hour t.                                                   otherwise, optimize the operation process of reservoir i based on
+    As illustrated in Fig. 4, pumped-storage hydropower stations,                           the states has recorded.
+different from conventional hydropower stations, must account for po­                   (3) Update the operation process of the reservoir i and view its
+tential operational state changes. Therefore, their supply of power and                     discharge flow as a new input condition for the next-level reser­
+energy flexibility impose the following constraints on output and input,                    voir. If the reservoir i is a pumped-storage hydropower station,
+respectively:                                                                               there might be pumped flow which can be considered negative
+                                                                                            discharge flow.
+             Si,DPF
+              t     − Nti ≤ Ni,s
+                             t ≤ Nt − S t
+                                  i     i,UPF
+                                              , i ∈ I2 &ci,s
+                                                         t = 1
+                                                                                        (4) Determine whether the optimization calculation for all reservoirs
+                                                                         (18)               is complete. If i < I, set i = i + 1 and return to (2); otherwise,
+Si,UPF
+ t     − Nti ≤ Nti,s ≤ Nti − Si,DPF
+                              t     , i ∈ I2 &ci,s
+                                               t = − 1&Nt
+                                                        i,s,ex
+                                                               =0
+                                                                                            proceed to (5).
+               t ≤ Nt −
+          0 ≤ Ni,s  i
+                               Si,DPF
+                                t     , i ∈ I2 &ci,s
+                                                 t = −   1&Nti,s,ex ∕
+                                                                    =0                  (5) Determine whether the result has converged or the iteration is
+                                                                                            complete, that is, the calculation will end if |Rk − Rk− 1 | < εDPSA or
+ t
+ ∑
+          Ni,s          ≤ Si,UEF          i,s                                               k = K. Record and output the scheduling result of each hydro­
+                           T1t , i ∈ I2 &ctpre = 1
+                    pre
+           tpre ⋅Δt
+tpre =1                                                                                     power station; otherwise, set k = k + 1, i = 1 and return to (2).
+                                                                         (19)
+ t
+ ∑
+          Ni,s
+           tpre ⋅Δt
+                    pre
+                        ≤ Si,DEF          i,s
+                           T1t , i ∈ I2 &ct pre = 1
+tpre =1
+                                                                                    3.4. Real-time scheduling model
+
+where Nti,spre represents the maximum possible output of the pumped-                3.4.1. Objective function
+storage hydropower station i at hour tpre ; and Nti,spre represents the mini­          Real-time power balance relies on the flexibility supply allocated in
+mum possible output or the maximum possible input of the pumped-                    the day-ahead schedule to ensure grid stability and power quality. To
+storage hydropower station i at hour tpre :                                         enforce operational discipline, the grid typically imposes a deviation
+       ⎧                                                                            penalty mechanism: Any deviation between the day-ahead scheduled
+            i,s    i,UPF          i,s
+       ⎨ Ntpre + Stpre , i ∈ I2 &ctpre = 1
+       ⎪
+       ⎪                                                                            output and the real-time output will be charged to the power plant as a
+  i,s
+Ntpre = S pre , i ∈ I2 &c pre = − 1&Ni,s,ex = 0
+          i,UPF            i,s                              (20)                    penalty fee, calculated as a fixed multiple of the product of the deviation
+          t                t             t
+       ⎪
+       ⎪
+       ⎩                                                                            and the real-time electricity price [47]. Consequently, the system must
+         0, else
+                                                                                    dynamically allocate regulation tasks across sub-sources to address VRE
+             { ⃒ i,DPF          ⃒                                                   uncertainties. Therefore, the objective of real-time scheduling is to
+               ⃒S pre − Ni,spre ⃒, i ∈ I2 &ci,spre = 1                              minimize the penalty and maintain a fixed external input:
+                 t       t                  t
+Nti,spre =                                                               (21)
+               Si,DPF   i,s
+                tpre + Nt pre , else                                                    ∑
+                                                                                              (                                                    )
+                                                                                                                  ( PV,s        ) ∑( i,a         )
+                                                                                    min α ⋅ Nt +NtPV,a   Wind,a
+                                                                                                                − Nt +Nt Wind,s
+                                                                                                                                 +    Nt − Nti,s
+                                                                                                                                                     ⋅Δt⋅pt (22)
+3.3.3. Solution method                                                                    t∈T                                       i∈I
+
+   The enhanced Dynamic Programming Successive Approximation
+(DPSA) algorithm is chosen for its strong ability to overcome the curse of          Nti,a,ex = Ni,s,ex
+                                                                                                t                                                             (23)
+dimensionality commonly encountered in multi-reservoir scheduling
+problems, especially in systems with complex coupling, such as pumped-              where α is the coefficient of penalty fee; NtPV,a and NtWind,a are the actual
+                                                                                    on-grid output of the PV and wind power stations at hour t, respectively;
+
+                                                                                8
+L. Qiao et al.                                                                                                                Renewable Energy 257 (2026) 124718
+
+
+
+
+                                                      Fig. 6. Flowchart of enhanced DPSA algorithm.
+
+
+Nti,a is the actual output of hydropower station i at hour t and the only         is relatively low, necessitating the delivery of surplus VRE electricity;
+adjustable variable; Ni,a,ex is the actual external input of pumped-storage       however, capacity constraints in the transmission channels, influenced
+                      t
+hydropower station i at hour t.                                                   by economic factors, restrict this capacity to just 10,000 MW. These
+                                                                                  interconnected factors result in considerable amounts of curtailment. To
+3.4.2. Constraints                                                                mitigate this issue, the MED station retrofits to enhance its flexibility by
+   The real-time scheduling constraints are identical to those in the day-        designating it as a lower reservoir and constructing two new upper
+ahead schedule, except that the flexibility-related constraints are no            reservoirs—Tongde (TD) and Maqin (MQ)—capable of daily regulation.
+longer considered because the VRE output is certain in the real-time              TD and MQ are equipped with reversible pump-turbines rated at 2320
+schedule.                                                                         MW and 1800 MW, respectively, ultimately creating a hybrid pumped-
+                                                                                  storage hydropower station. Taking into account the installed capacity
+4. Study area and data                                                            and reservoir capacity of each station, the regulation sequence for
+                                                                                  participating in load regulation is stipulated as follows: TD > MQ >
+    As illustrated in Fig. 7, this study examines the MaErDang (MED)              MED. With a substantial VRE penetration rate of 68 %, this system serves
+hybrid energy system located in Qinghai Province, China. The system               as an exemplary case for analyzing the influences of flexibility demand
+primarily employs VRE, featuring a PV field with an installed capacity of         and supply.
+21,000 MW, alongside a wind farm with a capacity of 2500 MW. In                       The specific characteristic parameters of the above system are shown
+contrast, the installed capacity of the MED conventional hydropower               in Table 1. All data, except for the start-stop cost, are collected from the
+station is only 2320 MW, and its restricted reservoir capacity allows only        hydropower station design report. The start-stop cost is set to 36 CNY/
+for seasonal regulation. Additionally, the local load demand in Qinghai           MW, which is converted based on the value of 3 USD/MW provided in
+
+
+                                                                              9
+L. Qiao et al.                                                                                                                  Renewable Energy 257 (2026) 124718
+
+
+
+
+                                               Fig. 7. The geographic location and structure of the case study.
+
+
+
+Table 1
+Characteristic parameters of each subsystem.
+  Parameter                             MER         TD              MQ
+
+  Normal water level (m)                3275        3665            3780
+  Dead water level (m)                  3240        3637            3747
+  Installed capacity (MW)               2320        2400            1800
+  Forced output (MW)                    218         0               0
+  Maximum unit overflow (m3/s)          1400        832.08          470.64
+  Maximum reservoir release (m3/s)      5760        –               –
+  Ecological flow (m3/s)                145         0               0
+  Comprehensive output coefficient      8.5         8.5             8.5
+  Unit energy transform efficiency      –           0.75            0.75
+
+  PV power capacity (MW)                              21000
+  Wind power capacity (MW)                            2500
+  Penalty fee coefficient                               3
+
+
+                                                                                             Fig. 8. Peak-valley electricity price of Qinghai Province.
+reference [48], using the GDP deflator and the current exchange rate.
+Additionally, data on electricity prices, VRE output, and annual runoff in
+                                                                                   5. Results and discussions
+the region are collected from design reports as input conditions for this
+case study. Thereinto, the electricity price data is based on the latest
+                                                                                   5.1. Experimental settings
+peak-to-valley electricity prices in Qinghai Province. As illustrated in
+Fig. 8, the lowest price during the nighttime low-load period is 0.194
+                                                                                       This study aims to balance the profits and reliability of a hydro-wind-
+CNY/kW⋅h, while the highest price during the daytime high-load period
+                                                                                   PV-storage hybrid energy system by quantifying and considering flexi­
+reaches 0.558 CNY/kW⋅h. Notably, due to the province’s substantial PV
+                                                                                   bility demand and supply. To analyze and compare the influence of
+power penetration, prices are lower during high PV output hours from
+                                                                                   different kinds of flexibility on the system, this study designs the
+12:00 to 18:00, averaging 0.376 CNY/kW⋅h. Additionally, because
+                                                                                   following three schemes:
+summer loads exceed winter loads, peak prices are set at 0.664
+                                                                                       Scheme 1: Neither power flexibility nor energy flexibility is consid­
+CNY/kW⋅h during high-load periods from April to September. Finally,
+                                                                                   ered in the scheduling, that is, only general constraints in Ref. [45] are
+historical runoff data and simulations of PV and wind power output are
+                                                                                   taken into account;
+collected as the model’s inputs.
+                                                                                       Scheme 2: Only power flexibility is considered in the scheduling,
+                                                                                   while energy flexibility is not; that is, take constraints Eqs. (16) and (18)
+                                                                                   into account further based on Scheme 1;
+
+                                                                              10
+L. Qiao et al.                                                                                                                Renewable Energy 257 (2026) 124718
+
+
+   Scheme 3: Both power and energy flexibility are considered in the              (25.5 % of VRE installed capacity). As depicted in Fig. 10(c), during VRE
+scheduling, that is, take constraints Eq. (16)–(21) into account further          drought conditions, the demand for downward power flexibility remains
+based on Scheme 1.                                                                consistent with that during VRE surplus. However, the demand for up­
+   Except for the flexibility variables, all other input conditions remain        ward flexibility displays a unimodal characteristic, with its peak
+consistent across different schemes. This study then simulates the sys­           concentrated between 11:00–16:00, coinciding with the peak period of
+tem’s operations for each scheme over one year. Considering the de­               PV power. The peak magnitude, in this case, is about 9000 MW (38.3 %
+mand for flexibility primarily decided by VRE output, two typical                 of VRE installed capacity). Furthermore, the cumulative demand for
+scenarios are selected for analysis: one with a high VRE output/VRE               power flexibility determines the magnitude of the demand for energy
+surplus (the 293rd day) and another with a low VRE output/VRE                     flexibility. Consequently, the demand for energy flexibility during a VRE
+drought (the 216th day). The results are as follows.                              surplus is less than during a VRE drought. As shown in Fig. 10(b) and (d),
+                                                                                  the demand for upward and downward energy flexibility in the former
+                                                                                  scenario is reduced by 4.09 × 104 kW h and 2.23 × 104 kW h, respec­
+5.2. Quantification results of the demand for flexibility
+                                                                                  tively, compared to the latter scenario. Regarding directional charac­
+                                                                                  teristics, since VRE output can be curtailed but not increased, the
+    The hourly wind and PV power output values are fitted to various
+                                                                                  demand for upward flexibility exceeds that for downward flexibility
+Copula functions to identify the most suitable one. Utilizing the optimal
+                                                                                  under both VRE surplus and drought conditions. Specifically, the up­
+Copula function, the hourly conditional probability density functions for
+                                                                                  ward flexibility demand is higher by 324.6 kW h and 1.89 × 104 kW h,
+wind and PV power output are calculated at a 95 % confidence level.
+                                                                                  respectively.
+These functions are then used to establish sequential uncertainty bounds
+                                                                                      In summary, under the condition that the transmission channel ca­
+for each potential wind and PV power output at every hour. As depicted
+                                                                                  pacity is less than the VRE installed capacity, the flexibility demand
+in Fig. 9, the highest uncertainty in wind and PV power output occurs
+                                                                                  during VRE drought is greater than that during VRE surplus. Under the
+within the 500–2000 MW and 5000–15000 MW ranges, corresponding
+                                                                                  requirement of guaranteed VRE integration, the demand for upward
+to their respective mid-range installed capacity. Furthermore, the wind
+                                                                                  flexibility is greater than that for downward flexibility.
+and PV power output uncertainties exhibit distinct fluctuation patterns.
+Wind power output uncertainties display notches between 14:00 and
+18:00, primarily due to the typical midday reduction in wind output. In           5.3. Influence of different kinds of flexibility demand
+contrast, PV power output uncertainties follow a wavy pattern
+throughout the day, corresponding to the natural day-night cycle.                 5.3.1. Analysis of hydropower system dispatching patterns
+    Then, the hourly demand for power flexibility can be calculated by
+the difference between the transmission channel’s capacity and the in­              (1) Influence of power flexibility
+terval. Regarding time-varying characteristics, as illustrated in Fig. 10
+(a), the demand for power flexibility exhibits a bimodal pattern when                As shown in Fig. 11, which presents the convergence curves of the
+VRE is in surplus. Both upward and downward peaks are concentrated                MED reservoir inflow for two representative days, the modified DPSA
+during 8:00–11:00 and 16:00–18:00, corresponding to the ramping pe­               algorithm reliably achieves convergence by the 4th iteration in both
+riods of PV power. The peak magnitude is approximately 6000 MW                    cases. This result demonstrates that the algorithm ultimately enforces
+
+
+
+
+                                                    Fig. 9. The sequent uncertainty bounds of VRE output.
+
+                                                                             11
+L. Qiao et al.                                                                                                                     Renewable Energy 257 (2026) 124718
+
+
+
+
+                                                 Fig. 10. General time series characteristics of demand for flexibility.
+
+
+                                                                                        during midday 10:00–17:00, synchronizing their power generation cy­
+                                                                                        cles with peak electricity pricing periods. Conversely, Schemes 2 and 3
+                                                                                        implement conservative arbitrage strategies by considering demand for
+                                                                                        flexibility, resulting in reductions of 1044.2 and 6807.0 MW h in the
+                                                                                        system’s day-ahead output, respectively.
+                                                                                            The operational paradigm shift enhances both system reliability and
+                                                                                        economic performance. Regarding reliability metrics, the hierarchical
+                                                                                        progression follows Scheme 1 < Scheme 2 < Scheme 3. The aggressive
+                                                                                        arbitrage strategy employed in Scheme 1 exhausts regulation capacity
+                                                                                        reserves, leaving insufficient margins to accommodate potential VRE
+                                                                                        output reductions. As demonstrated in Fig. 12(b), this operational lim­
+                                                                                        itation manifests as a 3803.6 MW loss of load during real-time sched­
+                                                                                        uling. In contrast, Fig. 12(c)–(d) reveal substantial mitigation of loss of
+                                                                                        load conditions through the incorporation of demand for power flexi­
+                                                                                        bility in Scheme 2. This enhanced configuration facilitates more
+            Fig. 11. Convergence results for typical daily calculations.
+                                                                                        balanced output allocation from TD and MQ in day-ahead scheduling,
+                                                                                        characterized by reduced generation from 18:00–23:00 to ensure suffi­
+the cascade water balance constraint through iterative refinement,
+                                                                                        cient supply of upward power flexibility. Economically, the hierarchy
+confirming the practical effectiveness of the proposed improvements.
+                                                                                        maintains Scheme 1 < Scheme 2 < Scheme 3. Although the day-ahead
+    The scheduling processes of the system during VRE surplus are
+                                                                                        scheduling revenue for Scheme 1 is the highest, reaching 36.8 million
+illustrated in Fig. 12. From an operational perspective, power flexibility
+                                                                                        CNY, it exceeds the 36.4 million CNY of Scheme 2 and the 33.9 million
+predominantly modifies the operational paradigms of reservoirs TD and
+                                                                                        CNY of Scheme 3. However, due to Scheme 1’s lack of sufficient flexi­
+MQ, given their exclusive daily regulation capacity necessitating diurnal
+                                                                                        bility supply for adjustment, the actual benefit decreases to 34.9 million
+replenishment through pumping mechanisms. Scheme 1 imposes no
+                                                                                        CNY, and after considering the penalties for deviations in the power
+flexibility constraints, thereby rendering electricity prices the dominant
+                                                                                        generation, the actual revenue amounts to only 32.6 million CNY. This
+determinant in scheduling TD and MQ operations. These reservoirs
+                                                                                        proves inferior to the real revenue of Scheme 2’s 35.0 million CNY and
+exhibit pumping behavior during nocturnal periods 0:00–7:00, utilizing
+                                                                                        Scheme 3’s 34.2 million CNY when accounting for penalty adjustments.
+low-cost external inputs, while employing zero-cost internal inputs
+                                                                                            The operational patterns of pumped-storage hydropower stations TD
+
+
+                                                                                   12
+L. Qiao et al.                                                                                                            Renewable Energy 257 (2026) 124718
+
+
+
+
+                                            Fig. 12. Schedules under different schemes during a VRE surplus.
+
+
+and MQ during VRE drought conditions exhibit remarkable similarities             becomes imperative to mitigate water spillage risks, leaving TD and MQ
+to those observed during VRE surplus periods. As illustrated in Fig. 13,         solely responsible for system flexibility.
+TD and MQ demonstrate concentrated pumping operations during off-                    The aforementioned operational constraints create a critical supply-
+peak pricing intervals 10:00–17:00, while their power generation ac­             demand mismatch in flexibility regulation during VRE drought sce­
+tivities predominantly cluster within peak pricing periods 18:00–23:00.          narios, characterized by heightened system flexibility demand juxta­
+However, constrained by multiple factors including electricity pricing           posed against constrained flexibility supply. Under these conditions,
+mechanisms and hydrological conditions, the two stations abstain from            even when considering flexibility, the risk of load loss can only be
+pumping operations during 00:00–07:00. This operational strategy                 mitigated, not completely eliminated. A comparative analysis of oper­
+stems from two primary considerations: Firstly, the limited price dif­           ational schemes shows a performance hierarchy during VRE drought in
+ferential between standard and peak pricing periods (ratio of 0.69) fails        terms of both reliability and economic impact, ranked as follows:
+to satisfy the minimum profitability threshold of 0.65 required to offset        Scheme 1 < Scheme 2 < Scheme 3. Scheme 2 and Scheme 3 reduced the
+energy conversion losses. Secondly, during flood season, when MED                loss of load by 1772.4 MW h and 3093.7 MW h, respectively, compared
+reservoir approaches its upper storage limit, priority generation at MED         to Scheme 1, and increased the revenue by 0.47 million CNY and 0.65
+hydropower station (operating continuously at installed capacity)                million CNY, respectively. However, Scheme 2 and Scheme 3 still
+
+                                                                            13
+L. Qiao et al.                                                                                                               Renewable Energy 257 (2026) 124718
+
+
+
+
+                                            Fig. 13. Schedules under different schemes during a VRE drought.
+
+
+experienced a 3420.0 MW h and 2098.7 MW h loss of load, respectively.            becomes the sole upward regulation provider in two scenarios: first,
+This suggests that the policy requiring conventional hydropower to               when TD and MQ operate in pumping mode (typically during
+handle baseload generation during the flood season is not entirely               00:00–07:00 and 10:00–18:00); second, when TD and MQ deplete their
+reasonable. A flexible supply that may come at the cost of some water            storage near the end of operational cycles (22:00–24:00). As a result, in
+wastage could be necessary, and the balance between the two requires             Schemes 1 and 2, the continuous compensation for TD and MQ’s regu­
+further quantitative analysis.                                                   lation deficiencies causes the MED reservoir to prematurely reach dead
+                                                                                 storage levels, resulting in loss of regulation capacity and ultimately
+   (2) Influence of energy flexibility                                           triggering widespread loss of load. As illustrated in Fig. 14(a), during dry
+                                                                                 seasons under Scheme 1, insufficient inflow fails to compensate for
+   The aforementioned analysis has demonstrated the necessity of                 MED’s storage depletion caused by passive output increases in real-time
+considering both power flexibility and energy flexibility from a short-          scheduling, leading to progressive deviation of actual water level tra­
+term perspective, while long-term analysis reveals the strategic signifi­        jectories from planned schedules. During the dry seasons in Scheme 2,
+cance of energy flexibility more distinctly. Given that TD and MQ res­           TD and MQ adopted more conservative arbitrage strategies, which have
+ervoirs only possess daily regulation capacity, the MED reservoir                alleviated the water level deviation to a considerable extent. As
+
+                                                                            14
+L. Qiao et al.                                                                                                             Renewable Energy 257 (2026) 124718
+
+
+
+
+                                         Fig. 14. The long-term MED water level and LOLP in different schemes.
+
+
+illustrated in Fig. 14(b), although the reservoir water level of MED             power generation. Among the various indicators, the Loss of Load
+remained below the planned level due to insufficient replenishment               Probability is the most widely used. However, it serves as the sole
+before the 77th day, the tracking of actual water levels significantly           resource adequacy criterion, representing only a single dimension of risk
+improved with the onset of the flood period. Moreover, as shown in               while neglecting the tail events that may infrequently occur but have
+Fig. 14(c), Scheme 3 successfully maintains MED’s water levels ac­               disproportionately high impacts and costs. Therefore, this study sup­
+cording to planned schedules and achieves significant mitigation for the         plements this indicator by incorporating three dimensions: probability,
+system’s loss of load probability (LOLP).                                        severity, and duration. The corresponding indicators include LOLP,
+    In summary, relying solely on power flexibility not only fails to            Maximum Loss of Load Depth (MLOLD), and Maximum Constant Loss of
+effectively perform daily regulation tasks but also undermines the long-         Load Duration (MCLOLD) [49].
+term sustainability of the hydropower system’s regulation capacity.                 Table 2 presents the risk control effects of different schemes.
+While the scheduling rules that account for both power and energy                Consistent with the conclusions of the typical day analysis, considering
+flexibility are well-founded and achieve high system reliability.                only power flexibility is insufficient. The improvements in the three
+
+5.3.2. Economic and risk performance
+   To elucidate the influence of flexibility on system operation, this           Table 2
+study selects relevant indicators for a quantitative assessment from both        Risk evaluation indicators of the MECS.
+economic and risk perspectives. Economically, annual net profit is                Scheme                       1                2                     3
+chosen as the evaluation criterion to align with the model’s objective            LOLP (%)                     5.26             3.21                  1.82
+function. From a risk perspective, loss of load signifies the imbalance           MLOLD (MW)                   3770             3924                  3327
+between power supply and demand, highlighting potential shortages in              MCLOLD (h)                   5                4                     3
+
+
+                                                                            15
+L. Qiao et al.                                                                                                                       Renewable Energy 257 (2026) 124718
+
+
+indicators of Scheme 2 compared to Scheme 1 are limited or even worse,             Table 4
+with reductions of only 2.05 %, − 154 MW, and 1 h, respectively.                   Benefit and risk evaluation indicators at different levels of significance.
+Scheme 3 further enhances the reliability of system operations, with the                                                                  Significance (%)
+three indicators showing reductions of 3.44 %, 443 MW, and 2 h                                 Indicators
+                                                                                                                            75                  85                 95
+compared to Scheme 1.
+    Table 3 lists the annual economic performance indicators of the                 Net generation (106 MW h)               45.81               45.76              45.61
+                                                                                    Planned net Revenue (108CNY)            123.93              122.94             121.69
+system under different schemes. In terms of horizontal comparison, the              Actual net Revenue (108CNY)             119.15              119.34             119.37
+generation share of each power station under different schemes remains              LOLP (%)                                3.73                2.85               1.82
+relatively unchanged, ordered from low to high as follows: VRE power                MLOLD (MW)                              4157                4084               3327
+stations > MED > TD & MQ, with their generation ratios approximately                MCLOLD (h)                              5                   5                  3
+73:14:13. Vertically, from Scheme 1 to Scheme 3, the generation of each
+power station slightly decreases, and the purchasing amounts for MQ
+and TD pumped-storage power stations also experience a slight reduc­               Table 5
+tion. Consequently, the planned generation revenue of the system de­               Benefit and risk evaluation indicators before and after hydropower retrofit.
+creases sequentially by 0.99 × 108 (0.8 %) and 2.27 × 108 CNY (1.8 %).                                                                           Items
+However, due to fluctuations in VRE output during real-time scheduling                        Indicators
+                                                                                                                              Before retrofit                After retrofit
+and penalties for unsatisfied generation plans, the actual revenues of the
+three schemes exhibit an inversion. Scheme 3 achieves the highest                   Net generation (106 MW h)                 41.08                          45.61
+                                                                                    Planned net revenue (108CNY)              98.36                          121.69
+annual revenue, improving by 1.80 × 108 CNY (1.5 %) and 0.79 × 108                  Actual net revenue (108CNY)               94.30                          119.37
+CNY (0.7 %) compared to Scheme 1 and Scheme 2, respectively.                        LOLP (%)                                  5.50                           1.82
+                                                                                    MLOLD (MW)                                5141                           3327
+5.3.3. Influence of confidence level of VRE forecast uncertainty                    MCLOLD (h)                                4                              3
+    The confidence level of VRE output forecast uncertainty is a pre­
+requisite for schedule, necessitating further investigation to balance
+                                                                                   facility’s ability to provide consistent electricity supply, particularly in
+economic efficiency and safety. Table 4 illustrates the influence of VRE
+                                                                                   the face of increasing penetration of renewable energy sources. The
+output forecast uncertainty at different confidence levels on various
+                                                                                   reversible turbine units’ dual-regulation characteristics are essential in
+benefit and risk indicators. It is evident that as the confidence level in­
+                                                                                   this context, enabling the system to adeptly compensate for the volatility
+creases, net generation and planned net revenue deteriorate, while
+                                                                                   associated with high proportions of renewables. By maintaining stability
+actual net revenue and risk indicators improve. This indicates that the
+                                                                                   with a smaller installed capacity, the retrofit allows for effective load
+reliability and economy of the system can be enhanced in a coordinated
+                                                                                   management and a more resilient power supply.
+manner. Moreover, as the confidence level increases from 75 % to 95 %,
+                                                                                       Overall, the hydropower retrofit not only enhances economic
+the actual net revenue increase corresponding to the reduction in unit
+                                                                                   viability through strategic energy utilization but also strengthens the
+LOLP (compared to Scheme 1) at the three different confidence levels is
+                                                                                   reliability and stability of the power system amidst evolving energy
+1.03 × 108 CNY/%, 0.73 × 108 CNY/%, and 0.52 × 108 CNY/%,
+                                                                                   challenges.
+respectively. This indicates that all indicators demonstrate a certain
+degree of convergence as the level of significance increases.
+                                                                                   6. Conclusion
+
+5.4. Effect of hydropower retrofit                                                     This paper presents a short-term scheduling method designed to
+                                                                                   balance the supply and demand of flexibility in a hydro-wind-PV-storage
+    As Table 5 shows, the hydropower retrofit has resulted in substantial          hybrid energy system, thereby enhancing its performance and opera­
+improvements in both economic performance and risk management.                     tional reliability. The proposed method first quantifies the uncertainty
+Economically, net generation increased by approximately 11 %, and                  intervals of VRE output and the associated power flexibility using the
+actual net revenue climbed by 26.6 %. These gains are largely attributed           Copula function, which allows for more robust and probabilistically
+to enhanced pumped storage capabilities, which allow for more effective            meaningful interval estimation, especially under conditions of sample
+utilization of surplus electricity. By leveraging peak and valley elec­            sparsity, extreme events, and strong correlations. This approach is
+tricity pricing, the facility can engage in arbitrage, optimizing revenue          further compared with traditional empirical methods, and its advan­
+generation during high demand periods while utilizing excess genera­               tages in capturing renewable output uncertainty are discussed in depth.
+tion during low demand times. In terms of risk management, the retrofit            Energy flexibility is then evaluated based on the cumulative power
+significantly improved system reliability, as indicated by the reduction           flexibility, and the relationship between flexibility supply and demand is
+in LOLP from 5.50 % to 1.82 %. This notable decrease enhances the                  integrated into the scheduling process.
+                                                                                       The application of this scheduling method to a real-world case study
+Table 3                                                                            in China demonstrates that flexibility demand from VRE exhibits both
+Power generation and profits of the system in different schemes.                   upward and downward characteristics, with patterns varying according
+  Scheme         Indicators                         MED    MQ&TD     VRE           to the system’s VRE penetration and export limits. Although incorpo­
+                 Generation (106 MW h)              6.71   6.47      34.52
+                                                                                   rating flexibility into the scheduling process leads to more conservative
+                 Purchased electricity (106 MW h)   –      2.64      –             operational decisions and a reduction in planned revenues by 1.8 %, it
+     1
+                 Planned net revenue (108CNY)               123.96                 significantly enhances system reliability by 3.44 % and ultimately in­
+                 Actual net revenue (108CNY)                117.57                 creases 1.5 % actual economic returns by reducing penalties associated
+                 Generation (106 MW h)              6.68   6.05      34.45         with generation shortfalls. Furthermore, a higher confidence level in
+     2
+                 Purchased electricity (106 MW h)   –      1.39      –             VRE output uncertainty, while increasing flexibility demand and
+                 Planned net revenue (108CNY)               122.97                 reducing planned output, effectively mitigates operational risks and
+                 Actual net revenue (108CNY)                118.58
+                                                                                   leads to increased revenue through reduced load-shedding penalties,
+                 Generation (106 MW h)              6.58   5.91      34.42         with the marginal revenue gain converging to 0.52 × 108 CNY for every
+                 Purchased electricity (106 MW h)          1.29
+                                                                                   1 % reduction in LOLP.
+                                                    –                –
+     3
+                 Planned net revenue (108CNY)               121.69
+                 Actual net revenue (108CNY)                119.37                     Despite the promising results, this study has certain limitations. The
+
+
+                                                                              16
+L. Qiao et al.                                                                                                                                       Renewable Energy 257 (2026) 124718
+
+
+analysis is based on hourly scheduling, which is adequate for daily                             [12] X. Yang, T.L. Delworth, L. Jia, N.C. Johnson, F. Lu, C. McHugh, Skillful seasonal
+                                                                                                     prediction of wind energy resources in the contiguous United States, Commun.
+planning but cannot address rapid fluctuations and emergency responses
+                                                                                                     Earth Environ. 5 (2024) 313.
+required at the minute level, particularly under short-duration, disaster-                      [13] L. Bird, D. Lew, M. Milligan, E.M. Carlini, A. Estanqueiro, D. Flynn, et al., Wind and
+inducing extreme weather events such as typhoons or torrential rain­                                 solar energy curtailment: a review of international experience, Renew. Sustain.
+storms. Future work should focus on integrating minute-level dispatch                                Energy Rev. 65 (2016) 577–586.
+                                                                                                [14] International Energy Agency, Managing Seasonal and Interannual Variability of
+and uncertainty modeling for such extreme events. Additionally, the                                  Renewables, 2024.
+results of this study are somewhat conservative due to the rarity of                            [15] Z. Liu, X. He, Balancing-oriented hydropower operation makes the clean energy
+extreme VRE prediction deviations and the strong dependence of the                                   transition more affordable and simultaneously boosts water security, Nature Water
+                                                                                                     1 (2023) 778–789.
+data-driven uncertainty sets on historical data. This highlights the need                       [16] Y.X. Pang, Y.X. He, J. Jiao, H. Cai, Power load demand response potential of
+for further refinement of uncertainty set construction methods to better                             secondary sectors in China: the case of western Inner Mongolia, Energy 192 (2020)
+balance system security and economic performance.                                                    116669.
+                                                                                                [17] Y.L. Wang, Y.W. Li, Y.F. Zhang, M.M. Xu, D.X. Li, Optimized operation of
+                                                                                                     integrated energy systems accounting for synergistic electricity and heat demand
+CRediT authorship contribution statement                                                             response under heat load flexibility, Appl. Therm. Eng. 243 (2024) 122640.
+                                                                                                [18] D. Bogdanov, C. Breyer, North-East Asian super grid for 100% renewable energy
+                                                                                                     supply: optimal mix of energy technologies for electricity, gas and heat supply
+   Liang Qiao: Writing – original draft, Methodology. Qiaofeng Tan:                                  options, Energy Convers. Manag. 112 (2016) 176–190.
+Software. Xin Wen: Writing – review & editing, Supervision, Investi­                            [19] J. Lotze, M. Moser, G. Savvidis, D. Keles, V. Hagenmeyer, The complementary role
+gation. Zhenni Wang: Visualization, Data curation.                                                   of energy system and power grid models: an analysis of the European energy
+                                                                                                     transformation from a holistic perspective, Energy Convers. Manag. 315 (2024)
+                                                                                                     118761.
+Declaration of competing interest                                                               [20] G. Ma, M. Liu, Z. Wang, Y. Zhao, C. Wang, J. Yan, Energy saving and flexibility
+                                                                                                     analysis of combined heat and power systems integrating heat-power decoupling
+    The authors declare that they have no known competing financial                                  technologies in renewable energy accommodation, Energy Convers. Manag. 310
+                                                                                                     (2024) 118487.
+interests or personal relationships that could have appeared to influence                       [21] S. Xu, P. Liu, X. Li, Q. Cheng, Z. Liu, Deriving long-term operating rules of the
+the work reported in this paper.                                                                     hydro-wind-PV hybrid energy system considering electricity price, Renew. Energy
+                                                                                                     219 (2023) 119353.
+                                                                                                [22] C. Ma, L. Liu, Optimal capacity configuration of hydro-wind-PV hybrid system and
+Acknowledgments                                                                                      its coordinative operation rules considering the UHV transmission and reservoir
+                                                                                                     operation requirements, Renew. Energy 198 (2022) 637–653.
+   This work was supported by the National Natural Science Foundation                           [23] M. Zhao, Y. Wang, X. Wang, J. Chang, Y. Chen, Y. Zhou, et al., Flexibility
+                                                                                                     evaluation of wind-PV-hydro multi-energy complementary base considering the
+of China (No. 52479013, No. 52509013), the National Postdoctoral                                     compensation ability of cascade hydropower stations, Appl. Energy 315 (2022)
+Program for Innovation Talents (No. BX20240101) the China Post­                                      119024.
+doctoral Science Foundation (No. 2024M760738), Jiangsu Funding                                  [24] S. Thapa, T. Magee, E. Zagona, Factors that affect hydropower flexibility, Water 14
+                                                                                                     (2022) 2563.
+Program for Excellent Postdoctoral Talent (No. 2024ZB068). Mean­                                [25] J. Zhang, C. Cheng, S. Yu, H. Wu, M. Gao, Sharing hydropower flexibility in
+while, the authors would like to sincerely thank Dr. Jingjie Ma for her                              interconnected power systems: a case study for the China southern power grid,
+invaluable contributions during the revision process, which included                                 Appl. Energy 288 (2021) 116645.
+                                                                                                [26] Q. Tan, Z. Nie, X. Wen, H. Su, G. Fang, Z. Zhang, Complementary scheduling rules
+addressing reviewers’ comments, revalidating the simulation results,
+                                                                                                     for hybrid pumped storage hydropower-photovoltaic power system reconstructing
+and enhancing the manuscript’s clarity and presentation.                                             from conventional cascade hydropower stations, Appl. Energy 355 (2024) 122250.
+                                                                                                [27] X. Huang, C. Ji, J. Zheng, D. Jia, X. Guo, Analysis on reservoir operation efficiency
+Data availability                                                                                    of Baishan hybrid pumped storage power station, J. Hydroelectr. Eng. 29 (2010)
+                                                                                                     145–148+62 (in Chinese).
+                                                                                                [28] H. Tan, Study on the Effect of Operation Dispatch of Panjiakou Reservoir pumped-
+    The data that has been used is confidential.                                                     storage Power Station on Distribution of Nitrogen and Phosphorus in Front of Dam,
+                                                                                                     China Three Gorges University, 2018.
+                                                                                                [29] J. Chen, Construction of Xianghongdian pumped storage power station and
+References                                                                                           application of new technology, Jianghuai Water Resour. Sci. Technol. 1 (2010)
+                                                                                                     22–24.
+ [1] The National Energy Administration Released the National Electricity Industry              [30] G. Li, Z. Han, Principal engineering geological problems in the Shisanling pumped
+     Statistics for 2024, The National Energy Administration, Peking, 2025.                          storage power station, China, Eng. Geol. 76 (2004) 165–176.
+ [2] IEA. Net Zero Roadmap, A Global Pathway to Keep the 1.5 ◦ C Goal in Reach, IEA,            [31] J. Zhong, The beijing-tianjin-tangshang power grid further develops pumped
+     Paris, 2023.                                                                                    storage power stations timing analysis and opinions, Techn. Supervis. Water
+ [3] M. Kyesswa, H. Çakmak, U. Kühnapfel, V. Hagenmeyer, Dynamic modelling and                       Resour. 1 (2003) 42–45.
+     control for assessment of large-scale wind and solar integration in power systems,         [32] Z. Jing, Y. Wang, J. Chang, X. Wang, A. Guo, X. Meng, Construction of pumped
+     IET Renew. Power Gener. 14 (2020) 4010–4018.                                                    storage power stations among cascade reservoirs to support the high-quality power
+ [4] Z. Dong, H. Ding, X. Yu, D. Zhou, Analyzing the dynamic effect of energy                        supply of the hydro-wind-photovoltaic power generation system, Energy Convers.
+     endowment-demand distortion on sustainable development: insights from China’s                   Manag. 323 (2025) 119239.
+     regional disparity, J. Environ. Manag. 366 (2024) 121647.                                  [33] C. Ju, T. Ding, W. Jia, C. Mu, H. Zhang, Y. Sun, Two-stage robust unit commitment
+ [5] S. Rehman, L.M. Al-Hadhrami, M.M. Alam, Pumped hydro energy storage system: a                   with the cascade hydropower stations retrofitted with pump stations, Appl. Energy
+     technological review, Renew. Sustain. Energy Rev. 44 (2015) 586–598.                            334 (2023) 120675.
+ [6] M. He, S. Han, Y. Gao, Z. Zhao, D. Chen, M. Deng, Exploring the impact of three            [34] L. Si, P. Wang, D. Cao, Towards sustainable development goals: assessment of wind
+     representative pumped storage retrofits on the economic-technical-energy                        and solar potential in northwest China, Environ. Res. 252 (2024) 118660.
+     efficiency of cascaded hydropower-VRE hybrid systems, Energy Convers. Manag.               [35] L. Hou, J. Yang, C. Ji, M. Liu, W. Fang, Z. Ma, et al., Water scarcity assessment of
+     322 (2024) 119107.                                                                              hydropower plants in China under climate change, sectoral competition, and
+ [7] B. Luo, X. Liu, Y. Chen, C. Zhou, X. Long, Short-term peak shaving model of cascade             energy expansion, Environ. Sci. Technol. 58 (2024) 10536–10547.
+     hybrid pumped storage hydropower station retrofitted from conventional                     [36] J. Zhang, C. Cheng, S. Yu, J. Shen, X. Wu, H. Su, Preliminary feasibility analysis for
+     hydropower, Int. J. Electr. Power Energy Syst. 162 (2024) 110226.                               remaking the function of cascade hydropower stations to enhance hydropower
+ [8] Z. Wang, Q. Tan, X. Wen, H. Su, G. Fang, H. Wang, Capacity optimization of                      flexibility: a case study in China, Energy 260 (2022) 125163.
+     retrofitting cascade hydropower plants with pumping stations for renewable                 [37] China Renewable Energy Engineering Institute, China Renewable Energy
+     energy integration: a case study, Appl. Energy 377 (2025) 124429.                               Development Report 2023, China Renewable Energy Engineering Institute, Beijing,
+ [9] O.M. Babatunde, J.L. Munda, Y. Hamam, Power system flexibility: a review, Energy                2024.
+     Rep. 6 (2020) 101–106.                                                                     [38] The National Energy Administration, The National Energy Administration Released
+[10] S. Impram, S. Varbak Nese, B. Oral, Challenges of renewable energy penetration on               the 2023 National Power Industry Statistics, The National Energy Administration,
+     power system flexibility: a survey, Energy Strategy Rev. 31 (2020) 100539.                      2024.
+[11] X. Zhao, Y. Wang, C. Liu, G. Cai, W. Ge, B. Wang, et al., Two-stage day-ahead and          [39] Z. Ming, P. Lilin, F. Qiannan, Z. Yingjie, Trans-regional electricity transmission in
+     intra-day scheduling considering electric arc furnace control and wind power                    China: status, issues and strategies, Renew. Sustain. Energy Rev. 66 (2016)
+     modal decomposition, Energy 302 (2024) 131694.                                                  572–583.
+                                                                                                [40] F. Boffa, V. Pingali, F. Sala, Strategic investment in merchant transmission: the
+                                                                                                     impact of capacity utilization rules, Energy Policy 85 (2015) 455–463.
+
+
+                                                                                           17
+L. Qiao et al.                                                                                                                                  Renewable Energy 257 (2026) 124718
+
+[41] E. Bouyé, V. Durrleman, A. Nikeghbali, G. Riboulet, T. Roncalli, Copulas for            [47] Northwest China energy regulatory bureau of national energy administration of the
+     Finance - a Reading Guide and Some Applications, March 7, 2000.                               People’S Republic of China. Notice of the northwest China energy regulatory
+[42] R.B. Nelsen, An Introduction to Copulas, Springer, 2006.                                      bureau of national energy administration on printing and distributing the
+[43] J. Zhang, L. Gan, C. Cheng, G. Li, X. Li, Z. Zhao, et al., Quantification and                 implementation rules for the management of grid-connected operation of electric
+     promotion of hydropower flexibility with large-scale wind and solar power                     power in the northwest region and the implementation rules for the administration
+     incorporated into grid, Power Syst. Technol. 44 (2020) 3227–3239.                             of electric power ancillary services in the northwest region, in: Northwest China
+[44] S. Han, Y. Yuan, M. He, Z. Zhao, B. Xu, D. Chen, et al., A novel day-ahead                    Energy Regulatory Bureau of National Energy Administration of the People’s
+     scheduling model to unlock hydropower flexibility limited by vibration zones in               Republic of China, 2023 (Government document, in Chinese).
+     hydropower-variable renewable energy hybrid system, Appl. Energy 356 (2024)              [48] O. Nilsson, D. Sjelvgren, Hydro unit start-up costs and their impact on the short
+     122379.                                                                                       term scheduling strategies of Swedish power producers, IEEE Trans. Power Syst. 12
+[45] Z.N. Wang, G.H. Fang, X. Wen, Q.F. Tan, P. Zhang, Z.H. Liu, Coordinated operation             (1997) 38–44.
+     of conventional hydropower plants as hybrid pumped storage hydropower with               [49] Energy Systems Integration Group. New resource adequacy criteria for the energy
+     wind and photovoltaic plants, Energy Convers. Manag. 277 (2023) 116654.                       transition: modernizing reliability requirements, 2024. Reston, VA.
+[46] R.E. Larson, A.J. Korsak, A dynamic programming successive approximations
+     technique with convergence proofs, Automatica 6 (1970) 245–252.
+
+
+
+
+                                                                                         18
+

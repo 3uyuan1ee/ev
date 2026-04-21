@@ -42,9 +42,9 @@ const chartOption = computed(() => {
         const c = sorted[idx]
         return `<strong>${c.country}</strong><br/>
           ${t('chart.gridTooltipAdvantage')}: <strong>${c.evCarbonAdvantage}%</strong><br/>
-          ${t('chart.gridTooltipCO2')}: ${c.gridCO2PerKwh} kg/kWh<br/>
-          ${t('chart.gridTooltipEnergy')}: ${c.avgEnergyConsumptionKwh} kWh/100km<br/>
-          ${t('chart.gridTooltipReduction')}: ${c.co2ReductionMt} Mt/year`
+          ${t('chart.gridTooltipGridCO2')}: ${c.gridCO2PerKwh} kg/kWh<br/>
+          ${t('chart.gridTooltipEnergyUse')}: ${c.avgEnergyConsumptionKwh} kWh/100km<br/>
+          ${t('chart.gridTooltipCO2Reduction')}: ${c.co2ReductionMt} Mt/year`
       }
     },
     grid: {

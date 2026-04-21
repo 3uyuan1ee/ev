@@ -1,0 +1,1114 @@
+                                                                    Renewable Energy 256 (2026) 124403
+
+
+                                                                 Contents lists available at ScienceDirect
+
+
+                                                                      Renewable Energy
+                                                        journal homepage: www.elsevier.com/locate/renene
+
+
+
+
+Closed-loop corrective EV demand response with composite customer
+directrix load for renewable energy accommodation in
+distribution networks
+Jianping Yang a , Yue Xiang a,b,* , Zhiyuan Tang a , Shenxi Zhang c , Zechun Hu d
+a
+  College of Electrical Engineering, Sichuan University, Chengdu, China
+b
+  Clean Energy Power Systems and Equipment Key Laboratory of Sichuan Province, Chengdu, China
+c
+  Department of Electrical Engineering, Shanghai Jiao Tong University, Shanghai, China
+d
+  Department of Electrical Engineering, Tsinghua University, Beijing, China
+
+
+
+
+A R T I C L E I N F O                                   A B S T R A C T
+
+Keywords:                                               With the increasing penetration of renewable energy sources (RES) in distribution network, the coordination of
+Renewable energy source                                 demand-side electric vehicle (EV) becomes crucial for RES accommodation. By introducing the concept of
+Electric vehicle                                        customer directrix load, this paper proposes a novel closed-loop corrective strategy to enhance the effectiveness
+Demand response
+                                                        of EV demand response. Firstly, a robust composite customer directrix load (CCDL) model is constructed to
+Customer directrix load
+Deviation correction
+                                                        enhance resilience against uncertainties in EV responses, which integrates control characteristics and response
+                                                        fluctuations to provide tailored full-time guidance for heterogeneous EVs. On the basis, considering that the
+                                                        implementation of demand response is a sequential coupled process, a closed-loop correction mechanism is
+                                                        further proposed to facilitate the multi-stage coordination across RES prediction, CCDL optimization, and de­
+                                                        viation feedback. By developing a direction-aware combined prediction model to cope with asymmetric pre­
+                                                        diction effects, and designing a policy-based gradient descent method for closed-loop refinement, the proposed
+                                                        mechanism enables self-correction against uncertain deviations for demand response implementation. Numerical
+                                                        comparison using real-world case demonstrates that the constructed CCDL model could effectively promote the
+                                                        EV-coordinated RES accommodation, while the proposed deviation correction mechanism can improve the de­
+                                                        mand response accuracy by 17.88 % over traditional sequential mode.
+
+
+
+ABBREVIATIONS
+                                                                                            1. Introduction
+
+    RES      Renewable energy sources        PV        Photovoltaic
+                                                                                                With the increasing penetration of renewable energy source (RES),
+    EV       Electric vehicle                TOU       Time-of-use
+    DR       Demand response                 CPL       Customer primary load                the limited regulation capability on the supply side poses significant
+    CS       Charging station                TRL       TOU-based response load              challenge to RES accommodation in distribution network [1]. Consid­
+    DC/      Direct current/Alternating      PO        Primary output of                    ering the flexible and controllable charging behavior of electric vehicle
+      AC     current                                   photovoltaic                         (EV), the coordination of charging loads in demand side presents sig­
+    CDL      Customer directrix load         TO        TOU-based output of
+                                                       photovoltaic
+                                                                                            nificant potential to promote the consumption of renewable energy
+    CCDL     Composite customer directrix    RO        Regulated output of                  [2–4].
+             load                                      photovoltaic                             In recent years, a series of studies have been carried out on the
+    ISO      Independent system operator     MAE       Mean absolute error                  participation of EVs in demand response (DR). In Ref. [5], an optimal
+    LSTM     Long short-term memory          RMSE      Root mean squared error
+                                                                                            charging model is established to minimize the volatility indexes and
+             network
+                                                                                            charging costs, while EVs are modeled as demand-responsive loads by
+                                                                                            introducing stochastic dynamic pricing. In Ref. [6], a stochastic receding
+
+
+
+    This article is part of a special issue entitled: DRES published in Renewable Energy.
+    * Corresponding author. College of Electrical Engineering, Sichuan University, Chengdu, China.
+      E-mail address: xiang@scu.edu.cn (Y. Xiang).
+
+https://doi.org/10.1016/j.renene.2025.124403
+Received 15 May 2025; Received in revised form 4 September 2025; Accepted 15 September 2025
+Available online 16 September 2025
+0960-1481/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+J. Yang et al.                                                                                                                Renewable Energy 256 (2026) 124403
+
+
+horizon approach has been proposed to manage EV charging station (CS)             effectiveness of demand response. The major works are summarized as
+participating in DR programs, which suggests that CS can contribute to            follows.
+the local demand-supply balance by suitably shifting loads. Considering
+the time-varying demand response mechanism, a deep reinforcement                  1) To deal with the charging characteristics of heterogeneous EVs, a
+learning-based charging strategy for CS is proposed in Ref. [7], which               robust composite customer directrix load (CCDL) model is first
+can smooth the charging load profile and alleviate the pressure on the               constructed, in which the charging load is represented as a combi­
+power grid. To enable intelligent energy scheduling and trading in smart             nation of continuous and discrete components. By integrating AC
+cities, a contract-based incentive-compatible DR mechanism is proposed               network constraints and demand-side uncertainty sets, the CCDL
+for the internet of EVs in Ref. [8], where various contract items are                optimization is formulated as a two-stage robust process to enhance
+tailored for the unique characteristics of EV types. The traditional                 resilience against the EV response fluctuations.
+price-based or incentive-based demand response methods do provide                 2) Considering the coupled effects of deviation propagation, a closed-
+some degree of load guidance. However, several challenges arise in                   loop mechanism is further proposed based on the CCDL model,
+practical implementation: 1) Solely price signals often prove inadequate             where a direction-aware prediction model is developed to cope with
+for directing user behavior, while these signals only indicate the direc­            the asymmetric prediction effects, and a policy-based gradient
+tion of adjustment (increase or decrease in load), without conveying                 method is designed to quantify decision deviations and realize
+specific magnitude of the required adjustment, which may lead to                     closed-loop refinement. By facilitating the multi-stage coordination
+insufficient or excessive load regulation. 2) Contribution evaluation                across RES prediction, CCDL optimization and deviation feedback,
+faces obstacles as conventional methods rely on historical non-response              the proposed mechanism could leverage the implementation de­
+period data to establish baselines. With demand response becoming                    viations to inform corrective actions and enable more effective de­
+routine, such reference data becomes unavailable, making it difficult to             mand response implementation.
+quantify actual response and limiting the scalability of these traditional
+approaches.                                                                          The rest of the paper is organized as follows: Section 2 introduces the
+    To address the aforementioned issues, some literature has proposed a          basic concept and workflow of CDL-based demand response. Section 3
+new-type DR mechanism based on customer directrix load (CDL) [9–11].              presents the constructed robust CCDL model. Section 4 describes the
+It defines the ideal load profile that can effectively smooth the fluctua­        details of proposed closed-loop deviation correction mechanism. Section
+tions of uncontrollable generation and consumption as CDL. In Ref. [12],          5 provides numerical comparisons using real-world network. The con­
+the ability of large-scale users to participate in CDL-based response has         clusions are summarized in Section 6.
+been validated, showing that compared with traditional price-based and
+incentive-based responses, the CDL can promote full-time load partici­            2. The workflow of CDL-based demand response
+pation. To better incorporate network constraints, the nodal customer
+directrix load has been further introduced [13], which enable more                   The CDL-based demand response takes the load shape as guiding
+accurate and location-aware load guidance. Overall, the new-type                  signal, which can be obtained by ignoring the magnitude from the load
+mechanism exhibits strong research potential and feasibility. Howev­              profile. Let Pev,k (t) denote the load profile at bus k, then the load shape
+er, its application for facilitating EV demand response within distribu­          can be described as:
+tion network still calls for in-depth investigation.
+                                                                                                 (         ) Pev,k (t)
+    From the perspective of CDL modeling, it is necessary to further              Lpri,k (t) = fu Pev,k (t) =                                               (1)
+integrate the charging characteristics with response fluctuations.
+                                                                                                              D ev,k
+Different from conventional loads, the response of electric vehicles                         ∑
+manifest as a hybrid of discrete and continuous forms due to the                  D ev,k =    Pev,k (t)                                                     (2)
+                                                                                             t∈T
+charging pile control logic, which may demonstrate varying control
+characteristics and response fluctuations under nonlinear network                 where Lpri,k (t) denotes the load shape. fu ( ⋅) indicates a per-unitization
+constraints. However, most existing CDL models fail to account for the            function. D ev,k represents the total demand over the time period T. On
+discrete feature, and network constraints are often simplified using DC           the basis, CDL is defined as the desired load profile with a load shape
+power flow approximations, which limits their effectiveness in guiding            that can effectively smooth the fluctuations of uncontrollable generation
+and constraining EV responses.                                                    and consumption from system-level perspective. By issuing the CDL as
+    From the perspective of CDL deployment, the coordinated deviation             reference target for demand response, customer adjustments can be
+management is absent to support the effective implementation of de­               guided toward a system-friendly direction.
+mand response. In scenarios with high RES penetration, the day-ahead                  As shown in Fig. 1, the basic operation process of CDL-based demand
+predictions often lack stability. Combined with the response fluctua­             response can be summarized as several steps. Firstly, on the day-ahead
+tions of EVs, there could be even more complex and coupled response               basis, the independent system operator (ISO) collects and predicts
+deviations. Traditional approaches to handling uncertain deviation in             power flow injections (e.g., renewable energy sources) to identify the
+optimization typically focus on developing more accurate prediction               supply-demand fluctuations. And then, the power flow optimization
+model [14–16] or enhancing the robustness of optimization process                 considering objectives such as renewable energy accommodation is
+through numerical techniques [17–20]. However, during the sequential              performed based on the predicted information to derive the desired load
+demand response process, CDL is derived from predicted power in­                  profiles, referred to as the CDL profiles. Sequentially, the CDL profiles
+jections and subsequently sent to customers for autonomous response.              and corresponding allowable deviation bounds are published to the
+The multi-stage coupled process may allow originally slight errors to             customers, serving as the guidance for electricity consumption. On the
+lead to significant deviations after interaction. This makes it inefficient       following day, customers reshape load profiles within the scope of their
+to manage deviation solely through prediction or optimization                     flexibility to track the CDL with possible deviations, accordingly alle­
+robustness.                                                                       viating supply-demand fluctuations. After the DR event, the ISO evalu­
+    In summary, the current approaches do not sufficiently consider the           ates the similarity between the actual load and the CDL, and determines
+control characteristics of charging loads and overlook the coupled                incentives through cashback or bill discounts [21].
+impact of sequential demand response process, making it difficult to                  Compared with traditional demand response, the CDL enables the
+achieve the expected results. In this regard, this paper proposes a novel         effective articulation of full-time regulation objectives, which signifi­
+closed-loop corrective EV demand response strategy, which enables                 cantly enhances the flexibility of distributed resource responses.
+multi-stage coordinated deviation correction to enhance the
+
+                                                                              2
+J. Yang et al.                                                                                                                                                      Renewable Energy 256 (2026) 124403
+
+
+
+
+                                                                                 Fig. 1. Conceptual diagram of CDL.
+
+
+Considering the increasing penetration of RES in distribution network,                                    ∑                              ∑
+                                                                                                                   Qij,t − xij Iij,t =        Qjk,t − QL,j,t                                    (3d)
+the CDL-based charging load management holds strong potential for                                         i∈f(j)                         k∈s(j)
+facilitating RES accommodation. However, as shown in its workflow,
+there are two sources of deviation that may affect the effectiveness of                                                  (                     ) (           )             ⃒
+                                                                                                                                                                           ⃒
+                                                                                                          Uj,t = Ui,t − 2 rij Pij,t + xij Qij,t + rij2 + x2ij Iij,t ∀(i, j)⃒ij ∈ Ψ b             (3e)
+CDL-based demand response implementation: one is the ISO prediction
+deviation of power flow injection information, and the other is the                                       ⃦                                      ⃦
+                                                                                                          ⃦ 2Pij,t       2Qij,t     Iij,t − Ui,t ⃦ ≤ Iij,t + Ui,t                                (3f)
+customer response deviation with respect to CDL. In particular, the
+prediction deviation affects the calculation of CDL, which in turn in­                                    (     )2         (     )2
+fluences customer responses. These coupled deviations jointly influence                                    Umin    ≤ Ui,t ≤ Ui,t
+                                                                                                                             max
+                                                                                                                                    ∀i ∈ NB                                                      (3g)
+                                                                                                            i,t
+the overall response outcome, highlighting the importance of multi-
+stage coordination in the sequential demand response process for                                          (      )2          (      )2        ⃒
+                                                                                                                                              ⃒
+effective implementation.                                                                                  Iij,t
+                                                                                                            min
+                                                                                                                    ≤ Iij,t ≤ Iij,t
+                                                                                                                               max
+                                                                                                                                       ∀(i, j)⃒ij ∈ Ψ b                                         (3h)
+
+3. Robust CCDL modeling with consideration of control                                                      R,j ≤ PR,j,t ≤ P R,j,t ∀j ∈ NR
+                                                                                                          Pmin            ̂                                                                      (3i)
+characteristics
+                                                                                                          0 ≤ Lcdl,k,t ≤ 1          ∀k ∈ NEV                                                     (3j)
+    Considering the heterogeneous control characteristics and response
+fluctuations of charging loads, a robust CCDL model is firstly proposed in                                where P ̂ R,j,t , PR,j,t denote the predicted and scheduled output of RES. cR
+this section to enhance the flexibility from demand side.                                                 represents the unit cost of RES curtailment. Lcdl,k,t indicates CDL value at
+                                                                                                          bus k. Lpri,k,t denotes the per-unitization value of primary charging load
+3.1. CCDL model comprising continuous and discrete components                                             profile at bus k. cpenalty is a sufficiently small penalty coefficient used to
+                                                                                                          ensure the uniqueness of the solution. P*con,k,t , P*dis,k,t represent the
+    As we all know, the participation of charging loads in demand                                         continuous and discrete components of the CDL. D ev,k is the total
+response essentially relies on regulating charging power through                                          charging load at bus k during period T. μunit
+                                                                                                                                                   k,d,t is the adjustment threshold
+charging piles. Depending on the control characteristics of the charging
+                                                                                                          for the d-th type of discrete charging load. zk,d,t is an integer variable.
+piles, two types of control modes may exist: continuous control and
+                                                                                                          PL,j,t represents the conventional load at bus j. Ui,t and Iij,t are the square
+discrete control. Continuous control allows charging power to be
+                                                                                                          of voltage magnitude and current; Pij,t and Qij,t are the active and reac­
+adjusted within a specified range, whereas discrete control permits only
+                                                                                                          tive power of branches; rij and xij are the resistance and reactance of
+binary states, either connecting or disconnecting. This control charac­
+teristics lead the charging load participating in demand response exhibit                                 branch ij. NB represents the bus set. NR and NEV indicate the RES access
+a composite form comprising both continuous component and discrete                                        set and EV access set. ND represent the set of discrete load types. T and
+component, where the discrete adjustment thresholds are related to the                                    Ψ b are the set of operation periods and network branches. Eq. (3b) en­
+power ratings of corresponding charging piles. To better exploit the                                      sures that the total demand of customer remains unchanged, with only a
+response potential of heterogeneous customers, the proposed CCDL                                          temporal shift occurring over the period. Eqs. (3c)-(3h) represent the
+model for EVs is constructed as:                                                                          DistFlow model for AC network constraints. Eq. (3i) imposes constraint
+    (                                                                    )                                on the output range of RES. Eq. (3j) specifies upper and lower bounds of
+       ∑∑ (                      )           ∑ ∑(                     )2                                  CDL in each time period.
+min           cR P R,j,t − PR,j,t + cpenalty
+                 ̂                                Lpri,k,t − Lcdl,k,t      (3a)                                By modeling the charging load as a composite form comprising both
+          j∈NR t∈T                                          k∈NEV t∈T
+                                                                                                          continuous and discrete components, the EV responsive customers
+                                                                                                          composed of heterogeneous loads can be effectively accommodated.
+             P*con,k,t + P*dis,k,t *           ∑                   ∑
+Lcdl,k,t =                        , Pcon,k,t =     zk,d,t μunit
+                                                           k,d,t ,     Lcdl,k,t = 1 ∀k ∈ NEV              This enables more accurate CDL estimation tailored to distinct charging
+                    D ev,k                     d∈N      D          t∈T                                    behaviors, and allows for the design of targeted control and constraint
+                                                                                           (3b)           strategies that align with the operational characteristics.
+∑                           ∑
+      Pij,t − rij Iij,t =            Pjk,t + PR,j,t − D ev,j Lcdl,j,t − PL,j,t                 (3c)
+i∈f (j)                     k∈s(j)
+
+
+
+
+                                                                                                      3
+J. Yang et al.                                                                                                                                               Renewable Energy 256 (2026) 124403
+
+
+3.2. Robust model transformation considering response fluctuations                         ⎧    [                                          ]T
+                                                                                           ⎪
+                                                                                           ⎪ x = Lcdl,k,t , P*con,k,t , P*dis,k,t , zk,d,t
+                                                                                           ⎪
+   Based on the proposed CCDL architecture, the uncertainty set of                         ⎨    [                      ]T
+                                                                                             u = LΔ1,k,t , LΔ2,k,t                                                                       (11)
+heterogeneous charging load responses is constructed to characterize                       ⎪
+                                                                                           ⎪    [                                                            ]T
+                                                                                           ⎪
+the fluctuation in customer response. Firstly, the response fluctuation is                 ⎩
+                                                                                             y = Ui,t , Iij,t , Pij,t , Qij,t , PR,j,t , Pres
+                                                                                                                                          con,k,t , Pdis,k,t
+                                                                                                                                                     res
+
+defined as follows:
+LΔ,k,t = LΔ1,k,t + LΔ2,k,t                                                      (4)        In (10b), the first row is associated with constraints (3b)-(3e), (4)–(5),
+                                                                                           and (8); the second row pertains to the second-order cone constraint
+            Pres
+             con,k,t − Pcon,k,t
+                         *
+                                            Pres
+                                             dis,k,t − Pdis,k,t
+                                                         *                                 (3f); the third row refers to the inequality constraint (3j); the fourth row
+LΔ1,k,t =                       , LΔ2,k,t =                                     (5)        is linked to the inequality constraints (3g)-(3i); and the fifth row ad­
+                  D ev,k                          D ev,k
+                                                                                           dresses the inequality constraints (6)–(7).
+where LΔ,k,t represents the total fluctuation between the actual load                          The formulation in (10) exactly presents a two-stage optimization
+profile and the CDL profile at bus k. LΔ1,k,t , LΔ2,k,t denote the fluctuations            process, which can be further decomposed into a master problem and a
+of the continuous and discrete components. Pres                 res                        subproblem. The master problem can be expressed as:
+                                                     con,k,t , Pdis,k,t indicate the
+response values of the continuous and discrete charging load. For a                        minA                                                                                         (12a)
+                                                                                           xl ,yn
+response to be considered valid, the fluctuation from the expected
+behavior is required to remain within a predefined tolerance range:                             ⎧
+                                                                                                ⎪
+                                                                                                ⎪                         T
+Lmin                                                                                              A ≥ cTpenalty x(l) Λx(l) + cT y(n)
+ Δ,k,t ≤ LΔ,k,t ≤ LΔ,k,t     ∀k ∈ NEV                                           (6)
+                   max                                                                          ⎪
+                                                                                                ⎪
+                                                                                                ⎪
+                                                                                                ⎪
+                                                                                                ⎪
+                                                                                                ⎪
+                                                                                                ⎪
+                                                                                                ⎪ Ax(l) + By(n) + Du̇(l) = m
+   By distinguishing the continuous and discrete components, this                               ⎪
+                                                                                                ⎪
+                                                                                                ⎨⃦        ⃦
+                                                                                                  ⃦Ey(n) ⃦ ≤ aT y(n)
+range can be further to impose more precise constraints on diverse                         s.t.            2                                                                            (12b)
+                                                                                                ⎪ Fx        f
+charging behaviors:                                                                             ⎪
+                                                                                                ⎪
+                                                                                                ⎪
+                                                                                                     (l)
+                                                                                                         ≤
+                                                                                                ⎪
+                                                                                                ⎪
+                                                                                                ⎪
+                                                                                                ⎪ Gy (n)
+                                                                                                         ≤   g
+Lmin
+ Δ1,k,t ≤ LΔ1,k,t ≤ LΔ1,k,t , LΔ2,k,t ≤ LΔ2,k,t ≤ LΔ2,k,t ∀k ∈ NEV
+                     max       min                 max
+                                                                                (7)             ⎪
+                                                                                                ⎪
+                                                                                                ⎪
+                                                                                                ⎩ ∀n ∈ {1, 2, …, l}
+                                                                                                ⎪
+
+where Lmax       min
+       Δ1,k,t , LΔ1,k,t denote the lower and upper fluctuation bounds in
+the continuous component, while Lmax       min
+                                 Δ2,k,t , LΔ2,k,t characterize the fluctu­
+                                                                                           where A represents the auxiliary variable indicating the lower bound of
+ation bounds in the discrete component. Since customers in CDL-based                       the original problem; x(l) represents the master problem variables at the
+demand response only reschedule their electricity usage, with no                           l-th iteration. u̇(l) indicates the value of the uncertain u under the worst-
+change in the overall consumption, the response fluctuation shall satisfy                  case conditions passed from the subproblem. y(n) represents the added n-
+the following condition:                                                                   th subproblem variable. The subproblem can be expressed as the
+T                    T
+                                                                                           formulation in (13):
+∑                    ∑
+      LΔ1,k,t = 0,         LΔ2,k,t = 0 ∀k ∈ NEV                                 (8)
+t=1                  t=1
+                                                                                           maxmincT y(n)                                                                                (13a)
+                                                                                            u∈Γ     y(n)
+
+    Accordingly, the range of charging load response fluctuation ac­                           ⎧ (l)
+counting for response uncertainty can be expressed as:                                          Aẋ +⃦ By(n) + Du = m →λ1
+                                                                                               ⎨⃦
+     {              ⃒                       }                                              s.t. ⃦Ey(n) ⃦2 ≤ aT y(n)   →λ2 , λ3                                                          (13b)
+Γ k = LΔ1,k , LΔ2,k ⃒(4), (5), (6), (7), (8)                     (9)                           ⎩ (n)
+                                                                                                Gy ≤ g                →λ4
+
+where LΔ1,k and LΔ2,k are the response fluctuation vectors, and Γ k de­                    where ẋ(l) is the value of the variable x passed from the master problem
+notes the uncertainty set.                                                                 in the l-th iteration; λ1 , λ2 , λ3 , and λ4 are the dual variables corre­
+    To pursue effective charging load guidance under response fluctua­                     sponding to the respective constraints. Since the penalty term
+tions, we take (3) and (9) to formulate the CCDL model as a robust
+                                                                                           cTpenalty xΛxT in the master problem is sufficiently small, it does not affect
+optimization problem, where LΔ1,k,t and LΔ2,k,t are treated as random
+                                                                                           the strong correlation between the objective functions of the master and
+variables. For ease of notation, the model is rewritten in a compact form
+                                                                                           subproblems. The max-min subproblem shown in (13) is a bi-level sec­
+as follows:
+                                                                                           ond-order cone optimization problem. Given that the inner minimiza­
+    {                              }
+min cTpenalty xΛxT + max min cT y                                   (10a)                  tion problem with respect to the variable ẋ(l) can be transformed into a
+  x                          u∈Γ y∈Ω(x,u)                                                  maximization problem based on strong duality theory, it can thus be
+    ⎧                                                                                      merged with the outer maximization problem into a single-level
+    ⎪
+    ⎪ Ax + By + Du = m                                                                     problem:
+    ⎪
+    ⎨ ‖Ey‖2 ≤ aT y
+    ⎪
+                                                                                                [                                   ]
+                                                                                                       (     )T
+s.t. Fx ≤ f                                                                  (10b)         max mT λ1 − Aẋ(l) λ1 − uT DT λ1 + gT λ4                            (14a)
+    ⎪
+    ⎪
+    ⎪
+    ⎪ Gy ≤ g                                                                               u∈Γ,λe
+    ⎩
+      Hu ≤ h
+                                                                                                  ⎧                 ∑
+                                                                                                                    Θ
+                                                                                                                      ( T               )
+                                                                                                  ⎪
+                                                                                                  ⎪ BT λ1 + GT λ4 +    Ei λ2,i + ai λ3,i = c
+where c is the coefficient column vector associated with the objective                            ⎪
+                                                                                                  ⎨
+                                                                                                                            i=1
+function (3a); Λ, A, B, D, E, F, G and H represent the coefficient matrices                s.t.     ⃦ ⃦                                                                                 (14b)
+                                                                                                  ⎪
+                                                                                                  ⎪ ⃦λ ⃦ ≤ λ3,i , ∀i ∈ Θ
+for the respective constraints; a, m, f, g and h are the corresponding                            ⎩ 2,i 2
+                                                                                                  ⎪
+constant column vectors. x, u, and y indicate the optimization variables,                           λ1 free, λ4 ≤ 0
+with the specific expressions given as:
+                                                                                           where Θ denotes the set of second-order cone constraints. Considering
+                                                                                           the bilinear terms uT DT λ1 exist in (14a), a further relaxation is applied
+                                                                                           following the method proposed in Ref. [22]:
+
+
+
+
+                                                                                       4
+J. Yang et al.                                                                                                                          Renewable Energy 256 (2026) 124403
+
+         [                                               ]
+max mT λ1 −
+                 (         )T
+                     Aẋ(l) λ1 + gT λ4 − κ+ λ1 − κ− λ1                          (15a)       correction.
+u∈Γ,λe                                                                                          As shown in Fig. 2, the prediction, optimization, and feedback pro­
+     ⎧                                                                                      cess work collaboratively in the proposed mechanism. In the prediction
+     ⎪
+     ⎪
+     ⎪ δ+,t + δ− ,t ≤ 1                                                                     process, a variable-weight combined prediction model is established to
+     ⎪
+     ⎪
+     ⎪
+     ⎪ ∑ T
+             (               )                                                              cope with asymmetric prediction effects, which takes historical data as
+     ⎪
+     ⎪
+     ⎪
+     ⎪
+     ⎪         δ+,t + δ− ,t ≤ Π ≤ T                                                         input and outputs an optimization-oriented RES prediction. In the
+     ⎪
+     ⎪
+     ⎪
+     ⎪
+        t=1                                                                                 optimization process, the RES prediction is fed into the CCDL model to
+     ⎪
+     ⎪
+     ⎪
+     ⎪ − δ+,t M ≤ κ+,t ≤ δ+,t M                                                             obtain the CDL profile. The details are introduced in Section 3. In the
+     ⎪
+     ⎪
+     ⎪
+     ⎪
+     ⎪ − δ− ,t M ≤ κ− ,t ≤ δ− ,t M                                                          feedback process, the decision deviations between the obtained and
+     ⎪
+     ⎨
+          T T
+                       (            )                       (        )                      ideal CDL are evaluated from a post-assessment perspective, which are
+s.t.   u t D λ1,t −       1 − δ+,t M ≤ κ+,t ≤ ut T DT λ1,t + 1 − δ+,t M        (15b)
+     ⎪
+     ⎪                 (            )                       (        )                      subsequently fed back to the prediction process, thereby forming a
+     ⎪
+     ⎪
+     ⎪ ut T DT λ1,t − 1 − δ− ,t M ≤ κ− ,t ≤ ut T DT λ1,t + 1 − δ− ,t M                      beneficial closed loop. Since the CCDL model is not readily differen­
+     ⎪
+     ⎪
+     ⎪
+     ⎪
+     ⎪
+     ⎪                        ∑ Θ
+                                   ( T               )                                      tiable, making it difficult to compute the gradient of the objective
+     ⎪
+     ⎪
+     ⎪ BT λ1 + GT λ4 +              Ei λ2,i + ai λ3,i = c                                   function with respect to constrained variables, a policy-based gradient
+     ⎪
+     ⎪
+     ⎪                         i=1
+     ⎪
+     ⎪
+     ⎪ ⃦ ⃦                                                                                  descent method is further proposed to guide the training of the neural
+     ⎪ ⃦      ⃦
+     ⎪
+     ⎪
+     ⎪
+     ⎪
+         λ 2,i 2 ≤   λ3,i , ∀i  ∈Θ                                                          network in the prediction model. In this way, minimizing decision de­
+     ⎪
+     ⎩ λ1 free, λ4 ≤ 0                                                                      viation becomes a unified objective of the closed-loop coordination.
+                                                                                                Compared to the robust CCDL model mainly focusing on the
+                                                          [                   ]T            customer characteristics of demand side, the closed-loop mechanism
+where M indicates a sufficiently large real number. ut = Lmax          max
+                                                             Δ1,k,t , LΔ2,k,t               further incorporates the effect of supply side, which aims to facilitate the
+        [                  ]T
+                                                                                            multi-stage coordination across RES prediction, CDL optimization and
+and ut = Lmin       min
+          Δ1,k,t , LΔ2,k,t    represent the upper and lower bounds of the
+                                                                                            deviation feedback, thus enabling self-correction and improving overall
+random variable, respectively. κ+ and κ− are introduced auxiliary var­                      performance of demand response. As technical components within the
+iables. κ+,t and κ− ,t denote the components of κ+ and κ− at period t. δ+,t                 closed-loop mechanism, the direction-aware combined prediction model
+and δ− ,t are binary auxiliary variables introduced for κ+,t and κ− ,t . When               and the policy-based gradient descent method work together to realize
+δ+,t = 1,δ− ,t = 0, u takes the maximum value within the uncertainty set;                   the closed-loop correction, with both being indispensable to the overall
+when δ+,t = 0,δ− ,t = 1, u takes the minimum value. The parameter Π is                      operation. The details are presented in Sections 4.1 and 4.2,
+an integer value set by the operator, which can be used to adjust the                       respectively.
+conservativeness of the optimal solution.
+    Consequently, the optimization of robust CCDL model is finally                          4.1. Variable-weight combined prediction model
+decoupled into a master problem (12) and a subproblem (15), which can
+be easily solved using the C&CG algorithm [23].                                                 Without loss of generality, the RES prediction model is constructed
+                                                                                            based on the long short-term memory (LSTM) network [24]. The basic
+4. Closed-loop mechanism for multi-stage coordinated deviation                              structure of the LSTM model is as follows:
+correction
+                                                                                            αt = σ (Wα ⋅ [ηt− 1 , ξt ] + bα )                                      (16a)
+    Beyond the inherent fluctuations of EVs in demand side, the pub­                                 (                        )
+lished CDL profile derived from predicted information may also exhibit                      χ t = σ Wχ ⋅ [ηt− 1 , ξt ] + bχ                                        (16b)
+inaccuracies due to the unavoidable errors in RES predictions. More
+importantly, these prediction-induced decision deviations can only be
+                                                                                            ς t = tanh(Wς ⋅ [ηt− 1 , ξt ] + bς )
+                                                                                            ̃                                                                      (16c)
+assessed post-response execution, making them difficult to incorporate
+                                                                                            ς t = αt ⋅ς t− 1 + χ t ⋅̃ς t                                           (16d)
+into the conventional sequential decision-making paradigm of predict­
+ing first and optimizing thereafter. The disconnect between prediction
+                                                                                            ot = σ(Wo ⋅ [ηt− 1 , ξt ] + bo )                                       (16e)
+and optimization may allow slight prediction errors to lead to significant
+deviations after interaction. To enhance the overall adaptability to de­                    ηt = ot ⋅tanh(ς t )                                                     (16f)
+viation propagation, this section further proposes a closed-loop mech­
+anism that integrates the CDL optimization with RES prediction and                          P
+                                                                                            ̂ R,t = Wϑ ⋅ηt + bϑ                                                    (16g)
+deviation feedback process to enable the multi-stage coordinated self-
+
+
+
+
+                                                             Fig. 2. The closed-loop deviation correction mechanism.
+
+                                                                                        5
+J. Yang et al.                                                                                                                                              Renewable Energy 256 (2026) 124403
+
+
+where ξ represents the historical RES data. Wα , Wχ , Wς , Wo are weight                 where P ̂ sur and P
+                                                                                                           ̂ def denote the predictions of F LSTM,1 and F LSTM,2 . π =
+                                                                                                   R,t       R,t
+matrices of forget gate, input gate, candidate cell and output gate. bα , bχ ,           { }
+bς , bo are the corresponding bias terms. ηt is the hidden state at time step
+                                                                                          πj,t j∈NR ,t∈T represents the adjustable weight that reflects the risk
+                                                                                                                                                     fore
+t. σ represents the sigmoid activation function. Wϑ and bϑ are the weight                preference of j-th RES prediction. P
+                                                                                                                            ̂
+                                                                                                                              R indicates the obtained combined
+matrix and bias term of the fully connected layer, which map the                         prediction, which serves as the input to the subsequent optimization
+extracted features to the predicted RES output.                                          process.
+     Traditionally, statistical error is adopted as the loss function for
+prediction models. Taking the least squares model as an example, the
+loss function can be expressed as:                                                       4.2. Policy-based gradient descent method
+
+lloss ( P
+        ̂R, P
+            ̃R ): = || P
+                       ̂R −      ̃R ||2
+                                 P                                            (17)
+                                      2                                                     With the integration of the combined prediction architecture, the
+                                                                                         CDL decision deviation in the optimization process is utilized as the
+where P̂ R and P
+               ̃R represent the predicted and actual RES output. The
+                                                                                         feedback to guide the prediction output, which can be expressed as:
+optimization process of the prediction model can be expressed as:                             ∑ ∑( [                       ]   [                     ] )
+                                                                                         L =           L cdl,k,t − ̃
+                                                                                                       ̂           Lcdl,k,t + + ̃Lcdl,k,t − ̂
+                                                                                                                                            L cdl,k,t +   (24)
+       1 ∑ (                               )
+min           lloss F LSTM (ξs ; τ ), P
+                                      ̃R,s                                    (18)              k∈NEV t∈T
+  τ   |S| s∈S
+                                                                                         where L represents the decision loss. ̂
+                                                                                                                               L cdl,k,t and ̃
+                                                                                                                                             Lcdl,k,t represent the CDL
+where τ denotes the parameters of the prediction model, S indicates the
+                                                                                         profiles derived from the CCDL model under the predicted value P      ̂ fore
+sample set. F LSTM (ξs ; τ ) represents the output of the prediction model                                                                                       R
+
+for the s-th sample.                                                                     and ground truth value P̃ R . To enable adaptive prediction adjustment, a
+                                                                                                                                 ([ sur def ] )
+    To ensure effective decision-making, many studies solely focus on                    simple convolutional network π = F π P    ̂ ,P ̂    ; τ π is constructed to
+                                                                                                                                    R     R
+minimizing the statistical error shown in (18). However, in practice, the
+                                                                                         learn and output an appropriate π, which can be expressed as:
+impact of prediction on decision outcomes depends not only on the
+                                                                                                   (         ([ sur def ]          ))
+magnitude of the prediction error but also on its direction. For example,                 H (1) = σ Conv2D1 P  ̂ ,P  ̂      ; τ π1
+                                                                                                                R       R
+during periods of power surplus, the system has limited capacity to                                (        (            ))
+                                                                                          H (2) = σ Conv2D2 H (1) ; τ π2                                                                  (25)
+accommodate RES. A lower RES prediction than actual value may lead
+                                                                                                 ( (2)    )
+to a decision that increases the risk of RES curtailment. Similarly, during               π = FC H ; τ π3
+periods of power deficit, when there is less pressure on RES accommo­
+dation, a predicted output that is higher than the actual value may                      where Conv2D( ⋅) denotes a 2D convolutional layer, FC( ⋅) represents a
+trigger excessive dispatch actions of responsive resources, resulting in                 fully connected layer. H (1) , H (2) are intermediate feature maps. τ π1 , τ π2
+higher operational burdens. Considering the asymmetric effects of pos­                                                                                         [ sur
+                                                                                         and τ π3 are the parameters of hidden layers. The network F π takes P   ̂ ,
+itive and negative prediction deviations, this paper constructs direction-                     ]
+                                                                                                                                                                    R
+                                                                                           def
+aware prediction sub-models described below:                                             P R as input. Combined with Eq. (24), the deviation feedback can be
+                                                                                         ̂
+             1 ∑( sur [                                 ]                                regarded as the process of adjusting the output π of F π based on the
+ J LSTM,1 =           ρ F LSTM,1 (ξs ; τ 1 ) − P   ̃R,s
+            |S| s∈S 1                                     +
+                                                                                         decision loss L , with the aim of making ̂L cdl,k,t approximate ̃
+                                                                                                                                                         Lcdl,k,t as
+                                                    )                  (19)
+            + ρdef
+                   [
+                     P
+                     ̃R,s − F LSTM,1 (ξs ; τ 1 )
+                                                ]
+                                                     , ρ def
+                                                             ≫ρ sur                      closely as possible. The corresponding gradient calculation can be
+                1                                        1      1
+                                                  +
+                                                                                         expressed as:
+               1 ∑( sur [                             ]                                                          fore
+J LSTM,2 =             ρ F LSTM,2 (ξs ; τ 2 ) − P̃R,s                                    ∂L    ∂L ∂ P̂    ∂π
+              |S| s∈S 2                                 +                                    = fore ⋅ R ⋅                                                                                 (26)
+                                                                              (20)       ∂τ π ∂ P
+                                                                                                ̂     ∂π ∂τ π
+                     [                         ] ) def                                               R
+              + ρ2 PR,s − F LSTM,2 (ξs ; τ 2 ) + , ρ2 ≪ρsur
+                  def ̃
+                                                          2
+                                                                                                     fore
+                                                                                                  ∂̂
+                                                                                                   PR
+         [                               ]                                               where              , ∂τ∂ππ can be easily calculated by the automatic differentiating
+where     F LSTM,1 (ξs ; τ 1 ) − P ̃ R,s      represents    the     operation                      ∂π
+   {                               }
+                                          +                                              algorithm of deep learning frameworks, such as Pytorch [25]. As for
+max F LSTM,1 (ξs ; τ 1 ) − PR,s , 0 . F LSTM,1 and F LSTM,2 denote prediction
+                           ̃                                                              ∂L , considering that the optimization process shown in (10) is difficult
+                                                                                           fore
+models with different preferences for the direction of errors. τ 1 , τ 2 are             ∂̂
+                                                                                          PR
+
+parameters of F LSTM,1 and F LSTM,2 . J LSTM,1 and J LSTM,2 are corre­                   to differentiate directly, a policy-based loss function L policy is con­
+sponding loss functions. ρsur               def                                          structed to replace L :
+                              1 and ρ1 represent the risk coefficients of
+F LSTM,1 for power surpluses and power deficits. And ρsur            def
+                                                                2 , ρ2 represent                     ∑
+                                                                                                      ((
+                                                                                                         ∑ fore
+                                                                                                                  )(
+                                                                                                                      ∑[                       ]
+                                                                                                                                                 )
+the risk coefficients of F LSTM,2 for power surpluses and deficits. The                   L policy =         P
+                                                                                                             ̂            L cdl,k,t − ̃
+                                                                                                                          ̂
+                                                                                                                                R,j,t Lcdl,k,t                      +
+                                                                                                      t∈T         j∈NR                     k∈NEV
+conditions ρdef      sur
+                 1 ≫ρ1   and ρdef
+                               2 ≪ ρ2
+                                        sur
+                                              indicate that F LSTM,1 prefers pre­                           (                   )(                                  ))                    (27)
+dicting surpluses, while F LSTM,2 prefers predicting deficits.                                                  ∑ fore                  ∑[                     ]
+                                                                                                      −          P
+                                                                                                                 ̂
+                                                                                                                        R,j,t
+                                                                                                                                          ̃Lcdl,k,t − ̂
+                                                                                                                                                      L cdl,k,t +
+     Based on the constructed sub-prediction models F LSTM,1 and                                              j∈NR                      k∈NEV
+F LSTM,2 , the final prediction output is modeled as an ensemble form,
+with weights that can be adaptively adjusted through feedback, which                          Intuitively, when ̂       L cdl,k,t − ̃Lcdl,k,t > 0, it indicates that the current
+can be expressed as:                                                                     predicted CDL profiles are higher than the ideal benchmark. In this case,
+       { sur }                                                                           L policy will drive F π to output a smaller πt , resulting in a deficit-oriented
+̂ sur = P
+P        ̂                                                                   (21)                           [                       ]
+  R        R,j,t        = F LSTM,1 (ξ; τ 1 )
+                   j∈NR ,t∈T
+                                                                                         ̂ fore to reduce ̂
+                                                                                         P                    L cdl,k,t − ̃ Lcdl,k,t + . Similarly, when ̃          Lcdl,k,t − ̂
+                                                                                                                                                                               L cdl,k,t > 0, it
+                                                                                           R,j,t
+
+       { def }                                                                           indicates that the current predicted CDL profiles are lower than the ideal
+̂ def = P
+P       ̂                       = F LSTM,2 (ξ; τ 2 )                          (22)       one. L policy will push F π to generate a larger πt , thus producing a
+  R       R,j,t
+                   j∈NR ,t∈T                                                                                                                [                     ]
+                                                                                         surplus-oriented P   ̂ fore to minimize ̃            Lcdl,k,t − ̂
+                                                                                                                                                         L cdl,k,t + . In this way, policy
+                                                                                                                                                                                          ∂L
+                                                                                                                 R,j,t                                                                       fore
+        { fore }                                         (       ) def                                                                                                                     ∂̂
+                                                                                                                                                                                            PR
+̂ fore = P
+P        ̂                       ̂ fore = πj,t ⋅ P
+                                ,P               ̂ sur + 1 − πj,t ⋅ P
+                                                                    ̂         (23)
+  R        R,j,t
+                    j∈NR ,t∈T
+                                   R,j,t           R,j,t              R,j,t              becomes available while the decision deviations can also be effectively
+                                                                                         propagated as feedback. Consequently, the gradient descent process is
+
+                                                                                     6
+J. Yang et al.                                                                                                                                        Renewable Energy 256 (2026) 124403
+
+
+reformulated as:
+                             fore
+∂L policy ∂L policy ∂ P
+                      ̂  ∂π
+         =    fore
+                   ⋅ R ⋅                                                                      (28)
+  ∂τ π     ∂P
+            ̂         ∂π ∂τ π
+                 R
+
+    Combining the proposed combined prediction model and policy-
+based gradient descent method, the workflow of the closed-loop devia­
+tion correction mechanism is summarized as Algorithm 1.
+Algorithm 1. Closed-loop deviation correction mechanism
+  1: Input: the input context, which is composed of the past day load and related
+    network topology information, the historical RES dataset ξ, the ideal CDL profiles
+          {          }
+    L
+    ̃cdl = ̃Lcdl,k,t       derived from CCDL model, training epoch ntrain , learning rate
+                     k∈NEV ,t∈T
+    γ;
+    2: Initialize: sub-prediction models F LSTM,1 (ξ; τ 1 ), F LSTM,2 (ξ; τ2 ), the policy
+                          ([ sur def ] )
+    learning network F π P   ̂ ,P
+                               R
+                                  ̂
+                                    R ; τπ .
+    3: Pre-trained: train the surplus-preferred prediction model F LSTM,1 and the deficit-
+    preferred prediction model F LSTM,2 based on Eq.(19) and (20).
+    4: for epoch = 1, …, ntrain do
+    5: Coordinated forward pass
+    6:                                ̂ sur , P
+         Predicting: make predictions P       ̂ def from F LSTM,1 , F LSTM,2 , and obtain π
+                                        R       R
+                                                ̂ fore .
+    based on F π to produce combined prediction P R
+                                     fore
+    7: Decision-making: deliver P
+                                ̂
+                                  R         and to (10) to calculate CDL profiles L
+                                                                                  ̂ cdl =
+    {          }
+      L cdl,k,t k∈NEV ,t∈T
+      ̂
+
+    8: Evaluating: evaluate the decision quality by comparing the deviations of L
+                                                                                ̂ cdl and
+    L
+    ̃cdl , and calculate the policy-based loss L policy based on Eq. (27).
+    9: Coordinated differential backward pass
+      Calculate the derivative of L policy with respect to τπ based on (28);
+    10: Gradient step                                                                                                        Fig. 3. The topology of test system.
+                                                           ∂L policy
+    11: Run gradient descent to update F π : τπ ←τ π − γ
+                                                                 ∂τπ
+    12: end
+                                                                                                         time-series samples are obtained based on actual photovoltaic and load
+                                ̃cdl , the updated F π .
+    13: Output: the expanded ξ, L                                                                        data [27]. The hardware and programming tool used in the simulation
+                                                                                                         are listed as follows: Intel i7-9750H CPU, 16G RAM, WINDOWS 10,
+                                                                                                         PyTorch and CVXPY [28].
+    In practical operations, the prediction and optimization in power
+systems are typically carried out in a rolling time-domain manner.
+Similarly, the proposed closed-loop corrective demand response strategy                                  5.1. Evaluation for CDL-based EV demand response
+also follows the rolling time-domain principle in real-world application.
+When a decision period arrives, a historical training dataset with known                                     Firstly, the widely used demand response model based on time-of-use
+labels is first constructed to predict future renewable energy scenarios                                 (TOU) pricing is adopted for performance comparison. The TOU pricing
+and perform CCDL optimization. After the current decision-making is                                      scheme is presented in Table 1, with the associated price elasticity
+completed, the training dataset is expanded, and the decision deviation                                  matrix set to a self-elasticity of − 0.1 and cross-elasticity of 0.01.
+caused by the uncertainty is also be reviewed, which will facilitate                                         To intuitively demonstrate the performance of demand response, the
+optimization refinement in the next decision-making period, thereby                                      impact of response models on the charging load and photovoltaic output
+forming a virtuous closed-loop feedback. All deep learning components,                                   are both evaluated. Specifically, the comparisons of customer primary
+including the LSTM-based sub-prediction models and the policy learning                                   load (CPL) profile, TOU-based response load (TRL) profile, and the CDL
+network, are trained offline within acceptable time. Although the policy                                 profile derived from proposed CCDL model are shown in Fig. 4. Corre­
+network imposes a higher calculation burden on offline training due to                                   spondingly, the photovoltaic outputs are presented in Fig. 5, including
+policy-based optimization, the day-ahead scheduling of demand                                            the primary output (PO) under CPL profile, the TOU-based output (TO)
+response ensures that this does not affect practical applicability. Once                                 following TRL profile, and the regulated output (RO) associated with
+trained, all models support fast inference with negligible latency. Since                                CDL profile.
+the proposed CCDL-based modeling is designed for nodal loads or                                              As shown in Fig. 4, due to the common charging habits, the primary
+aggregators such as charging stations, rather than individual EVs, the                                   charging load is mainly concentrated in the time periods of 13:00–16:00,
+scalability and computational efficiency are also maintained in large-                                   23:00–01:00, and 04:00–06:00. Meanwhile, as shown in Fig. 5, the
+scale EV deployment scenarios.                                                                           primary PV output, influenced by natural factors, is concentrated be­
+                                                                                                         tween 09:00 and 15:00, which leads to a poor temporal alignment be­
+                                                                                                         tween charging demand and PV generation. In conventional TOU-based
+5. Case study                                                                                            demand response, charging loads are guided by electricity price signals,
+                                                                                                         which can promote the consumption of renewable energy to some
+    The proposed closed-loop corrective demand response strategy is                                      extent, resulting in an approximate 4.17 % improvement in renewable
+evaluated on a real-world 10 kV medium-voltage distribution network
+system [26], which comprises 8 EV charging stations and 12 distributed
+                                                                                                         Table 1
+photovoltaic (PV) generators. The charging stations serve as demand
+                                                                                                         Time-of-use pricing scheme.
+response targets, which include both continuously controllable and
+                                                                                                          Period Type       Time Range                                  Price (€/kWh)
+discretely controllable loads. The discrete loads are modeled as several
+randomly assigned on-off controlled charging piles with power ratings                                     On-Peak           10:00–12:00, 17:00–21:00                    0.13
+of 60 kW, 120 kW, and 240 kW. The system topology is illustrated in                                       Mid-peak          07:00–10:00, 12:00–17:00, 21:00–23:00       0.08
+                                                                                                          Off-peak          00:00–07:00, 23:00–24:00                    0.04
+Fig. 3. To simulate the output of distributed energy resources,
+
+                                                                                                     7
+J. Yang et al.                                                                                                           Renewable Energy 256 (2026) 124403
+
+
+
+
+                                          Fig. 4. Comparison between CPL, TRL and CDL of charging stations.
+
+
+
+
+                                             Fig. 5. Comparison between PO, TO and RO of photovoltaics.
+
+
+energy utilization. However, the absence of clear control targets often        surplus is relatively serious, almost 93.28 % of the charging load from
+gives rise to issues such as over-response or under-response. From the         the adjacent charging station CS4 is shifted to the 09:00–15:00 period to
+response behavior of charging stations, it can be observed that during         absorb PV generation. Conversely, for PV11 and PV12 with lower sur­
+the low-price period from 00:00 to 07:00, the TRL tends to shift exces­        plus, only 35.67 % of the charging load from the neighboring CS3 is
+sively, resulting in new demand peaks and potential grid stress. Mean­         shifted to 10:00–14:00, while the remaining load is kept close to the
+while, during the period from 09:00 to 15:00, when photovoltaic                original schedule. This not only satisfies the renewable absorption
+generation is typically abundant, the price signals may fail to drive          requirement but also reduces the response burden of charging station.
+adequate TRL adjustment, leading to under-utilization of renewable             After the regulation of CDL, the PV accommodation capacity for PV1 and
+resources. In contrast, the constructed nodal CDL is optimized with a          PV2 increases by 23.79 % and 45.27 %. For PV11 and PV12, the increase
+focus on temporal regulation needs, providing not only the adjustment          reach 6.19 % and 10.84 %. Compared to the 4.17 % improvement under
+direction for charging loads but also reference response levels for each       conventional TOU-based demand response, the CDL regulation achieves
+time period. For example, for PV1 and PV2, where renewable energy              a substantially higher average enhancement of 21.64 % in renewable
+
+
+                                                                           8
+J. Yang et al.                                                                                                               Renewable Energy 256 (2026) 124403
+
+
+energy accommodation. Considering the growing penetration of                          Considering that the composition of charging loads can indeed vary
+renewable energy in distribution networks, the proposed CCDL-based                in real-world applications, the impact of different discrete ratios is also
+charging load guidance strategy exhibits superior flexibility and po­             evaluated.
+tential to enhance renewable energy utilization.                                      As shown in Table 2, “Discrete Ratio” indicates the ratio of discrete
+                                                                                  charging piles to the total. “PV Output” represents the regulated
+5.2. Evaluation considering control characteristics                               photovoltaic output. “Acc. Rate” denotes the corresponding renewable
+                                                                                  energy accommodation rate. It can be observed that due to the potential
+    To further test the performance of proposed CCDL model while ac­              fluctuations caused by the extreme on-off control of discrete charging
+counting for the effects of charging load control characteristics and             loads, the demand response performance of Case1-Case3 shows an
+response fluctuations, three cases are set in this section for comparative        overall decreasing trend as the discrete ratio increases. In particular,
+analysis: In case1, the CDL is directly obtained without considering              Case 1 demonstrates the worst performance with an accommodation
+charging load control characteristics or response fluctuations. In case2,         rate limited to 76.89 %–81.09 %. By additionally considering the
+with discrete and continuous charging loads at a 1:1 ratio, the CDL is            discrete charging loads, Case 2 shows improvement over Case 1 across
+computed by incorporating charging load control characteristics while             all tested discrete ratios, with a renewable energy accommodation rate
+disregarding response fluctuations. In case3, both charging load control          of 83.13 %–84.57 %. Case 3, which jointly consider the discrete
+characteristics and response fluctuations are incorporated, and the CDL           charging loads and response fluctuations, further improves the demand
+is derived from proposed robust CCDL model. The comparison results                response performance, achieving the optimal accommodation rate of
+are presented in Figs. 6 and 7. CDL1, CDL2, and CDL3 represent the CDL            89.33 %–91.30 %.
+profiles obtained under case1, case2, and case3, while RO1, RO2, and                  Overall, the numerical results show that the consideration of discrete
+RO3 indicate the corresponding PV outputs resulting from demand                   control characteristics and corresponding response fluctuations is
+response based on their specific behavioral profiles.                             beneficial across different discrete ratios, demonstrating the applica­
+    As shown in Fig. 6, for the same demand scenario, the optimized               bility of proposed CCDL model under varying deployment conditions.
+CDL1 and CDL2 align to a certain extent, but may exhibit significant
+differences in specific time periods. This is because the CDL1 issued in          5.3. Evaluation considering multi-stage deviations
+case1 overlooks the fact that some charging stations cannot perform
+continuous adjustments at specific times. Compared to CDL1, CDL2 in­                  In addition to the inherent fluctuations in demand side, the CDL
+corporates discrete control constraints, sacrificing some response po­            decision deviation caused by prediction deviations directly affects the
+tential but better aligning with the actual charging load characteristics.        regulation direction and response effectiveness. On the basis of case3,
+By dividing the charging load into continuous and discrete components             this section further introduce case4 and case5 to analyze the impact of
+and applying corresponding constraints, it also helps to further reduce           multi-stage deviation propagation on the demand response imple­
+PV absorption deviations caused by load fluctuations. As illustrated in           mentation. By incorporating prediction process, the traditional open-
+Fig. 7, the total PV absorption guided by CDL1 and CDL2 reaches 22.33             loop sequential mode is adopted in case4, where the PV prediction
+MW and 24.11 MW, respectively, with CDL2 achieving a 7.98 %                       and CDL optimization are treated separately. In case5, the proposed
+improvement. Building upon the continuous and discrete component                  closed-loop mechanism integrating prediction, optimization, and feed­
+constraints of case2, the acquisition of CDL3 in case3 is further formu­          back is applied. For comparison, the results of case3 without prediction
+lated as a robust optimization process. By taking load fluctuations into          deviations are taken as the reference benchmark for case4 and case5.
+account in advance, the total PV output corresponding to CDL3 increases               Firstly, the photovoltaic prediction performance in cases4 and case5
+to 26.45 MW, which further achieves an improvement of approximately               is presented in Fig. 8. In Case 4, the open-loop prediction yields a Mean
+18.45 % over CDL1. The performance comparison validates the effec­                Absolute Error (MAE) of 5.04 × 10− 2 and a Root Mean Squared Error
+tiveness of CDL3 that integrates EV control characteristics and response          (RMSE) of 8.14 × 10− 2. In comparison, Case 5 shows a closed-loop
+fluctuations.                                                                     prediction with a MAE of 9.75 × 10− 2 and a RMSE of 1.06 × 10− 1.
+
+
+
+
+                                                  Fig. 6. Comparison of CDL profiles under different cases.
+
+                                                                              9
+J. Yang et al.                                                                                                                               Renewable Energy 256 (2026) 124403
+
+
+
+
+                                                        Fig. 7. Comparison of regulated PV outputs under different cases.
+
+
+
+Table 2
+Demand response comparison under different discrete ratios.
+  Case           Discrete Ratio: 10 %                      Discrete Ratio: 30 %                     Discrete Ratio: 50 %                   Discrete Ratio: 70 %
+
+                 PV Output (MW)         Acc. Rate (%)      PV Output (MW)         Acc. Rate (%)     PV Output (MW)         Acc. Rate (%)   PV Output (MW)         Acc. Rate (%)
+
+  Case 1         23.50                  81.09              23.08                  79.64             22.33                  77.05           22.29                  76.89
+  Case 2         24.51                  84.57              24.41                  84.23             24.11                  83.20           24.09                  83.13
+  Case 3         26.46                  91.30              26.42                  91.17             26.45                  91.27           25.89                  89.33
+
+
+
+
+                                                               Fig. 8. Prediction performance of case4 and case5.
+
+
+Over multiple runs on the test set, the MAE and RMSE of the open-loop                          making accuracy, the optimized CDL results in Case 4 and Case 5 are
+prediction fluctuate around 3.62 × 10− 2 and 6.08 × 10− 2, while those of                      compared in Fig. 9.
+the closed-loop prediction fluctuate around 9.39 × 10− 2 and 1.01 ×                                In contrast to the prediction results, CDL5 demonstrates a closer
+10− 1, respectively. It can be seen that, due to the sole pursuit of mini­                     alignment with the ideal CDL3 than CDL4 across nearly all charging
+mizing statistical errors, traditional open-loop predictions seem to                           stations. Assessed based on the Pearson Correlation Coefficient, the
+exhibit better statistical prediction accuracy across all 12 photovoltaic                      average similarity between CDL4 and CDL3 is 67.56 %, while the RMSE
+plants. However, this accuracy does not always translate into better                           assessment yielded 9.01 × 10− 2. In comparison, the similarity between
+operational outcomes in practice. To further illustrate the decision-                          CDL5 and CDL3 increases significantly to 85.05 %, accompanied by a
+
+
+                                                                                          10
+J. Yang et al.                                                                                                             Renewable Energy 256 (2026) 124403
+
+
+
+
+                                                Fig. 9. CDL optimization performance in case4 and case5.
+
+
+reduced RMSE of 5.15 × 10− 2. Across multiple runs, CDL5 demonstrates             R3 in case3 is 96.16 %, which represents the ideal accommodation rate
+an approximate accuracy improvement of 17.88 % over CDL4. This                    without prediction error. Since the influence of deviation propagation,
+outcome can be attributed to the proposed closed-loop deviation                   the accommodation rate R4 in case4 is reduced to 89.33 %, while the
+correction mechanism, wherein the prediction model is trained with the            average value of R5 is maintained at 94.52 % due to the closed-loop
+goal of supporting CDL optimization, rather than solely minimizing                feedback of deviation. As for PV7-PV12, the R3 and R5 almost remain
+prediction error. Despite poorer predictive performance in the conven­            at 100 %, while R4 may drop to 58.81 % in some periods. Compared
+tional sense, superior decision-making results can nonetheless be ob­             with CDL4, CDL5 demonstrates significantly better adaptability to de­
+tained through CDL5. This indicates that solely pursuing high accuracy            viation environments, which further validates the effectiveness of the
+in prediction or optimization in isolation may be inefficient, high­              proposed closed-loop correction mechanism.
+lighting the necessity of a feedback mechanism.                                       Building upon the aforementioned experimental results, the pro­
+    With the regulation of CDL3, CDL4, and CDL5, the PV accommoda­                posed robust CCDL model shows resilience against demand-side fluc­
+tion results are further presented in Fig. 10, where R3, R4, and R5 denote        tuations, while its coordination with the closed-loop mechanism that
+the corresponding PV accommodation rates. To be more intuitive, the               accounts for supply-side prediction deviations can lead to improved
+difference between R4 and R5 is indicated by the shaded areas.                    overall effectiveness. When considering the application scenarios
+    As shown in Fig. 10, for PV1-PV6, the average accommodation rate              involving large-scale network or EV aggregators, the computational
+
+
+
+
+                                             Fig. 10. The PV accommodation rates in case3, case4 and case5.
+
+                                                                             11
+J. Yang et al.                                                                                                                                    Renewable Energy 256 (2026) 124403
+
+
+burden may increase to some extent. In practical distribution systems,                            work can extend this strategy to applications in microgrids, virtual
+this can be alleviated through zoning and power supply area division,                             power plants, or other multi-energy systems, while the characteristics of
+while techniques such as decomposition-based optimization, and hier­                              different resources require further investigation, including the coordi­
+archical coordination can also further improve computational efficiency                           nation among electricity, heating, and gas networks during CDL opti­
+and scalability. Beyond demand response, many other power system                                  mization, the decomposition of demand considering resource
+applications also involve sequential decision-making processes, where                             characteristics in hierarchical structures, and the coordinated control
+the closed-loop correction framework may offer new insights and po­                               across multiple time scales, etc. The integration of energy storage sys­
+tential solutions.                                                                                tems and other regulation methods should be also thoroughly investi­
+                                                                                                  gated to enhance the flexibility and responsiveness. In addition to
+6. Conclusion                                                                                     distribution-level applications, further study is warranted for embed­
+                                                                                                  ding the approach into larger-scale electricity markets within trans­
+    To enhance the effectiveness of EV-coordinated RES accommoda­                                 mission networks or multi-voltage-level systems.
+tion, this paper proposes a novel closed-loop corrective demand
+response strategy with composite customer directrix load. The main                                CRediT authorship contribution statement
+contributions and conclusions are summarized as follows.
+                                                                                                      Jianping Yang: Writing – original draft, Methodology, Conceptu­
+1) To enhance the flexibility of EVs participation in demand response, a                          alization. Yue Xiang: Writing – review & editing, Supervision. Zhiyuan
+   robust composite customer directrix load (CCDL) model is devel­                                Tang: Writing – review & editing. Shenxi Zhang: Writing – review &
+   oped. The model distinguishes the discrete and continuous charging                             editing. Zechun Hu: Writing – review & editing.
+   load with their response fluctuations to steer EV charging behavior.
+   Experimental results show that the proposed CCDL model enables                                 Data availability statement
+   tailored guidance of charging loads based on network demands,
+   which effectively increase renewable energy accommodation by                                      Data will be made available on request.
+   21.64 %. Considering the response fluctuation scenario, the robust
+   model also shows good adaptability.                                                            Declaration of competing interest
+2) Considering the overlook of sequential coupled effect in current
+   demand response, a closed-loop correction mechanism based on                                       The authors declare that they have no known competing financial
+   policy gradient is proposed, which integrates prediction, optimiza­                            interests or personal relationships that could have appeared to influence
+   tion, and feedback process to realize deviation correction. Experi­                            the work reported in this paper.
+   mental results show that, compared to the traditional sequential
+   mode, the proposed new mechanism improves the accuracy of de­                                  Acknowledgment
+   mand response by 17.88 %, demonstrating superior adaptability in
+   complex and uncertain environments.                                                               This work was supported by the State Grid Henan Electric Power
+                                                                                                  Company Science and Technology Project “Key Technology and
+   Notably, the corrective demand response strategy proposed in this                              Demonstration Application of Multi-domain Electric Vehicle Aggregated
+paper mainly focuses on EV guidance in distribution network. The future                           Charging Load Dispatch” under Grant No. 5217L0240003.
+
+
+
+Appendix
+
+    The detailed information for the involved deep learning models is presented below.
+
+A. Hyperparameters and network architecture
+
+
+
+Table A1
+Hyperparameters
+
+  Parameter                       Value        Description                                           Parameter                  Value          Description
+
+  Optimizer                       Adam         Adaptive optimizer with weight_decay = 1e-5           Batch First                True           Input shape of LSTM: (batch, seq, feat)
+  Learning Rate                   0.001        Step size at each iteration                           Recurrent Dropout          0              Dropout between recurrent units
+
+  Sequence Length                 24           Time window for sequential input                      Kernel size                3              Convolution filter size for Conv2d
+  Bidirectional                   False        Unidirectional LSTM                                   Padding                    1              Zero-padding for Conv2d
+
+
+
+
+Table A2
+Neural network architectures
+
+  Network        Input Features                                       Output Features                                      Architecture (Hidden Units)
+
+  F LSTM,1       Past 24h RES output (24 × 12)                        Next 24h RES surplus-oriented prediction (24 × 12)   2-layer LSTM (128)→Linear (128 → 12)
+  F LSTM,2       Past 24h RES output (24 × 12)                        Next 24h RES deficit-oriented prediction (24 × 12)   2-layer LSTM (128)→Linear (128 → 12)
+  F π            Predictions of F LSTM,1 and F LSTM,2 (2 × 12 × 24)   Risk preference of RES prediction (12 × 24)          Conv2d(2 → 4,k = 3)→ReLU→Conv2d(4 → 2,k = 3)
+                                                                                                                           →ReLU→Flatten→Linear(2 × 12 × 24 → 12 × 24)→Sigmoid
+
+
+
+
+                                                                                             12
+J. Yang et al.                                                                                                                                         Renewable Energy 256 (2026) 124403
+
+
+B. Data preprocessing and training configurations
+
+    The data preprocessing mainly consists of several sequential steps. First, for each of the 12 photovoltaic stations, the raw hourly generation data is
+organized into 24-h sequences, forming daily profiles with a shape of 24 × 12. All features are normalized to the range [0,1] using min-max scaling
+based on the data set. Second, to support the training of policy learning network, the CDLs are optimized based on the proposed CCDL model using
+historical photovoltaic data as input. Structured as daily profiles and temporally synchronized with the PV generation data, the CDLs are used as
+supervision labels in the policy learning process. Third, supervised learning samples are constructed using a non-overlapping sliding window, which
+are further split into training, validation, and test sets with a chronological split (70 %/20 %/10 %). Each sample includes 24 h of input features
+(historical PV generation) and the subsequent 24 h of output targets (future PV generation or CDLs).
+    For training configurations, all models are trained using the Adam optimizer with the parameter settings provided in Table A1. The training of sub-
+prediction models is conducted for 50 epochs to achieve convergence under loss functions that emphasize surpluses and deficits. The learning rate
+decay is applied with a factor of 0.5 every 10 epochs. After the sub-prediction models are trained, the policy learning network is trained separately
+based on the proposed policy gradient method, with the loss defined as the decision deviation between the obtained and ideal CDLs, while the pa­
+rameters of the sub-prediction models kept fixed.
+
+
+
+References                                                                                              criterion, CSEE J. Power Energy Syst 9 (6) (2023) 2121–2129, https://doi.org/
+                                                                                                        10.17775/CSEEJPES.2020.05370.
+                                                                                                   [15] B. Yang, T. Zhou, P. Cao, et al., Classification and summarization of solar
+ [1] X. Zheng, H. Chen, T. Jin, A new optimization approach considering demand
+                                                                                                        irradiance and power forecasting methods: a thorough review, CSEE J. Power
+     response management and multistage energy storage: a novel perspective for
+                                                                                                        Energy Syst. 9 (3) (2023) 978–995, https://doi.org/10.17775/
+     Fujian Province, Renew. Energy 220 (2024) 119621, https://doi.org/10.1016/j.
+                                                                                                        CSEEJPES.2020.04930.
+     renene.2023.119621.
+                                                                                                   [16] L. Wang, J. Gao, Y. Li, et al., A method for ultra-short-term wind power forecasting
+ [2] Q. Guo, X. Liang, D. Xie, et al., Efficient integration of demand response and plug-in
+                                                                                                        of large-scale wind farms based on adaptive spatiotemporal graph convolution,
+     electrical vehicle in microgrid: environmental and economic assessment, J. Clean.
+                                                                                                        Renew. Energy 249 (2025) 123321, https://doi.org/10.1016/j.
+     Prod. 291 (2021) 125581, https://doi.org/10.1016/j.jclepro.2020.125581.
+                                                                                                        renene.2025.123321.
+ [3] V2G-hub, V2G around the world. https://www.v2g-hub.com/insights, 2022.
+                                                                                                   [17] M. Yan, N. Zhang, X. Ai, et al., Robust two-stage regional-district scheduling of
+ [4] L. Wang, L. Luo, M. Yu, X. Pei, Low-carbon integrated energy system scheduling
+                                                                                                        multi-carrier energy systems with a large penetration of wind power, IEEE Trans.
+     considering electric vehicle demand response, J. Clean. Prod. 480 (2024) 144073,
+                                                                                                        Sustain. Energy 10 (3) (2019) 1227–1239, https://doi.org/10.1109/
+     https://doi.org/10.1016/j.jclepro.2024.144073.
+                                                                                                        TSTE.2018.2864296.
+ [5] L. Gong, W. Cao, K. Liu, et al., Demand responsive charging strategy of electric
+                                                                                                   [18] P. Zhao, Z. Li, X. Bai, et al., Stochastic real-time dispatch considering AGC and
+     vehicles to mitigate the volatility of renewable energy sources, Renew. Energy 156
+                                                                                                        electric-gas dynamic interaction: Fine-grained modeling and noniterative
+     (2020) 665–676, https://doi.org/10.1016/j.renene.2020.04.061.
+                                                                                                        decentralized solutions, Appl. Energy 375 (2024) 123976, https://doi.org/
+ [6] G.G. Zanvettor, M. Fochesato, M. Casini, et al., A stochastic approach for EV
+                                                                                                        10.1016/j.apenergy.2024.123976.
+     charging stations in demand response programs, Appl. Energy 373 (2024) 123862,
+                                                                                                   [19] J. Zhong, Y. Li, Y. Cao, et al., Robust coordinated optimization with adaptive
+     https://doi.org/10.1016/j.apenergy.2024.123862.
+                                                                                                        uncertainty set for a multi-energy microgrid, IEEE Trans. Sustain. Energy 14 (1)
+ [7] R. Jin, Y. Zhou, C. Lu, et al., Deep reinforcement learning-based strategy for
+                                                                                                        (2023) 111–124, https://doi.org/10.1109/TSTE.2022.3203299.
+     charging station participating in demand response, Appl. Energy 328 (2022)
+                                                                                                   [20] M. Mahdavi, K.E.K. Schmitt, F. Jurado, et al., Robust distribution network
+     120140, https://doi.org/10.1016/j.apenergy.2022.120140.
+                                                                                                        reconfiguration in the presence of distributed generation under uncertainty in
+ [8] Z. Zhou, B. Wang, Y. Guo, et al., Blockchain and computational intelligence
+                                                                                                        demand and load variations, IEEE Trans. Power Del. 38 (5) (2023) 3480–3495,
+     inspired incentive-compatible demand response in internet of electric vehicles,
+                                                                                                        https://doi.org/10.1109/TPWRD.2023.3277816.
+     IEEE Trans. Emerg. Topics Comput. Intell. 3 (3) (2019) 205–216, https://doi.org/
+                                                                                                   [21] Y. Zhang, S. Fan, Y. Meng, et al., Payment and incentive allocation method in
+     10.1109/TETCI.2018.2880693.
+                                                                                                        demand response based on causer pays principle, in: 2023 IEEE/IAS Industrial and
+ [9] L. Wang, L. Han, L. Tang, et al., Incentive strategies for small and medium-sized
+                                                                                                        Commercial Power System Asia, I&CPS Asia), China, 2023, pp. 2212–2220.
+     customers to participate in demand response based on customer directrix load, Int.
+                                                                                                   [22] Y. Liu, L. Guo, C. Wang, Economic dispatch of microgrid based on two stage robust
+     J. Electr. Power Energy Syst. 155 (2024) 109618, https://doi.org/10.1016/j.
+                                                                                                        optimization, Proc. CSEE 38 (14) (2018) 4013–4022+4307, https://doi.org/
+     ijepes.2023.109618.
+                                                                                                        10.13334/j.0258-8013.pcsee.170500.
+[10] Y. Shao, S. Fan, Y. Meng, et al., Personalized demand response based on sub-CDL
+                                                                                                   [23] B. Zeng, L. Zhao, Solving two-stage robust optimization problems using a column-
+     considering energy consumption characteristics of customers, Appl. Energy 374
+                                                                                                        and-constraint generation method, Oper. Res. Lett. 41 (5) (2013) 457–461, https://
+     (2024) 123964, https://doi.org/10.1016/j.apenergy.2024.123964.
+                                                                                                        doi.org/10.1016/j.orl.2013.05.003.
+[11] Y. Meng, S. Xu, J. Hong, et al., Optimal strategy for customer directrix load based
+                                                                                                   [24] S. Hochreiter, J. Schmidhuber, Long short-term memory, Neural Comput. 9 (8)
+     demand response considering comfort and preference of customers, in: IEEE PES
+                                                                                                        (1997) 1735–1780, https://doi.org/10.1162/neco.1997.9.8.1735.
+     Innovative Smart Grid technologies-Asia (ISGT Asia), 2022, pp. 585–589.
+                                                                                                   [25] PyTorch, An open source machine learning framework. https://github.
+     Singapore.
+                                                                                                        com/pytorch/pytorch, 2016.
+[12] S. Fan, Z. Li, L. Yang, et al., Customer directrix load-based large-scale demand
+                                                                                                   [26] P. Chen, Y.B. Liu, C. Yuan, et al., Strategy for enhancing the available capacity of
+     response for integrating renewable energy sources, Electr. Power Syst. Res. 181
+                                                                                                        distribution networks considering electric vehicle charging modes, Power Syst,
+     (2020) 106175, https://doi.org/10.1016/j.epsr.2019.106175.
+                                                                                                        Tech 49 (1) (2025) 177–186, https://doi.org/10.13335/j.1000-3673.
+[13] Y. Meng, S. Fan, Y. Shen, et al., Transmission and distribution network-constrained
+                                                                                                        pst.2023.2236.
+     large-scale demand response based on locational customer directrix load for
+                                                                                                   [27] OPSD, Data package time series. https://data.open-power-system-data.org/time_se
+     accommodating renewable energy, Appl. Energy 350 (2023) 121681, https://doi.
+                                                                                                        ries, 2025.
+     org/10.1016/j.apenergy.2023.121681.
+                                                                                                   [28] CVXPY, A python-embedded modeling language for convex optimization. htt
+[14] Y. Zhou, Y. Sun, S. Wang, et al., Very short-term probabilistic prediction method
+                                                                                                        ps://github.com/cvxpy/cvxpy, 2014.
+     for wind speed based on alasso-nonlinear quantile regression and integrated
+
+
+
+
+                                                                                              13
+

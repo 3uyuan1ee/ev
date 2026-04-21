@@ -10,8 +10,8 @@ function parseCsv(filePath) {
 }
 
 export async function processGlobalEv2026() {
-  console.log('\n📊 Processing global_ev_market_charging_infrastructure_2026.csv...')
-  const rows = parseCsv(datasetPath('global_ev_market_charging_infrastructure_2026.csv'))
+  console.log('\n📊 Processing global_ev_market_2026.csv...')
+  const rows = parseCsv(datasetPath('data/market_sales/global_ev_market_2026.csv'))
 
   const vehicleTypes = [...new Set(rows.map(r => r.vehicle_type))].sort()
   const countries = [...new Set(rows.map(r => r.country))].sort()

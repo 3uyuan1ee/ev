@@ -11,8 +11,8 @@ function parseCsv(filePath) {
 }
 
 export async function processEvVsPetrol() {
-  console.log('\n📊 Processing ev_vs_petrol_dataset_v3.csv...')
-  const rows = parseCsv(datasetPath('ev_vs_petrol_dataset_v3.csv'))
+  console.log('\n📊 Processing global_ev_vs_petrol_comparison.csv...')
+  const rows = parseCsv(datasetPath('data/market_sales/global_ev_vs_petrol_comparison.csv'))
 
   // Group by country
   const byCountry = {}

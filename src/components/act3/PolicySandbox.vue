@@ -17,8 +17,22 @@ const featureLabelMap = {
   gdp_per_capita: 'act3.featureGdpPerCapita'
 }
 
+// Map feature names to tooltip i18n keys
+const featureTooltipMap = {
+  ev_subsidy_usd: 'act3.featureTooltipEvSubsidy',
+  charging_stations: 'act3.featureTooltipChargingStations',
+  fuel_price_usd_per_liter: 'act3.featureTooltipFuelPrice',
+  electricity_price_usd_per_kwh: 'act3.featureTooltipElectricityPrice',
+  emission_regulation_score: 'act3.featureTooltipRegulationScore',
+  gdp_per_capita: 'act3.featureTooltipGdpPerCapita'
+}
+
 function featureLabel(name) {
   return featureLabelMap[name] ? t(featureLabelMap[name]) : name
+}
+
+function featureTooltip(name) {
+  return featureTooltipMap[name] ? t(featureTooltipMap[name]) : ''
 }
 
 const shareDiff = computed(() => {
@@ -103,6 +117,7 @@ const topFeatures = computed(() => featureImportance.value.slice(0, 3))
           :min="cfg.min"
           :max="cfg.max"
           :step="cfg.step"
+          :tooltip="featureTooltip(cfg.name)"
           v-model="sliderValues[cfg.name]"
         >
           <template #display>{{ cfg.formattedValue }}</template>

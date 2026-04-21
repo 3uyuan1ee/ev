@@ -1,0 +1,422 @@
+{
+  "countries": [
+    {
+      "country": "China",
+      "color": "#E85A4F",
+      "data": [
+        {
+          "year": 2010,
+          "ac": 0,
+          "dc": 0,
+          "total": 1100,
+          "bevSales": null
+        },
+        {
+          "year": 2011,
+          "ac": 0,
+          "dc": 0,
+          "total": 6800,
+          "bevSales": null
+        },
+        {
+          "year": 2012,
+          "ac": 0,
+          "dc": 0,
+          "total": 17700,
+          "bevSales": null
+        },
+        {
+          "year": 2013,
+          "ac": 0,
+          "dc": 0,
+          "total": 22500,
+          "bevSales": 14604
+        },
+        {
+          "year": 2014,
+          "ac": 0,
+          "dc": 0,
+          "total": 30900,
+          "bevSales": 21732
+        },
+        {
+          "year": 2015,
+          "ac": 0,
+          "dc": 0,
+          "total": 49000,
+          "bevSales": 52243
+        },
+        {
+          "year": 2016,
+          "ac": 52778,
+          "dc": 38096,
+          "total": 141254,
+          "bevSales": 167572
+        },
+        {
+          "year": 2017,
+          "ac": 86469,
+          "dc": 61375,
+          "total": 213903,
+          "bevSales": 456097
+        },
+        {
+          "year": 2018,
+          "ac": 190000,
+          "dc": 110000,
+          "total": 300000,
+          "bevSales": 717414
+        },
+        {
+          "year": 2019,
+          "ac": 289000,
+          "dc": 206000,
+          "total": 496000,
+          "bevSales": 730509
+        },
+        {
+          "year": 2020,
+          "ac": 0,
+          "dc": 301840,
+          "total": 686000,
+          "bevSales": 1152000
+        },
+        {
+          "year": 2021,
+          "ac": 0,
+          "dc": 444360,
+          "total": 966000,
+          "bevSales": 1512000
+        },
+        {
+          "year": 2022,
+          "ac": 0,
+          "dc": 660480,
+          "total": 1376000,
+          "bevSales": 1980000
+        },
+        {
+          "year": 2023,
+          "ac": 0,
+          "dc": 716500,
+          "total": 1433000,
+          "bevSales": 2520000
+        },
+        {
+          "year": 2024,
+          "ac": 0,
+          "dc": 1161160,
+          "total": 2233000,
+          "bevSales": 3240000
+        },
+        {
+          "year": 2025,
+          "ac": 0,
+          "dc": 1853820.0000000002,
+          "total": 3433000,
+          "bevSales": 4320000
+        }
+      ],
+      "yearRange": "2010-2025",
+      "dataPoints": 16,
+      "maxTotal": 3433000,
+      "maxBevSales": 4320000
+    },
+    {
+      "country": "Norway",
+      "color": "#8E8DBA",
+      "data": [
+        {
+          "year": 2011,
+          "ac": 3105,
+          "dc": 18,
+          "total": 3123,
+          "bevSales": 1826.154
+        },
+        {
+          "year": 2012,
+          "ac": 3688,
+          "dc": 58,
+          "total": 3746,
+          "bevSales": 4139.01
+        },
+        {
+          "year": 2013,
+          "ac": 4511,
+          "dc": 131,
+          "total": 4642,
+          "bevSales": 8059.9617
+        },
+        {
+          "year": 2014,
+          "ac": 5471,
+          "dc": 249,
+          "total": 5720,
+          "bevSales": 17607.0642
+        },
+        {
+          "year": 2015,
+          "ac": 6253,
+          "dc": 802,
+          "total": 7055,
+          "bevSales": 24275.5146
+        },
+        {
+          "year": 2016,
+          "ac": 6413,
+          "dc": 1286,
+          "total": 7699,
+          "bevSales": 22216.4511
+        },
+        {
+          "year": 2017,
+          "ac": 7141,
+          "dc": 2025,
+          "total": 9166,
+          "bevSales": 31190.59
+        },
+        {
+          "year": 2018,
+          "ac": 7910,
+          "dc": 2801,
+          "total": 10711,
+          "bevSales": 43594.6763
+        },
+        {
+          "year": 2019,
+          "ac": 0,
+          "dc": 0,
+          "total": 11889,
+          "bevSales": 59800
+        }
+      ],
+      "yearRange": "2011-2019",
+      "dataPoints": 9,
+      "maxTotal": 11889,
+      "maxBevSales": 59800
+    },
+    {
+      "country": "Sweden",
+      "color": "#7A79A8",
+      "data": [
+        {
+          "year": 2012,
+          "ac": 500,
+          "dc": 5,
+          "total": 505,
+          "bevSales": 247,
+          "penetrationRate": 0.00088
+        },
+        {
+          "year": 2013,
+          "ac": 1000,
+          "dc": 20,
+          "total": 1020,
+          "bevSales": 432,
+          "penetrationRate": 0.0016
+        },
+        {
+          "year": 2014,
+          "ac": 1000,
+          "dc": 70,
+          "total": 1070,
+          "bevSales": 1239,
+          "penetrationRate": 0.0041
+        },
+        {
+          "year": 2015,
+          "ac": 1600,
+          "dc": 224,
+          "total": 1824,
+          "bevSales": 2962,
+          "penetrationRate": 0.00858
+        },
+        {
+          "year": 2016,
+          "ac": 2363,
+          "dc": 561,
+          "total": 2924,
+          "bevSales": 2945,
+          "penetrationRate": 0.00791
+        },
+        {
+          "year": 2017,
+          "ac": 2576,
+          "dc": 1743,
+          "total": 4319,
+          "bevSales": 4217,
+          "penetrationRate": 0.011
+        },
+        {
+          "year": 2018,
+          "ac": 3237,
+          "dc": 2281,
+          "total": 5518,
+          "bevSales": 7078,
+          "penetrationRate": 0.02
+        }
+      ],
+      "yearRange": "2012-2018",
+      "dataPoints": 7,
+      "maxTotal": 5518,
+      "maxBevSales": 7078
+    },
+    {
+      "country": "Netherlands",
+      "color": "#E98074",
+      "data": [
+        {
+          "year": 2012,
+          "total": 3611,
+          "ac": 3611,
+          "dc": 0,
+          "bevSales": 1910,
+          "penetrationRate": 0.003801025281793288
+        },
+        {
+          "year": 2013,
+          "total": 5750,
+          "ac": 5750,
+          "dc": 0,
+          "bevSales": 4161,
+          "penetrationRate": 0.009986224242453334
+        },
+        {
+          "year": 2014,
+          "total": 11860,
+          "ac": 11860,
+          "dc": 0,
+          "bevSales": 6825,
+          "penetrationRate": 0.017609631242711032
+        },
+        {
+          "year": 2015,
+          "total": 14152,
+          "ac": 14152,
+          "dc": 0,
+          "bevSales": 9368,
+          "penetrationRate": 0.020847891398686993
+        },
+        {
+          "year": 2016,
+          "total": 21010,
+          "ac": 21010,
+          "dc": 0,
+          "bevSales": 13105,
+          "penetrationRate": 0.03423235159668256
+        },
+        {
+          "year": 2017,
+          "total": 28414,
+          "ac": 28414,
+          "dc": 0,
+          "bevSales": 21115,
+          "penetrationRate": 0.05062638614158125
+        },
+        {
+          "year": 2018,
+          "total": 33607,
+          "ac": 33607,
+          "dc": 0,
+          "bevSales": 44984,
+          "penetrationRate": 0.10135823276522492
+        },
+        {
+          "year": 2019,
+          "total": 40957,
+          "ac": 40957,
+          "dc": 0,
+          "bevSales": 61965.9,
+          "penetrationRate": 0.13890149154700368
+        }
+      ],
+      "yearRange": "2012-2019",
+      "dataPoints": 8,
+      "maxTotal": 40957,
+      "maxBevSales": 61965.9
+    },
+    {
+      "country": "Germany",
+      "color": "#D8C3A5",
+      "data": [
+        {
+          "year": 2012,
+          "ac": 1500,
+          "dc": 18,
+          "total": 1518,
+          "bevSales": 2956,
+          "pvs": 3082504,
+          "penetrationRate": 0.0009589606371962535
+        },
+        {
+          "year": 2013,
+          "ac": 2400,
+          "dc": 47,
+          "total": 2447,
+          "bevSales": 6051,
+          "pvs": 2952431,
+          "penetrationRate": 0.0020494975157759826
+        },
+        {
+          "year": 2014,
+          "ac": 2624,
+          "dc": 317,
+          "total": 2941,
+          "bevSales": 8522,
+          "pvs": 3036773,
+          "penetrationRate": 0.0028062683644776874
+        },
+        {
+          "year": 2015,
+          "ac": 4787,
+          "dc": 784,
+          "total": 5571,
+          "bevSales": 12363,
+          "pvs": 3206042,
+          "penetrationRate": 0.00385615659433033
+        },
+        {
+          "year": 2016,
+          "ac": 16817,
+          "dc": 2476,
+          "total": 19293,
+          "bevSales": 11410,
+          "pvs": 3351607,
+          "penetrationRate": 0.003404337083673593
+        },
+        {
+          "year": 2017,
+          "ac": 22883,
+          "dc": 2490,
+          "total": 25373,
+          "bevSales": 25056,
+          "pvs": 3443845,
+          "penetrationRate": 0.007275588767787168
+        },
+        {
+          "year": 2018,
+          "ac": 24107,
+          "dc": 3352,
+          "total": 27459,
+          "bevSales": 36062,
+          "pvs": 3435778,
+          "penetrationRate": 0.01049602157066027
+        },
+        {
+          "year": 2019,
+          "ac": 29599,
+          "dc": 5040,
+          "total": 34639,
+          "bevSales": 63281,
+          "pvs": 3607258,
+          "penetrationRate": 0.017542687548270736
+        }
+      ],
+      "yearRange": "2012-2019",
+      "dataPoints": 8,
+      "maxTotal": 34639,
+      "maxBevSales": 63281
+    }
+  ],
+  "source": "IEA, national statistics, statista"
+}

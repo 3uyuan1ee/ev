@@ -1,0 +1,1091 @@
+                                                                          Renewable Energy 256 (2026) 124064
+
+
+                                                                        Contents lists available at ScienceDirect
+
+
+                                                                            Renewable Energy
+                                                              journal homepage: www.elsevier.com/locate/renene
+
+
+
+
+Coordinated dispatch of electric, thermal, and hydrogen vectors in
+renewable-enriched microgrids using constrained harris hawks
+optimization under uncertainty
+Cong Xu a,* , Ahmed N. Abdalla b
+a
+    School of Electronic Information and Electrical Engineering , Yangtze University, Jingzhou, Hubei, 434023, China
+b
+    Faculty of Electronic Information Engineering, Huaiyin Institute of Technology, Jiangsu, China
+
+
+
+
+A R T I C L E I N F O                                         A B S T R A C T
+
+Keywords:                                                     Microgrids (MGs) integrating renewable energy sources (RESs), plug-in hybrid electric vehicles (PHEVs), battery
+Microgrid energy management                                   storage, and proton exchange membrane fuel cell-based combined heat and power (PEMFC-CHP) systems face
+Hydrogen storage strategy                                     increasing complexity due to uncertainty in both energy supply and demand, as well as dynamic electricity
+Swarm intelligence
+                                                              market prices. This paper proposes a comprehensive energy management strategy for renewable-enriched
+Day-ahead electricity market
+PHEV charging
+                                                              microgrids that simultaneously coordinate the dispatch of electric, thermal, and hydrogen energy vectors. The
+                                                              proposed system integrates photovoltaic (PV) and wind resources, a proton exchange membrane fuel cell
+                                                              combined heat and power unit (PEMFC-CHP), battery energy storage systems (BESS), plug-in hybrid electric
+                                                              vehicles (PHEVs), and a hydrogen production and storage subsystem. To address the inherent uncertainties in
+                                                              load demand, renewable generation, and market prices, a Monte Carlo Simulation (MCS)-based scenario
+                                                              framework is adopted. A constrained variant of the Harris Hawks Optimization (HHO) algorithm is introduced to
+                                                              solve the multi-objective optimization problem, minimizing total operational cost, carbon emissions, and load or
+                                                              storage violations. The optimization process enforces technical and economic constraints including power bal­
+                                                              ance, storage capacity, thermal demand satisfaction, and hydrogen trading limits. The proposed framework is
+                                                              developed and simulated using MATLAB® software and validated on a modified 16-bus microgrid under multiple
+                                                              operational scenarios, ranging from uncontrolled PHEV charging to full vector coordination with PEMFC and
+                                                              CHP integration. Simulation results demonstrate that the proposed HHO-based energy management framework
+                                                              significantly outperforms benchmark algorithms in minimizing operational cost, emissions, and unmet energy
+                                                              demand. Case 6, which integrates smart PHEV charging with PEMFC-CHP coordination, achieves the most
+                                                              optimal performance—delivering the lowest cost (320 €), reduced emissions (520 kg CO2), and zero unmet load
+                                                              across all scenarios.
+
+
+
+Nomenclature                                                                                         (continued )
+                                                                                                      APV           Area of photovoltaic       Punmet   Unmet electrical or thermal
+    Symbol       Description                  Symbol          Description                                           panel                               demand
+    SOCt         State of charge of the        buy
+                                              Pgrid , Psell   Power bought/sold from/to               ηref          Reference PV efficiency    ΔH       Hydrogen imbalance
+                                                       grid
+                 battery at time t                            grid                                    β             Temperature coefficient    Cbid     Bid price of PEMFC
+                                                                                                                                                PEMFC
+    Pch ,Pdis    Charging and                 Cgrid , CH2 ,   Cost coefficients: grid,                              of PV                               electricity
+                 discharging power of the     Cbat deg        hydrogen, battery                       Tamb          Ambient temperature        Caux     Unit heat cost from auxiliary
+                 battery                                      degradation                                                                               boiler
+    ηch , ηdis   Charging and                 α1 , α2         Emission factors for grid and           Gt            Solar irradiance at time   Cpump    Energy cost for hydrogen
+                 discharging efficiency                       hydrogen sources                                      tt                                  pumping
+    Cbat         Rated capacity of the        λ1 , λ2 , λ3    Penalty weights in objective            Vfc           PEMFC stack voltage        Hsell    Hydrogen quantity sold
+                 battery                                      function
+                                                                                                                                                             (continued on next page)
+                                                                 (continued on next column)
+
+
+
+    This article is part of a special issue entitled: DRES published in Renewable Energy.
+    * Corresponding author.
+      E-mail address: 2022730060@yangtzeu.edu.cn (C. Xu).
+
+https://doi.org/10.1016/j.renene.2025.124064
+Received 14 May 2025; Received in revised form 1 July 2025; Accepted 24 July 2025
+Available online 24 July 2025
+0960-1481/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+C. Xu and A.N. Abdalla                                                                                                                  Renewable Energy 256 (2026) 124064
+
+(continued )                                                                                 introduced a stochastic energy management system (EMS) that utilized
+  Istack       Stack current of PEMFC          ηH2 conv   Conversion efficiency from         nodal pricing to reflect local market conditions, laying the groundwork
+                                                          electricity to hydrogen            for our inclusion of spatial electricity price variability in bidding stra­
+  Ncell        Number of fuel cell units   γ              Electrochemical-to-hydrogen        tegies. Coelho et al. [17] employed Monte Carlo Simulation (MCS) to
+                                                          conversion ratio
+  Pin          Input power to              Tload          Thermal load demand
+                                                                                             evaluate both the regulatory and financial viability of Brazilian com­
+               electrolyzer                                                                  munity MGs, supporting our use of MCS for modeling price and demand
+  ηelec        Electrolyzer efficiency     Qrec , Qaux    Recovered and auxiliary            uncertainty. Li et al. [18] developed a two-stage stochastic optimization
+                                                          thermal power                      model that jointly managed electricity and thermal loads, validating the
+  Vcell        Fuel cell operating         Pmin , Pmax    Generator/grid output
+                                                                                             feasibility of hybrid scheduling frameworks like ours that integrate
+               voltage                                    bounds
+  Ht           Stored hydrogen mass at     D              Number of decision variables       PEMFC-CHP units with electrical assets. Wang et al. [19] proposed a
+               time t                                                                        bi-level bidding structure for MGs interacting in electricity, thermal, and
+  Hcons        Hydrogen consumption        T              Maximum number of                  hydrogen markets, a structure closely aligned with our dual-market
+               rate                                       iterations in HHO                  dispatch approach involving power and hydrogen. Mansour-Saatloo
+  Eveh         Energy level in PHEV        E              Prey escape energy
+               battery
+                                                                                             et al. [20] contributed robust hybrid uncertainty modeling techniques
+  Pch          PHEV charging power         r              Random number for HHO              for MGs equipped with power-to-hydrogen conversion systems, directly
+                                                          update strategy selection          informing our design of a risk-aware scheduling framework. Addressing
+  ηveh         PHEV charging               ​              ​                                  demand-side uncertainty, Rasouli et al. [21] modeled the probabilistic
+               efficiency
+                                                                                             behavior of plug-in hybrid electric vehicle (PHEV) charging in
+                                                                                             day-ahead markets, providing a key methodological precedent for our
+1. Introduction                                                                              scenario-based PHEV demand profiles. Bahramara et al. [22] tackled the
+                                                                                             challenge of energy and reserve co-optimization under forecast uncer­
+    With the rapid deployment of distributed renewable energy sources                        tainty, which parallels our dual-objective of minimizing operational cost
+(RESs), microgrids (MGs) have emerged as pivotal systems for achieving                       while preserving flexibility. Sheykhi et al. [23] extended this further by
+localized energy reliability and flexibility. To ensure efficient energy                     incorporating plug-in EVs into market-responsive MG operation, high­
+utilization, MGs often incorporate multiple components such as photo­                        lighting the value of bidirectional PHEV interaction—central to our
+voltaic (PV) arrays, wind turbines, battery energy storage systems                           charging control strategy. Tavakkoli-Moghaddam and Abedi [24]
+(BESS), hydrogen storage, proton exchange membrane fuel cell-based                           formulated a stochastic multi-objective optimization approach that
+combined heat and power systems (PEMFC-CHP), and plug-in hybrid                              jointly minimized cost and emissions while managing hydrogen storage,
+electric vehicles (PHEVs) [1–3]. However, managing such heteroge­                            aligning with our economic-environmental trade-off framework.
+neous systems is complex, particularly under uncertainty caused by                           Finally, Nassajian et al. [25] demonstrated the effectiveness of
+intermittent RES outputs, time-varying electricity market prices, and                        scenario-based stochastic programming for MGs with hydrogen and EV
+stochastic PHEV charging behaviors. Additionally, MGs are increasingly                       integration, validating the scalability and robustness of the type of
+participating in deregulated electricity markets, where intelligent                          multi-source uncertainty.
+decision-making under forecast uncertainty becomes essential [4,5].                              Energy market participation and electric vehicle (EV) scheduling are
+    Recent literature has increasingly leveraged stochastic optimization                     increasingly integrated into advanced microgrid (MG) operations,
+to address the complex dynamics of microgrid (MG) energy manage­                             driven by the need for economic optimization and grid-responsive
+ment, especially under high renewable penetration, electricity market                        flexibility. Yan and Xu [26] proposed a data-driven approach for opti­
+participation, and PHEV integration. Kaewdornhan and Chatthaworn                             mizing day-ahead bidding strategies in MGs based on historical elec­
+[6] adopted a model-free DRL technique trained on real data, increasing                      tricity price patterns, a concept that underpins our forecast-informed
+deployment realism—a valuable approach for our eventual real-time                            bidding framework. Bose et al. [27] and Chen and Su [28] applied
+implementation. Focusing on hydrogen–electric coupling, Shi et al. [7]                       economic optimization in local energy trading environments, demon­
+applied actor–critic RL to optimize bi-energy interactions, mirroring our                    strating how autonomous agents can learn efficient pricing and ex­
+PEMFC-hydrogen control goals. Zhu et al. [8] designed a stochastic                           change behaviors—an idea directly translatable to microgrid-level
+optimization system for low-carbon island microgrids with hybrid                             market participation. Pilz and Al-Fagih [29] reviewed game-theoretic
+hydrogen storage, emphasizing emissions reduction—a parallel to our                          models in local trading systems, highlighting the strategic dynamics
+sustainability targets. Salari et al. [9] developed a multi-agent model for                  that must be accounted for in competitive MG operations. Dey et al. [30]
+PEV charging under cooperative microgrid settings, which informs our                         examined load reshaping strategies for MGs integrated with plug-in
+PHEV scheduling strategy. Xiong et al. [10] stochastic optimization to                       hybrid electric vehicles (PHEVs), offering a foundation for our dy­
+balance renewable generation and EV integration, providing validation                        namic and responsive PHEV scheduling model. Baniassadi and Mosta­
+for our stochastic -based coordination across market and load domains.                       faeipour [31] implemented a hybrid RL framework to manage hydrogen
+At a larger scale, Wilk et al. [11] used multi-agent for smart community                     and EV coordination in MGs, establishing a relevant benchmark for our
+energy trading, offering a pathway to scale our system to                                    own multi-vector system integration. Wang et al. [32] utilized
+multi-microgrid environments. Gupta and Ghosh [12] evaluated                                 Q-learning for operational scheduling in hydrogen-electric MGs within
+grid-connected MGs with EVs and renewables using actual data, which                          market environments, reinforcing the viability of RL in
+supports our inclusion of realistic load profiles. Khezri et al. [13] focused                hydrogen-inclusive decision-making. Lastly, Zhang et al. [33] addressed
+on deep Q-learning for hybrid solar-wind MGs, offering an efficient                          the co-optimization of power-to-gas systems and battery energy storage,
+alternative to DRL models. Kou et al. [14] introduced hierarchical al­                       providing architectural support for our PEMFC–hydrogen–battery link­
+gorithm for coordinating MGs with distribution networks, which un­                           age within an electricity market bidding context.
+derscores the scalability for interconnected systems. Lastly, Naseri et al.                      Despite the growing body of research on microgrid energy man­
+[15] reviewed AI in energy management, affirming dominance in                                agement, key challenges remain in advancing coordinated, multi-vector
+adaptive and scalable microgrid control—thus solidifying the theoret­                        dispatch under uncertainty. As highlighted in Table 1, many existing
+ical foundation of our stochastic optimization-based framework.                              studies provide limited integration of hydrogen systems—such as
+    Stochastic optimization and scenario-based scheduling have played a                      PEMFCs and CHP units—within holistic energy management frame­
+crucial role in enabling microgrid (MG) energy management under un­                          works, thereby missing opportunities for cross-domain optimization
+certainty, particularly in the context of renewable integration, electric                    across electric, thermal, and hydrogen vectors. Furthermore, the sto­
+vehicles, and multi-market participation. Dhanapala et al. [16]                              chastic nature of plug-in hybrid electric vehicle (PHEV) charging
+
+                                                                                         2
+C. Xu and A.N. Abdalla                                                                                                             Renewable Energy 256 (2026) 124064
+
+
+Table 1                                                                                  generating diverse probabilistic scenarios. In parallel, the HHO algo­
+– Research gaps and corresponding contributions of this work.                            rithm is employed to solve a constrained multi-objective optimization
+  Research Gap                        References   Contribution of This Paper            problem that co-optimizes the operation of distributed renewable gen­
+                                                                                         eration, battery energy storage systems (BESS), plug-in hybrid electric
+  Limited integration of hydrogen     [7,15,18,    Develops a unified EMS that co-
+    systems (PEMFC/CHP) with          24,25]       optimizes PEMFC-CHP,                  vehicle (PHEV) charging schedules, and proton exchange membrane
+    coordinated scheduling                         hydrogen storage, and grid            fuel cell-combined heat and power (PEMFC-CHP) systems, along with
+    frameworks                                     participation under uncertainty       hydrogen production and trading activities. The proposed strategy
+  Lack of stochastic modeling of      [21,23,30,   Incorporates scenario-based           simultaneously pursues cost minimization, emission reduction, and
+    PHEV charging behavior in         32]          PHEV charging profiles using
+    day-ahead scheduling                           Monte Carlo Simulation to
+                                                                                         system reliability while rigorously respecting technical constraints such
+                                                   model demand-side uncertainty         as energy balance, storage limits, thermal requirements, and market
+  Few studies jointly consider        [19,24,25,   Proposes a multi-vector               bidding conditions. The model is implemented and validated using
+    electric, thermal, and hydrogen   33]          dispatch optimization using           MATLAB® software on a modified 16-bus microgrid test system, under a
+    energy vectors in dispatch                     constrained Harris Hawks
+                                                                                         wide range of uncertainty scenarios. Simulation results confirm the
+                                                   Optimization (HHO)
+  Underexplored integration of        [17,20,24]   Combines Monte Carlo-based            proposed method’s superiority over benchmark algorithms in achieving
+    scenario-based uncertainty                     stochastic modeling with HHO          coordinated, low-carbon, and reliable energy scheduling across electric,
+    with metaheuristic                             to enhance robustness and             thermal, and hydrogen vectors.
+    optimization methods                           adaptability of EMS
+  Sparse comparisons of               [12,16,22]   Benchmarks HHO against PSO,
+    metaheuristic algorithms on                    GA, and GWO in terms of
+                                                                                         2. Methodology
+    computational scalability for                  execution time, convergence
+    real-time EMS                                  rate, and memory usage for            2.1. Microgrid system description
+                                                   embedded EMS
+                                                                                             The architecture of the proposed microgrid system is illustrated in
+                                                                                         Fig. 1. It integrates renewable energy sources (RESs), battery storage, a
+demand is often neglected or insufficiently modeled in day-ahead
+                                                                                         hydrogen subsystem, and plug-in hybrid electric vehicles (PHEVs), all
+scheduling, leading to strategies that may falter under real-world vari­
+                                                                                         coordinated by an intelligent Energy Management System (EMS). The
+ability. A notable gap exists in the joint consideration of electric, ther­
+                                                                                         key supply components include a photovoltaic (PV) system and wind
+mal, and hydrogen systems within a unified optimization model.
+                                                                                         turbine, supported by a Battery Energy Storage System (BESS) for energy
+Additionally, while metaheuristic algorithms are widely used, few ap­
+                                                                                         shifting and reliability [3]. A hydrogen energy subsystem consisting of
+proaches combine them with scenario-based uncertainty modeling,
+                                                                                         an electrolyzer, hydrogen tank, and PEMFC-based CHP unit enables
+reducing robustness in dynamic environments.
+                                                                                         power-to-gas conversion and combined heat and power generation,
+   To address the identified research gaps, this study introduces a
+                                                                                         improving both system flexibility and thermal efficiency [4,5]. The
+robust hybrid optimization framework that integrates Monte Carlo
+                                                                                         microgrid serves residential, commercial, and thermal loads, and in­
+Simulation (MCS) with a constrained Harris Hawks Optimization (HHO)
+                                                                                         corporates PHEV charging stations with smart control logic to allow
+algorithm for comprehensive energy management in renewable-
+                                                                                         adaptive charging and potential vehicle-to-grid (V2G) operation [6].
+enriched microgrids. The MCS component captures the stochastic na­
+                                                                                         Grid-connected operation is achieved through a substation, enabling
+ture of electricity prices, load demand, and PHEV charging behavior by
+
+
+
+
+Fig. 1. Conceptual architecture of the multi-energy microgrid coordinated by an EMS based on HHO optimization and Monte Carlo Simulation (MCS) under
+uncertainty.
+
+                                                                                     3
+C. Xu and A.N. Abdalla                                                                                                             Renewable Energy 256 (2026) 124064
+
+
+participation in the day-ahead electricity market, where the EMS opti­
+                                                                                                     PELY
+mizes bidding strategies under uncertainty [7]. This hybrid framework                FtELY = ηELY ⋅ t                                                            (5)
+advances prior work by enabling coordinated scheduling of electricity,                             Vcell ⋅Ncell
+heat, and hydrogen flows in a learning-enabled and uncertainty-aware
+                                                                                     where PELY
+                                                                                            t   is input power, ηELY is efficiency, Vcell is cell voltage.
+architecture [1,4,7].
+                                                                                       Hydrogen storage is updated using a dynamic mass balance:
+    The choice of a Proton Exchange Membrane Fuel Cell (PEMFC) for
+this study is driven by its inherent advantages in microgrid applications,           Ht+1 = Ht + FtELY ⋅Δt − FH2 ,t ⋅Δt                                          (6)
+particularly in combined heat and power (CHP) systems. Compared to
+other fuel cell technologies such as Solid Oxide Fuel Cells (SOFC),                  where Ht is the stored hydrogen at time t, and FH2 ,t is consumption rate.
+PEMFCs operate at significantly lower temperatures (typically                          The energy balance of PHEV storage is given by:
+60–80 ◦ C), which enables faster startup, safer operation, and greater
+compatibility with building-scale CHP systems. This low operating                     t+1 = Et
+                                                                                     EPHEV   PHEV
+                                                                                                  + ηPHEV Pch
+                                                                                                           PHEV,t ⋅Δt − dt                                       (7)
+temperature also facilitates more responsive load-following behavior,
+which is crucial for dynamic energy management in microgrids with                    where EPHEV
+                                                                                             t    is energy level, Pch
+                                                                                                                    PHEV,t is charging power, ηPHEV is efficiency,
+
+high variability from renewable sources and PHEV loads. Additionally,                and dt is driving load.
+PEMFCs demonstrate higher electrical efficiency at small scales and                     Ensuring all demand and storage charges are met overall electrical
+offer compactness and modularity, making them highly suitable for                    balance is maintained as:
+decentralized applications. Their ability to co-generate thermal energy                                            grid
+                                                                                     PPV
+                                                                                      t + Pt
+                                                                                           WT
+                                                                                              + PPEMFC + Pbat
+                                                                                                          dis,t + Pbuy,t = Pload,t + Pt
+                                                                                                                                      ELY
+                                                                                                                                          + Pbat
+                                                                                                                                             ch,t + Pt
+                                                                                                                                                     PHEV
+                                                                                                                                                                 (8)
+further enhances overall system efficiency, aligning well with the multi-                        t
+
+vector coordination goals of this work. Moreover, PEMFCs exhibit                         Recent advancements in fuel cell technology have enabled the
+robust performance under partial-load conditions, which is advanta­                  simultaneous generation of electrical and thermal energy via chemical
+geous for fluctuating demand profiles and intermittent renewable                     conversion. Proton exchange membrane fuel cells (PEMFCs) facilitate
+input—key features in the studied scenario-based optimization                        this electrochemical process by combining hydrogen and oxygen to
+framework.                                                                           produce electricity, heat, and water. When operated at high load levels,
+    The mathematical modeling of the key components in the microgrid,                PEMFCs are particularly effective in fulfilling both electrical and heating
+including renewable generation, battery energy storage, hydrogen sys­                requirements within a microgrid. However, since the voltage output of a
+tem components, PHEV integration, and energy management                              single PEMFC unit typically ranges from 0.5 to 0.9 V, multiple cells must
+constraints.                                                                         be stacked to achieve grid-compatible voltages.
+    The state of charge (SOC) of a battery is a critical parameter that                  The terminal voltage of a PEMFC stack at any time step τ is given by
+quantifies the available energy in relation to the battery’s rated capacity          Ref. [36]:
+[34].
+                                                                                     Ufc,τ = Urev,τ − ηact,τ − ηohm,τ − ηconc,τ                                  (9)
+                               Pt     dis
+                      ηch Pch
+                           t − ηdis
+SOCt+1 = SOCt +                             ⋅Δt                           (1)           Where Urev,τ is reversible open-circuit potential, ηact,τ is activation
+                             Erated                                                  overpotential, ηohm,τ is ohmic losses, ηconc,τ is concentration overpotential.
+                                                                                        The open-circuit voltage is temperature- and pressure-dependent,
+where SOCt is the state of charge at time Pch          dis
+                                               t and Pt are charging and
+                                                                                     defined as [36]:
+discharging power respectively, ηch and ηdis are charging/discharging
+efficiencies, and Erated is the rated capacity of the battery.                       Urev,τ = 1.229 − 0.00085(Tτ − 298.15) + 4.308
+    The PV output is modeled as a function of irradiance and tempera­                             [ (     )    (      )]
+                                                                                       × 10− 5 Tτ ln PH2,τ + ln PO2,τ                                          (10)
+ture [34]:
+                 (       (         ))                                                Where Tτ is operating temperature at time τ (K), PH2,τ , PO2,τ are partial
+PPV
+ t = APV ⋅ ηref ⋅ 1 − αT Tt − Tref   ⋅Gt                              (2)
+                                                                                     pressures of hydrogen and oxygen (atm).
+where APV is the area of the PV array, ηref is reference efficiency, αT is the            The activation overpotential is calculated using a Tafel-type empir­
+temperature coefficient, Tt is ambient temperature, and Gt is the irra­              ical model [36]:
+diance at time t.                                                                               [                    (     )          (
+                                                                                     ηact,τ = − γ1 + γ2 Tτ + γ3 Tτ ln CO2,τ + γ4 Tτ ln Ifc,τ
+                                                                                                                                             )]
+                                                                                                                                                          (11)
+   Wind power is defined using a piecewise nonlinear model [35]:
+      ⎧                                                                              Where CO2,τ is oxygen concentration at the catalyst surface (mol/cm3),
+      ⎪
+      ⎪
+      ⎪
+      ⎪         0,              Vt < Vci                                             Ifc,τ is fuel cell current (A).
+      ⎪
+      ⎪
+      ⎪
+      ⎪
+      ⎪         V
+      ⎨ Prated ⋅ t
+                  3
+                    − V 3
+                                                                                          Ohmic losses depend on internal resistance:
+                        ci
+                             Vci ≤ Vt ≤ Vr
+PWT =           Vr3 − Vci3                                                 (3)
+ t
+      ⎪
+      ⎪                                                                              ηohm,τ = Ifc,τ ⋅Rohm,τ                                                    (12)
+      ⎪
+      ⎪
+      ⎪      Prated, Vr ≤ Vt ≤ Vco
+      ⎪
+      ⎪
+      ⎪
+      ⎪
+      ⎩         0,         Vt < Vco                                                  Where Rohm,τ is internal cell resistance at time τ (Ω)
+                                                                                       where the protonic resistance is:
+where Vt is wind speed, Vci , Vr , and Vco are the cut-in, rated, and cut-out                      Lm
+                                                                                     Rohm,τ =                                                                  (13)
+speeds, respectively.                                                                           σ(Tτ , λτ )
+   The PEMFC output power is modeled with a nonlinear voltage-
+current relation [36]:                                                               where Lm is membrane thickness (cm), σ is membrane conductivity (S/
+                                                                                     cm), a function of temperature and membrane hydration λτ .
+PPEMFC
+ t     = Ncell ⋅ It ⋅(E0 −    a ln It − bIt )                             (4)            The membrane resistance is further modeled as [37]:
+                                                                                                  [        ( )           ( )2 ( )2.5 ]
+where Ncell is number of cells, It is stack current, E0 is open circuit                                     I                       Ifc,τ
+                                                                                            181.6 1 + 0.03 fc,Aτ + 0.062 303
+                                                                                                                           Tτ
+voltage, and a, b are empirical constants.                                                                                           A
+                                                                                     rmem =                 ( )       [     (           )]          (14)
+   The hydrogen production output is computed as:                                                              I
+                                                                                              λτ − 0.634 − 3 fc,Aτ exp 4.18⋅ Tτ −T303
+                                                                                                                                  τ
+
+
+
+
+                                                                                 4
+C. Xu and A.N. Abdalla                                                                                                                            Renewable Energy 256 (2026) 124064
+
+
+     The membrane water content λτ is defined as:                                   EMS are directed toward the stack, storage system, and load interfaces,
+     ⎧ 0.00431 + 17.811⋅ϕ − 39.85⋅ϕ 2 + 36⋅ϕ 3                                      enabling real-time adaptive behavior.
+                           τ       τ        τ           ϕτ ≤ 1
+     ⎨
+λτ =              1.4 ⋅ϕ τ + 114 1 < ϕτ < 3                             (15)
+     ⎩                                                                              2.3. Main objective function
+                          322 ϕτ ≥ 3
+     The instantaneous power output is then:                                            To achieve a resilient and efficient energy management strategy, the
+                                                                                    proposed reinforcement learning-based controller is designed to address
+Pfc,τ = Ifc,τ ⋅Ufc,τ                                                    (16)        multiple competing objectives. The framework is governed by HHO and
+                                                                                    supported by Monte Carlo Simulation (MCS) to capture uncertainty. The
+In CHP operation, thermal power recovery is represented as:                         optimization is performed over a finite time horizon T, and the following
+Pth                                                                     (17)        mathematical formulations describe the system’s multi-objective goals.
+ fc,τ = ηth ⋅rth− el ⋅Pfc,τ
+                                                                                        To solve the problem using scalarized optimization, a weighted sum
+Where Pfc,τ is thermal energy output, rth− el is thermal-to-electrical energy       of the above three objectives is formed. This approach allows the EMS to
+ratio.                                                                              trade off among cost, emissions, and flexibility according to operator-
+    And the total cogeneration efficiency is [37]:                                  defined priorities:
+
+           Pfc,τ + Pth                                                              Z = w1 ⋅Ctotal + w2 ⋅Etotal + w3 ⋅Ltotal ,                                                (19)
+                    fc,τ
+ηsys,τ =                                                                (18)
+              QH2,τ
+                                                                                    where the coefficients w1, w2, and w3 represent the relative importance
+                                                                                    of cost, emissions, and system reliability objectives. where w1 + w2 +
+Where QH2,τ is input hydrogen energy,
+                                                                                    w3 = 1, they can be tuned to reflect operational policy or regulatory
+                                                                                    constraints.
+2.2. Smart architecture of PEMFC-CHP model                                              The first objective aims to minimize the total operational cost of the
+                                                                                    microgrid, which includes the cost of grid electricity purchases, fuel
+    Fig. 2 illustrates the smart control architecture of a PEMFC-based              consumption for PEMFC, battery degradation penalties, and subtracts
+CHP Model, coordinated through an intelligent EMS that integrates a                 revenue from grid electricity sales. It is given by:
+Harris Hawks Optimization (HHO) controller with a MCS engine for
+uncertainty modeling. The system manages energy flows across electric                          T
+                                                                                               ∑ (                                            )
+                                                                                    Ctotal =         Cgridt + Cfuelt + λ1 ⋅ Cdeg t − Rsellt                                   (20)
+and thermal domains while optimizing hydrogen utilization under dy­
+                                                                                               t=1
+namic operational constraints. The architecture begins with a Fuel
+Reformer, which converts primary fuel into hydrogen. This hydrogen is               where, Cgridt is the grid purchase cost, Cfuelt represents the PEMFC fuel
+either directly supplied to the PEMFC Stack or routed to the Hydrogen               cost, Cdeg t is the degradation penalty for the battery, Rsellt is the revenue
+Storage Tank, depending on system demand and market conditions. The                 from power export, and λ1 is the weight for penalizing battery.
+PEMFC Stack performs electrochemical conversion to produce both                        The second objective targets the reduction of environmental emis­
+electrical power and thermal energy, thereby supporting a CHP                       sions, specifically CO2 outputs associated with power consumption from
+configuration. Electricity produced by the stack serves a combination of            the grid and hydrogen production for PEMFC. This is formulated as:
+grid-connected loads and PHEV, the latter acting as both consumers and
+                                                                                               T
+controllable flexible storage. Meanwhile, thermal output is dispatched                         ∑ (                                )
+                                                                                    Etotal =         α1 ⋅ Egridt + α2 ⋅ EPEMFCt                                               (21)
+to satisfy thermal demands, such as residential heating or industrial                          t=1
+process loads. The HHO component of the EMS learns optimal actions
+for dispatch, while the MCS engine simulates probabilistic scenarios,               In this equation, Egridt is the emissions linked to grid energy, and EPEMFCt
+particularly for PHEV behavior and market prices. The system thereby                is the emissions from the hydrogen source. Coefficients α1 and α2 are
+accommodates uncertainty-aware scheduling and co-optimizes between                  emission conversion factors or weighting coefficients assigned based on
+thermal and electric output while ensuring efficient hydrogen cycling.              environmental impact.
+Bi-directional arrows indicate interactive flow: for instance, hydrogen                 The third objective focuses on system performance by minimizing
+can be stored or retrieved based on stack demand, while electric load               operational risks, such as unmet demand and hydrogen imbalance. It
+includes both static and flexible components. Control signals from the              reflects the microgrid’s ability to meet thermal/electrical loads and
+
+
+
+
+                                            Fig. 2. Smart energy management architecture of PEMFC-CHP system.
+
+                                                                                5
+C. Xu and A.N. Abdalla                                                                                                               Renewable Energy 256 (2026) 124064
+
+
+maintain hydrogen storage within allowable limits:                                 convergence toward optimal or near-optimal solutions in nonlinear and
+           T
+                                                                                   constrained optimization problems.
+           ∑     ( 2                             )
+Ltotal =          λ ⋅ Punmett + λ3 ⋅ Himbalancet                       (22)            In this paper, HHO is employed to optimize the multi-objective en­
+           t=1                                                                     ergy dispatch problem involving electrical, thermal, and hydrogen
+                                                                                   vectors within a renewable-dominated microgrid as shown in Fig. 3.
+Where Punmett represents any portion of demand that was not fulfilled,             Fig. 3 presents the overall architecture of the proposed energy sched­
+and Himbalancet measures the deviation in hydrogen balance. Weights λ2             uling framework used for optimal microgrid dispatch. The process be­
+and λ3 reflect the criticality of each operational constraint.                     gins with the initialization of system parameters (e.g., load, generation,
+    The Multi-Energy Dispatch Cost Model quantifies the combined                   storage characteristics) and market pricing scenarios simulated via MCS.
+operational cost of electricity generation from the PEMFC unit, thermal            Using these inputs, the model generates stochastic PHEV charging pro­
+energy from the auxiliary boiler, and electricity consumed for hydrogen            files, reflecting variations in charging start time, duration, and vehicle
+compression or pumping, while also considering revenue from hydrogen               class. These profiles feed into a trajectory generator that produces
+sales. The integrates thermoelectric interactions and market participa­            charging patterns across episodes. The hawks propose dispatch actions
+tion into a unified cost function that guides optimal scheduling decisions         (e.g., PEMFC output, PHEV charging levels, grid power exchange), while
+is modeled as:                                                                     the critic evaluates those actions based on a reward function that reflects
+                                                                                   system costs, emissions, and operational constraints. The model iterates
+Cmulti
+ t     = ζel ⋅PPEMFC
+               t     + ζboil ⋅HtBoiler + ζpump ⋅PPump
+                                                 t    − πH2 ⋅HSell
+                                                              t        (23)
+                                                                                   until the policy converges to an optimal solution. Upon convergence, the
+Where ζel is bid price of PEMFC electricity (€ct/kWh), ζboil is unit cost of       agent interacts with the real-time microgrid environment, which in­
+heat from the auxiliary boiler (€ct/kWh), ζpump is energy cost of                  cludes PEMFCs, hydrogen reformer, battery storage, and hydrogen tank.
+                                                                                   The EMS outputs an optimal energy dispatch schedule, balancing grid
+hydrogen pumping (€ct/kWh), πH2 is hydrogen sale price in €/kg, HBoiler
+                                                                 t                 interaction, hydrogen dynamics, and multi-energy loads.
+is hydrogen quantity exported to market, PPump
+                                            t   Electric output of pump                The main steps as follows:
+at time t.
+    The energy transformation from PEMFC to Hydrogen model captures                     Step 1: Initialization
+the conversion of surplus electrical energy produced by the PEMFC unit
+into storable hydrogen, accounting for conversion efficiency and energy-              Define the initial parameters of the optimization problem:
+to-mass equivalence, thereby enabling flexible energy utilization and                 N: Number of hawks (population size)
+enhancing microgrid adaptability through hydrogen storage and resale.                 D: Number of decision variables (e.g., energy dispatch decisions per
+The equivalent electrical energy transformed into hydrogen (stored                 time step)
+internally or sold) is given by:                                                      T: Maximum number of iterations (termination criterion)
+HtH2,stored = γ H2 ⋅ηconv ⋅PPEMFC,excess                               (24)           Randomly initialize the hawks’ positions (solutions) within the
+                            t
+                                                                                   defined lower and upper bounds:
+Where γ H2 is conversion coefficient (kWh-to-kg-H2), ηconv is electrolyzer         Xi0 = [xi1 , xi2 , …, xiD ], for i = 1, 2, …, N                               (28)
+or compressor efficiency, PPEMFC,excess
+                            t           is surplus PEMFC output available
+for hydrogen production.                                                               Each decision variable is bounded as:
+    The heat demand satisfaction Constraint ensures that the thermal                    [
+                                                                                   xid ∈ xmin
+                                                                                                   ]
+                                                                                          d , xd                                                                 (29)
+                                                                                               max
+
+energy demand of the microgrid is continuously met through a coordi­
+nated supply from both the PEMFC’s recovered heat and the auxiliary                    2: Evaluate Objective Function.
+boiler, effectively balancing thermoelectric generation with dynamic                   Calculate the fitness of each hawk using the scalarized multi-
+load requirements and minimizing reliance on less efficient heat sources.          objective function (Eq. (19)).
+A realistic heat demand balance is enforced as:                                        If any constraint is violated, penalize the solution using:
+                                                                                                       ∑    (          )
+QDemand
+ t      = QPEMFC
+           t     + QBoiler
+                    t                                                  (25)        Zpenalized
+                                                                                    i         = Zi + ρ⋅ min 0, gj (Xi )                            (30)
+                                                                                                          j
+    The generation and grid capacity bounds impose operational con­
+straints on distributed generators and grid exchanges, ensuring that all
+power outputs and imports remain within their respective minimum and                    Step 3: Identify the Best Solution
+maximum limits, thereby preserving system stability, preventing over­
+loading, and maintaining feasible dispatch within technical                             Track the global best solution:
+specifications.
+                                                                                   X = arg min Zpenalized
+                                                                                    *
+                                                                                                i         , ∀i ∈ {1, 2, …, N}                                    (31)
+        gen
+Pmin
+ i,t ≤ Pi,t ≤ Pi,t , Pt
+               max    min,grid
+                               ≤ PGrid
+                                  t    ≤ Pmax,grid
+                                          t                            (26)
+
+    The constraints of stored energy within the battery system by ac­                   Step 4: Update Escape Energy
+counting for charging and discharging processes, efficiency losses, and
+power limits, thereby enabling accurate tracking of energy availability                At iteration t, update the prey’s escape energy using:
+and ensuring adherence to operational constraints over successive time                        (    t)
+intervals.                                                                         E(t) = 2E0 1 −      , E0 ∼ Uniform(− 1, 1)                                    (32)
+                                                                                                   T
+Emin ≤ EBatt
+        t    ≤ Emax , 0 ≤ Pch
+                           t ≤ Pch , 0 ≤ Pt ≤ Pdis
+                                max       dis  max
+                                                                       (27)
+                                                                                        Step 5: Position Update Rule
+
+2.4. Harris hawks optimization (HHO) algorithm                                        For each hawk Xi , update its position based on the escape energy E
+                                                                                   and a random probability r:
+    The HHO algorithm is a population-based metaheuristic inspired by
+the cooperative hunting behavior of Harris’s hawks [38,39]. It dynam­               • If |E| ≥ 1: Exploration Phase
+ically alternates between exploration and exploitation phases, guided by            • If |E| < 1: Exploitation Phase
+the prey’s escape energy, enabling global search capabilities and rapid
+
+                                                                               6
+C. Xu and A.N. Abdalla                                                                                                     Renewable Energy 256 (2026) 124064
+
+
+
+
+                                        Fig. 3. Workflow of HHO for multi-energy microgrid dispatch scheduling.
+
+
+    Use the appropriate update equation based on the selected.                  • Hydrogen selling price is fixed and does not vary in real time.
+                                                                                • BESS, PEMFC, and PHEV degradation are not modeled explicitly
+    Step 6: Apply Constraints and Bounds                                          beyond general operational constraints.
+
+    Ensure that:                                                               3. Result and discussion
+
+ • All variables xid remain within bounds                                      3.1. Testing system and system parameters
+ • Solutions violating constraints are penalized
+ • Best feasible solution is updated                                               All simulations and optimization procedures were executed using
+   Step 7: Termination Check                                                   MATLAB R2022b on a Windows 10 operating system equipped with an
+                                                                               Intel Core i7 processor (2.6 GHz) and 16 GB of RAM. The proposed
+    Repeat Steps 2–6 until:                                                    multi-energy microgrid system is modeled on a modified 16-bus distri­
+    The maximum number of iterations T is reached                              bution network, as illustrated in Fig. 4, and is designed to enable inte­
+                                                                               grated control of renewable energy sources, hydrogen-based
+Or convergence criteria are met (minimal improvement over iterations)
+                                                                               cogeneration units, battery energy storage systems (BESS), and smart
+                                                                               electric vehicle charging under uncertainty. Each component in the
+    Step 8: Output Final Result                                                network is explicitly connected to a specific bus to reflect its operational
+                                                                               location and interaction with the control scheme. A PV unit is connected
+   Return the best solution X* , which represents the optimal energy           to Bus 6, enabling direct solar energy injection into the system. Wind
+dispatch profile across all resources.                                         power is interfaced at Bus 4, contributing variable but renewable power
+                                                                               to the grid. A BESS is positioned at Bus 5, allowing short-term flexibility
+2.5. Assumptions                                                               and state-of-charge-based regulation of energy flows. A PEMFC,
+                                                                               configured as a CHP unit, is installed at Bus 8, delivering both electrical
+    To ensure clarity and transparency in the modeling framework, the          and thermal energy while drawing hydrogen from a central tank.
+following key assumptions were made throughout the simulation and                  Fig. 5 illustrates the core temporal dynamics of the microgrid envi­
+optimization procedures:                                                       ronment, focusing on renewable generation and energy market condi­
+                                                                               tions. Fig. 5(a) displays the hourly forecasted power outputs from PV
+ • Electricity market prices and PHEV arrival times follow normal and          and WT systems. The PV system exhibits a typical solar irradiance
+   Poisson distributions, respectively, based on historical patterns.          pattern, starting at 0 kW during nighttime, gradually increasing after
+ • The efficiency of the electrolyzer and PEMFC is assumed constant            7:00 a.m., and peaking at approximately 24 kW at 12:00 p.m. before
+   throughout the operation, set to 70 % and 55 %, respectively,               tapering off to zero by 7:00 p.m. In contrast, wind output shows mod­
+   without degradation over time.                                              erate variation across the day, ranging from approximately 1.3 kW–10.4
+ • Thermal demand is considered constant and predefined based on               kW, with its maximum occurring around 12:00 p.m., coinciding
+   typical daily profiles, with no real-time variation or forecasting          partially with the solar peak. Fig. 5(b) presents the hourly electricity
+   errors.                                                                     market price in €ct/kWh alongside the estimated load demand in kW.
+ • Electricity market prices for day-ahead bidding are assumed to be           The market price remains low in the early hours (0.2–0.4 €ct/kWh from
+   known probabilistically using historical distributions.
+
+                                                                           7
+C. Xu and A.N. Abdalla                                                                                                      Renewable Energy 256 (2026) 124064
+
+
+
+
+                                        Fig. 4. Multi-energy microgrid system with 16-bus architecture.
+
+
+
+
+                         Fig. 5. (a) Forecasted output of PV and Wind systems; (b) hourly energy tariff and load profile.
+
+
+
+
+                                                                        8
+C. Xu and A.N. Abdalla                                                                                                            Renewable Energy 256 (2026) 124064
+
+
+1:00 a.m. to 8:00 a.m.), then increases sharply, reaching a maximum of              Table 3
+4.0 €ct/kWh between 10:00 a.m. and 1:00 p.m., reflecting high market                Test case definitions for evaluating smart EMS with PHEV, PEMFC, and CHP
+congestion and peak consumption. Concurrently, the load curve starts                integration.
+around 60 kW at 1:00 a.m., rises steadily to a daytime peak of about 90              Case    PHEV           CHP          Market          Includes    Purpose
+kW by 5:00 p.m., and gradually declines to 58 kW by midnight.                                Charging       Function     Condition
+    Table 2 summarizes the key technical and economic parameters                             Strategy
+
+employed in the simulation and formulation of the microgrid energy                   Case    Uncontrolled   Not Used     Stable          PV, WT,     Baseline: no
+management problem. These include the operational bounds of                            1                                 Market          PEMFC       flexibility,
+                                                                                                                                                     full
+distributed energy resources (DERs) such as photovoltaic panels, wind
+                                                                                                                                                     renewables
+turbines, fuel cells (PEMFC), microturbines, and battery energy storage              Case    Smart          Not Used     Stable          PV, WT,     Assess PHEV
+systems. Additionally, market bidding prices, efficiency factors, thermal              2     Charging                    Market          PEMFC       smart
+demand specifications, and hydrogen trading costs are incorporated to                                                                                scheduling
+ensure realistic modeling of system dynamics and energy market in­                   Case    Smart          Not Used     Peak Price      PV, WT,     Market-
+                                                                                       3     Charging                    Spike           PEMFC       adaptive
+teractions. The optimization process is governed by a time resolution of                                                                             smart control
+1 h and an upper iteration limit, which controls the convergence of the              Case    Smart          Used         Peak Price      PV, WT,     Value of CHP
+HHO-based learning framework. Parameters related to startup/shut­                      4     Charging                    Spike           PEMFC       heat coupling
+down costs and depth of discharge constraints are also considered to                                                                     + CHP
+                                                                                     Case    Smart          Used         Off-Peak        PV, WT,     Demand-
+reflect asset longevity and operational feasibility.
+                                                                                       5     Charging                    Price Drop      PEMFC       shifting under
+                                                                                                                                         + CHP       cheap grid
+3.2. Model validation                                                                Case    Smart          Used         Random          PV, WT,     Stress test for
+                                                                                       6     Charging                    Walk (high      PEMFC       policy
+                                                                                                                         volatility)     + CHP       robustness
+    Table 3 outlines the six test scenarios developed to evaluate the
+performance of the proposed Smart EMS. All scenarios assume the
+continuous operation of key distributed generation units, including PV,
+WT, and PEMFC. The variation across cases focuses on three main di­
+mensions: the coordination strategy applied to PHEV charging, the
+activation of CHP functionality in the PEMFC system, and the volatility
+of electricity market prices. These scenarios range from a baseline case
+involving uncontrolled PHEV charging under a stable market, to
+advanced configurations that include CHP integration and smart PHEV
+scheduling under highly volatile pricing conditions. This structured set
+of cases allows for comprehensive validation of the EMS’s flexibility,
+economic performance, and adaptability across a range of real-world
+operational contexts.
+    Fig. 6 presents the hourly power dispatch of DERs for Case 1, where
+PHEVs are charged in an uncontrolled manner and the PEMFC-CHP
+module is not activated. The figure includes the contributions of PV,
+WT, PEMFC, MT, and battery storage across a full 24-h cycle. During
+early morning hours (e.g., hour 1), the PEMFC operates at full capacity             Fig. 6. Hourly power      dispatch    profile      under   uncontrolled    PHEV
+(30 kW) to meet the base load, while the microturbine supports with an              charging scenario.
+
+
+Table 2                                                                             additional 15 kW, and the battery delivers its maximum discharge
+Simulation Configuration for microgrid operation.                                   power of 30 kW. Renewable resources are unavailable at this time (PV =
+  Parameter Description                Assigned Value   Unit/Notes                  0 kW, WT ≈ 5.15 kW). As solar irradiance increases, PV generation
+                                                                                    peaks at 25 kW around hour 12, and the battery switches to charging
+  Optimization iteration limit         1000             –
+  PV generation range                  0 to 25          kW                          mode, absorbing up to 30 kW between hours 10–14 to store excess en­
+  Wind turbine generation range        0 to 15          kW                          ergy. The microturbine output reduces to 6 kW during low-demand
+  PEMFC operating power range          3 to 30          kW                          hours (e.g., hours 4–7) and resumes higher output in the evening. The
+  Microturbine generation capacity     6 to 30          kW                          WT generation varies throughout the day, with maximum output
+  Battery power range                  − 30 to 30       kW (discharge/charge)
+                                                                                    reaching approximately 7.34 kW at hour 4 and decreasing to 2.9 kW by
+  Grid exchange range                  − 30 to 30       kW (import/export)
+  Thermal energy demand                30               kW                          hour 12. Battery operation plays a crucial balancing role: it discharges
+  PV electricity bid price             2.584            € cent/kWh                  during peak demand periods (hours 1–3 and 20–21) and charges during
+  Wind energy bid price                1.073            € cent/kWh                  mid-day surplus periods, optimizing grid reliance. This dispatch pattern,
+  PEMFC energy offer price             0.294            € cent/kWh
+                                                                                    characterized by dominant PEMFC and MT contributions (44.3 % and
+  Microturbine bid price               0.457            € cent/kWh
+  Battery trade bid                    0.380            € cent/kWh                  32.6 %, respectively), highlights the system’s response under uncon­
+  Hydrogen pumping cost                0.909            € cent/kWh                  trolled EV demand and limited flexibility, with only 9.8 % of the load
+  Auxiliary boiler gas cost            4.545            € cent/kWh                  met by PV and 5.1 % by WT.
+  Hydrogen sale price                  163.6            € cent/kg                       Fig. 7 displays the percentage-based contribution of each DER to the
+  PEMFC startup/shutdown cost          1.65             € cent/event
+                                                                                    total energy supply in Case 1, representing the baseline scenario with
+  Microturbine startup/shutdown cost   0.96             € cent/event
+  Battery depth of discharge (DoD)     80               %                           uncontrolled PHEV charging and without PEMFC-CHP integration. The
+  Maximum battery charge rate          30               kW                          chart reveals that the PEMFC plays the dominant role in supporting the
+  Maximum battery discharge rate       30               kW                          microgrid, accounting for approximately 44.3 % of the total power
+  Charging efficiency                  90               %
+                                                                                    supplied. This is followed by the MT, which contributes 32.6 %, pri­
+  Discharging efficiency               90               %
+  Hydrogen utilization efficiency      90               %
+                                                                                    marily during peak pricing hours. The contribution from renewable
+  Simulation time step                 1                hour                        energy sources PV and WT is relatively modest at 9.8 % and 5.1 %,
+
+
+                                                                                9
+C. Xu and A.N. Abdalla                                                                                                          Renewable Energy 256 (2026) 124064
+
+
+
+
+   Fig. 7. Share of DER units in total energy supply for baseline scenario.
+
+
+respectively, due to their intermittent nature and lack of coordination                  Fig. 9. Utility grid exchange profiles across microgrid scenarios.
+with demand. The battery storage system accounts for the remaining 8.2
+%, functioning as a balancing mechanism by shifting energy from pe­
+                                                                                       Fig. 10 presents a comparative analysis of the average power
+riods of excess generation to peak load intervals.
+                                                                                   contribution of various DERs across six distinct microgrid operating
+    Fig. 8 illustrates the hourly dynamics of two critical storage com­
+                                                                                   scenarios. These scenarios range from Case 1, representing a baseline
+ponents in the proposed multi-energy microgrid system: the SoC and the
+                                                                                   with uncontrolled PHEV charging and no PEMFC-CHP integration, to
+hydrogen tank level. These profiles are captured under smart PHEV
+                                                                                   Case 6, which incorporates intelligent charging strategies and full uti­
+charging strategies and coordinated energy scheduling, as implemented
+                                                                                   lization of PEMFC with CHP. The chart highlights how system control
+in Cases 1 through 6. The battery SoC follows a typical load-shifting
+                                                                                   strategies significantly alter DER participation patterns. In Case 1, the
+pattern charging during mid-day hours when renewable energy pro­
+                                                                                   microgrid is heavily reliant on dispatchable units, with PEMFC and MT
+duction is abundant and electricity market prices are low, reaching a
+                                                                                   contributing 44.3 % and 32.6 %, respectively, while renewables (PV and
+peak of 100 % at hour 12. It then discharges during early morning and
+                                                                                   WT) and the battery provide relatively minor shares. As EMS intelli­
+evening peak demand periods, dropping to 20 % by the end of the cycle,
+                                                                                   gence and coordination increase in later cases, the dependency on
+thereby reducing grid dependency during high-tariff hours. Simulta­
+                                                                                   thermal generators decreases, while battery usage grows from 8.2 % in
+neously, the hydrogen tank level shows a gradual decline from 90 % to
+                                                                                   Case 1–29.2 % in Case 6. Concurrently, PV contribution increases from
+52 % during high PEMFC operation, particularly in the evening hours,
+                                                                                   9.8 % to 15 %, showcasing the benefits of aligning renewable generation
+and a modest recovery when hydrogen production exceeds
+                                                                                   with demand through smart scheduling.
+consumption.
+                                                                                       Fig. 11 presents a comparative analysis of the economic performance
+    Fig. 9 compares the hourly grid power exchange behavior of the
+                                                                                   of the proposed microgrid energy management system across Cases 1 to
+microgrid across three representative scenarios: Case 1 (uncontrolled
+                                                                                   6, encompassing both operational costs and revenue streams. The
+PHEV charging), Case 4 (smart PHEV charging with PEMFC integra­
+                                                                                   stacked bar segments represent the breakdown of operational expendi­
+tion), and Case 6 (smart PHEV charging with both PEMFC and CHP
+                                                                                   tures, including grid electricity purchases, PEMFC fuel consumption, MT
+functionality). In Case 1, the system exhibits a consistently high level of
+                                                                                   operating costs, and battery degradation penalties. Overlaid on the bars
+grid import, peaking at over 60 kW around midday, and shows minimal
+                                                                                   is a trend line indicating total revenue, primarily generated from grid
+export activity, indicating a heavy reliance on external energy sources.
+                                                                                   power export and hydrogen sales. The results show a progressive decline
+In Case 4, the integration of PEMFC enables a more balanced exchange,
+                                                                                   in overall costs from Case 1 to Case 6, with grid dependency dropping
+with reduced import and moderate export during renewable surplus
+                                                                                   from 320€ to 150€, and MT costs decreasing by 70 % due to improved
+periods. Case 6 demonstrates the most efficient use of internal resources,
+                                                                                   coordination and smart charging. Concurrently, revenues increase
+with net export observed in several hours (e.g., − 25 to − 30 kW between
+                                                                                   significantly from 35€ in Case 1 to 130€ in Case 6 due to excess
+hours 13–20), primarily due to enhanced energy flexibility from the
+combined use of CHP and intelligent load coordination.
+
+
+
+
+Fig. 8. Hourly variation of battery SoC and hydrogen storage in multi-             Fig. 10. Comparative     dispatch   contribution   of   DERs   across      micro­
+energy microgrid.                                                                  grid scenarios.
+
+                                                                              10
+C. Xu and A.N. Abdalla                                                                                                         Renewable Energy 256 (2026) 124064
+
+
+                                                                                   the cost per kilogram of CO2 avoided relative to the baseline (Case 1).
+                                                                                   The results demonstrate a clear economic benefit to integrating multi-
+                                                                                   energy resources, with Case 6 achieving the most efficient mitigation
+                                                                                   cost at just 0.39 €per kg CO2 avoided, while intermediate cases show a
+                                                                                   gradual improvement in emission cost-efficiency.
+                                                                                       Fig. 14 illustrates a heatmap of the dispatch policy derived from the
+                                                                                   HHO algorithm under varying market electricity prices (2–10 €ct/kWh)
+                                                                                   and load demand levels (10–60 kW). The scale reflects the control ac­
+                                                                                   tions recommended by the optimizer, where positive values denote
+                                                                                   charging behavior (grid import or battery charging) and negative values
+                                                                                   correspond to discharging (grid export or battery output).
+                                                                                       The heatmap reveals a clear adaptive trend: under low-load condi­
+                                                                                   tions (10–20 kW) and low market prices (below 4 €ct/kWh), the system
+                                                                                   strongly favors maximum charging actions (+30 kW), indicating a
+                                                                                   strategy to store inexpensive energy. In contrast, when both the load and
+                                                                                   price are high (e.g., 60 kW and 10 €ct/kWh), the HHO agent recom­
+                                                                                   mends maximum discharging (− 30 kW) to reduce operational cost by
+Fig. 11. Economic breakdown: Operational costs and revenue across micro­           avoiding expensive grid purchases. Intermediate zones—such as mid-
+grid scenarios.                                                                    range load (30–40 kW) and price (6–7 €ct/kWh)—show near-neutral
+                                                                                   actions (between ±5 kW), reflecting a balanced control policy opti­
+generation being leveraged in market participation.                                mized for economic and operational stability. This behavior highlights
+    Fig. 12 presents a comparative radar chart evaluating six energy               the optimizer’s ability to internalize and adapt to the complex trade-offs
+management scenarios across three normalized performance metrics:                  between energy costs and system demand.
+operational cost, carbon emissions, and system reliability. The chart
+visually emphasizes the inherent trade-offs among these objectives                 3.3. Final comparison and sensitivity analysis
+under different control strategies. Case 1, characterized by uncontrolled
+PHEV charging and the absence of PEMFC-CHP integration, performs                       Fig. 15 presents evaluating its response to varying configurations of
+the least favorably exhibiting the highest cost and emissions, alongside           the scalarized multi-objective function. The analysis considers five
+the lowest reliability index. As the scenarios progress toward more co­            distinct weight distributions applied to the three key objectives: cost
+ordinated frameworks integrating smart PHEV charging, hydrogen                     minimization, emissions reduction, and supply reliability (unmet de­
+storage, and CHP functionalities the system exhibits marked improve­               mand minimization). The tested configurations span from cost-oriented
+ments in all metrics. Case 6, representing the fully coordinated scenario,         prioritization (e.g., [0.8, 0.1, 0.1]) to scenarios that emphasize emissions
+achieves the best overall performance, with normalized cost and emis­              and reliability ([0.1, 0.45, 0.45]). Each bar group in the figure repre­
+sions reduced to 0.48 and 0.45, respectively, and reliability improved to          sents the normalized performance outcome of the EMS under the
+0.95. This progression affirms the effectiveness of a multi-energy vector          respective weighting scheme. The results demonstrate a systematic
+dispatch approach in enhancing sustainability, economic performance,               trade-off among objectives. When greater emphasis is placed on cost
+and system resilience.                                                             minimization, the EMS achieves lower normalized cost values (from
+    Fig. 13 presents a comprehensive analysis of the multi-objective               1.00 down to 0.55), but this improvement is accompanied by an increase
+performance of the proposed smart EMS across the six evaluated sce­                in emissions and unmet demand. Conversely, prioritizing environmental
+narios. Fig. 13(a) illustrates the Pareto front depicting the trade-off be­        and reliability criteria results in reduced emissions and enhanced system
+tween net operational cost and carbon emissions. As scenarios progress             flexibility, although at the expense of a moderate rise in operational
+from Case 1 to Case 6, the EMS becomes increasingly efficient, with Case           cost. This behavior confirms the EMS’s ability to dynamically adjust its
+6 achieving the lowest cost (320€) and lowest emissions (520 kg CO2),              dispatch policy in accordance with stakeholder-defined optimization
+confirming its superior coordination strategy involving smart PHEV                 priorities, underscoring the model’s robustness and adaptability in
+charging and PEMFC-CHP integration. Fig. 13(b) complements this view               multi-criteria decision-making contexts.
+by showing the cost-effectiveness of emission reduction, calculated as                 Table 4 presents a comprehensive comparison of the multi-objective
+                                                                                   performance metrics across six evaluated microgrid energy management
+                                                                                   scenarios. The reported indicators include the total operational cost (€),
+                                                                                   CO2 emissions (kg), unmet load (kWh) as a measure of supply reliability,
+                                                                                   and the computational runtime (seconds) required to reach convergence
+                                                                                   using the HHO-based optimization framework. The data demonstrate a
+                                                                                   consistent trend where progressively smarter energy strategies such as
+                                                                                   coordinated PHEV charging and PEMFC-CHP integration led to sub­
+                                                                                   stantial reductions in both cost and emissions. For example, Case 1,
+                                                                                   which lacks smart coordination, results in the highest operational cost
+                                                                                   (575€) and emissions (920 kg CO2), along with a notable unmet load of
+                                                                                   18.5 kWh. In contrast, Case 6, which incorporates smart charging
+                                                                                   alongside integrated PEMFC and CHP systems, achieves zero unmet
+                                                                                   load, the lowest cost (320€), and minimum emissions (520 kg CO2),
+                                                                                   although at a slightly higher computational cost (32.8 s). These results
+                                                                                   validate the efficacy of the proposed EMS in balancing conflicting ob­
+                                                                                   jectives, and highlight its capability to deliver cost-effective, environ­
+                                                                                   mentally sustainable, and reliable microgrid operations through
+                                                                                   reinforcement learning and resource coordination.
+Fig. 12. Radar-based multi-criteria evaluation of dispatch scenarios: Cost,            Table 5 presents the results of a robustness analysis conducted across
+emissions, and reliability.                                                        the six primary EMS scenarios by introducing controlled disturbances in
+
+                                                                              11
+C. Xu and A.N. Abdalla                                                                                                           Renewable Energy 256 (2026) 124064
+
+
+
+
+Fig. 13. Multi-objective analysis of microgrid energy management scenarios: (a) Net operational cost versus emissions highlighting Pareto efficiency; (b) Cost-
+effectiveness of CO2 reduction measured as €/kg avoided.
+
+
+
+                                                                                      Table 4
+                                                                                      Comparative evaluation of multi-objective performance metrics across EMS
+                                                                                      scenarios.
+                                                                                       Cases     Cost (€)   Emissions (kg CO2)   Unmet Load (kWh)     Runtime (s)
+
+                                                                                       Case 1    575        920                  18.5                 21.4
+                                                                                       Case 2    505        845                  14.2                 23.0
+                                                                                       Case 3    470        780                  10.5                 24.1
+                                                                                       Case 4    400        690                   5.3                 27.5
+                                                                                       Case 5    360        600                   2.6                 30.2
+                                                                                       Case 6    320        520                   0.0                 32.8
+
+
+
+                                                                                      deviation in cost relative to baseline conditions. The results demonstrate
+                                                                                      that as system coordination and optimization complexity increase from
+                                                                                      Case 1 to Case 6 the model exhibits greater resilience. For instance, Case
+Fig. 14. Heatmap of HHO-based control actions across load and market                  6 experiences only a 11.9 % increase in cost, minimal emission growth,
+price conditions.                                                                     and maintains near-zero unmet load, reflecting high robustness. In
+                                                                                      contrast, Case 1, which lacks smart coordination, shows the highest
+                                                                                      absolute cost and the greatest sensitivity to perturbation, with a 6.1 %
+                                                                                      cost increase and notable degradation in reliability.
+                                                                                          To ensure a fair and consistent comparison among the metaheuristic
+                                                                                      optimization algorithms used in this study, the key control parameters
+                                                                                      for HHO, PSO, GA, and GWO are summarized in Table 6. All algorithms
+                                                                                      were configured using standard values commonly adopted in literature,
+                                                                                      with tuning performed through preliminary testing to ensure conver­
+                                                                                      gence within the daily 24-h scheduling horizon. Each algorithm employs
+                                                                                      a population size of 30 and a maximum of 50 iterations, selected as a
+                                                                                      trade-off between computational efficiency and solution quality. Prob­
+                                                                                      lem dimensionality corresponds to the number of time intervals in the
+                                                                                      day-ahead scheduling task. The table also highlights algorithm-specific
+                                                                                      parameters such as learning coefficients in PSO, crossover and muta­
+                                                                                      tion rates in GA, and leadership hierarchy roles in GWO.
+                                                                                          Fig. 16 illustrates the convergence performance of four optimization
+                                                                                      algorithms (HHO, PSO, GA, and GWO) as applied to the proposed multi-
+                                                                                      energy microgrid dispatch problem. The plotted objective function
+                                                                                      captures a weighted combination of operational cost, emissions, and
+                                                                                      reliability penalties, forming a scalarized performance index to be
+                                                                                      minimized. All algorithms initiate from a high-cost range (~650–670),
+                                                                                      reflecting the suboptimality of random initial solutions. As iterations
+Fig. 15. – Sensitivity analysis: Impact of objective function weights on cost,        progress, the HHO algorithm demonstrates rapid convergence, reducing
+emissions, and reliability.                                                           the objective from 648.3 to a final value of 321.4 by iteration 200. In
+                                                                                      contrast, GWO achieves a final value of 339.2, while PSO and GA
+key operational inputs. Specifically, the scenarios were subjected to a 10            converge to 352.8 and 367.6, respectively. These results highlight the
+% increase in load demand and a 15 % rise in electricity market prices,               superior search capability of the HHO approach, which not only con­
+simulating conditions of operational stress and economic volatility. The              verges faster but also reaches a lower-cost solution. Compared to the
+performance metrics evaluated include operational cost, CO2 emissions,                worst-performing algorithm (GA), HHO delivers an improvement
+and unmet load before and after perturbation, along with the percentage               margin of over 46 units, translating to a 12.5 % reduction in the dispatch
+
+
+                                                                                 12
+C. Xu and A.N. Abdalla                                                                                                                      Renewable Energy 256 (2026) 124064
+
+
+Table 5
+Robustness evaluation of multi-objective performance under perturbed conditions.
+  Evaluation                            Case 1                  Case 2                    Case 3                   Case 4                  Case 5                   Case 6
+
+  BaseCost_EUR                          575                     505                       470                      400                     360                      320
+  CostUnderStress_EUR                   610                     540                       505                      440                     395                      358
+  CostDeviation_%                         6.086957                6.930693                  7.446809                10                       9.722222                11.875
+  BaseEmissions_kg                      920                     845                       780                      690                     600                      520
+  EmissionsUnderStress_kg               940                     862                       795                      708                     618                      532
+  BaseUnmet_kWh                          18.5                    14.2                      10.5                      5.3                     2.6                      0
+  UnmetUnderStress_kWh                   20                      15.3                      11.7                      6.1                     3.1                      0.5
+
+
+
+
+Table 6
+Optimization algorithm parameters and justifications.
+  Parameter        HHO           PSO             GA      GWO    Justification
+
+  Population       30            30              30      30     Balanced trade-
+    Size (N)                                                    off between
+                                                                diversity and
+                                                                computational
+                                                                cost
+  Max              50            50              50      50     Empirically set
+   Iterations                                                   based on
+   (T)                                                          convergence;
+                                                                further increases
+                                                                yielded
+                                                                negligible gains
+  Learning         –             c1 = 1.5,       –       –      PSO-specific
+    Coefficients                 c2 = 1.5                       parameters for
+                                                                cognitive and
+                                                                social
+                                                                components
+  Mutation &       –             –               0.01/   –      Standard GA
+   Crossover                                     0.8            configuration to
+   Rate                                                         ensure solution          Fig. 16. Convergence performance of HHO and benchmark algorithms for
+                                                                exploration and          microgrid dispatch optimization.
+                                                                exploitation
+  Escaping         [− 1, 1]      –               –       –      HHO-specific
+    Energy                                                      dynamic control
+                                                                                         Table 7
+    Coefficient                                                 between
+                                                                                         Computational performance metrics of optimization algorithms.
+                                                                exploration and
+                                                                exploitation              Algorithm    Avg. Execution       Avg. Iterations to        Memory       CPU
+  Search Space     Based on      Same            Same    Same   Limits defined by                      Time (s)             Convergence               Usage (MB)   Usage
+    Bounds         system        across all                     operational                                                                                        (%)
+                   constraints   algorithms                     parameters of
+                                                                energy resources          HHO           8.32                35                        112          74 %
+  Convergence      Final cost    Same            Same    Same   Ensures                   PSO          10.50                42                         98          71 %
+    Criteria       change < ε                                   termination               GA           12.75                50                        125          78 %
+                   or max iter                                  upon stable               GWO           9.40                38                        110          72 %
+                                                                performance or
+                                                                after maximum
+                                                                iterations
+                                                                                         Table 8
+                                                                                         Suitability of optimization techniques for embedded EMS deployment.
+cost index.                                                                               Criteria                               HHO             GA          PSO       GWO
+    Table 7, shows the HHO algorithm achieved the fastest average                         Low Computational Overhead             ✓               –           ✓         ✓
+execution time of 8.32 s, outperforming PSO (10.50 s), GWO (9.40 s),                      Fast Convergence                       ✓               –           ✓         ✓
+and GA, which had the highest runtime at 12.75 s. Furthermore, HHO                        Real-time Applicability                ✓               –           ✓         ✓
+demonstrated superior convergence behavior, requiring only 35 itera­                      Implementation Simplicity              ✓               ✓           ✓         ✓
+
+tions to reach optimality, compared to 42 for PSO, 38 for GWO, and 50
+for GA. In terms of memory efficiency, HHO maintained a moderate                         constrained environments. GA, though simple to implement, is marked
+usage of 112 MB, while GA exhibited the highest memory demand at                         by higher computational demands and slower convergence, which can
+125 MB. CPU utilization during execution also confirmed HHO’s                            hinder its applicability in time-sensitive control scenarios. This quali­
+computational advantages, operating at 74 %, slightly above PSO (71 %)                   tative assessment reinforces HHO’s potential as a robust and lightweight
+and GWO (72 %), but below GA (78 %). These results highlight the                         optimization engine for intelligent EMS platforms deployed in practical
+suitability of HHO for embedded or real-time energy management sys­                      microgrid environments.
+tems, where quick response and low computational burden are critical.
+    Table 8 show HHO emerges as the most suitable candidate, meeting                     4. Conclusions
+all four essential attributes: low computational overhead, fast conver­
+gence, real-time applicability, and implementation simplicity. While                        This study presented a novel energy management strategy for multi-
+PSO and GWO also demonstrate favorable characteristics in terms of                       vector microgrids by employing a constrained HHO algorithm. The
+convergence speed and computational efficiency, they fall slightly short                 proposed framework simultaneously coordinates electric, thermal, and
+of HHO in terms of consistent scalability and adaptability under                         hydrogen energy flows while integrating PHEVs, battery storage
+
+
+                                                                                    13
+C. Xu and A.N. Abdalla                                                                                                                          Renewable Energy 256 (2026) 124064
+
+
+systems, renewable sources (PV, WT), and a PEMFC-CHP system. The                             [4] J. Hu, Y. Zhao, T. Wang, A soft actor-critic deep reinforcement learning method for
+                                                                                                 multi-timescale coordinated operation of microgrids, Protection. Control. Modern
+system was evaluated under six distinct operational scenarios, progres­
+                                                                                                 Power Syst 7 (2022) 29, https://doi.org/10.1186/s41601-022-00244-w.
+sively incorporating smart charging, hydrogen storage, and thermal                           [5] D.K. Panda, S. Das, M. Abusara, Parametric study of adaptive reinforcement
+energy management. Simulation results confirmed the effectiveness of                             learning for battery operations in microgrids, Renewable Energy 250 (2025)
+the proposed HHO-based optimization in minimizing total operational                              123250.
+                                                                                             [6] P. Kaewdornhan, S. Chatthaworn, Model-free data-driven approach assisted Deep
+cost, reducing carbon emissions, and maintaining load satisfaction                               Reinforcement Learning for optimal energy management in microgrid, Energy Rep.
+under uncertain conditions. The key findings demonstrate that:                                   9 (2023) 563–574, https://doi.org/10.1016/j.egyr.2023.01.025.
+                                                                                             [7] Y. Shi, Z. Liu, Y. Xu, Research on energy management in hydrogen–electric coupled
+                                                                                                 microgrids based on deep reinforcement learning, Electronics 13 (17) (2024) 3389.
+ • The proposed Harris Hawks Optimization (HHO) algorithm demon­                             [8] R. Zhu, T. Wang, Q. Lin, Deep reinforcement learning based optimal operation of
+   strated clear superiority over conventional methods (PSO, GA, GWO)                            low-carbon island microgrid with high renewables and hybrid hydrogen–energy
+   by achieving lower total cost, reduced emissions, and improved load                           storage, J. Mar. Sci. Eng. 13 (2) (2025) 225.
+                                                                                             [9] A. Salari, A. Ahmad, M. Rahman, Model-free reinforcement learning-based energy
+   satisfaction in a multi-energy microgrid environment.                                         management for plug-in electric vehicles in a cooperative multi-agent home
+ • By co-optimizing distributed energy resources (PV, WT, PEMFC),                                microgrid, Energy 288 (2024) 129725, https://doi.org/10.1016/j.
+   storage systems, and PHEV charging, the proposed model enhanced                               energy.2024.129725.
+                                                                                            [10] F. Xiong, Y. He, Z. Li, Deep reinforcement learning for optimal microgrid energy
+   system-wide coordination, thermal-electric integration, and energy                            management with renewable energy and electric vehicle integration, Appl. Soft
+   resilience under dynamic conditions.                                                          Comput. 176 (2025) 113180, https://doi.org/10.1016/j.asoc.2024.113180.
+ • Case 6, which incorporates smart PHEV charging with integrated                           [11] J. Wilk, R. Singh, M. Fathi, Multi-agent reinforcement learning for smart
+                                                                                                 community energy management, Energies 17 (20) (2024) 5211.
+   PEMFC and CHP, consistently outperforms others, achieving the
+                                                                                            [12] H. Gupta, S. Ghosh, Optimal energy management of grid-connected microgrid with
+   lowest operational cost (320€), minimal emissions (520 kg CO2), and                           electric vehicles and renewable energy sources using deep reinforcement learning,
+   zero unmet load.                                                                              Energy Rep. 7 (2021) 3102–3116, https://doi.org/10.1016/j.egyr.2021.05.008.
+ • The robustness analysis confirms that advanced EMS strategies                            [13] R. Khezri, M. Sadeghzadeh, M. Rezaei, Smart control of hybrid renewable energy
+                                                                                                 systems using deep Q-learning, Sustain. Energy Technol. Assessments 56 (2023)
+   maintain high reliability under perturbations in market conditions                            103078, https://doi.org/10.1016/j.seta.2023.103078.
+   and demand levels, with Case 6 showing less than 12 % cost devia­                        [14] P. Kou, D. Liang, Q. Gao, Hierarchical coordinated operation of active distribution
+   tion under stress.                                                                            networks and multiple microgrids with energy storage using reinforcement
+                                                                                                 learning, IEEE Trans. Smart Grid 12 (4) (2021) 3270–3283, https://doi.org/
+                                                                                                 10.1109/TSG.2021.3052389.
+    Future research can further enhance the practicality, scalability, and                  [15] M. Naseri, M. Gandomkar, P. Siano, A survey on the role of artificial intelligence in
+adaptability of the proposed HHO-based energy management frame­                                  energy management systems of microgrids, Renew. Sustain. Energy Rev. 121
+                                                                                                 (2020) 109713, https://doi.org/10.1016/j.rser.2019.109713.
+work. One promising direction is the incorporation of real-time elec­                       [16] A.H. Dhanapala, P. Chen, W. Yu, Stochastic energy management of microgrid with
+tricity market dynamics, including ancillary services such as demand                             nodal pricing, J. Modern Power Syst. Clean Energy 8 (1) (2020) 102–113, https://
+response, spinning reserves, and frequency regulation. This would                                doi.org/10.35833/MPCE.2018.000463.
+                                                                                            [17] V.M. Coelho, R.S. Penedo, B. Pereira, Monte Carlo simulation of community
+enable more flexible interaction with grid signals and diversify potential                       microgrid operation: business prospects in the Brazilian regulatory framework,
+revenue streams. Another valuable extension involves transitioning to­                           Util. Policy 92 (2025) 101856, https://doi.org/10.1016/j.jup.2024.101856.
+ward a multi-agent coordination structure to support decentralized en­                      [18] H. Li, Q. Sun, B. Wang, A scenario-based two-stage stochastic optimization
+                                                                                                 approach for multi-energy microgrids, Appl. Energy 322 (2022) 119388, https://
+ergy trading and collaborative dispatch across clustered or
+                                                                                                 doi.org/10.1016/j.apenergy.2022.119388.
+interconnected microgrids. While this work adopts a metaheuristic                           [19] Z. Wang, Y. Zhang, F. Luo, Day-ahead strategic bidding of multi-energy microgrids
+optimization approach using HHO, integrating deep reinforcement                                  participating in electricity, thermal energy, and hydrogen markets: a stochastic bi-
+learning (DRL) remains an important future avenue—particularly for                               level approach, Int. J. Electr. Power Energy Syst. 144 (2024) 110319.
+                                                                                            [20] A.M. Saatloo, A. Mehrabidavoodabadi, M. Marzband, M.A. Mirzaei, N. Aslam,
+handling complex state transitions and real-time control in dynamic                              Local energy market design for power- and hydrogen-based microgrids considering
+environments. Lastly, this study focuses primarily on operational emis­                          a hybrid uncertainty controlling approach, IEEE Transactions on Sustainable
+sions; future work should consider a full life-cycle assessment (LCA) to                         Energy 15 (1) (2024) 398–413.
+                                                                                            [21] A. Rasouli, A. Ghassemi, A. Khodaei, Optimal day-ahead scheduling of a smart
+capture broader environmental impacts across system components and                               micro-grid via a probabilistic model for considering the uncertainty of electric
+technologies.                                                                                    vehicles’ load, Appl. Sci. 9 (22) (2019) 4872, https://doi.org/10.3390/
+                                                                                                 app9224872.
+                                                                                            [22] S. Bahramara, M.P. Moghaddam, M.R. Haghifam, Co-optimization of energy and
+CRediT authorship contribution statement                                                         reserve in standalone micro-grid considering uncertainties, Energy 180 (2019)
+                                                                                                 716–730.
+   Cong Xu: Writing – original draft, Methodology, Investigation.                           [23] A. Sheykhi, M. Fotuhi-Firuzabad, M. Abapour, Optimal energy and reserve market
+                                                                                                 management in renewable-driven microgrid with plug-in electric vehicles,
+Ahmed N. Abdalla: Writing – review & editing, Software, Formal                                   Sustainability 13 (2) (2021) 879, https://doi.org/10.3390/su13020879.
+analysis.                                                                                   [24] R. Tavakkoli-Moghaddam, M. Abedi, Stochastic multi-objective energy
+                                                                                                 management in smart microgrids with hydrogen storage, J. Clean. Prod. 231
+                                                                                                 (2019) 1164–1177, https://doi.org/10.1016/j.jclepro.2019.05.254.
+Declaration of competing interest
+                                                                                            [25] M. Nassajian, S. Bahramara, H. Golmohamadi, Scenario-based stochastic
+                                                                                                 programming for optimal energy management of microgrids with hydrogen storage
+    The authors declare that they have no known competing financial                              and electric vehicles, Sustainable Energy, Grids and Networks 30 (2022) 100634.
+interests or personal relationships that could have appeared to influence                   [26] J. Yan, Y. Xu, A data-driven method for microgrid bidding optimization in
+                                                                                                 electricity market, Energy Conversion and Economics 4 (4) (2023) 276–286.
+the work reported in this paper.                                                            [27] S. Bose, H. Chang, J. Wang, Reinforcement learning in local energy markets,
+                                                                                                 Energy Informatics 4 (2021) 7, https://doi.org/10.1186/s42162-021-00147-4.
+References                                                                                  [28] T. Chen, H. Su, Local energy trading behavior modeling with deep reinforcement
+                                                                                                 learning, IEEE Access 6 (2018) 62806–62814, https://doi.org/10.1109/
+                                                                                                 ACCESS.2018.2876646.
+ [1] Y. Liu, H. Zhang, X. Wang, Deep reinforcement learning for real-time economic          [29] M. Pilz, L. Al-Fagih, Recent advances in local energy trading in the smart grid based
+     energy management of microgrid system considering uncertainties, Front. Energy              on game-theoretic approaches, IEEE Trans. Smart Grid 8 (6) (2017) 3129–3140.
+     Res. 11 (2023) 1163053, https://doi.org/10.3389/fenrg.2023.1163053.                    [30] S. Dey, N. Kumar, P. Mandal, Cost-effective optimal scheduling of PHEV integrated
+ [2] F.J. Domínguez-Barbero, A. Berrueta, F. Martín-Martínez, Energy management of a             microgrid with load curve restructuring strategies, Discover Computing 28 (2025)
+     microgrid considering nonlinear losses in batteries through Deep Reinforcement              26.
+     Learning, Appl. Energy 368 (2024) 123435, https://doi.org/10.1016/j.                   [31] M. Baniassadi, A. Mostafaeipour, Optimal operation of an integrated renewable
+     apenergy.2024.123435.                                                                       energy microgrid with hydrogen and electric vehicles using a hybrid reinforcement
+ [3] K. Huang, L. Wang, M. Li, Parametric dueling DQN- and DDPG-based approach for               learning approach, Renew. Energy 189 (2022) 906–918.
+     optimal operation of microgrids, Processes 12 (9) (2024) 1822.                         [32] Z. Wang, Y. Yang, H. Li, Deep Q-learning-based strategy for integrated electricity
+                                                                                                 and hydrogen microgrid, Int. J. Hydrogen Energy 45 (57) (2020) 32441–32453.
+
+
+
+
+                                                                                       14
+C. Xu and A.N. Abdalla                                                                                                                       Renewable Energy 256 (2026) 124064
+
+[33] L. Zhang, Y. Wang, G. Li, Coordinated operation of power-to-gas and battery           [37] Yongfeng Ju, Shifa Wang, Jie Ren, Liguo Wang, N. Ahmed, Abdalla. Advanced
+     energy storage systems in microgrids based on stochastic programming, Energy               scheduling of energy storage, renewable generation, and hydrogen management in
+     181 (2019) 157–168.                                                                        microgrids with plug-in hybrid electric vehicle charging integration, Int. J.
+[34] K. Qian, C. Zhou, M. Allan, Y. Yuan, Modeling of load demand due to EV battery             Hydrogen Energy 136 (2025) 609–624.
+     charging in distribution systems, IEEE Trans. Power Syst. 26 (2) (2010 Aug 3)         [38] Ali Asghar Heidari, Seyedali Mirjalili, Hossam Faris, Ibrahim Aljarah,
+     802–810.                                                                                   Majdi Mafarja, Huiling Chen, Harris hawks optimization: algorithm and
+[35] M.A. Rostami, A. Kavousi-Fard, T. Niknam, Expected cost minimization of smart              applications, Future Gener. Comput. Syst. 97 (2019) 849–872.
+     grids with plug-in hybrid electric vehicles using optimal distribution feeder         [39] W. Long, J. Jiao, M. Xu, M. Tang, T. Wu, S. Cai, Lens-imaging learning Harris
+     reconfiguration, IEEE Trans. Ind. Inf. 11 (2) (2015 Jan 23) 388–397.                       hawks optimizer for global optimization and its application to feature selection,
+[36] M. Bornapour, R.A. Hooshmand, M. Parastegari, An efficient scenario-based                  Expert Syst. Appl. 202 (2022) 117255, https://doi.org/10.1016/j.
+     stochastic programming method for optimal scheduling of CHP-PEMFC, WT, PV                  eswa.2022.117255.
+     and hydrogen storage units in micro grids, Renew. Energy 130 (2019 Jan 1)
+     1049–1066.
+
+
+
+
+                                                                                      15
+

@@ -6,6 +6,7 @@ const { t } = useI18n()
 const sentinelRef = ref(null)
 const progress = ref(0)
 const showModal = ref(false)
+const showDevModal = ref(false)
 
 function onScroll() {
   if (!sentinelRef.value) return
@@ -41,7 +42,7 @@ onUnmounted(() => {
       <div class="end-links">
         <button class="end-link" @click="showModal = true">{{ t('app.endResearchTitle') }}</button>
         <span class="end-separator">·</span>
-        <a class="end-link" href="https://github.com/3uyuan1ee" target="_blank" rel="noopener">@3uyuan1ee</a>
+        <button class="end-link" @click="showDevModal = true">{{ t('app.endDevTitle') }}</button>
       </div>
     </div>
   </div>
@@ -67,7 +68,44 @@ onUnmounted(() => {
 
           <div class="modal-block">
             <h3 class="modal-subtitle">Data Sources</h3>
-            <p class="modal-text modal-sources">{{ t('app.endResearchSources') }}</p>
+            <div class="modal-text modal-sources">
+              <template v-for="(line, idx) in t('app.endResearchSources').split('||')" :key="idx">
+                <p v-if="line.startsWith('[')" class="source-ref">{{ line }}</p>
+                <p v-else-if="line.trim()" class="source-dataset">{{ line }}</p>
+              </template>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <a class="end-github" href="https://github.com/3uyuan1ee" target="_blank" rel="noopener">@3uyuan1ee</a>
+          </div>
+        </div>
+      </div>
+    </Transition>
+  </Teleport>
+
+  <!-- Dev Notes Modal -->
+  <Teleport to="body">
+    <Transition name="modal">
+      <div v-if="showDevModal" class="modal-overlay" @click.self="showDevModal = false">
+        <div class="modal-panel">
+          <button class="modal-close" @click="showDevModal = false">&times;</button>
+
+          <h2 class="modal-title">{{ t('app.endDevTitle') }}</h2>
+
+          <div class="modal-block">
+            <h3 class="modal-subtitle">{{ t('app.endDevOverview') }}</h3>
+            <p class="modal-text">{{ t('app.endDevOverviewText') }}</p>
+          </div>
+
+          <div class="modal-block">
+            <h3 class="modal-subtitle">{{ t('app.endDevTimeline') }}</h3>
+            <div class="modal-text" v-html="t('app.endDevTimelineText')" />
+          </div>
+
+          <div class="modal-block">
+            <h3 class="modal-subtitle">{{ t('app.endDevReflection') }}</h3>
+            <p class="modal-text">{{ t('app.endDevReflectionText') }}</p>
           </div>
 
           <div class="modal-footer">
@@ -81,7 +119,7 @@ onUnmounted(() => {
 
 <style scoped>
 .end-sentinel {
-  height: 100vh;
+  height: 170vh;
   pointer-events: none;
 }
 
@@ -234,6 +272,29 @@ onUnmounted(() => {
 .modal-sources {
   font-size: var(--font-size-caption);
   color: var(--color-text-tertiary);
+}
+
+.source-dataset {
+  margin-bottom: var(--space-1);
+  line-height: 1.5;
+}
+
+.source-dataset:first-child {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+}
+
+.source-ref {
+  margin-bottom: var(--space-1);
+  line-height: 1.5;
+}
+
+.source-ref:first-of-type {
+  margin-top: var(--space-3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
 }
 
 .modal-footer {

@@ -12,6 +12,10 @@ import { processWaPopulation } from './processors/process-wa-population.js'
 import { processIeaExplorer } from './processors/process-iea-explorer.js'
 import { processPaperData } from './processors/process-paper-data.js'
 import { buildBatteryTrend } from './processors/build-battery-trend.js'
+import { buildBatteryTrendV2 } from './processors/build-battery-trend-v2.js'
+import { processIeaGrowth } from './processors/process-iev-growth.js'
+import { processChargingInfrastructure } from './processors/process-charging-data.js'
+import { processEnergyData } from './processors/process-energy-data.js'
 import { buildPolicyModel } from './processors/build-policy-model.js'
 import { writeJson, dataPath } from './lib/utils.js'
 
@@ -50,6 +54,10 @@ async function main() {
 
     // Step 4: Derived data
     await buildBatteryTrend(paperResult)
+    await buildBatteryTrendV2()  // Triple model fitting with OWID 1991-2024 data
+    await processIeaGrowth()
+    await processChargingInfrastructure()
+    await processEnergyData()
     await buildPolicyModel(evVsPetrolResult.rows)
 
     // Done

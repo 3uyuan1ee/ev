@@ -1,0 +1,1404 @@
+{
+  "energySubstitution": [
+    {
+      "year": 1800,
+      "traditional_biomass": 5556,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 0,
+      "oil": 0,
+      "coal": 97,
+      "other_renewables": 0
+    },
+    {
+      "year": 1810,
+      "traditional_biomass": 5833,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 0,
+      "oil": 0,
+      "coal": 128,
+      "other_renewables": 0
+    },
+    {
+      "year": 1820,
+      "traditional_biomass": 6111,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 0,
+      "oil": 0,
+      "coal": 153,
+      "other_renewables": 0
+    },
+    {
+      "year": 1830,
+      "traditional_biomass": 6389,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 0,
+      "oil": 0,
+      "coal": 264,
+      "other_renewables": 0
+    },
+    {
+      "year": 1840,
+      "traditional_biomass": 6944,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 0,
+      "oil": 0,
+      "coal": 356,
+      "other_renewables": 0
+    },
+    {
+      "year": 1850,
+      "traditional_biomass": 7222,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 0,
+      "oil": 0,
+      "coal": 569,
+      "other_renewables": 0
+    },
+    {
+      "year": 1860,
+      "traditional_biomass": 6944,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 0,
+      "oil": 0,
+      "coal": 1061,
+      "other_renewables": 0
+    },
+    {
+      "year": 1870,
+      "traditional_biomass": 6944,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 0,
+      "oil": 6,
+      "coal": 1642,
+      "other_renewables": 0
+    },
+    {
+      "year": 1880,
+      "traditional_biomass": 6944,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 0,
+      "oil": 33,
+      "coal": 2542,
+      "other_renewables": 0
+    },
+    {
+      "year": 1890,
+      "traditional_biomass": 6667,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 33,
+      "oil": 89,
+      "coal": 3856,
+      "other_renewables": 0
+    },
+    {
+      "year": 1900,
+      "traditional_biomass": 6111,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 64,
+      "oil": 181,
+      "coal": 5728,
+      "other_renewables": 0
+    },
+    {
+      "year": 1910,
+      "traditional_biomass": 6389,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 142,
+      "oil": 397,
+      "coal": 8656,
+      "other_renewables": 0
+    },
+    {
+      "year": 1920,
+      "traditional_biomass": 6944,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 233,
+      "oil": 889,
+      "coal": 9833,
+      "other_renewables": 0
+    },
+    {
+      "year": 1930,
+      "traditional_biomass": 7222,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 603,
+      "oil": 1756,
+      "coal": 10125,
+      "other_renewables": 0
+    },
+    {
+      "year": 1940,
+      "traditional_biomass": 7222,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 875,
+      "oil": 2653,
+      "coal": 11586,
+      "other_renewables": 0
+    },
+    {
+      "year": 1950,
+      "traditional_biomass": 7500,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 2092,
+      "oil": 5444,
+      "coal": 12603,
+      "other_renewables": 0
+    },
+    {
+      "year": 1960,
+      "traditional_biomass": 8889,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 0,
+      "natural_gas": 4472,
+      "oil": 11097,
+      "coal": 15442,
+      "other_renewables": 0
+    },
+    {
+      "year": 1965,
+      "traditional_biomass": 9162,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 70.9,
+      "natural_gas": 6303.8,
+      "oil": 18011.5,
+      "coal": 16177.7,
+      "other_renewables": 56.2
+    },
+    {
+      "year": 1966,
+      "traditional_biomass": 9218,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 95.6,
+      "natural_gas": 6868.8,
+      "oil": 19426.4,
+      "coal": 16359.4,
+      "other_renewables": 61.9
+    },
+    {
+      "year": 1967,
+      "traditional_biomass": 9274,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 113.9,
+      "natural_gas": 7374.1,
+      "oil": 20778.9,
+      "coal": 16095.5,
+      "other_renewables": 62.5
+    },
+    {
+      "year": 1968,
+      "traditional_biomass": 9331,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 144.8,
+      "natural_gas": 8044.3,
+      "oil": 22510.5,
+      "coal": 16333.1,
+      "other_renewables": 69.1
+    },
+    {
+      "year": 1969,
+      "traditional_biomass": 9387,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 171.6,
+      "natural_gas": 8833.4,
+      "oil": 24445.4,
+      "coal": 16847,
+      "other_renewables": 72.7
+    },
+    {
+      "year": 1970,
+      "traditional_biomass": 9444,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 219.1,
+      "natural_gas": 9614.8,
+      "oil": 26684.7,
+      "coal": 17087,
+      "other_renewables": 80.3
+    },
+    {
+      "year": 1971,
+      "traditional_biomass": 9499,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 304.7,
+      "natural_gas": 10293.2,
+      "oil": 28116.6,
+      "coal": 16987.7,
+      "other_renewables": 87.2
+    },
+    {
+      "year": 1972,
+      "traditional_biomass": 9553,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 422.7,
+      "natural_gas": 10861.7,
+      "oil": 30335.4,
+      "coal": 17168.2,
+      "other_renewables": 93.4
+    },
+    {
+      "year": 1973,
+      "traditional_biomass": 9608,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 566.4,
+      "natural_gas": 11377.8,
+      "oil": 32730.2,
+      "coal": 17683.6,
+      "other_renewables": 100.3
+    },
+    {
+      "year": 1974,
+      "traditional_biomass": 9663,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 740.6,
+      "natural_gas": 11659.9,
+      "oil": 32230.4,
+      "coal": 17696.4,
+      "other_renewables": 107.2
+    },
+    {
+      "year": 1975,
+      "traditional_biomass": 9718,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 1027.4,
+      "natural_gas": 11659.7,
+      "oil": 31996.5,
+      "coal": 18045.4,
+      "other_renewables": 108.8
+    },
+    {
+      "year": 1976,
+      "traditional_biomass": 9774,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 1201.9,
+      "natural_gas": 12354.1,
+      "oil": 34061.5,
+      "coal": 18699.8,
+      "other_renewables": 121.2
+    },
+    {
+      "year": 1977,
+      "traditional_biomass": 9830,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 1496,
+      "natural_gas": 12759.8,
+      "oil": 35194.3,
+      "coal": 19267.4,
+      "other_renewables": 127.8
+    },
+    {
+      "year": 1978,
+      "traditional_biomass": 9886,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 1738.3,
+      "natural_gas": 13293.9,
+      "oil": 36710,
+      "coal": 19467.5,
+      "other_renewables": 135.3
+    },
+    {
+      "year": 1979,
+      "traditional_biomass": 9943,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 1807.9,
+      "natural_gas": 14118,
+      "oil": 37178,
+      "coal": 20370.6,
+      "other_renewables": 145.3
+    },
+    {
+      "year": 1980,
+      "traditional_biomass": 10000,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 1977.6,
+      "natural_gas": 14237,
+      "oil": 35568.6,
+      "coal": 20877.8,
+      "other_renewables": 155.4
+    },
+    {
+      "year": 1981,
+      "traditional_biomass": 10106,
+      "solar": 0,
+      "wind": 0,
+      "nuclear": 2335.4,
+      "natural_gas": 14395.9,
+      "oil": 34290,
+      "coal": 21158,
+      "other_renewables": 167.1
+    },
+    {
+      "year": 1982,
+      "traditional_biomass": 10213,
+      "solar": 0,
+      "wind": 0.1,
+      "nuclear": 2533.8,
+      "natural_gas": 14469.7,
+      "oil": 33270,
+      "coal": 21395.4,
+      "other_renewables": 192.8
+    },
+    {
+      "year": 1983,
+      "traditional_biomass": 10321,
+      "solar": 0,
+      "wind": 0.1,
+      "nuclear": 2871.7,
+      "natural_gas": 14703.8,
+      "oil": 33097.4,
+      "coal": 22051,
+      "other_renewables": 213.6
+    },
+    {
+      "year": 1984,
+      "traditional_biomass": 10430,
+      "solar": 0,
+      "wind": 0.1,
+      "nuclear": 3484.9,
+      "natural_gas": 15902.7,
+      "oil": 33623.6,
+      "coal": 23008.4,
+      "other_renewables": 238.6
+    },
+    {
+      "year": 1985,
+      "traditional_biomass": 10541,
+      "solar": 0,
+      "wind": 0.2,
+      "nuclear": 4135.9,
+      "natural_gas": 16262.2,
+      "oil": 33684.7,
+      "coal": 23996.7,
+      "other_renewables": 245.9
+    },
+    {
+      "year": 1986,
+      "traditional_biomass": 10653,
+      "solar": 0,
+      "wind": 0.4,
+      "nuclear": 4429.8,
+      "natural_gas": 16421.1,
+      "oil": 34710.5,
+      "coal": 24263.8,
+      "other_renewables": 267
+    },
+    {
+      "year": 1987,
+      "traditional_biomass": 10765,
+      "solar": 0,
+      "wind": 0.5,
+      "nuclear": 4818.7,
+      "natural_gas": 17281.9,
+      "oil": 35508.2,
+      "coal": 25228.5,
+      "other_renewables": 286
+    },
+    {
+      "year": 1988,
+      "traditional_biomass": 10879,
+      "solar": 0,
+      "wind": 0.9,
+      "nuclear": 5253.5,
+      "natural_gas": 18088.8,
+      "oil": 36641.9,
+      "coal": 25983.1,
+      "other_renewables": 294.3
+    },
+    {
+      "year": 1989,
+      "traditional_biomass": 10995,
+      "solar": 0.7,
+      "wind": 7.4,
+      "nuclear": 5402.8,
+      "natural_gas": 18888.6,
+      "oil": 37215.7,
+      "coal": 26231,
+      "other_renewables": 327.1
+    },
+    {
+      "year": 1990,
+      "traditional_biomass": 11111,
+      "solar": 1.1,
+      "wind": 10.1,
+      "nuclear": 5557.2,
+      "natural_gas": 19481.2,
+      "oil": 37906.8,
+      "coal": 25928.9,
+      "other_renewables": 366.3
+    },
+    {
+      "year": 1991,
+      "traditional_biomass": 11243,
+      "solar": 1.4,
+      "wind": 11.4,
+      "nuclear": 5823.1,
+      "natural_gas": 19972.8,
+      "oil": 37876.8,
+      "coal": 25686.7,
+      "other_renewables": 382.1
+    },
+    {
+      "year": 1992,
+      "traditional_biomass": 11376,
+      "solar": 1.3,
+      "wind": 13.1,
+      "nuclear": 5867.3,
+      "natural_gas": 20063.5,
+      "oil": 38404.8,
+      "coal": 25584.3,
+      "other_renewables": 409.9
+    },
+    {
+      "year": 1993,
+      "traditional_biomass": 11511,
+      "solar": 1.5,
+      "wind": 15.8,
+      "nuclear": 6069.3,
+      "natural_gas": 20265.5,
+      "oil": 38246.2,
+      "coal": 25708.8,
+      "other_renewables": 423.4
+    },
+    {
+      "year": 1994,
+      "traditional_biomass": 11647,
+      "solar": 1.7,
+      "wind": 19.8,
+      "nuclear": 6183.3,
+      "natural_gas": 20389.6,
+      "oil": 39068.2,
+      "coal": 25815.2,
+      "other_renewables": 439.6
+    },
+    {
+      "year": 1995,
+      "traditional_biomass": 11785,
+      "solar": 1.8,
+      "wind": 23,
+      "nuclear": 6451.5,
+      "natural_gas": 21104.5,
+      "oil": 39666.4,
+      "coal": 25999.2,
+      "other_renewables": 458.3
+    },
+    {
+      "year": 1996,
+      "traditional_biomass": 11925,
+      "solar": 1.9,
+      "wind": 25.6,
+      "nuclear": 6685,
+      "natural_gas": 22159.3,
+      "oil": 40576.6,
+      "coal": 26617.5,
+      "other_renewables": 470.9
+    },
+    {
+      "year": 1997,
+      "traditional_biomass": 12066,
+      "solar": 2.1,
+      "wind": 33.4,
+      "nuclear": 6639.1,
+      "natural_gas": 22030.4,
+      "oil": 41652.1,
+      "coal": 26563.3,
+      "other_renewables": 504.4
+    },
+    {
+      "year": 1998,
+      "traditional_biomass": 12209,
+      "solar": 2.3,
+      "wind": 44.2,
+      "nuclear": 6753.3,
+      "natural_gas": 22434,
+      "oil": 41788.6,
+      "coal": 26396,
+      "other_renewables": 525.7
+    },
+    {
+      "year": 1999,
+      "traditional_biomass": 12414,
+      "solar": 2.5,
+      "wind": 59,
+      "nuclear": 7010.3,
+      "natural_gas": 23071.9,
+      "oil": 42435.8,
+      "coal": 26508.8,
+      "other_renewables": 552
+    },
+    {
+      "year": 2000,
+      "traditional_biomass": 12500,
+      "solar": 2.9,
+      "wind": 87.2,
+      "nuclear": 7168.5,
+      "natural_gas": 23994.3,
+      "oil": 43016.6,
+      "coal": 27456.4,
+      "other_renewables": 577.9
+    },
+    {
+      "year": 2001,
+      "traditional_biomass": 12500,
+      "solar": 3.9,
+      "wind": 106,
+      "nuclear": 7330.2,
+      "natural_gas": 24316.8,
+      "oil": 43398.3,
+      "coal": 27880.1,
+      "other_renewables": 600.2
+    },
+    {
+      "year": 2002,
+      "traditional_biomass": 12470,
+      "solar": 4.9,
+      "wind": 143.5,
+      "nuclear": 7386.2,
+      "natural_gas": 25051.9,
+      "oil": 43697.1,
+      "coal": 28982.2,
+      "other_renewables": 646.2
+    },
+    {
+      "year": 2003,
+      "traditional_biomass": 12329,
+      "solar": 6.1,
+      "wind": 172.4,
+      "nuclear": 7197.1,
+      "natural_gas": 25727.7,
+      "oil": 44610.9,
+      "coal": 31519.6,
+      "other_renewables": 682.6
+    },
+    {
+      "year": 2004,
+      "traditional_biomass": 12160,
+      "solar": 8,
+      "wind": 232,
+      "nuclear": 7483.4,
+      "natural_gas": 26781.6,
+      "oil": 46413.2,
+      "coal": 33709,
+      "other_renewables": 737.8
+    },
+    {
+      "year": 2005,
+      "traditional_biomass": 12076,
+      "solar": 11.2,
+      "wind": 281.3,
+      "nuclear": 7442.5,
+      "natural_gas": 27439.2,
+      "oil": 47016.9,
+      "coal": 36201,
+      "other_renewables": 798.4
+    },
+    {
+      "year": 2006,
+      "traditional_biomass": 11993,
+      "solar": 15.4,
+      "wind": 357,
+      "nuclear": 7494.9,
+      "natural_gas": 28171.7,
+      "oil": 47437,
+      "coal": 38087,
+      "other_renewables": 850.2
+    },
+    {
+      "year": 2007,
+      "traditional_biomass": 11911,
+      "solar": 20.8,
+      "wind": 456.1,
+      "nuclear": 7303.1,
+      "natural_gas": 29338.3,
+      "oil": 48087.5,
+      "coal": 40241.7,
+      "other_renewables": 922.8
+    },
+    {
+      "year": 2008,
+      "traditional_biomass": 11829,
+      "solar": 33.5,
+      "wind": 584.2,
+      "nuclear": 7222.8,
+      "natural_gas": 30050.7,
+      "oil": 47692.7,
+      "coal": 40796.6,
+      "other_renewables": 987.3
+    },
+    {
+      "year": 2009,
+      "traditional_biomass": 11747,
+      "solar": 55.3,
+      "wind": 726.5,
+      "nuclear": 7083.3,
+      "natural_gas": 29403.6,
+      "oil": 46634,
+      "coal": 40219,
+      "other_renewables": 1057
+    },
+    {
+      "year": 2010,
+      "traditional_biomass": 11667,
+      "solar": 88.3,
+      "wind": 902.1,
+      "nuclear": 7209,
+      "natural_gas": 31592.9,
+      "oil": 48192.5,
+      "coal": 42016,
+      "other_renewables": 1182.4
+    },
+    {
+      "year": 2011,
+      "traditional_biomass": 11553,
+      "solar": 170.3,
+      "wind": 1142.3,
+      "nuclear": 6871.6,
+      "natural_gas": 32349.9,
+      "oil": 48578.3,
+      "coal": 43983.4,
+      "other_renewables": 1240.7
+    },
+    {
+      "year": 2012,
+      "traditional_biomass": 11441,
+      "solar": 261.6,
+      "wind": 1368.1,
+      "nuclear": 6367.4,
+      "natural_gas": 33246.4,
+      "oil": 49362.2,
+      "coal": 44098.7,
+      "other_renewables": 1339.8
+    },
+    {
+      "year": 2013,
+      "traditional_biomass": 11330,
+      "solar": 354.5,
+      "wind": 1626.2,
+      "nuclear": 6369,
+      "natural_gas": 33733.3,
+      "oil": 49922.8,
+      "coal": 44745.5,
+      "other_renewables": 1441.8
+    },
+    {
+      "year": 2014,
+      "traditional_biomass": 11220,
+      "solar": 502,
+      "wind": 1797,
+      "nuclear": 6466,
+      "natural_gas": 33976.4,
+      "oil": 50336.4,
+      "coal": 44912.4,
+      "other_renewables": 1569.1
+    },
+    {
+      "year": 2015,
+      "traditional_biomass": 11111,
+      "solar": 649.5,
+      "wind": 2105.7,
+      "nuclear": 6519.8,
+      "natural_gas": 34780,
+      "oil": 51294,
+      "coal": 43695.3,
+      "other_renewables": 1669.7
+    },
+    {
+      "year": 2016,
+      "traditional_biomass": 11111,
+      "solar": 824.2,
+      "wind": 2418.8,
+      "nuclear": 6567,
+      "natural_gas": 35584,
+      "oil": 52314.5,
+      "coal": 42767.8,
+      "other_renewables": 1709.8
+    },
+    {
+      "year": 2017,
+      "traditional_biomass": 11111,
+      "solar": 1114.7,
+      "wind": 2856.3,
+      "nuclear": 6592.5,
+      "natural_gas": 36603.1,
+      "oil": 53263.3,
+      "coal": 43226.3,
+      "other_renewables": 1800.7
+    },
+    {
+      "year": 2018,
+      "traditional_biomass": 11111,
+      "solar": 1431.8,
+      "wind": 3162.2,
+      "nuclear": 6717,
+      "natural_gas": 38317.1,
+      "oil": 53792.8,
+      "coal": 43897.3,
+      "other_renewables": 1952.1
+    },
+    {
+      "year": 2019,
+      "traditional_biomass": 11111,
+      "solar": 1748.8,
+      "wind": 3520.4,
+      "nuclear": 6920.2,
+      "natural_gas": 39053.2,
+      "oil": 53997.3,
+      "coal": 43627.6,
+      "other_renewables": 2038.1
+    },
+    {
+      "year": 2020,
+      "traditional_biomass": 11111,
+      "solar": 2116.7,
+      "wind": 3940.2,
+      "nuclear": 6639.5,
+      "natural_gas": 38704,
+      "oil": 49101.2,
+      "coal": 42316.3,
+      "other_renewables": 2152.3
+    },
+    {
+      "year": 2021,
+      "traditional_biomass": 11111,
+      "solar": 2593.1,
+      "wind": 4582.8,
+      "nuclear": 6903.3,
+      "natural_gas": 40225.7,
+      "oil": 51846.8,
+      "coal": 44642.2,
+      "other_renewables": 2317.6
+    },
+    {
+      "year": 2022,
+      "traditional_biomass": 11111,
+      "solar": 3249.7,
+      "wind": 5184.6,
+      "nuclear": 6583.3,
+      "natural_gas": 40059.7,
+      "oil": 53562.1,
+      "coal": 44926.9,
+      "other_renewables": 2379.5
+    },
+    {
+      "year": 2023,
+      "traditional_biomass": 11111,
+      "solar": 4026.6,
+      "wind": 5665.2,
+      "nuclear": 6677.1,
+      "natural_gas": 40151.2,
+      "oil": 54838.7,
+      "coal": 45319.1,
+      "other_renewables": 2411.4
+    },
+    {
+      "year": 2024,
+      "traditional_biomass": 11111,
+      "solar": 5150.6,
+      "wind": 6124.5,
+      "nuclear": 6871.8,
+      "natural_gas": 41278.3,
+      "oil": 55292.1,
+      "coal": 45850.5,
+      "other_renewables": 2476.4
+    }
+  ],
+  "leadPetrolBan": {
+    "totalCountries": 129,
+    "firstBan": {
+      "country": "Afghanistan",
+      "year": 2016
+    },
+    "lastBan": {
+      "country": "Zimbabwe",
+      "year": 2006
+    },
+    "distribution": [
+      {
+        "decade": 1980,
+        "count": 3
+      },
+      {
+        "decade": 1990,
+        "count": 26
+      },
+      {
+        "decade": 2000,
+        "count": 93
+      },
+      {
+        "decade": 2010,
+        "count": 6
+      },
+      {
+        "decade": 2020,
+        "count": 1
+      }
+    ],
+    "bans": [
+      {
+        "country": "Afghanistan",
+        "year": 2016
+      },
+      {
+        "country": "Algeria",
+        "year": 2021
+      },
+      {
+        "country": "Angola",
+        "year": 2006
+      },
+      {
+        "country": "Argentina",
+        "year": 1998
+      },
+      {
+        "country": "Australia",
+        "year": 2002
+      },
+      {
+        "country": "Austria",
+        "year": 1989
+      },
+      {
+        "country": "Azerbaijan",
+        "year": 1997
+      },
+      {
+        "country": "Bangladesh",
+        "year": 1999
+      },
+      {
+        "country": "Belarus",
+        "year": 1998
+      },
+      {
+        "country": "Belgium",
+        "year": 2000
+      },
+      {
+        "country": "Benin",
+        "year": 2005
+      },
+      {
+        "country": "Bolivia",
+        "year": 1995
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "year": 2009
+      },
+      {
+        "country": "Botswana",
+        "year": 2006
+      },
+      {
+        "country": "Brazil",
+        "year": 1989
+      },
+      {
+        "country": "Bulgaria",
+        "year": 2004
+      },
+      {
+        "country": "Burkina Faso",
+        "year": 2005
+      },
+      {
+        "country": "Burundi",
+        "year": 2006
+      },
+      {
+        "country": "Cameroon",
+        "year": 2005
+      },
+      {
+        "country": "Canada",
+        "year": 1990
+      },
+      {
+        "country": "Cape Verde",
+        "year": 2006
+      },
+      {
+        "country": "Central African Republic",
+        "year": 2005
+      },
+      {
+        "country": "Chad",
+        "year": 2005
+      },
+      {
+        "country": "Chile",
+        "year": 2001
+      },
+      {
+        "country": "China",
+        "year": 2000
+      },
+      {
+        "country": "Colombia",
+        "year": 1991
+      },
+      {
+        "country": "Comoros",
+        "year": 2006
+      },
+      {
+        "country": "Congo",
+        "year": 2005
+      },
+      {
+        "country": "Cote d'Ivoire",
+        "year": 2005
+      },
+      {
+        "country": "Croatia",
+        "year": 2006
+      },
+      {
+        "country": "Czechia",
+        "year": 2001
+      },
+      {
+        "country": "Democratic Republic of Congo",
+        "year": 2005
+      },
+      {
+        "country": "Denmark",
+        "year": 1994
+      },
+      {
+        "country": "Ecuador",
+        "year": 1997
+      },
+      {
+        "country": "Equatorial Guinea",
+        "year": 2006
+      },
+      {
+        "country": "Eritrea",
+        "year": 2004
+      },
+      {
+        "country": "Estonia",
+        "year": 2001
+      },
+      {
+        "country": "Eswatini",
+        "year": 2006
+      },
+      {
+        "country": "Ethiopia",
+        "year": 2004
+      },
+      {
+        "country": "Finland",
+        "year": 1994
+      },
+      {
+        "country": "France",
+        "year": 2000
+      },
+      {
+        "country": "Gabon",
+        "year": 2006
+      },
+      {
+        "country": "Georgia",
+        "year": 2000
+      },
+      {
+        "country": "Germany",
+        "year": 1996
+      },
+      {
+        "country": "Ghana",
+        "year": 2004
+      },
+      {
+        "country": "Greece",
+        "year": 2002
+      },
+      {
+        "country": "Guam",
+        "year": 1996
+      },
+      {
+        "country": "Guinea",
+        "year": 2006
+      },
+      {
+        "country": "Guinea-Bissau",
+        "year": 2006
+      },
+      {
+        "country": "Hong Kong",
+        "year": 1999
+      },
+      {
+        "country": "Hungary",
+        "year": 1999
+      },
+      {
+        "country": "Iceland",
+        "year": 2001
+      },
+      {
+        "country": "India",
+        "year": 2000
+      },
+      {
+        "country": "Indonesia",
+        "year": 2006
+      },
+      {
+        "country": "Iran",
+        "year": 2003
+      },
+      {
+        "country": "Iraq",
+        "year": 2018
+      },
+      {
+        "country": "Ireland",
+        "year": 2000
+      },
+      {
+        "country": "Italy",
+        "year": 2002
+      },
+      {
+        "country": "Japan",
+        "year": 1986
+      },
+      {
+        "country": "Kenya",
+        "year": 2006
+      },
+      {
+        "country": "Kyrgyzstan",
+        "year": 2002
+      },
+      {
+        "country": "Latvia",
+        "year": 2001
+      },
+      {
+        "country": "Lesotho",
+        "year": 2006
+      },
+      {
+        "country": "Liberia",
+        "year": 2006
+      },
+      {
+        "country": "Lithuania",
+        "year": 2001
+      },
+      {
+        "country": "Madagascar",
+        "year": 2006
+      },
+      {
+        "country": "Malawi",
+        "year": 2006
+      },
+      {
+        "country": "Malaysia",
+        "year": 2000
+      },
+      {
+        "country": "Mali",
+        "year": 2006
+      },
+      {
+        "country": "Malta",
+        "year": 2003
+      },
+      {
+        "country": "Mauritania",
+        "year": 2004
+      },
+      {
+        "country": "Mauritius",
+        "year": 2006
+      },
+      {
+        "country": "Mexico",
+        "year": 1998
+      },
+      {
+        "country": "Monaco",
+        "year": 2000
+      },
+      {
+        "country": "Morocco",
+        "year": 2006
+      },
+      {
+        "country": "Mozambique",
+        "year": 2006
+      },
+      {
+        "country": "Myanmar",
+        "year": 2016
+      },
+      {
+        "country": "Namibia",
+        "year": 2006
+      },
+      {
+        "country": "Nepal",
+        "year": 2000
+      },
+      {
+        "country": "Netherlands",
+        "year": 1998
+      },
+      {
+        "country": "New Zealand",
+        "year": 1996
+      },
+      {
+        "country": "Niger",
+        "year": 2006
+      },
+      {
+        "country": "Nigeria",
+        "year": 2004
+      },
+      {
+        "country": "North Korea",
+        "year": 2016
+      },
+      {
+        "country": "Norway",
+        "year": 1997
+      },
+      {
+        "country": "Oman",
+        "year": 2001
+      },
+      {
+        "country": "Pakistan",
+        "year": 2001
+      },
+      {
+        "country": "Peru",
+        "year": 2004
+      },
+      {
+        "country": "Philippines",
+        "year": 2000
+      },
+      {
+        "country": "Poland",
+        "year": 2000
+      },
+      {
+        "country": "Portugal",
+        "year": 1999
+      },
+      {
+        "country": "Romania",
+        "year": 2005
+      },
+      {
+        "country": "Russia",
+        "year": 2003
+      },
+      {
+        "country": "Rwanda",
+        "year": 2004
+      },
+      {
+        "country": "Sao Tome and Principe",
+        "year": 2006
+      },
+      {
+        "country": "Saudi Arabia",
+        "year": 2001
+      },
+      {
+        "country": "Senegal",
+        "year": 2005
+      },
+      {
+        "country": "Serbia",
+        "year": 2010
+      },
+      {
+        "country": "Seychelles",
+        "year": 2006
+      },
+      {
+        "country": "Sierra Leone",
+        "year": 2006
+      },
+      {
+        "country": "Singapore",
+        "year": 1998
+      },
+      {
+        "country": "Slovakia",
+        "year": 1995
+      },
+      {
+        "country": "Slovenia",
+        "year": 2001
+      },
+      {
+        "country": "Somalia",
+        "year": 2006
+      },
+      {
+        "country": "South Africa",
+        "year": 2006
+      },
+      {
+        "country": "South Korea",
+        "year": 1993
+      },
+      {
+        "country": "South Sudan",
+        "year": 2000
+      },
+      {
+        "country": "Spain",
+        "year": 2001
+      },
+      {
+        "country": "Sri Lanka",
+        "year": 1999
+      },
+      {
+        "country": "Sudan",
+        "year": 2000
+      },
+      {
+        "country": "Sweden",
+        "year": 1992
+      },
+      {
+        "country": "Switzerland",
+        "year": 2000
+      },
+      {
+        "country": "Taiwan",
+        "year": 2000
+      },
+      {
+        "country": "Tanzania",
+        "year": 2006
+      },
+      {
+        "country": "Thailand",
+        "year": 1996
+      },
+      {
+        "country": "Togo",
+        "year": 2005
+      },
+      {
+        "country": "Trinidad and Tobago",
+        "year": 2000
+      },
+      {
+        "country": "Turkey",
+        "year": 2006
+      },
+      {
+        "country": "Uganda",
+        "year": 2006
+      },
+      {
+        "country": "Ukraine",
+        "year": 2003
+      },
+      {
+        "country": "United Arab Emirates",
+        "year": 2003
+      },
+      {
+        "country": "United Kingdom",
+        "year": 2000
+      },
+      {
+        "country": "United States",
+        "year": 1996
+      },
+      {
+        "country": "Uruguay",
+        "year": 2004
+      },
+      {
+        "country": "Venezuela",
+        "year": 2005
+      },
+      {
+        "country": "Vietnam",
+        "year": 2001
+      },
+      {
+        "country": "Yemen",
+        "year": 2018
+      },
+      {
+        "country": "Zambia",
+        "year": 2006
+      },
+      {
+        "country": "Zimbabwe",
+        "year": 2006
+      }
+    ]
+  },
+  "description": "Global energy mix evolution 1800-2024 and lead petrol ban timeline",
+  "source": "Our World in Data / Vaclav Smil (2017)"
+}

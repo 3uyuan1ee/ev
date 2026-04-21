@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
 const props = defineProps({
   label: { type: String, required: true },
@@ -9,9 +9,12 @@ const props = defineProps({
   step: { type: Number, default: 1 },
   unit: { type: String, default: '' },
   formatValue: { type: Function, default: null },
+  tooltip: { type: String, default: '' },
 })
 
 const emit = defineEmits(['update:modelValue'])
+
+const showTooltip = ref(false)
 
 const displayValue = computed(() => {
   if (props.formatValue) return props.formatValue(props.modelValue)
@@ -22,9 +25,27 @@ const displayValue = computed(() => {
 <template>
   <div class="slider-control">
     <div class="slider-header">
-      <label class="slider-label">{{ label }}</label>
+      <div class="slider-label-row">
+        <label class="slider-label">{{ label }}</label>
+        <span
+          v-if="tooltip"
+          class="info-icon"
+          @mouseenter="showTooltip = true"
+          @mouseleave="showTooltip = false"
+          @focus="showTooltip = true"
+          @blur="showTooltip = false"
+          tabindex="0"
+          role="button"
+          :aria-label="label"
+        >&#9432;</span>
+      </div>
       <span class="slider-value">{{ displayValue }}</span>
     </div>
+    <Transition name="tooltip">
+      <div v-if="showTooltip && tooltip" class="slider-tooltip">
+        {{ tooltip }}
+      </div>
+    </Transition>
     <input
       type="range"
       class="slider-input"
@@ -54,10 +75,62 @@ const displayValue = computed(() => {
   align-items: center;
 }
 
+.slider-label-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .slider-label {
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-secondary);
+}
+
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--color-text-tertiary);
+  cursor: help;
+  border-radius: 50%;
+  transition: color 0.15s;
+  flex-shrink: 0;
+}
+
+.info-icon:hover,
+.info-icon:focus {
+  color: var(--color-info);
+  outline: none;
+}
+
+.slider-tooltip {
+  font-size: var(--font-size-caption);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-1);
+}
+
+.tooltip-enter-active {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tooltip-leave-active {
+  transition: all 0.15s ease;
+}
+.tooltip-enter-from {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+.tooltip-leave-to {
+  opacity: 0;
 }
 
 .slider-value {

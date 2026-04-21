@@ -1,0 +1,745 @@
+                                                                    Transportation Engineering 23 (2026) 100422
+
+
+                                                                      Contents lists available at ScienceDirect
+
+
+                                                                Transportation Engineering
+                                          journal homepage: www.sciencedirect.com/journal/transportation-engineering
+
+
+Full Length Article
+
+Cost-benefit analysis methodology for new rail vehicle concepts with
+alternative powertrain systems
+Benedikt Hertel a,* , Evnika David b, Johannes Pagenkopf a, Benedikt Scheier b,
+Christoph Streuling a
+a
+    Institute of Vehicle Concepts, German Aerospace Center (DLR), Rutherfordstr. 2, 12489 Berlin, Germany
+b
+    Institute of Transportation Systems, German Aerospace Center (DLR), Lilienthalplatz 7, 38108 Braunschweig, Germany
+
+
+
+
+A R T I C L E I N F O                                       A B S T R A C T
+
+Keywords:                                                   There is currently an increased interest in the reactivation of secondary railway lines in Germany. These lines are
+Cost-benefit analysis                                       mostly in bad condition and are not electrified. As diesel-powered vehicles are to be phased out in the future, in
+Reactivated railway lines                                   order to reduce greenhouse gas emissions, emission-free vehicles are required.
+Regional rail transport
+                                                               Market available vehicles are too large and not suited to the needs of low-frequency secondary lines. Due to
+Rail bus
+                                                            the high cost of track electrification, vehicles with alternative drive systems are brought into focus. In addition,
+                                                            high infrastructure costs are incurred for track reactivation.
+                                                               The aim of this work is to develop a comprehensive evaluation approach for a cost-benefit analysis to analyse
+                                                            the economic viability of low frequented railway lines and lines to be reactivated. The advantages of small rail
+                                                            vehicles were discussed on the basis of two tracks to be reactivated and two lines currently in operation. Based on
+                                                            these operational scenarios, cost analyses and cost-benefit analyses were carried out using four different types of
+                                                            vehicles. A sensitivity analysis was used to analyse the impact of passenger utilization and reactivation costs on
+                                                            economic viability.
+                                                               The results show the significant influence of infrastructure-related costs associated with reactivating tracks, as
+                                                            well as track access charges and station fees for tracks in operation. Small vehicle concepts such as rail buses can
+                                                            contribute to cost-efficient operation on low-frequency secondary lines. This study aims to contribute to a better
+                                                            understanding of the factors influencing the economic viability of rail operations on lines with low passenger
+                                                            utilization rates.
+
+
+
+
+1. Introduction                                                                                  multiple units, which have already entered regular passenger service on
+                                                                                                 various lines in recent years, are solutions [3,4].
+    Of the more than 200 000 kilometres of railway lines in Europe, only                            Rising costs in rail transport and limited public spending are leading
+about 57.4 % are electrified [1]. In Germany alone, 20 % of regional                             to cuts in regional rail services, particularly in low-density lines [5].
+passenger rail transport is powered by diesel trains [2]. Many secondary                         Reactivation projects are facing difficulties due to high infrastructure
+lines have been closed over the last decades. Recent initiatives in many                         and personnel costs. Low demand for transport on secondary rail lines
+places in Germany and Europe aim to reactivate disused railway lines.                            has created an application field for rail vehicles, that are smaller than
+As the infrastructure investment required for reactivation is high, al­                          the market available multiple units. Even the smallest vehicles available
+ternatives to full track electrification are needed for low-frequented                           on the market are still too large for some of these low-utilized lines to
+secondary lines which at the same time avoid greenhouse gas emis­                                keep costs sufficiently low. With the Next Generation Train (NGT) TAXI,
+sions in train operation. Battery-electric and hydrogen-powered                                  the German Aerospace Center (DLR) is developing a new, small, and
+
+
+
+    List of abbreviations: BCR, Benefit Cost Ratio; CAPEX, Capital Expenditures; OPEX, Operational Expenditure; CRI, Charging and Refueling Infrastructure; BEMU,
+Battery Electric Multiple Unit; HEMU, Hydrogen Electric Multiple Unit; LCC, Life Cycle Costs; StaBW 2016+, German Standardisierte Bewertung 2016+; NGT, Next
+Generation Train; DLR, German Aerospace Center.
+    E-mail addresses: benedikt.hertel@dlr.de (B. Hertel), evnika.david@dlr.de (E. David), Johannes.pagenkopf@dlr.de (J. Pagenkopf), benedikt.scheier@dlr.de
+(B. Scheier), christoph.streuling@dlr.de (C. Streuling).
+  *
+    Corresponding author.
+
+https://doi.org/10.1016/j.treng.2026.100422
+Received 24 September 2025; Received in revised form 21 November 2025; Accepted 17 January 2026
+Available online 18 January 2026
+2666-691X/© 2026 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+B. Hertel et al.                                                                                                              Transportation Engineering 23 (2026) 100422
+
+
+lightweight vehicle concept that focuses on reducing the Life Cycle Costs             and 80 km long.
+(LCC) [6]. Similar concepts are developed in a number of projects across                  Initially, the area under consideration was defined and correspond­
+Europe. The Europe's Rail Project FutuRe (FP6) [7], the Aachen Rail                   ing scenarios were compiled on the basis of lines and operating data
+Shuttle [8,9], the Draisy and TELLi from SNCF [10] and the Revolution                 (subsection 3.2). In order to achieve the highest possible informative
+Very Light Rail [11] show what these small, innovative vehicles could                 value, four generic vehicles were created to operate the lines, each
+look like.                                                                            representing a spectrum of similar existing vehicles. For this purpose,
+    In the field of small, lightweight rail vehicle concepts, studies on              parameters were determined for various vehicles of the same vehicle
+costs have been conducted by the developers of the concepts, (e.g. [12]).             class and a generic vehicle was derived from the averaged values for
+Climate-neutral alternatives to diesel multiple units have been evaluated             each vehicle class. In order to identify influencing factors and their de­
+on the basis of utility analyses and life cycle cost analyses [13–15]. In             gree of efficiency for economic track reactivation, the four vehicles
+Germany, public stakeholders can use a standardised cost-benefit anal­                (Fig. 1), a small, lightweight battery electric rail bus, a one-car-battery
+ysis to check whether the infrastructure investment in electrification via            electric (multiple) unit (BEMU-1) and a two-car-battery electric multi­
+catenary or in refuelling and charging infrastructure for battery-electric            ple unit (BEMU-2) as well as a one-car hydrogen electric (multiple) unit
+or hydrogen-powered trains is worthwhile. It provides an established                  (HEMU-1) are examined in this study for the four lines.
+procedure for decision-making processes and determining the public                        To determine the benefits and costs of these scenarios, a resource-
+funding eligibility for investment projects into non-electrified secondary            oriented approach of a cost-benefit analysis has been adapted and
+railways (p. 189 [16]).                                                               executed, which determines the benefits and costs of investment and
+    For investment projects to reactivate railroad lines, there are also              operating secondary lines with new vehicle concepts. The CAPEX for the
+procedures for decision-making and assessing eligibility for federal and              vehicles, infrastructure investments to reactivate the line and the costs
+state funding on a national level. In Germany, for investment projects                for the refuelling and charging infrastructure are considered. The OPEX
+over € 30 million, a welfare-economic cost-benefit analysis approach can              include costs for maintenance, energy consumption and personnel costs.
+be used (p. 6 [16]) Since this methodology is complex to apply, the                   The benefit side takes into account the following indicators:
+“simplified procedure for reactivation projects”, which is a
+resource-based cost-benefit analysis approach that monetarily in­                      - traffic benefits consisting of avoided car operating costs, benefits
+ternalizes external effects, can be used for lower-investment projects to                from travel time savings and benefits from additional mobility
+reactivate railroad lines (p. 211 [16]). Both approaches internalise                     alternatives
+external effects such as greenhouse gas emissions, the consequences of                 - benefits from avoided consequential accident costs
+accidents and changes in travel times. The standardised assessments are                - benefits from avoided CO2 emissions
+collected in the German Standardisierte Bewertung 2016+ (StaBW                         - benefits from avoided emission costs
+2016+) [16].                                                                           - public transport operating costs
+    Cost-benefit analyses have mainly been used to assess the effectiveness            - infrastructure maintenance costs
+of large investment projects [17]. Modifications of the method are avail­
+able for rail freight services [18]. For new vehicle concepts, the cost-related           The benefits and costs of track reactivation (including regional rail
+methods Life-Cycle-Cost Analysis and Total-Cost-of-Ownership are usually              services) are compared with the reference scenario (status-quo road-
+sufficient. This paper combines various procedural approaches in order to             based public bus transport service). If the benefit-to-cost difference is
+evaluate investments into infrastructure for track reactivation, new vehicle          positive (corresponds to a benefit-cost ratio >1), the project can be said
+concepts and alternative powertrain systems in a cost-benefit analysis. The           to be economically viable.
+procedural approaches for assessment refuelling and charging in­                          Four scenarios are considered for the use cases, which differ in terms
+frastructures and for the reactivation of railroad lines were combined with           of length, passenger utilisation, track characteristics, status quo infra­
+each other and detailed with regard to the capital expenditures (CAPEX)               structure condition and charging and refuelling infrastructure (CRI).
+and operational expenditure (OPEX) of the vehicle. This ensures that both             Combined with the four vehicle types defined previously, these results in
+the life cycle costs from vehicle operation and external effects are included         16 different cases to be analysed. For the reactivation scenarios, the
+in the assessment and can be interpreted in the overall context of the                infrastructure costs and the transport performance of rail passenger
+transport effects and infrastructure CAPEX. With this evaluation approach,            transport can be varied as part of a sensitivity analysis. Fig. 2 schema­
+cost-benefit analysis for specific vehicle configurations in operation on             tizes the evaluated scenarios.
+specific railroad lines can be made. The individual costs and external ef­
+fects and their interactions with each other will be transparent and this             3. Technical and operational assumptions
+makes it possible to quantify the influence of new vehicle concepts and
+alternative drives on the possibilities for reactivating railroad lines and               This section describes the underlying technical and operational as­
+which lines provide potential business cases for the new concepts.                    sumptions for the vehicle concepts. First, four generic rail vehicles with
+    After presenting the method and the necessary data input and as­                  different seating capacities and powertrains are described, which were
+sumptions made, the paper looks at the costs on the vehicle side. In the              selected for operation on low-utilised secondary lines. Second, the se­
+presentation of the results, after a brief presentation of the overall result         lection of the analysed secondary routes is described, the respective
+using an example case, the costs are discussed in detail by comparing the             operating scenarios are defined, and the methodology for determining
+analysed variants.
+
+2. Methodology and data
+
+    As a basis for the evaluation model, operating scenarios, track data,
+vehicle deployment as well as cost and utilization data were first
+determined via a literature search. Out of this data four scenarios where
+defined. When defining the scenarios, the focus was on covering a broad
+spectrum of local rail passenger transport, whereby four lines with low
+capacity utilization were selected, as these are particularly affected by
+economic efficiency problems. Two of these lines are tracks to be reac­               Fig. 1. Rail vehicle types a) battery electric rail bus, b) two-car BEMU, c) one-
+tivated and two of the lines are in operation today. They are between 10              car BEMU, d) one-car HEMU.
+
+                                                                                  2
+B. Hertel et al.                                                                                                        Transportation Engineering 23 (2026) 100422
+
+
+
+
+                                                            Fig. 2. Breakdown of the scenarios.
+
+
+passenger demand, utilisation, and the required vehicle capacity is
+                                                                                  Table 1
+explained.
+                                                                                  Vehicle data.
+                                                                                   Vehicle                    Rail      BEMU-1         HEMU-1        BEMU-2
+3.1. Vehicles                                                                                                 bus
+
+                                                                                   Number of cars             1         1              1             2
+    Four generic rail vehicles with different passenger capacities and
+                                                                                                          ​
+                                                                                   Number of wheel sets   ​   2         4              4             6
+energy supply systems are being evaluated for operation in the sce­                Length                 m   16.7      27             27            46
+narios. The vehicles included in the study were selected based on the low          Seats                  ​   44        75             75            125
+utilisation on secondary lines. The focus is therefore on smaller vehicles.        Seats + 15 %           ​   51        84             84            144
+                                                                                     standees*
+    In order to meet the requirements of a future-oriented mobility
+                                                                                   Service weight         t   22        55             55            95
+concept, the focus is on vehicles with locally emission-free powertrains           Max. weight            t   32        69.4           69.4          115
+that do not emit greenhouse gases. Furthermore, modern vehicles, with              Max. wheelset load     t   16        17             17            19
+a low capacity are chosen to meet the demands of society on low fre­               Energy supply          ​   DC        AC 15/25       Hydrogen      AC 15/25
+quented lines.                                                                                                          kV                           kV
+
+    The smallest vehicle is a two wheel-set rail bus, which will be rep­            *
+                                                                                      The maximum passenger capacity is calculated based on the number of seats
+resented by NGT TAXI. The NGT TAXI is a vehicle concept currently                 plus 15 % standing passengers [24].
+being developed by the German Aerospace Centre (DLR) that is tailored
+for use on reactivated lines and low-frequency lines in rural areas. The          3.2.1. Introduction to the evaluated lines
+multi-modular approach of the vehicle concept allows, among other                     Four lines were selected for the application of the model. Two of
+things, a modular length that can be configured according to capacity             these are tracks that need to be reactivated and two lines which are
+requirements. This study examines the longest version (NGT TAXI                   currently in operation. All lines have the characteristics of secondary
+Large) with 44 seats [6]                                                          lines in rural areas in Germany. When selecting these lines to be
+    The next larger vehicle is a single-car rail vehicle with two bogies          examined, attention was paid to ensure that they cover a broad spectrum
+powered by batteries (BEMU-1) or hydrogen fuel cells (HEMU-1). Its size           with respect to length and passenger loads.
+is based on existing diesel-powered vehicles such as the Alstom LINT 27               The lines examined are all standard-gauge, non-electrified and
+[19], Stadler Regio-Shuttle RS1 [20] and the future Stadler RS ZERO               single-track, assuming that there are possibilities for train crossings so
+[21]. The largest vehicle considered in this study is a two-car BEMU of           that a 60-minute service can be implemented. For the area under
+conventional design with Jacobs bogie (BEMU-2), such as the Siemens               investigation, the line lengths were limited to a maximum of 80 km.
+Mireo Plus B [22] or Stadler Flirt Akku [23]. These are currently the             These represent > 85 % of the non-electrified lines in Germany [25].
+smallest rail vehicles available on the market for operation on                   Scenarios were constructed for each of the selected lines (Table 2).
+standard-gauge tracks. Table 1 shows the key vehicle parameters. The
+key parameters for the generic BEMU-1, HEMU-1 and BEMU-2 vehicles                 3.2.2. Infrastructure and vehicle capacity utilization
+were derived from different real vehicles of similar type. The vehicle                To calculate the line and vehicle utilisation, the passenger demand of
+data is presented in Table 1.                                                     the individual line sections was first determined. Data from public
+                                                                                  transport plans, including those from the German states Lower Saxony
+3.2. Lines and scenarios                                                          [26], Brandenburg [27]. and Thuringia [28], were used for this. Fig. 3
+                                                                                  shows the passenger demand accumulated in both directions over the
+    The following section introduces the lines and scenarios, the infra­          course of the line in passenger kilometres per day in relation to the
+structure and vehicle capacity utilization and the number of vehicles.            distance. The transport performance P [pkm/day] of each scenario has
+This data will be evaluated in the course of this work.                           been determined from the passenger demand of the individual line
+
+                                                                              3
+B. Hertel et al.                                                                                                                 Transportation Engineering 23 (2026) 100422
+
+
+Table 2
+Scenario data.
+  Scenario                                                             Short                      Medium Short                  Medium Long                     Long
+
+  Type                                       ​                         In Service                 Reactivation                  Reactivation                    In Service
+  Length                                     km                        9.9                        20.4                          46.1                            79.3
+  Line stops each way                        -                         5                          6                             11                              18
+  Avg. distance between stops                km                        2                          3,4                           4,2                             4,4
+  Travel time one-way                        hh:mm                     00:17                      00:24                         01:03                           01:20
+  Round-trip time                            hh:mm                     01:00                      01:00                         03:00                           04:00
+  Travelling speed*                          km/h                      35.3                       51.0                          43.9                            59.5
+  *
+      One-way trip, average speed including intermediate stop times.
+
+
+segment DSi [passenger/day] and the length lSi [km] of the respective                     of vehicles was increased so as not to exceed this limit. The mileage limit
+sections.                                                                                 was chosen to keep vehicle mileage within a range typical for regional
+                 [     ]                                                                  rail transport.
+     ∑             pkm
+P=      DSi ⋅lSi                                                  (1)
+                   day
+                                                                                          4. Cost rates used for the valuation
+    The time dependent utilisation u(t) [%] of the individual line sec­
+tions over the course of the day was determined using a daily hydro­                         In order to assess the economic viability of the transport scenarios
+graph. Fig. 4 shows daily hydrographs extracted from literature                           examined, it is necessary to systematically determine all relevant cost
+[29–31]. The arithmetic mean of the hydrographs has been used for all                     and benefit components according to the presented assessment method.
+future calculations. Due to variations in the different timetables at the                 This section describes the methodological approach. The cost compo­
+beginning and end of the day, the passenger utilisation of the                            nents consist of three categories, vehicle-related costs including CAPEX
+non-operating hours was distributed among the surrounding trips.                          and OPEX, energy-related costs including energy consumption, CO₂ and
+    The required passenger capacity Csi [passenger] of the vehicle for the                pollutant emissions and infrastructure costs for renewal or reactivation
+individual line section can be determined multiplying the passenger
+demand DSi [passengers/day] with the maximum utilization rate
+umax [%] and divide it by half for the demand in one direction. It is
+assumed that the same number of passengers travel in both directions
+throughout the day.
+        DSi
+Csi =       ⋅u(t)                                                               (2)
+         2
+   The vehicle capacity Cs(max) [passenger] is determined based on the
+maximum passenger capacity throughout the day and along the line. A
+summary of the calculated values is shown in Table 3.
+
+3.2.3. Number of vehicles required and mileage
+    Based on the calculated required capacity, the number of trips that
+need to be served by multiple-train units is determined according to the
+different vehicle types, using the number of seats available in the
+vehicle. The operating kilometers were calculated based on the track
+length, number of trips and the average train length. The number of
+vehicles per type in the various scenarios was determined using two
+criteria. First, the minimum required number of vehicles was deter­
+mined that can serve all scheduled trips, including multi-unit trains. It
+was then checked whether the mileage of the individual vehicles for
+operating the timetable plus 5 % margin for service and shunting did not
+exceed a maximum mileage of 175 000 km and, if necessary, the number                                     Fig. 4. Utilisation over the course of the day .
+
+
+
+
+                                                                  Fig. 3. Line traffic load profiles.
+
+                                                                                      4
+B. Hertel et al.                                                                                                                Transportation Engineering 23 (2026) 100422
+
+
+Table 3
+Line utilisation and required vehicle capacity.
+  Scenario                                                                              Short             Medium Short                Medium Long                Long
+
+  Passenger demand                             P             pkm per day                3 250             14 000                      12 000                     54 150
+  ​                                            p                 pkm                    328               588                         260                        691
+                                                                        per day
+                                                             track − km
+      Required passenger capacity              Cs(max)       passenger                  78                57                          71                         106
+
+
+
+of track infrastructure and provision of CRI.
+                                                                                      Table 5
+                                                                                      Maintenance cost assumptions for each vehicle variant based on StaBW 2016+;
+4.1. Vehicle-related costs                                                            Appendix 1, B11 [34].
+                                                                                       Vehicle type                Maintenance (run time)         Maintenance (mileage)
+   The evaluated vehicle-related costs include both the CAPEX for the                                              [€/t*a]                        [€/1000 tkm]
+acquisition of the vehicle fleet and the maintenance costs incurred                    Rail Bus                    540                            5.8
+during the operating period. As some of the vehicle concepts examined                  BEMU-1 / BEMU-2             540                            5.8
+are not yet available on the market, the values had to be determined                   HEMU                        590                            8.8
+using comparison and scaling methods.
+
+4.1.1. Vehicle capex and maintenance                                                  Table 6
+    CAPEX for the rail bus were estimated based on comparable vehicles                Vehicle costs as the example for the medium long line.
+as there are currently no comparable vehicles on the market. The one car               Vehicle type                 Vehicle CAPEX                   Vehicle Maintenance
+tram Moderus Gamma LF 10 AC BD, which was built in a small series of                                                [€/km]                          [€/km]
+4 units for a small German tram network [32], and the tender [33]. for a               Rail bus                     0.810                           0.229
+similar vehicle, which is also to be delivered by Modertrans Poznan in 10              BEMU-1                       1.172                           0.606
+units, served as the basis. This vehicle was selected because it is a new              HEMU-1                       1.302                           0.707
+development and also a lighter vehicle. To align the costs with the rail               BEMU-2                       1.953                           1.046
+
+bus, different assumptions were made:
+                                                                                      consumption is calculated from the specific energy consumption of the
+ • Surcharge for longer vehicle                                                       line [kWh/km] or [kgH2/km] and the mileage per year
+ • Additional costs for traction battery system                                       [vehicle-km/year]. The energy consumption of the rail bus is assumed to
+ • Additional costs incurred for vehicles in main line operation                      1.5 kWh/km based on simulation-based analysis, as no vehicle of this
+                                                                                      size is given in the model vehicle types. Scaling the energy requirement
+    This results in total costs of approximately € 2.5 million for the rail           solely on the basis of the vehicle mass would lead to strong distortions
+bus. The acquisition costs for vehicles BEMU-1, HEMU-1, and BEMU-2                    compared to the 1- and 2-car vehicle configurations.
+were determined based on the values specified in [16]. and an inter­                      The energy costs for each powertrain configuration are calculated
+nal DLR database. In reality, these also depend on the size of the fleet to           from the energy consumption and the powertrain-specific prices
+be acquired and the vehicle model. Models that are manufactured in                    assuming an electricity prices of € 0.12/kWh and hydrogen prices of
+large quantities may be cheaper than tailor-made vehicles. An overview                € 5/kgH2, as given in the StaBW 2016+ [16].
+of the costs of the vehicles is shown in Table 4.                                         As the standard vehicle data given in StaBW 2016+ appendix 1 [34].
+    In order to determine the overall economic viability of the scenarios             does not include the required cost data assumptions of the examined
+discussed in combination with the vehicle variants, cost assumptions are              vehicle concepts, maintenance costs, CO2 and pollutant emission rates
+required for the vehicles, the track infrastructure investments and the               have been calculated based on a mileage- and operating time dependent
+costs for the refueling and recharging infrastructure. Vehicle costs                  approach given in the general procedure of StaBW 2016+ [16].
+include CAPEX and maintenance costs and are defined in the model as                       CO2 emissions and pollutant costs are determined based on the en­
+mileage-based annuities. The determining variable is the annual mileage               ergy consumption of the respective vehicle variant and energy carrier
+of the vehicles in accordance with the scenario. The maintenance costs                specific emission rates. In this case, the battery-electric powertrain
+are based on a time-dependent and mileage share (Table 5), which are                  variants were based on electricity supplied from the conventional power
+calculated based vehicle mass and vehicle-km, calculated from param­                  grid (German electricity mix). In the StaBW 2016+, the use of exclu­
+eter sets given in appendix 1 [34]. of StaBW 2016+.                                   sively green hydrogen is assumed for hydrogen-powered vehicles, which
+    Table 6 shows the mileage-related vehicle costs, including CAPEX                  distorts the comparability with battery-electric vehicles. For this study,
+and maintenance. The vehicle CAPEX were determined based on the                       the corresponding emission factor was assumed for hydrogen produc­
+acquisition costs and vehicle mileage. The annuity factor used for the                tion from grid electricity. CO2 emission costs were calculated using a
+vehicles was derived from the StaBW 2016+ (appendix 1 [34]).                          cost rate of € 670/tCO2 (StaBW 2016+, Appendix 1 [34]) for all vehicle
+                                                                                      configurations. Table 7 summarizes the results of the energy and cost
+4.1.2. Energy and CO2-emission costs                                                  calculations.
+    The energy consumption for each vehicle type and line was calcu­
+lated according to the method presented in StaBW 2016+ [16]. which                    4.2. Infrastructure-related costs
+calculates track- and stop-specific energy consumption based on line
+specific parameters for each vehicle variant. The line-related energy                     This section expands on the vehicle-related costs described above to
+                                                                                      include the expenses associated with the necessary infrastructure. It
+Table 4                                                                               covers CAPEX and OPEX in CRI and the costs of reactivating the rail
+Vehicle CAPEX (base year 2025).                                                       lines.
+  Vehicle type                      Rail Bus       BEMU-1   HEMU-1       BEMU-2
+
+  Vehicle acquisition cost          2.5 M€         4.5 M€   5 M€         7.5 M€
+
+
+                                                                                  5
+B. Hertel et al.                                                                                                                   Transportation Engineering 23 (2026) 100422
+
+
+Table 7
+Vehicle, emission and pollutant related costs as the example for the medium long line (EU: kWh for battery electric vehicles and kgH2 for hydrogen powered vehicles).
+  Vehicle type              Energy          Energy consumption                  Energy costs                      CO2 costs                       Pollutant costs
+
+                                            [EU/km]           [EU/stop]         [€/km]            [€/stop]        [€/km]         [€/stop]         [€/km]            [€/stop]
+
+  Rail bus                  electric        1.5               0.000*            0.180             0.000*          0.446          0.000*           0.016             0.000*
+  BEMU-1                    electric        1.815             1.193             0.218             0.093           0.503          0.215            0.017             0.007
+  HEMU-1                    hydrogen        0.121             0.080             0.605             0.259           1.398          0.599            0.048             0.021
+  BEMU-2                    electric        3.135             2.061             0.376             0.161           0.869          0.372            0.030             0.013
+ *
+   The energy consumption of the one-car rail bus is assumed based on longitudinal simulation, therefore the total energy demand is entirely given per vehicle km.
+This approach differs to the other discussed vehicles because the StaBW does not provide data for vehicles of the size of a rail bus.
+
+
+                                                                                             5. Results
+Table 8
+CRI data.
+                                                                                                 Following the results of the overall economic calculations, this sec­
+                              AC-Battery    DC-Battery Charging        H2 Refueling          tion focusses at vehicle costs, infrastructure costs and energy costs.
+                              Charging                                 Station
+                                                                                             Additionally, a sensitivity analyses has been carried out for important
+  Reference            ​      Furrer und    Furrer und Frey Rapid      -                     input factors.
+    model                     Frey Voltap   Charger (Coventry) & all
+                                            in one
+  Charging             kW     2400          450                        -                     5.1. Overall economic results
+    Power
+  CAPEX                M€     2.25          0.8                        7.5                       In the cost-benefit assessment, all effects of the variants considered
+    (2025)
+  Life span        years      30            20                         30
+                                                                                             are monetized and compared to the reference case (line bus service case
+  References       ​          [39,40]       [37,38]                    [13,41,42]            without rail service). Fig. 5 shows the benefit and cost ratio (BCR) of the
+                                                                                             four vehicles considered for the Medium Short scenario. If the benefit
+                                                                                             difference exceeds the cost difference, the project is advantageous. In the
+4.2.1. Charging and refueling infrastructure                                                 scenario shown in the figure, this is the case for the first two variants.
+     For the vehicles included in this study, different charging and refu­                       The infrastructure CAPEX and maintenance costs for the reactivation
+eling options are considered (Table 8). For the conventional rail vehicles                   of the railroad line as well as the traffic benefits are the same in all
+BEMU-1 and − 2, commercially available overhead line recharging sys­                         variants. The rail bus variant has the best benefit-cost ratio of 1.37,
+tems, such as the Voltap fast charging system from Furrer and Frey [35],                     followed by the BEMU-1 variant with an BCR of 1.21. The main differ­
+are selected. Two vehicles can be charged simultaneously at each                             ence is composed of the public transport operating costs, which are
+charging station with a combined maximum charging power of 2.4 MW.                           lower for the rail bus compared to the BEMU-1. As the energy demand of
+Charging the BEMU-1 and − 2 via catenary is also possible if sections of                     the light rail bus is lower, the internalized benefit from the lower CO2
+the track are connected to the rail traction power supply.                                   emissions is also higher. The larger BEMU-2 has a lower BCR due to the
+     The rail bus is charged using direct current. As there are currently no                 significantly higher operating costs. The HEMU-1 shows the worst
+commercially available charging systems for DC rail vehicles, the Rapid                      result, as the CAPEX for the refueling and charging infrastructure (CRI)
+Charger from Coventry VLR [36]. will be used as a reference. The energy                      is particularly high and there is no advantage in lower CO2 emissions
+is transferred via an inverted pantograph with a charging power of up to                     compared to bus service due to the poor efficiency of hydrogen pro­
+450 kW. Each charging station can charge one vehicle at a time. To                           duction. As mentioned at the beginning, this cost-benefit analysis
+determine the costs, the costs of similar systems for charging road buses                    approach was chosen in order to be able to interpret the sensitivity of the
+were used as a reference [37,38].                                                            influence of new rail vehicle concepts and alternative powertrain sys­
+     For the cost assessment of the hydrogen refueling station, various                      tems on the overall result of infrastructure CAPEX in line reactivations.
+projects and studies were used as a reference. The costs determined
+varied significantly between € 1 million and € 19 million. The actual
+                                                                                             5.2. Cost analysis
+costs depend on various factors such as the dimensions required in
+relation to the size of the vehicle fleet and fuel consumption, or the
+                                                                                                 In order to obtain a more accurate overview of the costs, these were
+location of the filling station. Additional uncertainty arises from the fact
+                                                                                             analysed individually. The first step involved analysing the vehicle-
+that this is not an established technology. For this study, costs of € 7.5
+                                                                                             related costs. This was followed by a discussion of the influence of the
+million were assumed.
+                                                                                             infrastructure-related costs and energy costs.
+
+4.2.2. Cost for reactivating rail lines
+                                                                                             5.2.1. Vehicle cost analysis
+    The costs of reactivating railway lines vary greatly. Different factors,
+                                                                                                As the transport benefits and the costs for investment and mainte­
+such as the shape of the track and stations, the number of level crossings,
+                                                                                             nance of the rail infrastructure are the same for all scenarios, the costs of
+or the topography, affect the costs. For the purposes of this study, a
+                                                                                             the different four vehicles are presented in this subsubsection. To eval­
+range of cost assumptions per reactivated track kilometre was assumed
+                                                                                             uate the costs, the individual cost components were considered first.
+for standardisation purposes, ranging from € 0.5 million/km to € 2.5
+                                                                                             Fig. 6 shows the breakdown of vehicle-related costs across all scenarios
+million/km [43]. In specific cases, the infrastructure investment can be
+                                                                                             and vehicle types. For comparability reasons, the specific costs per kil­
+significantly higher, for example due to tunnel structures. For the
+                                                                                             ometre are shown. The non-integer number of vehicles (n-vehicles) is
+method used, these costs were divided into different categories. For each
+                                                                                             based on percentage surcharges for provisioning trips, maintenance, and
+of these categories, a corresponding value for the annuity factor and a
+                                                                                             the annual mileage limit for the vehicles. The number of vehicles has not
+factor for maintenance costs are assumed. These factors can be used to
+                                                                                             been rounded up, as this would result in very different percentage sur­
+determine the annual CAPEX and maintenance costs. The factors were
+                                                                                             charges across the scenarios and vehicles, which would affect the result
+derived from [16].
+                                                                                             accordingly. Furthermore, it can be assumed that the vehicle fleet is used
+                                                                                             across multiple lines. This means that reserve vehicles in the fleet can be
+                                                                                             used across multiple lines.
+
+                                                                                         6
+B. Hertel et al.                                                                                                         Transportation Engineering 23 (2026) 100422
+
+
+
+
+Fig. 5. BCA for the scenario Medium Short; 15,000 pkm (735 pkm/km) per day; CAPEX Infrastructure 1.5 M€/km. The bars show the balance relative to line bus
+public transport.
+
+
+
+
+                                       Fig. 6. Breakdown of the vehicle-related costs over all scenarios and vehicles.
+
+
+    The figure shows that costs vary not only for different vehicles on a           system, such as a cost-intensive hydrogen filling stations for the
+line, but also for a vehicle on different lines. There are several reasons          HEMU, have a much greater impact on short lines.
+for this:                                                                         • Vehicle investment costs are strongly determined by the number of
+                                                                                    vehicles required. This is related to the operating concept and the
+ • The comparative analysis shows that the difference in relative                   utilization of the line. There is therefore no simple correlation be­
+   infrastructure costs is due to the different mileage of the vehicles per         tween line length and vehicle costs.
+   line and the traffic volume. Non-recurring CAPEX for the entire
+
+                                                                              7
+B. Hertel et al.                                                                                                           Transportation Engineering 23 (2026) 100422
+
+
+ • Personnel costs vary depending on the travel speed and operating                 overall costs. In the baseline scenario, energy costs amount to approxi­
+   hours.                                                                           mately € 0.70/km. If the price of hydrogen rises, energy costs will
+ • Vehicle-specific costs are relatively higher across all vehicles for             already be around € 1.4/km, which accounts for approximately 11 % of
+   short lines. This is because the vehicles have relatively long standstill        total vehicle-related costs. In comparison, the share of energy costs in
+   times and low mileage due to the short line length.                              vehicle related costs is significantly lower in the case of battery electric
+ • Personnel costs vary between 7 and 12 % of total vehicle-specific                vehicles.
+   costs
+ • Vehicle CAPEX account for the largest share of vehicle-specific costs
+ • Maintenance costs are constant across all scenarios for the respective           5.3. Sensitivity analysis
+   vehicle, as they are calculated using mass and mileage-specific
+   parameters.                                                                          A sensitivity analysis is used to examine the influence of different
+ • The CAPEX and OPEX of the CRI are strongly related to the number                 characteristics of selected input variables of a track reactivation on the
+   of vehicles used, mileage, charging and refueling times, battery                 economic efficiency of the project. This is shown by the benefit-to-cost
+   chemistry, and the resulting operating concept.                                  difference (BCD). All combinations of the following sensitivity param­
+                                                                                    eters are examined for the Medium Short and Medium Long scenarios:
+5.2.2. Accounting for infrastructure-related costs
+    In addition to the vehicle related costs, the costs for infrastructure           • Traffic performance: 9 000, 12 000, 15 000, 18 000, 21 000 [pkm/
+utilisation are now also included (Fig. 7). These are split into track and             day]
+station charges. An amount of € 6.5/km was assumed for the track                     • Infrastructure capital expenditures: 0.5, 1.5, 2.0 [M€/km]
+charges and € 1.75/km for the station charges. The values are averaged
+values from [44,45]. In the cases examined in this study, infrastructure                For a simplified classification of the traffic performance level in
+costs account for approximately 75 % of total costs, when considering               relation to the total length of the line, this was divided by the track
+the cases with the lowest vehicle related costs (rail bus, long scenario)           length driven. The resulting dimension pkm/track-km shows the traffic
+and 50 % of total cost for the case with the highest vehicle related costs          performance in the following diagrams (operational efficiency).
+(HEMU-1, short scenario).
+    The results show that a less utilized track operated by a small vehicle         5.3.1. Reactivation scenario medium short
+will incur these relatively high infrastructure charges. However, the cost              To begin with, the impact of the transport performance and the level
+considered only represents the average values from the track access                 of infrastructure capital expenditures on the benefit-cost difference of
+charge system of DB InfraGo and German station charges (various                     the Medium Short reactivation scenario with a length of 20.4 km is
+Infrastructure managers). The costs for individual track access charges             examined. Four scenarios are considered, which differ in the choice of
+can vary significantly case by case.                                                rail vehicle. Fig. 9 shows the resulting benefit-cost difference according
+                                                                                    to the input parameters.
+5.2.3. Impact of rising energy costs                                                    For the baseline infrastructure CAPEX of € 1.5 million/km (dashed
+    As energy costs have risen continuously in recent years and also vary           line) all of the vehicles reach their point of profitability. Due to the low
+depending on the energy source, the impact on total vehicle costs was               vehicle CAPEX and maintenance cost the rail bus reaches the point of
+examined (Fig. 8). For the purpose of comparability, a one-car train was            being economically viable already at around 550 pkm/km, if the BCD is
+used for this analysis of energy cost variation, as this is available with          greater than zero (brake even). The BEMU-1 needs an around 18 %
+both battery and hydrogen powertrains. The medium-long scenario was                 higher passenger demand to reach this point (650 pkm/km). The BEMU-
+chosen as it provides average energy costs in comparison with the other             2 and HEMU-1 need even higher passenger demand. The changes in the
+scenarios.                                                                          gradient of the BCD over the course of the passenger demand are caused
+    The baseline energy price in this study is € 0.12/kWh and € 5/kgH2.             by the varying number of vehicles (n-vehicle). Since the change in the
+The literature currently quotes a price for green hydrogen starting at €            number of vehicles does not occur at the points specified in this study,
+1.5/kgH2 [46]. Values from projects currently being implemented are                 the changes in passenger numbers do not show any sudden changes over
+often closer to € 10/kgH2. The energy costs were calculated in four                 time, but only changes in the gradient.
+stages (50 %, 100 %, 150 % and 200 % of the baseline price), both for the               With an infrastructure CAPEX of € 0.5 million/km all of the vehicles
+hydrogen and electricity prices, based on this price range.                         can operate at an economically viable point. Infrastructure CAPEX of €
+    The increase in energy costs for hydrogen has a significant impact on           2.5 million/km require a service that is high in demand and are only
+                                                                                    economical for a rail bus from 950 pkm/line-km and above. All other
+
+
+
+
+                      Fig. 7. Total train costs including track access and station charges (showing lowest and highest cost for the range).
+
+                                                                                8
+B. Hertel et al.                                                                                                           Transportation Engineering 23 (2026) 100422
+
+
+
+
+                                                                  Fig. 8. Energy cost variation.
+
+
+
+
+Fig. 9. Sensitivity analysis for the Scenario Medium Short; BCD for different infrastructure CAPEX from 0.5 M€/km (top line), 1.5 M€/km (dashed line) to 2.5 M€/km
+(bottom line).
+
+
+
+vehicles need a demand that is higher than investigated in this paper in            Fig. 10). In addition to the high infrastructure costs, this scenario also
+order to be profitable.                                                             requires more vehicles due to the long line, which further increases
+                                                                                    costs.
+5.3.2. Reactivation scenario medium long                                                The slightly negative gradient of the benefit-cost difference observed
+   The same input values have a different effect in the Medium Long                 for rail bus, between 325 and 455 pkm/track-km, is due to the increase
+scenario of 46.1 km. The low traffic performance per track-kilometer in             in the number of vehicles required and the number of charging stations
+combination with high investment costs for track reactivation due to the            as a result of the increase in traffic performance. Due to the percentage
+long line leads to a negative benefit-cost difference in most cases (see            surcharge for the distance driven for preparation and shunting, the
+
+
+                                                                                9
+B. Hertel et al.                                                                                                         Transportation Engineering 23 (2026) 100422
+
+
+
+
+Fig. 10. Sensitivity analysis for the Scenario Medium Long; BCD for different infrastructure CAPEX from 0.5 M€/km (top line), 1.5 M€/km (dashed line) to 2.5 M€/
+km (bottom line).
+
+
+number of vehicles increases more than proportionally with the increase             hydrogen as an energy carrier. In addition, there are national regulations
+in passengers. The slight positive trend in the first step in passenger             and taxes that can affect prices for energy and air pollution control
+numbers is therefore already negative in the last two steps. As in the              depending on the region in focus and may have an influence on the
+Medium Short scenario, the size of the two-part BEMU-2 allows a con­                result. Further assessments should also include a more in-depth differ­
+stant number of vehicles across all traffic volumes considered.                     entiation between fossil and renewable energy sources, which also have
+    For low infrastructure CAPEX of € 0.5 million/km the rail bus is                an impact on energy prices.
+economically viable for all investigated traffic performances. The                      The automation of train operations has not been taken into account
+BEMU-1 reaches this point at 260 pkm/km and the BEMU-2 at 455 pkm/                  in the analysis so far. However, automation can be of great benefit,
+km. The HEMU-1 does not reach economically viability in this scenario               especially on low-traffic secondary lines [47]. For a comprehensive
+for the investigated traffic performance. If the investments for the                analysis, detailed concepts must first be developed to show what auto­
+infrastructure increase, none of the vehicles will be economically viable           mated train operations on secondary lines could look like. In addition to
+in operation.                                                                       the technical equipment for the vehicles and infrastructure, this includes
+                                                                                    new control centers and remote train operation workspaces, as well as
+6. Discussion                                                                       concepts for safety and security.
+
+    The method developed allows compare different vehicle types on                  7. Conclusion and outlook
+various operating scenarios and to determine the sensitivities of indi­
+vidual influencing factors in the cost-benefit analysis for reactivating                Previous studies have examined the overall economic viability of
+lines. Further fine-tuning and expansion to aspects such as railway                 investments in the reactivation of railway lines or in refuelling and
+automation for future consideration with this method is possible and                charging infrastructure for alternative drive systems. There are also
+sensible.                                                                           analyses of innovative vehicle concepts, such as small, lightweight rail
+    For the necessary investments in the case of track reactivation, a              vehicles (rail buses). This paper presents assessments that combine these
+value range in M€/km was assumed. The project specific infrastructure               evaluation approaches in order to identify business cases for novel rail
+requirements may vary by magnitude, so that a case-by-case assessment               vehicle concepts with locally emission-free drive trains for use on
+considering local circumstances and the condition of the track is always            reactivated lines.
+necessary.                                                                              It has become apparent that concepts such as rail buses have a sig­
+    The energy prices for electrical energy and hydrogen included in the            nificant influence despite the high share of infrastructure CAPEX in the
+assessment are below the current standard prices. As shown in 5.2.3, this           overall result and should therefore be considered by stakeholders. In this
+has a significant impact on the total costs, particularly in the case of            regard, it seems helpful to combine different assessment approaches in
+
+
+                                                                               10
+B. Hertel et al.                                                                                                                           Transportation Engineering 23 (2026) 100422
+
+
+order to create transparency regarding the influence of the various                             [6] J. König, L. Gebhardt, B. Hertel, M. Konrad, C. Meirich, and T. Müller. Neuartiges
+                                                                                                    modulares Schienenfahrzeugkonzept für Neben- und Reaktivierungsstrecken,
+factors.
+                                                                                                    Eisenbahntechnische Rundschau, 3, 44–49, 2025.
+    In terms of total costs (vehicle acquisition and operation, excluding                       [7] Europe’s Rail Joint Undertaking. "FP6 - FutuRe." Accessed: May 16, 2025. [Online].
+infrastructure use), rail buses result in cost savings of 18 % compared to                          Available: https://projects.rail-research.europa.eu/eurail-fp6/.
+BEMU-1 and 40 % (average across the analysed operating scenarios)                               [8] C. Schindler, The Aachen Rail Shuttle ARS - Autonomous and energy self-sufficient
+                                                                                                    feeder transport, J. Rail Transp. Plan. Manag. 21 (2022), https://doi.org/10.1016/
+compared to BEMU-2. Rail buses and BEMU-1 offer significant cost                                    j.jrtpm.2022.100299.
+savings compared to larger vehicles, especially on short and medium-                            [9] C. Schindler, Aachener Rail Shuttle auf der InnoTrans vorgestellt – wie geht es
+length secondary lines. Further cost savings could be achieved if track                             weiter? Eisenbahntechnische Rundschau 1+2 (2025) 60–65.
+                                                                                               [10] R. Christeller, Technology offers hope of secondary line revival, Railway Gazette
+access charges were levied based on vehicle weight, to take into account                            International 12 (2024) 18–21.
+that light vehicles require a less robust infrastructure.                                      [11] VLR TECHNOLOGIES LTD, ALL-ELECTRIC REVOLUTION VLR - PRE-SERIES
+    Some of the input parameters used in this study are subject to                                  BROCHURE Accessed: Oct. 30, 2024 [Online]. 2023. Available: https://revolutio
+                                                                                                    nvlr.com/wp-content/uploads/2023/12/RVLR-Pre-series-Brochure-web-compre
+considerable fluctuations in reality (e. g., infrastructure CAPEX), which                           ssed.pdf.
+also have a significant impact on the model's output. An attempt was                           [12] S. Winkelheide, G.L. Bergamo, C. Schindler, Kostenvergleich zu autonomen
+made to counteract this through sensitivity analysis.                                               Schienenbussen im ländlichen Raum, Eisenbahn Ingenieur (06) (2023) 27–32.
+                                                                                               [13] W. Klebsch, N. Guckes, P. Heininger. Bewertung Klimaneutraler Alternativen zu
+    Future work will include further adapting the evaluation method­                                Dieseltriebzügen,“, VDE Verband der Elektrotechnik Elektronik
+ology with regard to automating operations, including the necessary                                 Informationstechnik e. V, Frankfurt am Main, 2020.
+infrastructure enhancements, integrating new demand-oriented oper­                             [14] A. Stephan, et al.. Untersuchung zu den technischen Voraussetzungen eines
+                                                                                                    Einsatzes von Akkuhybridfahrzeugen im Netz „Bayerwald“, München, 2022.
+ating concepts, and assessing the impact of increasing service frequency,
+                                                                                                    Accessed: Apr. 5, 2023 [Online]. Available: https://beg.bahnland-bayern.de/files
+which is particularly feasible with small vehicles such as rail buses.                              /media/corporate-portal/imports/presse/pressemitteilungen/2023/2022-12
+Consideration should also be given to how rail transport on low-                                    -19-beg-bayerwald-bericht.pdf.
+frequency secondary lines can be made more economically viable.                                [15] C. Streuling, J. Pagenkopf, M. Schenker, K. Lakeit, Techno-economic assessment of
+                                                                                                    battery electric trains and recharging infrastructure alternatives integrating
+This could be achieved, for example, by adjusting infrastructure charges                            adjacent renewable energy sources, Sustainability 13 (15) (2021), https://doi.org/
+to reflect the actual costs generated.                                                              10.3390/su13158234.
+                                                                                               [16] INTRAPLAN Consult GmbH and VWI Verkehrswissenschaftliches Institut Stuttgart
+                                                                                                    GmbH, Standardisierte Bewertung von Verkehrswegeinvestitionen im öffentlichen
+CRediT authorship contribution statement                                                            Personennahverkehr - Version 2016+ Mar 2023. Accessed: Aug. 14, 2025.
+                                                                                                    [Online]. Available: https://www.bmv.de/SharedDocs/DE/Anlage/E/standardisie
+                                                                                                    rte-bewertung-2016plus-verfahrensanleitung.pdf?__blob=publicationFile.
+    Benedikt Hertel: Writing – review & editing, Writing – original
+                                                                                               [17] European Commission, Guide to cost-benefit analysis of investment projects, 2014,,
+draft, Visualization, Validation, Methodology, Investigation, Conceptu­                             Accessed: Aug. 14, 2025 [Online]. Available: https://ec.europa.eu/regional_
+alization. Evnika David: Writing – original draft, Visualization, Vali­                             policy/sources/studies/cba_guide.pdf.
+                                                                                               [18] G. Siciliano, F. Barontini, D.M.Z. Islam, T.H. Zunder, S. Mahler, I. Grossoni,
+dation, Methodology, Investigation, Conceptualization. Johannes
+                                                                                                    Adapted cost-benefit analysis methodology for innovative railway services,
+Pagenkopf: Writing – review & editing, Supervision, Investigation.                                  European Transport Research Review 8 (4) (2016), https://doi.org/10.1007/
+Benedikt Scheier: Writing – review & editing, Writing – original draft,                             s12544-016-0209-5.
+Validation, Supervision, Project administration, Methodology, Investi­                         [19] mobil.nrw, Diesel-Triebwagen BR 640 (Lint 27) Accessed: May 17. 2025 Available:
+                                                                                                    https://infoportal.mobil.nrw/technik/spnv-fahrzeuge/dieseltriebwagen-br-640-
+gation, Conceptualization. Christoph Streuling: Writing – review &                                  lint-27.html.
+editing, Writing – original draft, Validation, Supervision, Project                            [20] Stadler, Regionaltriebwagen Regio-Shuttle RS1 für die Vogtlandbahn GmbH,
+administration, Methodology, Investigation, Conceptualization.                                      Accessed: May 17. Available: https://www.letbaner.dk/docs/Faktaark_STADLER_
+                                                                                                    Vogtlandbahn_D_web.pdf, 2025.
+                                                                                               [21] Stadler Rail, RS ZERO BEMU, Accessed: Mar. 6, https://www.stadlerrail.com/api/
+                                                                                                    docs/x/e734b72ae3/rszero_bemu_de.pdf, 2025.
+Declaration of competing interest                                                              [22] Siemens Mobility, Mireo plus B Netz Ostbrandenburg Accessed: May 17. 2025
+                                                                                                    Available: https://assets.new.siemens.com/siemens/assets/api/uuid:73f2b0e7-
+                                                                                                    2618-4328-8948-77f9614b7d35/siemens-mobility-mireo-plus-b-netz-ostbrandenb
+    The authors declare that they have no known competing financial                                 urg-datenblatt.pdf.
+interests or personal relationships that could have appeared to influence                      [23] Stadler Rail, Flirt Akku 2-car unit, Accessed: May 17. 2025, https://www.stadlerr
+the work reported in this paper.                                                                    ail.com/api/docs/x/5aa4c05888/flirt-akku-nahsh_en.pdf.
+                                                                                               [24] Bundesverband SchienenNahverkehr e.V., "Fahrzeugempfehlungen des BSN,".
+                                                                                                    2023. Accessed: Aug. 13, 2025. [Online]. Available: https://www.schienennahve
+Data availability                                                                                   rkehr.de/wp-content/uploads/2023/02/2023-01-31-4.-Ausgabe-BSN-Fahrzeuge
+                                                                                                    mpfehlungen.pdf.
+    No data was used for the research described in the article.                                [25] P. Gil, S. Winkelheide, N. Schobert, C. Schindler, Möglichkeiten für lokal
+                                                                                                    emissionsfreien Betrieb nicht-elektrifizierter Eisenbahnstrecken,
+                                                                                                    Eisenbahntechnische Rundschau (11) (2022) 69–73.
+References                                                                                     [26] Landesnahverkehrsgesellschaft Niedersachsen mbH (LNVG), Ed., "SPNV-Konzept
+                                                                                                    2030+ und 2040+," 2024. Accessed: May 19, 2025. [Online]. Available: http
+                                                                                                    s://www.mw.niedersachsen.de/download/208160/SPNV-Strategiepapier.pdf.
+ [1] Eurostat, Characteristics of the railway network in Europe (data status 2025),
+                                                                                               [27] VBB Verkehrsverbund Berlin-Brandenburg GmbH, "Landesnahverkehrsplan 2023-
+     Accessed: Aug. 5, https://ec.europa.eu/eurostat/statistics-explained/index.php?tit
+                                                                                                    2027," 2023. Accessed: May 19, 2025. [Online]. Available: https://mil.brandenbur
+     le=Characteristics_of_the_railway_network_in_Europe, 2025.
+                                                                                                    g.de/sixcms/media.php/9/2023-12-29_LNVP_2023-2027_final_barrierefrei.pdf.
+ [2] Allianz pro Schiene, Elektrifizierung erklärt: Das Schienennetz muss unter Strom
+                                                                                               [28] PTV Transport Consult GmbH, Nahverkehrsplan Schienenpersonennahverkehr
+     stehen, Accessed: Jul. 14 2025 Available: https://www.allianz-pro-schiene.de
+                                                                                                    Thüringen 2023–2027 (2023) Accessed: May 19, 2025 [Online]. Available: htt
+     /themen/infrastruktur/elektrifizierung-bahn/.
+                                                                                                    ps://digitales-infrastruktur.thueringen.de/fileadmin/Mobilitaet/OEPNV/nahver
+ [3] Siemens Mobility GmbH and Niederbarnimer Eisenbahn. Siemens Mobility und
+                                                                                                    kehrsplan-spnv-thueringen-2023-2027.pdf.
+     Niederbarnimer Eisenbahn Läuten Ein Neue Zeit Klimafreundlicher Antriebe ein,
+                                                                                               [29] INTRAPLAN Consult GmbH, "Validierung einer Verdopplung der Fahrgastzahlen
+     Berlin, 2025. Accessed: Aug. 7, 2025 [Online]. Available: https://assets.new.
+                                                                                                    im Deutschlandtakt, Abschlussbericht," 2020. Accessed: May 19, 2025. [Online].
+     siemens.com/siemens/assets/api/uuid:eac6e643-6cbd-4528-a6e6-ea9147187b3
+                                                                                                    Available: https://assets.ctfassets.net/scbs508bajse/6nSeSiD5udWlqbBnaFZCt
+     4/Start-alternativer-Antriebe-NEB-DE-2.pdf.
+                                                                                                    e/46e3beea7f7bbd32fd1f9f4fb40f7df9/Deutschlandtakt_Gutachterbericht_zur
+ [4] SWEG Südwestdeutsche Landesverkehrs-GmbH. Batterie Statt Diesel – Die ersten
+                                                                                                    _Verdoppelung_der_Nachfrage_im_SPV.PDF.
+     Züge nehmen in der Ortenau den Fahrgastbetrieb auf, Offenburg, 2024. Accessed:
+                                                                                               [30] BMVI, "Mobilität in Deutschland 2008," Bundesministerium für Verkehr und
+     Aug. 7, 2025 [Online]. Available: https://www.sweg.de/fileadmin/user_upload/pd
+                                                                                                    digitale Infrastruktur (BMVI), 2010. Accessed: May 7, 2025. [Online]. Available:
+     f/pressemitteilungen/sweg-pressemitteilung-20240408-inbetriebnahme-siemens-
+                                                                                                    http://www.mobilitaet-in-deutschland.de/pdf/MiD2008_Tabellenband.pdf.
+     fahrzeuge-netz-ortenau.pdf.
+                                                                                               [31] Landesnahverkehrsgesellschaft Niedersachsen (LNVG), Ed., "SPNV-Konzept 2013
+ [5] L. Kissel, in: Finanzielle probleme bei Verkehrsunternehmen - Mehrere
+                                                                                                    +," Hannover, 2010. Accessed: May 7, 2025. [Online]. Available: https://www.lnv
+     Bundesländer prüfen Reduzierung des ÖPNV-Angebots,“ DER SPIEGEL Online,
+                                                                                                    g.de/fileadmin/media/lnvg/spnv/Konzept_SPNV_lang-compressed.pdf.
+     2024. Accessed: May 16, 2025, https://www.spiegel.de/auto/oepnv-mehrere-bun
+     deslaender-koennten-angebot-wegen-hoher-kosten-einschraenken-a-41ae876b-
+     27bb-4ff4-be8f-dcc1d9c47639.
+
+
+                                                                                          11
+B. Hertel et al.                                                                                                                            Transportation Engineering 23 (2026) 100422
+
+[32] K. Fender. "Modertrans to supply LRVs to Berlin suburban line." Accessed: May 20,               mitteilungen/detail/zuegiges-laden-an-der-schiene-batteriezug-schnellladestation-
+     2025. [Online]. Available: https://www.railjournal.com/passenger/light-rail/m                   voltap-erfolgreich-im-realbetrieb-getestet.html.
+     odertrans-to-supply-lrvs-to-berlin-suburban-line/.                                         [41] Wolftank Group. "Wolftank Group sichert sich Millionenauftrag für
+[33] "Notice View: 88502-2025 - Result: Poland: Tramway passenger coaches."                          zukunftsweisende Wasserstoff-Zugbetankung in Norditalien." Accessed: May 16,
+     Accessed: May 20, 2025. [Online]. Available: https://ted.europa.eu/en/notice/                   2025. [Online]. Available: https://wolftankgroup.com/de/corporate-news-de
+     -/detail/88502-2025.                                                                            /wolftank-group-sichert-sich-millionenauftrag-fuer-zukunftsweisende-wasserstoff-
+[34] INTRAPLAN Consult GmbH and VWI Verkehrswissenschaftliches Institut Stuttgart                    zugbetankung-in-norditalien/.
+     GmbH, Anhang 1 - Datenvorgaben, Kosten- und Wertansätze - Standardisierte                 [42] Notice view: 500502-2022 - Competition: Lieferung und Errichtung einer
+     Bewertung von Verkehrswegeinvestitionen im öffentlichen Personennahverkehr -                   Wasserstoff-Zugtankstelle, Accessed: May 16, 2025. [Online]. Available: https://te
+     Version 2016+ (2023) Accessed: Aug. 14, 2025 [Online]. Available: https://www.                  d.europa.eu/en/notice/-/detail/500502-2022.
+     bmv.de/SharedDocs/DE/Anlage/E/standardisierte-bewertung-2016plus-anhang-                   [43] vci VerkehrsConsult Ingenieurgesellschaft mbH, "Potenzialanalysen zur
+     1-datenvorgaben-kosten-und-wertansaetze.pdf?__blob=publicationFile.                             Reaktivierung von Eisenbahnstrecken in Sachsen – Infrastrukturkostenschätzung
+[35] F. Dschung, U. Schermaul, Zügig in Richtung Dekarbonisierung – Die Batteriezug-                 und Betriebskostenermittlung," Dresden, 2022. Accessed: Mar. 14, 2025. [Online].
+     Schnellladestation VOLTAP als Teil neuer Bahninfrastrukturen,                                   Available: https://www.mobilitaet.sachsen.de/download/Abschlussbericht
+     Eisenbahntechnische Rundschau 3 (2022) 50–53.                                                   _Investitions_und_Betriebskosten.pdf.
+[36] BCIMO. "Rapid Charger." Accessed: May 15, 2025. [Online]. Available: http                  [44] DB InfraGO AG, "Anlage 5.3 zu den Infrastrukturnutzungsbedingungen der DB
+     s://bcimo.co.uk/hire-our-facilities/rail-development-test-site/rapid-charger/.                  InfraGO AG 2025 - Liste der Entgelte der DB InfraGO AG und der DB RegioNetz
+[37] B. Winterflood and C. Rufle. "Mit Gelegen-heits-ladung unter-wegs." Accessed: May               Infrastruktur GmbH", 2024. Accessed: Mar. 15, 2025. [Online]. Available:
+     17, 2025. [Online]. Available: https://www.bulletin.ch/de/news-detail/mit-gelege                https://www.dbinfrago.com/resource/blob/12687986/db7153396b032f2f6cdba7
+     nheitsladung-unterwegs.html.                                                                    2cb35fd7f6/INB-2025-Anlage-5-3-data.pdf.
+[38] NOW GmbH. "eBusTool - Punktuelle Ladung." Accessed: May 17, 2025. [Online].                [45] DB InfraGO AG, "Stationspreisliste 2025," Berlin, 2025. Accessed: May 16, 2025.
+     Available: https://www.ebustool.de/infrastruktur/punktuelle-ladung/.                            [Online]. Available: https://www.dbinfrago.com/resource/blob/13076748/6
+[39] A. Stephan, N. T. Wittemann, and T. Bregulla, "Wissenschaftliche Bewertung von                  0d778aa27ad13c85108c840417dc841/Stationspreisliste-2025-data.pdf.
+     alternativen, emissionsarmen Antriebskonzepten für den bayerischen SPNV:                   [46] H. Schäfers et al., Grüner Wasserstoff für die energiewende - Teil 4: der
+     Arbeitspaket 1: Analyse der Antriebsarten," Dresden, 2020. [Online]. Available:                 Industriesektor, Hamburg (2023). Accessed: Jan. 16, 2025. [Online]. Available:
+     https://beg.bahnland-bayern.de/files/media/corporate-portal/imports/aktuelles/                  https://epub.sub.uni-hamburg.de/epub/volltexte/2024/167186/pdf/2023_10_18_
+     2021/02_bewertung-alternativer-antriebe_gutachten-tu-dresden_fortschreibung.                    NRL_AG5_H2_Teil_4_Industrie.pdf.
+     pdf.                                                                                       [47] F. Zschoche, "Automatisierter Bahnbetrieb - Eine system-ökonomische Betrachtung
+[40] Stadtwerke Tübingen. "Zügiges Laden an der Schiene: Batteriezug-                                von Anwendungsfällen im Vollbahn-Bereich", 2020. Accessed: Aug. 15, 2025
+     Schnellladestation „voltap“ erfolgreich im Realbetrieb getestet." Accessed: May 16,             [Online]. Available: https://event.dlr.de/wp-content/uploads/2020/11/
+     2025. [Online]. Available: https://www.swtue.de/unternehmen/presse/presse                       ZzD2020-Vortrag_Zschoche.pdf.
+
+
+
+
+                                                                                           12
+

@@ -10,9 +10,9 @@ function parsePoint(str) {
 }
 
 export async function processWaPopulation() {
-  console.log('\n📊 Processing Electric_Vehicle_Population_Data.csv (streaming, 35MB)...')
+  console.log('\n📊 Processing us_wa_ev_population_data.csv (streaming)...')
 
-  const filePath = datasetPath('Electric_Vehicle_Population_Data.csv')
+  const filePath = datasetPath('data/market_sales/us_wa_ev_population_data.csv')
 
   // Accumulators
   const countyYearMake = {}  // county -> year -> make -> { total, bev, phev, rangeSum }

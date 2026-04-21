@@ -1,0 +1,2689 @@
+Cost of zero-      PREPARED FOR
+
+emission cars in   Bureau Européen des Unions de
+                   Consommateurs (BEUC)
+
+
+
+
+Europe
+                   DATE
+                   25th Oct 2024
+
+                   REFERENCE
+Final report       0742844
+ DOCUMENT TITLE                  Cost of zero-emission cars in Europe
+
+ DOCUMENT SUBTITLE               Final report
+
+ PROJECT NUMBER                  0742844
+
+ DATE                            25th Oct 2024
+
+ VERSION                         3
+
+ AUTHOR                          Annie Hargrove, Robert Pearce-Higgins, Celine Cluzel
+
+ CLIENT NAME                     Bureau Européen des Unions de Consommateurs (BEUC)
+
+
+
+
+DOCUMENT HISTORY
+
+                                                                    ERM APPROVAL TO
+                                                                    ISSUE
+
+ VERSION       REVISION       AUTHOR            REVIEWED            NAME       DATE     COMMENTS
+                                                BY
+
+ V1            000            Annie             Celine Cluzel       Celine     09 Oct   Draft report
+                              Hargrove,                             Cluzel     2024
+                              Robert
+                              Pearce-
+                              Higgins
+
+ V2            000            Annie             Celine Cluzel       Celine     25 Oct   Final report,
+                              Hargrove,                             Cluzel     2024     addressed
+                              Robert                                                    comments from
+                              Pearce-                                                   BEUC
+                              Higgins
+
+ V3            000            Annie             Celine Cluzel       Celine     1 Nov    Acknowledgements
+                              Hargrove,                             Cluzel     2024     added, final
+                              Robert                                                    comments
+                              Pearce-                                                   addressed.
+                              Higgins
+
+
+
+ACKNOWLEDGEMENTS
+
+This study has been supported by the European Climate Foundation. Responsibility for the
+information and views set out in this study lie with the authors. The European Climate Foundation
+cannot be held responsible for any use which may be made of the information contained or
+expressed therein.
+
+The authors would like to thank Transport and Environment for useful discussions around the
+second-hand car market, and for sharing market data in France and Germany on the resale
+value of vehicles entering the second-hand market.
+
+
+
+
+                CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3
+COST OF ZERO-EMISSION CARS IN EUROPE                                                EXECUTIVE SUMMARY
+
+
+
+
+CONTENTS
+
+EXECUTIVE SUMMARY                                                                                  1
+
+1.     INTRODUCTION                                                                              10
+1.1    CONTEXT                                                                                   10
+1.2    PREVIOUS STUDY AND UPDATES SINCE 2021                                                     10
+1.3    OBJECTIVES                                                                                11
+1.4    STRUCTURE OF THE REPORT                                                                   11
+
+2.     COST OF OWNERSHIP FROM 2024 TO 2040                                                       13
+2.1    RESIDUAL VALUE OF ELECTRIC AND FOSSIL-FUELED CARS                                         13
+2.2    GENERIC MODELS 1 ST , 2 ND AND 3 RD BUYERS                                                15
+       2.2.1      First Buyers                                                                    16
+       2.2.2      Second Buyers                                                                   17
+       2.2.3      Third buyers                                                                    18
+       2.2.4      Total cost over three owners                                                    18
+       2.2.5      Comparison to previous study                                                    19
+       2.2.6      Conclusions from future TCO modelling                                           20
+
+3.     SENSITIVITIES OF THE TCO RESULTS                                                          21
+3.1    IMPACT OF RESIDUAL VALUES                                                                 21
+       3.1.1      First Buyers                                                                    21
+       3.1.2      Second Buyers                                                                   22
+       3.1.3      Third Buyers                                                                    23
+       3.1.4      Total cost over three owners                                                    23
+       3.1.5      Conclusions of scenario analysis                                                24
+3.2    IMPACT OF PUBLIC CHARGING                                                                 25
+       3.2.1      First buyer                                                                     26
+       3.2.2      Second buyer                                                                    26
+       3.2.3      Third buyer                                                                     27
+       3.2.4      Total cost over three owners                                                    28
+       3.2.5      Conclusions of scenario analysis                                                28
+
+4.     COST OF OWNERSHIP OF SPECIFIC CAR MODELS                                                  30
+       4.1.1      First Buyers                                                                    30
+       4.1.2      Second Buyers                                                                   31
+       4.1.3      Third Buyers                                                                    32
+       4.1.4      Conclusions                                                                     33
+
+5.     OTHER FACTORS THAT MAY INFLUENCE VEHICLE TCO                                              35
+5.1    ADDITIONAL PRACTICAL CONSIDERATIONS OF E-FUEL USE                                         35
+5.2    POTENTIAL IMPACT OF V2G ON TCO                                                            37
+       5.2.1      Overview of V2G                                                                 37
+       5.2.2      Revenue potential from V2G                                                      38
+       5.2.3      Barriers to V2G adoption                                                        39
+       5.2.4      Impact of V2G on TCO                                                            40
+
+6.     CONCLUSIONS AND POLICY IMPLICATIONS                                                       41
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3
+COST OF ZERO-EMISSION CARS IN EUROPE                                                EXECUTIVE SUMMARY
+
+
+
+
+7.     APPENDIX A: INPUTS UPDATED SINCE 2021                                                     43
+7.1    FUEL COSTS                                                                                43
+7.2    ELECTRICITY COSTS                                                                         44
+7.3    VEHICLE COST, PERFORMANCE AND USAGE                                                       45
+7.4    RESIDUAL VALUE                                                                            45
+
+8.     APPENDIX B: ADDITIONAL OUTPUT GRAPHS                                                      47
+8.1    SMALL CAR TCO                                                                             47
+       8.1.1      Baseline scenario                                                               47
+       8.1.2      Low residual value scenario                                                     48
+       8.1.3      Public charging scenario                                                        50
+8.2    LARGE CAR TCO                                                                             51
+       8.2.1      Baseline scenario                                                               51
+       8.2.2      Low residual value scenario                                                     53
+       8.2.3      Public charging scenario                                                        54
+8.3    PRICE PARITY YEAR ANALYSIS                                                                56
+
+9.     APPENDIX C: FURTHER V2G DISCUSSION                                                        57
+9.1    V2G OVERVIEW                                                                              57
+9.2    BATTERY DEGRADATION FROM V2G                                                              57
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3
+COST OF ZERO-EMISSION CARS IN EUROPE                                                         EXECUTIVE SUMMARY
+
+
+
+
+ACRONYMS AND ABBREVIATIONS
+
+ Acronym           Description
+
+ AC                Alternating current
+
+ BESS              Battery energy storage system
+
+ BEUC              Bureau Européen des Unions de Consommateurs, the European Consumer
+                   Organisation
+
+ BEV               Battery electric vehicle
+
+ CCS               Combined charging system
+
+ CHAdeMO           A DC charging standard for electric vehicles
+
+ DC                Direct current
+
+ ECF               European Climate Foundation
+
+ E-fuel            A liquid renewable fuel of non-biological origin that has the same properties as
+                   conventional liquid petrol or diesel
+
+ ERM               Environmental Resources Management
+
+ EU                European Union
+
+ EV                Electric vehicle, referring to both BEVs and PHEVs in this report if not otherwise
+                   specified
+
+ HEV               Hybrid electric vehicle
+
+ ICE               Internal combustion engine
+
+ OEM               Original equipment manufacturer
+
+ PHEV              Plug-in hybrid electric vehicle
+
+ RV                Residual value
+
+ TCO               Total cost of ownership
+
+ UK                United Kingdom
+
+ V2G               Vehicle-to-grid
+
+ ZEV               Zero-emissions vehicle
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3
+COST OF ZERO-EMISSION CARS IN EUROPE                                                EXECUTIVE SUMMARY
+
+
+
+
+EXECUTIVE SUMMARY
+This study explores the total cost of ownership (TCO) of electric, petrol, diesel, and hybrid
+passenger cars, building on previous ERM analysis performed in 2021.1 This study quantifies the
+cost to the consumer of electric and petrol cars, for first- to third-hand buyers. This study
+considers the average cost of ownership of a vehicle in the EU, accounting for vehicle leasing
+costs and fuel/electricity prices, whilst excluding maintenance, insurance, and country-specific
+taxes and subsidies. The results of this study show that battery electric vehicles (BEVs) are
+already the lowest cost option for used vehicle buyers and will be the most economical
+for new buyers of medium cars from 2026 onwards.
+
+Seven key themes have emerged from this study:
+
+    1. Electric cars will reach the same total cost of ownership as petrol cars in 2026
+         for a new medium car
+
+    2. Electric cars are already cheaper than petrol cars for used car owners across all
+         segments (small, medium, large)
+
+    3. Access to low-cost charging is imperative for the affordability of electric cars
+
+    4. Lower residual value of electric cars removes cost savings for their first owners
+
+    5. Electric-only car models are cheaper than electric variants of petrol/diesel cars
+
+    6. E-fuels will be too expensive and inconvenient for most consumers
+
+    7. Vehicle-to-grid (V2G) technology will benefit some electric vehicle drivers but
+         will not significantly improve their affordability for most users
+
+These key findings were used to highlight areas of policy crucial for ensuring all consumers can
+benefit from the lower costs of electric vehicles.
+
+
+
+
+1 https://www.erm.com/contentassets/553cd40a6def42b196e32e4d70e149a1/electric_cars_calculating_
+
+the_total_cost_of_ownership_for_consumers.pdf
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3              Page 1
+COST OF ZERO-EMISSION CARS IN EUROPE                                                EXECUTIVE SUMMARY
+
+
+
+
+1. ELECTRIC CARS WILL REACH TOTAL COST OF OWNERSHIP PARITY WITH PETROL
+    CARS IN 2026 FOR A NEW MEDIUM CAR
+Total cost of ownership parity between new electric and petrol cars will be achieved
+in the next two years for medium-sized cars. This is due to lower cost electric cars entering
+the market, the expected increase in their residual value, and the fuel cost savings that electric
+cars provide compared to petrol vehicles. Medium electric cars reach price parity first, in
+2026, with small and large cars following suit in 2029 and 2032, respectively.
+
+
+
+
+FIGURE 0-1 – ANNUAL TOTAL COST OF OWNERSHIP PREMIUM (OVER 4 YEARS) OF A NEW
+ELECTRIC CAR COMPARED TO A NEW PETROL CAR FOR SMALL, MEDIUM, AND LARGE CARS
+BASED ON 15,000 KM ANNUAL MILEAGE. TAXES, MAINTENANCE, INSURANCE AND
+SUBSISIDIES NOT INCLUDED.
+
+As shown in Figure 0-1, the total cost of ownership advantage of electric cars is most pronounced
+for small and medium cars. Encouraging the sales of new electric cars in these segments would
+achieve cost savings for consumers quickest.
+
+First owners play an important role in deciding the composition of the used car market, and the
+shift to larger company cars risks reducing the choice for used car buyers looking for a smaller
+car. To move towards electric cars which are affordable and desirable to all users, new smaller
+electric cars must be purchased so that used car owners have sufficient choice and can benefit
+from the associated cost savings. Policy support may be used to incentivise the purchase
+of small and medium-sized electric cars that are desired on the second-hand market
+so used car owners can also capitalise on the cost advantages of electric cars.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3              Page 2
+COST OF ZERO-EMISSION CARS IN EUROPE                                                 EXECUTIVE SUMMARY
+
+
+
+
+2. ELECTRIC CARS ARE ALREADY CHEAPER THAN PETROL CARS FOR USED CAR
+    OWNERS ACROSS ALL SEGMENTS
+Total cost of ownership parity is already met for second- and third- owners, given the low price
+of used electric cars (due to their lower current residual value) and significant running costs
+savings compared to petrol cars. Used electric cars are significantly less expensive than all other
+powertrains from 2024 onwards. New electric cars registered now will deliver between
+€262 and €849/year savings for their future second and third owners compared to an
+equivalent petrol car.
+
+
+
+
+FIGURE 0-2 – ANNUAL TOTAL COST OF OWNERSHIP (OVER 5 AND 7 YEARS FOR SECOND
+AND THIRD OWNERS, RESPECTIVELY) FOR ELECTRIC CARS COMPARED TO PETROL CARS
+FOR USED CAR OWNERS OF SMALL, MEDIUM, AND LARGE CARS
+
+This demonstrates that electric cars can provide significant affordability improvements compared
+to petrol cars for used vehicle owners.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3               Page 3
+COST OF ZERO-EMISSION CARS IN EUROPE                                                    EXECUTIVE SUMMARY
+
+
+
+
+3. ACCESS TO LOW-COST CHARGING IS IMPERATIVE FOR THE AFFORDABILITY OF
+    ELECTRIC CARS
+Total cost of ownership parity for first owners of electric cars is delayed by at least 6
+years for all owners if they cannot access low-cost electricity by charging at home or
+work, as shown in Figure 0-3 for medium-sized vehicles. Charging only at public charge points
+increases the overall total cost of ownership of electric cars by 5-8% for first owners, 12-16%
+for second owners, and 11-16% for third owners, depending on vehicle size. For first owners of
+small and large cars, total cost of ownership parity is not reached by 2040 in this
+scenario. This demonstrates the important role that providers of charging infrastructure can
+have in dictating the affordability of electric cars. It also highlights that running costs affect used
+car owners by a greater factor than new car owners.
+
+
+
+
+FIGURE 0-3 – ILLUSTRATION OF THE DELAY IN TOTAL COST OF OWNERSHIP PARITY DUE TO
+CONSUMERS ONLY HAVING ACCESS TO PUBLIC CHARGING FOR MEDIUM-SIZED CARS
+
+Public institutions should ensure maximum deployment of home and workplace charging, paired
+with encouraging competition and monitoring of price structures at public charging stations, so
+those reliant on the public network do not miss out on the cost savings of electric cars.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                  Page 4
+COST OF ZERO-EMISSION CARS IN EUROPE                                                 EXECUTIVE SUMMARY
+
+
+
+
+4. LOWER RESIDUAL VALUE OF ELECTRIC CARS REMOVES COST SAVINGS FOR THEIR
+    FIRST OWNERS
+Today, residual value of electric cars is much lower than petrol vehicles. This study performed a
+sensitivity analysis scenario in which the residual value of electric cars does not improve from
+today until 2030 (the Alternative Residual Value scenario). If the residual value of electric
+cars does not improve, electric cars remain more expensive than petrol cars for first
+owners up to at least 2040, as demonstrated for medium cars in Figure 0-4.
+
+
+
+
+FIGURE 0-4 – ANNUAL TOTAL COST OF OWNERSHIP (OVER 4 YEARS) FOR THE FIRST OWNER
+OF A MEDIUM CAR IN THE ALTERNATIVE RESIDUAL VALUE SCENARIO, COMPARED TO THE
+BASELINE SCENARIO
+
+Total cost of ownership parity for first owners of electric cars is heavily reliant on the second-
+hand electric car market normalising (i.e., aligning with petrol and diesel cars’ second-hand
+market). If this does not occur, in a worst-case situation, total cost of ownership parity could be
+pushed beyond 2040 for all vehicle segments. Policy and public information can play a crucial
+role to give confidence to the market to improve second-hand residual values for BEVs.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3               Page 5
+COST OF ZERO-EMISSION CARS IN EUROPE                                                EXECUTIVE SUMMARY
+
+
+
+
+5. ELECTRIC-ONLY CAR MODELS ARE CHEAPER THAN ELECTRIC VARIANTS OF
+    PETROL/DIESEL CARS
+For three of the four specific car pairs investigated, electric cars are more expensive than their
+comparable petrol version for first owners (16-26%) due to the significantly higher purchase
+price and lower residual value for these electric models compared to a petrol car. The exception
+is the Tesla Model Y electric vehicle, which is less expensive than a Skoda Kodiaq petrol car for
+first owners in 2024 due to having a favourable leasing deal compared to the Skoda despite its
+similar retail price. Cheaper electric-only models coming to the market in the next year may
+reduce purchase price and financing costs of electric vehicles from 2025, improving the outlook
+for first buyers of vehicles outside the large segments.
+
+Electric cars are either cheaper than their petrol counterpart (1-24%) or only marginally more
+expensive for used car buyers (<6%) (see Figure 0-5 which shows total cost of ownership for
+second buyers). This underscores the opportunity for cost savings for second and third buyers
+who are generally more price-sensitive than new car buyers. As the price of new electric cars
+decreases and OEMs incentivise their sale, the supply of electric cars into the used market will
+increase, thereby increasing the available cost savings to these consumers.
+
+
+
+
+FIGURE 0-5 - ANNUAL TOTAL COST OF OWNERSHIP (OVER 5 YEARS) OF SPECIFIC CARS
+INVESTIGATED FOR SECOND OWNERS OF VEHICLES PURCHASED IN 2024
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3              Page 6
+COST OF ZERO-EMISSION CARS IN EUROPE                                                 EXECUTIVE SUMMARY
+
+
+
+
+6. E-FUELS WILL BE TOO EXPENSIVE AND INCONVENIENT FOR MOST CONSUMERS
+E-fuels are renewable fuels of non-biological origin that have the same properties as conventional
+liquid petrol or diesel. They are expensive to use and have many practical issues for deployment,
+increasing the cost of running a petrol car by 9% and representing a 20% greater total cost of
+ownership than a battery electric car purchased in the same year for first owners (demonstrated
+in Figure 0-6). The relative cost increase of e-fuels is even greater for second and third owners,
+for whom the cost increase is 36% and 40%, respectively.
+
+
+
+
+FIGURE 0-6 - ADDITIONAL COST OF RUNNING A MEDIUM CAR E-FUELS COMPARED
+AGAINST PETROL AND AN ELECTRIC CAR, FOR A CAR FIRST REGISTERED IN 2035
+
+On top of the higher cost of using e-fuels, there are also other considerations which will make
+e-fuels an impractical solution for both consumers, manufacturers and policy makers. For the
+consumer, in addition to the higher prices, the low predicted volume of supply of e-fuels for road
+transport means the number of fuelling stations will be small, limiting consumers’ autonomy and
+range. For the manufacturers, these challenges include the likely requirement for OEMs to
+develop and commercialise technology to chemically distinguish between fossil fuels and e-fuels
+(which is currently very challenging to do given their similarity), which will increase the cost of
+the car. For policymakers, the 6- to 9-fold increase in renewable energy demand to produce e-
+fuels to power a car compared to directly powering an electric car will divert this renewable
+energy away from reducing emissions in other sectors, such as power generation, industry or
+housing. This creates a challenge for government to reach national emission reduction targets.
+
+Due to the costs and the practical considerations, e-fuels will not be a cost-effective
+way to achieve low emissions car transport from 2035 onwards. Policy to incentivise the
+uptake of electric vehicles and the charging network will be significantly more cost-effective to
+governments than subsidising e-fuels for road transport.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3               Page 7
+COST OF ZERO-EMISSION CARS IN EUROPE                                                EXECUTIVE SUMMARY
+
+
+
+
+7. VEHICLE-TO-GRID (V2G) TECHNOLOGY WILL BENEFIT SOME ELECTRIC VEHICLE
+    DRIVERS BUT WILL NOT SIGNIFICANTLY IMPROVE THEIR AFFORDABILITY FOR
+    MOST USERS
+Vehicle-to-grid (V2G) services refers to the case when an electric vehicle can both charge from
+and discharge back to the electricity network. V2G could provide extra revenue to electric
+car owners but relying on this to improve total cost of ownership will lead to
+inequalities in electric vehicle deployment as the possible revenue is variable and highly
+dependent on policy and the electricity network status.
+
+
+
+
+FIGURE 0-7 – POTENTIAL TOTAL COST OF OWNERSHIP SAVINGS (BEST CASE SCENARIO)
+AND COSTS (WORST CASE SCENARIO) FROM V2G PARTICIPATION FOR CONSUMERS
+
+Figure 0-7 illustrates that while annual total cost of ownership savings from V2G participation
+could theoretically reach €620, there is also a risk that it may cost consumers up to €1,430/year.
+The largest potential cost is the loss of value of the battery due to its degradation. This
+uncertainty is due to several factors, such as the higher battery degradation and high capital
+costs of equipment.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3              Page 8
+COST OF ZERO-EMISSION CARS IN EUROPE                                                  EXECUTIVE SUMMARY
+
+
+
+
+POLICY FOCUS AREAS
+As a result of these outputs, the following policy areas have been identified as important for the
+future affordability of electric vehicles for consumers:
+
+•    Provide policy stability to the new and used electric car market. This can be achieved
+     with clear and consistent policies encouraging the reduction of car emissions and the
+     purchase of smaller cars. Maintaining the EU’s lower CO2 target in 2025 (as well as in 2030
+     and 2035) is a clear demonstration of this, which incentivises OEMs to produce more cost-
+     competitive BEVs to capture more of the market. In addition, policies designed to support
+     the purchase of smaller cars of all powertrains (e.g. increased taxes on heavier cars) will
+     reduce the cost to consumers and increase the supply of these affordable cars on the second-
+     hand market, as well as reducing emissions and improving road safety.
+•    Support second-hand demand for electric cars to support the new car market. The
+     largest factor to influence the cost comparison of new cars was their resale value at the end
+     of the ownership period. Bolstering electric vehicle demand in the used car market will
+     increase the resale value of these cars, which will reduce the cost to the first owner, leading
+     to higher numbers of electric vehicle sales in total. This could be achieved through
+     government grants on used vehicles, increasing access to affordable public charging for
+     those without private charging and improving consumers’ awareness of the existing public
+     charging network and the wider health and environmental benefits of electric vehicles.
+•    Further improve access to affordable public charging. Public charging will be essential
+     for many consumers who do not have access to charging at home or work, yet the increased
+     cost of this means the cost savings of switching to electric are minimal. Reducing the cost
+     difference between public and private charging will enable more consumers to benefit from
+     the switch, increasing demand for electric vehicles.
+•    E-fuels are an expensive decarbonisation option which distract from more cost-
+     effective emissions reduction policies. Any policies designed to incentivise the use of e-
+     fuels in road transport will cost significantly more than encouraging the adoption of electric
+     cars. Using e-fuels would require expensive fuel subsidies and would divert renewable energy
+     away from decarbonising other sectors.
+•    Vehicle-to-grid (V2G) technology will benefit some electric vehicle drivers but
+     won’t significantly improve their affordability for most users. V2G technology has
+     potential to assist electricity systems to balance supply and demand across their networks,
+     but this is unlikely to provide a significant revenue to most electric vehicle users. Whilst
+     encouraging OEMs to include and enable V2G technology in their cars will provide benefits,
+     this will not have a substantial impact on the total cost of ownership for most users and
+     should not be expected to significantly increase demand for electric cars amongst
+     consumers.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                Page 9
+COST OF ZERO-EMISSION CARS IN EUROPE                                                         INTRODUCTION
+
+
+
+
+1.        INTRODUCTION
+1.1       CONTEXT
+Transport emissions are estimated to comprise a quarter of total emissions in the EU and must
+therefore be addressed as part of the EU’s ambition to be climate neutral by 2050.2 Of this 25%,
+passenger cars contribute over 60% of emissions, forming the largest portion of transport CO2
+emissions.3 The EU has a target of zero tailpipe emissions for all newly registered cars from 2035
+as well as targets to reduce tailpipe emissions by 55% by 2030 from 2022 levels,4 which will
+require an accelerated transition to electric vehicles (EVs). The EV transition faces barriers such
+as charging access, vehicle cost, and resale value. These issues must be understood and
+addressed in policy to ensure a rapid and equitable energy transition.
+
+On average, the growth of battery electric vehicle (BEV) deliveries has slowed in Europe since
+the remarkable growth in sales observed in 2020 and 2021: according to reports by EV Volumes,
+Western and Central Europe saw the smallest increase in EV sales in the first half of 2024 of any
+other region.5 However, the change in EV uptake from 2023 to 2024 varies by country, dependent
+on fuel/electricity prices, taxation and subsidy levels. While countries such as the Netherlands
+and Norway have accelerated their EV uptake and are mandated to have 100% zero-emissions
+vehicles (ZEV) sales by 2030 and 2025 respectively 6,7 (the vast majority of these being BEVs),
+EV sales in Germany have declined from 2023 to 2024 after the abrupt removal of its €4,500
+subsidy scheme.8 By contrast, nations with increasing policy support such as France and the UK
+appear to have growing EV markets in 2024, supported by social leasing schemes and the ZEV
+mandate respectively.9
+
+1.2       PREVIOUS STUDY AND UPDATES SINCE 2021
+This report was commissioned by BEUC (Bureau Européen des Unions de Consommateurs, the
+European Consumer Organisation) following a previous report completed in 2021 regarding the
+total cost of ownership (TCO) of vehicles for consumers over their ownership timelines.10 The
+2021 analysis concluded that lifetime Total Cost of Ownership (TCO) parity between internal
+combustion engine (ICE) vehicles and battery electric vehicles (BEVs) would be reached between
+2022 and 2026, depending on the vehicle size, and cost savings were largest for second and
+third owners of EVs. Based on an EU average across all segments, BEVs were predicted to be
+cheaper for first, second, and third owners in 2025, 2023, and 2020 respectively. High mileage
+drivers were determined to benefit most from a BEV by maximizing the operating cost savings.
+
+
+
+
+2 https://www.eea.europa.eu/en/topics/in-depth/transport-and-mobility
+3 https://www.europarl.europa.eu/topics/en/article/20190313STO31218/co2-emissions-from-cars-facts-
+
+and-figures-infographics
+4 https://climate.ec.europa.eu/eu-action/transport/road-transport-reducing-co2-emissions-vehicles/co2-
+
+emission-performance-standards-cars-and-vans_en
+5 https://ev-volumes.com/news/ev/is-the-global-ev-market-slowing-down/
+6 https://www.rvo.nl/files/file/2019/06/Misson%20Zero%20Powered%20by%20Holland.pdf
+7 https://www.iea.org/policies/17809-norways-electric-vehicle-incentives
+8 https://www.reuters.com/business/autos-transportation/germany-end-e-vehicle-subsidy-programme-
+
+2023-12-16
+9 https://www.transportenvironment.org/articles/germany-held-back-eu-electric-car-market-in-first-half-
+
+of-2024-t-e-analysis
+10 https://www.erm.com/contentassets/553cd40a6def42b196e32e4d70e149a1/electric_cars_calculating_
+
+the_total_cost_of_ownership_for_consumers.pdf
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                 Page 10
+COST OF ZERO-EMISSION CARS IN EUROPE                                                           INTRODUCTION
+
+
+
+
+Increasing the number of first-owner drivers purchasing BEVs also increases the affordable BEV
+stock available to second and third owners.
+
+The analysis within the report has been updated as several key parameters in the new and used
+car markets have changed since 2021, as well as extending the time horizon to 2040. Key factors
+in vehicle ownership costs that have varied include the cost of new and used vehicles: Autotrader
+research records “exceptional” price growth in 2023 for used petrol and diesel ICE vehicles,
+whilst the growth in BEV residual values has been more muted (this is discussed further in
+Section 2.1).11 Additionally, the Russian invasion of Ukraine caused European energy prices to
+spike in 2022-23, which have since started to fall partly due to emergency mitigation measures
+across the EU.12 High electricity prices reduced the operating cost benefit of running a BEV during
+this time, potentially affecting consumers’ willingness to take on the higher upfront cost of a BEV
+compared to an ICE car.
+
+1.3       OBJECTIVES
+This report aims to highlight the changes in TCO of electric vehicles and other powertrains in
+Europe since 2021, identifying where these differences arise and why they have occurred. This
+analysis is intended for use as a resource to inform policy development in the EU regarding
+emissions reduction from passenger vehicles.
+
+1.4       STRUCTURE OF THE REPORT
+This report is broken down into six sections (including this one), then followed by appendices
+with supporting information for the results discussed in this report. The six sections are:
+
+1. Introduction (this section): Introduces the aims of this report and the wider context of
+     this report in relation to EU legislation and the current state of the new and used car markets.
+2. Cost of ownership from 2024 to 2040 (Page 13): This section presents the cost of
+     ownership for first, second, and third hand owners for a consumer in a hypothetical “EU
+     average” country. This cost of ownership includes the vehicle cost (including financing costs),
+     fuel or electricity costs, and the cost of installing a charger at home for those who can. This
+     is based on ownership periods of 4, 5, and 7 years for first, second, and third owners
+     respectively. First owners are assumed to cover the greatest annual mileage at
+     15,000km/year, with second and third owners covering 12,000km/year and 10,000km/year,
+     respectively. Further details about the inputs used can be found in Appendix A.
+3. Sensitivity of the TCO results (Page 21): This section explores the impact residual values
+     and access to home charging have on the TCO results presented in section 2. Two scenarios
+     are analysed, one where the residual value of BEVs and PHEVs does not improve over time,
+     and another which considers a consumer who does not have access to home or workplace
+     charging and relies on the public charging network.
+4. Cost of ownership of specific car models (Page 29): This section presents the cost of
+     ownership for four petrol and four electric vehicles purchased in 2024, and their second and
+     third hand costs when resold in the future.
+
+
+
+
+11 https://www.autotraderinsight-blog.co.uk/auto-trader-insight-blog/after-five-years-of-growth-in-just-
+
+six-months-whats-next-for-used-car-prices
+12 https://energy.ec.europa.eu/data-and-analysis/energy-prices-and-costs-europe_en
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                   Page 11
+COST OF ZERO-EMISSION CARS IN EUROPE                                                      INTRODUCTION
+
+
+
+
+5. Other factors that may influence vehicle TCO (Page 35): This section considers
+     additional factors that may influence the TCO of using e-fuels, as well as the potential impact
+     of vehicle-to-grid (V2G) technology on the TCO of BEVs.
+6. Conclusions and policy implications (Page 41): The key outputs of the above sections
+     are summarised here, including the implications for policy makers to reduce emissions and
+     the cost of driving for consumers over the coming decades.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3              Page 12
+COST OF ZERO-EMISSION CARS IN EUROPE                                                COST OF OWNERSHIP FROM 2024 TO 2040
+
+
+
+
+2.        COST OF OWNERSHIP FROM 2024 TO 2040
+This section discusses the cost of ownership of generic car models of different powertrains, for
+first, second and third owners from 2024 to 2040. The importance and impact of residual values
+of BEVs is discussed, including how this report expects this to change up to 2030. The final
+output of when TCO parity is met between BEV and petrol ICE is compared to the previous 2021
+study, with a brief explanation of the factors that cause the differences seen.
+
+2.1       RESIDUAL VALUE OF ELECTRIC AND FOSSIL-FUELED CARS
+One of the largest areas of uncertainty for the total cost of ownership of cars is the resale value
+of the vehicle. Since 2021, the resale value of a second-hand car has increased significantly
+(Figure 2-1) for all powertrains, likely driven by supply shortages of new vehicles, the increased
+price of new cars, and economic shocks reducing the number of consumers able to purchase a
+new car. Importantly, the gap between petrol ICE and BEV has increased slightly over this time,
+from 15 percentage points (pp) in 2021 to 17 percentage points in 2024.
+
+
+
+
+FIGURE 2-1 – AVERAGE RESIDUAL VALUE BY POWERTRAIN ACROSS FRANCE AND GERMANY
+FROM 2021 TO 2024 13
+
+However, this increase in second-hand value has been less pronounced for BEVs, with the
+residual value of BEVs staying more stable over this period. This difference has led to reports of
+BEV resale value plummeting, leading to concerns from leasing companies and OEMs driving up
+the price of leasing deals for BEVs,14,15 although this market is highly volatile, with positive16,17
+and negative18 articles on BEV resale values being published within 4 months of each other over
+the last year. Notably, the gap between petrol ICE and BEV residual values also varies by country,
+
+13 ERM trend analysis of real-world market data that Transport and Environment (T&E) procured as an
+
+update for “An analysis of used car prices in Europe” (2023, link)
+14 https://www.fleetnews.co.uk/news/electric-vehicle-residual-values-fall-stetches-back-21-months
+15 https://www.fleetnews.co.uk/news/rental-rises-for-fleets-as-leasing-industry-losses-mount-on-used-
+
+evs
+16 https://plc.autotrader.co.uk/news-views/press-releases/used-ev-prices-continue-to-stabilise-in-wake-
+
+of-growing-consumer-demand/
+17 https://www.businessgreen.com/news/4171764/demand-uk-electric-car-sales-surge-90-cent-2023
+18 https://www.carscoops.com/2024/02/lease-firms-demand-cashback-from-automakers-over-tumbling-
+
+ev-values/
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                               Page 13
+COST OF ZERO-EMISSION CARS IN EUROPE                                                COST OF OWNERSHIP FROM 2024 TO 2040
+
+
+
+
+with a 20-percentage point difference seen in France compared to a 12-percentage point
+difference in Germany. Potential reasons for BEVs not seeing the same increase in residual value
+could be:
+
+•    The higher starting price of new BEVs: BEVs purchased between 2020-22 were more
+     expensive than their ICE alternatives, partly because BEV models sold were skewed towards
+     higher end vehicles, meaning they have more value to lose when entering the second-hand
+     market. As second-hand buyers are more price sensitive, they could be less willing to pay a
+     premium for a BEV model compared to an ICE model.
+•    Rapid development of BEV technology: The range, charging speed and performance of
+     BEVs has rapidly improved since 2020, meaning new BEVs now have longer ranges and/or
+     faster charging speeds than the average model sold in 2020-22. This advance has been most
+     pronounced for small/medium cars, which have seen a significant increase in available range
+     and performance. This can be seen in the market as the residual value for small/medium
+     BEVs is relatively worse than for larger BEVs, which already have higher ranges and better
+     performance. Comparing these used cars to new vehicles may reduce the desirability of
+     these vehicles on the second-hand market.
+•    Consumer nervousness over new technology: Purchasing a BEV comes with additional
+     questions and uncertainties for a new owner, which can include how to get a charger
+     installed, confidence in the public charging network and range-anxiety. These concerns have
+     been amplified by anti-BEV stories in the media, which may also put off potential BEV
+     buyers.19,20,21
+Whilst these issues are currently affecting BEV prices on the second-hand market, it is likely that
+the residual value difference between BEVs and ICE will reduce over time (and potentially even
+reverse, with BEV residual value increasing over ICE) as these factors reduce or turn in favour
+of BEVs:
+
+•    Current barrier: “The higher starting price of new BEVs”. The price difference between
+     a new BEV and new ICE has reduced significantly since 2020-22, and it is likely that the
+     purchase price of a new BEV will match (or be lower than) a comparable ICE vehicle by 2030.
+•    Current barrier: “Rapid development of BEV technology”. Whilst there has been rapid
+     development in BEV technology since 2020-22, further powertrain developments are
+     expected to be slower as vehicle production scales increase (the improvement in ICE vehicles
+     powertrains is currently incremental). Whilst battery technology might improve in the
+     future22, current BEVs already have sufficient charging speed and range for most consumers,
+     whereas this was not the case 5 years ago. This means future used BEVs will stay
+     technologically relevant for longer, increasing their resale value.
+•    Current barrier: “Consumer nervousness over new technology”. It is expected that
+     consumers’ perceptions of BEVs will improve over time due to a combination of reasons.
+     Increased exposure to BEVs (e.g. through friends, taxis) and the increased number of
+
+
+19 https://www.telegraph.co.uk/news/2024/03/11/evs-electric-vehicles-range-green-motoring-transport/
+20 https://bonpote.com/ocean-de-fake-news-sur-la-voiture-electrique/
+21 https://www.welt.de/wirtschaft/video253687046/Habecks-Autogipfel-Zu-den-aktuellen-Diesel-Preisen-
+
+ist-der-Vorteil-des-Elektromobils-komplett-weg.html
+22 A major shift to a different battery technology (e.g. solid-state batteries) is still uncertain, and will be
+
+beyond 2030 if it does happen. Additionally, it is uncertain whether the new technology will be able to
+compete with the current mass-produced battery technology on price or volumes, potentially limiting its
+use to the luxury/sports car markets at the outset.
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                               Page 14
+COST OF ZERO-EMISSION CARS IN EUROPE                                                COST OF OWNERSHIP FROM 2024 TO 2040
+
+
+
+
+     second-hand BEVs will reduce the unfamiliarity of the technology, whilst further expansion
+     of the public charging network and the increase in range of second-hand cars will increase
+     confidence in charging on-the-go and reduce range anxiety. By contrast, restrictions on
+     polluting cars entering cities could reduce the residual values of ICE vehicles before 2035, if
+     operating these cars comes with additional costs to consumers.
+In this study, the current state of the second-hand market has been taken to generate residual
+value curves, then the residual value curves of BEVs and PHEVs have been gradually increased
+until they match the residual value curve of diesel cars. This is a central estimate that residual
+value will improve but will still be lower than a typical petrol car. This scenario is more likely than
+the continuation of very poor BEV residual values post-2030: residual values of BEVs are likely
+to reach a similar level to ICE cars as they become the most common powertrain in the second-
+hand market in the early-mid 2030s. See Appendix A for further details on methodology used in
+this report.
+
+Given how sensitive the second-hand market is to supply or demand shocks and the prices of
+fuel and electricity (as demonstrated over the last three years), there is still a high level of
+uncertainty in these projections, both for EVs and for petrol and diesel cars.23 To address this, a
+sensitivity has been run (see Section 3.1) in which the residual value of EVs does not improve.
+This highlights the importance of the second-hand market both to second- and third-hand
+buyers, but also for first-hand buyers who are bringing these vehicles onto the market.
+
+2.2       GENERIC MODELS 1 ST, 2 ND AND 3 RD BUYERS
+This section includes projections of annual TCO (€/year) purchased from 2024 to 2040 for a
+generic vehicle from each of small, medium, and large cars. This analysis includes vehicle
+purchase and financing costs, fuel/electricity and the cost of home chargers, but does not
+account for country-specific costs such as subsidies, taxes, insurance, or maintenance costs. The
+costs to first, second, and third owners are all considered. Both diesel and petrol ICE cars are
+included for comparison to BEV TCO, as well as petrol full hybrid (HEV) and plug-in hybrid
+(PHEV). The TCO of a petrol ICE vehicle running on e-fuel24 is projected from 2030, as there are
+no commercial e-fuels production plants to date. Cars sold in the EU from 2035 need to be zero-
+emission, however, an exception permitting the sale of ICE vehicles which can only run on e-
+fuels beyond 2035 may be introduced in the next few years.25 Further details on the values used
+for this analysis can be found in Appendix A (e.g. years of ownership, annual mileage,
+fuel/electricity cost).
+
+
+
+
+23 The residual value of petrol and diesel cars could also decrease significantly in the future, if they are
+
+taxed for entering city areas, the number of petrol stations reduces, or they are seen as less desirable
+than BEVs in general. This study shows a balanced and pessimistic outlook for BEVs compared to petrol
+or diesel cars, but the outlook could also be significantly better for BEVs compared to ICE than modelled
+here into the 2030s.
+24 Drop-in e-fuels have the same properties as conventional liquid petrol or diesel but are produced from
+
+renewable electricity rather than being oil-derived
+25 Clause 11 in https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0851
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                               Page 15
+COST OF ZERO-EMISSION CARS IN EUROPE                                                COST OF OWNERSHIP FROM 2024 TO 2040
+
+
+
+
+FIGURE 2-2 – GRAPH ILLUSTRATING THE ANNUAL TCO OF A MEDIUM CAR WITH PETROL ICE
+AND BEV POWERTRAIN PURCHASED IN 2030
+
+The key result of this analysis is that under current conditions, BEVs are cheaper on a TCO basis
+than all other powertrains across segment sizes by 2030. The results, shown in Figure 2-2, also
+demonstrate that BEVs deliver greater savings, proportionally, for second and third owners than
+for first owners in 2030. This is particularly important because used car buyers are generally
+more price sensitive than new car buyers.
+
+2.2.1 FIRST BUYERS
+BEVs (green line) deliver TCO savings for consumers when compared to ICE vehicles for first
+owners across all segments when purchased from 2030 to 2040. Medium BEVs are cheaper than
+petrol ICE cars on a TCO basis the earliest (purchased from 2026, shown below in Figure 2-3),
+with small vehicles reaching price parity with petrol ICE vehicles in 2027 and large vehicles in
+2029.
+
+
+
+
+FIGURE 2-3 - GRAPH OF 4-YEAR TCO FOR FIRST OWNERS OF MEDIUM CARS AGAINST YEAR
+PURCHASED FOR A RANGE OF POWERTRAINS
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                               Page 16
+COST OF ZERO-EMISSION CARS IN EUROPE                                                COST OF OWNERSHIP FROM 2024 TO 2040
+
+
+
+
+BEVs are cheaper than petrol ICE vehicles from 2026 for medium cars and remain significantly
+less expensive (ca. €500 per year) until 2040. Small, medium, and large BEVs are €380/year
+(7%), €645/year (9%), and €240/year (2%) less expensive than petrol ICE equivalents when
+purchased in 2035. This means that if new car buyers take advantage of the cost savings to be
+gained from purchasing a BEV, there will be substantial stock in the second-hand market from
+the early 2030s, as first buyers determine the stock of the second-hand market. This will lead
+to TCO savings for consumers down the line (see later sections).
+
+If ICE vehicles are allowed to be sold beyond 2035, they are likely to be required to use e-fuels
+so that OEMs still meet emissions targets. Figure 2-3 shows that a vehicle using e-fuel has a 9%
+and 20% increase in TCO for a vehicle purchased in 2035 compared to petrol ICE and BEVs,
+respectively. Whilst e-fuels may be used to decarbonise vehicles for a small number of high-
+income consumers who are willing to pay this premium (e.g. luxury or high-performance sports
+cars), they are unlikely to be widely adopted across the EU due to their cost premium compared
+to fossil petrol and diesel,26 as well as additional practical limitations discussed in section 5.1.
+
+2.2.2 SECOND BUYERS
+From today until 2040, BEVs are less expensive on a TCO basis than all other powertrains for
+second buyers across all segments. Buyers of second-hand BEVs today will achieve the greatest
+TCO savings compared to petrol and diesel ICE vehicles according to this analysis, due to the
+lower price of second-hand BEVs currently seen. Between 2025 and 2030, the TCO benefit of
+purchasing a BEV remains positive but decreases. This is due to the estimated improvement in
+BEV depreciation in the same period as discussed in Section 2.1, leading to an increase in BEV
+purchase price for second buyers.
+
+
+
+
+FIGURE 2-4 - GRAPH OF 5-YEAR TCO FOR SECOND OWNERS OF MEDIUM CARS AGAINST
+YEAR PURCHASED FOR A RANGE OF POWERTRAINS
+
+From 2030 to 2040, Figure 2-4 shows BEVs deliver an average saving of more than €410 per
+year compared to petrol ICE vehicles for medium vehicles (14% saving). This TCO reduction is
+€260/year for small vehicles (11% saving), and €230/year for large vehicles (6% saving). Whilst
+
+26 https://theicct.org/wp-content/uploads/2022/02/fuels-us-europe-current-future-cost-ekerosene-us-
+
+europe-mar22.pdf
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                               Page 17
+COST OF ZERO-EMISSION CARS IN EUROPE                                                COST OF OWNERSHIP FROM 2024 TO 2040
+
+
+
+
+these savings are smaller in absolute than those seen by first owners, they form a greater
+percentage saving compared to petrol ICE vehicles. This shows that BEVs deliver greater benefits
+to second owners who are in general more price-sensitive than first owners.
+Assuming that the residual value of an ICE car set to run on e-fuels is the same as for a
+petrol/diesel car, e-fuels remain a considerably more expensive option than both ICE and BEV
+options for second owners. By 2040, e-fuel vehicles are 39% more expensive than BEVs on a
+TCO basis as shown above in Figure 2-4. This means the use of e-fuel in vehicles will be out of
+reach for most consumers.
+
+2.2.3 THIRD BUYERS
+For third owners, BEVs are the least expensive powertrain for all segments from now until 2040.
+The possible TCO savings decrease between 2024 and 2030 due to the projected improvement
+in BEV residual value in the same period, as described in section 2.1, which increases the
+purchase price for third buyers.
+
+The average TCO reduction for small, medium, and large BEVs compared to petrol ICE between
+2030 and 2040 are €300/year, €560/year (see Figure 2-5) and €440/year, equating to 15%,
+20%, and 13% savings respectively. These savings are greater than for both first and second
+owners, demonstrating BEVs are the most advantageous powertrain for third owners who are in
+general more price sensitive than first or second owners.
+
+
+
+
+FIGURE 2-5 - GRAPH OF 7-YEAR TCO FOR THIRD OWNERS OF MEDIUM CARS AGAINST YEAR
+PURCHASED FOR A RANGE OF POWERTRAINS
+
+2.2.4 TOTAL COST OVER THREE OWNERS
+Illustrated in Figure 2-6 is the distribution of costs between a vehicle’s three owners during its
+useful life for a medium petrol ICE and BEV car. It shows that for cars registered in both 2025
+and 2030, first owners bear the majority of the lifetime TCO of a vehicle, for both BEV and petrol
+ICE. While the divisions shown in Figure 2-6 are for medium cars, this trend is common across
+all powertrain types and vehicle sizes.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                               Page 18
+COST OF ZERO-EMISSION CARS IN EUROPE                                                COST OF OWNERSHIP FROM 2024 TO 2040
+
+
+
+
+FIGURE 2-6 - SPLIT OF LIFETIME TCO BY OWNER FOR MEDIUM BEV AND PETROL ICE CARS
+FIRST REGISTERED IN 2025 AND 2030
+
+In the case of BEVs, first owners in 2025 pay 53.9% of the total lifetime cost of the vehicle: a
+slightly greater proportion than petrol ICE first owners in the same year. By 2030, first owners
+of BEVs pay 51.9% of the lifetime TCO, with first owners of petrol ICE vehicles paying 49.4%.
+The closure of this gap can be attributed to the improving residual value outlook for BEVs in this
+period, which is projected to align with the depreciation of diesel ICE cars by 2030. By 2035,
+BEVs are the dominant powertrain for new cars, and the market characteristics now match those
+of the powertrain which currently dominates (petrol ICE).
+
+2.2.5 COMPARISON TO PREVIOUS STUDY
+Table 2-1 compares the year in which TCO parity is met for a BEV compared to petrol ICE
+between this study and the previous 2021 study.27 For the first buyer of a medium BEV, the year
+price parity is reached is three years later than anticipated by the prior work, now 2026 instead
+of 2023. The main factor delaying the TCO parity for first owners is the current reduced residual
+value of BEVs, with the increased cost of charging and including the cost of charger installation
+having a smaller impact on the TCO parity date.
+
+
+
+
+27https://www.erm.com/contentassets/553cd40a6def42b196e32e4d70e149a1/electric_cars_calculating_t
+
+he_total_cost_of_ownership_for_consumers.pdf
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                               Page 19
+COST OF ZERO-EMISSION CARS IN EUROPE                                                    COST OF OWNERSHIP FROM 2024 TO 2040
+
+
+
+
+TABLE 2-1 - YEAR OF PRICE PARITY OF A MEDIUM BEV WITH PETROL ICE FOR EACH OWNER,
+COMPARISON BETWEEN THIS STUDY & PREVIOUS STUDY (2021)
+
+                                                                                    Delta (2024 study to 2021
+    Owner                  This Study                     2021 Study
+                                                                                             study)
+
+        First                   2026                           2023                         3 years later
+
+    Second              Already cheaper                 Already cheaper                            -
+
+        Third           Already cheaper                 Already cheaper                            -
+
+
+
+By contrast, second and third owners are still predicted to already benefit from TCO savings by
+purchasing a medium BEV in both studies.
+
+2.2.6 CONCLUSIONS FROM FUTURE TCO MODELLING
+The key results of this analysis are:
+
+    •     Present market conditions and projected trends mean the first-owner TCO of a medium
+          BEV is less than for any other powertrain by 2026, with small and large reaching parity
+          in 2029 and 2033. Consumers can save hundreds of Euros annually by choosing to
+          purchase a BEV.
+
+    •     BEVs deliver the greatest TCO savings across all segments and powertrains for second
+          and third owners today through to 2040.
+
+    •     The percentage savings achieved from buying a BEV are greatest for third owners,
+          followed by second owners.
+
+    •     The TCO savings BEVs can provide are especially important for second and third owners
+          of vehicles who are more price sensitive in general than first owners.
+
+    •     Whilst e-fuels might be required in new ICE cars from 2035, the TCO of an ICE car using
+          e-fuel is significantly more expensive than a BEV for all consumers, with the largest
+          percentage cost difference seen for second and third owners. Widespread adoption of e-
+          fuels for new vehicles from 2035 will therefore negatively impact second and third owners
+          the most, despite not being able to significantly influence what new cars are purchased
+          by first owners.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                                   Page 20
+COST OF ZERO-EMISSION CARS IN EUROPE                                                SENSITIVITIES OF THE TCO RESULTS
+
+
+
+
+3.        SENSITIVITIES OF THE TCO RESULTS
+In recognition of the uncertainty of future residual values of cars and the importance of access
+to private overnight charging, alternative scenarios have been run as sensitivity testing.
+
+3.1       IMPACT OF RESIDUAL VALUES
+This scenario utilises a more pessimistic residual value outlook for electric vehicles (both BEV
+and PHEV) than the baseline scenario to understand how this parameter affects TCO for each
+owner of a vehicle. In this scenario, the residual value of BEVs and PHEVs does not change over
+time, with the resale value staying lower compared to an ICE vehicle (see Appendix B for further
+details). On this basis, the TCO for first owners of BEVs is 11% greater than for petrol ICE first
+owners in 2030. Second and third owners, however, see 18% and 55% reduction in annual TCO
+respectively based on this change, as BEVs are now much cheaper on the used car market.
+
+
+
+
+FIGURE 3-1 - GRAPH ILLUSTRATING THE ANNUAL TCO OF A MEDIUM CAR WITH PETROL ICE
+AND BEV POWERTRAIN IN 2030 IN THE ALTERNATIVE RESIDUAL VALUE SCENARIO
+
+Across all three owners, the TCO of BEVs in this scenario is less than in the baseline scenario
+due to lower financing costs for second and third buyers. However, BEVs never become less
+expensive than petrol ICE cars for first owners between now and 2040. This may present a
+challenge, as first owners dictate the powertrain makeup of the second market. If new car buyers
+opt for fossil fuel vehicles due to their lower TCO, then the number of BEVs available to used car
+buyers will be constrained and may increase their cost. Policy support may be required to
+encourage BEV uptake if the residual value does not improve with market forces. This could be
+done by bolstering the demand for used-BEVs, raising their resale price and indirectly helping
+buyers of new BEVs. This could be achieved with structural policies such as increasing access to
+affordable public charging, subsidies for used car buyers, or information campaigns to raise
+awareness of the cost and health benefits of BEVs. More direct policies to benefit new car buyers,
+such as subsidies, may also work, but are likely to be less cost-effective as this does not directly
+address the issue of lower residual values.
+
+3.1.1 FIRST BUYERS
+BEVs never become cheaper than petrol ICE cars for first owners in this scenario: the TCO of a
+BEV in 2040 in this scenario is 17% greater than in the baseline scenario. A medium BEV in 2035
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                           Page 21
+COST OF ZERO-EMISSION CARS IN EUROPE                                                SENSITIVITIES OF THE TCO RESULTS
+
+
+
+
+is €540 (7%) more expensive per year on a TCO basis than a petrol ICE car. For small and large
+vehicles, the difference is €530 (8%) and €1,580 (15%) respectively.
+
+
+
+
+FIGURE 3-2 - GRAPH OF TCO FOR FIRST OWNERS OF MEDIUM CARS AGAINST YEAR
+PURCHASED FOR A RANGE OF POWERTRAINS IN THE ALTERNATIVE RESIDUAL VALUE
+SCENARIO
+
+Due to the role that new car buyers play in determining the second-hand car market, the
+increased TCO of BEVs in this scenario may cause there to be a constrained supply of used BEVs.
+The effects of this are difficult to predict but may increase used BEV prices and reduce the TCO
+savings possible for second and third car owners.
+
+3.1.2 SECOND BUYERS
+In this scenario, the TCO of a second-hand BEV is 5% less than the equivalent baseline result
+from 2030 to 2040.
+
+
+
+
+FIGURE 3-3 - GRAPH OF TCO FOR SECOND OWNERS OF MEDIUM CARS AGAINST YEAR
+PURCHASED FOR A RANGE OF POWERTRAINS IN THE ALTERNATIVE RESIDUAL VALUE
+SCENARIO
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                           Page 22
+COST OF ZERO-EMISSION CARS IN EUROPE                                                SENSITIVITIES OF THE TCO RESULTS
+
+
+
+
+Figure 3-3 demonstrates that a poor residual value outlook for BEVs can deliver additional TCO
+savings to second owners. However, it is likely that there would be fewer BEVs entering the
+second-hand market if the first-owner TCO is poor, which would reduce the total savings seen
+across second-hand buyers.
+
+3.1.3 THIRD BUYERS
+For third buyers of BEVs in this scenario, TCO savings are 44% more than in the baseline scenario
+from 2030 to 2040 as shown in Figure 3-4. As for second buyers, this is again due to the residual
+value update made for this scenario: the purchase cost of a 9-year-old BEV is minimal and the
+TCO is dominated by charging costs.
+
+
+
+
+FIGURE 3-4 - GRAPH OF TCO FOR THIRD OWNERS OF MEDIUM CARS AGAINST YEAR
+PURCHASED FOR A RANGE OF POWERTRAINS IN THE ALTERNATIVE RESIDUAL VALUE
+SCENARIO
+
+As discussed for second buyers, while it appears there are significant TCO savings available for
+third buyers of BEVs in this scenario, this is dependent on the availability of used BEVs in the
+market, which is dictated by new car buyers.
+
+3.1.4 TOTAL COST OVER THREE OWNERS
+The total cost over the first three owners of BEVs in this scenario is lower than a petrol ICE
+equivalent and is also less than an equivalent BEV in the baseline scenario (~€2,000). This is
+due to the lower financing cost for second and third owners, who can take out smaller loans to
+purchase their vehicles due to their lower value.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                           Page 23
+COST OF ZERO-EMISSION CARS IN EUROPE                                                SENSITIVITIES OF THE TCO RESULTS
+
+
+
+
+FIGURE 3-5 - SPLIT OF LIFETIME TCO BY OWNER FOR MEDIUM BEV AND PETROL ICE CARS
+FIRST REGISTERED IN 2025 AND 2030 FOR THE ALTERNATIVE RESIDUAL VALUE SCENARIO
+
+When the residual value of BEVs is lower, first owners bear a larger proportion of the TCO burden
+(ca. 63% compared to ca. 53%) due to their depreciation. Third owners benefit most from this:
+the additional cost to first owners is essentially taken as savings for third owners.
+
+3.1.5 CONCLUSIONS OF SCENARIO ANALYSIS
+The key conclusions from this sensitivity scenario are:
+
+•    For new car buyers, BEVs never become less expensive than petrol ICE cars between now
+     and 2040. This is important because first owners determine the makeup of the used car
+     market. If consumers cannot obtain TCO savings from purchasing a new BEV, this has
+     consequences for subsequent car buyers who may not be able to purchase a BEV and
+     therefore cannot benefit from the associated TCO savings. Policy interventions may be
+     required to incentivise new BEV purchases if the residual value outlook does not improve in
+     line with the baseline scenario, though policies which improve their residual value to help all
+     vehicle users may be more sustainable than direct incentives for new car buyers.
+•    For used car buyers, BEVs are always less expensive than petrol ICE cars between now and
+     2040, and the TCO savings are greater in this scenario than the baseline. However, the worse
+     first owner TCO may lead to a constrained used BEV market in which prices are inflated
+     above those modelled in this analysis.
+•    The lifetime TCO of BEVs is ca. 4% less in this scenario than the baseline. This is due to
+     lower financing costs due to the faster depreciation of BEVs.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                           Page 24
+COST OF ZERO-EMISSION CARS IN EUROPE                                                        SENSITIVITIES OF THE TCO RESULTS
+
+
+
+
+3.2       IMPACT OF PUBLIC CHARGING
+In this scenario, charging costs were determined based on the split of public slow and public fast
+charging estimated for a driver without home charging and without workplace charging. This is
+compared to the baseline scenario which assumes a mix of home and public charging consistent
+with market average projections (Table 3-1).28 As a result, charging costs are ca. twice as high
+as baseline charging costs from 2024 to 2040. Conversely, there is no home charger costs, as
+no home charger is installed.
+
+TABLE 3-1 – SPLIT OF CHARGING LOCATIONS ASSUMED IN THE BASELINE SCENARIO AND
+THE PUBLIC CHARGING ONLY SCENARIO
+
+ Scenario                  Home overnight           Home/workday              Public slow         Public rapid
+
+ Baseline (Section
+                                   38%                       28%                    15%                    19%
+ 2)
+
+ Public charging
+ only (this                            0%                     0%                    45%                    55%
+ section)
+
+
+
+
+FIGURE 3-6 - GRAPH ILLUSTRATING THE ANNUAL TCO OF A MEDIUM CAR WITH PETROL ICE
+AND BEV POWERTRAIN IN 2030 IN THE ALTERNATIVE CHARGING COST SCENARIO
+
+Figure 3-6 illustrates that for first and second owners, BEVs are €100-200/year more costly to
+run than petrol ICE cars. For third owners, BEVs are 3% cheaper than petrol ICE cars. These
+results demonstrate that charging cost is an important parameter in the context of BEV
+affordability.
+
+The increase in charging costs means that TCO parity is reached later in this scenario than the
+baseline scenario or is not reached at all. Costs are increased across vehicle segment and
+ownership periods. This suggests that access to home and workplace charging, as well as
+reasonably priced public charging, is key in achieving BEV affordability for all vehicle owners.
+
+
+
+
+28 https://theicct.org/wp-content/uploads/2021/12/france-evs-infrastructure-transition-nov21_0.pdf
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                                   Page 25
+COST OF ZERO-EMISSION CARS IN EUROPE                                                SENSITIVITIES OF THE TCO RESULTS
+
+
+
+
+3.2.1 FIRST BUYER
+Figure 3-7 illustrates that by 2040, TCO is increased by 7% in this scenario compared to the
+baseline scenario for first owners of medium BEVs. In addition, TCO parity between BEV and
+petrol ICE cars is reached by 2032 in this scenario, whereas in the baseline scenario parity is
+reached by 2025. This demonstrates the role that charging costs play in TCO.
+
+For small cars, BEVs are more expensive than petrol ICE cars until for 2024 to 2040, with the
+gap closing to less than €20/year by 2040. Large BEVs remain more expensive than petrol ICE
+cars from 2024 to 2040, with an average difference of €290/year from 2035 onwards.
+
+
+
+
+FIGURE 3-7 - GRAPH OF TCO FOR FIRST OWNERS OF MEDIUM CARS AGAINST YEAR
+PURCHASED FOR A RANGE OF POWERTRAINS IN THE ALTERNATIVE CHARGING COST
+SCENARIO
+
+3.2.2 SECOND BUYER
+Second-hand buyers of BEVs (who are more likely not to have access to home charging in a
+private parking spot compared to new car buyers)29, experience a similar TCO increase to first
+buyers. By 2040, this scenario causes a 15% cost increase from the baseline (see Figure 3-8).
+The TCO of BEVs is greater than petrol ICE between 2030-38 due to the higher charger costs
+and increasing purchase price of second-hand BEVs, whereas in the baseline scenario BEVs are
+always cheaper to run.
+
+
+
+
+29 ERM research suggests approximately 85% of new car owners in the UK have access to off-street
+
+parking suitable for charging, compared to approximately 80% of used car owners.
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                           Page 26
+COST OF ZERO-EMISSION CARS IN EUROPE                                                SENSITIVITIES OF THE TCO RESULTS
+
+
+
+
+FIGURE 3-8 - GRAPH OF TCO FOR SECOND OWNERS OF MEDIUM CARS AGAINST YEAR PURCHASED
+FOR A RANGE OF POWERTRAINS IN THE ALTERNATIVE CHARGING COST SCENARIO
+
+For small and large cars, BEVs are always more expensive than petrol ICE from 2024 to 2040.
+This may affect consumer behaviour and encourage them to choose an ICE vehicle over a BEV
+between 2030 and 2040 if they do not have access to private charging and the markup on public
+charging does not change.
+
+3.2.3 THIRD BUYER
+Medium BEVs are cheaper than petrol ICE cars on a TCO basis, as shown in Figure 3-9, but are
+14% more expensive than in the baseline scenario. This is detrimental to the value proposition
+of used BEVs.
+
+
+
+
+FIGURE 3-9 - GRAPH OF TCO FOR THIRD OWNERS OF MEDIUM CARS AGAINST YEAR PURCHASED
+FOR A RANGE OF POWERTRAINS IN THE ALTERNATIVE CHARGING COST SCENARIO
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                           Page 27
+COST OF ZERO-EMISSION CARS IN EUROPE                                                SENSITIVITIES OF THE TCO RESULTS
+
+
+
+
+Small BEVs are cheaper than petrol ICE cars until 2028, where they are slightly more expensive
+until they become cheaper from 2038 to 2040. Large BEVs are cheaper than petrol ICE cars until
+2029, where they are marginally more expensive until they become cheaper from 2037 to 2040.
+This demonstrates that despite the higher costs of charging, BEVs are still the best choice for
+many third owners.
+
+3.2.4 TOTAL COST OVER THREE OWNERS
+The total cost over the first three owners of BEVs in this scenario is greater than petrol ICE
+vehicles, both for vehicles first registered in 2025 and in 2030 (see Figure 3-10). Over the useful
+life of the vehicle, consumers will spend an additional €7,000 on charging alone compared to the
+baseline. As discussed above, this cost reduces the TCO savings available to consumers. Due to
+the high electricity costs in this scenario, the running costs of a BEV approach those of a petrol
+ICE vehicle.
+
+
+
+
+FIGURE 3-10 - SPLIT OF LIFETIME TCO BY OWNER FOR MEDIUM BEV AND PETROL ICE CARS
+FIRST REGISTERED IN 2025 AND 2030 FOR THE ALTERNATIVE CHARGING COST SCENARIO
+
+3.2.5 CONCLUSIONS OF SCENARIO ANALYSIS
+The key conclusions of this sensitivity are as follows:
+
+    •    Lack of home and workplace charging severely reduce the value proposition of a BEV
+         from a TCO perspective and means price parity of BEVs and ICE vehicles is not reached
+         as quickly or is not reached at all. Used car buyers are more likely to be affected by
+         higher public charging costs because they rely more heavily on public charging. These
+         consumers are more likely to live in apartments, and therefore are less likely to have
+         access to a private garage where they can charge at home.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                           Page 28
+COST OF ZERO-EMISSION CARS IN EUROPE                                                SENSITIVITIES OF THE TCO RESULTS
+
+
+
+
+    •    High-cost public charging costs similar or more than petrol per kilometre driven.
+         Consumers deciding between a BEV or ICE may be unwilling to spend additional time
+         recharging a BEV compared to refuelling an ICE when there are little or no cost savings.
+
+    •    Policy intervention may be required for consumers who would not usually have access to
+         low-cost (home or workplace) charging. This could be in the form of policies increasing
+         competition for public charging stations, better design of public tenders for local charge
+         point installation (with a requirement to provide low-cost electricity), or other schemes
+         to reduce the cost of charging for those without a private charger.
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                           Page 29
+COST OF ZERO-EMISSION CARS IN EUROPE                                                COST OF OWNERSHIP OF SPECIFIC CAR MODELS
+
+
+
+
+4.        COST OF OWNERSHIP OF SPECIFIC CAR MODELS
+Four pairs of comparable BEV and petrol ICE vehicle models were chosen as representative
+vehicles for analysis (Table 4-1).
+
+TABLE 4-1 – PAIRS OF PETROL ICE AND BEV MODELS COMPARED IN THIS SECTION
+
+ Petrol ICE Model                                                BEV Model
+
+ Fiat 500                                                        Fiat 500e
+
+ Peugeot 208                                                     Peugeot e-208
+
+ VW Golf (Edition)                                               VW ID.3
+
+ Skoda Kodiaq                                                    Tesla Model Y
+
+
+The TCO of these vehicles was calculated in 2024 using the same method as for the baseline
+TCO analyses in Section 2 (with improving residual values and a mix of home and public
+charging), with the addition of contemporary lease costs taken from OEM websites (accessed
+September/October 2024) to reflect current financing costs. Lease costs,30 purchase price and
+fuel/electricity consumption were taken from the French website of the OEM. These results can
+help consumers understand what their approximate costs might be if they purchase one of these
+vehicles today, and the cost for second- and third-hand buyers of these vehicles in the future.
+
+4.1.1 FIRST BUYERS
+For buyers of new cars registered in 2024, three of the four BEV models are more expensive
+than their petrol ICE equivalent, as shown in Figure 4-1 (16% more for the Fiat 500e, 21% for
+the Peugeot e-208, 16% for the VW ID.3). This increase is due to the increased leasing cost,
+despite the fuel cost savings achieved by switching to a BEV. This leasing cost increase is due to
+the increased purchase price of the BEV models, as well as the OEMs potentially requiring BEV
+owners to pay off more of the vehicle cost due to the lower residual values currently seen for
+BEVs.
+
+By contrast, the Tesla model Y has a lower leasing cost compared to the Skoda, despite having
+a slightly higher retail price (€44,990 for Tesla compared to €44,760 for Skoda). This is likely to
+be due to Tesla either offering lower interest rates on their financing options or being more
+optimistic than other OEMs on the residual value of their vehicles, both of which would reduce
+the cost of the lease.
+
+It is important to note that lease costs vary significantly across Europe, with different interest
+rates or deposit contributions offered between France, Germany and the UK, for example.
+Because of this, in some countries, BEV and petrol ICE costs are much closer than in others.
+These differences in lease cost can be due to policy measures, such as the ZEV mandate in the
+UK, where OEMs have been offering lower interest rates and deposit contributions to encourage
+the sale of BEVs to meet their targets.31 It is likely that similar offers may be offered in the EU
+
+
+
+30 Lease costs are for a vehicle leased for 48 months with 15,000 km/year. The upfront deposit was
+
+reduced to zero where possible, however, if a deposit is required (only for the Tesla Model Y), this cost is
+evenly distributed across the 48 months to get an effective monthly cost.
+31 https://www.smmt.co.uk/2024/10/unprecedented-ev-discounting-shores-up-september-new-car-
+
+market/
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                                    Page 30
+COST OF ZERO-EMISSION CARS IN EUROPE                                                                           COST OF OWNERSHIP OF SPECIFIC CAR MODELS
+
+
+
+
+in 2025 in order to meet the lower CO2 emissions standards.32 The exact scenario for a consumer
+will depend on their location, and cheaper deals might be available with different manufacturers.
+
+                          Annual TCO of cars of interest, broken down by lease and fuel/charging costs
+
+                   €10k                                                                                                -15
+
+                                                                                                16            €8.8k
+
+                    €8k                                                                              €7.8k    €1.5k
+                                                                    26                                                        €7.5k
+                                       17                                                            €0.9k
+                                                                          €6.7k        €6.7k                                  €0.9k
+ TCO, 2024€/year
+
+
+
+
+                                             €6.1k                        €0.8k
+                    €6k                                                                €1.5k
+                             €5.2k           €0.9k       €5.3k                                                                         Lease
+                                                         €1.3k                                                                         Electricity &
+                             €1.3k
+                    €4k
+                                                                                                                                       Charge Point
+                                                                                                     €6.9k    €7.3k                    Fuel
+                                                                                                                              €6.6k
+                                                                          €5.8k
+                                             €5.2k                                     €5.3k
+                    €2k      €3.9k                       €4.0k
+
+
+
+
+                    €0k
+                            Fiat 500        Fiat 500    Peugeot        Peugeot        VW Golf        VW ID3   Skoda           Tesla
+                             Petrol         Electric   208 Petrol    208 Electric      Petrol                 Kodiaq         Model Y
+
+
+
+FIGURE 4-1 – ANNUAL TCO OF SPECIFIC CARS OF INTEREST FOR FIRST OWNERS, BROKEN
+DOWN BY LEASE COST AND FUEL/CHARGING COSTS
+
+Further, new BEVs such as the Renault R5, Citroën E-C3, and Volkswagen ID2 will come to the
+market in 2025, aiming for a price of below €25,000 33 (compared to €30,000 for Fiat 500 BEV
+or €32,000 for Peugeot 208 BEV). These BEV-specific models (rather than ones with ICE and
+BEV options) are likely to offer a comparable specification to their mixed powertrain counterparts
+but for a lower cost (e.g. the Citroën E-C3 vs Peugeot e-208). On this basis, the lease costs of
+BEVs are likely to come down with time as these specialised, cheaper models drive competition
+in the market, improving the outlook for first buyers of these cars. BEV buyers may also benefit
+from government subsidies today, such as the €4,000 bonus available to consumers in France.
+
+4.1.2 SECOND BUYERS
+All four of the BEV models are cheaper for second buyers than the comparable petrol ICE model,
+with the largest savings seen for the VW ID.3 and Tesla Model Y (Figure 4-2). These savings are
+due to the lower fuel costs of BEVs, which outweigh the higher vehicle cost for all models.
+Approximately three quarters of the BEV TCO is made up of vehicle purchase costs, whilst this
+makes up approximately half of the petrol ICE TCO, showing the relative costs and savings
+achieved by purchasing a BEV.
+
+The TCO outlook for second owners may improve further if low-cost BEV-only models (e.g.,
+Renault R5, Citroën E-C3, and Volkswagen ID2) are selected over BEV variants of ICE cars (i.e.,
+Fiat 500, Peugeot 208), as seen by the significant savings between the Tesla Model Y and the
+Skoda Kodiaq. The additional hardware required to produce a BEV and petrol ICE on the same
+platform may explain the significantly higher cost of the BEV variant. Further, ensuring high
+levels of access to low-cost charging (home or workplace) would also further improve the TCO
+competitiveness of the BEV variants illustrated in Figure 4-2.
+
+
+32 https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019R0631
+33 https://www.autoexpress.co.uk/volkswagen/355735/new-2025-volkswagen-id2-powertrain-interior-
+
+and-design-game-changing-ev
+
+
+                                       CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                                       PROJECT NO: 0742844               DATE: 25th Oct 2024     VERSION: 3                                     Page 31
+COST OF ZERO-EMISSION CARS IN EUROPE                                                                         COST OF OWNERSHIP OF SPECIFIC CAR MODELS
+
+
+
+
+                        Annual TCO of cars of interest, broken down by lease and fuel/charging costs
+
+                  €4k
+
+                                                                                                                     -24
+
+                                                                                                            €3.1k
+                  €3k                                                                        -17
+
+                                                                                    €2.5k
+TCO, 2024€/year
+
+
+
+
+                                                                                                            €1.2k          €2.4k
+                                     -1                        -2                                  €2.1k                              Lease
+                                                                                                                           €0.6k
+                  €2k      €1.8k                       €1.9k           €1.8k        €1.2k                                             Electricity &
+                                           €1.8k
+                                                                                                   €0.6k
+                                                                                                                                      Charge Point
+                                           €0.5k                       €0.5k
+                                                       €1.0k                                                                          Fuel
+                           €1.0k
+                  €1k                                                                                       €1.9k          €1.8k
+                                                                                                   €1.5k
+                                           €1.2k                       €1.3k        €1.4k
+                           €0.8k                       €0.8k
+
+                  €0k
+                          Fiat 500        Fiat 500    Peugeot         Peugeot      VW Golf         VW ID3   Skoda           Tesla
+                           Petrol         Electric   208 Petrol     208 Electric    Petrol                  Kodiaq         Model Y
+
+
+
+FIGURE 4-2 - ANNUAL TCO OF SPECIFIC CARS OF INTEREST FOR SECOND OWNERS, BROKEN
+DOWN BY LEASE COST AND FUEL/CHARGING COSTS
+
+4.1.3 THIRD BUYERS
+For third buyers, the cost of a BEV is cheaper in two of the four models considered, as shown in
+Figure 4-3 (11% cheaper for the VW ID.3, 18% cheaper for the Tesla Model Y), whereas the Fiat
+500e and Peugeot e-208 become slightly more expensive than their petrol ICE counterparts (6%
+more for both). The relative increase in cost for third buyers of BEVs is due to the lower mileage
+of these owners (10,000km per year compared to 12,000 km per year for second buyers),
+meaning that the increase in vehicle cost is not sufficiently offset by the lower running costs.
+
+This cost difference may be reduced for third buyers in multiple ways. Firstly, if the owner can
+charge more (or exclusively) at home or work or the price of public charging decreases, their
+running cost savings will be significantly higher. Secondly, if the owner drives further, they will
+benefit more from the running cost reductions. Finally, with the introduction of cheaper BEV
+models from 2025 onwards (such as the Renault R5, Citroën E-C3, and Volkswagen ID2), these
+will reduce the vehicle cost for first, second and third buyers. All these factors can result in the
+TCO of a BEV being lower than a petrol ICE for all vehicle sizes, not just the larger segments.
+
+There is a ca. €600/year TCO difference between the least and most expensive BEVs for third
+owners, with most of this difference being attributable to financing costs. Charging costs are
+approximately equal across all electric vehicle models studied, given the relatively low mileage
+and low cost of charging.
+
+
+
+
+                                      CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                                      PROJECT NO: 0742844            DATE: 25th Oct 2024       VERSION: 3                                     Page 32
+COST OF ZERO-EMISSION CARS IN EUROPE                                                                                   COST OF OWNERSHIP OF SPECIFIC CAR MODELS
+
+
+
+
+                            Annual TCO of cars of interest, broken down by lease and fuel/charging costs
+
+                      €4k
+
+
+
+
+                                                                                                                              -18
+                      €3k
+                                                                                                                     €2.7k
+                                                                                                  -11
+    TCO, 2024€/year
+
+
+
+
+                                                                                         €2.2k                                      €2.2k
+                                                                     6                                               €1.0k                     Lease
+                                         6                                                                €1.9k
+                      €2k                                                                                                           €0.5k      Electricity &
+                                              €1.6k                         €1.7k
+                               €1.5k                      €1.6k                          €1.0k            €0.5k                                Charge Point
+                                              €0.4k                         €0.4k                                                              Fuel
+                               €0.8k                      €0.9k
+                      €1k
+                                                                                                                     €1.7k          €1.7k
+                                                                                                          €1.5k
+                                              €1.2k                         €1.2k        €1.2k
+                               €0.7k                      €0.7k
+
+                      €0k
+                              Fiat 500       Fiat 500    Peugeot           Peugeot      VW Golf          VW ID3      Skoda           Tesla
+                               Petrol        Electric   208 Petrol       208 Electric    Petrol                      Kodiaq         Model Y
+
+
+
+FIGURE 4-3 - ANNUAL TCO OF SPECIFIC CARS OF INTEREST FOR THIRD OWNERS, BROKEN
+DOWN BY LEASE COST AND FUEL/CHARGING COSTS
+
+4.1.4 CONCLUSIONS
+•                     Today, the first buyer TCO of three of the four BEV models examined is more expensive than
+                      the comparable petrol ICE model. This is due to considerably greater lease costs for these
+                      specific BEVs, due to higher purchase prices and a lower residual value assumed by the leasing
+                      company for BEVs compared to ICE, meaning more of the vehicle needs to be paid off in the
+                      first ownership. This is in contrast to Tesla offering a cheaper leasing deal than the comparable
+                      ICE vehicle, despite having a similar retail price.
+
+•                     Cheaper BEV models coming to the market in 2025 will likely reduce the BEV purchase and
+                      financing costs from next year. This is driven by BEV-specific models coming to the market
+                      which are cheaper than models with ICE and BEV variants, meaning consumers willing to
+                      shop around between brands and models could benefit most from these new entrants.
+
+•                     Lease costs vary greatly from country to country. Cheaper leases may be available in other
+                      countries and TCO will be highly dependent on the consumer’s location. Favourable deals for
+                      BEV leasing may be introduced in the EU in 2025 to meet the lower CO2 emission standards
+                      coming into force, as has been seen in the UK in response to the ZEV mandate.
+
+•                     For second and third buyers, BEVs are either cheaper than their petrol ICE counterpart or
+                      only marginally more expensive. This highlights the potential for cost savings for second and
+                      third buyers who are likely to be more price-sensitive. These cost savings will increase as the
+                      price of new BEVs decrease and OEMs incentivise the sale of BEVs, increasing the supply of
+                      BEVs into the used market.
+
+•                     Charging costs for BEVs are significantly lower than fuel costs for petrol ICE cars (ca. 40-50%
+                      lower) for all owners.
+
+
+
+
+                                         CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                                         PROJECT NO: 0742844               DATE: 25th Oct 2024          VERSION: 3                                      Page 33
+COST OF ZERO-EMISSION CARS IN EUROPE                                                COST OF OWNERSHIP OF SPECIFIC CAR MODELS
+
+
+
+
+•   Profit margins for BEVs and ICE cars may equalise soon,34 at which point purchase prices
+    should start to converge as the cost of manufacturing BEVs continues to decrease at scale
+    and with reducing battery prices. This would ensure BEVs are affordable for all owners.
+
+
+
+
+34 https://www.am-online.com/dealer-management/manufacturer-insight/volvo-says-margin-gap-
+
+between-ice-and-bev-is-closing
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                                    Page 34
+COST OF ZERO-EMISSION CARS IN EUROPE                                                OTHER FACTORS THAT MAY INFLUENCE VEHICLE TCO
+
+
+
+
+5.        OTHER FACTORS THAT MAY INFLUENCE VEHICLE TCO
+Whilst this TCO study covers the main costs that will be incurred by current and future car users,
+there are additional considerations which could influence the TCO of using e-fuels or BEVs, which
+are likely to be the only two options for new cars in the EU beyond 2035.
+
+5.1       ADDITIONAL PRACTICAL CONSIDERATIONS OF E-FUEL USE
+In addition to the increased cost of e-fuels compared to petrol or diesel, there are other practical
+factors that could either impact the TCO or the attractiveness of using e-fuels to consumers.
+There are three broad areas to consider: the requirement for additional technology in cars to
+ensure only e-fuels are used, the ease of sourcing e-fuels, and the wider impact on electricity
+supply within the EU.
+
+From 2035, OEMs must have achieved a 100% reduction in carbon intensity of running new cars
+sold (i.e. 0 gCO2/km),35 which currently does not include low carbon fuels such as e-fuels.
+However, the EU commission may decide to allow e-fuels to be used in new cars from 2035
+onwards. This would likely require OEMs to install technology into these new cars to detect
+whether the vehicle has been filled up with e-fuel or fossil fuel and reject the use of fossil fuels.36
+The technology would need to distinguish between low carbon e-fuels and other disallowed fuels
+produced by very similar processes, such as biofuels and fuels produced through the Fischer-
+Tropsch process from fossil fuel feedstocks,37 which could be extremely difficult. Any technology
+developed will likely increase the cost of these vehicles. The magnitude of this impact on the
+TCO is highly uncertain, as the requirements under EU legislation and the technology that would
+be required are currently uncertain.
+
+Importantly, no onboard technology will be able to verify the sustainability of the fuel used,
+which needs to be done through separate analysis and verified by a third party. This is currently
+done for renewable fuels supplied to fulfil Member State targets to meet the renewable energy
+in transport targets of the Renewable Energy Directive. However, the EU’s policy here is to verify
+the sustainability of fuels that are used to comply with policy support mechanisms, not to ensure
+that non-compliant fuels are prevented from being sold and used. Today the risk of this is low:
+biofuels and e-fuels are more expensive than fossil fuels, so there is no incentive for
+unsustainable ones to be supplied without policy support. However, if a fleet of e-fuel only cars
+were on the road, there would be a strong incentive for sale of fuels that would be accepted by
+the onboard technology but could be supplied at lower cost by avoiding sustainability
+requirements.
+
+If e-fuels are permitted and a consumer purchases an e-fuel only car, they could also face issues
+finding locations to refuel. ReFuelEU aviation legislation mandates the use of sustainable fuels
+for aviation to 2050,38 including sub targets for e-fuel use. This mandate will require about 16
+million tonnes of sustainable aviation fuels in the EU, 4.8 million tonnes of which would be e-
+
+35 https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0851
+36
+
+https://www.transportenvironment.org/uploads/files/2023_09_Efuel_imp_del_act_position_paper_final-
+min.pdf
+37 The Fischer-Tropsch process is a method of producing liquid fuels from carbon monoxide and hydrogen.
+
+This can be used to make e-fuels with sustainably sourced feedstocks, however if fossil feedstocks are
+used (such as natural gas through steam methane reforming) this will make a product which is
+chemically identical to sustainable e-fuels but produced from a fossil source.
+38 https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202302405
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                                       Page 35
+COST OF ZERO-EMISSION CARS IN EUROPE                                                 OTHER FACTORS THAT MAY INFLUENCE VEHICLE TCO
+
+
+
+
+fuels. In comparison, the EU consumed approximately 58 million tonnes of petrol and 160 million
+tonnes of diesel per year between 2017 and 2019 (Figure 5-1).
+
+ Million tonnes of fuel per year
+ 200               185.0
+                                                                                                        Road diesel
+                                                                                                        Road petrol
+ 150
+                                                                                                        E-fuels
+
+ 100
+
+
+   50
+                                                                                                       17.4
+                                                0.6                         4.8
+     0
+            Current road use              E-fuels for                   E-fuels for               E-fuels for
+                                        aviation (2030)               aviation (2040)           aviation (2050)
+
+
+FIGURE 5-1 – CURRENT ROAD FUEL USE IN THE EU, AND PROJECTIONS OF THE VOLUME
+OF E-FUELS USED IN AVIATION WITHIN THE EU.
+
+Even if the volume of e-fuels for road transport matched those predicted for aviation (4-5 million
+tonnes in 2040), this would only be enough to account for about 3% of current road fuel use. At
+this low level, a consumer owning an e-fuel only car may struggle to find a petrol station that
+consistently stocks the fuel (or stocks it at all), which may lead to consumers only being able to
+refuel in limited locations. In comparison, the EU mandates a minimum public charging
+infrastructure across the TEN-T strategic road network,39 which will enable a BEV owner to travel
+anywhere within the EU and recharge.
+
+Finally, the use of e-fuels in cars could have a significant impact on the quantity of renewable
+electricity required in the EU. To produce one litre of e-gasoline, approximately 19-24 kWh of
+electricity would be required to capture the carbon dioxide and produce hydrogen from water
+electrolysis.40 When used in a conventional petrol car, this means 120-180 kWh of renewable
+electricity would be required to travel 100km, compared to under 20 kWh required to power a
+BEV the same distance (Figure 5-2).41 This means that e-fuel production for the road sector
+would be a less efficient use of renewable electricity than direct use in a BEV, requiring greater
+investment in new renewable energy capacity to supply it.
+
+
+
+
+39 https://eur-lex.europa.eu/eli/reg/2023/1804/oj
+40 https://www.concawe.eu/wp-content/uploads/E-fuels-article.pdf Using the efficiency of the Fischer-
+
+Tropsch e-Diesel pathway (Figures 7 and 9), range from whether CO2 is collected from point source or
+direct air capture.
+41 Using average medium car fuel/electricity consumption (6-7 l/100km, 15-16 kWh/100km). Including
+
+7% transmission losses and 10% charger losses for BEV.
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024     VERSION: 3                                       Page 36
+COST OF ZERO-EMISSION CARS IN EUROPE                                                OTHER FACTORS THAT MAY INFLUENCE VEHICLE TCO
+
+
+
+
+                          Renewable energy required to power 100km of travel (kWh)
+               0       20         40        60        80        100       120       140       160        180       200
+
+
+      E-fuel
+
+                                                                                                          795
+
+        BEV
+
+
+
+
+FIGURE 5-2 – RENEWABLE ELECTRICITY REQUIRED TO POWER 100 KM OF TRAVEL FOR A
+CAR POWERED BY E-FUELS COMPARED TO A BEV CAR
+
+
+
+5.2       POTENTIAL IMPACT OF V2G ON TCO
+
+5.2.1 OVERVIEW OF V2G
+Vehicle-to-Grid (V2G), also known as bidirectional charging, allows EVs to both charge from the
+grid and discharge to the grid. V2X is the overarching term for services provided using
+bidirectional charging, where the X stands for any application, for instance grid, home, building
+(V2G, V2H, V2B).
+Participation in V2G services can provide benefits to EV owners by enabling an EV battery to act
+as a short duration energy store. The first benefit is increased revenue from energy arbitrage:
+V2G can charge when energy is cheap and discharge onto the grid when energy is at its most
+expensive (see Figure 5-3). In addition, EVs can charge during times of abundant (i.e.
+renewable) supply and deliver this back into the grid when demand is high in the place of a
+carbon-intensive gas power plant, reducing the CO2 emissions of a household and the grid. EVs
+may also be able to participate in local flexibility services in the future. This is discussed further
+in section 5.2.2.
+
+
+
+
+FIGURE 5-3 – ILLUSTRATION OF HOW V2G VEHICLES CAN PARTICIPATE IN ENERGY
+ARBITRAGE
+
+
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844         DATE: 25th Oct 2024   VERSION: 3                                        Page 37
+COST OF ZERO-EMISSION CARS IN EUROPE                                                OTHER FACTORS THAT MAY INFLUENCE VEHICLE TCO
+
+
+
+
+5.2.1.1 CASE STUDY: V2G IN THE UK
+The UK is a leader in Europe in the V2G space, with two V2G innovation programs already funded,
+including 34 V2G trials ongoing42. EU countries currently lack the market framework and
+aggregator services which are present or developing in the UK.43 Given the UK’s leading position
+on V2G, it is useful to examine the costs and potential revenues available to consumers in this
+relatively developed market.
+Although there is currently no legislation
+                                                          Case study of V2G in the UK: Octopus Energy
+specific to V2G, current regulations in
+the UK allow both AC and DC V2G. The                      Octopus is an energy provider in the UK which
+UK’s     Smart       Charging          Action   Plan      provides smart tariffs for EV users for charging
+(2023)44 set out the vision and timeline                  during off-peak times, as well as other tariffs to
+for both smart charging (during which                     shift demand away from peak hours. They have
+EVs charge at times of low electricity                    released a “Power Pack” tariff which offers V2G to
+prices to minimise charging costs) and                    domestic customers. The tariff advertises that it
+V2X. It sets out the aim that innovation                  will save the average EV driver more than €1,000
+projects and technology scale-up will                     per year compared to a standard domestic tariff
+have reduced barriers to entry for                        subject to certain usage constraints. This tariff is
+consumers        and     V2X     will     be    more      in its Beta phase but is the first commercial V2G
+commercially viable by 2025. The plan                     tariff in the UK. Vehicles can participate in energy
+includes commitments such as making                       arbitrage in this tariff, and this is a step towards
+sure the energy system is ready for                       larger-scale use of EVs as flexible energy storage
+smart EV charging, including ensuring a                   by gauging engagement with a V2G-style scheme.
+consistent connection process for V2X                     The existence of aggregators like Octopus and
+across all regions, and continuing to                     legislative framework for V2G means that the UK
+identify, monitor and address the key                     has the most advanced market for V2G in Europe.
+barriers to unlock the potential of the
+commercial deployment of V2X technologies.
+
+5.2.2 REVENUE POTENTIAL FROM V2G
+V2G can offer electricity system and financial benefits by allowing vehicles to participate in
+electricity markets. Not all services are suitable, however, for V2G. For example, frequency
+response45 is often assessed as not suitable for V2G, due to the metering and latency
+requirements.44 For the typical usage patterns and plug-in times of passenger cars, they can
+offer a surplus of energy when plugged in overnight, which can be used for engagement in
+wholesale energy arbitrage (discharging electricity to the grid at times of high electricity prices),
+the Balancing Mechanism and local flexibility markets (helping to prevent congestion in the grid
+by discharging electricity). These V2G activities can generate value for car owners, though the
+size of the benefit will vary. Notably, the value of local flexibility markets can be highly variable
+as they are very locationally dependent, and not everyone may be able to access the full value.
+
+
+42 The European countries closest to the UK for V2G innovation are Netherlands with 17 projects, followed
+
+by France with 12: https://www.v2g-hub.com/insights/
+43 https://www.eea.europa.eu/publications/transport-and-environment-report-2022/term-2022-annex-6
+44 https://assets.publishing.service.gov.uk/media/655dfabf046ed400148b9e0a/electric-vehicle-ev-smart-
+
+charging-action-plan.pdf
+45 Frequency response services are when assets such as V2G-capable BEVs charge from or discharge to
+
+the grid to help maintain grid frequency within 1% of its required value (50Hz in Europe). Generally, this
+is in response to a drop in grid frequency, and assets are asked to discharge to the grid in this instance.
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844         DATE: 25th Oct 2024   VERSION: 3                                       Page 38
+COST OF ZERO-EMISSION CARS IN EUROPE                                                OTHER FACTORS THAT MAY INFLUENCE VEHICLE TCO
+
+
+
+
+ERM modelling of V2G potential for passenger cars found that V2G could provide up to an
+additional £746 (€895) per EV per year in the UK, above what could be provided by smart
+charging alone,46,48 while other studies have found revenues of ca. €220/year are possible.47
+
+5.2.3 BARRIERS TO V2G ADOPTION
+Despite these advantages, there are several barriers to the implementation of V2G, though many
+of these are likely to reduce over the next few years.
+
+•    Charger cost: The bi-directional chargers required for V2G can be three times as expensive
+     than an average smart charger (premium of €1,000-€3,300),48 though this price difference
+     is likely to reduce over time if the technology becomes more widespread (€350-1,000
+     premium by 2030). In addition, trials of V2G through lower-cost AC chargers are underway
+     in the EU, which can use a cheaper bidirectional AC charger.49 In October 2024, Nissan
+     announced that their AC V2G chargers will be available in the UK in 2026.50 Although
+     maintenance costs are typically low for all chargers, it may rise to approximately €120 per
+     year per charger (2023€) for general repairs for more complex V2G hardware.
+•    Vehicle availability: There are currently very few V2G-enabled vehicles on the market (e.g.
+     Nissan Leaf, Nissan eNV200, and Mitsubishi Outlander). However, more V2G-enabled
+     vehicles are expected to come to market in the next 3 years with the adoption of the ISO
+     15118-20 communication standard, enabling CCS (Combined Charging System) V2G, which
+     is the more popular DC charging system in Europe. This includes VW ID models (already
+     capable, not enabled pending ISO 15118-20 adoption), Renault R5, and Mercedes Benz EQS.
+     Currently only CHAdeMO compatible charge points and cars are V2G capable.
+•    Battery Degradation: Further, there are concerns around battery degradation from more
+     frequent battery cycling, which could reduce the range of an EV, though the evidence for this
+     and the subsequent impact on BEV range or value is currently inconclusive. If V2G is carried
+     out without regard for battery degradation, it can accelerate the rate of range loss in BEVs.
+     This could cost BEV owners between €100 and €1,000 per year in additional battery
+     degradation, depending on how V2G is managed, the number of cycles completed, the depth
+     of discharge of each cycle, and the charging speed used (see Appendix C for further
+     discussion). However, it may be able to slow down this process if carried out to deliberately
+     minimise, or even slow, degradation.51,52
+•    Uncertain revenue: Finally, future revenues from V2G are uncertain due to the potential
+     saturation of the flexibility services market with utility-scale batteries or large-scale V2G
+     participation. This would reduce the monetary benefit for customers as the value of flexibility
+     services would decrease.
+
+
+
+
+46 EVs plugged in between 5.30pm – 8am, with a daily charging demand of 4.8 kWh/day.
+47 https://www.sciencedirect.com/science/article/pii/S0306261921014586
+48 https://www.climatexchange.org.uk/projects/opportunities-to-use-vehicle-to-grid-for-transport-
+
+decarbonisation/
+49 https://www.renaultgroup.com/en/news-on-air/news/renault-tests-its-bi-directional-charging-system-
+
+in-utrecht/
+50 https://uk.nissannews.com/en-GB/releases/nissan-to-launch-affordable-vehicle-to-grid-technology-
+
+from-2026?selectedTabId=releases
+51 https://nrl.northumbria.ac.uk/id/eprint/46504/1/2021106377.pdf
+52 https://chargedevs.com/newswire/new-study-v2g-may-not-degrade-ev-battery-life-it-might-actually-
+
+extend-it/
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                                       Page 39
+COST OF ZERO-EMISSION CARS IN EUROPE                                                OTHER FACTORS THAT MAY INFLUENCE VEHICLE TCO
+
+
+
+
+5.2.4 IMPACT OF V2G ON TCO
+V2G may improve the TCO of a small number of BEV owners (as shown in Figure 5-4), but this
+is highly dependent on location, evolution of commercial offerings, and technology costs.
+
+The demand for local flexibility services is highly contingent on the status of the local grid
+(whether it regularly reaches capacity or if there is plenty of headroom). As this can vary at a
+very local level, this can create an unequal distribution of V2G revenue according to postcode,
+with some owners able to generate significant revenue whilst others generating next-to-none.
+In addition, this is likely to only be available to owners who have access to private overnight
+charging, so could exacerbate equity differences between people living in houses with off-street
+parking and those in terraced housing or flats without garages.
+
+Figure 5-4 shows a low cost, high revenue scenario (Scenario A) and a high cost, low revenue
+scenario (Scenario B) for a V2G participant in Europe. This illustrates the potential benefits and
+pitfalls of engaging with V2G for consumers. V2G could cost the customer an additional €1,430
+per year, or alternatively may reduce the TCO of a BEV by over €600 per year. As previously
+stated, this is dependent on location, technology improvement rate, and real-world battery
+degradation rates.
+
+
+
+
+FIGURE 5-4 - CHARTS SHOWING THE RANGE OF POTENTIAL IMPACTS OF V2G ON THE
+ANNUAL TCO OF A BEV, IN A BEST-CASE (LOW COSTS, HIGH REVENUE) AND WORST-CASE
+(HIGH COSTS, LOW REVENUE) SCENARIO
+
+Therefore, whilst V2G can provide an additional revenue for some BEV owners to improve the
+TCO against an ICE car, this is unlikely to shift the TCO discussion at a national level due to the
+limited number of consumers who would see a significant TCO benefit from this. If V2G revenue
+was the only way a BEV would become affordable in a country, it could also lead to further
+inequality of BEV uptake, favouring consumers with private charging access in grid-constrained
+areas.
+
+
+                     CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                     PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                                       Page 40
+6.      CONCLUSIONS AND POLICY IMPLICATIONS
+The analysis of vehicle TCO from 2024 to 2040 shows that BEVs are cheaper across all vehicle
+segments by 2032 for new car buyers and are already and always cheaper for used car buyers.
+The savings available to new BEV buyers from 2030-2040 are between €240/year and €645/year
+(2-7% saving), depending on segment, compared to an equivalent petrol ICE car. Used car
+buyers can achieve a cost reduction of between 6% (€230/year) and 20% (€560/year) compared
+to petrol ICE, depending on segment. For all consumers, running an ICE vehicle on e-fuels
+bought in 2035 is more expensive than both petrol ICE and BEV, ranging from 32% more
+expensive than BEV for the first owner to 36% more expensive for the second owner. Over the
+lifetime of the vehicle, BEVs are €6,000 less expensive for consumers than petrol ICE cars
+purchased in 2030. This clearly demonstrates the value proposition of BEVs from as early as
+2024 under current market conditions.
+
+The residual value of cars is an important factor in the TCO, and how this changes over time is
+uncertain for all powertrains. Under a scenario in which the residual value of BEVs does not
+improve from today’s relatively low values, BEVs are always more expensive for new buyers than
+petrol ICE cars. This is in stark contrast to the baseline scenario where TCO parity is reached
+between 2026 and 2032 depending on segment, in this scenario the residual value of BEVs
+improves over time to match that of a diesel ICE car by 2030. In both the baseline and residual
+value sensitivity scenarios, BEVs are significantly cheaper on a TCO basis than petrol ICE cars
+for second and third owners, who in general are more price sensitive than first owners. In order
+to ensure supply of BEVs for the second-hand market, new car buyers must also choose to buy
+BEVs. Whilst the residual value is expected to improve as the market for new and used BEVs
+becomes more established (i.e., the baseline scenario of this report), trends in residual value
+should be closely monitored and assisted by policy if required to ensure the long-term desirability
+of BEVs. Policies which improve the residual value through greater convenience and cost of using
+a BEV for all (e.g. more affordable public charging, preferential tax rates) are likely to provide a
+more lasting improvements to the TCO than a one-off subsidy for new car buyers.
+
+Access to low-cost charging is an equally significant aspect of BEV affordability. When consumers
+do not have access to home and workplace charging – instead relying on the public network –
+only new medium BEVs reach price parity in 2032, later than in the baseline scenario, with small
+and large BEVs remaining more expensive than petrol ICE in 2040. For used cars, the results
+are similar, with little or no savings available to BEV owners compared to petrol ICE car owners.
+The high cost of public charging means that the charging costs of BEVs in this scenario are
+similar to the refuelling costs of petrol ICE cars per kilometre driven. Lack of low-cost charging
+access considerably reduces the value proposition of BEVs, meaning policy intervention may be
+required to address this gap.
+
+Policymakers should endeavour to take advantage of the TCO reduction that BEVs can offer,
+especially for used car buyers. A combination of measures to aid the residual value market for
+BEVs and ensure access to low-cost charging may be required to maximise the TCO advantage
+of BEVs over petrol ICE cars. This would in turn help to increase EV uptake and reduce road
+transport emissions, which is a key aspect of reaching Net Zero by 2050 in the EU. Policy
+interventions could include incentives for the installation of private chargers, measures to
+accelerate the deployment of EVs in large private and public fleets, residual value guarantees or
+targeted subsidies for new or used BEV, as well as increased competition and better monitoring
+of price structures at public charging stations. Similarly, concerns around BEV range and safety
+
+
+                CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                  Page 41
+could be mitigated by governments through positive messaging of the financial, health, and
+environmental benefits of BEVs to counter anti-BEV stories currently in some sections of the
+media.
+
+The current costs of four pairs of BEV and petrol ICE equivalent cars were identified for analysis
+(Fiat 500 BEV and petrol ICE, Peugeot 208 BEV and petrol ICE, VW ID3 and Golf, Tesla Model Y,
+and Skoda Kodiaq). For three of the four pairs (Fiat 500, Peugeot 208, VW ID.3/Golf), the TCO
+for the first buyer was cheaper for petrol ICE, despite the lower cost of electricity for the BEV
+compared to petrol for the ICE. This is due to the higher cost of leasing a BEV, driven by higher
+purchase prices and lower residual values assumed by leasing companies, meaning a larger
+proportion of car value is paid off by the consumer. In contrast, the Tesla Model Y is cheaper
+than the Skoda Kodiaq, as Tesla offers a favourable deal on leasing this car. Notably, BEVs are
+cheaper for second owners for all model pairs, and the BEV VW ID3 and Tesla Model Y are
+cheaper than their equivalents for third owners; however, the BEV Fiat 500 and Peugeot 208 are
+marginally (6%) more expensive than their petrol ICE counterparts. Costs vary significantly
+between European countries and manufacturers; therefore, less expensive leases may be
+possible in countries other European countries or from different manufacturers. Further, cheaper
+BEV-only models are coming to the market in 2025, which will likely bring down purchase and
+financing costs in the near future and will mean consumers are less reliant on more expensive
+BEV versions of ICE-dominant models such as the BEV Fiat 500 and Peugeot 208.
+The potential impact of V2G on TCO is difficult to predict, with estimates ranging between an
+additional cost of €1,430/year and a TCO saving of €620/year based on regulations and revenue
+streams, using the UK as a case study. Maximum revenue is difficult to achieve due to its
+sensitivity to location: the distribution of revenue opportunity varies greatly by area and even
+postcode. However, the additional costs of V2G equipment can be significant, and may outweigh
+the benefits for some consumers. As such the impact of V2G on an average driver is likely to be
+minimal.
+Overall, whilst the TCO of BEVs has been improving compared to ICE vehicles, the current lower
+residual values of BEVs and the higher cost of public charging compared to home charging could
+undermine the uptake of BEVs and the cost savings seen for first, second and third owners.
+Monitoring of these aspects and action where required by policy makers will be essential to
+further improve BEV uptake, unlocking cost savings for car owners, reducing urban air pollution
+and enabling the EU to meet their emissions reduction targets
+
+
+
+
+                CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                Page 42
+7.            APPENDIX A: INPUTS UPDATED SINCE 2021
+The TCO calculations performed in this report are based on an “EU average” country, meaning
+that the inputs used are (where possible) an EU average rather than from a specific country.
+Given the variability of some TCO factors between countries, these costs have not been included
+in this TCO study. The TCO factors not included in this report are:
+
+•     Vehicle taxes (annual taxes or purchase taxes)
+•     Insurance costs
+•     Maintenance costs
+The cost factors included in this report are described below, including the sources used.
+
+7.1           FUEL COSTS
+Historical fuel prices were taken from the EU Oil Bulletin 53 fuel prices from 2010 to 2022 and
+compared to historical UK fuel prices. The fuel prices between these two were found to be highly
+correlated. As the EU Oil Bulletin does not have future projections of fuel prices, the price
+projections provided in the UK’s Green Book54 supplementary material was used to project the
+current EU fuel prices forwards to 2040. E-fuel prices are for e-diesel made as a byproduct of e-
+kerosene production, which uses an optimistic price for low-carbon hydrogen (€4.2/kg in 2030,
+reducing to €3.5/kg by 2040), and does not include distribution costs (only production).55 ERM's
+own modelling shows that this can vary considerably depending on electricity price and
+technology development assumptions and may be higher than the values used in this report.
+    2024EUR/l
+    3.5
+                                                                                                       Petrol
+    3.0                                                                                                Diesel
+                                                                                                       E-fuel
+    2.5
+
+    2.0
+
+    1.5
+
+    1.0
+
+    0.5
+
+    0.0
+       2024      2026        2028         2030          2032         2034         2036   2038   2040
+
+
+FIGURE 7-1 – FUEL PRICE PROJECTIONS (INCLUDING FUEL DUTY AND VAT) FOR PETROL,
+DIESEL, AND E-FUELS FROM 2024 TO 2040
+
+
+
+
+53 https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en
+54 https://www.gov.uk/government/publications/valuation-of-energy-use-and-greenhouse-gas-emissions-
+
+for-appraisal
+55 https://theicct.org/wp-content/uploads/2022/02/fuels-us-europe-current-future-cost-ekerosene-us-
+
+europe-mar22.pdf
+
+
+                   CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                   PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                         Page 43
+7.2         ELECTRICITY COSTS
+As with fuel prices, historic electricity prices were compared from the EU database Eurostat and
+the UK’s Green Book and were determined to be correlated.56 The Green Book projections were
+used to forecast EU electricity prices to 2040.
+The weighted average cost of charging was estimated based on the distribution of charging
+patterns between home off-peak, home, public slow and public rapid charging. The distribution
+of charging methods was taken as an average of the consumers identified in an ICCT report in
+France,57 whilst the cost of each charging method was taken as a multiplier on top of domestic
+electricity price based on current charging costs. This average taking means that the electricity
+price used is significantly higher than the cheapest source of electricity (overnight charging,
+€0.1-0.15/kWh), meaning that consumers who can maximise their charging overnight will see a
+much better TCO than the ones presented in this report.
+
+ Scenario                  Home overnight              Home/work day           Public slow                Public rapid
+
+ Baseline (Section
+                                    38%                       28%                         15%                      19%
+ 2)
+
+ Public charging
+                                     0%                        0%                         45%                      55%
+ only (Section 3.2)
+
+
+
+2024EUR /kWh
+  0.8
+                                                                                                  Public charging only sensitivity
+  0.7
+                                                                                                  Average charging cost
+  0.6                                                                                             (baseline scenario)
+                                                                                                  Domestic electricity
+  0.5
+
+  0.4
+
+  0.3
+
+  0.2
+
+  0.1
+
+  0.0
+     2024      2026        2028       2030      2032       2034        2036        2038    2040
+
+
+
+FIGURE 7-2 – ELECTRICITY COST PROJECTIONS (INCLUDING VAT) FOR DOMESTIC
+ELECTRICITY, AVERAGE CHARGING COST, AND THE PUBLIC CHARGING-ONLY COST
+
+The cost of a home charger has also been included in the TCO modelling. This has been included
+as an annual cost of €100/year (total cost ~ €1,000 / ~ 10 years of use), as a single charger is
+likely to be used across multiple vehicle ownership periods. This price was then multiplied by the
+proportion of consumers who use home charging, resulting in an average annual cost of €64/year
+for BEV owners and €67/year for PHEV owners.57 This value has been added to all BEV and PHEV
+TCOs in this report, bar in the public charging sensitivity (as this is based on a consumer without
+access to home charging).
+
+
+
+
+56 https://doi.org/10.2908/NRG_PC_204
+57 https://theicct.org/wp-content/uploads/2021/12/france-evs-infrastructure-transition-nov21_0.pdf
+
+
+
+
+                      CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                      PROJECT NO: 0742844        DATE: 25th Oct 2024     VERSION: 3                                         Page 44
+7.3      VEHICLE COST, PERFORMANCE AND USAGE
+ERM’s cost & performance model was updated in 2023-24 using the latest sales data and
+technology trends. Please refer to the previous report for the full methodology.58 For this
+analysis, first, second, and third owners are assumed to run a car for 4, 5, and 7 years
+respectively. First owners are assumed to cover the most distance per year (15,000km), with
+second and third owners covering less (12,000km and 10,000km, respectively).
+
+7.4      RESIDUAL VALUE
+In this report, depreciation curves were created based on ERM’s trend analysis of real-world
+market data that Transport and Environment (T&E) procured as an update for “An analysis of
+used car prices in Europe” (2023).59 Data for 2-, 3-, and 4-year-old vehicles driving 10, 15, and
+20 thousand km per year was analysed. This was extrapolated to cover the full vehicle lifetime
+(approximately 16 years). For petrol and diesel vehicles, depreciation rates are extrapolated
+linearly until the residual value reaches 10% of the original purchase cost, at which point each
+subsequent year’s RV is set to 95% of the previous year. BEV and PHEV depreciation rates are
+significantly steeper, which if extrapolated linearly would reach 10% residual value (RV) in 8
+years (BEVs) or 11 years (PHEVs) (based on 15,000 km/year), contrary to what is seen currently
+in the used car market. In order to develop a more reasonable residual value curve for these
+powertrains, the residual value of BEVs and PHEVs follows an exponential curve once older than
+4 years, so the residual value equals 10% at the same point that Diesel ICE vehicles reach 10%
+(approximately 16 years-old).
+
+                  Residual value curves based on current second -hand
+                                       value data
+       100%
+                                                                                         Petrol ICE
+       90%
+                                                                                         Diesel ICE
+       80%                                                                               BEV
+       70%                                                                               Petrol PHEV
+
+       60%
+% RV
+
+
+
+
+       50%
+
+       40%
+
+       30%
+
+       20%
+
+       10%
+
+        0%                                                                             Vehicle Age
+              1   2   3   4   5   6     7   8     9 10 11 12 13 14 15 16 17 18 19 20
+
+
+FIGURE 7-3 – RESIDUAL VALUE CURVES BASED ON DATA ON THE SECOND MARKET IN 2024
+
+
+
+
+58https://www.erm.com/contentassets/553cd40a6def42b196e32e4d70e149a1/electric_cars_calculating_t
+
+he_total_cost_of_ownership_for_consumers.pdf
+59 https://www.transportenvironment.org/articles/leasing-companies-overcharging-drivers-for-electric-
+
+cars-new-study
+
+
+                  CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                  PROJECT NO: 0742844           DATE: 25th Oct 2024   VERSION: 3                      Page 45
+For the baseline scenario, the residual value curves for BEV and petrol PHEV are assumed to
+improve gradually from 2025 to 2030, so that from 2030 onwards, they follow the Diesel ICE
+residual value curve instead. This is based on the year in which the vehicle is sold to the new
+consumer, rather than the year it is bought by the current owner or the year the vehicle was
+registered. This means that a vehicle registered in 2021 will see a residual value close to the
+electric curve above when sold to the second owner in 2025 (47% of list price after 4 years
+rather than 42%) but will have a residual value equal to the value on the Diesel ICE curve when
+sold to the third owner in 2030 (37% of initial list price after 9 years rather than 20%).
+
+The effect on the resale value is shown below, with the price of a second-hand vehicle increasing
+slightly over this time. In this graph, each line represents the handover price in that year. E.g.,
+in 2030, the first-to-second owner is the resale value of a vehicle first registered in 2026 (as the
+vehicle is 4 years old in 2030).
+
+ Vehicle resale price by age of vehicle, by the year in which the vehicle is sold onwards.
+ Vehicle price (€k)
+   €30k
+
+   €25k
+
+   €20k
+
+
+   €15k
+
+   €10k
+
+
+    €5k
+
+    €0k                                                                                                Year of sale
+      2024            2026        2028        2030         2032         2034         2036   2038    2040
+
+              New BEV                                         Second-to-third owner (9 years old)
+              First -to-second owner (4 years old)            End of third owner (16 years old)
+
+
+FIGURE 7-4 – VEHCILE RESALE PRICE OF A MEDIUM BEV OF DIFFERENT AGES IN THE
+BASELINE SCENARIO, BY THE YEAR IN WHICH THE VEHICLE IS SOLD ONWARDS
+
+As shown by comparing the baseline scenario (Section 2.1) to the sensitivity where the residual
+values do not change over time (Section 3.1), this change reduces the cost of owning a BEV for
+new car buyers (as the resale value is higher), whilst the cost of ownership for second- and
+third-hand buyers increases slightly (as the purchase price for these consumers increases).
+However, BEVs still remain as the most cost-effective powertrain for second- and third-hand
+buyers, even when the residual value curve improves for first-hand buyers.
+
+
+
+
+                      CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                      PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                             Page 46
+8.    APPENDIX B: ADDITIONAL OUTPUT GRAPHS
+8.1   SMALL CAR TCO
+
+8.1.1 BASELINE SCENARIO
+
+
+
+
+FIGURE 8-1 – FIRST OWNER, SMALL CAR, BASELINE
+
+
+
+
+FIGURE 8-2 - SECOND OWNER, SMALL CAR, BASELINE
+
+
+
+
+             CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+             PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3   Page 47
+FIGURE 8-3 - THIRD OWNER, SMALL CAR, BASELINE
+
+
+
+8.1.2 LOW RESIDUAL VALUE SCENARIO
+
+
+
+
+FIGURE 8-4 - SMALL CAR, FIRST OWNER, LOWER RESIDUAL VALUE SCENARIO
+
+
+
+
+             CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+             PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3   Page 48
+FIGURE 8-5 - SMALL CAR, SECOND OWNER, LOWER RESIDUAL VALUE SCENARIO
+
+
+
+
+FIGURE 8-6 - SMALL CAR, THIRD OWNER, LOWER RESIDUAL VALUE
+
+
+
+
+            CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+            PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3   Page 49
+8.1.3 PUBLIC CHARGING SCENARIO
+
+
+
+
+FIGURE 8-7 - FIRST OWNER, SMALL CAR, PUBLIC CHARGING SCENARIO
+
+
+
+
+FIGURE 8-8 - SECOND OWNER, SMALL CAR, PUBLIC CHARGING SCENARIO
+
+
+
+
+             CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+             PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3   Page 50
+FIGURE 8-9 - THIRD OWNER, SMALL CAR, PUBLIC CHARGING SCENARIO
+
+
+
+
+8.2   LARGE CAR TCO
+
+8.2.1 BASELINE SCENARIO
+
+
+
+
+FIGURE 8-10 - LARGE CAR, FIRST OWNER, BASELINE
+
+
+
+
+             CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+             PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3   Page 51
+FIGURE 8-11 - LARGE CAR, SECOND OWNER, BASELINE
+
+
+
+
+FIGURE 8-12 - LARGE CAR, THIRD OWNER, BASELINE
+
+
+
+
+             CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+             PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3   Page 52
+8.2.2 LOW RESIDUAL VALUE SCENARIO
+
+
+
+
+FIGURE 8-13 - LARGE CAR, FIRST OWNER, RESIDUAL VALUE SCENARIO
+
+
+
+
+FIGURE 8-14 - LARGE CAR, SECOND OWNER, LOWER RESIDUAL VALUE SCENARIO
+
+
+
+
+             CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+             PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3   Page 53
+FIGURE 8-15 - LARGE CAR, THIRD OWNER, LOWER RESIDUAL VALUE SCENARIO
+
+
+
+8.2.3 PUBLIC CHARGING SCENARIO
+
+
+
+
+FIGURE 8-16 - LARGE CAR, FIRST OWNER, PUBLIC CHARGING SCENARIO
+
+
+
+
+             CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+             PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3   Page 54
+FIGURE 8-17 - LARGE CAR, SECOND OWNER, PUBLIC CHARGING SCENARIO
+
+
+
+
+FIGURE 8-18 - LARGE CAR, THIRD OWNER, PUBLIC CHARGING SCENARIO
+
+
+
+
+            CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+            PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3   Page 55
+8.3     PRICE PARITY YEAR ANALYSIS
+Results of this study are shown below in Table 8-1:
+
+TABLE 8-1 - YEAR IN WHICH PRICE PARITY IS REACHED BETWEEN BEV AND PETROL ICE
+CARS FOR EACH OWNER AND SEGMENT, RESULTS OF THIS STUDY
+
+            Owner                  Small                     Medium            Large
+
+
+            First                 2029                      2026               2032
+
+
+            Second                Already cheaper           Already cheaper    Already cheaper
+
+
+            Third                 Already cheaper           Already cheaper    Already cheaper
+
+
+
+
+Results of the 202160 study are shown below in Table 8-2:
+
+TABLE 8-2 - YEAR IN WHICH PRICE PARITY IS REACHED BETWEEN BEV AND PETROL ICE
+CARS FOR EACH OWNER AND SEGMENT, RESULTS OF PREVIOUS STUDY
+
+            Owner                  Small                     Medium            Large
+
+
+            First                 2025                      2023               2026
+
+
+            Second                Already cheaper           Already cheaper    2027
+
+
+            Third                 Already cheaper           Already cheaper    2024
+
+
+
+
+60 https://www.erm.com/contentassets/553cd40a6def42b196e32e4d70e149a1/electric_cars_calculating_
+
+the_total_cost_of_ownership_for_consumers.pdf
+
+
+                CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                     Page 56
+9.       APPENDIX C: FURTHER V2G DISCUSSION
+9.1      V2G OVERVIEW
+There are several ways for EVs to be charged or discharged to support different functions, such
+as the grid or buildings. Vehicle-Grid Integration (VGI) is the general term for whenever EV
+charging is turned into a flexible load, using the battery storage to provide services to the grid
+or end user. This includes V1G and Vehicle-to-Everything (V2X) applications. V2X is the
+overarching term for services provided using bidirectional charging, where the X stands for any
+application. A number of these applications are illustrated below in Figure 9-1:
+
+
+
+
+FIGURE 9-1 - ILLUSTRATION OF DIFFERENT VEHICLE-GRID INTEGRATION MECHANISMS
+
+9.2      BATTERY DEGRADATION FROM V2G
+The battery degradation cost analysis seen in section 5.2.4 is based on previous work carried
+out by ERM for ClimateXChange61 to understand the opportunities of V2G to accelerate transport
+decarbonisation in Scotland, published in 2024. This includes the modelling of the cost of battery
+degradation due to V2G participation, which can be modelled as an annual cost.
+
+There are two forms of battery degradation:
+
+     1. Cycling degradation: battery capacity gradually decreases with each charge/discharge
+        cycle, signalling that the greater number of cycles undergone by a battery, the greater
+        its degradation.
+
+
+
+
+61 https://www.climatexchange.org.uk/projects/opportunities-to-use-vehicle-to-grid-for-transport-
+
+decarbonisation/
+
+
+                   CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                   PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                     Page 57
+   2. Calendar degradation: battery capacity reduces with time, especially when the
+       battery is left at the limits of its state of charge (SOC) (i.e., 0% or 100% SOC).61
+The high-cost scenario in Figure 9-2 includes both cycle and calendar degradation and represents
+a loss of 0.04% of a battery’s state of health per discharge cycle, whereas the lower bound
+accounts for cycle degradation alone and represents a degradation rate of 0.005% loss of state
+of health per cycle. Assuming two daily cycles of a 50kWh battery (as seen in Peugeot e-208)
+leads to approximately €1,200 of annual degradation costs in 2025 at the upper limit, and €175
+at the lower limit. This can be seen in Figure 5-4. These costs are expected to reduce for future
+BEV models, as batteries and battery management technology improve.
+
+
+
+
+FIGURE 9-2 - THE COST OF DEGRADATION DUE TO BATTERY CYCLING61
+
+
+
+
+                CLIENT: Bureau Européen des Unions de Consommateurs (BEUC)
+                PROJECT NO: 0742844        DATE: 25th Oct 2024    VERSION: 3                  Page 58
+ERM HAS OVER 160 OFFICES ACROSS THE
+FOLLOWING COUNTRIES AND TERRITORIES
+WORLDWIDE
+Argentina           The Netherlands   ERM London
+                                      Exchequer court, 33 St Mary
+Australia           New Zealand
+                                      Axe
+Belgium             Peru              London
+Brazil              Poland            EC3A 8AA
+                                      (+44) 02032 065200
+Canada              Portugal
+
+China               Romania
+                                      www.erm.com
+Colombia            Senegal
+
+France              Singapore
+
+Germany             South Africa
+
+Ghana               South Korea
+
+Guyana              Spain
+
+Hong Kong           Switzerland
+
+India               Taiwan
+
+Indonesia           Tanzania
+
+Ireland             Thailand
+
+Italy               UAE
+
+Japan               UK
+
+Kazakhstan          US
+
+Kenya               Vietnam
+
+Malaysia
+
+Mexico
+
+Mozambique
+

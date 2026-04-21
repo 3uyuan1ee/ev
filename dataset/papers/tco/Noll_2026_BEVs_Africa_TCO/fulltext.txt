@@ -1,0 +1,1259 @@
+nature energy
+
+Article                                                                                                https://doi.org/10.1038/s41560-025-01955-x
+
+
+Battery-electric passenger vehicles will be
+cost-effective across Africa well before 2040
+
+Received: 26 March 2025                             Bessie Noll 1 , Darius Graff1,2, Tobias S. Schmidt 1,3, Anthony Patt 2,3,
+                                                    Christian Bauer 4, Churchill Agutu1,5, Paul Kyoma Asiimwe1,6,
+Accepted: 8 December 2025
+                                                    Ogheneruona E. Diemuodeke 7, Stephan Krygsman 8, Inga Nienkerke 2,
+Published online: 13 January 2026                   Tim Tröndle 2 & Christian Moretti 2,4
+
+    Check for updates
+                                                    While decarbonizing road transport is crucial for global climate goals,
+                                                    there is limited quantitative evidence on the economic viability and
+                                                    life-cycle emissions of low-carbon passenger vehicles in Africa, where
+                                                    motorization is rising. Here we study the economic cost and life-cycle
+                                                    greenhouse gas emissions of low-carbon passenger transport in Africa
+                                                    across six segments in 52 African countries through 2040. Using Monte
+                                                    Carlo and optimization models, we compare the total cost of ownership
+                                                    and life-cycle greenhouse gas emissions of battery electric vehicles
+                                                    powered by solar off-grid systems and synthetic fuelled vehicles to
+                                                    that of fossil-fuelled ones, neglecting policy-induced cost distortions.
+                                                    Whereas past reports suggested fossil fuel vehicles would dominate in
+                                                    Africa by mid-century, our results show that battery electric vehicles with
+                                                    solar off-grid chargers will have lower costs and negative greenhouse
+                                                    gas abatement costs well before 2040 in most countries and segments.
+                                                    Financing is identified as the key action point for governments and global
+                                                    financial institutions to accelerate Africa’s transition to battery electric
+                                                    vehicles with solar off-grid charging offering a cost-effective, viable
+                                                    solution to electricity infrastructure challenges.
+
+
+Decarbonizing road passenger transport is crucial for reducing green-              However, much of the momentum around BEV deployment and
+house gas (GHG) emissions globally1. Passenger vehicles are a major           low-carbon transport policy strategy more broadly has thus far been
+contributor to road transport emissions2. Advances in battery technol-        concentrated in upper middle- or high-income economies such as
+ogy, manufacturing and supportive policies are driving battery electric       China, the European Union and the USA. In contrast, African countries
+vehicle (BEV) adoption, while synthetic fuels are also being explored as      have often been overlooked or simplified in global energy and transport
+a complementary low-carbon option3,4, notably by major automakers             models. Several influential studies assume continued internal com-
+such as Volkswagen5. Policies in advanced markets such as Europe and          bustion engine (ICE) dominance in Africa through mid-century, often
+California aim to fully electrify new car sales by the 2030s, with some       disregarding local conditions for a transition to electric mobility4,8,9.
+exceptions for carbon-neutral synthetic fuel vehicles6,7.                     Where passenger transport electrification in Africa has been examined,
+
+
+Energy and Technology Policy Group, Swiss Federal Institute of Technology, ETH Zurich, Zurich, Switzerland. 2Institute for Environmental Decisions,
+1
+
+
+Swiss Federal Institute of Technology, ETH Zurich, Zurich, Switzerland. 3Einstein School of Public Policy, Swiss Federal Institute of Technology, ETH
+Zurich, Zurich, Switzerland. 4Laboratory for Energy Systems Analysis, PSI Centers for Nuclear Engineering and Sciences and Energy and Environmental
+Sciences, Paul Scherrer Institute, Villigen, Switzerland. 5Collegium Helveticum, Zurich, Switzerland. 6Makerere University, Kampala, Uganda. 7Energy and
+Thermofluids Research Group, Department of Mechanical Engineering, University of Port Harcourt, Choba, Nigeria. 8Department of Logistics, Economic
+and Management Sciences, Faculty of Economic and Management Sciences, Stellenbosch University, Stellenbosch, South Africa.
+   e-mail: bessie.noll@gess.ethz.ch; christian.moretti@psi.ch
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                 284
+Article                                                                                               https://doi.org/10.1038/s41560-025-01955-x
+
+research is typically limited to case studies of single countries or appli-   urban-centric, though we account for potential rural and off-road usage
+cation segments8–12. Furthermore, existing techno-economic pro-               by incorporating high probabilistic uncertainty in vehicle energy con-
+jection models rarely reflect context-specific factors, such as high          sumption and in annual kilometres travelled, which are differentiated
+financing costs or limited grid access, when calibrating vehicle owner-       by application segment (Methods). Notably, we exclude commercial
+ship or technology competitiveness parameters for Africa13.                   passenger fleets, such as taxis, due to their distinct on-road usage pat-
+     For instance, many African countries face high up-front invest-          terns, commercially driven financing structures and differing purchase
+ment costs due to limited access to stable and affordable financing14,15,     decision rationales, though these are some of the earlier segments to
+disproportionately disadvantaging low-carbon technologies with sub-           electrify in the region as they profit most from lower BEV TCO22. The
+stantial up-front investment requirements. Despite this, regional dif-        model projects costs for three time horizons—2025, 2030 and 2040.
+ferences in financing costs, development objectives and uncertainties         Despite playing a prominent role in African vehicle markets, we evaluate
+in energy system trajectories are seldom accounted for in models13,16,17.     only new vehicles due to lack of reliable used vehicle data, particularly
+Similarly, projections frequently rely on grid-connected technologies         for BEVs but also for ICEs.
+for decarbonization, neglecting both power grid constraints and the                 Importantly, this TCO assessment excludes policy-induced costs
+potential of solar off-grid or hybrid mini-grid systems. These alterna-       such as taxes, import fees and subsidies aligning with an approach that
+tives are expected to play a pivotal role in electrifying current and         focuses on resource costs. It does not incorporate externalities related
+future settlements and residential areas in Africa14 and illustrate the       to road transport, typically included in social cost evaluations. In this
+limitations of overlooking Africa’s unique conditions and clean energy        sense, the results of our analysis provide a policy baseline, offering
+future. This can ultimately distort model projections and hinder the          a reference point against which the effects of future policies can be
+development of effective policy for transitioning to low-carbon pas-          assessed. Additionally, financing is assumed to follow third-party
+senger transport in the region. With vehicle demand projected to rise         ownership—that means, we take the financing cost faced by a leas-
+steeply across nearly all African countries by 205018, assessing the          ing company, financial institution or fleet operator, rather than by a
+continent’s road transport decarbonization potential is crucial for           private individual. This set-up simulates what would be expected in
+global net-zero goals.                                                        a well-working market that operates without policy distortions and
+     To address these shortcomings, our study investigates which              where vehicles are predominantly owned by third parties. For financ-
+technologies may suit specific segments and in which timeframes               ing cost assumptions, we follow the approach from Agutu et al.14, who
+though a continent-wide analysis combining a probabilistic total cost         provide country-specific weighted average cost of capital (WACC)
+of ownership (TCO) analysis with a prospective environmental life-cycle       estimates for energy investments in sub-Saharan Africa that account
+assessment (LCA). Unlike previous studies, our model incorporates             for key risk premiums. We adapt their approach to reflect the com-
+country-specific financing costs and the potential of solar off-grid          parable risk profile of third-party owned BEVs with slight parameter
+(SOG) charging systems to improve cost projections across a wide              adjustments (Methods). Beyond TCO, we also quantify life-cycle GHG
+range of countries and vehicle segments in the African context. Our           emissions of all technologies applying the prospective LCA framework
+results show that BEVs charged by a solar photovoltaic off-grid (SOG)         premise23, to account for future technological and market develop-
+system meeting their daily energy demands will outperform ICE vehi-           ments under the Shared Socioeconomic Pathway 2 (SSP2) scenario
+cles for passenger road transport in the African continent, in some           from the integrated assessment model REMIND24 extrapolated till the
+cases already by 2030. In short, the cost of reducing emissions from          respective year (Methods). On the basis of lifetime TCO and life-cycle
+passenger road vehicles per km becomes not only economically viable           GHG emissions, we quantify life-cycle GHG abatement costs.
+but also negative. For accelerated adoption, financing costs remain the             We begin by visualizing results across technologies, for the rep-
+primary barrier to the economic competitiveness of BEVs in the region.        resentative small four-wheeler segment averaged across Africa, then
+We therefore discuss how they may be alleviated by local policymakers         expand the analysis to explore cross-country and cross-application
+and development financial institutions.                                       variations. Figure 1 breaks down the TCO and life-cycle GHG emissions
+                                                                              for the three vehicle technologies in the small four-wheeler segment
+Total cost of ownership across technologies                                   for the year 2030, additionally showing TCO bars for 2025 and 2040 in
+To evaluate the viability of low-carbon passenger road vehicles in Africa,    Fig. 1a–c. To first compare BEV-SOG with ICE-Fos, we see that BEV-SOG
+we conduct a probabilistic TCO analysis using a Monte Carlo method.           vehicles remain uncompetitive in 2025, but by 2030, our model projects
+The analysis compares three competing technologies: ICEs fuelled by           economic competitiveness on a TCO basis with ICE-Fos. Looking ahead
+fossil fuels (ICE-Fos), ICEs fuelled by synthetic fuels (ICE-Syn) and BEVs    to 2040, projected advancements in battery technology and electric
+paired with a standalone SOG system (BEV-SOG). The BEV-SOG system             vehicle manufacturing, coupled with reduced financing costs (Meth-
+concept overcomes grid infrastructure limitations in many African             ods), further improve the economics of BEV-SOG, thus dropping the
+countries, where unreliable electricity supply is a common challenge.         TCO below US$24 per 100 km (Fig. 1b). As shown in Fig. 1e, financing
+We focus on BEV-SOG systems due to their scalability, transparent and         costs are the most critical factor for BEV competitiveness, with total
+modular costs, minimal land requirements, lower life-cycle emissions          financing expenditures surpassing 100% of the vehicle’s capital cost.
+in fossil-heavy grids and growing use in off-grid energy and transport        Furthermore, on a life-cycle GHG emissions basis, BEV-SOG substan-
+applications across Africa19,20. We assume charging through a solar           tially outperform ICE-Fos vehicles. By contrast, we project that ICE-Syn
+PV off-grid system sized to meet the vehicle’s daily energy demand,           will remain rather uncompetitive compared to BEV-SOG on both a TCO
+depending on the application segment (Methods). The SOG set-up                and GHG emissions basis, even in our idealized extreme case where
+assumes a solar PV panel (DC) connected to a stationary battery               synthetic fuel is produced as cheaply and cleanly as possible.
+(DC), with both components feeding into an inverter. In contrast to
+BEV-SOG, ICE-Syn vehicles may leverage existing fuelling infrastructure.      BEV cost competitiveness across dimensions
+Hydrogen-powered passenger vehicles are excluded from the analysis            Zooming out, our model results reveal that the competitiveness of
+due to their limited uptake in other countries21.                             BEV-SOG and ICE-Syn technologies against ICE-Fos varies greatly across
+     Our analysis focuses on six distinct passenger vehicle application       application segments, countries and timeframes, where several key pat-
+segments most relevant for the African landscape: two-wheelers (small         terns emerge. Here we focus on the comparison between BEV-SOG and
+and large), four-wheelers (small, medium and large) and a minibus             ICE-Fos, as ICE-Syn has already been shown to be uncompetitive both
+segment representing informally operated ‘public’ transport vehi-             economically and environmentally. Over time, BEV-SOG is projected to
+cles. Driving patterns modelled within each segment are primarily             achieve cost competitiveness across all passenger vehicle segments by
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                285
+Article                                                                                                                                                                                                                                                                                                     https://doi.org/10.1038/s41560-025-01955-x
+
+
+                                                                                      ICE – fossil fuel                                                                                                 BEV – solar off-grid                                                                                                              ICE – synthetic fuel
+
+                                        a                                                                                                                          b                                                                                                                                c
+                                        50                                                                                                                         50                                                                                                                               50
+
+
+                                        40                                                                                                                         40                                                                                                                               40
+
+
+                                        30                                                                                                                         30                                                                                                                               30
+
+                                                                                                                                                                                                             43.6
+                                        20                                                                                                                         20                                                                                                                               20
+                                                                                                                                                                                                                                                  29.2                                                                                                                             31.4
+                                                                                  26.3                              26.6                                   26.6                                                                                                                                                                                                                                                              27.3
+                                                                                                                                                                                                                                                                                           23.9
+                                        10                                                                                                                         10                                                                                                                               10
+             TCO (US$100 per km)
+
+
+
+
+                                        0                                                                                                                          0                                                                                                                                    0
+                                               TCO 2025                                                TCO 2030              TCO 2040                                     TCO 2025                                               TCO 2030                     TCO 2040                                                                                                TCO 2030                  TCO 2040
+
+                                        d                                                                                                                          e                                                                                                                                f
+                                        50                                                                                                                         50                                                                                                                               50
+
+
+                                        40                                                                                                                         40                                                                                                                               40
+                                                                                                                                                                                                                                  Electricity
+                                                                                                                                                                                                                                                                                                                                                                                               1.3
+                                        30                                                                                                                         30                                        –0.30                                                                                  30                                                                             2.5
+                                                                                   –0.3                                                                                                                                                                                                                                                           –0.3                       6.5
+                                                                                                                                                                                                                                             0.01 0.49 1.84
+                                                                                                                                       1.3                                                                                        1.51
+                                        20                                                                    1.6       2.5                                        20                                        14.34
+                                                                                                                                                                                                                                                                                                    20
+                                                                                  11.5                                                                                                                                                                               29.21                                                                       11.5                                                       31.4
+                                                                                                                                        26.6
+                                        10                                                                                                                         10                                                                                                                               10
+                                                              9.9                                                                                                                       11.32                                                                                                                                9.9
+                                         0                                                                                                                          0                                                                                                                               0
+                                                                                                                                                                        Vehicle CAPEX
+
+                                                                                                                                                                                         Vehicle CAPEX CoC
+
+                                                                                                                                                                                                             Vehicle scrappage
+
+                                                                                                                                                                                                                                 SOG CAPEX
+
+                                                                                                                                                                                                                                             SOG O&M
+
+                                                                                                                                                                                                                                                       Vehicle O&M
+
+                                                                                                                                                                                                                                                                     Vehicle insurance
+
+                                                                                                                                                                                                                                                                                         TCO 2030
+
+
+
+
+                                                                                                                                                                                                                                                                                                             Vehicle CAPEX
+
+                                                                                                                                                                                                                                                                                                                             Vehicle CAPEX CoC
+
+                                                                                                                                                                                                                                                                                                                                                  Vehicle scrappage
+
+                                                                                                                                                                                                                                                                                                                                                                      Fuel
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                         Vehicle O&M
+
+                                                                                                                                                                                                                                                                                                                                                                                                       Vehicle insurance
+
+                                                                                                                                                                                                                                                                                                                                                                                                                           TCO 2030
+                                             Vehicle CAPEX
+
+                                                              Vehicle CAPEX CoC
+
+                                                                                   Vehicle scrappage
+
+                                                                                                       Fuel
+
+
+
+                                                                                                                      Vehicle O&M
+
+                                                                                                                                    Vehicle insurance
+
+                                                                                                                                                        TCO 2030
+
+
+
+
+                                        g                                                                                                                          h                                                                                                                                i
+                                        25                                                                                                                         25                                                                                                                               25
+             LCA (kgCO2eq per 100 km)
+
+
+
+
+                                        20                                                                                                                         20                                                                                                                               20
+
+
+                                        15                                                                                                                         15                                                                                                                               15
+                                                                                                                    18.4
+                                                                                                                                                           21.9
+                                        10                                                                                                                         10                                                                                                                               10
+
+
+                                         5                                                                                                                          5                                                                                                                                   5                                                                           4.3
+                                                                                                                                                                                                                                                   0.3                                                                                                                                                                        7.7
+                                                                                  3.5                                                                                                                        4.5                                                                            4.8
+                                                                                                                                                                                                                                                                                                                                                 3.5
+                                        0                                                                                                                           0                                                                                                                               0
+                                              Vehicle                                                   Vehicle Total life-cycle                                         Vehicle                                                  Vehicle Total life-cycle                                                    Vehicle                                                  Vehicle Total life-cycle
+                                             production                                                operation emissions                                              production                                               operation emissions                                                         production                                               operation emissions
+                                                2030                                                     2030        2030                                                  2030                                                    2030        2030                                                             2030                                                    2030        2030
+
+                                                             (Panel e): Portion of vehicle CAPEX CoC attributed to BEV small cap premium (~5%)
+                                                             (Panel h): Portion of vehicle production attributed to vehicle battery production only (~22%)
+
+Fig. 1 | Comparison of TCO and life-cycle GHG emissions for three vehicle                                                                                                                                                           comparison, 225,000 lifetime kilometres are assumed for all technologies
+technologies averaged across all African countries in the small four-wheeler                                                                                                                                                        within the small four-wheeler segment. Bars in a–f show the mean country-level
+segment. a–c, TCO bars for each technology in model years 2025, 2030                                                                                                                                                                values weighted by motorization rate across 52 countries; error bars indicate
+and 2040. ICE-Syn vehicles are not shown for the year 2025 as we assume a                                                                                                                                                           one standard deviation. Estimates are based on 10,000 Monte Carlo draws per
+functioning synthetic fuel market only by 2030. d–f, Waterfall charts for TCO                                                                                                                                                       country. Bars in g–i show mean emissions intensities (across two SSP2 scenarios);
+components for all technologies in 2030. g–i, Waterfall chart for life-cycle                                                                                                                                                        error bars mark high–low range. Values are uniform across countries; no Monte
+GHG emissions for all technologies in 2030 broken into vehicle production and                                                                                                                                                       Carlo applied. The ‘vehicle operation’ GHG emissions for ICE-Syn in i represents
+operation emissions. Operation emissions of fossil fuels include combustion and                                                                                                                                                     the life-cycle GHG emissions to produce and transport to the African continent
+fuel production and supply to the pump. Operation emissions of BEVs include                                                                                                                                                         the required amount of synthetic fuel for the assumed lifetime km travelled
+embedded emissions of the SOG system, which are minor. Combustion emissions                                                                                                                                                         (Methods). CAPEX, capital expenditure; CoC, cost of capital; O&M, operation and
+of synthetic fuels are assumed to be CO2 neutral. For the life-cycle GHG emissions                                                                                                                                                  maintenance costs.
+
+
+
+
+2040 (Fig. 2m–r), and in some segments already by 2030, driven largely                                                                                                                                                             BEV-SOG cost competitiveness already by 2030 while larger vehicles,
+by rapid reductions in vehicle capital expenditure (CAPEX). These                                                                                                                                                                  particularly small and medium four-wheelers, lag behind—mirroring EV
+findings challenge conservative estimates from prominent sources25,26,                                                                                                                                                             adoption trends in developed and emerging economies25. Country-level
+though our results are notably here modelled absent cost distortions                                                                                                                                                               disparities, largely driven by financing costs, further delay economic
+such as taxes or duties. Differences across application segments fur-                                                                                                                                                              feasibility, underscoring the importance of financial de-risking. Over-
+ther highlight the complexity of the transition. Two-wheelers achieve                                                                                                                                                              all, BEV-SOG competitiveness is uneven across model dimensions.
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                                                                                                                                                                                                                                                                                                   286
+Article                                                                                                    https://doi.org/10.1038/s41560-025-01955-x
+
+
+                                   2025                         2030                          2040
+                            a                            g                           m
+             Two-wheeler
+               (small)
+
+
+
+
+                            b                            h                           n
+             Two-wheeler
+               (large)                                                                                                20%
+                                                                                                                      18%
+                                                                                                                      16%
+                                                                                                                      14%
+                                                                                                                             TCOBEV–SOG < TCOICE–Fos
+                                                                                                                      12%
+                            c                            i                           o                                10%
+
+             Four-wheeler                                                                                             8%
+                (small)                                                                                               6%
+                                                                                                                      4%
+                                                                                                                      2%
+                                                                                                                      0%
+                                                                                                                      –2%
+                            d                            j                           p                                –4%
+                                                                                                                      –6%
+             Four-wheeler
+               (medium)                                                                                               –8%
+                                                                                                                      –10%
+                                                                                                                      –12%
+                                                                                                                             TCOBEV–SOG > TCOICE–Fos
+                                                                                                                      –14%
+                                                                                                                      –16%
+                            e                            k                           q                                –18%
+                                                                                                                      –20%
+             Four-wheeler
+                (large)                                                                                        Percent
+                                                                                                              difference
+
+
+
+
+                            f                            l                           r
+
+               Minibus
+
+
+
+
+Fig. 2 | Total cost of ownership comparison of BEV-SOG vs ICE-Fos for each       modelled. Supplementary Fig. 1 provides TCO comparison of ICE-Syn vs ICE-Fos
+modelled application segment and year. a–r, Colour scale unit for each country   vehicles. Maps generated using Cartopy (https://scitools.org.uk/cartopy) with
+shows the TCO percentage difference of BEV-SOG and ICE-Fos vehicles. Countries   data from Natural Earth (https://www.naturalearthdata.com/).
+displayed in dark grey (Djibouti, Seychelles and Western Sahara) are not
+
+
+
+
+The small four-wheeler segment warrants particular focus for accel-              segment. The optimized SOG capacity is based on a minimum reliability
+erated BEV uptake and may benefit from lessons learned in the                    of 90%, under niche financing cost assumptions, with an additional 40%
+faster-adopting two-wheeler market.                                              system oversizing to account for potential extremes in daily use cases
+                                                                                 (Methods). For a small four-wheeler assumed to drive ~50 km per day,
+Key drivers of technological competitiveness                                     the SOG costs ~US$2,700 (including installation costs). Despite these
+TCO parameters that influence the competitiveness of the two                     conservative assumptions, SOG electricity cost as a portion of the TCO
+low-carbon vehicle technologies (Fig. 1d–f) are the following. For               remains low, highlighting the affordability and potential of off-grid
+BEV-SOG, our model indicates that vehicle financing costs (Vehicle               charging for electric vehicles. Figure 3 demonstrates the results of
+CAPEX CoC) considerably impede the economics of BEV-SOG in Africa,               our SOG sizing optimization, depicting the pan-African levelized cost
+not only in the small four-wheeler segment, as shown in Fig. 1e, but also        of charging (LCOC) in high resolution. Comparing these results to the
+in the other four-wheeler and minibus segments. In some segments,                average grid-based electricity price for all countries in Africa in 2022,
+financing costs can surpass 150% of the vehicle’s capital expenditure            inclusive of all taxes and duties (Supplementary Fig. 5), SOG charging
+(CAPEX), driving up the TCO. In contrast, model results show that charg-         costs appear to be quite reasonable.
+ing costs for BEV-SOG are relatively minor, contributing less than 4% of              For ICE-Syn vehicles, fuel cost remains a critical limitation and
+the TCO for small four-wheelers in 2030, despite the modelling set-up,           uncertainty. Our model follows an extremely optimistic scenario,
+which assumes outright purchase of the SOG together with the vehicle.            assuming ultra-low-cost synthetic fuel production in the Chilean
+This outcome largely reflects the efficient sizing of the SOG, which             desert, where the renewable energy potential is high and financing
+our nonlinear optimization model specifically calibrates to supply at            conditions favourable. Nevertheless, ICE-Syn vehicles face higher TCO
+least 90% of the annual energy demanded of each vehicle application              when compared to both BEV-SOG and ICE-Fos vehicles. Doubling the
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                        287
+Article                                                                                                https://doi.org/10.1038/s41560-025-01955-x
+
+
+
+
+                                                                                                              US$ per kWh demanded
+
+
+
+                                                                                                                            0.22
+
+
+
+                                                                                                                            0.20
+
+
+
+                                                                                                                            0.18
+
+
+
+                                                                                                                            0.16
+
+
+
+                                                                                                                            0.14
+
+
+
+
+Fig. 3 | Undistorted levelized cost of charging a BEV with a SOG system in   Figs. 2 and 3 provide undistorted LCOC projection maps of the African continent
+Africa in 2025, excluding all taxes, fees, import duties and subsidies and   in 2030 and 2040. Map generated using Cartopy (https://scitools.org.uk/
+independent of the application segment. Countries displayed in white         cartopy) with data from Natural Earth (https://www.naturalearthdata.com/).
+(Djibouti, Seychelles and Western Sahara) are not modelled. Supplementary
+
+
+
+assumed production cost of synthetic fuel—a reasonable scenario—             in the literature27. Our model projects this trend already from today
+would increase the ICE-Syn TCO by US$10 per 100 km, reaching over            (Supplementary Figs. 24 and 25 for 2025 and 2040).
+US$40 per 100 km for the small four-wheeler segment in 2030. On                   By 2040, the analysis indicates that for all countries and all seg-
+the fuel cost side for ICE-Fos vehicles, as our analysis assumes a global    ments within the study, BEV-SOG exhibits a negative GHG abatement
+benchmark cost reflecting today’s functioning oil market but excludes        cost—within a margin of error (Supplementary Fig. 24). This result
+fuel taxes, we model a relatively low average gasoline price across          implies that in the absence of policy-induced distortions, the cost of
+the continent (Methods). Whereas some countries in Africa heavily            reducing emissions from passenger road vehicles per km travelled in
+subsidize fossil fuels at the pump (for example Sudan, Algeria), most        Africa not only becomes economically viable but also represents a net
+countries tax, meaning the distorted fuel prices are higher than here        saving. In Fig. 4, we present GHG abatement cost results for the small
+modelled (Supplementary Fig. 4), again giving ICE-Fos an economic            four-wheeler segment across all model years, emphasizing the critical
+advantage over BEV-SOG in our analysis.                                      role of financing costs. By 2040, negative GHG abatement costs are
+     A Sobol sensitivity analysis of TCO model parameters, illustrated       achieved in all countries, reflecting the economic and environmental
+in Supplementary Figs. 6–11, reveals that financing cost is among the        advantages of BEV-SOG. However, by 2030, only one country reaches
+most influential variables, accounting for nearly 10% of the first-order     this mark. Reducing financing costs, which are highly correlated with
+variance in the TCO difference between BEVs and ICEs in most applica-        abatement costs, could enable more countries in this segment to
+tion segments. Vehicle CAPEX, annual kilometres travelled (AKT) and          achieve negative abatement costs by 2030. For ICE-Syn vehicles, the
+vehicle operations and maintenance (O&M) are other key parameters            GHG abatement costs across all applications and countries remain
+impacting total output variance, closely followed by parameters related      positive even in 2040 (Supplementary Fig. 25).
+to the vehicle’s consumption of total energy, namely lifetime kilometres
+travelled, energy efficiency and energy cost. Given the uncertainty in       Overcoming financing costs for off-grid solar
+real-world usage patterns and the associated AKT input parameter, we         electric vehicles
+conduct an extended sensitivity analysis (Supplementary Figs. 12–23),        As previously shown, financing costs emerge as the most critical fac-
+running the model under extreme high and low AKT assumptions. The            tor influencing TCO competitiveness of BEV-SOG vehicles. To further
+results indicate that large AKT variation has only a modest impact on        explore this barrier in the small four-wheeler segment, we model the
+comparative vehicle cost and emissions outcomes as compared to               ‘maximum’ financing cost required in each country for BEV-SOG to
+base assumptions.                                                            achieve cost parity with ICE-Fos vehicles by 2030 (Fig. 5), using linear
+                                                                             bisection optimization (Methods). Our findings reveal large varia-
+Off-grid solar electric vehicles exhibit                                     tion across countries. In lower-risk states such as Botswana, Mauritius
+substantially low GHG emissions                                              and South Africa, the financing conditions today are already close
+From a life-cycle GHG emissions perspective (Fig. 1g–i), BEV-SOG deci-       to required levels for BEV-SOG cost parity. Conversely, in higher-risk
+sively outperforms both internal combustion engine vehicles, a finding       countries such as Sudan, Guinea or even Ghana, financing costs would
+that has previously and consistently been confirmed for other regions        need to be reduced by 7–15 percentage points to achieve parity within
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                     288
+Article                                                                                                            https://doi.org/10.1038/s41560-025-01955-x
+
+
+                                                                –400   0         400        800            1,200           1,600 US$/tCO2eq
+
+                                                            Sudan
+
+                                                           Somalia
+
+                                                            Liberia
+
+                                                            Guinea
+
+                                                        Mauritania
+
+                                                      Sierra Leone
+
+                                                            Eritrea
+
+                                                             Niger
+
+                                                      Mozambique
+
+                                                           Burundi
+
+                                                        Zimbabwe
+
+                                           Central African Republic
+
+                                                            Malawi
+
+                                                             Libya
+
+                                                      South Sudan
+
+                                                             Chad
+
+                                               Congo (Republic of)
+
+                                                           Lesotho
+
+                                    Congo (Democratic Republic of)
+
+                                                           Zambia
+
+                                                            Ghana
+
+                                                 Equatorial Guinea
+
+                                                             Egypt
+
+                                                              Togo
+
+                                                      Burkina Faso
+                          Country
+
+
+
+
+                                              Sao Tome & Principe
+
+                                                           Gambia
+
+                                                        Cameroon
+
+                                                            Gabon
+
+                                                              Mali
+
+                                                     Guinea-Bissau
+
+                                                           Rwanda
+
+                                                          Eswatini
+
+                                                          Tanzania
+
+                                                           Uganda
+
+                                                       Madagascar
+
+                                                       Cabo Verde
+
+                                                            Algeria
+
+                                                            Angola
+
+                                                          Comoros
+
+                                                            Nigeria
+
+                                                             Kenya
+
+                                                           Ethiopia
+
+                                                             Benin
+
+                                                            Tunisia
+
+                                                           Senegal
+
+                                                      Côte d’Ivoire                                                2025
+                                                          Morocco                                                  2030
+                                                                                                                   2040
+                                                          Namibia
+                                                                                                                   BEV-SOG
+                                                      South Africa                                                 Financing cost 2025
+                                                          Mauritius
+
+                                                         Botswana
+
+                                                                       0    5          10    15       20            25      30 WACC (%)
+
+Fig. 4 | Life-cycle GHG abatement cost for BEV-SOG vs ICE-Fos vehicles in          all cases. Red dots indicate the financing cost for BEV-SOG vehicles in each
+the small four-wheeler segment. Coloured bars represent the life-cycle GHG         country in 2025. Countries are ordered top down according to the life-cycle
+abatement cost for BEV-SOG in the years 2025, 2030, 2040 calculated as the TCO     GHG abatement cost in 2025, largest to smallest. Supplementary Figs. 24 and 25
+difference (US$ per km) divided by the difference in life-cycle GHG emissions      provide life-cycle GHG abatement cost model results in all application segments
+(tCO2eq per km), which ensures that the denominator remains positive in            and time periods, comparing both BEV-SOG and ICE-Syn with ICE-Fos vehicles.
+
+
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                            289
+Article                                                                                                       https://doi.org/10.1038/s41560-025-01955-x
+
+
+                                                         Sudan
+
+                                                        Somalia
+
+                                                     Mauritania
+
+                                                         Guinea
+
+                                                         Eritrea
+
+                                                         Liberia
+
+                                                          Niger
+
+                                                   Sierra Leone
+
+                                                        Burundi
+
+                                                   Mozambique
+
+                                                     Zimbabwe
+
+                                         Central Africa Republic
+
+                                                          Libya
+
+                                                         Malawi
+
+                                                          Chad
+
+                                                          Egypt
+
+                                                        Lesotho
+
+                                                   South Sudan
+
+                                            Congo (Republic of)
+
+                                 Congo (Democratic Republic of)
+
+                                                         Ghana
+
+                                                        Zambia
+
+                                                   Burkina Faso
+
+                                              Equatorial Guinea
+
+                                                        Gambia
+
+                                                            Mali
+                       Country
+
+
+
+
+                                                           Togo
+
+                                                    Cabo Verde
+
+                                                     Cameroon
+
+                                           Sao Tome & Principe
+
+                                                  Guinea-Bissau
+
+                                                         Algeria
+
+                                                        Rwanda
+
+                                                         Gabon
+
+                                                       Tanzania
+
+                                                        Uganda
+
+                                                    Madagascar
+
+                                                        Eswatini
+
+                                                       Comoros
+
+                                                         Angola
+
+                                                          Kenya
+
+                                                         Nigeria
+
+                                                          Benin
+
+                                                        Ethiopia
+
+                                                        Senegal
+
+                                                         Tunisia
+
+                                                   Côte d’Ivoire
+
+                                                       Morocco
+                                                                                                         BEV-SOG
+                                                        Namibia                                          financing cost 2030
+                                                   South Africa                                          'Maximum' BEV-SOG
+                                                                                                         financing cost 2030
+                                                       Mauritius
+
+                                                      Botswana
+
+                                                                                                                                    WACC (%)
+                                                                   0   5     10         15          20           25            30
+
+Fig. 5 | Financing cost for TCO break-even of BEV-SOG with ICE-Fos vehicles for the small four-wheeler segment in 2030 in all modelled countries. The solid red
+dot represents the BEV–SOG financing cost in 2030; the hollow red circle represents the maximum BEV–SOG financing cost in 2030 for which the TCO equals that of
+ICE-Fos vehicles.
+
+
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                          290
+Article                                                                                                 https://doi.org/10.1038/s41560-025-01955-x
+
+the same timeframe. Figure 5 highlights these disparities not to sug-          Namibia or even Kenya and Ethiopia may require comparatively less
+gest a need for subsidies, but to emphasize the importance of targeted         direct policy support for increased BEV adoption by 2030. In these
+de-risking measures. While subsidies that reduce up-front costs may            countries, private sector development of e-mobility business mod-
+improve affordability, they do not fundamentally lower the invest-             els for increased BEV adoption and charging such as battery swaps
+ment risk associated with EV markets in the region. True de-risking            (for example, Ampersand, Powerhive) or pay-as-you-go (for example,
+requires addressing the barriers that make EV investments riskier in           Ecobodaa) is not only crucial for development of a home BEV mar-
+many African economies.                                                        ket, but already evident. Conversely, less-prepared countries such as
+                                                                               Sudan, Mauritania and the DRC may require greater policy support to
+Discussion                                                                     ensure BEV availability through incentives (for example, subsidies,
+The results of this study hold important implications for African poli-        import tax exemptions) and ICE disincentives (for example, fuel taxes,
+cymakers and international (finance) institutions. We highlight three          phased-out sales or bans such as in Ethiopia). Alongside de-risking,
+key implications. First, the transition to electric vehicles in Africa makes   governments can adopt complementary measures such as targeted
+sense from both a cost and life-cycle GHG emissions perspective, par-          subsidies, import duty exemptions, or carbon taxes or bans on ICE vehi-
+ticularly when considering SOG systems. Reducing emissions from                cles. These policies should be cost-conscious—using caps or periodic
+passenger road vehicles in Africa is both economically viable and cost         reviews—as BEV prices decline. In the longer term, policies such as ICE
+saving, well before 2040. In fact, BEVs would appear cost competitive          scrappage programmes or sales bans can support full fleet turnover.
+by 2030 were it not for elevated financing costs—under a cash-purchase         Scrappage schemes paired with purchase subsidies may also improve
+scenario, they would already present a financially viable option. On           equity by supporting lower-income buyers. Careful policy sequencing
+the basis of these findings, policymakers can decide to lay the ground-        and regular evaluation will be key to balancing adoption goals with
+work proactively, with local policy support focusing on addressing             fiscal sustainability.
+key adoption barriers including vehicle and charging-infrastructure                 In particular, our analysis shows that policies that directly target
+availability, which drive high financing costs. Second, charging using         up-front vehicle costs—such as an increase in purchase subsidies or
+SOG systems adds minimally to the total cost of BEV-SOG ownership              a decrease in import duty exemptions, or financial de-risking instru-
+while also circumventing the need for expensive grid upgrades. Ensur-          ments (for example, guarantees)—are most effective in accelerating
+ing widespread availability and access to off-grid charging options            domestic BEV adoption. To enhance fairness, limiting such incentives
+remains a challenge, though not an impossibility, given the increased          to small four-wheelers rather than larger, higher-end models could
+battery and solar PV manufacturing capacity globally. Third, synthetic         spur uptake among first-time buyers in lower- and middle-income
+fuel vehicles are unlikely to serve as a viable transition technology for      brackets. In the medium term, higher-level regulatory measures, for
+Africa. Even under optimistic cost assumptions, synthetic fuel vehicles        example, planned bans on ICE vehicle sales, can serve as important
+fail to compete economically or environmentally with BEV-SOG vehi-             complements to these policies, and targeted incentives and investment
+cles. Moreover, the uncertainty surrounding large-scale availability           in charging infrastructure will be critical to ensuring that the diffusion
+of low-cost synthetic fuels further diminishes their feasibility. These        of BEVs continues29,30. On the charging-infrastructure side, countries
+fuels are better suited for hard-to-abate sectors, whereas passenger           may adopt diverse approaches, with grid-based solutions suitable for
+road transport in Africa may rather be electrified.                            some urban areas and standalone solar systems more practical in rural
+      We discuss several policy considerations that emerge from these          settings, and perhaps in urban ones. Effectively implementing these
+implications. First, to accelerate the electrification of personal road        solutions would require careful planning31, particularly as infrastruc-
+transport in Africa well before 2040, financial de-risking should be           ture needs and energy demands vary across regions.
+addressed. Here we outline key observations and potential solutions,                Finally, our results indicate that BEVs may become cost competi-
+though recognize that further research is needed to gain a deeper              tive independent of policy or financial assistance well before 2040
+understanding of financial de-risking mechanisms for electric mobil-           across all countries and segments. For countries where climate policy
+ity in Africa. On the upside, traditional de-risking measures—such as          is not a top development priority, a reality for many economies in the
+guarantees, concessional capital and blended finance—may work bet-             global south32,33, waiting rather than taking early action on the BEV tran-
+ter for electric vehicles than for development finance in other sectors.       sition may be preferable as the global shift towards electrification will
+Namely, financial de-risking of electric vehicles could be led by the          naturally drive down BEV costs without requiring local intervention.
+private sector, which can help to establish early trust in technologies        Further, transitioning to BEVs offers clear economic, environmental
+such as electric two-wheelers in low-risk contexts and pave the way for        and energy-system co-benefits for African societies which could be
+public sector involvement in higher-risk countries later. Further, the         reaped sooner by addressing BEV adoption barriers now. One potential
+private sector could also take the lead in building pan-African portfo-        co-benefit is the development of a local BEV manufacturing industry,
+lios to help spread risk across countries, starting again with lower-risk      which would require targeted efforts to establish vehicle assembly
+countries that may also have higher ‘EV readiness levels’28. Building on       lines, integrate a sustainable supply chain and build a skilled work-
+this point, as both cars and charging stations are highly standardized         force. African policymakers could incentivize this through tax breaks,
+products, this allows for packaging of vehicle loans into securities and       subsidies or low-interest financing. However, they must also recognize
+placing them, for example, as corporate green bonds. This could bring          the challenge of competing with low-cost Chinese manufacturing.
+down the overall risk of the package, which could then be included in          For African countries committed to climate goals, our results provide
+the portfolios of higher-risk countries such as Sudan or Niger. Mul-           strong justification for setting more ambitious transport sector climate
+tilateral development banks, such as the World Bank or the African             targets for 2050.
+Development Bank and impact investors should support in building                    Several future research areas remain. Importantly, we note that the
+these portfolios and structuring packaged securities. Here specifically,       exclusion of all cost distortions is a major assumption that can affect the
+further research is required to understand mobility sector financing           competitiveness of BEVs in African markets. Our extended sensitivity
+in high-risk countries and the role of private vs public institutions.         analysis (Supplementary Figs. 26–28) highlights the implications of
+      Second, given the cross-country heterogeneity of our results,            this assumption. In particular, the omission of vehicle import duties
+tailored policy solutions may look quite different depending on the            represents a key limitation of our study, as such duties are known to
+relative preparedness of the country or on the application segment.            be high in several African countries, which can negatively impact the
+With the assumed off-grid charging set-up in our analysis, low-risk but        BEV TCO. This underscores the need for future research to investi-
+also high-solar-energy-availability countries such as Botswana and             gate how policy-induced costs may affect BEV competitiveness on a
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                   291
+Article                                                                                                                      https://doi.org/10.1038/s41560-025-01955-x
+
+country-specific basis. Next, the availability of BEV maintenance infra-                            duties, reflecting the resource cost for vehicle production. Vehicle
+structure and technical expertise is not captured in our quantitative                               CAPEX costs are dynamic in time and probabilistically determined.
+model and requires further empirical research. Presently, most BEV                                  Note that we do not include battery replacement over the lifetime of
+owners in Africa rely on grid-based charging, yet our analysis focuses on                           the vehicle, owing to the fact that modern vehicle batteries are now
+solar off-grid system charging. To evaluate the impact of grid electricity                          capable of at least 15 years of operational lifetime48. The section on
+prices on BEV TCO competitiveness, we conduct a sensitivity analysis                                vehicle CAPEX database and projections and Supplementary Table 3
+with BEVs charged directly from the grid (Supplementary Figs. 29–                                   provide further detail.
+31), to highlight that even high grid prices have minimal effects on                                     The SOG CAPEX consists of four hard-cost components, the solar
+most vehicle segments, with the minibus segment being the notable                                   PV panel, inverter, stationary lithium-ion battery and balance of sys-
+exception. Additionally, the second-hand vehicle market presents a                                  tem (BOS), and one soft-cost component, installation. Each hard-cost
+crucial area for further study. The emergence of a second-hand BEV                                  component is sized to the application-specific use case in the SOG
+market—though currently absent—could transform affordability and                                    sizing optimization model (details below). Costs for the solar PV panel
+access, with businesses already developing strategies in preparation34.                             (in US$ per kWp), the inverter (in US$ per kWp) and the BOS hardware
+Notwithstanding some concern and discussion around future resource                                  (US$ per system unit), current and projected, are sourced from the
+limits of BEV demand and subsequent production35–38, this dynamic                                   Danish Energy Agency’s technology catalogue report on Technology
+is only expected to grow as international export flows of used BEVs                                 Data for Generation of Electricity and District Heating49. For the sta-
+increase (namely from China)39, warranting dedicated analysis. Indeed,                              tionary battery we use current and projected costs (in US$ per kWh)
+in the near term, the continued inflow of cheap, used ICE vehicles may                              based on data from BloombergNEF’s (BNEF) automotive battery price
+delay the transition by undercutting BEV demand40. Moreover, growing                                survey50 and use a 150% cost multiplier given that stationary lithium-ion
+regulatory pressure in manufacturing regions such as China and the                                  battery packs deployed in electricity-sector applications are typi-
+European Union to retain and recycle EV batteries could limit the export                            cally 50% above the reported cost for automotive packs51. We project
+of used BEVs to Africa41,42. How these dynamics will evolve remains                                 lithium-ion battery pack costs using a 22% learning rate, calculating
+uncertain and requires further research. Lastly, societal co-benefits of                            future costs based on an own extrapolated demand scenario projec-
+BEV adoption, such as the potential reduction of local air pollution, are                           tion between BNEF’s base case ‘economic transition scenario’ (ETS)52
+critical yet understudied aspects in the African context.                                           and their ‘green scenario’, which depicts optimistic growth of renew-
+                                                                                                    able electricity and green hydrogen53. This own extrapolated demand
+Methods                                                                                             projection is therefore neither conservative nor optimistic but rather
+Total cost of ownership calculation                                                                 assumes a medium future battery demand across all use applications
+The TCO is a comparative lifetime cost metric widely employed by                                    globally. Initial cumulative capacity of lithium-ion battery packs for
+transport modellers to assess technology competitiveness in both                                    the base year 2025 is an own estimate based on data from BNEF50 and
+the passenger and commercial vehicle segments43–47. Here we evalu-                                  Avicenne Energy54,55. Taking results from the SOG sizing optimization
+ate passenger vehicle TCO for three technologies, in six application                                model, we multiply unit cost for each of the SOG components by their
+segments, 52 African countries and three time horizons. We follow                                   optimized capacity to calculate system capital expenditure. We also
+the TCO methodology from Noll et al.45, which builds on two other                                   include an installation cost, which is assumed a constant 25% of the
+studies39,43,and adjust parameters to fit the context of our study.                                 capital expenditure for all SOG components, based on discussions with
+                                                                                                    local service providers in Ghana, Namibia and South Africa and relevant
+                        (CAPEXt,a,y −
+                                         RVt,a,y
+                                                        ) × CRF +
+                                                                    1     N
+                                                                         ∑n=1
+                                                                                OPEXt,a             literature and sources56–58. Additionally, we assume a 40% oversize
+                                                    N                                     n
+                                                                    Na          (1+ic )
+         TCOt,a,c,y =
+                                        (1+ic,y )
+                                                                                              (1)   factor for all hard-cost components to account for potential extremes
+                                                    AKTa                                            in daily use cases. Overall, this gives a total cost for the SOG system of
+                                                                                                    US$400–550 for a 0.35 kWp solar + 0.825 kWh battery system for the
+where TCO is the total cost of ownership per kilometre (US$ per km),                                two-wheeler segment, US$2,500–3,500 for a 2.5 kWp solar + 6.0 kWh
+CAPEX is the capital expenditure or initial purchase cost of the vehicle                            battery system for the four-wheeler segment and US$7,500–8,500 for
+and the SOG system (only for BEV-SOG) (US$), RV is the residual value                               a 7 kWp solar + 17 kWh battery system for the minibus segment in 2025.
+of the vehicle, OPEX is the operating expenditure or annual operating                               In Supplementary Note 1, we compare these cost ranges with real-world
+cost of the vehicle and the SOG system (only for BEV-SOG) (US$), N is                               quotations and market estimates, demonstrating that our assump-
+the lifetime of the vehicle (years) and AKT is the annual kilometres                                tions are reasonable. An overview of SOG cost and system parameter
+travelled. For the discounting terms, CRF is the capital recovery factor                            assumptions is available in Supplementary Table 4.
+            N          N
+= (i (1 + i) )/((1 + i) − 1), and i is the financing cost. The CRF represents                            Vehicle residual value is determined as the share of purchase price
+the factor used to annualize the vehicle CAPEX over its lifetime,                                   (CAPEX) remaining after vehicle use over a certain distance. We use
+accounting for the financing cost and ensuring the total purchase cost                              vehicle depreciation percentages based on BNEF’s ‘vehicle total cost
+is distributed evenly across the vehicle’s operational years. Subscripts                            of ownership model’ 59 and fit these to an exponential function for all
+t, a, c and y refer to the technology, application, country and year                                case countries as in equation (3)
+dimensions, respectively.
+      All model input parameters, their dimensional dependence (tech-                                                         y = a + (y0 − a)e−b(x−x0 )                    (3)
+nology, application, country), type of Monte Carlo simulation (proba-
+bilistic or deterministic) and type of projection (dynamic or static) are                           where y is the residual value factor (in %), x is the total lifetime vehicle
+displayed in Supplementary Tables 1 and 2.                                                          mileage, a and b are fitting factors specific to each case country and y0
+      The CAPEX consists of the vehicle cost for all technologies and                               and x0 are initial value factors. Because the depreciation percentages
+the SOG component costs for the BEV-SOG technology only as in                                       from BNEF’s vehicle TCO model are applicable primarily for
+equation (2).                                                                                       four-wheelers, different fitting factors are determined for the
+                                                                                                    two-wheeler and minibus segments such that the vehicle maintains
+                 CAPEXt,a,c,y = Vehiclet,a,y + [SOG]t=BEV,a,c,y                               (2)   between 8–10% residual value at the end of its operational lifetime.
+                                                                                                    Residual value fitting factors are constant over time and deterministic.
+   The vehicle CAPEX (in US$) is assumed to be the same across all                                      The OPEX parameter includes the following components—fuel
+modelled African countries as we remove all taxes, fees and import                                  costs (both fossil fuel and synthetic fuel), vehicle operation and
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                                        292
+Article                                                                                               https://doi.org/10.1038/s41560-025-01955-x
+
+maintenance (O&M) costs, insurance costs and SOG O&M costs (only             for the maximum and minimum values in the PERT distribution) to (1)
+for BEV-SOG) as in equation (4).                                             account for uncertainty in future energy consumption values and (2)
+                                                                             account for high variation in on-road conditions (that is, paved vs dirt
+           OPEXt,a,y = FuelCostt,y + VehicleO&MCostt,a                       roads), terrains (flat vs mountainous) and use cases (that is, urban vs
+                 +InsuranceCostt,a,y + (SolarPVPanelO&MCost           (4)    rural). Supplementary Table 7 provides energy-consumption values.
+                                                                                  Insurance costs are included as a percentage of the vehicle CAPEX
+                 +Inverter&StationaryBatteryO&MCost)t=BEV
+                                                                             for each technology. Calculation of insurance premiums in Africa
+                                                                             vary across countries and depend upon a number of contributing fac-
+      For the undistorted fossil fuel cost (that is, absent all taxes and    tors such as initial value of the vehicle, resale value, risk profile of the
+duties), we follow the approach from Ross et al.60, which involves select-   purchasing individual, location of driving and vehicle use (distance
+ing a global benchmark cost, such as international spot prices for motor     travelled and type of use), among others. In South Africa and Nigeria
+fuels, to determine the unsubsidized fuel cost. Here we select conven-       average insurance premiums range between 1.5% and 5%, in Kenya
+tional refined gasoline at the New York harbour (in US$ per gallon) as       between 3.5% and 7%, in Egypt and Morocco between 1% and 3%, in
+the benchmark cost as reported by the US Energy Information Agency           Ethiopia between 2% and 4% and in Rwanda and Ghana between 1% and
+(EIA)61. A volumetric conversion factor of 3.785 litre per gallon is used.   2%. To account for this variance, we assume a PERT distribution with a
+To introduce stochastic uncertainty, we establish a normal distribu-         mode insurance premium cost of 2.4% of the vehicle CAPEX and a max/
+tion taking the most recently available data, 2024 average conven-           min insurance premium cost of 4% and 0.8%, respectively. To remain
+tional refined gasoline (in US$ per litre), as the mean and the standard     consistent with the approach of our analysis, these percentages include
+deviation of three, three-year period averages before 2024 (2021–2023,       the removal of all taxes and fees typically included in insurance pre-
+2018–2020, 2015–2018) as the standard deviation for the model base           miums such as value added tax (VAT) or other levies (assumed 20% of
+year. Additionally, we assume a constant shipping and distribution mar-      quoted premium). In a nascent but expanding market for BEVs in Africa,
+gin of US$0.10 per litre on top of the benchmark, as the cost of bringing    factors such as battery replacement costs, a limited resale market and
+refined gasoline to retailers60. Distribution costs are assumed to be con-   restricted access to spare parts or qualified repair services have been
+stant across all African countries and constant over time. Future fossil     shown to further elevate insurance premiums64–66. To account for these
+fuel costs are then derived based on unrefined crude oil cost projections    factors, we apply a percentage markup to the BEV insurance cost as
+from the International Energy Agency’s (IEA) World Energy Outlook. We        compared to ICE vehicles. Specifically, we assume a 50% markup in
+assume an average crack spread of US$0.5 per gallon to convert the IEA       2025, 25% in 2030 and no markup by 2040, as we expect the BEV mar-
+crude oil projections to the refined gasoline benchmark cost, based on       ket to slowly stabilize, leading to equal insurance premiums across all
+historical crack spread averages. For crude oil projection costs, we fol-    vehicle technologies in the final model year. Supplementary Table 8
+low the IEA’s stated policies scenario. Supplementary Table 5 provides       provides vehicle insurance costs.
+fossil fuel costs.                                                                Vehicle lifetime (in years) and annual kilometres travelled (AKT, in
+      For synthetic fuel costs (in US$ per litre), we source minimum         km per year) are differentiated only by application segment. We assume
+selling price (MSP) data from the meta-analysis by Allgoewer et al.62,       longer-than-global-average vehicle lifetimes to reflect the African use
+taking values from the ‘Chile near-term future scenario for 2030’ and        case based on refs. 39,67 but do not assume different lifetimes for the
+the ‘long-term future scenario for 2040’. For both scenarios, the MSP        different vehicle technologies. Vehicle lifetime is defined as the full
+range reflects a combination of the lowest and the highest possible          operational lifespan of the vehicle up to the point of scrappage—that
+MSP by combining the different sources with respective projections.          is, when the vehicle becomes inoperable and is removed from service.
+We use this range to form a normal distribution, with the mean value         This definition does not include extended second-hand use beyond
+corresponding to the midpoint between the lowest and highest MSP             typical functional life. We assume different average vehicle lifetimes
+values. The MSP includes the transportation of fuel to the final loca-       by segment: 8 years for two-wheelers, 12 years for minibuses and 15
+tion62. The interest rate assumed for Chile was 4.6% (ref. 62). Synthetic    years for four-wheelers, each modelled using a wide PERT distribution
+fuel costs are not differentiated by application or country of use.          around the mode. To assess the implications of longer-than-average
+Supplementary Table 5 provides synthetic fuel costs.                         use, we include a targeted analysis in Supplementary Note 2, exploring
+      Vehicle O&M costs (in US$ per year) are sourced from ref. 47.          how extended lifetimes affect cost competitiveness between BEV-SOG
+They are differentiated by application but not by country, are static        and ICE-Fos technologies (Supplementary Fig. 33).
+over time and probabilistically determined based on empirical data                To calculate annual km travelled, we assume daily driving distances
+from ref. 47 to construct a program evaluation and review technique          (in km per day) for each application segment, constant across technolo-
+(PERT) distribution. ICE-Fos and ICE-Syn vehicles are assumed to have        gies in the same segment and years. This gives application-specific
+the same annual O&M cost. Supplementary Table 6 provides vehicle             values for annual km travelled on par with similar studies examining
+O&M costs.                                                                   passenger vehicle TCO in Africa10,11,68. Supplementary Tables 9 and 10
+      SOG O&M costs are comprised of solar PV O&M costs (in US$ per          provide vehicle lifetime and AKT values, respectively.
+kWp per year) and a combined inverter and stationary battery O&M
+cost (in US$ per kWh per year) sourced from ref. 6. SOG O&M costs are        Definition of vehicle application segments
+not differentiated by application or country, are static over time and       We define small two-wheelers as having up to 150 cubic centimeters
+probabilistically determined using mode values sourced from ref. 6           (cc) power (for example, Honda Elite 125, Bajaj Chetak) and medium
+and are assumed ± 20% bound for the maximum and minimum values.              two-wheelers as having between 150 and 350 cc power (for example,
+Supplementary Table 4 provides SOG O&M (OPEX) costs.                         Bajaj Boxer 150, Zeehoev AE8). For the four-wheeler segment, we fol-
+      Energy consumption values (in l/km and kWh/km) are sourced             low the Euro Car Segment classification system: small four-wheelers
+from the vehicle CAPEX database and thus averaged across a variety           encompass the A-segment mini cars and B-segment small cars (for
+of vehicle brands and models within each application segment. As             example, Toyota Aygo, Renault Zoe); medium four-wheelers encom-
+both the ICE and BEV technologies are projected to become more               pass the C-segment medium cars (for example, VW Golf, BYD Seal);
+energy efficient in the future, we assume a 0.5% and 1.5% annual effi-       large four-wheelers encompass the D-segment large cars and J-segment
+ciency gain for ICE-Fos/Syn and BEV-SOG, respectively, congruent             sport utility cars (for example, Toyota Hylander, Toyota BZ4k). For the
+with similar projections for vehicle efficiency gains from BNEF63. In        minibus segment, we assume an 8–12-seat minibus for passenger travel
+addition, we assume a wide probabilistic distribution (± 25% bound           (for example, Toyota Quantum, Geely V5e).
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                 293
+Article                                                                                               https://doi.org/10.1038/s41560-025-01955-x
+
+Vehicle CAPEX database and projections                                      three vehicle technologies in the passenger sector with a small altera-
+For vehicle CAPEX, we gather extensive data on vehicle costs for            tion to the cost of equity for BEVs. The small cap premium accounts
+internal combustion engine and battery electric vehicle technologies        for the higher-risk profiles of niche, off-grid companies with relatively
+across all six application segments. Specifically, we collect manufac-      small market capitalizations compared to larger firms. Similarly, we
+turer suggested retail prices for new battery electric vehicles between     assume that retailers of BEVs may face a higher-risk premium, as BEVs
+the years 2019–2024 from over 40 different manufacturers in seven           remain a niche product with large uncertainty surrounding their adop-
+regional automotive markets. Owing to Africa’s heavy reliance on            tion, infrastructure and availability. As such, BEVs exhibit a small cap
+vehicle imports, we source vehicle costs from automakers in regions         premium of 3.8% (as assumed by the ‘niche financing scenario’ of Agutu
+currently exporting to the continent—such as the USA, Europe, Japan,        et al.14) in 2025, though we reduce this premium to 1.9% in 2030 and
+Korea and India67—and regions expected to increase exports, primarily       remove the premium by 2040, by which time BEVs would probably be
+China39. In total, 151 combustion engine vehicle costs and 114 battery      considered a mature technology. For ICE-Fos and ICE-Syn vehicles, we
+electric vehicle costs were collected across application segments. All      assume 0% small cap premium for all three model years, reflecting the
+costs are converted from listed currency in the selling region to a base    market maturity of combustion engine vehicles. We assume a constant
+currency (US$) using a ten-year average International Monetary Fund         illiquidity premium of 3.6% for all three technologies in all countries
+(IMF) conversion rate. Vehicle cost distributions (mean and standard        over time and a constant country-specific equity risk premium over
+deviation) are derived from the collected data for each application seg-    time. For the cost of debt, we assume a constant country-specific sov-
+ment and used as input parameters to the TCO Monte Carlo analysis.          ereign risk premium over time (that is no convergence) and a constant
+Supplementary Table 3 provides vehicle CAPEX values.                        debt premium of 1.2% for all countries over time as in ref. 14. Finally, we
+     Vehicle cost projections for BEVs are based on projected battery       assume a debt ratio of 50%.
+cost improvements from BNEF out to 2040, assuming a mid-scenario                  For African countries not represented in the Agutu et al.14 study,
+annual total battery demand as described in the section above. Build-       we follow the same methodology presented by the authors to obtain all
+ing on the vehicle cost projection methodology from BNEF and other          WACC parameters, collecting necessary financial data from NYU Stern
+relevant models, we assume that BEV chassis and powertrain costs            and other established financial services companies and institutions
+remain constant over time, as they are not expected to undergo mean-        such as Moody’s, Wikiratings and Fitch where relevant.
+ingful cost reductions. Costs for ICE vehicles are assumed constant               Supplementary Tables 11 and 12 for calculated WACC values for
+over time.                                                                  each vehicle technology in each country and model year. Note that
+                                                                            financing cost parameters for the SOG follow the assumed parameter
+Cost of financing assumptions                                               values for BEVs as described above.
+For financing cost assumptions, we follow the methodology from
+Agutu et al.14, who quantify the weighted average cost of capital (WACC)    Monte Carlo analysis
+for different electrification modes for all sub-Saharan African coun-       The Monte Carlo method is used to simulate uncertainty in the model
+tries, taking into consideration additional risk factors such as equity     through repeated simulation of outputs with probabilistic inputs
+risk, small cap, illiquidity, sovereign risk and debt risk premiums that    that have defined stochastic distributions. The model runs 10,000
+more accurately represent the risk profile for energy-related invest-       probabilistic TCO calculations for each vehicle technology in each
+ments in sub-Saharan Africa. This is the most recent and comprehensive      application, country and model year (Supplementary Table 1 provides
+study to differentiate financing costs for African countries, and though    model dimensions). TCO parameters are either statically or dynami-
+it is applied to investments in electrification modes such as grid exten-   cally determined over time (Supplementary Table 2). Note that we do
+sions, mini-grids and standalone off-grid systems, we argue that similar    not perform a Monte Carlo analysis for the SOG sizing optimization
+assumptions for financing costs of third-party owned automotive             model (below) but do include uncertainty for the cost components of
+vehicles would apply though with a few adjustments made to specific         the SOG as part of the TCO calculation.
+risk parameters detailed in the following. The basic expression for the
+WACC is given in equation (5).                                              Levelized cost of charging and SOG sizing optimization model
+                                                                            To produce Fig. 3, we calculate the levelized cost of charging (LCOC)69
+                            E            D
+                    WACC = ( × Ke,c ) + ( × Kd,c )                   (5)    for the SOG system. The sizing of the SOG is based on a nonlinear opti-
+                            V            V
+                                                                            mization, based on the hourly solar irradiation in each location. The
+                                                                            time-period T consists of all hours (t) in a year that is 1 − 8,760 hours. The
+Where WACC is the weighted average cost of capital (in %), Ke,i and Kd,i    total electric energy output of the PV panel EPV in a specific location is cal-
+are the cost of equity and cost of debt, respectively, for investments in   culated as shown in equation (8). This value is calculated as the product
+a specific country c. E , D and V denote total equity, debt and capital     of the local solar irradiation-specific yield SY (kWh per kWp), that is, the
+                             D
+and the debt share equals . Agutu et al.14 further define the cost of       energy output of the solar PV system per unit of its installed peak capac-
+                             V
+equity and cost of debt as in equation (6) and (7).                         ity and the capacity of the PV panels CPV (kWp) and by accounting for the
+                                                                            system loss R. The inverter’s capacity CInv limits the maximum amount
+                          Ke,c = rf + CRpc + Dp                      (6)    of transferable power at any point in time t. The model is formulated on
+                                                                            discrete timesteps t of duration Δt = 1 h. This means that PPV can only be
+                                                                            maximum CInv.
+                       Kd,c = rf + ERpc + Ip + SCp                   (7)
+
+                                                                                           EPV (t) = min (SY(t) × CPV × (1 − R) , CInv × △t)           (8)
+Where rf is the risk-free rate based on the five-year US treasury bond
+yield in 2019 ( ~ 1.4%), CRpc represents the country-specific risk pre-
+mium, Dp the corporate bond premium, ERpc the equity risk premium,               The battery of the SOG allows it to store energy when EPV(t) is
+Ip the equity risk premium and SCp the small cap premium.                   higher than the electricity demand Edemand(t) by the vehicles in that hour
+     In the Agutu et al.14 study, three financing scenarios are defined     and vice-versa provides power when it is lower. We assume a conserva-
+illustrating possible financing options to reach 100% electrification in    tive but realistic demand pattern based on ref. 70 where demand peaks
+sub-Saharan Africa under different combinations of public vs private        around 18:00, reflecting EV owners plugging in their vehicles after
+sector investment. This study applies the niche financing scenario to       returning home from work (Supplementary Fig. 32).
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                   294
+Article                                                                                                                       https://doi.org/10.1038/s41560-025-01955-x
+
+     The energy flow towards the battery at every hour t is expressed                                conditions such as no horizon shading and a free mounting location.
+in equation (9).                                                                                     Calculations considered photovoltaic output per kWp installed capac-
+                                                                                                     ity, with no tracking system and no system losses included in the initial
+                           EBat (t) = EPV (t) − Edemand (t)                                    (9)
+                                                                                                     model. The module orientation was set to optimal angles for both
+                                                                                                     azimuth and slope to maximize energy capture. Missing data points
+     EBat (kWh) represents the energy flow towards the battery and                                   from PVGIS, in large part regarding coordinates near the equator, were
+can be either positive or negative as this storage device can either be                              substituted with values obtained from renewables.ninja73,74, which
+charged or discharged at a certain point of time t. A cumulative vari-                               relies on the MERRA-2 model and adheres to the same assumptions to
+able CEBat(t) represents the current energy stored in the battery and                                ensure consistency.
+operates as expressed in equation (10). If EPV is higher than Edemand(t),
+the difference between these two, that is, surplus energy flow towards                               Maximum financing cost optimization
+the battery EBat (kWh), is added to the cumulative variable CEBat(t − 1),                            The ‘maximum’ financing cost is the cost of capital value for the
+charging the battery as much as possible. Otherwise, CEBat(t) discharges                             BEV-SOG technology in each model country, the four-wheeler
+to the extent necessary to meet the demand Edemand(t).                                               small-application segment and model year 2030 for which the TCO
+                                                                                                     break-even point between the two vehicle technologies, BEV-SOG and
+                         CEBat (t) = CEBat (t − 1) + EBat (t)                                 (10)   ICE-Fos, is met. To identify the ‘maximum’ financing cost as depicted
+                                                                                                     in Fig. 5, we run a linear bisection optimization on the TCO Monte
+     Both EBat(t) and CEBat(t) are subject to operational constraints.                               Carlo model for the four-wheeler small-application segment in all
+Neither can be less than zero, EBat(t) is further limited by the inverter                            model countries in 2030 for the base parameter assumptions. The
+capacity CInv, and the battery energy CEBat(t) is constrained by the bat-                            convergence criterion is such that the mean TCO for BEV-SOG is equal
+tery capacity, CBat.                                                                                 to the mean TCO for ICE-Fos in all 52 modelled countries. We assume a
+     Another important parameter considered for the sizing of the                                    convergence tolerance of US$0.001 per km, with 1,000 Monte Carlo
+SOG is the reliability r, which we define as one minus the proportion of                             draws. The optimization converges within 10–11 iterations.
+unmet electric energy demand compared to the total demanded energy
+over the timeframe T assumed to be equivalent to one year. Hereby,                                   Technical implementation
+Eunmet demand(t) is an important parameter representing the amount of                                The TCO Monte Carlo and SOG sizing optimization models are imple-
+demanded electric energy, which cannot be supplied by the SOG. Equa-                                 mented in Python, using an Excel spread sheet as the main user inter-
+tions (11) and (12), with r that has to be higher than rmin, set to be 90%.                          face for input data. The complete model is provided as supplementary
+                                                                                                     material (Code availability statement). The maps representing TCO
+           Eunmet demand (t) = min (EPV (t) + EBat (t) − Edemand (t) , 0)                     (11)   comparison per country (for example, Fig. 2) are created with the
+                                                                                                     Cartopy package for Python and use open-source basemap data.
+                                     8,760
+                                             |Eunmet demand (t) |
+                          r=1− ∑                                                              (12)   Life-cycle GHG emissions calculation
+                                      t=1
+                                                 Edemand (t)
+                                                                                                     To incorporate a future-oriented perspective for life-cycle GHG emis-
+                                                                                                     sions, we modified the life-cycle background system for the life-cycle
+     The optimization aims to minimize the absolute cost of the SOG                                  assessment (LCA) using the Python-based tool premise (version 2.1.0)23.
+system, solving for the capacity of the components, to satisfy con-                                  In this study, premise extends the ecoinvent v3.10 database (system
+straints stated in equations (11) and (12). LCOC (US$2020 per kWh) of the                            model: ‘allocation, cut-off by classification’) and other datasets from
+SOG is calculated as seen in equation (13), where the denominator is the                             its own library into future scenarios based on projections from the
+discounted sum of the energy supplied by the SOG during its lifetime                                 integrated assessment model REMIND. Specifically, two contrasting
+to the specific vehicle segment.                                                                     scenarios were selected to represent a range within potential transi-
+                                                                                                     tion pathways: SSP2–RCP 2.6 (Representative Concentration Pathway
+                 T   I (t)CPV +IInv (t)CInv +IBat (t)CEBat +OMPV (t)CPV +OMInv+Bat (t)CEBat
+               ∑t=0 PV                                        t                                      2.6), which aims to limit global temperature rise to below 2 °C relative
+                                                    (1+ic )
+     LCOC =                               T  E            (t)
+                                                                                              (13)   to pre-industrial levels, and SSP2–RCP 6, a no-policy-mitigation sce-
+                                         ∑t=0 SOG,supplyt
+                                                (1+i )  c                                            nario that projects temperature increases above 3.5 °C. By applying
+                                                                                                     these scenarios, we aim to capture a spectrum of carbon footprint
+     For the optimization SciPy’s optimization algorithm COBYLA                                      outcomes based on global warming potential for a time horizon of
+(constrained optimization by linear approximations) is used. ic is the                               100 years (GWP100), encompassing both ambitious climate mitiga-
+country-specific cost of capital (WACC). The outputs of the optimiza-                                tion and minimal-policy pathways. Characterization factors of indi-
+tion are the LCOC and capacities of the components CPV, CBat and CInv.                               vidual greenhouse gases represent global warming potentials for a
+                                                                                                     time horizon of 100 years (‘GWP100‘). The characterization factors
+Solar irradiation and geographical data                                                              of emissions were based on radiative forcing according to Intergov-
+The dataset utilized in this study comprises a 1° × 1° grid covering the                             ernmental Panel on Climate Change (IPCC) 2021, baseline model75 as
+entire African continent, encompassing a total of 2,560 data points.                                 implemented in the Environmental Footprint 3.1 method developed
+Each point is assigned to a country based on its geographic location.                                by the European Commission76.
+Owing to the resolution of the grid, certain small or insular nations                                     The entire overview of life-cycle inventory datasets used in this anal-
+such as Cabo Verde, Comoros, Equatorial Guinea (one additional point                                 ysis with respective sources are available in Supplementary Tables 13
+to include Bioko), Mauritius, São Tomé & Príncipe, Seychelles and The                                and 14. A summary of key variables and parameters is provided here.
+Gambia lack any territorial representation. To address this limitation,                              The analysed SOG charging system comprises PV panels, a battery and
+representative data points for these countries were manually selected                                an inverter, all assumed to be sourced from global markets. Datasets
+to ensure comprehensive coverage across all nations in Africa. Solar PV                              incorporate impacts from transportation to the consumer and losses
+specific output data were obtained using the Python-based ‘pvlib’ API71,                             during processing. For the system’s batteries, we used the global market
+which leverages the Photovoltaic Geographic Information System of                                    dataset for lithium-ion battery cells with lithium iron phosphate cath-
+the European Union (PVGIS). The data, derived from the ERA-5 irradia-                                odes and graphite-based anodes. Inventory data for battery production
+tion database72, were collected for the year 2019, assuming optimal                                  are primarily sourced from ref. 77.
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                                         295
+Article                                                                                                https://doi.org/10.1038/s41560-025-01955-x
+
+      Life-cycle inventories for the production of small, medium and          3.  Axsen, J., Plötz, P. & Wolinetz, M. Crafting strong, integrated
+large passenger cars are based on ref. 78, whereas inventories for the            policy mixes for deep CO2 mitigation in road transport. Nat. Clim.
+production of two-wheelers were sourced from ref. 79. The produc-                 Change 10, 809–818 (2020).
+tion of a minibus was approximated with that of a van retrieved from          4. International Energy Agency. Global EV Outlook 2024 (2024).
+ref. 78. The life-cycle carbon footprint of synthetic fuels was based         5. Meza, E. Future Volkswagen boss renews backing for
+on production in Chile (assuming production in Sierra Gorda62) with               controversial synthetic fuels. Clean Energy Wire https://www.
+electricity supply from open-ground photovoltaic. The dataset from                cleanenergywire.org/news/future-volkswagen-boss-renews-
+synthetic fuel production—including proton exchange membrane                      backing-controversial-synthetic-fuels (2022).
+electrolyses, low-temperature adsorption–direct air capture of CO2            6. Davenport, C. E.P.A. allows California to ban sales of new
+and the Fischer–Tropsch synthesis process units—was obtained from                 gas-powered cars by 2035. New York Times https://www.nytimes.
+ref. 80. The only change applied to the original dataset was the rescaling        com/2024/12/18/climate/california-ban-new-gasoline-powered-
+of the impact of open-ground PV electricity by a factor 0.78 retrieved            cars.html (2024).
+from JRC Photovoltaic Geographical Information System81 to reflect the        7. Liboreiro, J. In win for Germany, EU agrees to exempt e-fuels from
+ratio of yearly electricity productions for tracking PV between Sierra            2035 ban on new sales of combustion-engine cars. Euronews
+Gorda and Tabernas (location assumed for the production of synthetic              https://www.euronews.com/my-europe/2023/03/28/in-win-for-
+fuels in the original dataset). Furthermore, 81 kg CO2eq per tonne (ref.          germany-eu-agrees-to-exempt-e-fuels-from-2035-ban-on-new-
+62) were added for the transoceanic transport of synthetic fuels from             sales-of-combustion-en (2023).
+Sierra Gorda to the African continent. The resulting carbon footprint         8. Ayetor, G. K., Opoku, R., Sekyere, C. K. K., Agyei-Agyeman, A.
+of 1 metric t of synthetic fuels delivered to the African continent is            & Deyegbe, G. R. The cost of a transition to electric vehicles
+866–1,070 and 565–872 kg CO2eq, respectively, for 2030 and 2040,                  in Africa: a case study of Ghana. Case Stud. Transp. Policy 10,
+with the range reflecting stringent (RCP 2.6) or modest global climate            388–395 (2022).
+policies (RCP 6). These values exclude the carbon uptake from the air.        9. Dixon, J. et al. How can emerging economies meet development
+The carbon footprint of the fossil fuel including delivery to final con-          and climate goals in the transport-energy system? Modelling
+sumer was assumed to be the one of global petrol from the ecoinvent               co-developed scenarios in Kenya using a socio-technical
+database v3.10. The combustion emissions of gasoline were assumed                 approach. Energy Strat. Rev. 53, 101396 (2024).
+to be 3.1 kg CO2eq per kg of fuel burned82.                                   10. Ayetor, G. K., Quansah, D. A. & Adjei, E. A. Towards zero vehicle
+                                                                                  emissions in Africa: a case study of Ghana. Energy Policy 143,
+Life-cycle GHG abatement costs calculation                                        111606 (2020).
+The life-cycle GHG abatement cost (GHGAC, US$ per tCO2eq) is                  11. Dioha, M. O., Duan, L., Ruggles, T. H., Bellocchi, S. & Caldeira, K.
+calculated as the difference between the TCO of the low-carbon                    Exploring the role of electric vehicles in Africa’s energy transition:
+transport option (EVs or ICEs with synthetic fuels) and the TCO of                a Nigerian case study. iScience 25, 103926 (2022).
+the fossil fuel option ICE-Fos divided by the difference between the          12. Gammon, R. & Sallah, M. Preliminary findings from a pilot study
+life-cycle GHG emissions (LCE) of the fossil transport option and                 of electric vehicle recharging from a stand-alone solar minigrid.
+those of the low-carbon transport option, as shown in equation (14).              Front. Energy Res. 8, 563498 (2021).
+Combustion-related CO2 emissions of synthetic fuels are neglected as          13. Mulugetta, Y. et al. Africa needs context-relevant evidence to
+the same amount of CO2 has been extracted from the atmosphere via                 shape its clean energy future. Nat. Energy 7, 1015–1022 (2022).
+DAC for synfuel production.                                                   14. Agutu, C., Egli, F., Williams, N. J., Schmidt, T. S. & Steffen, B.
+                                                                                  Accounting for finance in electrification models for sub-Saharan
+                                 (TCOt,y − TCOICE−Fos,y )
+                    GHGACt,j =                                        (14)        Africa. Nat. Energy 7, 631–641 (2022).
+                                 (LCEICE−Fos,y − LCEt,y )                     15. Ameli, N. et al. Higher cost of finance exacerbates a climate
+                                                                                  investment trap in developing economies. Nat. Commun. 12,
+Reporting summary                                                                 4046 (2021).
+Further information on research design is available in the Nature             16. Lonergan, K. E. et al. Improving the representation of cost of
+Portfolio Reporting Summary linked to this article.                               capital in energy system models. Joule 7, 469–483 (2023).
+                                                                              17. Mutiso, R. M. Mapping Africa’s EV revolution. Science 385,
+Data availability                                                                 eadr1055 (2024).
+The data input files for the analysis are available in the article and Sup-   18. Johansson, D. & Mutiso, R. Africa’s vehicle fleet could double
+plementary Information. Source data are provided with this paper.                 by 2050: what does this mean for EVs? Energy For Growth Hub
+                                                                                  https://energyforgrowth.org/article/africas-vehicle-fleet-could-
+Code availability                                                                 double-by-2050-what-does-this-mean-for-evs/ (2025).
+The code needed to run the analysis is publicly available via Zenodo          19. Off-grid electrification of mobility in Africa. Zero Carbon Charge
+at https://doi.org/10.5281/zenodo.15132262 (ref. 83). The Cartopy                 https://charge.co.za (2025).
+package for Python, used to create the maps of results in Figs. 2 and         20. First off-grid electric vehicle charging station launches in
+3 and figures in the Supplementary Information, is publicly available             South Africa. BusinessTech https://businesstech.co.za/news/
+for download from https://scitools.org.uk/cartopy and references                  motoring/801941/first-off-grid-electric-vehicle-charging-station-
+the Natural Earth data. Free vector and raster map data are available             launches-in-south-africa (2024).
+at naturalearthdata.com.                                                      21. Plötz, P. Hydrogen technology is unlikely to play a major role in
+                                                                                  sustainable road transport. Nat. Electron. 5, 8–10 (2022).
+References                                                                    22. Nigeria: powering electric mobility - developer guide. GET.Invest
+1.   Jaramillo, P. et al. In Climate Change 2022: Mitigation of Climate           https://www.get-invest.eu/resources/market-insights/#nigeria
+     Change. Contribution of Working Group III to the Sixth Assessment            (2024).
+     Report of the Intergovernmental Panel on Climate Change (eds             23. Sacchi, R. et al. PRospective EnvironMental Impact asSEment
+     Shukla, P. R. et al.) (Cambridge Univ. Press, 2023).                         (premise): a streamlined approach to producing databases for
+2.   International Council on Clean Transport. Vision 2050: A Strategy            prospective life cycle assessment using integrated assessment
+     to Decarbonize the Global Transport Sector by Mid-Century (2020).            models. Renewable Sustain. Energy Rev. 160, 112311 (2022).
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                 296
+Article                                                                                              https://doi.org/10.1038/s41560-025-01955-x
+
+24. Baumstark, L. et al. REMIND2.1: transformation and innovation            45. Noll, B., Val, S. del, Schmidt, T. S. & Steffen, B. Analyzing the
+    dynamics of the energy-economic system within climate and                    competitiveness of low-carbon drive-technologies in road-freight:
+    sustainability limits. Geosci. Model Dev. 14, 6571–6603 (2021).              a total cost of ownership analysis in Europe. Appl. Energy 306,
+25. Greenpeace International. Energy Revolution. A Sustainable World             118079 (2022).
+    Energy Outlook (2012).                                                   46. Noll, B., Schmidt, T. S. & Egli, F. Managing trade-offs between
+26. International Energy Agency. Global EV Outlook 2023: Catching                electric vehicle taxation and adoption. Cell Rep. Sustain. 1,
+    up with Climate Ambitions (2023).                                            100130 (2024).
+27. Bieker, G. A Global Comparison of the Life-Cycle Greenhouse Gas          47. Liu, Z. et al. Comparing total cost of ownership of battery electric
+    Emissions of Combustion Engine and Electric Passenger Cars                   vehicles and internal combustion engine vehicles. Energy Policy
+    (International Council on Clean Transportation, 2021).                       158, 112564 (2021).
+28. Africa EV readiness and impact index. Energy for Growth Hub              48. Nguyen-Tien, V., Zhang, C., Strobl, E. & Elliott, R. J. R. The closing
+    https://energyforgrowth.org/article/africa-ev-readiness-and-                 longevity gap between battery electric vehicles and internal
+    impact-index-2024-desktop (2024).                                            combustion vehicles in Great Britain. Nat. Energy 10, 354–364 (2025).
+29. Nsan, N., Obi, C. & Etuk, E. Bridging policy, infrastructure, and        49. Danish Energy Agency. Technology Data: Energy Plants for
+    innovation: a causal and predictive analysis of electric vehicle             Electricity and District Heating Generation; https://ens.dk/en/
+    Iitegration across Africa, China, and the EU. Sustainability 17, 5449        analyses-and-statistics/technology-data-generation-electricity-
+    (2025).                                                                      and-district-heating (2025).
+30. Ajao, Q., Prio, M. H. & Sadeeq, L. Analysis of factors influencing       50. Electric vehicle outlook (EVO) 2023. BloombergNEF https://about.
+    electric vehicle adoption in sub-Saharan Africa using a modified             bnef.com/electric-vehicle-outlook (2023).
+    UTAUT framework. Discover Electron. 2, 4 (2025).                         51. Beuse, M., Steffen, B. & Schmidt, T. S. Projecting the competition
+31. Pappis, I. Strategic low-cost energy investment opportunities and            between energy-storage technologies in the electricity sector.
+    challenges towards achieving universal electricity access (SDG7)             Joule 4, 2162–2184 (2020).
+    in forty-eight African nations. Environ. Res. Infrastruct. Sustain. 2,   52. Urgent deployment of existing technology can get world close
+    035005 (2022).                                                               to net aero, BloombergNEF’s new energy outlook 2024 shows.
+32. World Bank Group. Trust, priority areas, and climate concerns                BloombergNEF https://about.bnef.com/blog/urgent-deployment-
+    - context data. https://www.worldbank.org/en/programs/world-                 of-existing-technology-can-get-world-close-to-net-zero-
+    bank-country-opinion-surveys/context-data (2024).                            bloombergnefs-new-energy-outlook-2024-shows (2024).
+33. Ramachandran, V. & Nordhaus, T. Trump is quitting the Paris              53. Getting on track for net-zero by 2050 will require rapid scaling
+    Agreement. Poor countries should, too. Foreign Policy https://               of investment in the energy transition over the next ten years.
+    foreignpolicy.com/2025/01/06/trump-paris-agreement-climate-                  BloombergNEF https://about.bnef.com/blog/getting-on-track-for-
+    cop-global-south-africa-poor-countries (2025).                               net-zero-by-2050-will-require-rapid-scaling-of-investment-in-the-
+34. uYilo eMobility Programme - enabling Electric Mobility in South              energy-transition-over-the-next-ten-years (2021).
+    Africa. uYilo https://www.uyilo.org.za (2025).                           54. Sanders, M. The Rechargeable Battery Market and Main Trends
+35. Hao, H. et al. Impact of transport electrification on critical metal         2016–2025 (Avicenne Energy, 2017).
+    sustainability with a focus on the heavy-duty segment. Nat.              55. European lithium-ion battery supply will come up short despite
+    Commun. 10, 5398 (2019).                                                     investment boom. Best Magazine https://www.bestmag.co.uk/
+36. Busch, P., Chen, Y., Ogbonna, P. & Kendall, A. Effects of demand             european-lithium-ion-battery-supply-will-come-up-short-despite-
+    and recycling on the when and where of lithium extraction. Nat.              investment-boom (2024).
+    Sustain. 8, 773–783 (2025).                                              56. Ramasamy, V. et al. U.S. Solar Photovoltaic System and Energy
+37. Zeng, A. et al. Battery technology and recycling alone will not              Storage Cost Benchmarks, With Minimum Sustainable Price
+    save the electric mobility transition from future cobalt shortages.          Analysis: Q1 2023 (NREL, 2023).
+    Nat. Commun. 13, 1341 (2022).                                            57. How much do off-grid solar systems cost. Shielden https://www.
+38. Bieker, E. L., Bieker, G. & Sen, A. Electrifying road transport with         shieldenchannel.com/blogs/solar-panels/off-grid-solar-system-
+    less mining: a global and regional battery material outlook.                 cost (2025).
+    International Council on Clean Transportation https://theicct.org/       58. Kamoji, J. Off-grid solar EV charging system designed for
+    publication/ev-battery-materials-demand-supply-dec24 (2024).                 quick installation. PV Magazine https://pv-magazine-usa.
+39. International Transport Forum. New but Used: The Electric Vehicle            com/2024/02/06/off-grid-solar-ev-charging-system-designed-
+    Transition and the Global Second-hand Car Trade (2023).                      for-quick-installation (2024).
+40. Ayetor, G. K., Mbonigaba, I., Sackey, M. N. & Andoh, P. Y. Vehicle       59. Vehicle Total Cost of Ownership Model (TCOM 1.1.0)
+    regulations in Africa: impact on used vehicle import and new                 (BloombergNEF, 2022).
+    vehicle sales. Transp. Res. Interdiscip. Perspect. 10, 100384 (2021).    60. Ross, M. L., Hazlett, C. & Mahdavi, P. Global progress and
+41. Hodgson, C. & Dempsey, H. UK faces mounting stockpile of                     backsliding on gasoline taxes and subsidies. Nat. Energy 2, 16201
+    used EV batteries. Financial Times https://www.ft.com/content/               (2017).
+    cc5ef169-fac1-4af0-9b99-1edd360325e4 (2025).                             61. US Energy Information Administration. Petroleum & other
+42. Li, P. et al. Can Chinese electric vehicles meet EU batteries                liquids; https://www.eia.gov/dnav/pet/hist/LeafHandler.
+    regulation targets? A dynamic approach to assess the potential               ashx?n=pet&s=eer_epmru_pf4_y35ny_dpg&f=a (2025).
+    for recycled materials use in Chinese EV batteries. World Electr.        62. Allgoewer, L. et al. Cost-effective locations for producing fuels
+    Veh. J. 16, 342 (2025).                                                      and chemicals from carbon dioxide and low-carbon hydrogen in
+43. Wu, G., Inderbitzin, A. & Bening, C. Total cost of ownership                 the future. Ind. Eng. Chem. Res. 63, 13660–13676 (2024).
+    of electric vehicles compared to conventional vehicles: a                63. Long-term electric vehicle outlook 2024. BloombergNEF https://
+    probabilistic analysis and projection across market segments.                www.bnef.com/flagships/ev-outlook (2024).
+    Energy Policy 80, 196–214 (2015).                                        64. Nurse, S. What is the cost of insurance for electric cars in South
+44. Palmer, K., Tate, J. E., Wadud, Z. & Nellthorp, J. Total cost of             Africa? AutoTrader https://www.autotrader.co.za/cars/news-and-
+    ownership and market share for hybrid and electric vehicles in the           advice/electric-cars/what-is-the-cost-of-insurance-for-electric-
+    UK, US and Japan. Appl. Energy 209, 108–119 (2018).                          cars-in-south-africa/13985 (2024).
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                                297
+Article                                                                                            https://doi.org/10.1038/s41560-025-01955-x
+
+65. A quick guide to insuring your electric vehicle in South Africa.      Acknowledgements
+    Naked Blog https://www.naked.insure/blog/a-quick-guide-to-            B.N., D.G., T.S.S., A.P., C.B., P.K.A, I.N., T.T. and C.M. acknowledge
+    insuring-your-electric-vehicle-in-south-africa (2024).                funding from the ETH Mobility Initiative via the ESYN project (grant
+66. How much does comprehensive car insurance cost in Nigeria?            2023-HS-110 MI-05-23). We would like to thank the industrial partner
+    Guardian Nigeria https://guardian.ng/business-services/               AMAG and Dino Graf (AMAG) in particular. Additionally, we would
+    insurance/how-much-does-comprehensive-car-insurance-cost-             like to acknowledge the SPEED2ZERO initiative (T.S.S., A.P., C.B., T.T.,
+    in-nigeria/?utm_source=chatgpt.com (2025).                            C.M.), which received support from the ETH-Board under the Joint
+67. UN Environment Programme. Used Vehicles and the Environment:          Initiatives scheme.
+    A Global Overview of Used Light Duty Vehicles: Flow, Scale and
+    Regulation (2020).                                                    Author contributions
+68. Lukuyu, J., Shirley, R. & Taneja, J. Managing grid impacts from       B.N., D.G., T.S.S, A.P., C.B., T.T. and C.M. conceptualized the research and
+    increased electric vehicle adoption in African cities. Sci Rep. 14,   designed the methodology; B.N., D.G., P.K.A., I.N. and C.M. coordinated
+    24320 (2024).                                                         the data research; B.N., T.S.S., A.P., C.B. and C.M. contributed to
+69. Lanz, L., Noll, B., Schmidt, T. S. & Steffen, B. Comparing the        funding acquisition; B.N., D.G. and C.M. conducted the formal analysis
+    levelized cost of electric vehicle charging options in Europe. Nat.   and programmed the computer software; B.N. visualized the data
+    Commun. 13, 5277 (2022).                                              presentation; B.N., D.G. and C.M. wrote the original draft; all authors
+70. Briceno-Garmendia, C., Qiao, W. & Foster, V. The Economics of         contributed to the final draft including review and editing.
+    Electric Vehicles for Passenger Transport (World Bank Group,
+    2023).                                                                Funding
+71. Anderson, K. S. et al. pvlib python: 2023 project update. J. Open     Open access funding provided by Swiss Federal Institute of
+    Source Software 8, 5994 (2023).                                       Technology Zurich.
+72. Copernicus Climate Change Service, Climate Data Store. ERA5
+    hourly data on single levels from 1940 to present. https://doi.       Competing interests
+    org/10.24381/cds.adbb2d47 (2023).                                     The authors declare no competing interests.
+73. Pfenninger, S. & Staffell, I. Long-term patterns of European PV
+    output using 30 years of validated hourly reanalysis and satellite    Additional information
+    data. Energy 114, 1251–1265 (2016).                                   Supplementary information The online version
+74. Staffell, I. & Pfenninger, S. Using bias-corrected reanalysis to      contains supplementary material available at
+    simulate current and future wind power output. Energy 114,            https://doi.org/10.1038/s41560-025-01955-x.
+    1224–1239 (2016).
+75. IPCC. Climate Change 2021: The Physical Science Basis (eds            Correspondence and requests for materials should be addressed to
+    Masson-Delmotte, V. et al.) (Cambridge Univ. Press, 2021).            Bessie Noll or Christian Moretti.
+76. Bassi, S. A. et al. Updated Characterisation and Normalisation
+    Factors for the Environmental Footprint 3.1 Method (Publications      Peer review information Nature Energy thanks Quan Yuan,
+    Office of the European Union, 2023).                                  Kelvin Say, and Godwin Kafui Kwesi Ayetor for their contribution to the
+77. Dai, Q., Kelly, J. C., Dunn, J. & Benavides, P. T. Update of          peer review of this work.
+    Bill-of-Materials and Cathode Materials Production for Lithium-Ion
+    Batteries in the GREET Model (2018).                                  Reprints and permissions information is available at
+78. Sacchi, R., Bauer, C., Cox, B. & Mutel, C. When, where                www.nature.com/reprints.
+    and how can the electrification of passenger cars reduce
+    greenhouse gas emissions?. Renewable Sustain. Energy Rev. 162,        Publisher’s note Springer Nature remains neutral with regard to
+    112475 (2022).                                                        jurisdictional claims in published maps and institutional affiliations.
+79. Sacchi, R. & Bauer, C. Life cycle inventories for on-road vehicles.
+    Zenodo https://doi.org/10.5281/zenodo.7788737 (2021).                 Open Access This article is licensed under a Creative Commons
+80. Ingwersen, A. et al. Prospective life cycle assessment                Attribution 4.0 International License, which permits use, sharing,
+    of cost-effective pathways for achieving the FuelEU                   adaptation, distribution and reproduction in any medium or format,
+    maritime regulation targets. Sci. Total Environ. 958, 177880          as long as you give appropriate credit to the original author(s) and the
+    (2025).                                                               source, provide a link to the Creative Commons licence, and indicate
+81. European Commission. Performance of Grid-Connected PV.                if changes were made. The images or other third party material in this
+    Photovoltaic Geographical Information System (2024).                  article are included in the article’s Creative Commons licence, unless
+82. Moretti, C., Moro, A., Edwards, R., Rocco, M. V. & Colombo, E.        indicated otherwise in a credit line to the material. If material is not
+    Analysis of standard and innovative methods for allocating            included in the article’s Creative Commons licence and your intended
+    upstream and refinery GHG emissions to oil products. Appl.            use is not permitted by statutory regulation or exceeds the permitted
+    Energy 206, 372–381 (2017).                                           use, you will need to obtain permission directly from the copyright
+83. Noll, B., Graff, D. & Moretti, C. Supplementary code:                 holder. To view a copy of this licence, visit http://creativecommons.
+    battery-electric passenger vehicles to become cost-effective          org/licenses/by/4.0/.
+    across Africa well before 2040. Zenodo https://doi.org/10.5281/
+    zenodo.15132262 (2025).                                               © The Author(s) 2026
+
+
+
+
+Nature Energy | Volume 11 | February 2026 | 284–298                                                                                              298
+

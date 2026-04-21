@@ -1,0 +1,1438 @@
+   THE ROLE OF CHARGING INFRASTRUCTURE
+
+   AND INCENTIVES ON THE ADOPTION OF
+
+ELECTRICAL VEHICLES IN THE UNITED STATES
+
+
+
+
+                   Edward Shevchenko
+
+             University of the Incarnate Word
+
+
+
+
+                         1
+                                            Abstract
+
+
+Adoption measures are shown to be necessary for market formation by examining policies and
+
+their implementation. Such approaches could aid the spread of innovations and overcome market
+
+failures that impede the acceptance of innovative products like Electric Vehicles (EV), which are
+
+becoming increasingly popular. This study will examine the role of charging infrastructure and
+
+incentives on the adoption of EV in the United States. In exploring EV adoption, charging
+
+infrastructure and incentives, brief reviews of past literature were examined. In addition to this,
+
+the proposed research purpose and objectives were introduced, as the study would involve the use
+
+of four objectives and three research questions. The research methodology section provided an
+
+overview of the research design; this research will employ the use of secondary data; the secondary
+
+data will be taken from data.gov.
+
+
+
+
+                                                2
+                                           Introduction
+
+        According to the International Energy Agency [IEA] (2013), the transportation sector
+
+accounts for 23% of worldwide energy-related greenhouse gas (GHG) emissions. If unchecked,
+
+these emissions are anticipated to more than double by 2050 under the business-as-usual scenario
+
+(Sims et al., 2014). Such a trajectory raises pressing concerns given the accelerating pace of global
+
+climate change and its associated adverse impacts, such as rising sea levels, extreme weather
+
+events, and disruptions to ecosystems.
+
+
+        Light-duty vehicles (LDVs) form a significant portion of the transportation sector and are
+
+consequently a primary contributor to these emissions. Their pervasive role in daily commutes,
+
+coupled with the dominant reliance on gasoline and diesel fuels, makes them a crucial segment to
+
+target for environmental and sustainability improvements.
+
+
+        In the United States, the transportation landscape has been undergoing a paradigm shift
+
+over the past decade. Electric Vehicles (EVs), once considered a niche segment, are now at the
+
+forefront of this transformation, positioned as a leading solution to address the environmental
+
+challenges. Their potential to operate without direct GHG emissions, coupled with advancements
+
+in battery technology and renewable energy sources, positions EVs as a sustainable alternative for
+
+the future.
+
+
+        The adoption of EVs in the US is also influenced by the availability and distribution of
+
+charging infrastructure. As of the latest data, California leads the nation with approximately 13,892
+
+charging stations, followed by states like New York, Florida, and Texas. The widespread
+
+availability of Level 2 Charging stations, making up 82.7% of the total, indicates the focus on
+
+
+
+
+                                                 3
+providing daily charging solutions for EV users. On the other hand, DC Fast Charging stations,
+
+crucial for long-distance travel and quick charging, make up 16.2% of the infrastructure.
+
+
+       To fully understand the impact of charging infrastructure and incentives on EV adoption,
+
+this study dives deep into the current state of EV infrastructure, its distribution across states, and
+
+the types of charging options available.
+
+
+                                            Literature Review
+
+
+Demands for Electric Vehicles
+
+
+       Although most EV owners recharge their vehicles at home overnight, potential buyers
+
+demand improved infrastructure because of their perceived need and fear of running out of power
+
+(Deloitte, 2011). While high purchase subsidies are desirable but not necessary for attracting EV
+
+customers regardless of daily average distances traveled, extensive global research using a "stated
+
+choice" survey has shown that lack of a recharging network, especially on freeways, caused the
+
+strongest dissatisfaction among survey participants. An updated poll confirms this finding and
+
+shows that British drivers (mostly those driving ICVs) are more concerned about the availability
+
+of rechargers in their neighborhood and the vehicle's range than they are about the cost of the car
+
+(UK DfT, 2016).
+
+
+       Many developed countries have put policies and strategies in place to encourage people to
+
+buy electric vehicles, but some have been more successful than others. Market uptake is an
+
+important indicator of EV acceptance since it can be used regardless of the size of the population,
+
+the location of the country, or the level of national wealth. It is also evident in Denmark that the
+
+cost of EVs should not be prohibitively high compared to conventional vehicles. As of 2015, 2.39%
+
+of all new cars sold in Denmark were electric vehicles (EVs). However, a governmental decision
+                                                  4
+to partially re-impose registration fee in 2016, with full tax by 2020, resulted in high EV sales in
+
+late 2015 as sales were rushed forward, and sales fell quickly to 0.63% for 2016 (Wenande, 2016).
+
+
+       Many countries have implemented required vehicle emissions reduction objectives that
+
+have taken stricter over time to stimulate the use of electric vehicles (European Commission
+
+Climate Action, 2016). One of the most notable things about the recent fuel economy cheating
+
+scandals involving major automobile manufacturers is the fact that several of these companies
+
+were caught cheating on fuel economy tests (Farrell, 2016). In Europe, automotive emissions are
+
+averaged throughout a brand; therefore, producing more EVs could be an easier method for a brand
+
+to satisfy its emissions requirements (European Commission Climate Action, 2016). Volkswagen's
+
+decision to increase its EV production following the company's pollution issue serves as an
+
+excellent example (Cremer, 2016).
+
+
+EV and Charging Infrastructures
+
+
+       Even though governments may view the deployment of recharge stations as an expensive
+
+infrastructure investment, recent modeling shows that it is three times more successful than
+
+subsidizing EV purchases because of indirect network effects on the supply and demand sides of
+
+a market (Yu, Li, & Tong, 2016). An extensive network of rapid chargers was shown to be the
+
+most efficient method of supplementing overnight charging at home in the United Kingdom
+
+(Cluzel et al., 2013). In many countries, the lack of suitable recharging networks may be a
+
+contributing factor to the limited penetration of electric vehicles. In countries that are encouraging
+
+the widespread use of electric vehicles, financial assistance is typical, particularly for public
+
+charging stations (OECD 2015).
+
+
+
+
+                                                  5
+       The ability of motorists to travel long distances is dependent on a well-distributed network
+
+of charging stations across the country. According to Gerdes (2013), Estonia was the first country
+
+in the world to have fast chargers installed on every main route and in every town with a population
+
+of more than 5,000 people (ELMO, 2014). To encourage the use of electric vehicles, public
+
+rechargers – whether wirelessly conductive charging or plug-in – should be positioned in an area
+
+that is easily accessible to all drivers. Even with long-range ICVs, there is a demand for well-
+
+placed refueling stations, based on the current frequency and dispersion of gas stations.
+
+
+       There are several internet applications (e.g., Next Green Car, 2015a) that provide
+
+information on EV charging station locations, although the accuracy of this data varies from
+
+country to country. As an example, in Belgium (IEA, 2016c), the lack of centralization of
+
+information on recharger locations means that internet applications may be out of date and
+
+erroneous, which discourages potential EV customers. The lack of standardization and regulation
+
+throughout recharge networks can further impede greater market penetration (Steinhilber et al.,
+
+2013). Although there are seven national and ten regional members-only recharge networks in the
+
+UK, there is a limit to how many chargers each individual driver can access for reasonable prices
+
+(Next Green Car, 2016).
+
+
+       Limiting EV drivers' mobility across borders is made more difficult due to the above-
+
+mentioned issues. The ability of a car's recharge technology system to interact and work with that
+
+of a recharge station and its billing system must be improved through interoperability
+
+improvements (Bakker, 2013). For example, Governor E. G. Brown (2012) issued Executive
+
+Orders encouraging the use of zero emission vehicles, including charging stations, and the
+
+California Senate (2013) passed the Interoperability Electric Vehicle Charging Stations Open
+
+
+
+                                                 6
+Access Act, which makes it easier for EV charging stations to be installed and makes them more
+
+user-friendly.
+
+
+         Electric vehicles can be charged at any public charging station that accepts credit cards,
+
+without the need for membership in a specific network. Tenants in multi-family buildings, as well
+
+as those who work in multi-family buildings, can now have a recharger installed in their building
+
+under new legislation (passed by the 2014 California State Assembly) (Shahan, 2014). Electricity
+
+consumed by multi-tenant building rechargers can now be paid separately due to legislation and
+
+technological advancements (Simpson, 2015). As a result of the former, Californian communities
+
+have become some of the most aggressive adopters of electric vehicles in the US (Lutsey et al.,
+
+2015).
+
+
+         As non-standard recharge fittings are increasingly removed, initial measures toward
+
+interoperability, harmonization, and standardization of recharge fittings are ongoing (AVERE,
+
+2013). The transition from fundamental research to actual use of a new technology has traditionally
+
+been considered as a six-stage linear process (Bijker, Hughes, & Pinch, 1987). It is more likely
+
+that the process is multi-factored and sophisticated (OECD, 2015), however, in the literature on
+
+theories of innovation and transition, academics have failed to reach an agreement, showing that
+
+no single theory can explain such transitions completely (Garcia & Calantone, 2002). It is possible
+
+to explain why new products are not embraced globally by looking at two concepts: diffusion of
+
+innovations theory (Rogers, 2003) and market failures (Bator, 1958), as well as government
+
+responses to these notions.
+
+
+
+
+                                                 7
+EV and its Adoption
+
+
+       Adoption measures are shown to be necessary for market formation by examining policies
+
+and their implementation. Such approaches could aid the spread of innovations and overcome
+
+market failures that impede the acceptance of innovative products like EVs which are becoming
+
+increasingly popular. Incomplete markets resulting from a lack of customer knowledge are one
+
+possible cause of market failures as well as the absence of required concomitant factors
+
+(Boundless, 2016). The adoption of new technologies can be aided by policies put in place by
+
+governments. Legislative, market-based, or informational approaches to policymaking are all
+
+viable options (Dovers & Hussey, 2013). Market-formation policies, for example, may help EV
+
+sales grow in proportion (Vergis et al., 2014).
+
+
+       EV adoption has been mostly aided by fiscal policies, but other measures like as direct
+
+incentives, informational campaigns, and regulatory alterations have also been supported,
+
+particularly those pertaining to the availability of recharger networks (OECD, 2015). Car buyers
+
+are affected in a variety of ways by these policies. According to recent modeling (Harrison &
+
+Thiel, 2017), significant purchase incentives in Europe will not lead to market success if plans to
+
+expand recharge infrastructure are not implemented. In addition, laws with long-term fleet
+
+emissions targets for car makers were shown to be necessary for encouraging the transition away
+
+from fossil powered transportation.
+
+
+Incentives and EV Adoption
+
+
+       Incentives to purchase electric vehicles are critical to promoting their use. A study by
+
+Sierzchula et al. (2014) found that the number of charging stations per head of population is the
+
+most important factor in influencing the adoption of electric vehicles in 30 nations. Many factors
+
+
+                                                  8
+influence EV uptake, but countries like the United States show that it is not uniform. These include
+
+vehicle purchasing subsidies, model availability, city-level publicity promotions, and easy access
+
+to public electric charging stations (Lutsey et al., 2015). The European Parliament and the Council
+
+of the European Union have issued several directives to encourage the use of electric vehicles,
+
+including setting emission reduction targets and encouraging the use of renewable energy sources
+
+(European Parliament & the Council of the European Union, 2014).
+
+
+       Though current research suggests that EVs will only become more popular if they are
+
+priced competitively with ICVs, financial incentives appear to be key in market creation.
+
+According to earlier statements, EVs are more expensive than comparable ICVs. To combat
+
+consumer distaste for high EV prices, government incentives can be used to stimulate the adoption
+
+of EVs (Mock & Yang, 2014). According to a study that found tax waivers at time of purchase to
+
+be more beneficial than deferred income tax credits, customers value the convenience and speed
+
+of application of incentives more than their generosity (Gallagher & Muehlegger, 2011). When it
+
+comes to monetary incentives, Diamond (2009) argued that payments are more successful, but if
+
+these subsidies are integrated into the price schedules of vehicle dealers, these incentives could be
+
+subsidies.
+
+
+       Reduced vehicle prices and more extensive soft incentives including free battery charging,
+
+free parking in public car parks and exemptions from road and public ferry tolls were offered in
+
+Norway, which has the highest number of rechargers per million populations (Lutsey, 2015). These
+
+incentives boosted sales of BEVs and were more generous than those granted in other European
+
+countries (Bjerkan, Nrbech & Nordtmme, 2016). There was less impact on sales than incentives
+
+and proper infrastructure, although toll exemptions were the most cost-effective soft incentives
+
+available (Fearnley et al., 2015). Norway's incentives for EVs have been shown to be effective by
+
+                                                 9
+comparing the country's low adoption of EVs (until 2016). Since 2013, various financial incentives
+
+have been offered to EVs (EV Norway, 2016), which along with the increasing number of EV
+
+models on the market may explain the following rise in popularity of EVs there (EV Norway,
+
+2016).
+
+
+         Since the Diffusion of Innovations Theory (Rogers, 1983) states, EVs now appeal to the
+
+"early majority" in Norway, not just "innovators" and "early adopters," as they accounted for
+
+nearly 30% of the country's new car sales in 2016. A large purchase incentive is not the only thing
+
+that encourages consumers of electric vehicles (IEA, 2016b). Norway was the best-paying and
+
+most successful market in the world. According to a report by the International Energy Agency
+
+(IEA), in 2015, other nations (including China, France, and United States) offered the same or
+
+more financial incentives per vehicle.
+
+
+Research Problem
+
+
+         Electric vehicle (EV) adoption in the 2000s was influenced by a variety of factors,
+
+including high occupancy vehicle (HOV) lane access, environmental activism, federal tax
+
+subsidies, state-level sales tax waivers, fuel prices, income, and age (Diamond, 2008a; Diamond
+
+2008b). EVs also require public charging stations to be more widely used, in addition to these
+
+other criteria (Zhou et al., 2016). Research utilizing ex-ante survey data shows that there is a lack
+
+of awareness about governmental incentives, high upfront costs, long recharge times, and range
+
+anxiety of owning EVs, notably in the United States (Helveston et al., 2015).
+
+
+         Previous studies have indicated that in other developed nations, adoption of EVs is
+
+enhanced through the decrease in the cost of batteries, use of policy incentives and the selling of
+
+EVs with tiny and less expensive batteries (Axsen and Kurani, 2013). Incentivizing infrastructure
+
+                                                 10
+building coupled with tax incentives and other non-monetary benefits could considerably improve
+
+adoption (Jin et al., 2014). EV adoption is however hindered by technological and contextual
+
+variables such as inadequate or high cost of charging infrastructure in other developed countries
+
+of the world (Sierzchula et al., 2014).
+
+
+       Charging infrastructure meets the needs of electric vehicle owners while also easing the
+
+anxieties of potential buyers about their vehicles' operating ranges. This intrinsic endogeneity
+
+between charging infrastructure and EV adoption makes it difficult to estimate the value of
+
+investments in charging infrastructure alongside consumer tax incentives, as demonstrated by
+
+existing approaches (Yhang et al., 2016).
+
+
+       Electric vehicle (EV) adoption in the 2000s was influenced by a variety of factors,
+
+including high occupancy vehicle (HOV) lane access, environmental activism, federal tax
+
+subsidies, state-level sales tax waivers, fuel prices and income (Diamond, 2008a; Diamond 2008b).
+
+EVs also require public charging stations to be more widely used, in addition to these other criteria
+
+(Zhou et al., 2016). Research utilizing ex-ante survey data shows that there is a lack of awareness
+
+about governmental incentives, high upfront costs, recharge station scarcity, long recharge times
+
+and range, create anxiety of owning EVs (Helveston et al., 2015).
+
+
+       Incentivizing infrastructure building coupled with tax incentives and other non-monetary
+
+benefits could considerably improve adoption (Jin et al., 2014). EV adoption is however hindered
+
+by technological and contextual variables such as inadequate or high cost of charging infrastructure
+
+in other developed countries of the world (Sierzchula et al., 2014).
+
+
+
+
+                                                 11
+Research Questions
+
+
+       This study will seek to provide answers to the following questions:
+
+I. Does the adoption of EV in the USA increase with higher access to charging infrastructure and
+
+other incentives?
+
+II. If the charging infrastructure and other incentives have a positive impact on adoption of EV,
+
+what is the current expected estimated impact of each on the strategies on EV purchases?
+
+III. Do other strategies present a positive association on the adoption of EV in the United States?
+
+
+
+Purpose and Objectives
+
+Purpose
+
+
+       This study aims at examining the role of charging infrastructure and incentives on the
+
+adoption of EV in the United States.
+
+
+Objectives of the Study
+
+
+The objectives of the study are to:
+
+
+I. Examine the level of EV adoption in the United States.
+
+II. Evaluate the impacts of charging infrastructure on the adoption of EV in the United States.
+
+III. Examine the impacts of incentives on the adoption of EV in the United States.
+
+IV. Identify other strategies that can be used to improve the adoption of EV in the United States.
+
+
+
+
+                                                12
+           Research Hypotheses
+
+
+    The following hypotheses will be tested in the study:
+
+
+    H1: Charging infrastructure has a significant impact on the adoption of EV in the United States.
+
+    H2: Incentives have a significant impact on the adoption of EV in the United States.
+
+
+
+    Research Methodology
+
+    Methodology
+
+
+           In this study, the primary objective was to explore the relationship between the number of
+
+    registered electric vehicles (EVs) and the prevalence of EV charging stations across various states.
+
+    A combination of statistical and analytical techniques was utilized to dissect the dataset and discern
+
+    underlying patterns. The following methodological steps were undertaken:
+
+1. Data Collection and Preprocessing:
+
+•   Source Selection: Datasets from multiple states were chosen, ensuring they encompassed
+
+    pertinent details about registered EVs and the corresponding EV charging stations.
+
+•   Data Cleaning: A meticulous cleaning process was executed, addressing missing values,
+
+    eliminating duplicates, and asserting uniformity in data representation.
+
+•   Data Aggregation: Metrics of interest, such as total EV registrations and total charging stations
+
+    per state, were collated for further analysis.
+
+2. Descriptive Statistics:
+
+•   This initial analytical step was employed to glean a rudimentary understanding of the dataset.
+
+•   Measures of central tendency, including mean and median, shed light on typical values.
+
+•   Dispersion metrics, such as standard deviation, offered a view into the data's spread and variability.
+
+
+                                                     13
+3. Correlation Analysis:
+
+•   This technique was utilized to gauge the strength and direction of the linear relationship between
+
+    EV registrations and the number of charging stations.
+
+•   The correlation coefficient elucidated if an increase in charging stations was associated with a rise
+
+    in EV registrations or vice versa.
+
+4. Linear Regression:
+
+•   A linear regression model was adopted to predict the number of EV registrations based on the
+
+    existing charging stations.
+
+•   This model facilitated insights into the proportion of variability in EV registrations that could be
+
+    attributed to the variance in charging stations.
+
+•   The resulting regression equation served as a mathematical representation of this relationship.
+
+5. Distribution Analysis:
+
+•   Histograms and density plots were crafted to visually inspect the distribution of the primary
+
+    variables.
+
+•   This step was instrumental in discerning if the data conformed to any known distributions and in
+
+    detecting potential skews.
+
+6. Outlier Analysis:
+
+•   The Interquartile Range (IQR) approach was used to identify potential anomalies within the
+
+    dataset.
+
+•   Recognizing these outliers was pivotal, as they might disproportionately influence the study's
+
+    outcomes.
+
+7. Chi-Square Test:
+
+
+
+
+                                                       14
+•   Owing to the numeric nature of the dataset, it was transformed into categorical subsets (e.g.,
+
+    "High", "Medium", "Low").
+
+•   The Chi-Square test was then applied to ascertain the independence between these subsets, helping
+
+    determine potential associations.
+
+           Throughout the analytical journey, the validity of the results was maintained by
+
+    consistently cross-referencing findings and adhering to rigorous statistical checks. The selection
+
+    of analytical tools was informed by the dataset's characteristics and the specific research inquiries
+
+    the study sought to address.
+
+
+
+    Results
+
+    1. Distribution of Electric Charging Stations Across States
+
+    In this research, the datasets encompassing various states revealed interesting patterns and
+
+    relationships between the number of registered electric vehicles (EVs) and the number of EV
+
+    charging stations. The results are detailed below:
+
+1. Descriptive Statistics:
+
+•   Within the examined states, the average number of EV registrations stood at approximately
+
+    420,368 vehicles. The variability, as measured by the standard deviation, was around 491,962
+
+    vehicles. On the charging infrastructure front, states boasted an average of about 3,059 stations,
+
+    with a standard deviation of 5,321 stations.
+
+2. Correlation Analysis:
+
+•   A correlation analysis was conducted to gauge the strength of the relationship between EV
+
+    registrations and charging stations. A moderate positive correlation coefficient of 0.667 emerged
+
+    from this analysis. This coefficient suggests that states with higher numbers of registered EVs also
+
+
+
+                                                     15
+    tend to have more charging stations and vice versa. However, it's vital to note that correlation does
+
+    not imply causation.
+
+3. Linear Regression:
+
+•   A linear regression model was devised to understand the predictive relationship between the
+
+    number of charging stations and EV registrations. The derived regression equation was:
+
+    Predicted EV Registrations=61.70×EV Stations+231,621.68Predicted EV Registrations=61.70×
+
+    EV Stations+231,621.68 The R-squared value obtained was 44.5%, indicating that the number of
+
+    charging stations could explain approximately 44.5% of the variability observed in EV
+
+    registrations.
+
+4. Distribution Analysis:
+
+•   The distributions of both EV registrations and charging stations were inspected visually. Notably,
+
+    both distributions demonstrated a skew. A few states, like California, exhibited significantly higher
+
+    counts than others.
+
+5. Outlier Analysis:
+
+•   An analysis was conducted to identify potential outliers using the Interquartile Range (IQR)
+
+    methodology. Notably, California emerged as an outlier, especially regarding its charging station
+
+    count, indicating its exceptional emphasis on EV infrastructure.
+
+6. Chi-Square Test:
+
+•   To understand categorical relationships, the dataset was converted into subsets (e.g., "High",
+
+    "Medium", "Low"). The resulting Chi-Square test yielded a p-value of 0.1991, suggesting no
+
+    significant association between the categorized numbers of EV registrations and charging stations.
+
+            Let's visualize some of these findings through graphs:
+
+
+
+
+                                                     16
+           Here are the visual representations of some of the key findings:
+
+1. Distribution of EV Registrations (Top Left): This histogram showcases the distribution of EV
+
+   registrations across the states. A clear skew is evident, with a few states having remarkably high
+
+   numbers of registrations compared to others.
+
+2. Distribution of EV Charging Stations (Top Right): A similar skew is observed in the distribution
+
+   of EV charging stations. One state has a significantly higher number of charging stations.
+
+3. Correlation between EV Registrations and Charging Stations (Bottom Left): This scatter plot,
+
+   complemented by a regression line, depicts the relationship between the number of EV
+
+   registrations and charging stations. The positive slope of the regression line confirms the positive
+
+   correlation observed in the analysis.
+
+
+
+
+                                                   17
+4. Boxplot for Outlier Analysis (Bottom Right): This boxplot is instrumental in identifying potential
+
+   outliers in the dataset. The boxplot for EV charging stations distinctly identifies California as an
+
+   outlier, confirming the findings from the IQR methodology.
+
+           In conclusion, the study's results shed light on the relationship between the prevalence of
+
+   EVs and the availability of charging infrastructure in various states. While certain patterns, such
+
+   as the positive correlation, are discernible, it's crucial to interpret these results in the context of the
+
+   study's limitations and the inherent variability across states in terms of policies, incentives, and
+
+   infrastructure development.
+
+           Our analysis revealed a varied distribution of electric charging stations across states. States
+
+   like California, New York, and Florida led the nation in terms of the number of EV charging
+
+   stations, suggesting a robust infrastructure in these regions.
+
+
+
+
+           The line chart visualizes the growth of EV charging stations in the United States over time.
+
+   Here are some key observations:
+
+
+                                                       18
+         There's been a consistent growth in the number of EV charging stations since the early
+
+2010s.
+
+         A significant increase is observed around the mid-2010s, suggesting a turning point or
+
+acceleration in the adoption and infrastructure development for EVs.
+
+         The growth seems to be steady in the recent years, emphasizing the continued interest and
+
+investment in EV infrastructure.
+
+         This trend showcases the increasing commitment to EVs and the recognition of their
+
+importance in achieving sustainability and environmental goals.
+
+
+
+         2. Types of Charging Infrastructure
+
+         Nationally, Level 2 Charging stations emerged as the predominant type, making up 82.7%
+
+of all stations. DC Fast Charging stations, essential for long-distance travel, made up 16.2%, while
+
+Level 1 Charging stations formed a minor 2.8%. The stacked bar chart vividly displays the
+
+distribution     of     charging     infrastructure    types     in    the     top     5     states:
+
+
+
+
+                                                 19
+•   California (CA) stands out with a substantial number of all types of charging stations. The sheer
+
+    volume of Level 2 Charging stations in California emphasizes the state's commitment to fostering
+
+    daily EV use.
+
+•   For all states, Level 2 Charging stations are the most prevalent, acting as the backbone of the EV
+
+    charging infrastructure.
+
+•   Florida (FL) and Texas (TX) have a notable number of DC Fast Charging stations, emphasizing
+
+    the importance of rapid charging solutions, especially for long-distance travel.
+
+
+
+           3. Temporal Growth of EV Charging Stations
+
+           An analysis of the growth trends revealed a consistent rise in the number of EV charging
+
+    stations since the early 2010s. There was a noticeable spike in growth around the mid-2010s,
+
+    indicating a potential turning point in EV adoption and infrastructure development.
+
+           4. Charging Infrastructure by State
+
+           A deeper dive into the top states showcased the distribution of charging infrastructure
+
+    types. California had a substantial lead across all types, reflecting its pioneering role in EV
+
+    adoption.
+
+
+
+           Research Strategy and Data Collection
+
+
+           Secondary Research
+
+
+           This research will employ the use of secondary data; the secondary data will be taken from
+
+    data.gov. The data will be collected on level of registration of EV in the United States, EV’s
+
+    charging infrastructure and incentives in the United States as well as other strategies that can be
+
+    used to foster the adoption of EVs in the United States. Existing literatures from several sources
+
+                                                    20
+   will be collected, recent and credible literatures related to the study will be taken from online
+
+   articles, reports, journals, textbooks, magazines, reports, news, and publications etc will be
+
+   reviewed and corroborated.
+
+
+           Ethical Considerations:
+
+
+           When conducting research, especially involving data collection and analysis, it's
+
+   paramount to uphold the highest ethical standards to ensure the integrity of the study and the
+
+   protection of all stakeholders involved.
+
+
+1. Data Privacy and Anonymity: In this study, datasets from various states were utilized taken from
+
+   data.gov. It's crucial to note that no personal or identifiable information was used or accessed. All
+
+   data points represent aggregated values, ensuring the anonymity of individuals or entities.
+
+
+2. Transparency: Every effort was made to transparently present the methodology and results. All
+
+   analytical decisions, including data preprocessing steps and statistical methods employed, have
+
+   been explicitly detailed to allow for reproducibility and scrutiny.
+
+
+3. Objectivity and Bias: The research was approached with objectivity, ensuring that no
+
+   preconceived notions or biases influenced the analysis or interpretation of results. Any limitations
+
+   or potential sources of bias in the dataset or methodology have been acknowledged.
+
+
+4. Use of Public Data: The datasets used are publicly accessible, ensuring that there's no breach of
+
+   proprietary or confidential information.
+
+
+           Significance of the Study and Conclusion:
+
+
+           The rise of electric vehicles represents a pivotal shift in transportation, with implications
+
+   for environmental sustainability, energy consumption, and urban planning. This study's
+
+                                                    21
+   significance lies in its exploration of the relationship between the prevalence of EVs and the
+
+   availability of charging infrastructure—a key factor influencing EV adoption.
+
+
+1. Insights for Policymakers and Stakeholders: Understanding the dynamics between EV
+
+   registrations and charging stations can inform policies, incentives, and infrastructure development
+
+   initiatives. Policymakers can leverage these insights to accelerate EV adoption and meet
+
+   sustainability goals.
+
+
+2. Highlighting Regional Variabilities: The study underscores the variabilities across states, with
+
+   certain regions leading in both EV adoption and infrastructure development. Such insights can
+
+   serve as benchmarks for other regions.
+
+
+3. Laying Groundwork for Future Research: This study serves as a foundation for more extensive
+
+   research. Future studies can incorporate additional variables like state policies, incentives,
+
+   urbanization rates, and public sentiment towards EVs to provide a more holistic picture.
+
+
+           In conclusion, while the correlation between EV registrations and charging stations is
+
+   evident, it's crucial to approach this relationship with nuance. The dynamics at play are
+
+   multifaceted, influenced by a myriad of factors ranging from technological advancements to public
+
+   policies. As the world moves towards a more sustainable future, research like this becomes
+
+   invaluable in guiding decisions and strategies in the realm of transportation and energy.
+
+
+
+
+                                                   22
+                                               References
+
+
+Alternative Fuels Data Center (AFDC). (2016b). “Laws and Incentives”..
+
+https://www.afdc.energy.gov/laws/search
+
+
+Anderson, P. and Tushman, M. L. (1990). Technological discontinuities and dominant designs:
+
+A cyclical model of technological change. Administrative science quarterly, pp.604-633
+
+
+AVERE. (2013). First EU-US Interoperability Centre for electric vehicles and smart grids
+
+inaugurated. Retrieved from
+
+http://avere.org/www/newsMgr.php?action=view&frmNewsId=646&section=9&type=4
+
+
+Axsen, J. and Kurani, K.S., (2013). Hybrid, plug-in hybrid, or electric—What do car buyers
+
+want?. Energy Policy, 61, pp.532-543. doi.org/10.1016/j.enpol.2013.05.122
+
+
+Bakker, S. (2013). Standardization of EV Recharging Infrastructures. E-mobility NSR, Electric
+
+Mobility Network, EU Regional Development. Delft. Retrieved from
+
+http://archive.northsearegion.eu/files/repository/20140805153226_StandardizationofEVRechargi
+
+nginfrastructure.pdf
+
+
+Bakker, S., & Jacob T. J. (2013). Policy options to support the adoption of electric vehicles in the
+
+urban environment. Transportation Research Part D: Transport and Environment, 25, 18–23.
+
+https://doi.org/10.1016/j.trd.2013.07.005
+
+
+Bator, F. M. (1958). The Anatomy of Market Failures. Quarterly Journal of Economics, 72(3),
+
+351–379. Retrieved from https://courses.cit.cornell.edu/econ335/out/bator_qje.pdf
+
+
+
+
+                                                23
+Bijker, W. E., Hughes, T. P., & Pinch, T. J. (Eds). (1987). The Social Construction of
+
+Technological Systems – new directions in the sociology and history of technology, (1st ed.).
+
+Cambridge MA US: MIT Press.
+
+
+Bjerkan, K. Y., Nørbech, T. E. and Nordtømme, M. E., (2016). Incentives for promoting battery
+
+electric vehicle (BEV) adoption in Norway. Transportation Research Part D: Transport and
+
+Environment, 43, pp.169-180. doi.org/10.1016/j.trd.2015.12.002
+
+
+Boundless. (2016). Defining Market Failure. Retrieved February 22, 2017, from
+
+https://www.boundless.com/economics/textbooks/boundless-economics-textbook/market-failure-
+
+externalities-7/introducing-market-failure-57/defining-market-failure-218-12309/
+
+
+Bu, C. (2015). The Norwegian EV - success, and what happens when sales are getting high.
+
+Retrieved from http://www.evs28.org/event_file/event_file/1/pfile/Norwegian EV Association,
+
+C.B. EVS28.pdf
+
+
+California Assembly. AB 2565, Muratsuchi. Rental property: electric vehicle charging stations
+
+(2014). US. Retrieved from
+
+https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201320140AB2565
+
+
+California Senate. Electric Vehicle Charging Stations Open Access Act (2013). Retrieved from
+
+http://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201320140SB454
+
+
+Carley, S., Krause, R. M., Lane, B. W. and Graham, J. D. (2013). Intent to purchase a plug-in
+
+electric vehicle: A survey of early impressions in large US cites. Transportation Research Part D:
+
+Transport and Environment, 18, pp.39-45. doi.org/10.1016/j.trd.2012.09.007
+
+
+
+
+                                               24
+Cluzel, C., Standen, E., Lane, B., & Anable, J. (2013). Pathways to high penetration of electric
+
+vehicles - Report prepared for Committee on Climate Change. Cambridge. Retrieved from
+
+https://www.theccc.org.uk/wp-content/uploads/2013/12/CCC-EV-pathways_FINAL-
+
+REPORT_17-12-13-Final.pdf
+
+
+Cremer, A. (2016). VW bets on electric cars, services to recover from crisis. Retrieved June 20,
+
+2016, from http://www.reuters.com/article/us-volkswagen-strategy-idUSKCN0Z217C
+
+
+Deloitte. (2011). Unplugged: Electric vehicle realities versus consumer expectations. Retrieved
+
+from http://www2.deloitte.com/us/en/pages/manufacturing/articles/unplugged-electric-vehicle-
+
+realities-vesrus-consumer-expectations.html
+
+
+Diamond, D. (2008a). Impact of high occupancy vehicle (HOV) lane incentives for hybrids in
+
+Virginia. Journal of Public Transportation, 11(4), p.3. doi.org/10.5038/2375-0901.11.4.3
+
+
+Diamond, D. (2009). The impact of government incentives for hybrid-electric vehicles: Evidence
+
+from US states. Energy Policy, 37(3), 972–983. https://doi.org/10.1016/j.enpol.2008.09.094
+
+
+Diamond, D. B. (2008b). Public policies for hybrid-electric vehicles: The impact of government
+
+incentives on consumer adoption. George Mason University.
+
+
+Dovers, S., & Hussey, K. (2013). Environment and Sustainability: a policy handbook (2nd ed.).
+
+Sydney: The Federation Press.
+
+
+ELMO. (2014). Electric Mobility in Estonia. Retrieved May 9, 2016, from http://elmo.ee/elmo/
+
+
+Eppstein, M. J., Grover, D. K., Marshall, J. S. and Rizzo, D. M. (2011). An agent-based model to
+
+study market penetration of plug-in hybrid electric vehicles. Energy Policy, 39(6), pp.3789-3802.
+
+doi.org/10.1016/j.enpol.2011.04.007
+
+                                                25
+European Commission Climate Action. (2016). Reducing CO2 emissions from passenger cars.
+
+Retrieved May 5, 2016, from
+
+http://ec.europa.eu/clima/policies/transport/vehicles/cars/index_en.htm
+
+
+European Commission. (2017). European alternative fuels observatory. Retrieved February 2,
+
+2017, from http://www.eafo.eu/countries
+
+
+EV Norway. (2016). Norway’s EV future: Cars are here to stay: but emissions are not. Retrieved
+
+May 6, 2016, from http://www.evnorway.no/#/future
+
+
+Farrell, S. (2016, April 20). Mitsubishi Motors admits manipulating fuel economy tests.
+
+Retrieved May 9, 2016, from https://www.theguardian.com/business/2016/apr/20/mitsubishi-
+
+motors-mishandled-fuel-economy-tests
+
+
+Fearnley, N., Pfaffenbichler, P., Figenbaum, E., & Jellinek, R. (2015). E-vehicle policies and
+
+incentives - assessment and recommendations: TOI Report 1421/2015. Oslo. Retrieved from
+
+https://www.toi.no/getfile.php?mmfileid=41187
+
+
+Figenbaum, E., & Kolbenstvedt, M. (2016). Learning from Norwegian Battery Electric and Plug-
+
+in Hybrid Vehicle Users Report 1492/2016. Oslo. Retrieved from
+
+https://www.toi.no/getfile.php?mmfileid=43161
+
+
+Figenbaum, E., Kolbenstvedt, M., & Elvebakk, B. (2014). Electric vehicles - environmental ,
+
+economic and practical aspects - as seen by current and potential users. Oslo. Retrieved from
+
+https://www.toi.no/getfile.php/Publikasjoner/TØI rapporter/2014/1329-2014/1329-2014-el.pdf
+
+
+Fulton, L., Lah, O. and Cuenot, F. (2013). Transport pathways for light duty vehicles: towards a
+
+2 scenario. Sustainability, 5(5), pp.1863-1874. doi.org/10.3390/su5051863
+
+                                                26
+Gallagher, K. S. and Muehlegger, E. (2011). Giving green to get green? Incentives and consumer
+
+adoption of hybrid vehicle technology. Journal of Environmental Economics and management,
+
+61(1), pp.1-15. doi.org/10.1016/j.jeem.2010.05.004
+
+
+Garcia, R., & Calantone, R. (2002). A critical look at technological innovation typology and
+
+innovativeness terminology: a literature review. Journal of Product Innovation Management,
+
+19(2), 110–132. Retrieved from
+
+http://www.sciencedirect.com/science/article/pii/S0737678201001321
+
+
+Gerdes, J. (2013, February 26). Estonia Launches Nationwide Electric Vehicle Fast-Charging
+
+Network. Retrieved July 11, 2016, from
+
+http://www.forbes.com/sites/justingerdes/2013/02/26/estonia-launches-nationwide-electric-
+
+vehicle-fast-charging-network/#9eda18611bd2
+
+
+Governor E. G. Brown. EXECUTIVE ORDER B-16-2012, Pub. L. No. EXECUTIVE ORDER
+
+B-16-2012 (2012). US. Retrieved from https://www.gov.ca.gov/news.php?id=17472
+
+
+Graver, B. M., Frey, H. C. and Choi, H. W. (2011). In-use measurement of activity, energy use,
+
+and emissions of a plug-in hybrid electric vehicle. Environmental science & technology, 45(20),
+
+pp.9044-9051. doi.org/10.1021/es201165d
+
+
+Harrison, G., & Thiel, C. (2017). An exploratory policy analysis of E-mobility and related
+
+infrastructure in Europe. Technological Forecasting & Social Change, 114, 165–178.
+
+https://doi.org/10.1016/j.techfore.2016.08.007
+
+
+Helveston, J.P., Liu, Y., Feit, E.M., Fuchs, E., Klampfl, E. and Michalek, J.J. (2015). Will
+
+subsidies drive electric vehicle adoption? Measuring consumer preferences in the US and China.
+
+
+                                                 27
+Transportation Research Part A: Policy and Practice, 73, pp.96-112.
+
+doi.org/10.1016/j.tra.2015.01.002
+
+
+IEA. (2016a). Global EV Outlook 2016 Beyond one million electric cars. Paris. Retrieved from
+
+https://www.iea.org/publications/freepublications/publication/Global_EV_Outlook_2016.pdf
+
+
+IEA. (2016b). IA- Hybrid and Electric Vehicles: The electric drive commutes. Retrieved from
+
+http://www.ieahev.org/assets/1/7/2016_IA-HEV_BOOK_web_(1).pdf
+
+
+International Energy Agency (IEA). (2015). Energy and Climate Change: World Energy Outlook
+
+Special Report (Paris: OECD/IEA)
+
+
+International Energy Agency (IEA). (2017). "Global EV Outlook: Two million and counting,
+
+June 2017." Paris, France: IEA Publications. Available at:
+
+http://www.iea.org/publications/freepublications/publication/GlobalEVOutlook2017.pdf.
+
+
+International Energy Agency (IEA). 2013. "Key World Energy Statistics, 2013."
+
+
+Jenn, A., Azevedo, I.L. and Ferreira, P. (2013). The impact of federal incentives on the adoption
+
+of hybrid electric vehicles in the United States. Energy Economics, 40, pp.936-942.
+
+doi.org/10.1016/j.eneco.2013.07.025
+
+
+Jin, L., Stephanie, S., and Nic, L. (2014). "Evaluation of State-Level U.S. Electric Vehicle
+
+Incentives.” Washington, DC: The International Council on Clean Transportation. Available at:
+
+http://www.a3ps.at/site/sites/default/files/newsletter/2014/no21/ICCT.pdf .
+
+
+Krause, R. M., Carley, S. R., Lane, B. W. and Graham, J. D. (2013). Perception and reality:
+
+Public knowledge of plug-in electric vehicles in 21 US cities. Energy Policy, 63, pp.433-440.
+
+doi.org/10.1016/j.enpol.2013.09.018
+
+                                                28
+Lévay, P. Z., Drossinos, Y., & Thiel, C. (2017). The effect of fiscal incentives on market
+
+penetration of electric vehicles: A pairwise comparison of total cost of ownership. Energy
+
+Policy, 105(March), 524–533. https://doi.org/10.1016/j.enpol.2017.02.054
+
+
+Lieven, T. (2015). Policy measures to promote electric mobility - A global perspective.
+
+Transportation Research Part A: Policy and Practice, 82, 78–93.
+
+https://doi.org/10.1016/j.tra.2015.09.008
+
+
+Lutsey, N., Searle, S., Chambliss, S., & Bandivadekar, A. (2015). Assessment of leading electric
+
+vehicle promotion activities in United States cities. Washington DC. Retrieved from
+
+http://www.theicct.org/sites/default/files/publications/ICCT_EV-promotion-US-
+
+cities_20150729.pdf
+
+
+Mersky, A. C., Sprei, F., Samaras, C. and Qian, Z. S. (2016). Effectiveness of incentives on
+
+electric vehicle adoption in Norway. Transportation Research Part D: Transport and
+
+Environment, 46, pp.56-68. doi.org/10.1016/j.trd.2016.03.011
+
+
+Mock, P., & Yang, Z. (2014). Driving Electrification. ICCT - The International Council on Clean
+
+Transportation. Washington DC. Retrieved from
+
+http://www.theicct.org/sites/default/files/publications/ICCT_EV-fiscal-incentives_20140506.pdf
+
+
+Next Green Car. (2015a). Zap Map. Retrieved May 9, 2016, from https://www.zap-map.com/
+
+
+Next Green Car. (2015b). Zap Map community. Retrieved May 9, 2016, from https://www.zap-
+
+map.com/community/forum/members/koborn/
+
+
+OECD. (2015). Domestic Incentive Measures for Environmental Goods with Possible Trade
+
+Implications: Electric vehicles and batteries. Retrieved from
+
+                                                29
+http://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=COM/TAD/ENV/JWP
+
+TE(2013)27/FINAL&docLanguage=En
+
+
+Onat, N. C., Kucukvar, M. and Tatari, O. (2015). Conventional, hybrid, plug-in hybrid or electric
+
+vehicles? State-based comparative carbon and energy footprint analysis in the United States.
+
+Applied Energy, 150, pp.36-49. doi.org/10.1016/j.apenergy.2015.04.001
+
+
+Reid, S., & Spence, D. B. (2016). Methodology for evaluating existing infrastructure and
+
+facilitating the diffusion of PEVs. Energy Policy, 89, 1–10.
+
+https://doi.org/10.1016/j.enpol.2015.11.008
+
+
+Rogers, E. M. (1983). Diffusion of Innovations (3rd ed.). New York: The Free Press.
+
+
+Saunders, M. N. K., Lewis, P. and Thornhill, A. (2012). Research methods for business students
+
+(6th ed.) Harlow. England: Pearson Education.
+
+
+Saunders, M., Lewis P. and Thornbull, A. (2009). Research Methods for Business Studies.
+
+ResearchGate
+
+
+Shahan, C. (2014, August 31). California Bill Allows Renters To Install Electric-Car Charging
+
+Stations. Clean Technica. Retrieved from http://cleantechnica.com/2014/08/31/california-bill-
+
+renters-install-electric-car-charging-stations/
+
+
+Sierzchula, W., Bakker, S., Maat, K. and van Wee, B. (2014). The influence of financial
+
+incentives and other socio-economic factors on electric vehicle adoption. Energy Policy, 68,
+
+pp.183-194. doi.org/10.1016/j.enpol.2014.01.043
+
+
+
+
+                                                  30
+Simpson, C. (2015, May). Car Tech Living In An Apartment Block? You Can Finally Charge
+
+Your Electric Car. Retrieved May 11, 2015, from http://www.gizmodo.com.au/2015/05/jet-
+
+charge-makes-buying-an-electric-car-easy-for-apartment-owners/
+
+
+Sims, R. (2014). "Chapter 8: transport." Climate Change 2014: Mitigation of Climate Change.
+
+Contribution of Working Group III to the Fifth Assessment Report of the Intergovernmental
+
+Panel on Climate Change
+
+
+Steinhilber, S., Wells, P., & Thankappan, S. (2013). Socio-technical inertia: Understanding the
+
+barriers to electric vehicles. Energy Policy, 60, 531–539.
+
+https://doi.org/10.1016/j.enpol.2013.04.076
+
+
+Tessum, C. W., Hill, J. D. and Marshall, J. D. (2014). Life cycle air quality impacts of
+
+conventional and alternative light-duty transportation in the United States. Proceedings of the
+
+National Academy of Sciences, 111(52), pp.18490-18495. doi.org/10.1073/pnas.1406853111
+
+
+UK DfT. (2016). Public attitudes towards electric vehicles: 2016 (revised). Retrieved from
+
+https://www.gov.uk/government/statistics/public-attitudes-towards-electric-vehicles-2016
+
+
+Vergis, S., Turrentine, T. S., Fulton, L., & Fulton, E. (2014). Plug-In Electric Vehicles : A Case
+
+Study of Seven Markets Research Report – UCD-ITS-RR-14-17. Retrieved from
+
+https://its.ucdavis.edu/research/publications/?frame=https://itspubs.ucdavis.edu/index.php/resear
+
+ch/publications/
+
+
+Walliman, N. (2017). Research Methods: The Basics. ResearchGate
+
+
+
+
+                                                31
+Wenande, C. (2016, March 1). Electric car sales plummet in wake of registration tax. Retrieved
+
+June 1, 2016, from http://cphpost.dk/news/electric-car-sales-plummet-in-wake-of-registration-
+
+tax.html
+
+
+Wood, E. W., Rames, C. L., Muratori, M., Srinivasa Raghavan, S. and Melaina, M. W. (2017).
+
+National Plug-In Electric Vehicle Infrastructure Analysis (No. NREL/TP-5400-69031;
+
+DOE/GO-102017-5040). National Renewable Energy Laboratory (NREL), Golden, CO (United
+
+States).
+
+
+Yang, Z., Slowik, P., Lutsey, N. and Searle, S. (2016). “Principles for effective electric vehicle
+
+incentive design.” Washington, DC: The International Council on Clean Transportation.
+
+Available at: https://www.theicct.org/sites/default/files/publications/ICCT_IZEV-incentives-
+
+comp_201606.pdf
+
+
+Yu, Z., Li, S., & Tong, L. (2016). Market dynamics and indirect network effects in electric
+
+vehicle diffusion. Transportation Research Part D: Transport and Environment, 47, 336–356.
+
+https://doi.org/10.1016/j.trd.2016.06.010
+
+
+Zhou, Y., Todd, L., and Steven, E. P. (2016). “Plug-in Electric Vehicle Policy Effectiveness:
+
+Literature Review.” ANL/ESD-16/8. Argonne, IL: Argonne National Laboratory.
+
+
+
+
+                                                 32
+

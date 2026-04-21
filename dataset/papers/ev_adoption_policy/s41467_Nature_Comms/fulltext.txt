@@ -1,0 +1,771 @@
+                                    Article                                                                                                 https://doi.org/10.1038/s41467-024-51152-9
+
+
+                                    Climate impacts of critical mineral supply
+                                    chain bottlenecks for electric vehicle
+                                    deployment
+                                    Received: 24 November 2023                         Lucas Woodley1, Chung Yi See2, Peter Cook3, Megan Yeo2, Daniel S. Palmer                        4
+                                                                                                                                                                                        ,
+                                                                                       Laurena Huh 5, Seaver Wang3 & Ashley Nunes 2,3,6
+                                    Accepted: 30 July 2024
+
+
+                                                                                       New tailpipe emissions standards aim to increase electric vehicle (EV) sales in
+                                        Check for updates                              the United States. Here, we analyze the associated critical mineral supply chain
+                  1234567890():,;
+1234567890():,;
+
+
+
+
+                                                                                       constraints and enumerate the climate consequences of these constraints. Our
+                                                                                       work yields ﬁve ﬁndings. First, the proposed standard necessitates replacing at
+                                                                                       least 10.21 million new internal combustion engine vehicles with EVs between
+                                                                                       2027 and 2032. Second, based on economically viable and geologically avail-
+                                                                                       able mineral reserves, manufacturing sufﬁcient EVs is plausible and reduces up
+                                                                                       to 457.3 million tons of CO2e. Third, mineral production capacities in the
+                                                                                       United States and amongst allies support the deployment of 5.09 million
+                                                                                       vehicles between 2027 and 2032, well short of compliance target. Fourth, this
+                                                                                       shortfall produces at least 59.54 million tons of CO2e in lost lifecycle emissions
+                                                                                       beneﬁts. Fifth, limited production of battery-grade graphite and cobalt may
+                                                                                       represent particularly profound constraints. Pathways that afford comparable
+                                                                                       emission reductions are subsequently explored.
+
+
+                                    Acceleration of the energy transition and realization of both national      wheels emissions proﬁle, which can reduce overall emissions relative
+                                    and regional climate commitments require urgent action on a global          to the status quo7–12.
+                                    scale1. These goals depend upon adoption of technologies that facil-             However, raw material supply chain bottlenecks present potential
+                                    itate emissions reductions. However, energy systems powered by low-         obstacles for an efﬁcient transition to EVs13–16. Compared to ICEVs, ﬁve
+                                    carbon technologies differ profoundly from current systems of fossil        minerals- cobalt, graphite, lithium, nickel, and rare earths are used to a
+                                    fuel trade and infrastructure. The manufacturing of solar photovoltaic      signiﬁcantly higher degree in the manufacturing of EVs. An EV also
+                                    plants, wind farms, and electric vehicles (EVs) – technologies crucial to   requires twice the weight of copper and manganese – two additional
+                                    lowering emissions – generally requires considerable volumes of spe-        key minerals, relative to ICEVs2. Higher mineral demands imposed by
+                                    cialty minerals, with mineral intensity varying greatly across different    EVs and the envisioned prospect of widespread electriﬁcation as a
+                                    technologies2–4.                                                            pathway towards emissions reduction raise the important question: do
+                                         Meeting the mineral demands associated with electrifying the           mineral demands associated with electrifying the light-duty vehicle
+                                    light-duty vehicle ﬂeet warrants particular attention given the trans-      ﬂeet exceed available supply? If so, by how much? And what are the
+                                    portation sector’s contribution to CO2 emissions. Owing to an existing      emissions consequences of disequilibrium in critical minerals market?
+                                    internal combustion engine vehicles’ (ICEVs) dependence on fossil                Answers to these questions are timely, particularly for the United
+                                    fuels, cars, vans, and sport utility vehicles produce nearly half of all    States where emissions from the largely ICE-powered light-duty vehi-
+                                    transportation-related greenhouse gas emissions, making these vehi-         cle ﬂeet constitute a signiﬁcant share of overall emissions. This share
+                                    cles signiﬁcant contributors to climate change5,6. Electriﬁcation offers    has grown over time and appears likely to continue as household
+                                    – by virtue of reduced dependence on fossil fuels – a lower well-to-        motorization rates rise17. The U.S. federal government has – since 2008
+
+
+                                    1
+                                     Faculty of Arts and Sciences, Harvard University, Cambridge, MA, USA. 2Department of Economics, Harvard College, Cambridge, MA, USA. 3Breakthrough
+                                    Institute, Berkeley, CA, USA. 4Groton School, Groton, MA, USA. 5Sloan School of Management, Massachusetts Institute of Technology, Cambridge, MA, USA.
+                                    6
+                                     Center for Labor and a Just Economy, Harvard Law School, Cambridge, MA, USA.        e-mail: anunes@law.harvard.edu
+
+
+                                    Nature Communications | (2024)15:6813                                                                                                                  1
+Article                                                                                                  https://doi.org/10.1038/s41467-024-51152-9
+
+
+– sought to temper the emissions impact of ICEVs by incentivizing EV          not geographically constrained to where the minerals themselves are
+adoption18. The most ambitious of these efforts – introduced by the           extracted.
+Environmental Protection Agency (EPA) in 2023 – envisions a 14.41%                 Second, our efforts consider heterogeneity in the adoption of
+reduction in US transportation-related emissions (the equivalent of 7.2       speciﬁc battery chemistries and the emissions intensity associated
+billion metric tons of CO2e through 2055) by regulating tailpipe              with these chemistries38–40. Electriﬁcation policies do not – to our
+emissions for the new light duty vehicles19,20. The standards necessitate     knowledge – prioritize one battery chemistry over another but rather
+– for vehicles sold after 2026 – realization of an industry-wide average      emphasize speciﬁc EV penetration rates. Yet, consideration of the
+target for the light-duty ﬂeet of 82 grams/mile (g/mile) of CO2 by 2032.      emissions intensity associated with extracting minerals speciﬁc to a
+Given current market conditions and the thermal inefﬁciency of ICEVs,         particular battery chemistry is timely because it inﬂuences the mag-
+achieving this target necessitates signiﬁcantly increasing EV sales           nitude of total emissions reductions EVs ultimately deliver. Put simply,
+volume21. How achievable are increases like these given constraints in        EVs utilizing relatively carbon-intense battery chemistries likely offer a
+EV mineral supply chains?                                                     smaller emissions beneﬁt – ceteris paribus - than chemistries with
+      Our work addresses this question. To do so, we estimate a model         lower manufacturing-related emissions. To account for such factors,
+that, (1) explores requisite EV sales volume scenarios that conform to        we leverage the 2022 Greenhouse Gases, Regulated Emissions, and
+the U.S. light-duty vehicle electriﬁcation targets set by the EPA22–24, (2)   Energy Use in Transportation (GREET) model to estimate emissions
+assesses whether existing U.S. mineral supply chains can accom-               associated with adopting speciﬁc battery chemistries41.
+modate EV manufacturing levels needed to achieve the sales targets                 Third, we assess whether speciﬁc emissions reduction targets
+associated with these scenarios, and (3) quantiﬁes the emissions              envisioned by the EPA can – given potential constraints in mineral
+impact of potential disequilibrium between mineral supply and EV-             supplies - be realized by deploying a wider combination of vehicle
+associated mineral demand for each scenario. Our model accom-                 powertrains in the national ﬂeet, namely hybrid electric vehicles (HEV).
+modates envisioned improvements in the emissions proﬁle of alter-             The manufacturing of HEV batteries requires fewer specialty raw
+native powertrains owing to technological and legislative efforts, most       materials, alleviating mineral supply constraints42,43. Moreover, HEVs
+notably, recently proposed Corporate Average Fuel Economy stan-               offer substantially lower emissions relative to ICEVs for a similar
+dards (CAFE) for light duty vehicles between 2027 and 203225–27. We           vehicle price (thereby offering greater affordability to consumers
+further consider EVs’ potential to operate as substitutes rather than         relative to current EVs)44 while also enjoying relative market popularity
+complements28,29 due to increased range30–33, as well as envisioned           compared to EVs (thereby affording more rapid widespread
+reductions in the carbon intensity of the electrical grid that may –          deployment)45. HEVs’ popularity has persisted despite the gradual
+owing to legislation like the 2022 Inﬂation Reduction Act – improve the       withdrawal of HEV-speciﬁc procurement incentives ﬁrst enacted in
+emissions proﬁle of EVs34.                                                    200846,47. Consequently, we also explore whether complementary
+      Three key characteristics deﬁne our approach.                           deployment of HEVs can help drive near-term transportation sector
+      First, in estimating potential mineral disequilibrium, we recognize     emissions reductions while alleviating immediate raw material supply
+that the US is ill-suited to pursue full self-sufﬁciency in several key       chain constraints confronting EVs.
+minerals – most notably cobalt, graphite, and manganese15 – that are               Our efforts can help better inform public policies that target
+necessary to produce lithium-ion batteries used in EVs34. We con-             transportation-related emissions reductions in the face of potential
+currently acknowledge political concerns that some countries levy             mineral supply constraints on EV battery pack manufacturing. Fur-
+disproportional inﬂuence over key aspects of the automotive supply            thermore, by scrutinizing geographic patterns associated with mineral
+chain and may use raw material and manufacturing market power not             supply constraints, our work can inform efforts to address economic
+only to limit supplies, but also to further attract and concentrate for-      and national security concerns related to possible mineral shortfalls.
+eign investment and advanced manufacturing2,35,36. Following the              As countries like the United States accelerate their efforts to reduce
+Inﬂation Reduction Act’s passage, US policies require the total value         emissions and deploy new low-carbon technologies, policymakers
+added from mining and processing of critical minerals for an EV’s             must create the underlying conditions for a new generation of tech-
+battery by the US and partner countries to exceed certain thresholds          nologies to achieve widespread adoption while maintaining reliable
+for the EV to fully qualify for tax credit incentives. This is a difﬁcult     and affordable energy and mobility systems amidst real-world
+criterion for researchers to model without access to considerable             constraints3. In the long term, EVs appear poised to dominate the
+trade and proprietary information37. As the critical minerals value           future of clean transportation. In the medium term, however, the
+within EV batteries is considered as an ensemble of all minerals, this        tension between ambitious policy targets with ﬁxed timetables and the
+creates many possible combination-based pathways to both credit               inertia facing supply chain expansion poses complex challenges. A
+eligibility and credit ineligibility.                                         better understanding of the linkages between raw material availability,
+      Consequently, consistent with the general intent of mineral             battery pack chemistries, and the advantages and drawbacks of dif-
+sourcing provisions of the Inﬂation Reduction Act to promote secure           ferent low-emissions vehicle types improves assessments of different
+sourcing and more diverse supply chains, our estimates more narrowly          policy options’ impacts, thereby promoting more effective public
+consider minerals that are mined either domestically or in countries          policy.
+with which the US has free trade and/or mutual defense agreements.
+We also consider patterns of US and partner country mineral proces-           Results and discussion
+sing. Furthermore, our analysis assesses both potential limits in the         Electriﬁcation of the U.S. light-duty vehicle ﬂeet carries the potential to
+size of US and partner countries’ total geologic mineral reserves             reduce CO2 emissions, public health harm from air pollution, and
+(hereafter referred to as reserves) and their associated limits in the        national dependence on fossil fuels. These societal beneﬁts have
+annual total rate of upstream mineral production (hereafter referred          prompted the EPA to propose stringent emissions standards that de
+to as production) (see “Methods” section for details). We also consider       facto necessitate EV adoption. How achievable are the proposed
+the impact of downstream mineral processing constraints, processing           standards given constraints in mineral supply chains?
+referring to the treatment of minerals into a usable form for manu-                We address this question by, (1) specifying requisite EV sales
+facturing purposes. Exact processing methods vary depending on the            volume targets across three sales scenarios (low, medium, and high)
+mineral commodity, but often entail smelting or chemical reﬁning into         that each conform to the electriﬁcation targets set by the EPA, (2)
+solid metal, for example. Notably, processing facilities often utilize        enumerating the extent to which these targets can be met by using a
+mineral feedstock sourced from multiple mines and, unlike mines, are          single battery chemistry (referred to as ‘optimal chemistry’) or
+
+
+Nature Communications | (2024)15:6813                                                                                                                  2
+Article                                                                                                https://doi.org/10.1038/s41467-024-51152-9
+
+
+combination thereof (referred to as ‘market mix’), and (3) quantify the     that such a scenario may be unrealistic given recent shifts away from
+emissions impact of disequilibrium between mineral supply and               NMC 111 chemistries49,50.
+demand. Our sales scenarios encompass the full range of possible                  Although these results imply that vehicle manufacturers can fully
+pathways for vehicle manufacturers to meet current adoption goals           satisfy EV demand using numerous potential major chemistries51,
+and accommodate the range of EV sales estimates projected thus far in       access to geological mineral reserves depends in practice upon
+preexisting literature22–24. Speciﬁcally, in our low sales scenario, EV     mineral production capacity. Whereas reserves refer to long term,
+sales persist at current levels until 2032, at which point sales increase   cumulative economically viable supply, production rates reﬂect
+to the requisite amount implied by the EPA’s targets. In the medium         existing extraction capacity. Consequently, in addition to solely con-
+sales scenario, EV sales gradually rise over time beginning in 2027 and     sidering geological reserves, planners must assess whether available
+achieve the requisite volume in 2032. In the high sales scenario, EV        mineral production capacity can enable realization of the EPA’s elec-
+sales increase to the requisite volume in 2027 and remain stable            triﬁcation targets.
+through 2032, reﬂecting possible rapid compliance from vehicle                    Third, we ﬁnd that based on current mineral production from the
+manufacturers.                                                              US and its allies between 2027 and 2032, a maximum of 5.09 million EV
+     Realization of EPA prescribed sales volume targets are estimated       batteries can be produced cumulatively, a ﬁgure that falls well below of
+using both mineral reserve and mineral production estimates (see            the requisite number of EV batteries in even our lowest sales scenario
+“Methods” section for details). Unless otherwise speciﬁed, estimates        (10.2 million; Table 1). This implies that a minimum of 50.13% of overall
+presented assume new light duty vehicle sales comprise solely of (and       EV demand required by the proposed EPA policy cannot be met, owing
+replace) four-door sedans. The robustness of this parameter as it           to mineral production constraints. Graphite is the key limiting mineral
+relates to requisite EV sales and mineral demands is subsequently           driving battery chemistry choice that maximizes potential EV deploy-
+tested under the Heavier Fleet Assumption (see Methods for details).        ment, as exclusive manufacturing of NMC 811 EV batteries supports no
+Where our model produces different estimates for each sales scenario,       more than 5.09 million vehicles (Fig. 2). This effect is sensitive to our
+we present results for the medium sales scenario followed by the range      input battery mineral intensity data, which assume 56.6 kg of graphite
+across the low and high scenarios in parentheses.                           for a 75 kWh NMC 811 battery pack, with alternative chemistries such as
+     Our key ﬁndings are as follows.                                        NCA or LFP requiring even higher amounts of graphite (Fig. 3). Spe-
+     First, we ﬁnd that by the year 2032 - given projected emission         ciﬁcally, we ﬁnd limits of 4.70 and 2.98 million NCA and LFP batteries,
+proﬁles of ICEVs and HEVs, - at least 37.82% of new vehicle sales must      respectively, which correspond to at least 53.96% and 70.78% of unmet
+be EVs for auto manufacturers to ensure compliance with the EPA’s           EV demand. Under these assumptions, graphite might potentially pose
+tailpipe emissions proposal (Fig. 1a). This ﬁnding – which is lower than    a challenge to envisioned market shifts towards NCA and LFP EVs by
+other projected estimates regarding requisite EV market share21 –           2032. Were LFP battery packs to be increasingly favored within the EV
+reﬂects the impact that improved fuel economy of non EVs (necessi-          ﬂeet owing to their cost advantage13, an outcome we consider in our
+tated by the most recent CAFE standards update), have on requisite EV       market-mix scenario, we ﬁnd that production capacity from the US and
+penetration rates. Given the interdependencies between fuel economy         its allies’ alone may currently support manufacturing of only 3.51 mil-
+and tailpipe emissions, a fossil fuel powered light duty vehicle ﬂeet       lion EV battery packs from 2027 to 2032. Such an outcome is analo-
+with higher fuel economy is less polluting, which in turn requires lower    gous to 65.61% of unmet EV demand.
+requisite EV market share to comply with the EPA’s tailpipe emissions             What are the emissions consequences of being unable to fully
+standard. Nevertheless, requiring that 37.82% of new light-duty vehicle     meet the EPA’s implied EV sales targets? Our fourth ﬁnding is that,
+sales be EVs requires – consistent with the envisioned intent of the EPA    assuming manufacturers maximize the quantity of available EVs in
+proposal - a signiﬁcant increase in EV sales relative to the present-day    each given year by utilizing NMC 811 chemistries exclusively, the US
+rate of 6%48. Assuming the overall size of the light duty vehicle ﬂeet      light-duty vehicle ﬂeet will contain 22.96 million (5.12 to 29.53 million)
+remains consistent with government projections, our model estimates         fewer EVs than the EPA targets. This shortfall is equivalent to 284.12
+that new EVs must displace 28.05 million new ICEVs between 2027 and         million tons CO2e (59.54 million to 369.05 million tons CO2e) in lost
+2032 (10.21 and 34.62 million in the low and high sales scenarios,          lifecycle emissions beneﬁts. Put differently, projected mineral con-
+respectively) to comply with the proposed rule (Table 1).                   straints reduce potential emissions beneﬁts by 62.1% (13.0–80.7%).
+     Second, we ﬁnd that from the vantage point of mineral reserves         Meanwhile, if the EV ﬂeet evolves using a mix of battery chemistries,
+alone, supporting the requisite number of vehicles required for EPA         the light-duty vehicle ﬂeet may contain 24.54 million (6.70–31.11 mil-
+compliance is plausible across all scenarios for ﬁve of the six battery     lion) fewer EVs than the EPA targets, which is analogous to 310.56
+chemistries investigated. That is, the total quantities of economically     million tons CO2e (81.11 million to 397.23 million tons CO2e) in lost
+extractable minerals contained in the US and partner countries are          lifecycle emissions beneﬁts, or 67.9% (17.7–86.9%) of potential emis-
+theoretically sufﬁcient to meet the required magnitude of EV deploy-        sions beneﬁts.
+ment. Speciﬁcally, we ﬁnd that for the deployment of EVs using solely
+NMC 523, NMC 622, NMC 811, NCA, or LFP batteries, leveraging                Resolution pathways
+mineral reserves can support between 81.66 million and 989.27 million       Given the potential for mineral constraints to impede the effectiveness
+EVs. This well exceeds the 34.62 million EVs estimated for compliance       of the EPA’s proposed rule, how can policymakers respond? We
+in our high penetration scenario, reducing lifecycle emissions by up to     investigate two potential pathways.
+457.3 million tons of CO2e, which is equivalent to 76.2 million tons of          The ﬁrst entails increasing mineral production capacity to better
+CO2e per year.                                                              meet the mineral demand requirements imposed by the EPA’s emis-
+     Reliance on LFP battery chemistry maximizes the number of EVs          sions proposal. Given that this approach is currently the focus of
+supported (989.27 million), followed by NCA (400.37 million), NMC           ongoing discussions, most notably through domestic mine permitting
+811 (201.80 million), NMC 523 (90.21 million), and NMC 622 (81.66           reform52–57, we enumerate speciﬁc production thresholds that warrant
+million). Moreover, leveraging a combination of LFP and NCA che-            consideration to fully realize the EPA’s electriﬁcation goals. Graphite is
+mistries affords additional EV batteries to be manufactured; namely,        the primary constraining battery material, while cobalt would also
+available reserves can simultaneously produce 735.19 million LFP bat-       pose an obstacle to the required magnitude of EV deployment in
+teries and 400.37 million NCA batteries, thereby supporting a total of      scenarios that rely more heavily on NMC and NCA chemistries. Con-
+1.14 billion EVs. Reliance on NMC 111 exclusively affords the fewest        versely, increased production of other key minerals (i.e., aluminum,
+number of vehicles supported (47.71 million), though we recognize           copper, lithium, manganese, nickel, and phosphate) – absent increases
+
+
+Nature Communications | (2024)15:6813                                                                                                               3
+Article                                                                                                         https://doi.org/10.1038/s41467-024-51152-9
+
+
+
+
+Fig. 1 | Overview of EV sales scenarios and impact of mineral supply constraints. a estimates for sedan only ﬂeet. b estimates for SUV + sedan ﬂeet.
+
+
+
+in graphite and cobalt – does not increase the number of EV battery                graphite. This constitutes a 590% increase in graphite relative to the
+packs that can be manufactured. We therefore direct scrutiny towards               present day and exceeds the projected increases based on existing
+the requisite increases to graphite and cobalt production.                         announcements. Cobalt production by the US and eligible partners
+     Based on existing industry announcements for new natural gra-                 would need to meet demand of up to 37,000 tons per year, or up to
+phite mines and synthetic graphite plants in the US, production of                 69% more than current collective annual production rates, to support
+graphite by the US and partner countries could increase to 173,000                 US light-duty vehicle electriﬁcation. In a market mix case, requisite
+tons per year by 2026, while from 2027 to 2032, graphite production                increases in graphite and cobalt production are 880 and 42% respec-
+would further increase to 255,000 tons per year52–56. However,                     tively, relative to present day production.
+achieving the required annual US EV sales of 5.71 million in 2032 –                     Beyond graphite and cobalt, mineral constraints become less
+assuming the leveraging of the optimal chemistry, namely NMC 811 -                 acute. Between the US and partner countries, present-day mineral
+would require up to 331,000 tons per year of available battery-grade               production for aluminum, copper, lithium, manganese, nickel, and
+
+
+Nature Communications | (2024)15:6813                                                                                                                   4
+Article                                                                                                          https://doi.org/10.1038/s41467-024-51152-9
+
+
+Table 1 | Model results for EV sales scenarios (optimal chemistry – NMC 811)
+                                                                             2027           2028         2029           2030         2031         2032
+All sales scenarios      Projected light-duty vehicle sales                  15,478,700     15,330,200   15,268,900     15,210,400   15,144,000   15,102,000
+Low sales scenario       # of EVs desired                                    911,257        902,515      898,906        895,462      891,553      5,711,810
+                         # of EVs possible (Production)                      848,804        848,804      848,804        848,804      848,804      848,804
+                         Emissions shortfall from lack of EVs (tons CO2e)    838,865        701,400      634,080        574,939      509,334      56,281,611
+                         Emissions shortfall (% of potential CO2e savings)   93.15          94.05        94.43          94.79        95.21        14.86
+Medium sales scenario    # of EVs desired                                    3,645,234      4,047,671    4,467,348      4,884,425    5,295,399    5,711,810
+                         # of EVs possible (Production)                      848,804        848,804      848,804        848,804      848,804      848,804
+                         Emissions shortfall from lack of EVs (tons CO2e)    37,561,279     41,773,389   45,795,416     49,728,490   52,979,047   56,281,611
+                         Emissions shortfall (% of potential CO2e savings)   23.29          20.97        19.00          17.38        16.03        14.86
+High sales scenario      # of EVs desired                                    5,854,284      5,798,119    5,774,935      5,752,809    5,727,696    5,711,810
+                         # of EVs possible (Production)                      848,804        848,804      848,804        848,804      848,804      848,804
+                         Emissions shortfall from lack of EVs (tons CO2e)    67,232,948     64,632,153   62,343,920     60,429,055   58,129,658   56,281,611
+                         Emissions shortfall (% of potential CO2e savings)   14.50          14.64        14.70          14.75        14.82        14.86
+
+
+
+
+Fig. 2 | Estimates reﬂect production constraints, trends in consumption patterns, and import patterns. Overview of mineral demands versus available supply
+(Optimal chemistry – NMC 811).
+
+
+phosphate would theoretically sufﬁce to meet US vehicle electriﬁca-                  posing supply constraints not identiﬁed in the current study based on
+tion goals under all sales scenarios. However, other non-battery sec-                source country eligibility alone59–63.
+tors often dominate total demand for and US imports of these minerals                     To what degree would a universal increase in mineral production
+—dynamics which could externally impose additional constraints on EV                 support additional EV deployment? To assess the sensitivity of battery
+mineral supply chains in practice. Whereas this work considers all                   pack manufacturing limits to changes in mineral availability, we
+mineral supply as available for light-duty EV production, in reality, EV             incorporate an Added Supply Assumption in our model. Here, we
+sector demands comprise a fraction of broader economy-wide needs.                    assume that for each mineral, an additional amount of eligible mineral
+For example, we note that lithium and nickel – which are the next most               production becomes available for US EV manufacturing, with that
+limiting raw materials – could pose potential challenges owing to their              amount equivalent to 20% of the national annual production of the
+use outside of the electric light-duty vehicle sector (e.g., heavy trucks,           world’s leading supplier of each mineral. We ﬁnd that the Added
+consumer electronics, utility-scale batteries, other electric mobility               Supply Assumption dramatically alleviates graphite constraints,
+technologies for lithium, and stainless steel, specialty steel, and non-             enabling cumulative 2027–2032 deployment of 23.13 million EVs if
+ferrous metal alloys for nickel)58, as well as their use in satisfying other         exclusively manufacturing NMC811 battery packs, or 15.95 million EVs
+countries’ EV demand. Indeed, recent work has projected near-term                    for a market mix of battery chemistries. Relative to current mineral
+global lithium supply shortfalls owing to a rapid increase in electric               production, this represents a signiﬁcant increase in deployable EVs
+vehicle demand and lagging upstream production growth, thereby                       using both an optimal chemistry (initially 5.09 million from 2027 to
+
+
+Nature Communications | (2024)15:6813                                                                                                                          5
+Article                                                                                                     https://doi.org/10.1038/s41467-024-51152-9
+
+
+
+
+Fig. 3 | Estimates reﬂect production constraints, trends in consumption patterns, and import patterns. Overview of mineral demands versus available supply
+(Market mix).
+
+
+2032 when using NMC 811 batteries) and a market mix (initially 3.51                  Assuming a heavier ﬂeet, achieving the required annual US EV
+million from 2027 to 2032). However, leveraging the Added Supply                sales in 2032 – assuming the leveraging of the optimal chemistry,
+Assumption still produces an EV sales shortfall in the medium and high          namely NMC 811 – requires, we estimate, up to 339,000 tons per year
+sales scenario (that require 28.05 million and 34.62 million EV sales           of available battery-grade graphite. This constitutes a 732% increase in
+respectively).                                                                  graphite relative to the present day and exceeds the projected
+     Additionally, automobile manufacturers could conceivably con-              increases based on existing announcements. Cobalt production by the
+sider smaller EV battery packs to stretch mineral supplies further.             US and eligible partners would need to meet demand of up to 44,000
+Meeting EPA emissions standards requires implied nationwide                     tons per year, or up to 104% more than current collective production
+deployment of at least 5.71 million EVs in the year 2032. At present-day        rates, to support US light-duty vehicle electriﬁcation. In a market mix
+rates of production (48,000 tons per year), graphite remains – we ﬁnd           case, requisite increases in graphite and cobalt production are 1120
+– a constraining factor, allowing for just 8.4 kg of graphite per battery       and 77% respectively.
+pack. This corresponds to a graphite intensity ~56% that of a typical                We ﬁnd that at current mineral production rates, accommodating
+20 kWh NMC811 battery like those used in plug-in hybrids, therefore             a heavier ﬂeet proﬁle limits EV deployment from 2027 to 2032 to 4.12
+yielding a battery capacity of 11 kWh. Under the Added Supply                   million EVs for the optimal chemistry (NMC 811-only) case and 2.84
+Assumption, an added 170,000 tons per year of graphite (20% of                  million EVs for the market mix case. Incorporating the Added Supply
+China’s annual production) is made available, allowing for up to                Assumption increases these ﬁgures to 18.70 million and 12.90 million
+38.17 kg per vehicle or 80% of the requirement of a 60 kWh NMC811               EVs respectively, ﬁgures that like in the case of considering a sedan-
+battery. This corresponds to a 48-kWh battery pack. Given perfor-               only ﬂeet, still produces an EV sales shortfall in the medium and high
+mance characteristics associated with smaller battery packs (i.e.,              sales scenario (which require 31.40 million and 41.30 million EV sales
+reduced range, acceleration, and payload capacity), and consumer                respectively). Consequently, an EV ﬂeet that favors heavier SUVs and
+aversion to these characteristics64,65, our results suggest that efforts to     pickup trucks will increase the tension between emissions reductions
+meet electriﬁcation targets by reducing battery size to this degree may         goals envisioned by EV deployment and the limited mineral produc-
+impede EV adoption efforts.                                                     tion available from the US and partner countries.
+     Moreover, we note that our analysis optimistically assumes                      A second pathway we investigate that realizes the emissions
+battery packs that are scaled for sedan-sized electric vehicles. How-           reductions envisioned by the EPA involves HEVs. Could HEVs offer an
+ever, the U.S. vehicle market is currently skewed towards heavier               equivalent emissions beneﬁt envisioned by the EPA proposal? Our
+SUVs and light trucks (71%) versus sedans (29%). Accounting for this            model estimates that if policy were to facilitate the exclusive adoption
+ﬂeet proﬁle - which more accurately reﬂects the composition of the              of HEVs rather than NMC 811 EVs, meeting the EPA’s emissions
+ﬂeet at large – affects our sales and mineral estimates in two ways.            reduction goals necessitates at least 189.90 million (93.70 to 219.46
+First, it increases the number of EV sales required to ensure com-              million) HEVs sold between 2027–2032. But year-on-year from 2028
+pliance with the EPA’s proposal, this owing to the lower requisite and          onwards (2032 and 2027 onwards in the low and high sales scenarios,
+realized fuel economy of SUVs (relative to sedans) (Fig. 1b). Second,           respectively), the requisite rate of HEV sales exceeds the total pro-
+it increases aggregate mineral demands of the EV ﬂeet as heavier                jected light-duty vehicle sales in the US. For example, in the medium
+electriﬁed SUVs/light trucks require – ceteris paribus - a larger bat-          sales scenario, we estimate that meeting the EPA’s envisioned emis-
+tery (and consequently more mineral) to achieve the same range as               sions beneﬁt requires at least 27.72 million HEVs sold in 2030,
+lighter electriﬁed sedans.                                                      exceeding the year’s estimated light-duty vehicle sales of 15.21 million.
+
+
+Nature Communications | (2024)15:6813                                                                                                                        6
+Article                                                                                               https://doi.org/10.1038/s41467-024-51152-9
+
+
+Thus, although early HEV sales can achieve rates consistent with rea-      individuals’ willingness to utilize EVs with smaller batteries and
+lization of the EPA’s envisioned emissions beneﬁts, the requisite          less range.
+volume of HEV sales becomes implausibly high in later years.                     Additionally, were grid decarbonization to proceed at a more
+      Nevertheless, we ﬁnd that HEVs can – under speciﬁc sales sce-        aggressive rate than is assumed by our model75, the lifecycle emissions
+narios – effectively supplement EVs without reducing the potential         beneﬁts associated with the EPA proposal would increase. Conversely,
+emissions beneﬁts. In our medium sales scenario, selling at least 2.68     the emissions consequences of non-compliance would be more pro-
+million EVs in 2030 and replacing the remaining year’s ICEV sales with     found. For example, if the carbon intensity of the electrical grid were
+HEVs offers a total lifecycle emissions beneﬁt of 60.19 million tons       90% lower by 2030 relative to 2005 (compared to 50% assumed by our
+CO2e, which is equivalent to the emissions beneﬁts realized by meeting     model), the shortfall in meeting requisite sales targets in the low sales
+the EPA’s ﬂeet electriﬁcation goals using solely EVs. In the high sales    scenario alone would produce the equivalent of 561.39 million tons
+scenario, realizing such an emissions beneﬁt requires more stringent       CO2e in lost lifecycle emissions beneﬁts. This shortfall is much higher
+thresholds, with at least 2.49 million EVs sold as early as 2027. Across   than the 284.12 million tons CO2e estimated by our model, which
+all sales scenarios, our model suggests a minimum of 4.91 million EVs      assumes a less aggressive grid decarbonization rate (though one that is
+in 2032 are required to enable HEVs to supplement EVs without              within existing estimates).
+reducing potential lifecycle emissions beneﬁts. To the extent that               Secondly, we recognize that real-world trade, market, and policy
+increases in mineral production progress at a pace slower than             dynamics may challenge the mineral access assumptions underlying
+required to realize the EPA’s envisioned emissions reduction targets       our model. In estimating critical mineral disequilibrium, we assume
+using EVs alone, our results suggest that leveraging a combination of      that (a) the totality of minerals produced by allies is made available to
+HEVs and EVs may help relax the requisite mineral production required      the US, and (b) the totality of minerals produced within the United
+while offering equivalent emissions beneﬁts.                               States and among allies are directed solely towards realizing elec-
+                                                                           triﬁcation targets envisioned by the EPA. Each of these assumptions
+Limitations                                                                warrants discussion.
+Given the rapidly evolving nature of the EV market, our approach                 Regarding unfettered access to minerals produced by allies, we
+prioritizes the improving value proposition of EVs relative to ICEVs.      recognize this is unnecessary for every mineral. Assuming the manu-
+These assumptions include (1) improvements in battery longevity            facture of NMC811 batteries alone, domestic production of aluminum,
+that obviate the need for battery replacement, (2) grid dec-               copper, and nickel is sufﬁcient to support battery production without
+arbonization driven by the 2022 Inﬂation Reduction Act (which              relying on imports (Figs. 2 and 3)76. Similarly, current import volumes
+improves the emissions proposition of EVs over non-electriﬁed              of cobalt and manganese from partner countries sufﬁce to produce the
+counterparts), (3) battery chemistry market mixes weighted towards         848,804 EV batteries per year supported by existing graphite supply.
+cobalt-free LFP batteries, (4) full mineral supply allocation for light-   However, current import levels of graphite and lithium from allies
+duty EV production absent considering competing use by other               constitute only 25 and 31% of the total import supply needed to sustain
+electric vehicles (e.g., heavy trucks, two-wheelers, off-road utility      this level of battery production, suggesting signiﬁcant import growth
+vehicles) or in other sectors, (5) increased domestic production of        is required. Moreover, beyond recognizing that the challenge of pro-
+limiting critical minerals owing to permitting reform, and (6) mineral     curing sufﬁcient battery mineral supplies is as profound for many US
+requirements that – unlike the current US light-duty vehicle ﬂeet –        allies as it is for the US77, we demonstrate that even if accessing the
+assume a smaller, lighter vehicle that has lower mineral demands.          totality of graphite produced by allies were possible, it would still be
+This approach – we argue – provides reassurance that our ﬁndings           insufﬁcient to realize the EPA’s envisioned electriﬁcation targets.
+do not exaggerate the challenges facing future EV mass adoption.           These results are consistent with previous work that – in comparing
+However, opportunities to further build upon our efforts warrant           total eligible supply to current import levels – ﬁnd that graphite is
+discussion.                                                                constrained in either scenario, whereas lithium supply is sufﬁcient in
+     Firstly, our model assumes an EV range of 300 miles, a ﬁgure that,    totality yet constrained by current trade realities40.
+while exceeding the median mileage offered by EVs today, falls short of          We further note that leveraging the totality of critical mineral
+median mileage offered by current ICEVs66–68. This shortfall has raised    supply solely for the purposes of EV battery production is an unlikely
+concerns that range anxiety – the perception (real or imagined) that an    prospect. Currently, nearly 60% of lithium, 40% of graphite, 30% of
+EV lacks sufﬁcient charge to reach its intended destination – may          cobalt, and 10% of nickel produced annually is used for manufacturing
+impede widespread EV adoption69. To the extent that this phenom-           EV batteries58,78,79. Meeting climate goals necessitates the manu-
+enon remains pervasive among consumers, particularly in North              facturing and deployment of other mineral intensive technologies like
+America9,30,70–72 – the focus of our analysis and a market characterized   solar photovoltaic panels, wind turbines, grid-scale energy storage
+by longer distance commutes (compared to Europe and China)73,74, we        systems, hydrogen electrolyzers, and hydrogen fuel cells — some of
+note that the accommodation of higher range EVs would, all else being      which require the same critical minerals as EV batteries. We demon-
+equal, increase the mineral demands associated with widespread             strate that were EV battery production to be prioritized, the prospect
+electriﬁcation. This may exacerbate the magnitude of disequilibrium        of meeting the EPA’s electriﬁcation targets is onerous at best. Relaxing
+enumerated by our model.                                                   our assumptions would make realization of these targets even less
+     Moreover, we note that while increased mineral demands asso-          likely. Put simply, even though global investment in mineral produc-
+ciated with higher range EVs can certainly be tempered by further          tion is accelerating, our results suggest that critical mineral constraints
+improvements in EV fuel economy, the EPA’s emissions proposal              are signiﬁcant and persistent80.
+speciﬁcally prioritizes tailpipe emissions and remains agnostic to EV            Thirdly, our model adopts a mining-only interpretation of nation-
+fuel economy. Put another way, the EPA proposal does not explicitly        of-origin sourcing rules. Under this interpretation, minerals must be
+incentivize automakers to improve fuel economy for EVs. Were EV fuel       mined in eligible countries to qualify as domestic content, regardless
+economy to improve over time, current mineral production would –           of where these minerals are processed. Depending on value-added
+holding range constant – support additional EVs. Moreover, increased       calculations, IRA’s nation-of-origin sourcing rules might conceivably
+EV fuel economy could raise the lifecycle emissions beneﬁts associated     allow minerals mined from ineligible countries to qualify as domestic
+with the EPA’s policy through reductions in electricity demand. Alter-     content if they were processed in eligible countries (e.g., nickel
+natively, policies incentivizing fast and accessible charging stations     hypothetically mined in Brazil (currently an ineligible country) but
+along lengthy routes70–72 may reduce range anxiety, thereby increasing     processed in Canada (an eligible country))81–83. To accommodate this
+
+
+Nature Communications | (2024)15:6813                                                                                                               7
+Article                                                                                                 https://doi.org/10.1038/s41467-024-51152-9
+
+
+possibility, we further examine the mineral supply implications of this       Speciﬁcally, we ﬁnd that even in the least aggressive sales scenario,
+policy interpretation, focusing on graphite, cobalt, and nickel—the           existing mineral production supports a maximum of 5.09 million total
+three most-limiting minerals in our analysis. We generously assume            EVs from 2027–2032, a ﬁgure that falls well below the minimum 10.21
+that the additional eligible mineral output equals the full processing        million EV sales required for compliance with the EPA’s proposal. Our
+capacity operating in the US, free trade partners, and allies (see Sup-       model estimates the emissions impact of this shortfall to be 59.54
+plementary Information, Section IV, Part D for details).                      million tons CO2e. We identify graphite, and to a lesser extent, cobalt
+      This represents a signiﬁcant but necessary simpliﬁcation of cur-        as the key limiting minerals for which increased production pro-
+rent IRA sourcing criteria, in which U.S. Department of the Treasury          portionally expands the number of EV batteries that can be
+regulations currently require documentation of all procurement                manufactured.
+chains supplying critical minerals for an EV battery, along with a Traced           Finally, we recognize that future policies could alleviate the cri-
+Qualifying Value Test calculating whether the added value from mining         tical mineral constraints documented here by imposing less stringent
+and processing of those minerals in eligible countries surpasses the          electriﬁcation thresholds. In March 2024, the EPA took such action,
+threshold for the domestic content credit. Such detailed supply chain         implying that new EV sold in 2032 would – for regulatory compliance
+information is both publicly unavailable and prohibitively extensive.         purposes - comprise at least 35% of new light duty vehicles sales for
+Related requirements even pose difﬁculties for industry, with current         that year, this ﬁgure being substantially lower than EV penetration
+Treasury regulations allowing a temporary exemption for “impractic-           rates previously envisioned by the agency and made possible by
+able-to-trace” minerals, including graphite37. Given their complexity,        greater emphasis on PHEV sales20. However, our analysis demonstrates
+regulators may also revise sourcing rules further should future inefﬁ-        that realizing even these less stringent EV sales thresholds would -
+ciencies or ambiguity materialize.                                            given mineral production constraints within the US and among allies –
+      In our more simpliﬁed approach, we ﬁrst consider the case               remain challenging. We estimate that at current mineral production
+wherein the total eligible supply is deﬁned as the sum of all processing      rates, no more than 848,804 EVs can be supported annually, the
+in eligible countries, regardless of its source, and all mining in eligible   equivalent of 5.6% of new light-duty vehicle sales in 2032. Under our
+countries, regardless of where the mined minerals are processed (i.e.,        added supply assumption, this disequilibrium is ameliorated but not
+the most lenient possible interpretation of extracted ‘or’ processed).        eliminated. These ﬁndings warrant careful consideration by policy-
+Doing so likely overestimates eligible supply, given that much of this        makers as efforts to decarbonize the light-duty vehicle sector
+processing capacity handles locally mined materials that were already         accelerate.
+eligible on a mine production basis. Yet even under this assumption,
+graphite remains the key limiting factor identiﬁed for EV battery pro-        Methods
+duction, yielding 1,266,840 EVs annually, 77.8% less than the 5,711,810       We assess the viability of the EPA’s tailpipe emissions standards in
+required by 2032, the target compliance year.                                 three steps. Further details on our method, underlying assumptions,
+      Constraints become even more acute when only considering                and model parameters are speciﬁed in the Supplementary Information
+materials processed in eligible countries (i.e., without additionally         section.
+counting eligible mining supply). Again, considering graphite alone,
+our model estimates that the number of EVs supported solely via               Step 1: sales volume estimation/scenario construction
+processing may not exceed 418,036 annually, 50% less than the ﬁgure           Estimating the requisite sales volume necessary for EPA compliance
+achieved in our original production scenarios based on mining pro-            necessitates consideration of the performance proﬁle of all new non-
+duction. Furthermore, processing constraints are not solely limited to        EVs sold each year, given the interdependencies between these per-
+graphite. For example, lithium mined in Australia constitutes roughly         formance attributes (the most notable being fuel economy) and tail-
+two-thirds of the lithium supply considered in the present study. Were        pipe emissions, which subsequently impacts requisite EV sales.
+eligibility based on processing alone, this amount would be largely           Consequently, as an initial step, we assume that all new non-EV sales for
+ineligible given the signiﬁcant proportion of Australian lithium pro-         a given year are four-door sedans and that these sedans, (1) have a fuel
+cessed in China84. In theory, policies could alleviate supply constraints     economy consistent with relevant CAFÉ standards proposed for that
+stemming from processing bottlenecks by deﬁning processing elig-              year, and (2) offer a range of at least 300 miles. Electriﬁed replace-
+ibility based on further downstream steps, such as battery-speciﬁc            ments for these vehicles are assumed to also be four-door sedans with
+processing that South Korea leads84, instead of primary treatment of          a similar range proﬁle. We note that the higher fuel economy of EVs in
+raw materials. However, such an interpretation may only nominally             our model reﬂect superior thermal efﬁciency of electriﬁed powertrains
+increase eligible minerals while doing little to meaningfully create a        compared to their fossil-fuel powered counterparts (Table 2).
+reliable supply.                                                              Accommodation of this consideration does not impact requisite EV
+      Lastly, the most extreme interpretation of domestic sourcing            sales as – for the purposes of compliance with the proposed EPA rule –
+possible—arguably well exceeding the current spirit of stated IRA             all EVs are considered zero emissions regardless of fuel economy.
+policies—would require all minerals to fully undergo both mining and               With these vehicle proﬁles in mind, we estimate requisite number
+processing in eligible countries. This would doubtlessly impose even          of EV sales that would satisfy the EPA’s standard19. The standard –
+greater constraints on possible EV deployment while also necessitating        which is applicable to new vehicles sold between 2027 and 2032 –
+far more extensive supply chain tracking to verify mineral eligibility, as    necessitates that during, or by the end of this period, the light-duty
+supply linkages between mines and midstream processing facilities are         vehicle ﬂeet achieve an average tailpipe emissions target of 82 grams/
+often ﬂexible, blended, and changing over time. Again, due to the lack        mile (g/mile) of CO2 across new vehicle sales. Our model estimates that
+of detailed data on trade ﬂows from speciﬁc mines to speciﬁc mid-             compliance necessitates EVs constitute no less than 37.82% of light-
+stream facilities, we are unable to quantitatively investigate this most      duty- vehicle sales in 2032. Given the proposed standard applies to
+stringent case.                                                               vehicle sales beginning in 2027, we construct three sales volume sce-
+      Collectively, our results provide compelling evidence that              narios (low, medium, and high sales) that each meet the 37.82% sales
+whereas the EV sales targets envisioned by the EPA can deliver sig-           target between 2027 and 2032.
+niﬁcant emissions reductions, constraints in mineral production may                In the low sales scenario, EVs represent 6% of annual light-duty
+impede the extent to which these reductions are realized. Mineral             vehicle sales (analogous to 2022) until 2032, at which time sales
+reserves in the US and partners abroad more than sufﬁce to meet the           increase to 37.82%48. This represents a lower-bound case wherein EV
+full range of EV sales scenarios, but mineral production rates do not.        sales volume does not increase until the year of the compliance
+
+
+Nature Communications | (2024)15:6813                                                                                                                8
+Article                                                                                                https://doi.org/10.1038/s41467-024-51152-9
+
+
+Table 2 | Lifecycle emissions by powertrain and chemistry
+                                                                 2027           2028           2029            2030          2031           2032
+ICEV Fuel Economy (MPGe)                                         60.00          61.20          62.50           63.70         65.10          66.40
+HEV Fuel Economy (MPGe)                                          73.39          75             75              75            75             75
+EV Fuel Economy (MPGe)                                           114            114            114             114           114            114
+Electric Grid Emissions Rate (g CO2e/kWh)                        309.78         304.12         298.56          293.10        287.74         282.48
+Lifecycle emissions – ICEV (tons CO2e/vehicle)                   40.21          39.58          38.92           38.34         37.69          37.11
+Lifecycle emissions – HEV (tons CO2e/vehicle)                    36.73          36.16          36.16           36.16         36.16          36.16
+Lifecycle emissions – EV NMC 111 (tons CO2e/vehicle)             26.34          26.08          25.83           25.58         25.34          25.09
+Lifecycle emissions – EV NMC 523 (tons CO2e/vehicle)             27.12          26.86          26.61           26.36         26.11          25.87
+Lifecycle emissions – EV NMC 622 (tons CO2e/vehicle)             27.22          26.97          26.71           26.46         26.22          25.98
+Lifecycle emissions – EV NMC 811 (tons CO2e/vehicle)             26.77          26.52          26.26           26.01         25.77          25.53
+Lifecycle emissions – EV NCA (tons CO2e/vehicle)                 27.10          26.85          26.59           26.34         26.10          25.86
+Lifecycle emissions – EV LFP (tons CO2e/vehicle)                 26.06          25.81          25.55           25.30         25.06          24.82
+Lifecycle emissions – EV weighted average (tons CO2e/vehicle)    26.54          26.26          25.95           25.75         25.52          25.28
+
+
+
+deadline (2032). In the medium sales scenario, EV sales steadily           reasonably be economically extracted. Production refers to the
+increase from 6% in 2023 to 23.55% in 2027 to 37.82% in 2032, which is     amount of a mineral produced from mining on an average annual
+analogous to EVs’ market share gradually increasing to satisfy the EPA’s   basis. Put another way, reserves refer to long-term, total supply, while
+adoption targets (see Supplementary Information, Section I for             production refers to short-term, annual supply. Furthermore, our
+details). In the high sales scenario, EV sales increase to and remain at   production estimates additionally include minerals recovered through
+37.82% between 2027 and 2032, replicating an upper-bound scenario          recycling in the US, but do not include recycled production in other
+wherein manufacturers engage in proactive rapid compliance within          countries due to lack of data.
+years. Collectively, the low and high sales scenarios encompass the full        In scrutinizing mineral availability overseas, consistent with the
+range of possible pathways for vehicle manufacturers to meet current       intent of the provision of the Inﬂation Reduction Act, both reserve
+adoption goals, while the medium sales scenario enumerates a more          and production estimates consider minerals that can be sourced
+moderate pathway.                                                          domestically and/or from US allies. We deﬁne an ally as being a free
+                                                                           trade and/or mutual defense partner of the United States. These
+Step 2: mineral demand/supply estimation                                   countries include Australia, Bahrain, Chile, Colombia, Costa Rica,
+Having enumerated the requisite number of EV sales required for EPA        Dominican Republic, El Salvador, Guatemala, Honduras, Israel, Jor-
+compliance, we subsequently quantify (in metric tons) the associated       dan, Mexico, Morocco, Nicaragua, Oman, Panama, Peru, Singapore,
+mineral demand associated with the batteries required to power these       S. Korea, Japan, New Zealand, Philippines, Thailand, and all members
+EVs and assess whether these demands can be met using existing             of the North Atlantic Treaty Organization. In addition to these
+supply. We focus on eight minerals used in large quantities in EV bat-     countries, we also include Austria – a member of the European Union
+teries, namely aluminum, cobalt, copper, graphite, lithium, manga-         (EU) that, 1) is not included under the other criteria, and 2), has
+nese, nickel, and phosphate.                                               mineral production relevant to EV battery manufacturing. Inclusion
+     In scrutinizing mineral demands, we assess the mineral demands        of Austria reﬂects potential realization of an impending minerals-
+of a singular battery chemistry (or a combination thereof, using linear    focused free trade agreement between the EU and the United
+optimization) that would best accommodate the sales volume targets         States87.
+in each sales scenario. We refer to the maximum achievable sales                Finally, we enumerate how many EV batteries can be manu-
+volume using this approach as our result under the optimal chemistry       factured based on (a) annual mineral production limits and (b)
+case. We note that these demands vary based on the speciﬁc battery         mineral reserves, and compare these ﬁgures to the requisite number
+chemistry considered (e.g., nickel manganese cobalt (NMC) 811              of EVs sales necessitated by the EPA proposal under our low, med-
+necessitates more reliance on nickel and less reliance on manganese        ium, and high scenario. Mismatches between demand and supply in
+and cobalt compared to NMC 111)85. Consequently, we consider the           each scenario are quantiﬁed annually (i.e., for each year between
+mineral demands associated with six chemistries that overwhelmingly        2026 and 2033), and in aggregate (2027 through 2032 combined). To
+account for the EV battery market. These are NMC 111, NMC 523, NMC         ensure EVs are given the maximal advantage, we assume a one-to-one
+622, NMC 811, NCA, and LFP. Moreover, because the quantity of              relationship between battery production and EVs (every battery pack
+minerals required also varies – regardless of chemistry – based on         is deployed in a vehicle, with none held in inventory or used for
+vehicle range, we assume equivalent range (i.e., 300 miles) is afforded    repair or replacement) and further assume that mineral supplies are
+across all battery chemistries. This range ﬁgure, we note, is consistent   available in their entirety to EV battery production (versus for the
+with longstanding assessments of EVs’ viability as a decarbonization       manufacture of competing technologies). Furthermore, we presume
+pathway and exceeds the current median range of EVs sold today             that no non-battery mineral requirements are constraining for EV
+(thereby accommodating potential future improvements in fuel               deployment.
+economy65,86. In addition, we consider a case where the chemical                We additionally consider several sensitivity tests:
+composition of EV batteries sold each year increasingly shifts away           • An Added Supply Assumption where available production of each
+from NMC and NCA chemistries towards LFP, with LFP batteries                    mineral increases by an amount equal to 20% of the annual pro-
+installed in 60% of EVs sold in 2030 and thereafter, relative to                duction from the top producing country for that respective
+36% today.                                                                      mineral. In the context of U.S. policies that incentivize ‘friend
+     In assessing mineral supplies, we consider two separate cate-              shoring’, such an increase could be interpreted in various ways:
+gories: reserves and production. Reserves refer to the estimated total          new production from free trade partners and domestic mine
+amount of a mineral geologically occurring within a country that could          operators, loosened domestic content policies, establishment of
+
+
+Nature Communications | (2024)15:6813                                                                                                               9
+Article                                                                                                 https://doi.org/10.1038/s41467-024-51152-9
+
+
+       free trade agreements with new international partners, boosted        7.  Wu, D. I. et al. Regional heterogeneity in the emissions beneﬁts of
+       secondary production from recycling, or technological advances            electriﬁed and lightweighted light-duty vehicles. Environ. Sci.
+       that increase the productivity of existing mines.                         Technol. 53, 10560–10570 (2019).
+     • A Battery Pack Downsizing Assumption where EV battery packs           8. Milovanoff, A. et al. Electriﬁcation of light-duty vehicle ﬂeet alone
+       are downsized in capacity to hit the desired level of EV deploy-          will not meet mitigation targets. Nat. Clim. Change 10, 1102–1107
+       ment in 2032 (5.71 million new EVs sold in the year 2032) under           (2020).
+       both current mineral production and the Added Supply                  9. Alanazi, F. Electric vehicles: beneﬁts, challenges, and potential
+       Assumption.                                                               solutions for widespread adaptation. Appl. Sci. 13, 6016 (2023).
+     • A Heavier Fleet Assumption in which true EV deployment is             10. Guo, X. et al. Life cycle carbon emission and cost-effectiveness
+       skewed towards a mix of 71% light trucks / SUVs and 29% sedans,           analysis of electric vehicles in China. Energy Sustain. Dev. 72,
+       as opposed to our default case, which considers a ﬂeet comprising         1–10 (2023).
+       of 100% sedans. We assume that light trucks and SUVs require a        11. Wei, F. et al. Evaluating environmental beneﬁts from driving electric
+       larger battery of ~100 kWh to achieve the target range of 300             vehicles: the case of Shanghai, China. Transp. Res. Part D: Transp.
+       miles, with correspondingly higher per-pack mineral require-              Environ. 119, 103749 (2023).
+       ments. We evaluate the potential ceiling to nationwide EV             12. Pamidimukkala, A. et al. A review on shared mobility and electric
+       deployment under current and Added Supply mineral constraints             vehicles. International Conference on Transportation and Devel-
+       for this heavier vehicle ﬂeet.                                            opment 2023 https://doi.org/10.1061/9780784484883.029
+                                                                                 (2023).
+Step 3: emissions impact of disequilibrium                                   13. Jones, B. et al. The EV revolution: the road ahead for critical raw
+Here, we determine – as applicable – the emissions impact of being               materials demand. Appl. Energy 280, 115072 (2020).
+unable to meet each EV sales volume target necessitated by the EPA           14. Klimenko, V. V. et al. Constraints imposed by key-material resources
+proposal. To do so, we leverage the GREET model, which is commonly               on renewable energy development. Renew. Sustain. Energy Rev.
+used in vehicle lifecycle emissions analyses88, to calculate the emis-           144, 111011 (2021).
+sions associated with manufacturing EVs powered by different battery         15. Jones, B. et al. The electric vehicle revolution: critical material
+chemistries based on the requisite minerals used for each chemistry.             supply chains, trade and development. World Econ. 46, 2–26
+Building on previous literature2, we subsequently estimate the lifecycle         (2022).
+emissions beneﬁt of HEVs and EVs relative to ICEVs year-on-year from         16. Dolganova, I. et al. A review of life cycle assessment studies of
+2023 to 2032, accounting for heterogeneity in battery chemistry, rising          electric vehicles with a focus on resource use. Resources 9,
+ICEV and HEV fuel economy, and improvements to the electric grid                 32 (2020).
+(Table 2). Based on the US’ target of a 50% emissions reduction (rela-       17. Fast Facts on Transportation Greenhouse Gas Emissions | US EPA.
+tive to 2005) by 203089 – a goal further supported via the enactment of          Environmental Protection Agency. https://www.epa.gov/
+the Inﬂation Reduction Act (IRA)90 –, we assume emissions associated             greenvehicles/fast-facts-transportation-greenhouse-gas-
+with the electric grid decline linearly such that a 50% reduction relative       emissions. Accessed 24 July 2023 (2023).
+to 2005 is achieved in 2030. Regarding HEV fuel economy, we assume           18. H.R.6049 − 110th Congress (2007-2008): Energy Improvement and
+an annual improvement rate of 8% through 2025 and 10% from 2026 to               Extension Act of 2008. Congress.gov, Library of Congress. https://
+2032, which is consistent with existing CAFE standards91. However,               www.congress.gov/bill/110th-congress/house-bill/6049. Acces-
+owing to diminishing returns on further technical innovation, we                 sed 24 July 2023 (2008).
+impose a capped maximum fuel economy 75 miles per gallon for HEVs.           19. Proposed rule: multi-pollutant emissions standards for model years
+We note that we exclude PHEVs from our model given (1) they offer                2027 and later light-duty and medium-duty vehicles | US EPA.
+fuel economy that is – on average – less advantageous than HEVs, (2)             Environmental Protection Agency. https://www.epa.gov/
+are more mineral intensive than HEVs to manufacture, and (3) con-                regulations-emissions-vehicles-and-engines/proposed-rule-multi-
+sistently constitute less than one% of light duty vehicle sales. We note         pollutant-emissions-standards-model. Accessed 24 July 2023.
+that this approach is consistent with longstanding mineral supply            20. Final rule: multi-pollutant emissions standards for model years
+analysis92.                                                                      2027 and later light-duty and medium-duty vehicles. EPA, Envir-
+                                                                                 onmental Protection Agency. www.epa.gov/regulations-emissions-
+Data availability                                                                vehicles-and-engines/ﬁnal-rule-multi-pollutant-emissions-
+This work uses publicly available data.                                          standards-model (2024).
+                                                                             21. Biden-Harris administration proposes strongest-ever pollution
+References                                                                       standards for cars and trucks to accelerate transition to a clean-
+1.     Outlook. IRENA. https://www.irena.org/Energy-Transition/Outlook.          transportation future. EPA, Environmental Protection Agency www.
+       Accessed 24 July 2023.                                                    epa.gov/newsreleases/biden-harris-administration-proposes-
+2.     Executive Summary – The Role of Critical Minerals in Clean Energy         strongest-ever-pollution-standards-cars-and (2023).
+       Transitions. International Energy Agency. https://www.iea.org/        22. Prospects for Electric Vehicle Deployment. International Energy
+       reports/the-role-of-critical-minerals-in-clean-energy-transitions/        Agency. www.iea.org/reports/global-ev-outlook-2023/prospects-
+       executive-summary. Accessed 25 July 2023.                                 for-electric-vehicle-deployment. Accessed 13 Oct 2023.
+3.     Accelerating Decarbonization of the U.S. Energy System. National      23. Al-Alawi, B. M. & Bradley, T. H. Review of hybrid, plug-in hybrid, and
+       Academies of Sciences, Engineering, and Medicine https://doi.org/         electric vehicle market modeling studies. Renew. Sustain. Energy
+       10.17226/25932 (2021).                                                    Rev. 21, 190–203 (2013).
+4.     Kintisch, E. From gasoline alleys to electric avenues. Science        24. Rietmann, N. et al. Forecasting the trajectory of electric vehicle
+       https://doi.org/10.1126/science.319.5864.750a (2023).                     sales and the consequences for worldwide CO2 emissions. J. Clean.
+5.     Wang, S. et al. Future demand for electricity generation materials        Prod. 261, 121038 (2020).
+       under different climate mitigation scenarios. Joule 7, 309–332        25. Text - H.R.5376 − 117th Congress (2021-2022): Inﬂation Reduction
+       (2023).                                                                   Act of 2022. Congress.gov, Library of Congress. https://www.
+6.     Malmgren, I. Quantifying the societal beneﬁts of electric vehicles.       congress.gov/bill/117th-congress/house-bill/5376/text. Accessed
+       World Electr. Veh. J. 8, 996–1007 (2016).                                 24 July 2023 (2022).
+
+
+Nature Communications | (2024)15:6813                                                                                                               10
+Article                                                                                                   https://doi.org/10.1038/s41467-024-51152-9
+
+
+26. Covert, T. et al. Will We Ever Stop Using Fossil Fuels?. J. Econ.              policy initiatives. Philosophical Transactions of the Royal Society A
+    Perspect. 30, 117–138 (2016).                                                  https://doi.org/10.1098/rsta.2012.0325 (2014).
+27. “Corporate Average Fuel Economy Standards for Passenger Cars               44. Nunes, A. et al. Near-term policy pathways for reducing car and
+    and Light Trucks for Model Years 2027– 2032 and Fuel Efﬁciency                 light-truck emissions. Environmental Research Letters, 16.6.
+    Standards for Heavy-Duty Pickup Trucks and Vans for Model Years                ResearchGate, https://www.researchgate.net/publication/
+    2030–2035.” U.S. Government Publishing Ofﬁce, National Highway                 351866047_Near-term_policy_pathways_for_reducing_car_and_
+    Trafﬁc Safety Administration. www.govinfo.gov/content/pkg/FR-                  light-truck_emissions. Accessed 25 July 2023 (2021).
+    2023-08-17/pdf/2023-16515.pdf (2023).                                      45. Hybrid-Electric, Plug-in Hybrid-Electric and Electric Vehicle Sales.
+28. Burlig, F., and J. Bushnell. “Low Energy: Estimating Electric Vehicle          Bureau of Transportation Statistics. https://www.bts.gov/content/
+    Electricity Use.” AEA Papers and Proceedings, 111, no. 6, p. 430-435.          gasoline-hybrid-and-electric-vehicle-sales. Accessed 25 July 2023.
+    ResearchGate, https://www.researchgate.net/publication/                    46. Anderson, C. D., & J. Anderson. Electric and Hybrid Cars: A History,
+    351545621_Low_Energy_Estimating_Electric_Vehicle_Electricity_Use.              2nd edn. (McFarland, Incorporated, Publishers, 2010).
+    Accessed 25 July 2023 (2021).                                              47. Bradley A. Ridlehoover. Congress’s Tax Incentives Send Mixed Sig-
+29. Nunes, A. et al. Re-thinking procurement incentives for electric               nals for Automobile Buyers: Should Americans Buy Gas Guzzlers or
+    vehicles to achieve net-zero emissions. Nat. Sustain. 5,                       Hybrids? 32 Wm. & Mary Envtl. L. & Pol’y Rev. 213. https://
+    527–532 (2022).                                                                scholarship.law.wm.edu/wmelpr/vol32/iss1/7. Accessed 25 July
+30. Liu, X. et al. Comprehensive assessment for different ranges of                2023 (2007).
+    battery electric vehicles: Is it necessary to develop an ultra-long        48. Davis, S. C. & R. G. Boundy. Transportation Energy Data Book. edn
+    range battery electric vehicle?”. iScience 26, 106654 (2023).                  40. Oak Ridge National Laboratory, U.S. Department of Energy.
+31. Sanguesa et al. A review on electric vehicles: technologies and                https://tedb.ornl.gov/data/. Accessed 27 July 2023 (2022).
+    challenges. Smart Cities 4, 372–404 (2021).                                49. Zeng, A. et al. Battery Technology and recycling alone will not save
+32. Deng, J. et al. Electric vehicles batteries: Requirements and chal-            the electric mobility transition from future cobalt shortages. Nat.
+    lenges. Joule 4, 511–515 (2020).                                               Commun. 13, 15 (2022).
+33. Zhao, Xuan et al. Construction of electric vehicle driving cycle for       50. Schmuch, R. et al. Performance and cost of materials for lithium-
+    studying electric vehicle energy consumption and equivalent                    based rechargeable automotive batteries. Nat. Energy 3,
+    emissions. Environ. Sci. Pollut. Res. 27, 37395–37409 (2020).                  267–278 (2018).
+34. Denholm, P. et al. Examining Supply-Side Options to Achieve 100%           51. Ding, Y. -Li. et al. Automotive Li-ion batteries: current status and
+    Clean Electricity by 2035. Golden, CO: National Renewable Energy               future perspectives. Electrochem. Energy Rev. 2, 1–28 (2019).
+    Laboratory. NREL/TP- 6A40-81644. https://www.nrel.gov/docs/                52. Novonix Selected for US$150 Million Grant from U.S. Department of
+    fy22osti/81644.pdf. Accessed 24 July 2023 (2022).                              Energy. NOVONIX www.novonixgroup.com/novonix-selected-for-
+35. Yacobucci, B. D. Critical Minerals in Electric Vehicle Batteries. CRS          us150-million-grant-from-u-s-department-of-energy/ (2022).
+    Reports https://crsreports.congress.gov/product/pdf/R/R47227.              53. Lewis, M. North America’s largest graphite factory is launching in
+    Accessed 24 July 2023 (2022).                                                  Georgia. Electrek electrek.co/2023/05/15/north-america-graphite-
+36. Wulf, A. Testimony Submitted on Behalf of Securing America’s                   factory-georgia/ (2023).
+    Future Energy (SAFE) Submitted by Abigail Wulf to the United               54. Banya, N. Syrah Resources Hits Record Graphite Output, U.S
+    States Senate. U.S. Senate Committee on Energy and Natural                     Plant on Track. (eds. Mark Potter) (Reuters, Thomson Reu-
+    Resources. https://www.energy.senate.gov/services/ﬁles/                        ters, 2023).
+    79FD8935-292A-4DB3-BD9B-2C0195B9C2FB. Accessed 24 July                     55. Ker, P. Is This Beaten down Battery Stock the next Lynas? Australian
+    2023 (2022).                                                                   Financial Review www.afr.com/companies/mining/is-this-beaten-
+37. Clean Vehicle Credits Under Sections 25E and 30D; Transfer of                  down-battery-stock-the-next-lynas-20230526-p5dbhr (2023).
+    Credits; Critical Minerals and Battery Components; Foreign Entities        56. Denning, L. America’s EV Ambitions Need a Graphite Plan. Fast (The
+    of Concern. Federal Register, Internal Revenue Service. www.                   Washington Post, WP Company, 2023).
+    federalregister.gov/documents/2024/05/06/2024-09094/clean-                 57. Holzman, J. & Northey, H. Lack of graphite could gum up American
+    vehicle-credits-under-sections-25e-and-30d-transfer-of-credits-                EV market. E&E News by POLITICO www.eenews.net/articles/lack-
+    critical-minerals-and-battery (2024).                                          of-graphite-could-gum-up-american-ev-market/ (2022).
+38. Dunn, J. B. et al. Material and energy ﬂows in the materials pro-          58. Stewart, A. A. U.S. Geological Survey, Mineral Commodity Sum-
+    duction, assembly, and end-of-life stages of the Automotive                    maries. Mineral Commodity Summaries 2024. https://pubs.usgs.
+    Lithium-ion battery life cycle. U.S. Department of Energy Ofﬁce of             gov/periodicals/mcs2024/mcs2024-graphite.pdf. Accessed 1 April
+    Scientiﬁc and Technical Information. https://doi.org/10.2172/                  2024 (2024).
+    1044525 (2012).                                                            59. Xu, C. et al. Future material demand for automotive lithium-based
+39. Ambrose, H. & Kendall, A. Effects of battery chemistry and perfor-             batteries. Nature News www.nature.com/articles/s43246-020-
+    mance on the life cycle greenhouse gas intensity of electric mobi-             00095-x (2020).
+    lity. Transp. Res. Part D: Transp. Environ. 47, 182–194 (2016).            60. Petavratzi, E. & Gunn, G. Decarbonising the automotive sector: a
+40. Trost, J. & Dunn, J. Assessing the feasibility of the inﬂation reduction       primary raw material perspective on targets and Timescales. Miner.
+    act’s EV critical mineral targets. Nat. Sustain. 6, 639–643 (2023).            Econ. 36, 545–561 (2022).
+41. Argonne GREET Model. Argonne National Laboratory, Argonne                  61. Global Critical Minerals Outlook 2024. International Energy Agency
+    National Laboratory. greet.es.anl.gov/. Accessed 27 July 2023.                 (International Energy Agency, 2024).
+42. Harvey, L. D. Resource implications of alternative strategies for          62. Tabelin, C. B. et al. Towards a low-carbon society: a review of lithium
+    achieving zero greenhouse gas emissions from light-duty vehicles               resource availability, challenges and innovations in mining,
+    by 2060. Applied Energy https://doi.org/10.1016/j.apenergy.2017.               extraction and recycling, and future perspectives. Miner. Eng. 163,
+    11.074 (2018).                                                                 106743 (2021).
+43. Delucchi, M. A. et al. An assessment of electric vehicles: technol-        63. Maisel, F. et al. A forecast on future raw material demand and
+    ogy, infrastructure requirements, greenhouse-gas emissions, pet-               recycling potential of lithium-ion batteries in electric vehicles.
+    roleum use, material use, lifetime cost, consumer acceptance and               Resour. Conserv. Recycling 192, 106920 (2023).
+
+
+
+Nature Communications | (2024)15:6813                                                                                                                  11
+Article                                                                                               https://doi.org/10.1038/s41467-024-51152-9
+
+
+64. Bertoncello, M. et al. BEVolution of Luxury Vehicles: How Customer      82. Clean vehicle tax credit transfers to car dealers. Congressional
+    Preferences Are Changing the Luxury Vehicle Market (McKinsey &              Research Service. crsreports.congress.gov/product/pdf/IF/
+    Company, McKinsey & Company, 2022).                                         IF12570 (2024).
+65. Ewing, G. & Sarigöllü, E. Assessing consumer preferences for clean-     83. Section 30D New Clean Vehicle Credit. Internal Revenue Service.
+    fuel vehicles: a discrete choice experiment. J. Public Policy Mar-          public-inspection.federalregister.gov/2023-06822.pdf (2023).
+    keting www.jstor.org/stable/30000491 (2000).                            84. Technical Note on Critical Minerals: Supply Chains, Trade Flows
+66. FOTW #1221, 17 January 2022: Model Year 2021 all-electric vehicles          and Value Addition. United Nations Conference on Trade and
+    had a median driving range about 60% that of gasoline powered               Development (UNCTAD). unctad.org/system/ﬁles/ofﬁcial-
+    vehicles. Energy. Gov, Ofﬁce of Energy Efﬁciency & Renewable                document/ditcmisc2023d1_en_0.pdf (2023).
+    Energy www.energy.gov/eere/vehicles/articles/fotw-1221-                 85. Bushey, C. & O. Roeder. US electric vehicle batteries poised for new
+    january-17-2022-model-year-2021-all-electric-vehicles-had-                  lithium iron age. Financial Times https://www.ft.com/content/
+    median (2022).                                                              7548c4f6-b76f-4b23-ac4f-29461729745f. Accessed 27 July
+67. Burnham, A. et al. Comprehensive total cost of ownership quanti-            2023 (2023).
+    ﬁcation for vehicles with different size classes and powertrains.       86. Insights into Future Mobility. Mobility of the Future (MIT Energy
+    Argonne National Laboratory https://doi.org/10.2172/                        Initiative, 2019).
+    1780970 (2021).                                                         87. Dombrovskis, V. EU-US Critical Minerals Agreement (European
+68. Woody, M. et al. Corrigendum: The role of pickup truck elec-                Commission, 2023).
+    triﬁcation in the decarbonization of light-duty vehicles. Environ.      88. Wong, E. Y. et al. Life cycle assessment of electric vehicles and
+    Res. Lett. 17, 089501 (2022).                                               hydrogen fuel cell vehicles using the greet model—a comparative
+69. Franke, T. & Krems, J. F. What drives range preferences in electric         study. Sustainability 13, 9 (2021).
+    vehicle users?”. Transp. Policy 30, 56–62 (2013).                       89. US Sets Target to Reduce Emissions by 50-52% below 2005 Levels
+70. Zeng, X. et al. Optimal en-route charging station locations for             in 2030. SDG Knowledge Hub (International Institute for Sustain-
+    electric vehicles with heterogeneous range anxiety. Transp. Res.            able Development, 2021).
+    Part C: Emerg. Technol. 158, 104459 (2024).                             90. Inﬂation Reduction Act of 2022 (IRA): Provisions Related to Climate
+71. Alsharif, A. et al. Comprehensive state-of-the-art of vehicle-to-grid       Change. Congressional Research Service crsreports.congress.gov/
+    technology. 2023 IEEE 3rd International Maghreb Meeting of the              product/pdf/R/R47262 (2022).
+    Conference on Sciences and Techniques of Automatic Control and          91. USDOT Announces New Vehicle Fuel Economy Standards for
+    Computer Engineering (MI-STA) https://doi.org/10.1109/mi-                   Model Year 2024-2026. National Highway Trafﬁc Safety Adminis-
+    sta57575.2023.10169116 (2023).                                              tration (United States Department of Transportation, 2022).
+72. Xu, M. et al. Mitigate the range anxiety: Siting battery charging       92. Langan, C. M. et al. Will automakers get regulated to unproﬁtability?
+    stations for electric vehicle drivers. Transp. Res. Part C: Emerg.          Regulatory push worsens despite poor BEV economics. Wells
+    Technol. 114, 164–188 (2020).                                               Fargo (2023).
+73. McGuckin, N. et al. Commuting in America 2021 (American Asso-
+    ciation of State Highway and Transportation Ofﬁcials, 2021).            Acknowledgements
+74. Ou, S. et al. Intensity and daily pattern of passenger vehicle use by   We thank Jessica Dunn, Richard Freeman, Colin Langan, Edward Nei-
+    region and class in China: Estimation and implications for energy       dermeyer, and John Trumpbour for helpful discussions regarding this
+    use and electriﬁcation. Mitig. Adapt. Strateg. Glob. Change 25,         work. The authors declare no funding sources.
+    307–327 (2019).
+75. Bistline, J. et al. Emissions and Energy Impacts of the Inﬂation        Author contributions
+    Reduction Act. Science 380, 1324–1327 (2023).                           A.N., S.W., and L.W. designed research. L.W., C.Y.S., P.C., M.Y., D.S.P,
+76. Minerals Yearbook - Metals and Minerals. Minerals Yearbook - Metals     and L.H. performed research and analyzed the data. L.W., C.Y.S., P.C,
+    and Minerals | U.S. Geological Survey, National Minerals Information    M.Y., S.W., and A.N. wrote the paper.
+    Center. www.usgs.gov/centers/national-minerals-information-
+    center/minerals-yearbook-metals-and-minerals (2024).                    Competing interests
+77. Brew, G. & Bazilian, M. The Mining Gap: Critical Minerals and Geo-      The authors declare no competing interests.
+    political Competition. Just Security www.justsecurity.org/83982/
+    the-mining-gap-critical-minerals-and-geopolitical-                      Additional information
+    competition/ (2022).                                                    Supplementary information The online version contains
+78. Global, E. V. Battery graphite demand up 41% in 2023. Adamas            supplementary material available at
+    Intelligence. https://www.adamasintel.com/global-ev-battery-            https://doi.org/10.1038/s41467-024-51152-9.
+    graphite-demand-up-41-2023/. Accessed 1 April 2024 (2024).
+79. IEA. Global EV Outlook 2023: catching up with climate ambitions.        Correspondence and requests for materials should be addressed to
+    Dot.Net. https://iea.blob.core.windows.net/assets/dacf14d2-eabc-        Ashley Nunes.
+    498a-8263-9f97fd5dc327/GEVO2023.pdf#page=11. Accessed 1
+    April 2024 (2023).                                                      Peer review information Nature Communications thanks the anon-
+80. Critical Minerals Market Review 2023 – Analysis. International          ymous reviewers for their contribution to the peer review of this work. A
+    Energy Agency. www.iea.org/reports/critical-minerals-market-            peer review ﬁle is available.
+    review-2023 (2023).
+81. Manchin Submits Comments to U.S. Treasury on 30D New Clean              Reprints and permissions information is available at
+    Vehicle Tax Credits. U.S. Senator Joe Manchin of West Virginia www.     http://www.nature.com/reprints
+    manchin.senate.gov/newsroom/press-releases/manchin-submits-
+    comments-to-us-treasury-on-30d-new-clean-vehicle-tax-                   Publisher’s note Springer Nature remains neutral with regard to jur-
+    credits (2023).                                                         isdictional claims in published maps and institutional afﬁliations.
+
+
+
+
+Nature Communications | (2024)15:6813                                                                                                              12
+Article                                                                        https://doi.org/10.1038/s41467-024-51152-9
+
+
+Open Access This article is licensed under a Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International License,
+which permits any non-commercial use, sharing, distribution and
+reproduction in any medium or format, as long as you give appropriate
+credit to the original author(s) and the source, provide a link to the
+Creative Commons licence, and indicate if you modiﬁed the licensed
+material. You do not have permission under this licence to share adapted
+material derived from this article or parts of it. The images or other third
+party material in this article are included in the article’s Creative
+Commons licence, unless indicated otherwise in a credit line to the
+material. If material is not included in the article’s Creative Commons
+licence and your intended use is not permitted by statutory regulation or
+exceeds the permitted use, you will need to obtain permission directly
+from the copyright holder. To view a copy of this licence, visit http://
+creativecommons.org/licenses/by-nc-nd/4.0/.
+
+© The Author(s) 2024
+
+
+
+
+Nature Communications | (2024)15:6813                                                                                 13
+

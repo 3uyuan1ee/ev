@@ -1,0 +1,1844 @@
+                                                                     Renewable Energy 257 (2026) 124788
+
+
+                                                                   Contents lists available at ScienceDirect
+
+
+                                                                       Renewable Energy
+                                                           journal homepage: www.elsevier.com/locate/renene
+
+
+
+
+Optimal multi-energy storage capacity allocation for
+electricity-heat-hydrogen-ammonia integrated energy systems with
+ammonia cycling
+Wei Zhang , Maimai Zhang , Jiang Liu *,1
+University of Shanghai for Science and Technology, China
+
+
+
+
+A R T I C L E I N F O                                      A B S T R A C T
+
+Keywords:                                                  Integrated energy system (IES) dominated by coal-fired power generation can effectively reduce carbon emis­
+Ammonia cycling                                            sions through ammonia co-firing. However, the substantial increase in ammonia demand cannot be fully met by
+Multi-energy storage                                       green hydrogen produced solely from renewable energy sources, leading to supply shortages. The ammonia
+Bi-level collaborative optimization
+                                                           cycle, which encompasses ammonia utilization, production, and storage, enables efficient energy recycling.
+Ammonia co-firing
+Coordinated capacity allocation
+                                                           Incorporating the ammonia cycle process can further enhance system operation coordination. This paper es­
+                                                           tablishes a bi-level collaborative optimization model for energy storage capacity configuration in an electricity-
+                                                           heat-hydrogen-ammonia IES, accounting for the ammonia cycle process. Four energy storage forms (electricity,
+                                                           heat, hydrogen, and ammonia) are integrated into the IES framework. First, an IES architecture incorporating
+                                                           electricity-heat-hydrogen-ammonia storage is proposed. A multi-hydrogen coordinated ammonia production
+                                                           method is developed, synthesizing hydrogen from renewable energy-based water electrolysis, natural gas
+                                                           reforming, and fossil fuel-based processes. A hydrogen-to-ammonia conversion model is constructed, considering
+                                                           the storage of electricity, heat, hydrogen, and ammonia. Second, a bi-level optimization model for multi-energy
+                                                           storage configuration in the IES is formulated. The upper-level capacity configuration optimization model aims
+                                                           to minimize the annual operation and maintenance costs of multi-energy storage devices and the system’s annual
+                                                           dispatch cost. The lower-level low-carbon dispatch optimization model minimizes the system’s typical daily low-
+                                                           carbon dispatch cost. The optimal capacity configuration and low-carbon dispatch scheme are derived through
+                                                           iterative solving between the two levels. Furthermore, the ammonia co-firing ratio in coal-fired units is flexibly
+                                                           constrained to regulate ammonia consumption. Finally, case studies demonstrate that the proposed model re­
+                                                           duces both economic costs and carbon emissions in the system.
+
+
+
+
+1. Introduction                                                                             energy represented by wind turbine (WT) and photovoltaic (PV) gen­
+                                                                                            eration has been gradually increasing, the output of these renewable
+1.1. Background                                                                             sources exhibits significant volatility and stochasticity [3]. Additionally,
+                                                                                            thermal generation (TG) persists as the primary adjustable power source
+    The swift advancement of economic activities coupled with the                           in IES [4]. This overreliance on thermal power creates inherent carbon
+intensive utilization of conventional energy resources has resulted in                      emission challenges for integrated energy system [5]. Currently,
+significant conflicts between societal development and ecological pres­                     ammonia co-firing technology in thermal power plants has emerged as
+ervation. Integrated energy system (IES) utilizes a coupled and com­                        an effective solution for reducing carbon emissions in IES [6]. This
+plementary approach to utilize multiple energy forms including                              technological shift has precipitated increased ammonia demand in in­
+electricity, heating, cooling, and gas [1]. IES not only enhances energy                    tegrated energy systems. Therefore, addressing the impacts of coordi­
+utilization efficiency but also facilitates the low-carbon transition of                    nating the ammonia cycling process (encompassing ammonia
+energy systems [2]. Within IES, although the proportion of renewable                        production, utilization, and storage) on IES presents a pivotal challenge
+
+
+
+ * Corresponding author.
+   E-mail address: 222221532@st.usst.edu.cn (J. Liu).
+ 1
+   Present/permanent address:School of Mechanical Engineering, University of Shanghai for Science and Technology, Shanghai 200093, China.
+
+https://doi.org/10.1016/j.renene.2025.124788
+Received 22 May 2025; Received in revised form 11 November 2025; Accepted 15 November 2025
+Available online 20 November 2025
+0960-1481/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+W. Zhang et al.                                                                                                              Renewable Energy 257 (2026) 124788
+
+
+in facilitating the decarbonization transition while ensuring sustainable          storage" is of great research value for achieving efficient recycling of
+energy system development.                                                         ammonia energy.
+                                                                                       Multi-energy storage systems enhance the reliability and economy of
+1.2. Literature review                                                             IES by leveraging the complementary advantages of different storage
+                                                                                   technologies [26]. For example, ref. [27] developed a hybrid energy
+    IES provide end-users with diverse energy choices, including elec­             storage model incorporating electrical, thermal, and hydrogen storage,
+tricity, gas, and thermal energy, by enabling synergy and complemen­               addressing issues related to renewable energy fluctuations and user
+tarity among different energy forms [7]. Within this framework, power              demand in IES. However, the majority of existing studies on IES models
+to gas (P2G) technology utilizes surplus renewable electricity to produce          involving electricity, thermal, and hydrogen energy storage have not yet
+hydrogen through electrolysis, which is then converted into methane,               incorporated ammonia energy storage. There is thus an urgent need to
+substituting fossil fuels, reducing carbon emissions, and enhancing the            integrate ammonia storage with its inherent advantage in long-term
+efficiency of IES [8,9]. Ref. [10] proposes a two-stage, modular math­             energy storage into IES to further optimize the hydrogen to ammonia
+ematical model for P2G and flexible electro-thermal loads, a                       conversion process and enhance system flexibility. Moreover, capacity
+multi-objective collaborative optimization scheduling model for                    configuration of energy storage is a critical area of research, as appro­
+multi-energy coupling in IES is established. Furthermore, advances in              priately sized storage is essential for ensuring stable, reliable, and
+materials for energy applications and renewable energy forecasting                 economical operation of the system. For example, ref. [28] developed a
+modeling are of great significance for promoting the development of IES            two-stage optimization model for configuring the capacity of a
+[11,12]. Although existing literature indicates that hydrogen plays an             multi-energy storage system. The results demonstrated that the pro­
+important role in IES, it still faces significant limitations in storage and       posed configuration not only effectively enhances the economic per­
+transportation.     In    contrast,     ammonia      and    methanol,     as       formance of the IES but also significantly improves its wind power
+hydrogen-derived fuels, offer considerable long-term energy storage                integration capability. However, existing research predominantly fo­
+capacity, making them particularly suitable for cross-seasonal and                 cuses on electrical, thermal, and gas storage capacity allocation,
+cross-year energy dispatch in power systems [13]. They also possess                neglecting the coordinated configuration of multi-energy storage sys­
+certain decarbonization potential [14]. Among them, ammonia, as a                  tems that incorporate hydrogen and ammonia storage. Consequently,
+zero-carbon energy carrier, can significantly reduce system carbon                 the potential of multi-energy storage capacity optimization in IES re­
+emissions [15]. Currently, ammonia energy is attracting considerable               mains underexplored.
+attention in the energy sector [16]. Similar to methanol, ammonia is                   Table 1 summarizes the relevant research literature on IES, and
+easier to liquefy, has high energy density, and offers greater safety,             several research gaps remain to be fully addressed.
+enabling large-scale storage, transportation, and utilization [17].                    Co-firing ammonia in TG is regarded as an effective approach to
+Through an economic comparison, ref. [18] reveals the production and               facilitate low-carbon emissions and enhance the efficiency of conven­
+storage costs of hydrogen, ammonia, and methanol derived from "green               tional thermal power plants. In existing studies on ammonia co-firing in
+hydrogen", demonstrating that ammonia is significantly more                        TG [19,20], the use of multi-source hydrogen coordination for ammonia
+cost-effective 31 % and 18 % lower than hydrogen and methanol,                     production has been explored to meet the ammonia demand within the
+respectively. This provides empirical support for the economic viability           ammonia cycle. However, the integration of ammonia energy storage in
+of ammonia energy storage in both short or long-term applications. In              IES involving ammonia-coal co-firing has not yet been considered. Thus,
+summary, ammonia shows greater development potential and economic                  in the process of multi-source hydrogen-coordinated ammonia produc­
+advantage compared to methanol and hydrogen in achieving deep                      tion, two key issues remain unaddressed. Firstly, current research has
+decarbonization and constructing multi-timescale energy storage                    not fully accounted for the complementary advantages of ammonia
+systems.                                                                           energy storage in enabling long-term energy storage and facilitating the
+    In recent years, systematic research has been conducted on the                 temporal shifting of energy supply and demand. Secondly, the capacity
+recycling of ammonia as an energy carrier. In addition to studies on               allocation for multi-energy storage systems incorporating ammonia
+ammonia energy storage, significant progress has also been made in the             storage has not been addressed. Through optimal capacity allocation,
+field of co-firing ammonia with coal in TG. Existing studies indicate that         the ammonia production and utilization processes can be enhanced,
+the integration of ammonia into energy systems has considerable po­                thereby improving system flexibility.
+tential for carbon emission reduction [19]. Furthermore, based on
+ammonia co-firing in TG, ref. [20] incorporates inertial characteristics           1.3. Contributions
+to achieve more economical, low-carbon, and flexible system operation.
+However, current ammonia production requires a substantial amount of                  Based on the aforementioned research background; to further
+hydrogen [21], typically produced through renewable energy electricity             investigate the coordinated operation mode considering ammonia de­
+to hydrogen (E2H), which is then converted into ammonia [22]. In                   mand in IES and ensure sufficient ammonia co-firing in thermal power
+addition to the hydrogen demand in the ammonia synthesis process, ref.             generation for low-carbon operation of IES, this paper proposes a bi-
+[23] indicates that green hydrogen produced from renewable electrol­               level collaborative optimization model for energy storage capacity in
+ysis often cannot fully meet the system’s hydrogen needs, and reliance             an electricity-heat-hydrogen-ammonia integrated energy system incor­
+on gas to hydrogen (G2H) or fuel to hydrogen (F2H) is often necessary as           porating the ammonia cycle process. The main contributions are sum­
+a supplement. Ref. [24] provides a comprehensive assessment of the                 marized as follows.
+potential of blue and green ammonia as future energy carriers, empha­
+sizing their key role in the energy transition. Although the application of          (1) A coordinated "ammonia production-utilization-storage" opera­
+ammonia co-firing in thermal power generation has demonstrated sig­                      tion mechanism is established, along with a multi-hydrogen
+nificant low-carbon potential, its large-scale adoption is still constrained             collaborative ammonia production framework in the ammonia
+by the stability and economic feasibility of green ammonia production.                   cycle, ensuring sufficient hydrogen supply to meet ammonia de­
+This may lead to temporal mismatches between ammonia supply and                          mand. Furthermore, an operation strategy for ammonia co-firing
+demand. The introduction of ammonia energy storage into the produc­                      in TG is developed, effectively promoting system
+tion system can effectively optimize the dynamic balance of                              decarbonization.
+hydrogen-to-ammonia conversion [25]. Therefore, from a systemic                      (2) Leveraging the complementary advantages of multi-energy stor­
+perspective of the ammonia cycle, establishing a synergistic operational                 age systems, a bi-level optimization model for multi-energy
+mechanism encompassing "ammonia production, utilization, and                             storage capacity configuration including ammonia storage is
+
+                                                                               2
+W. Zhang et al.                                                                                                                  Renewable Energy 257 (2026) 124788
+
+
+Table 1
+Evaluation of existing IES studies contrasted with the developed approaches.
+  Ref.            IES                                           Hydrogen or Ammonia                     Ammonia production
+
+                  TG        E2H         G2H         F2H         Storage        Capacity coordinated     Multi- hydrogen energy        Ammonia-doped combustion
+
+  [7]             £         £           £           £           £              £                        £                             £
+  [8]             £         ✓           £           £           £              £                        £                             £
+  [10]            ✓         ✓           £           £           £              £                        £                             £
+  [16]            £         ✓           £           £           ✓              £                        £                             £
+  [19]            ✓         ✓           £           £           ✓              £                        £                             ✓
+  [20]            ✓         ✓           ✓           ✓           £              £                        ✓                             ✓
+  [21]            £         ✓           ✓           ✓           ✓              £                        ✓                             £
+  [23]            £         ✓           ✓           ✓           ✓              ✓                        £                             £
+  [24]            £         ✓           ✓           £           £              £                        £                             £
+  [27]            £         ✓           £           £           ✓              ✓                        £                             £
+  [28]            ✓         £           £           £           ✓              ✓                        £                             £
+  Proposed        ✓         ✓           ✓           ✓           ✓              ✓                        ✓                             ✓
+
+
+
+       developed to optimize the ammonia cycle process and related                  ammonia synthesis with hybrid energy storage systems within an inte­
+       equipment operation. The model also evaluated the impact of                  grated energy framework. Section 5 presents case studies and analyzes
+       energy storage configurations on various costs and carbon                    the corresponding results. Finally, Section 6 concludes the paper with a
+       emissions.                                                                   summary of key findings.
+   (3) Based on different multi-energy storage capacity configuration
+       schemes, the influence of ammonia-containing multi-energy                    2. Integrated energy system architecture
+       storage on the ammonia production process is analyzed. The
+       study analyzed the impact of varying ammonia blending ratios on                  The framework of the integrated electricity-heat-hydrogen-ammonia
+       the system and conducted an in-depth examination of the rela­                energy system incorporating the ammonia cycle process is illustrated in
+       tionship between ammonia blending ratios and system economics                Fig. 1. This framework consists of four primary components: the power
+       and carbon emissions.                                                        distribution network (PDN), heat distribution network (HDN), gas dis­
+                                                                                    tribution network (GDN), and hydrogen distribution system (HDS). The
+    The remainder of this paper is organized as follows. Section 2 de­              carbon capture power plant (CCPP) consists of a Carbon capture system
+lineates the architecture of the integrated energy system. Section 3                (CCS) and a TG, which provides electricity to the system. The renewable
+formulates a coordinated multi-hydrogen ammonia production model                    energy generation units comprise PV and WT systems, which operate in
+within the ammonia cycle. Section 4 develops a bi-level coordinated                 coordination with the main power grid. Natural gas is supplied from gas
+optimization architecture that combines diversified hydrogen-based                  wells (GW) and undergoes gas to power conversion through gas turbines
+
+
+
+
+                                                               Fig. 1. Framework diagram of IES.
+
+                                                                                3
+W. Zhang et al.                                                                                                                  Renewable Energy 257 (2026) 124788
+
+
+(GT) and combined heat and power (CHP). The CHP units, in conjunc­                     Among these, ammonia storage operates in two modes: AS mode,
+tion with electricity boilers (EB), collectively satisfy the system’s ther­         which enables intraday charging and discharging of ammonia, and long-
+mal load requirements. The hydrogen supply infrastructure integrates                term ammonia storage (LAS) mode, which facilitates the transfer of
+three key components: a blue hydrogen plant (BHP), electrolyzes (EL)                ammonia energy between different typical days. This paper assumes that
+for water electrolysis-based hydrogen production, and a gray hydrogen               during LAS mode operation, ammonia storage typically undergoes only
+plant (GHP). Renewable energy produces green ammonia through                        one charge-discharge cycle in a typical day, determined by the overall
+power to ammonia (P2A). Additionally, the produced hydrogen reacts                  ammonia supply-demand relationship for that day. The operational
+with nitrogen obtained through PSA in an ammonia plant (AP) to                      constraints for LAS mode can be expressed as follows [32]:
+generate ammonia, which is subsequently utilized for co-firing in TG. To            {
+achieve temporal energy shifting, the system is equipped with multiple                0 ≤ PLAS+
+                                                                                            st   ≤ εLAS+
+                                                                                                    st   τLAS xLAS WLAS
+                                                                                                                                                       (2)
+energy storage facilities, including electric storage (ES), thermal storage           0 ≤ Pst
+                                                                                            LAS−
+                                                                                                 ≤ εst τ x WLAS
+                                                                                                    LAS− LAS LAS
+
+(TS), hydrogen storage (HS), and ammonia storage (AS).
+    Within the energy conversion chain, when renewable energy-based                 where PLAS+ st    and PLAS−st    denote the charging and discharging power,
+hydrogen production via electrolysis combined with PSA derived ni­                  respectively. εLAS+st     and   εLAS−
+                                                                                                                     st   denote binary variables (0–1) indicating
+trogen proves insufficient for ammonia synthesis requirements, the                  the charging and discharging states. τLAS denotes the power-to-capacity
+system compensates through supplementary hydrogen production from                   ratio of the LAS, xLAS denotes whether LAS is installed, and WLAS denotes
+both G2H and F2H sources. Furthermore, through coordinated conver­                  the configured capacity of LAS. Eq. (2) constrains the maximum
+sion and optimized dispatch among the four energy storage forms                     charging and discharging power of LAS within a typical day.
+(electricity, heat, hydrogen, and ammonia), Among these, ammonia                    ⎧ LAS (                                )
+energy storage can serve as a short-term or medium to long-term energy              ⎪
+                                                                                    ⎪ Ss,0 = 1 − γ LAS  loss D0 w(s − 1)Δt
+                                                                                    ⎪    (
+storage solution, but it is not the preferred choice for daily use.                 ⎪
+                                                                                    ⎪
+                                                                                    ⎪
+                                                                                    ⎪
+                                                                                    ⎪
+                                                                                    ⎪ × SLASs− 1,0 + D0 w(s − 1)
+                                                                                    ⎪
+                                                                                    ⎨ (                       ))
+2.1. Electricity-gas-heat coupled energy network model                                × SLASs− 1,24 − Ss− 1,0
+                                                                                                        LAS
+                                                                                                                                                               (3)
+                                                                                    ⎪
+                                                                                    ⎪            (           ) LAS
+                                                                                    ⎪
+                                                                                    ⎪
+                                                                                    ⎪
+                                                                                    ⎪
+                                                                                    ⎪ Ss,t = 1 − γ loss Ss,t− 1
+                                                                                        LAS             LAS
+
+    The node power equilibrium conditions are derived from DC power                 ⎪
+                                                                                    ⎪
+                                                                                    ⎪
+                                                                                         (                         /
+                                                                                    ⎩ + PLAS+ ηLAS+ − PLAS− ηLAS− Δt
+                                                                                                                          )
+flow calculations neglecting transmission losses during operational                         s,t               s,t
+
+dispatch, addressing generation-consumption mismatches arising in
+real-time generation scheduling [29]. Based on heat exchange theory,                where D0 denotes the number of days in a year, w(s) denotes the prob­
+the model for constructing a thermal energy network is established [30].            ability of typical day s, and γ LAS
+                                                                                                                    loss is the self-discharge rate. Eq. (3) de­
+In GDN operations, the inherent storage capability of pipelines serves as           scribes the dynamics of LAS across different typical days. The initial
+a crucial flexibility resource, enabling system operators to address                value of S is the cumulative value of the previous season’s charging/
+spatiotemporal discrepancies between gas supply and demand [31]. The                discharging power minus the energy loss caused by self-discharge.
+detailed model of the electricity-gas-heat coupled energy network model             ⎧
+                                                                                    ⎨ SLAS = SLAS
+is shown in Appendix A.                                                                 1,0     Ns ,24
+                                                                                                                                                             (4)
+                                                                                    ⎩ εLAS+ + εLAS− ≤ 1
+                                                                                        st      st
+
+2.2. Electricity-heat-hydrogen-ammonia multifunctional energy storage
+equipment model                                                                     Eq. (4) indicates that the final energy storage value equals the initial
+                                                                                    energy storage value, with a cycle duration of 8760 h. At any given
+     The integrated energy system incorporates a hybrid electricity-heat-           moment, the system is in either a charging or discharging state.
+hydrogen-ammonia multi-energy storage facility, whose energy storage                ⎧
+                                                                                                     Nt
+                                                                                    ⎪               ∑
+units consist of electrical energy storage, thermal energy storage,                 ⎪
+                                                                                    ⎪
+                                                                                    ⎪
+                                                                                    ⎪ εLAS+
+                                                                                       st   ≤ εcs ≤     εLAS+
+                                                                                                         st
+                                                                                    ⎪
+hydrogen energy storage, and ammonia energy storage modules.                        ⎪
+                                                                                    ⎪
+                                                                                    ⎨               t=1
+
+     The system’s energy storage includes electricity, thermal, hydrogen,                           ∑Nt                                                 (5)
+and ammonia storage. These storage devices enhance the flexibility of               ⎪
+                                                                                    ⎪
+                                                                                    ⎪ εLAS−
+                                                                                       st   ≤ εds ≤     εLAS−
+                                                                                                         st
+                                                                                    ⎪
+                                                                                    ⎪               t=1
+the system. However, their operation is subject to various constraints.             ⎪
+                                                                                    ⎪
+                                                                                    ⎪
+                                                                                    ⎩ c
+The constraints for electricity, thermal, and hydrogen storage are out­               εs + εds ≤ 1
+lined in Eq. (1).
+                                                                                        Eq. (5) establishes the relationship between the two binary variables
+⎧
+⎪                                                                                   in Eq. (2) by introducing two binary variables εcs and εds , indicating that
+⎪
+⎪
+⎪
+⎪
+⎪  0 ≤ TtS ≤ Tmax   S
+                                                                                    only one of the charging or discharging states can exist during a typical
+⎪
+⎪
+⎪
+⎪  TS,N ≤ Tmax  S                                                                   day.
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪  0 ≤ PSin,t ≤ γ Sin,t PSin,max
+⎨                                                                                   2.3. Model of ammonia-doped combustion processes in carbon capture
+   0 ≤ PSout,t ≤ γ Sout,t PSout,max                                   (1)
+⎪
+⎪                                                                                   power plants
+⎪
+⎪
+⎪
+⎪  γ S
+     in,t + γ S
+              out,t = 1
+⎪
+⎪
+⎪
+⎪
+⎪  Tt=1
+      S
+          = Tt=24
+                S                                                                      (1) Carbon capture power plant operational characterization and
+⎪
+⎪                                                                                          mathematical modelling
+⎩ S ∈ {ES, TS, HS, AS}
+⎪
+⎪
+⎪
+
+                                                                                       The carbon capture system operates through three sequential phases:
+        S
+where Tmax    denotes the upper limit of the storage of the energy storage          CO2 absorption, solvent regeneration, and gas compression [33]. The
+device S, respectively; TS,N denotes the configured capacity of the energy          operational flexibility framework for the carbon capture facility is
+storage S; PSin,max and PSout,max denote the upper limits of the charging and       mathematically represented in Eq. (6).
+discharging power of the energy storage device S, respectively; γSin,t and
+γ Sout,t denote the 0–1 variables of the charging and discharging states of
+the energy storage device S, respectively.
+
+                                                                                4
+W. Zhang et al.                                                                                                          Renewable Energy 257 (2026) 124788
+
+
+
+
+                                  Fig. 2. Ammonia production process in a coordinated multi-hydrogen energy model.
+
+⎧
+  PCCPP  = PTG                                                                basic energy consumption of carbon capture; Pope      denotes the carbon
+             t + Pt
+                     CCS
+⎪
+⎪   t
+                                                                                                                                t
+⎪
+⎪
+⎪
+⎪ P CCS
+        = P      +  P ope                                                     capture system’s instantaneous power consumption at time t; ϖ denotes
+⎪
+⎪   t       base      t
+⎪
+⎪                                                                             the specific energy demand coefficient for CO2 sequestration; ETG       de­
+⎪
+⎪ P ope
+    t   = ϖE  c2
+              t
+                                                                                                                                                    t
+⎪
+⎪
+⎪
+⎨ ETG = ε PTG                                                                 notes the TG’s CO2 emissions at time t; εTG denotes the TG’s carbon
+           TG t
+     t
+                                                                    (6)       emission factor; EBHP
+                                                                                                  t    denotes the BHP’s CO2 generation rate at time t;
+⎪
+⎪ EBHP
+     t  = εBHP PBHP                                                           εBHP denotes the BHP’s carbon intensity index; λt denotes the flue gas
+⎪
+⎪             ( TGt          )
+⎪
+⎪  t = λ t μ1 E t + E t
+  Ec1                    BHP
+                                                                              split ratio in time t; Ec1   c2
+                                                                                                      t / Et denote the CO2 absorption capacity of the
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪ Ec2
+   t = Et + Et
+          c1     rich
+                                                                              absorption tower and the CO2 regeneration capacity of the regeneration
+⎪
+⎪
+⎩ mCCS = μ Ec2
+     t       2 t
+                                                                              tower in time t; μ1 / μ2 denotes the mass transfer efficiencies of the CO2
+                                                                              absorption and solvent regeneration processes, respectively. Erich  t   de­
+where PCCPP
+        t    denotes the total power generation of the CCPP in time t;        notes the CO2 off-gas flow rate from the liquid-rich accumulator vessel
+PCCS denotes the energy consumption of CCS in time t; Pbase denotes the       during time t.
+ t
+
+
+
+
+                                                                          5
+W. Zhang et al.                                                                                                                 Renewable Energy 257 (2026) 124788
+
+
+
+
+       Fig. 3. A bi-level optimization framework for energy storage capacity allocation in integrated energy systems considering the ammonia cycle process.
+
+
+    (2) Operation mechanism of ammonia doping combustion in TG                           Given that ammonia substitutes a portion of pulverized coal as a heat
+                                                                                     source in the boiler, the effective coal consumption rate for electricity
+   Ammonia reacts with oxygen during combustion to form nitrogen                     generation becomes:
+and water while releasing heat. Its combustion reaction is:                                       (    )2                           /
+                                                                                     mcoal,th
+                                                                                       t      = a1 PTG
+                                                                                                    t     + b1 PTG
+                                                                                                                t  + c1 − mNH
+                                                                                                                           t
+                                                                                                                              3
+                                                                                                                                QNH3 Qcoal                 (9)
+4NH3 + 3O2 → 2N2 + 6H2 O + Heat                                            (7)
+    In TG, ammonia can be mixed and burned with coal fuel to partially               where a1 , b1 and c1 denote the characteristic parameters of the TG. PTG
+                                                                                                                                                           t
+replace fossil fuels, thus reducing CO2 emissions. This study hypothe­               denotes the active power output of the TG during time t.
+sizes that by adopting advanced low-nitrogen burners and SCR denitri­                   The implementation of ammonia co-firing in thermal power plants
+fication technology, NOx emissions from ammonia-injected combustion                  decreases CO2 emissions proportionally to the degree of fuel replace­
+units can achieve low emission standards [34].                                       ment when considering energy equivalence.
+                                                                                                 (      (     /      )    )
+    (3) Given the influence of ammonia co-firing on combustion char­                 mCO
+                                                                                      t
+                                                                                        2
+                                                                                          = qCO2 mNHt
+                                                                                                      3
+                                                                                                          QNH3 Qcoal   γt                                 (10)
+        acteristics in thermal power units, this study adopts a maximum
+                                                                                     where qCO2 denotes the amount of carbon dioxide emitted per unit of
+        ammonia blending ratio of 20 % [35]. Mathematical modelling of
+                                                                                     coal combusted.
+        ammonia-doped combustion processes in carbon capture power
+        plants.
+                                                                                     2.4. Multiple energy storage capacity allocation benefit model
+     The ammonia doping ratio of CCPP in time t is calculated as follows:
+                                                                                         The comprehensive benefits of configuring energy storage in the
+{                          /(                    )
+    γ t = mNH 3 ,TG
+                    QNH3        mCoal,th Qcoal                                       ammonia cycle mainly include the cost of abandoned wind and light, the
+           t                     t
+                                                                           (8)       cost of purchased energy, and the reduction of carbon emissions
+    0 ≤ γt ≤ γ max
+                                                                                     (Detailed model in Appendix B). By configuring energy storage, the
+                                                                                     system has the ability to transfer energy across time and space [36].
+where γt denotes the ammonia blending ratio; QNH3 and Qcoal denote the
+lower heating values of ammonia and coal, respectively, and mCoal,th
+                                                                   t
+denotes the respective coal consumption rates in time t. γmax denotes the
+maximum allowable ammonia doping rate.
+
+                                                                                 6
+W. Zhang et al.                                                                                                               Renewable Energy 257 (2026) 124788
+
+
+3. A framework for coordinated ammonia operation with multi-
+hydrogen energy in the ammonia cycle
+
+    The IES incorporates multi-hydrogen production pathways,
+including renewable energy based green hydrogen, natural gas derived
+G2H, and fossil fuel based F2H. These multi-hydrogen sources are co­
+ordinated to synthesize ammonia, thereby meeting the system’s
+ammonia demand (Detailed model in Appendix C). When the IES em­
+ploys multi-hydrogen coordinated ammonia production, it prioritizes
+green ammonia synthesis via electrolytic hydrogen and nitrogen ob­
+tained through pressure swing adsorption. Should electrolytically pro­
+duce hydrogen fail to satisfy the ammonia synthesis requirements of the
+system, the system supplements with blue and gray ammonia, synthe­
+sized respectively from natural gas derived hydrogen and fossil fuel-
+based hydrogen, combined with PSA nitrogen. The ammonia produced                               Fig. 5. Load forecasts for different typical days.
+in the synthesis plant is utilized for co-firing in thermal power units to
+generate electricity, while surplus ammonia energy is stored in dedi­
+cated ammonia storage systems [37]. The ammonia synthesis process
+under this multi-hydrogen coordination framework is illustrated in
+Fig. 2.
+
+4. Coordinated bi-level synergistic optimization strategy for
+ammonia production and multiple energy storage with multi-
+hydrogen energy
+
+    Given the intrinsic coupling between the multi-hydrogen coordi­
+nated ammonia synthesis process and the electricity-heat-hydrogen-
+ammonia energy storage system, while accounting for the temporal
+disparity between energy storage capacity planning and low-carbon
+operational scheduling, it is imperative to conduct a multi-timescale
+analysis to evaluate the synergistic effects of annual storage capacity
+allocation and daily low-carbon operation [38]. Accordingly, this study
+develops a bi-level collaborative optimization model for integrated en­
+ergy system planning, incorporating the ammonia cycle within an
+electricity-heat-hydrogen-ammonia storage framework. The proposed
+model simultaneously addresses long-term storage capacity configura­
+tion and short-term low-carbon dispatch optimization, as illustrated in                                   Fig. 6. Iteration diagram.
+Fig. 3.
+                                                                                                               365
+                                                                                                               ∑
+4.1. Objective function                                                          min Ctotal = Cinv + Cmain +         COC                                  (11)
+                                                                                                               d=1
+
+   (1) Upper-level capacity allocation optimization model                        where Cinv denotes the investment cost of the energy storage device;
+                                                                                 Cmain denotes the annual maintenance cost of the energy storage device;
+    The upper-level model has the objective of minimizing the operation          COC denotes the total daily operating cost of the system, and d denotes
+and maintenance cost of each type of energy storage equipment and the            the number of days.
+system operation cost. The objective function is shown in Eq. (11).                 The remaining items are costed as follows:
+                                                                                 ⎧        (             )
+                                                                                            ∑               r(1 + r)YS
+                                                                                 ⎨ Cinv =
+                                                                                 ⎪              CS TS,N
+                                                                                           S∈ΩS           (1 + r)YS − 1                             (12)
+                                                                                 ⎪
+                                                                                 ⎩
+                                                                                   ΩS = {ES, TS, HS, AS}
+
+                                                                                 where ΩS denotes the set of energy storage devices; CS denotes the in­
+                                                                                 vestment cost per unit capacity of energy storage S; TS,N denotes the
+                                                                                 planning capacity of device S; and YS denotes the operating life of energy
+                                                                                 storage S.
+                                                                                         ∑
+                                                                                 Cmain =    Cmain,S TS,N                                               (13)
+                                                                                        S∈ΩS
+
+
+                                                                                 where Cmain,S denotes the annual maintenance cost per unit capacity of
+                                                                                 the energy storage S.
+
+                                                                                    (2) Lower-level low carbon scheduling optimization model
+
+
+            Fig. 4. Hourly PV/WT output on different typical days.
+                                                                                    In order to achieve low carbon operation of the IES, the objective
+
+
+                                                                             7
+W. Zhang et al.                                                                                                                    Renewable Energy 257 (2026) 124788
+
+
+Table 2
+Planning results of total system cost and energy storage capacity allocation under different scenarios.
+                                         Scenario                        Scenario 1                  Scenario 2               Scenario 3                 Scenario 4
+          4
+  Cost/10 $                              Investment costs                1672.88                     1540.13                  1341.96                    1337.78
+                                         Maintenance costs                536.60                      494.21                   431.11                     428.33
+                                         Operating cost                  2351.07                     2341.37                  2293.66                    2274.25
+                                         Total costs                     4560.55                     4375.71                  4066.73                    4040.36
+  Configuration capacity                 ES/MWh                           250                         230                      200                        200
+                                         TS/MWh                            50                          50                       50                         45
+                                         HS/t                               8.12                        7.55                     6.75                       6.14
+                                         AS/t                               0                           0                        2.57                       2.93
+
+
+
+                                                                                       are described by Eqs. (1)–(5). The ammonia co-firing constraints for
+Table 3
+                                                                                       carbon capture power plants are established in Eqs. (6)–(10). The multi-
+Results of system ammonia storage capacity configuration with different
+                                                                                       energy storage configuration benefit constraints presented in Eqs. (B-1)-
+ammonia doping ratios in Scenario 4.
+                                                                                       (B-6). The multi-hydrogen coordinated ammonia production process
+  Ammonia doping ratio/%          5            10             15        20             constraints are defined by Eqs. (C-1)-(C-8).
+  ES Capacity/MW                250           250            200       200
+  TS Capacity/MW                 50            50             45        45
+  HS Capacity/t                   7.32          6.92           6.57      6.14          5. Results and discussion
+  AS Capacity/t                   2.12          2.42           2.67      2.93
+                                                                                       5.1. Scenario description
+
+function is shown in Eq. (14) with the goal of minimizing the total
+                                                                                           This paper first analyzes the results of multi-energy storage config­
+operating cost of the IES on a typical day.
+                                                                                       urations under the AS mode, then further compares the results of the AS
+min COC = CEP + CSCT + CCCPP + CCD + CF2H + CCA                            (14)        mode and LAS mode in Section 5.5. Renewable generation profiles for
+                                                                                       these representative days are presented in Fig. 4; the associated load
+where CCCPP denotes the cost of electricity generation in a CCPP, CCD                  profiles are illustrated in Fig. 5. Operational parameters and cost co­
+quantifies the operational expenditures for the system, whereas CF2H                   efficients for the multi-energy storage system are primarily sourced from
+denotes the specific production costs associated with F2H synthesis.                   Refs. [39,40], with a renewable curtailment penalty factor set at 0.2
+   The remaining items are costed as follows:                                          $/kWh. Additional IES parameters are specified in Appendix D. Nu­
+         T
+            [
+              NTG (                    ( )2 )                                          merical simulations were conducted on a computing platform featuring
+        ∑     ∑
+CCCPP =             aTG                                                                an i7 processor (1.61 GHz) with 16 GB RAM, utilizing the Gurobi solver
+                     i + bi Pt,i + ci   PTG   + δcs mCCS          (15)
+                          TG TG     TG
+                                         t,i         t
+          t=1     i=1                                                                  within MATLAB 2021a environment.
+⎧                                                                                          To evaluate the optimal energy storage configuration for the
+⎪
+⎪ CCD = CoCD + CiCD                                                                    electricity-heat-hydrogen-ammonia integrated energy system incorpo­
+⎪
+⎪
+⎪
+⎪
+⎪
+             ⎡      (                   )                      ⎤                       rating ammonia cycling processes, the following comparative scenarios
+⎪
+⎪        ∑T    χ      γ PCHP + γH HCHP    + χ EB PEB
+                                                  t + χ EL Pt
+                                                            EL
+                                                                                       are established:
+⎪
+⎪
+⎪ C o
+       =     ⎣ CHP P t               t
+                                                               ⎦
+⎨ CD
+⎪
+               +χ GT PGT                                                                   Scenario 1: Configuration of electricity-heat-hydrogen storage ca­
+                        t + χ BHP Pt   + χ PSA PPSA
+                                   BHP
+         t=1                                    t
+                                                                           (16)        pacity on IES that does not consider ammonia-doped combustion in TG.
+⎪
+⎪         24 ∑
+         ∑
+⎪
+⎪
+⎪
+⎪ CiCD =           CS PiS,t                                                                Scenario 2: Configuration of electricity-heat-hydrogen storage ca­
+⎪
+⎪
+⎪
+⎪        t=1 S∈ΩCD                                                                     pacity on IES that considering an integrated energy system for ammonia
+⎪
+⎪
+⎪
+⎩ ΩCD = {CHP, EB, EL, GT, BHP, PSA}                                                    combustion in thermal power units and providing for the mixing of only
+                                                                                       ammonia produced by renewable energy sources from P2A conversion
+         T
+                                                                                       in TG.
+         ∑
+CF2H =         ξcoal mGHP                                                  (17)            Scenario 3: Configuration of electricity-heat-hydrogen-ammonia
+                      c,t
+         t=1                                                                           storage capacity on IES that considering an integrated energy system
+                                                                                       for ammonia combustion in thermal power units and providing for the
+where PTG                                         TG   TG   TG
+         t,i denotes the power output in time t; ai , bi , ci  denote the              mixing of only ammonia produced by renewable energy sources from
+cost coefficients of the thermal power generating unit; δcs denotes the                P2A conversion in TG.
+cost required to sequester a unit of CO2; CoCD denotes the operating cost                  Scenario 4: Based on Scenario 3, the ammonia demand for the
+of the system equipment; CiCD denotes maintenance expenditure for the                  ammonia cycle is met by coordinated production of ammonia using
+system equipment; ΩCD denotes aggregation for the system equipment;                    multi-hydrogen energy(E2H-G2H-F2H). Electricity, heat, hydrogen and
+χ i denotes operating cost per unit of energy consumed by the system                   ammonia storage capacities are configured.
+equipment i; CS denotes maintenance expenditure for the system
+equipment; PiS,t denotes input power for the system equipment; PCHP
+                                                                  t  and               5.2. Analysis of the results of multi-energy storage configuration
+HtCHP denote the amount of electricity and heat; γP and γH denote the
+coupling coefficients governing the power-heat correlation in CHP                          The total system cost converged to a stable value (4040.36 × 104 $)
+generation systems. ξcoal denotes the cost scaling factor for hydrogen                 after 42 iterations of the proposed model. The model solution process
+production via coal conversion; and mGHP                                               required approximately 2235.43 s. Fig. 6 illustrates the iterative process
+                                     c,t denotes the amount of coal to
+                                                                                       of the model solution.
+hydrogen production of the GHP in time t.
+                                                                                           As shown in Table 2, the ammonia production under Scenario 4,
+                                                                                       which utilizes multi-source hydrogen-coordinated ammonia synthesis, is
+4.2. Restrictive condition                                                             higher than that of Scenario 3, which relies solely on P2A. In the multi-
+                                                                                       energy storage capacity configuration including ammonia storage, the
+   The electricity-gas-heat coupled energy network constraints are                     hydrogen and ammonia storage capacities in Scenario 4 are 6.14 t and
+given by Eqs. (A-1)-(A-11). The multi-energy storage system constraints                2.93 t, respectively. Compared to Scenario 3, this represents a 9.03 %
+
+                                                                                   8
+W. Zhang et al.                                                                                              Renewable Energy 257 (2026) 124788
+
+
+
+
+                  Fig. 7. Renewable energy consumption and ammonia energy usage across different time periods.
+
+
+
+
+                                                               9
+W. Zhang et al.                                                                      Renewable Energy 257 (2026) 124788
+
+
+
+
+                  Fig. 8. Diagram of carbon emissions at each stage of the system.
+
+
+
+
+                                                 10
+W. Zhang et al.                                                                                                               Renewable Energy 257 (2026) 124788
+
+
+Table 4                                                                            production. In contrast, Scenario 4 utilizes multi-source hydrogen-co­
+Daily scheduling cost and carbon emissions of different types of ammonia           ordinated ammonia production to meet the ammonia demand
+storage in scenario 4.                                                             throughout the day. During 7:00–22:00, ammonia production is deter­
+  Operating Costs and Carbon   Short term energy   Medium to long-term             mined by the co-firing demand of thermal power units rather than being
+  Emissions                    storage             energy storage                  limited by green hydrogen availability. As illustrated in Fig. 7(d),
+  COC/$                        59688               58766                           ammonia consumption varies with the output of TG. From 0:00 to 10:00,
+  CEP/$                        10873               10332                           when ammonia is abundant, TG maintains a constant co-firing ratio.
+  CCCPP/$                      28211               28034                           From 10:00 to 22:00, Scenario 3 experiences insufficient ammonia
+  CCD/$                        13953               13594
+                                                                                   production, leading to a gradual decrease in the co-firing ratio as TG
+  CF2H/$                        3189                3157
+  CCA/$                          316                 302                           output increases. In Scenario 4, however, multi-source hydrogen coor­
+  CSCT/$                        3416                3347                           dination ensures a stable ammonia supply, supporting consistent and
+  Eat /t                         297                 291                           efficient co-firing in TG units. This enhances low-carbon operation and
+                                                                                   reduces both carbon emissions and operational costs.
+
+reduction in hydrogen storage capacity and a 12.28 % increase in
+                                                                                   5.4. System flexibility low carbon scheduling analysis
+ammonia storage capacity. These results indicate that the increased
+hydrogen consumption in the multi-source hydrogen-coordinated
+                                                                                       As shown in Fig. 8(a), Scenarios 2, 3, and 4 incorporate ammonia co-
+ammonia production process leads to storage capacity configurations
+                                                                                   firing in TG on the basis of Scenario 1, thereby reducing carbon emis­
+that align well with actual system operation. Although the investment
+                                                                                   sions from TG and decreasing the total carbon emissions throughout the
+costs in Scenarios 2, 3, and 4 are higher than in Scenario 1, their oper­
+                                                                                   ammonia co-firing process. By introducing multi-source hydrogen co­
+ational costs are lower, resulting in a lower total cost compared to
+                                                                                   ordinated ammonia production, Scenario 4 further optimizes the
+Scenario 1. Specifically, the total cost in Scenario 4 is 11.4 % lower than
+                                                                                   ammonia synthesis process. Compared to Scenario 3, it reduces carbon
+that in Scenario 1. Thus, the proposed optimal configuration model re­
+                                                                                   emissions in the ammonia co-firing process by 7.61 % and total system
+duces the comprehensive lifecycle cost by 11.4 %, primarily due to
+                                                                                   carbon emissions by 12.81 %. This demonstrates that the carbon
+rational planning of energy storage investments, optimized operational
+                                                                                   reduction achieved through TG power generation outweighs the emis­
+scheduling, and more efficient utilization of renewable energy. These
+                                                                                   sions generated during ammonia production, leading to an overall
+findings are consistent with current research trends and economic
+                                                                                   decrease in system-wide carbon emissions. Fig. 8(b) illustrates the
+benefits related to ammonia storage and its integration into power-to-
+                                                                                   hourly carbon emissions from various internal processes of the system in
+ammonia systems.
+                                                                                   Scenario 4 over a 24-h period, providing a clear visualization of emis­
+    Furthermore, Table 3 demonstrates that for every 5 % increase in the
+                                                                                   sions generated during multi-source hydrogen coordinated ammonia
+ammonia co-firing ratio, the required ammonia storage capacity in­
+                                                                                   production. Furthermore, the system prioritizes green ammonia, sup­
+creases by an average of 0.28 tons. This positive correlation between
+                                                                                   plemented by blue ammonia, with gray ammonia serving as a backup.
+ammonia storage capacity configuration and the co-firing ratio ensures
+                                                                                   As shown in Fig. 8(c), green ammonia accounts for the largest share
+adequate ammonia supply for thermal power generation. Conversely,
+                                                                                   (approximately 73 %) of the total ammonia production, while gray
+hydrogen storage capacity exhibits an inverse relationship with the co-
+                                                                                   ammonia constitutes the smallest portion (about 5 %). Fig. 8(d) in­
+firing ratio, as higher ammonia demand necessitates greater hydrogen
+                                                                                   dicates that blue ammonia is the primary source of carbon emissions
+consumption for ammonia synthesis. Additionally, at elevated co-firing
+                                                                                   during the period from 6:00 to 19:00, while gray ammonia emissions
+ratios, the system preferentially allocates electrical and gaseous energy
+                                                                                   peak during evening hours. Although gray ammonia represents a small
+resources for hydrogen production rather than thermal energy conver­
+                                                                                   fraction of total production, its significantly higher carbon intensity per
+sion. This operational preference consequently leads to reduced capacity
+                                                                                   unit results in disproportionately high emissions. Despite the higher
+requirements for both electrical and thermal energy storage systems.
+                                                                                   production volumes of green and blue ammonia, their emissions remain
+                                                                                   lower than those from gray ammonia production. Thus, carbon emis­
+5.3. Benefit analysis of the ammonia cycle process                                 sions during ammonia synthesis are largely dominated by short-term
+                                                                                   peaks in gray ammonia production.
+    As observed in Fig. 7(a), with the introduction of ammonia co-firing,
+the ammonia production process consumes a significant amount of                    5.5. Analysis of ammonia energy storage characteristics across different
+hydrogen. In Scenario 2, during the periods of 0:00–4:00, 12:00–16:00,             time scales
+and 21:00–24:00, more wind and solar power are consumed by
+hydrogen production and system-coupled devices. By incorporating a                     As shown in Table 4, in Scenario 4, ammonia energy storage dem­
+multi-energy storage capacity configuration, the system optimizes the              onstrates superior cross-period regulation capabilities as a medium to
+output of coupled devices through appropriate energy storage and                   long-term storage solution. The cross-period utilization of ammonia
+discharge, leading to better renewable energy consumption in Scenario              energy requires coordination among various energy sources within the
+3 compared to Scenario 2. Furthermore, with the multi-energy storage               system. It enables purchasing and storing energy during low-cost periods
+configuration and the inclusion of multi-source hydrogen-coordinated               for release during high-cost periods, thereby reducing the need for
+ammonia production, the hydrogen-based ammonia synthesis process is                expensive electricity procurement. In contrast, short-term storage solu­
+optimized, resulting in further utilization of wind and solar energy. In           tions have limited regulation cycles, making it difficult to fully leverage
+Scenario 4, the actual output of wind and solar power closely matches              peak-valley electricity price differentials, resulting in higher energy
+the forecasted output for most time periods. During 0:00–6:00 and                  procurement costs. LAS enables more stable operation of coupled
+23:00–24:00, abundant wind power and low energy demand facilitate                  equipment, reducing wear and tear as well as start-stop losses, thereby
+the processes of E2H and PSA, as shown in Fig. 7(b) and (c). In Scenario           lowering operational and maintenance costs. Furthermore, LAS balances
+3, where hydrogen for ammonia production is solely sourced from E2H,               fluctuations in ammonia production and consumption, reducing addi­
+excess ammonia can be stored during 0:00–6:00 and 23:00–24:00.                     tional ammonia production costs caused by large-scale ammonia doped
+However, from 7:00 to 22:00, increased energy demand leads to insuf­               in TG or short-term supply-demand imbalances. In summary, consid­
+ficient hydrogen production to meet the requirements for ammonia                   ering that the average daily dispatch costs and carbon emissions asso­
+synthesis. When the stored ammonia is depleted, the amount of                      ciated with medium to long-term ammonia storage are lower than those
+ammonia co-firing depends solely on the current green ammonia                      for short-term storage, LAS can reduce system operating costs by 1.5 %
+
+                                                                              11
+W. Zhang et al.                                                                           Renewable Energy 257 (2026) 124788
+
+
+
+
+                  Fig. 9. Ammonia energy balance on days 1, 4, 7, and 10 in Scenario 4.
+
+
+
+
+                                                   12
+W. Zhang et al.                                                                                                                    Renewable Energy 257 (2026) 124788
+
+
+and carbon emissions by 2 % at the average daily dispatch level. This              ammonia energy system framework considering the ammonia cycle,
+validates the economic advantages of medium to long-term ammonia                   aiming to address challenges such as carbon emissions and economic
+storage in long-term system operation.                                             constraints. firstly, the system is utilized to meet ammonia energy de­
+    The ammonia energy balance for typical days 1, 4, 7, and 10 in                 mands through hydrogen production from renewable energy, gas, and
+Scenario 4 is shown in Fig. 9. As shown in Fig. 9(a) and (b), during short-        fossil fuels. Within the integrated electricity-heat-hydrogen-ammonia
+term ammonia energy storage, electrical and hydrogen storage accu­                 energy system, a TG doped-ammonia combustion operation strategy is
+mulate substantial energy between 4:00–6:00, 9:00–12:00, and                       established, which facilitates emission reduction and efficient operation
+22:00–24:00. During ammonia utilization the ammonia energy release                 of TG. Then, a capacity configuration model for multi-energy storage
+phase electrical and hydrogen storage discharge energy to meet the                 (electricity-heat-hydrogen-ammonia) is constructed to optimize the
+system’s ammonia production demand. The system’s daily energy                      E2H-G2H-F2H process. This model has optimized ammonia synthesis
+storage is charged and discharged within the same day. When consid­                and utilization process, enhanced renewable energy absorbing capacity,
+ering ammonia storage on a long-term scale, the system’s ammonia                   reduced the economic cost of the IES by 11.4 %. Moreover, the ammonia
+storage is not prioritized for daily storage. Through cross-period storage,        cycle process can be further optimized by flexibly adjusting the TG
+the system’s ammonia storage increases on days 4 and 7, thereby                    ammonia doping ratio, thereby reducing system carbon emissions and
+reducing ammonia production. The system consumes more electricity                  economic costs to a certain extent. While excessively high doping ratios
+for hydrogen production, increasing hydrogen storage while signifi­                can further decrease carbon emissions, but increase economic costs.
+cantly reducing electrical storage. Additionally, thermal storage shows            Finally, the economic advantages of medium to long-term ammonia
+minimal trend changes over the long term, indicating it is less affected           storage in long-term system operations were verified. LAS can reduce
+by ammonia storage. Therefore, utilizing ammonia storage as medium to              system operating costs by 1.5 % and carbon emissions by 2 % at the daily
+long-term energy storage can coordinate energy usage across different              average scheduling level.
+system periods, leveraging the complementary advantages of various                     It should be noted that this paper mainly studies the ammonia cycle
+storage technologies to achieve long-term energy dispatch and opera­               process in land-based IES. Future research will further explore the po­
+tion. As shown in Fig. 9(c), during the 0:00–6:00 period on days with              tential of ammonia production from offshore wind power, establish a
+varying typical daily conditions, ammonia production significantly ex­             coordinated ammonia production mechanism between offshore and
+ceeds consumption due to higher renewable energy generation, enabling              onshore wind power, and meanwhile explore safety issues related to
+ammonia storage to accumulate surplus ammonia energy. During the                   ammonia energy, establishing an integrated sea-land renewable energy
+8:00–10:00 and 16:00–20:00 periods, when thermal power generation                  ammonia production model that considers ammonia energy storage
+output is high, ammonia consumption exceeds production, necessitating              across multiple timescales, which is an important direction for subse­
+the release of stored ammonia energy to meet demand. Considering                   quent research.
+LAS’s medium to long-term storage characteristics, daily storage is not
+prioritized for immediate use. To achieve intraday complementary ef­               CRediT authorship contribution statement
+fects, AS undergoes charging and discharging on typical days across
+different seasons, while LAS can be charged on one typical day and                     Wei Zhang: Writing – review & editing, Resources, Methodology,
+discharged on another. As shown in Fig. 9(d), LAS stores ammonia en­               Conceptualization. Maimai Zhang: Writing – original draft, Visualiza­
+ergy during days 1 and 7 when ammonia usage is low, releasing it during            tion, Formal analysis, Data curation. Jiang Liu: Writing – original draft,
+days 4 and 10 when usage is high. This demonstrates ammonia energy’s               Validation, Software, Data curation.
+role as a medium to long-term storage medium, enabling cross-period
+storage and release to achieve energy complementarity between
+different typical days.                                                            Declaration of competing interest
+
+6. Conclusion                                                                          The authors declare that they have no known competing financial
+                                                                                   interests or personal relationships that could have appeared to influence
+    This paper proposes an integrated electricity-heat-hydrogen-                   the work reported in this paper.
+
+
+
+Nomenclature
+
+
+                                 Abbreviation
+                                 AP                      Ammonia plant
+                                 AS                      Ammonia storage
+                                 BHP                     Blue hydrogen plant
+                                 CCPP                    Carbon capture power plant
+                                 CCS                     Carbon capture systems
+                                 CHP                     Combined heat and power
+                                 E2H                     Electricity to hydrogen
+                                 EB                      Electricity boilers
+                                 EL                      Electrolyzes
+                                 ES                      Electric storage
+                                 F2H                     Fossil fuel to hydrogen
+                                 G2H                     Gas to hydrogen
+                                 GDN                     Gas distribution network
+                                 HDN                     Heat distribution network
+                                 HDS                     Hydrogen distribution system
+                                 IES                     Integrated energy systems
+                                 LAS                     Long-term ammonia storage
+                                 P2A                     Power to ammonia
+                                 PDN                     Power distribution network
+                                                                                                        (continued on next page)
+
+
+
+                                                                              13
+W. Zhang et al.                                                                                                                  Renewable Energy 257 (2026) 124788
+
+                             (continued )
+                              PV                 Photovoltaic
+                              TG                 Thermal generation
+                              WT                 Wind turbine
+                              Variables
+                              PCHP
+                               h,t
+                                                 Output power of CHP
+                              Pv,t               Output power of PV
+                              Pw,t               Output power of WT
+                              PIMP
+                               c,t
+                                                 The input power of the interconnection nodes
+                              PEXP
+                               c,t
+                                                 The output power of the interconnection nodes
+                              θi,t               The bus i phase angle
+                              HCHP
+                                h,t
+                                                 The thermal energy supplied by CHP
+                              HEB
+                               h,t
+                                                 The thermal energy supplied by EB
+                              HHS
+                               h,t
+                                                 The thermal energy supplied by HS
+                              mGi,t              The mass flow rate of circulating water of the heat generating unit at node i
+                              mDi,t              The heat load demand of the heat generating unit at node i
+                              τSi,t              The temperatures at the nodes of the water supply systems
+                              τRi,t              The temperatures at the nodes of the water return systems
+                              VtMR               The natural gas production of the MR
+                              VtBHP              The natural gas consumption of the BHP
+                                CHP
+                              Vgas,t             The natural gas consumption of the CHP
+                               GT
+                              Vgas,t             The natural gas consumption of the GT
+                              TSt                The stored energy of the energy storage device in time t
+                              PSout,t            The discharging power of the energy storage equipment in time t;
+                              PCCPP
+                                 t
+                                                 The total power generation of the carbon capture plant in time t
+                              Parameters
+                               t
+                              Iij                The current flowing through branch ij during time interval t
+                              vti                The square of the voltage amplitude at node i
+                              vtj                The square of the voltage amplitude at node j
+                              Ptij               Active power flowing through branch ij during time interval t
+                              Qtij               Reactive power flowing through branch ij during time interval t
+                              PGP,min
+                               e
+                                                 The minimum value of electrical power provided by the supplier
+                              PGP,max
+                               e
+                                                 The maximum value of electrical power provided by the supplier
+                              cp                 The specific heat capacity of water
+                              τSi,max            The upper limits of the supply system temperature at node i
+                              τSi,min            The lower limits of the supply system temperature at node i
+                              τRi,max            The upper limits of the return system temperature at node i
+                              τRi,min            The lower limits of the return system temperature at node i
+                              Cij                The constancy of the gas storage in the pipeline
+                              fij                The friction coefficient of the gas transmission pipeline
+                              QGS i,min
+                                                 The minimum value of natural gas supplied by the supplier
+                              QGS
+                               i,max
+                                                 The maximum value of natural gas supplied by the supplier
+                              ηCHP
+                               e
+                                                 The electric conversion efficiency of CHP
+                              ηEB
+                               b
+                                                 The thermal conversion efficiency of EB
+                              PC,max             The upper limits of the output power of the coupling device C
+                              PC,min             The lower limits of the output power of the coupling device C
+                              λSin               The charging efficiencies of the energy storage device
+                              λSout              The discharging efficiencies of the energy storage device
+                              ξCA                The penalty factor for abandoned wind
+                              Indices and Sets
+                              ij                 Index of line or pipeline with lead node i and end node j
+                              t                  Index of time
+                              C                  System equipment coupling device (GT, CHP, EB)
+                              F(i)/T(i)          The set of pipes that “start” or “end” at node i
+                              S                  System energy storage equipment (ES, TS, HS, AS)
+                              NTG                Number of TG
+                              COC                Total system cost
+                              CEP                Energy purchase cost
+                              CCCPP              Carbon capture power plant cost
+                              CCD                Coupling device cost
+                              CF2H               Gray hydrogen cost
+                              CCA                Abandoning the cost of scenery
+                              CSCT               Carbon trading cost
+                              e, h, g, c         Index of electricity, heat, gas, ammonia process
+
+
+
+
+Appendix A. Electricity-gas-heat coupled energy network model
+
+   (1) Distribution network model
+
+
+
+
+                                                                       14
+W. Zhang et al.                                                                                                                Renewable Energy 257 (2026) 124788
+
+ ∑        ∑(            ) ∑        ∑        ∑
+   PCHP
+    h,t +   PIMP
+             c,t − Pc,t
+                    EXP
+                         +  Pv,t +   Pw,t +   PGT
+                                               q,t +
+h∈SCHP             c∈SIC                             v∈SPV            w∈SWT            e∈SGT
+∑                ∑                ∑                ∑                ∑           (           )                                                             (A-1)
+        PTG
+         p,t +           PES
+                          e,t =           Pe,t +           Pd,t +            Bij θi,t − θj,t , ∀i ∈ SPDN
+e∈STG            e∈SES            e∈SED            d∈SCD            j∈SPDN
+
+
+where PCHP
+         h,t , Pw,t and Pv,t denote the active power output of the CHP, WT, and PV, respectively. Pp,t denotes the TG’s electrical output. Pq,t denotes the
+                                                                                                        TG                                     GT
+
+GT’s generation capacity. PES   e,t denotes the ES’s discharge power. P IMP
+                                                                        c,t and P EXP
+                                                                                  c,t denote the active power injection and withdrawal at tie-line nodes; Pe,t ,
+Pd,t denote the load consumption and coupled device; Bij denotes the system’s bus admittance matrix; θi,t is the voltage phase angle at the bus i.
+     Voltage angle constraints at each network node:
+θref = 0                                                                                                                                                  (A-2)
+
+    Bus phase angle limitation:
+θmin
+ i   ≤ θi,t ≤ θmax
+               i                                                                                                                                          (A-3)
+
+
+where θmin
+        i  and θmax
+                i    denote the minimum and maximum allowable phase angle of bus i, correspondingly.
+    The aggregate electrical output from GT, CHP, and TG constitutes the system’s total generation capacity. Furthermore, an integrated coupling
+system comprising EL, PSA, and EB draws electrical energy from the PDN.
+Pd,t = PEB
+        b,t + Pp,t + Pq,t
+               TG     GT
+                                                                                                                                                          (A-4)
+
+
+where PEB     TG       GT
+       b,t , Pp,t and Pq,t denote the electrical load requirements for the EB, TG and GT, correspondingly.
+    The grid provider (GP) is obligated to comply with the following provisions:
+PGP,min
+ e      ≤ PGP
+           e,t ≤ Pe
+                  GP,max
+                                                                                                                                                          (A-5)
+
+
+where PGP,min
+       e      and PGP,max
+                   e      denote the lower and upper bounds, respectively, of the supplier’s available active power capacity.
+
+   (2) Heat distribution network model
+
+  The total heat energy supply and demand can be expressed as:
+⎧ ∑ CHP ∑ EB ∑ HS                             (             ) ∑
+⎨   Hh,t +       Hh,t +        Hh,t = cp mGi,t τSi,t − τRi,t +  HHL
+                                                                 l,t
+  ∑               (            )                                                                                                                          (A-6)
+⎩
+    Hl,t = cp mi,t τi,t − τi,t
+      HL       D    S      R
+
+
+
+
+where HCHP                                              EB                                              HS
+       h,t denotes the thermal energy supplied by CHP; Hh,t denotes the thermal energy supplied by EB; Hh,t denotes the thermal energy supplied by
+HS; cp denotes the heat capacity per unit mass of water; The flow rate of the circulating water mass and the thermal load demand of the heat supply
+unit at node i are denoted as mGi,t and mDi,t , respectively; τSi,t and τRi,t denote the respective nodal temperatures in the supply-water and return-water
+circuits.
+    Ensuring flow conservation across the network requires satisfaction of the subsequent equation:
+⎧∑ S                              ∑
+⎪
+⎪        mb,t + mDi,t = mGi,t +        mSb,t , ∀i, t
+⎨ b∈F(i)                         b∈T(i)
+   ∑                              ∑                                                                                                                   (A-7)
+⎪
+⎪
+⎩        mRb,t + mGi,t = mDi,t +       mRb,t , ∀i, t
+  b∈F(i)                                  b∈T(i)
+
+
+
+
+where mSb,t and mRb,t denote the mass flow rate of circulating water in pipe b; F(i) and T(i) denote the set of pipes that " start " or " end " at node i.
+   At junction points where water flows with varying thermal conditions merge, the resultant fluid temperature can be determined through energy
+balance principles:
+⎧ ∑ ( S,out S )                   ∑
+⎪
+⎪        τb,t mb,t = τSi,t              mSb,t
+⎪
+⎪ b∈T(i)                         b∈T(i)
+⎪
+⎪
+⎪
+⎪  ∑ ( R,out         )            ∑
+⎪
+⎨        τb,t mRb,t = τR,    i,t        mRb,t
+  b∈F(i)                         b∈F(i)
+                                                                                                                                          (A-8)
+⎪
+⎪
+⎪
+⎪  S,in          R,in
+⎪           S              R
+⎪
+⎪
+⎪
+  τb,t = τi,t , τb,t = τi,t
+⎪
+⎩ S
+  τi,min ≤ τSi,t ≤ τSi,max , τRi,min ≤ τRi,t ≤ τRi,max
+
+
+where τS,out
+       b,t   and τR,out
+                  b,t   denote the outlet and inlet water temperatures of pipeline b in the supply system, while τS,in     R,in
+                                                                                                                  b,t and τb,t correspond to those in the
+return system. τSi,max and τSi,min denote the upper and lower limits of the supply system temperature at node i; τRi,max and τRi,min denote the upper and lower
+limits of the return system temperature at node i.
+
+
+
+                                                                                                           15
+W. Zhang et al.                                                                                                               Renewable Energy 257 (2026) 124788
+
+
+     (3) Gas distribution network model
+
+    The compressible nature and finite propagation speed of natural gas facilitate its temporary accumulation within the pipeline infrastructure,
+effectively creating distributed pipeline storage. Pipeline storage ij is the sum of pipeline storage Nl+1 segments, then there are:
+⎧ sas
+⎪
+⎪  Sij,t = Dij ̃pij,t
+⎪
+⎪
+⎨          pi,t + pj,t
+   pij,t =
+   ̃                                                                                                                                       (A-9)
+⎪
+⎪               2
+⎪
+⎪
+⎩ Sgas = Sgas + qin − qout
+     ij,t         ij,t− 1     ij,t   ij,t
+
+
+    The GDN network should satisfy the Weymouth equation specified in Eq. (A-10).
+⎧
+⎪              qinij,t + qij,t
+                            out
+⎪
+⎪ qij,t =
+  ̃
+⎪
+⎪
+⎪                      2
+⎪
+⎪        ⃒ ⃒                (                )
+⎪        ⃒       ⃒
+⎪
+⎪
+⎪
+⎪ q
+  ̃ ij,t ⃒̃qij,t ⃒  =  C 2
+                         ij  p  2
+                                i,t −  p 2
+                                         j,t
+⎪
+⎨            √̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+             √                                                                                                                                          (A-10)
+⎪            √                d5ij,gas
+⎪
+⎪
+⎪ C  ij  =   √
+⎪
+⎪
+⎪                  1862592.059fij jgas         ij
+⎪
+⎪
+⎪
+⎪                        (                            )
+⎪
+⎪                                          12
+⎩ fij = 0.0044 1 +
+⎪
+                                    0.276dij,gas
+
+
+      qij,t denotes the mean pneumatic pressure within the conduit, while qin
+where ̃                                                                              out
+                                                                           ij,t and qij,t respectively quantify the gaseous mass flux at the initial and
+terminal junctions of the distribution network. Cij denotes the constancy of the gas storage in the pipeline, and fij denotes the friction factor for the
+gaseous transport conduit.
+    The gas flow equilibrium condition is expressed in Eq. (A-11).
+⎧∑                ∑ (                )                   ∑            ∑
+⎪
+⎨       QGS
+          t +            VtMR − VtBHP − qin
+                                         ij,t + qij,t −
+                                                 out
+                                                             Vgas,t
+                                                              CHP
+                                                                    −     Vgas,t
+                                                                           GT
+                                                                                 = Lgi,t
+   GW∈i        MR,BHP∈i                                 CHP∈i         GB∈i                                                                        (A-11)
+⎪
+⎩ QGS ≤ QGS ≤ QGS
+    i,min     i,t      i,max
+
+
+
+
+where VtMR denotes the methane output from the MR, while VtBHP , Vgas,t
+                                                                  CHP          GT
+                                                                        , and Vgas,t denote the methane uptake by the BHP, CHP, and GT, respectively.
+ g
+Li,t corresponds to the total gaseous fuel demand. QGS                                                                           GS
+                                                    i,min denotes the minimum value of natural gas supplied by the supplier and Qi,max denotes the
+maximum value of natural gas supplied by the supplier.
+
+Appendix B. Multiple energy storage capacity allocation benefit model
+
+     The cost of purchasing energy is:
+            T (
+            ∑                     )
+CEP =          pet PGP
+                    e,t + pt Qg,t
+                           g GW
+                                                                                                                                                          (B-1)
+            t=1
+
+
+
+                                                                                                  g
+where CEP is the cost of EP; PGP                        GW                                  e
+                              e,t is the GP in time t; Qg,t is the output of GW in time t; pt and pt are the purchase prices of electricity and natural gas in
+time t, respectively.
+    In this paper, the system wind power consumption capacity after configuring multiple energy storage is described by the abandoned wind power
+rate, which is constrained as follows:
+⎧ T        /
+  ∑           ∑T
+⎪
+⎨      PCA
+        t          Ppre
+                     t  ≤ δmax
+   t=1        t=1                                                                                                                           (B-2)
+⎪
+⎩ CA
+  Pt + PWT t  +  P PV
+                   t   = Ppre
+                          t
+
+
+
+where PCA
+        t denotes the abandoned wind power of the system in time t; δmax denotes the maximum allowable abandoned wind rate, in order to verify the
+effectiveness of the electricity-heat-hydrogen-ammonia integrated energy system considering the ammonia cycle process in wind power consumption,
+Ppre
+ t   denotes the predicted output of the system wind power in time t.
+    Abandonment of scenery costs:
+                  T
+                  ∑
+CCA = ξCA               PCA
+                         t                                                                                                                                (B-3)
+                  t=1
+
+
+
+where CCA denotes the cost of abandoned wind, and ξCA denotes the penalty factor for abandoned wind.
+    Given the nocturnal surplus of renewable generation relative to system demand, optimized multi-energy storage deployment enhances renewable
+utilization while synchronizing ammonia synthesis and consumption across temporal intervals. This strategy mitigates process-related carbon
+
+
+                                                                              16
+    W. Zhang et al.                                                                                                               Renewable Energy 257 (2026) 124788
+
+
+    emissions from ammonia production, with system-level carbon costs evaluated through a comparative analysis of allocated allowances and actual
+    emissions. In particular, Eq. (B-4) describes the calculation of the actual carbon emissions of the system; Eq. (B-5) allocates free carbon allowances to
+    the system, respectively; and Eq. (B-6) calculates the carbon trading cost of the system.
+    ⎧
+    ⎪
+    ⎪
+    ⎪
+    ⎪ Eat = Dgrid
+                t    + DCHP
+                          t        + DGT
+                                      t + Dt
+                                           BHP
+                                               + Dgload
+                                                  t     + DTG
+                                                           t + Dt
+                                                                GHP
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪ Dgrid
+         t    = λgrid Pgrid
+                         e,t
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪ D  CHP
+         t     =  λ     V GDN,CHP
+                    CHP g,t
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪ D = λGT Vg,t
+         GT             GDN,GT
+    ⎨ t
+    ⎪
+      DBHP
+         t     = λBHP Vc,tBHP
+                                                                                                                                                        (B-4)
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪ Dt gload
+               = λgload Lt   g
+    ⎪
+    ⎪
+    ⎪
+    ⎪           NTG
+                ∑
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪ DTGt   =        λTG PTGe,t
+                                 i
+    ⎪
+    ⎪            i=1
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎩ Dt = λGHP mc,t
+    ⎪    GHP              GHP,AP
+
+
+
+
+    where Eat denotes the actual carbon emissions; λGT /λBHP /λgrid /λCHP /λGHP /λTG /λgload denote the actual carbon emissions factors for GT/BHP/grid/
+                                                      grid
+    CHP/GHP/TG/natural gas load, respectively; Pe,t          denotes the system’s electrical energy consumption during time t; NTG denotes the total number of
+                        g
+    active generators; Lt denotes the natural gas consumption of the system over the same interval t.
+    ⎧
+    ⎪
+    ⎪
+    ⎪
+    ⎪ Est = Egrid
+             t    + ECHP
+                      t    + EGTt + Et
+                                     BHP
+                                         + Egload
+                                            t     + ETG
+                                                     t + Et
+                                                          GHP
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪ Egrid
+        t   = χ grid Pgrid
+                      e,t
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪ E CHP
+        t   =  χ     V
+                 CHP g,t
+                        GDN,CHP
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪ EGT = χ GT Vg,tGDN,GT
+    ⎨ t
+    ⎪
+      EBHP
+       t     = χ BHP Vc,t
+                        BHP
+                                                                                                                                                              (B-5)
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪ Egload
+       t     = χ gload Lgt
+    ⎪
+    ⎪
+    ⎪
+    ⎪         NTG
+              ∑
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎪ ETG
+       t   =       χ TG PTG
+                          e,t
+                              i
+    ⎪
+    ⎪         i=1
+    ⎪
+    ⎪
+    ⎪
+    ⎪
+    ⎩ EGHP
+    ⎪
+       t     = χ GHP mGHP,AP
+                        c,t
+
+
+
+
+    where Est denotes the carbon credit allocation quota; χ GT /χ BHP /χ grid /χ CHP /χ GHP /χ TG /χ gload denote the actual carbon credit allocations for the GT/
+    BHP/grid/CHP/GHP/TG/natural gas load, respectively.
+           ⎧       (         )
+           ⎪
+           ⎪
+           ⎪  CCO2 Eat − Est
+           ⎪
+           ⎪
+           ⎪
+           ⎪
+           ⎪  0 < Eat − Est ≤ LCO2
+           ⎪
+           ⎪                            (               )
+           ⎪
+           ⎪
+           ⎪  CCO2 LCO2 + CCO2 (1 + α) Eat − Est − LCO2
+           ⎪
+           ⎪
+           ⎪
+           ⎪
+           ⎪  LCO2 < Eat − Est ≤ 2LCO2
+           ⎪
+           ⎪                                     ( a             )
+           ⎨ C (2 + α)L
+                             CO2 + CCO2 (1 + 2α) Et − Et − 2LCO2
+                                                         s
+               CO2
+    CSCT =                                                                                                                                                    (B-6)
+           ⎪
+           ⎪
+           ⎪  2LCO2 < Eat − Est ≤ 3LCO2
+           ⎪
+           ⎪                                      (                )
+           ⎪
+           ⎪
+           ⎪  CCO2 (3 + 3α)LCO2 + CCO2 (1 + 3α) Eat − Est − 3LCO2
+           ⎪
+           ⎪
+           ⎪
+           ⎪
+           ⎪  3LCO2 < Eat − Est ≤ 4LCO2
+           ⎪
+           ⎪                                      (                )
+           ⎪
+           ⎪
+           ⎪  CCO2 (4 + 6α)LCO2 + CCO2 (1 + 4α) Eat − Est − 4LCO2
+           ⎪
+           ⎪
+           ⎩ 4L
+                CO2 < Et − Et
+                         a     s
+
+
+
+
+    where CSCT denotes the cost of carbon trading; LCO2 denotes the carbon emission accounting period length; CCO2 denotes the reference carbon price;
+    CSCT denotes the carbon credit transaction cost; and α denotes the carbon price escalation rate.
+
+    Appendix C. Multi-hydrogen energy coordinated ammonia synthesis model
+
+        EL produces hydrogen by electrolyzing water through electrical energy supplied by the PDN, the generated hydrogen is distributed between the HS
+    system and AP unit.
+    ⎧                          /
+    ⎨ mEL,HS + mEL,AP = PEL η
+         c,t    c,t      c,t EL HHV
+                                                                                                                                                  (C-1)
+    ⎩ PEL = PPV + PWT
+        c,t     c,t     c,t
+
+
+
+
+    where mEL,HS
+           c,t   denotes the hydrogen energy content stored in HS from EL output; mEL,AP
+                                                                                   c,t   denotes the hydrogen energy utilized by AP from EL pro
+
+                                                                                   17
+­
+W. Zhang et al.                                                                                                           Renewable Energy 257 (2026) 124788
+
+
+duction; PEL                                                                                                           PV
+          c,t denotes the electrical energy input to the EL system; HHV denotes the higher heating value of hydrogen; Pc,t denotes PV generation
+allocated to EL operation; and PWT
+                                c,t denotes WT power supplied to EL.
+    BHP procures methane feedstock from the GDN and employs liquid metal catalytic cracking to produce G2H, with concomitant CO2 emissions
+being sequestered via CCS systems. As expressed in Eq. (C-2), the generated hydrogen is either stored in HS tanks or distributed to AP units.
+mBHP,HS
+ c,t    + mBHP,AP
+           c,t    = Vc,t
+                     BHP
+                         ηBHP ρH2                                                                                                                    (C-2)
+
+
+where mBHP,HS
+       c,t    denotes the recoverable hydrogen energy content stored in the HS system, originating from the BHP methane reforming process;
+mBHP,AP
+   c,t
+                                                                                                                                           BHP
+             denotes the utilizable hydrogen energy delivered to AP after accounting for conversion losses in the BHP to AP supply chain; Vc,t denotes the
+natural gas consumed by BHP; The hydrogen conversion stoichiometric coefficient is denoted by ηBHP .
+       The HS system complies with the following operational requirements:
+                    ( EL,HS     BHP,HSH2
+                                         )           HSH ,AP
+                                           H2 ,in
+SHc,t2 = SHc,t−2 1 + mc,t 2 + mc,t                − mc,t 2 ηHHS2 ,out                                                                                (C-3)
+                            H
+                                          ηHS
+
+
+where SH        H2
+       c,t and Sc,t− 1 denote the temporal evolution of stored hydrogen energy, corresponding to system states at time steps t and t-1 respectively;
+         2
+
+
+
+ηHHS2 ,in / ηHHS2 ,out denotes the hydrogen input/output efficiency of the HS.
+  The AP system’s hydrogen supply is sourced through multiple pathways: EL production, HS discharge, and methane reforming processes in both
+BHP and GHP, and can be expressed as:
+   ∑     (                                    )
+                                                   H2 ,AP
+          mEL,AP
+            c,t  + mHS,AP
+                    c,t   + SBHP,AP
+                             c,t    + mGHP,AP
+                                       c,t      = mi,t                                                                                 (C-4)
+EL,MR,HS,GHP∈i
+
+
+
+
+where mGHP,AP
+        c,t   denotes the hydrogen energy output from the GHP, while mHi,t
+                                                                          2 ,AP
+                                                                                denotes the hydrogen energy input to the AP.
+   Ammonia production through the AP process utilizes hydrogen supplied from three sources: EL, HS, and BHP, with the quantitative relationship
+expressed as:
+N2 + 3H2 ⇌2NH3                                                                                                                                       (C-5)
+   The model of AP can be represented as follows:
+⎧
+⎪         (                            )/
+⎪
+⎪
+⎪ mNt 2 = PWT,PSA
+            t     + PPV,PSA
+                       t     + PPG,PSA
+                                 t       w N2
+⎪
+⎪
+⎨ mNH3 ,AP = μNH3 mH2 ,AP + μNH3 mN2 ,AP
+     t            H2   t           N2   t
+                                                                                                                                                     (C-6)
+          AP NH3 ,in
+⎪
+⎪
+⎪ mAP
+   t = λ mt
+⎪
+⎪
+⎩ mAP,min ≤ mAP ≤ mAP,max
+⎪
+                  t
+
+
+
+
+where mN
+       t denotes the nitrogen energy in time t; wN2 denotes the specific energy requirement for nitrogen-based energy generation, expressed in
+         2
+
+
+energy units per mass unit; mNH
+                             t
+                               3 ,AP
+                                     is the ammonia production of the AP; mtH2 ,AP denotes hydrogen energy utilization rate within system AP in time t;
+mN
+ t
+   2 ,AP
+         denotes the nitrogen energy consumed by the AP in time t; μNH    NH3
+                                                                    H2 / μN2 respectively denote the hydrogen-to-ammonia and nitrogen-to-ammonia
+                                                                      3
+
+
+energy conversion ratios in the synthesis process; λAP denotes the ammonia production efficiency in the Haber-Bosch process (AP); mAP,max / mAP,min
+denote the maximum/minimum ammonia production of the AP.
+   The ammonia energy balance of the system is shown in Eq. (C-7).
+mNH
+ t
+   3 ,TG
+         + mNH
+            t
+               3 ,AS
+                     = mNH
+                        t
+                           3 ,AP
+                                                                                                                                                     (C-7)
+
+
+where mNH
+        t
+          3 ,TG
+                denotes the ammonia doping of TG in time t; mNH
+                                                             t
+                                                               3 ,AS
+                                                                     denotes the ammonia storage energy in time t.
+  Consider incorporating the use of F2H production, which should satisfy the constraints of Eq. (C-8), when other hydrogen energy is not available to
+meet the system’s hydrogen needs.
+mGHP
+ c,t + mc,t + mc,t + mc,t = mc,t
+        BHP    EL     HS     H2 ,load
+                                      + mc,t
+                                         H2 ,AP
+                                                                                                                                                     (C-8)
+
+
+where mH
+       i,t
+          2 ,load
+                  denotes the instantaneous hydrogen demand in time t.
+
+
+
+
+                                                                                 18
+W. Zhang et al.                                                                                                                                          Renewable Energy 257 (2026) 124788
+
+
+Appendix D. Related parameters of IES
+
+
+       Table D.1
+       Essential operational parameters of TG.
+                                                                   (          )                        (          )
+         Number                           ai ($)                 bi $ ⋅MWh− 1                        ci $ ⋅MWh− 2                       PTG
+                                                                                                                                         max (MW)                        PTG
+                                                                                                                                                                          min (MW)
+
+
+         TG1                              1469                   19.71                               0.077                              200                              0
+         TG2                              1826                   21.42                               0.082                              300                              0
+         TG3                              1864                   21.42                               0.089                              300                              0
+         TG4                              1826                   21.42                               0.082                              300                              0
+         TG5                              1864                   21.42                               0.089                              300                              0
+
+
+
+
+                        Table D.2
+                        Parameters of a stepped carbon trading mechanism.
+
+                          Parameters                       Values                                      Parameters                       Values
+
+                          LCO2                             0.08(t)                                     ϑTG /χ TG                            1.11/0.658(t/MW)
+                          α                                0.25                                        ϑgload /χgload                       0.2124/0.21(t/MW)
+                          CCO2                             41($/t)                                     ϑGHP /χ GHP                          1.51/0.758(t/kg)
+                          ϑgrid /χ grid                    1.11/0.658(t/MW)                            ϑBHP /χ BHP                          0.7647/0.424(t/103m3)
+                          ϑCHP /χ CHP                      0.5647/0.424(t/MW)                          ϑMR                                  − 0.7425(t/103m3)
+                          ϑGT /χ GT                        0.5647/0.424(t/MW)                          ​                                ​
+
+
+
+
+                              Table D.3
+                              Other relevant parameters of the system.
+
+                                 Parameters                     Values                                          Parameters                        Values
+                                                                   (          )
+                                 wN 2                           0.8 MWh ⋅t− 1                                   ηGT
+                                                                                                                 g
+                                                                                                                                                  0.3
+                                 ηCHP
+                                  h
+                                                                0.45                                            ηEL                               0.85
+                                 ηCHP
+                                  e
+                                                                0.31                                            φCH
+                                                                                                                 H2
+                                                                                                                    4                             0.25
+                                                                     (        )
+                                 ξcoal                          138.9 $ ⋅t− 1                                   PES    ES
+                                                                                                                 max /Pmin
+                                                                                                                                                  200/0(MW)
+                                                                           (          )                                                                  ( )
+                                 QNH3 /Qcoal                    18720/23022 kJ ⋅kg− 1                           τSi,max /τSi,min                  280/40 0 C
+                                                                                                                                                         ( )
+                                 QGW      GW
+                                  i,max /Qi,min
+                                                                60/0(103m3)                                     τRi,max /τRi,min                  280/40 0 C
+                                 PGT    GT
+                                  max /Pmin
+                                                                80/0(MW)                                        PEB    EB
+                                                                                                                 max /Pmin
+                                                                                                                                                  60/0(MW)
+
+
+
+
+Appendix C. Supplementary data
+
+    Supplementary data to this article can be found online at https://doi.org/10.1016/j.renene.2025.124788.
+
+
+
+References                                                                                        [10] Q. Li, X. Xiao, Y. Pu, et al., Hierarchical optimal scheduling method for regional
+                                                                                                       integrated energy systems considering electricity-hydrogen shared energy, Appl.
+                                                                                                       Energy 349 (2023) 121670.
+ [1] Economy-carbon coordination in integrated energy systems: optimal dispatch and
+                                                                                                  [11] S. Aziz, N.U. Rehman, H. Soonmin, et al., Novel Ni/ZnO nanocomposites for the
+     sensitivity analysis, Appl. Energy 351 (2023) 121871.
+                                                                                                       effective photocatalytic degradation of malachite green dye, Civil Eng. J. 10 (8)
+ [2] G. Zhang, W. Wang, Z. Chen, et al., Modeling and optimal dispatch of a carbon-
+                                                                                                       (2024) 2601–2614.
+     cycle integrated energy system for low-carbon and economic operation, Energy
+                                                                                                  [12] J.F. Yao, C. Xiao, J.B. Hao, et al., Research on power consumption data prediction
+     240 (2022) 122795.
+                                                                                                       of distributed photovoltaic power station, HighTech. Innov. J. 5 (4) (2024)
+ [3] N. Bozsik, A. Szeberényi, Impact of climate change on the performance of
+                                                                                                       937–948.
+     household-scale photovoltaic systems, HighTech. Innovation J. 5 (1) (2024) 1–15.
+                                                                                                  [13] Z. Yang, H. Li, H. Zhang, A power-to-methanol-based chemical industry system-
+ [4] L. Guo, X. Lin, Z. Feng, et al., Comprehensive energy system with combined heat
+                                                                                                       aided decarbonization approach for power distribution networks, Appl. Energy 384
+     and power photovoltaic-thermal power stations and building phase change energy
+                                                                                                       (2025) 125395.
+     storage for island regions and its coordinated dispatch strategy, Renew. Energy 240
+                                                                                                  [14] T. Brown, J. Hampp, Ultra-long-duration energy storage anywhere: methanol with
+     (2025) 122207.
+                                                                                                       carbon cycling, Joule 7 (11) (2023) 2414–2420.
+ [5] J. Jin, Q. Wen, S. Cheng, et al., Optimization of carbon emission reduction paths in
+                                                                                                  [15] P. Lan, S. Chen, Q. Li, et al., Comparison of different hydrogen-ammonia energy
+     the low-carbon power dispatching process, Renew. Energy 188 (2022) 425–436.
+                                                                                                       conversion pathways for renewable energy supply, Renew. Energy 227 (2024)
+ [6] G. Wang, J. Zhao, H. Zhang, et al., Ammonia Co-firing with coal: a review of the
+                                                                                                       120602.
+     status and prospects, Energy & Fuels 38 (17) (2024) 15861–15886.
+                                                                                                  [16] H. Bouaboula, M. Ouikhalfan, I. Saadoune, et al., Addressing sustainable energy
+ [7] W. Fan, Y. Fan, X. Yao, et al., Distributed transaction optimization model of multi-
+                                                                                                       intermittence for green ammonia production, Energy Rep. 9 (2023) 4507–4517.
+     integrated energy systems based on nash negotiation, Renew. Energy 225 (2024)
+                                                                                                  [17] T. Zhang, J. Uratani, Y. Huang, et al., Hydrogen liquefaction and storage: recent
+     120196.
+                                                                                                       progress and perspectives, Renew. Sustain. Energy Rev. 176 (2023) 113204.
+ [8] C. Pan, T. Jin, N. Li, et al., Multi-objective and two-stage optimization study of
+                                                                                                  [18] Y. Zhao, B.P. Setzler, J. Wang, et al., An efficient direct ammonia fuel cell for
+     integrated energy systems considering P2G and integrated demand responses,
+                                                                                                       affordable carbon-neutral transportation, Joule 3 (10) (2019) 2472–2484.
+     Energy 270 (2023) 126846.
+                                                                                                  [19] L. Yang, Y. Gao, P. Zhang, et al., Two-stage low-carbon economic dispatch of an
+ [9] Z. Siqin, D.X. Niu, X. Wang, et al., A two-stage distributionally robust optimization
+                                                                                                       integrated energy system considering flexible decoupling of electricity and heat on
+     model for P2G-CCHP microgrid considering uncertainty and carbon emission,
+                                                                                                       sides of source and load, Sustainable Energy, Grids and Networks 40 (2024)
+     Energy 260 (2022) 124796.
+                                                                                                       101552.
+
+
+
+                                                                                             19
+W. Zhang et al.                                                                                                                                    Renewable Energy 257 (2026) 124788
+
+[20] W. Zhang, J. Liu, Low-carbon optimal dispatch of park integrated energy system            [31] Z. Chong, L. Yang, Y. Jiang, et al., Hybrid-timescale optimal dispatch strategy for
+     considering coordinated ammonia production from multiple hydrogen energy,                      electricity and heat integrated energy system considering integrated demand
+     Renew. Energy 237 (2024) 121712.                                                               response, Renew. Energy 232 (2024) 121123.
+[21] H. Ishaq, C. Crawford, Review of ammonia production and utilization: enabling             [32] G. Pan, W. Gu, Y. Lu, et al., Optimal planning for electricity-hydrogen integrated
+     clean energy transition and net-zero climate targets, Energy Convers. Manag. 300               energy system considering power to hydrogen and heat and seasonal storage, IEEE
+     (2024) 117869.                                                                                 Trans. Sustain. Energy 11 (4) (2020) 2662–2676.
+[22] J.A. Saray, A. Gharehghani, D. Hosseinzadeh, Towards sustainable energy carriers:         [33] X. Zeng, L. Zhu, Y. Huang, et al., Combined pinch and exergy analysis for post-
+     a solar and Wind-Based systems for green liquid hydrogen and ammonia                           combustion carbon capture NGCC integrated with absorption heat transformer and
+     production, Energy Convers. Manag. 304 (2024) 118215.                                          flash evaporator, Energy 288 (2024) 129788.
+[23] J. Zhou, Z. Zhang, R. Zhang, et al., Optimal capacity and multi-stable flexible           [34] M. Jeon, E. Lee, M. Kim, et al., Nitric oxide (NO) and nitrous oxide (N2O) emissions
+     operation strategy of green ammonia systems: adapting to fluctuations in                       during selective non-catalytic reduction and selective catalytic reduction processes
+     renewable energy, Energy Convers. Manag. 314 (2024) 118720.                                    in a pulverized coal/Ammonia Co-fired boiler, J. Environ. Chem. Eng. 11 (2)
+[24] C.A. Del Pozo, S. Cloete, Techno-economic assessment of blue and green ammonia                 (2023) 109398.
+     as energy carriers in a low-carbon future, Energy Convers. Manag. 255 (2022)              [35] X. Wu, F. Hu, C. Ding, et al., Progress in numerical simulations and fundamental
+     115312.                                                                                        characteristics of pulverized coal co-firing with ammonia, Int. J. Hydrogen Energy
+[25] J. Liu, L. Sang, Y. Xu, Low carbon collaborative planning of integrated hydrogen-              82 (2024) 740–758.
+     ammonia system and power distribution network, Int. J. Hydrogen Energy 87                 [36] N. Wu, Q. Wu, H. Ren, et al., Hierarchical game optimization of independent
+     (2024) 1510–1521.                                                                              shared energy storage system considering multiple profits and penalty, Energy
+[26] Z. Yan, Y. Zhang, R. Liang, et al., An allocative method of hybrid electrical and              (2025) 135448.
+     thermal energy storage capacity for load shifting based on seasonal difference in         [37] Y. Zhang, H. Sun, J. Tan, et al., Capacity configuration optimization of multi-
+     district energy planning, Energy 207 (2020) 118139.                                            energy system integrating wind turbine/photovoltaic/hydrogen/battery, Energy
+[27] J. Wang, K. Xue, Y. Guo, et al., Multi-objective capacity programming and                      252 (2022) 124046.
+     operation optimization of an integrated energy system considering hydrogen                [38] Z. Liu, G. Fan, X. Meng, et al., Multi-time scale operation optimization for a near-
+     energy storage for collective energy communities, Energy Convers. Manag. 268                   zero energy community energy system combined with electricity-heat-hydrogen
+     (2022) 116057.                                                                                 storage, Energy 291 (2024) 130397.
+[28] J. Wang, H. Deng, X. Qi, Cost-based site and capacity optimization of multi-energy        [39] M.J. Palys, I. Mitrai, P. Daoutidis, Renewable hydrogen and ammonia for combined
+     storage system in the regional integrated energy networks, Energy 261 (2022)                   heat and power systems in remote locations: optimal design and scheduling,
+     125240.                                                                                        Optim. Control Appl. Methods 44 (2) (2023) 719–738.
+[29] W. Lambrichts, M. Paolone, Linear recursive state estimation of hybrid and                [40] X. Wang, S. Wang, Q. Zhao, et al., Low-carbon coordinated operation of electric-
+     unbalanced AC/DC micro-grids using synchronized measurements, IEEE Trans.                      heat-gas-hydrogen interconnected system and benchmark design considering
+     Smart Grid 14 (1) (2022) 54–67.                                                                multi-energy spatial and dynamic coupling, Energy 279 (2023) 128042.
+[30] Y. Zhao, H. Yuan, Z. Zhang, et al., Performance analysis and multi-objective
+     optimization of the offshore renewable energy powered integrated energy supply
+     system, Energy Convers. Manag. 304 (2024) 118232.
+
+
+
+
+                                                                                          20
+

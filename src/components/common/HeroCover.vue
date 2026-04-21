@@ -1,5 +1,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { useI18n } from '@/i18n/useI18n'
+
+const { locale } = useI18n()
 
 const sentinelRef = ref(null)
 const coverRef = ref(null)
@@ -47,6 +50,16 @@ const quotes = [
     text: '"在当前阶段，传统内燃机车辆的总拥有成本普遍较低，但随着技术的不断进步，电池电动车和燃料电池电动车在未来可能会达到甚至超越传统车辆的经济水平。"',
     source: '卢利霞',
     context: '《新能源汽车与传统燃油汽车的生命周期成本评估》（2018）',
+  },
+  {
+    text: '"For a used 3-year-old midsize SUV, the battery electric vehicle has the lowest total cost of ownership compared to all new and used conventional and hybrid vehicles."',
+    source: 'Woody et al. 2026',
+    context: 'Environmental Research Letters 21 024022',
+  },
+  {
+    text: '"Battery electric vehicles with solar off-grid chargers will have lower costs well before 2040 in most countries and segments — financing is identified as the key action point."',
+    source: 'Noll et al. 2026',
+    context: 'Nature Energy',
   },
 ]
 
@@ -128,8 +141,6 @@ onUnmounted(() => {
         <span class="title-line">The EV</span>
         <span class="title-line accent">Crossroads</span>
       </h1>
-      <p class="cover-subtitle">电动车 vs 燃油车 — 四维数据驱动的交互式探索</p>
-
       <div class="quote-stage">
         <Transition name="quote" mode="out-in">
           <div v-if="currentQuote >= 0" :key="currentQuote" class="quote-card">

@@ -34,14 +34,17 @@ const option = computed(() => {
   const upperBandData = allYears.map(yr => {
     if (yr === lastActual.year) return lastActual.priceUsdPerKwh
     const pd = predictedData.find(d => d.year === yr)
-    return pd ? pd.confidenceUpper : null
+    return pd ? (pd.confidenceUpper ?? pd.priceUsdPerKwh * 1.5) : null
   })
 
-  // Lower confidence band
+  // Lower confidence band — use the model floor or a reasonable lower bound
   const lowerBandData = allYears.map(yr => {
     if (yr === lastActual.year) return lastActual.priceUsdPerKwh
     const pd = predictedData.find(d => d.year === yr)
-    return pd ? pd.confidenceLower : null
+    if (!pd) return null
+    // If confidenceLower is 0 or missing, use max(price * 0.5, 30) as reasonable floor
+    const cl = pd.confidenceLower
+    return (cl && cl > 0) ? cl : Math.max(pd.priceUsdPerKwh * 0.5, 30)
   })
 
   const primaryColor = chartPalette.value[0]
@@ -122,32 +125,31 @@ const option = computed(() => {
         showSymbol: false,
         connectNulls: true,
       },
-      // Confidence band upper
+      // Confidence band (rendered as area between upper and lower)
       {
         name: t('chart.batteryConfidenceBand'),
         type: 'line',
         data: upperBandData,
-        lineStyle: { opacity: 0 },
+        lineStyle: { width: 0 },
         areaStyle: {
           color: primaryColor,
-          opacity: 0.08
+          opacity: 0.1,
         },
         showSymbol: false,
         z: 1,
         connectNulls: true,
       },
-      // Lower confidence bound
+      // Lower bound line (invisible, clips the area from below)
       {
-        name: '_lower',
+        name: t('chart.batteryConfidenceBand') + ' ',
         type: 'line',
         data: lowerBandData,
-        lineStyle: { opacity: 0 },
+        lineStyle: { width: 0 },
         areaStyle: {
-          color: primaryColor,
-          opacity: 0.08
+          color: 'transparent',
         },
         showSymbol: false,
-        z: 1,
+        z: 2,
         connectNulls: true,
       },
       // $100 threshold

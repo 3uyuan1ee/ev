@@ -2,16 +2,25 @@ import XLSX from 'xlsx'
 import { datasetPath, dataPath, writeJson, roundTo } from '../lib/utils.js'
 
 export async function processPaperData() {
-  console.log('\n📊 Processing Paper data.xlsx...')
-  const workbook = XLSX.readFile(datasetPath('Paper data.xlsx'))
-  const sheetNames = workbook.SheetNames
-  console.log(`  Sheets: ${sheetNames.join(', ')}`)
+  console.log('\n📊 Processing Paper data...')
+  
+  const xlsxPath = datasetPath('Paper data.xlsx')
+  let workbook
+  try {
+    const fs = await import('fs/promises')
+    await fs.access(xlsxPath)
+    workbook = XLSX.readFile(xlsxPath)
+    console.log(`  Sheets: ${workbook.SheetNames.join(', ')}`)
+  } catch {
+    console.log('  Paper data.xlsx not found, using fallback data')
+    return { batteryPrice: getFallbackBatteryPrice(), classSummary: getFallbackClassSummary() }
+  }
 
   // === Battery Price sheet ===
-  const batteryResult = extractBatteryPrice(workbook, sheetNames)
+  const batteryResult = extractBatteryPrice(workbook, workbook.SheetNames)
 
   // === Class Summary sheet ===
-  const classResult = extractClassSummary(workbook, sheetNames)
+  const classResult = extractClassSummary(workbook, workbook.SheetNames)
 
   return { batteryPrice: batteryResult.actual, classSummary: classResult }
 }

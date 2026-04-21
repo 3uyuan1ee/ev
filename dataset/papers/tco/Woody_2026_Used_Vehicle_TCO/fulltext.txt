@@ -1,0 +1,790 @@
+LETTER • OPEN ACCESS                                                                              You may also like
+                                                                                                      - Autler–Townes splitting in Rydberg atoms:
+Total cost of ownership of electric and gasoline                                                        transition dipole matrix element extraction
+                                                                                                        and field efficiency analysis
+used vehicles                                                                                           Brian C Holloway, Gavin M Chase, Lee E
+                                                                                                        Harrell et al.
+
+                                                                                                      - ICRH modelling of DTT in full power and
+To cite this article: Maxwell Woody et al 2026 Environ. Res. Lett. 21 024022                            reduced-field plasma scenarios using full
+                                                                                                        wave codes
+                                                                                                        A Cardinali, C Castaldo, F Napoli et al.
+
+                                                                                                      - XFEL imaging techniques for high energy
+                                                                                                        density and inertial fusion energy research
+View the article online for updates and enhancements.                                                   at HED-HiBEF
+                                                                                                        Alejandro Laso Garcia, Mikhail
+                                                                                                        Mishchenko, Victorien Bouffetier et al.
+
+
+
+
+                               This content was downloaded from IP address 211.68.1.50 on 20/04/2026 at 12:11
+                              Environ. Res. Lett. 21 (2026) 024022                                                            https://doi.org/10.1088/1748-9326/ae38f8
+
+
+
+
+                              LETTER
+
+
+OPEN ACCESS
+                              Total cost of ownership of electric and gasoline used vehicles
+                              Maxwell Woody1,∗, Sally Yin2, Antara Green1, Christian Hitt1, Alexander Liu2, Sabina Tomkins2
+RECEIVED
+2 November 2025
+                              and Gregory A Keoleian1
+                              1
+REVISED                         Center for Sustainable Systems, School for Environment and Sustainability, University of Michigan, Ann Arbor, MI, United States of
+5 January 2026                  America
+                              2
+ACCEPTED FOR PUBLICATION        School of Information, University of Michigan, Ann Arbor, MI, United States of America
+                              ∗
+15 January 2026                 Author to whom any correspondence should be addressed.
+PUBLISHED                     E-mail: maxwoody@umich.edu
+27 January 2026
+                              Keywords: electric vehicle, ownership cost, charging patterns, depreciation, linear regression, vehicle adoption,
+Original content from
+                              transportation decarbonization
+this work may be used         Supplementary material for this article is available online
+under the terms of the
+Creative Commons
+Attribution 4.0 licence.
+Any further distribution      Abstract
+of this work must
+maintain attribution to       We assess the total cost of ownership (TCO) of internal combustion engine (ICEV), hybrid (HEV),
+the author(s) and the title
+of the work, journal          plug-in hybrid (PHEV), and battery electric vehicles (BEVs) in the United States. As previous stud-
+citation and DOI.             ies have shown, we find that current new BEVs, with some exceptions for smaller or shorter-range
+                              vehicles, have a higher TCO than conventional alternatives. However, we also present the first com-
+                              parative analysis of the TCO of used vehicles, which make up 70% of all vehicle purchases in the
+                              U.S. We find that for used vehicles, BEVs have the lowest TCO among all powertrains. As vehicle
+                              TCO varies spatially and with use patterns, we test 5 different vehicle classes, 17 different U.S. cit-
+                              ies, and 5 different charging strategies. The finding that BEVs have the lowest total cost for used
+                              vehicles is robust across these variables and is largely driven by vehicle depreciation patterns. We
+                              conduct a regression analysis based on 260 000 publicly available used vehicle listings, collected
+                              from January to December of 2024. We find that BEVs depreciate more rapidly than other power-
+                              trains in the first several years of vehicle life but follow similar depreciation patterns afterwards.
+                              With a 7 year ownership period, buying a used (3 year-old) midsize SUV vs a new midsize SUV
+                              has a TCO savings of approximately $3000 for an ICEV, $1000 for an HEV or PHEV, and $13 000
+                              for a BEV. These results highlight an opportunity for savings via BEV adoption among used vehicle
+                              purchasers.
+
+
+                              1. Introduction                                                        Common components of TCO include the purchase
+                                                                                                     of the vehicle, fuel (gasoline or electricity), insurance,
+                              Transportation is responsible for 28% of U.S. green-                   maintenance, repairs, taxes, and fees. Vehicle TCO has
+                              house gas (GHG) emissions [1], and 16% of U.S.                         been compared across countries [6], cities [7], and
+                              household expenditures [2], making it the largest                      neighborhoods [8]. Others have noted the import-
+                              emitting sector of the U.S. economy and the second                     ance of vehicle class [9, 10] and charging patterns [8,
+                              largest contributor to U.S. household costs (after                     11, 12]. Internal combustion engine vehicles (ICEVs)
+                              housing). Because electric vehicles have lower life                    currently have lower upfront (purchase) costs, but
+                              cycle GHG emissions than conventional vehicles [3],                    BEVs generally have lower recurring costs due to
+                              vehicle electrification is one of the main strategies                  lower refueling and maintenance costs. This allows
+                              being pursued to decarbonize this sector [4]. Yet high                 BEVs to break even and become cheaper after a num-
+                              purchase prices are a large barrier to battery electric                ber of years, but currently in the U.S. this advant-
+                              vehicle (BEV) adoption [5], and transportation costs                   age only exists for smaller and low range BEVs [13].
+                              are a significant burden for many households.                          Previous studies have focused on the TCO to the
+                                   Vehicle total cost of ownership (TCO) measures                    first purchaser of a vehicle. No TCO studies have
+                              all the costs required to own and operate a vehicle.                   examined TCO from the perspective of a used vehicle
+
+
+
+                              © 2026 The Author(s). Published by IOP Publishing Ltd
+Environ. Res. Lett. 21 (2026) 024022                                                                     M Woody et al
+
+
+
+consumer even though used vehicles make up 70% of             [21]. These vehicles are not real models from specific
+vehicle purchases in the U.S [14].                            vehicle manufacturers; rather, they are representat-
+    One major source of uncertainty in the cost of            ive synthetic vehicles that meet certain performance
+used vehicles is depreciation. Previous studies have          thresholds enabling comparison across powertrains
+collected used vehicle prices from sources includ-            (see supplemental note 1).
+ing Edmunds, Kelly Blue Book, and Marketcheck.
+Schoettle and Sivak found that BEVs depreciated               2.2. Vehicle depreciation model
+more quickly than ICEVs when incentives were not              2.2.1. Vehicle cost data collection
+included, but found similar retention rates (RR) (i.e.,       To estimate the purchase and sale price of used
+how much value a vehicle retains over time) when              vehicles within our TCO model, we developed
+incentives were included [15]. Guo and Zhou simil-            vehicle depreciation curves (figure 1(c)). We collec-
+arly found lower RRs for BEVs in general, with Tesla          ted 4000 000 vehicle postings on craigslist for one year
+vehicles as a notable exception having the highest RR         (January through December of 2024). Each posting
+among all vehicles (including ICEVs) [16]. Schlotter          was taken from with a 50 mile radius of the cities
+found a 10.4% annual depreciation rate for ICEVs              investigated in this study. Craigslist, which has not
+and a 13.9% annual depreciation rate for BEVs [17].           been used as a data source in any previous vehicle
+In contrast, Burnham et al found that BEVs and                depreciation studies, offered several distinct chal-
+plug-in hybrid electric vehicles (PHEVs) had higher           lenges, as well as opportunities. As craigslist data
+3 year value retention than ICEVs and hybrid elec-            is self-reported by each individual seller, the data
+tric vehicles (HEVs) [18]. Rush et al also found              required significant cleaning and filtering (supple-
+higher 3 year RRs for BEVs, while noting that over            mental note 2). Analysis was performed on a final data
+longer periods the RR was lower [19]. Most recently,          set of 260 000 vehicles.
+Roberson et al found that although BEVs and PHEVs
+depreciated more rapidly than ICEVs and HEVs, the             2.2.2. Vehicle cost regression
+difference was decreasing for more recent model years         Following the work of Roberson et al [20], we cal-
+and for models with greater ranges [20]. Despite some         culate the RR as the listed vehicle price divided by
+disagreement, the general consensus from these stud-          the vehicle’s manufacturer’s suggested retail price
+ies is that the gap between ICEV and BEV depre-               (MSRP) (equation (1)). We find the MSRP by match-
+ciation was quite large through 2016 but has been             ing the VIN to data on carsheet.io [22]. For vehicles
+shrinking since then. Notably, each of these studies          without an exact match (for example, the make and
+consider vehicle model years prior to 2020, in part           model match but there are multiple trims) we use
+due to disruptions to the used vehicle market from            the mean value of reported MSRPs for that make and
+the Covid-19 pandemic. However, given the trend               model.
+in depreciation rates prior to 2020, updated depre-
+                                                                                             Listed Price
+ciation data are critical to understanding the total                      Retention Rate =                        (1)
+                                                                                                MSRP
+cost of vehicle ownership and have important implic-
+ations for BEV adoption.                                      To calculate depreciation we use an exponential decay
+    Here we conduct the first comprehensive TCO               model (equation (2)). Like Roberson et al, we con-
+analysis focused on used vehicles. We collect data on         duct a linear regression in which we regress the nat-
+used vehicle sales from craigslist.org and use this data      ural log of the retention rate on age interacted with
+to calculate depreciation rates for each powertrain.          powertrain type. We also include age interacted with
+We then integrate these data into a TCO model to              the vehicle class, age interacted with the natural log
+compare ownership costs over different ownership              of the MSRP (as in Schloter) [17], and the vehicle’s
+periods, and for different vehicle classes, powertrains,      mileage divided by its age (to avoid multicollinear-
+and locations. These results will help inform con-            ity of age and mileage). Finally, we include the seller
+sumers and policy makers as the transportation sector         type—dealership or private owner—a unique vari-
+transitions to a zero-carbon future.                          able enabled by using craigslist as the data source.
+
+2. Methods                                                      log (RR) ∼ Miles per year + (Age ∗ Powertrain)
+                                                                    + (Age ∗ Class) + (Age ∗ Seller Type)
+2.1. Goal and scope                                                 + (Age ∗ log (MSRP))                          (2)
+We compare the TCO of vehicles across 4 powertrains
+(ICEVs, HEV, PHEVs, and BEVs) and 5 vehicle classes           Previous studies have noted large differences in Tesla
+(figure 1(a)) in 17 different U.S. cities (figure 1(b)). In   and Non-Tesla BEV depreciation [20]. Our goal is
+addition to these cities, our base case uses U.S. aver-       to compare powertrains generally, not specific man-
+age values. We obtain key vehicle parameters from             ufacturers, so we do not include the vehicle manu-
+Argonne National Laboratory’s Autonomie model                 facturer as an independent variable. Additionally, our
+
+
+
+                                                 2
+Environ. Res. Lett. 21 (2026) 024022                                                                                          M Woody et al
+
+
+
+
+   Figure 1. (a) The manufacturer’s suggested retail price (MSRP) and fuel economy for the combinations of vehicle class and
+   vehicle powertrain used in this study. (b) The 17 U.S. cities investigated in this study, and the location specific data that was
+   used in modeling. (c) Vehicle depreciation curves resulting from regression analysis of used vehicle listings collected from
+   craigslist.org. (d) The components of total cost of ownership.
+
+
+
+
+data set shows a much smaller difference in Tesla and                   market in the U.S.; therefore, there is greater uncer-
+Non-Tesla RRs compared to previous studies (sup-                        tainty associated with the results for that combination
+plemental note 3). Studies have demonstrated a cor-                     of vehicle class and powertrain.
+relation between BEV range and retained value [20];                          The purchase price for new vehicles is the adjus-
+however, these data are not available in our dataset.                   ted MSRP, while the purchase price for used vehicles
+                                                                        is determined by the depreciation model described
+2.3. TCO model                                                          in section 2.2. We assume the vehicle is initially pur-
+As shown in figure 1(d), vehicle TCO is the sum of                      chased from a dealership (i.e. the seller type in the
+upfront costs, paid at the time of purchase; recur-                     regression is set as dealer) and at the end of the own-
+ring costs, paid over the lifetime of the vehicle; and                  ership period the vehicle is resold by an individual
+end of ownership costs, paid (or gained) when the                       (i.e. the seller type in the regression is set as owner).
+vehicle ownership period ends through sale or scrap-                    While 80% of new vehicle purchases are financed,
+page (equation (3)).                                                    only 37% of used vehicle purchases are financed in
+                                                                        the U.S [24]. Therefore, we assume the entire cost of
+       TCO = Upfront Costs + Recurring Costs                            the vehicle is paid at the time of purchase (no finan-
+                                                                        cing). Other upfront costs include sales tax and fees.
+                 + End of Ownership Costs                       (3)     Sales taxes vary by city, and in some cities also vary by
+                                                                        fuel economy and vehicle weight. Fees include regis-
+We only include costs to the consumer; there are                        tration, title, and license fees, as well as other state or
+also social costs attributable to vehicles, including                   local fees. Many studies related to BEV adoption have
+GHG emissions, local air pollutants, traffic conges-                    focused on the impact of subsidies [7, 25, 26], but we
+tion, road safety, and noise [23].                                      do not include any government incentives (e.g., for
+                                                                        PHEVs, BEVs, or chargers) in our analysis.
+2.3.1. Upfront costs                                                         For BEVs only, we include the cost of installing
+The largest upfront cost is the purchase price of the                   a level 2 home charger (including equipment, per-
+vehicle. Vehicle MSRP’s are adjusted from 2023 dol-                     mitting, and labor) as part of the upfront cost. Labor
+lars to 2025 dollars. We note that PHEV pickup trucks                   costs vary by city, resulting in charger costs of $2000–
+do not currently have a real-world equivalent on the                    $3000. We include this because currently most U.S.
+
+
+
+
+                                                         3
+Environ. Res. Lett. 21 (2026) 024022                                                                 M Woody et al
+
+
+
+BEV purchases are from first-time BEV purchasers           2.3.2. Recurring costs
+(85% in 2023) [27]. This cost would not apply to con-      Recurring costs paid over the ownership period
+sumers that already have home charging access.             of the vehicle include refueling (gas or elec-
+                                                           tricity), insurance, maintenance, repairs, and
+                                                           annual fees (equation (5)). Each of the recur-
+       Upfront Costs = Purchase + Taxes + Fees             ring costs are discounted, using a discount rate,
+                            + Home Charger           (4)   d, of 5% to account for the time value of money.
+
+
+
+
+                                       ∑
+                                       Y
+                                         Fuely + Insurancey + Maintenancey + Repairsy + Feesy
+                   Recurring Cost =                                     y                                     (5)
+                                       y=1
+                                                                (1 + d)
+
+
+
+
+Fuel costs are determined by the miles traveled in each    include parking, tolls, and the owner’s time value of
+month, the vehicle’s fuel economy (which we adjust         charging, maintenance, and repairs [32].
+based on monthly temperatures in each city [28]),
+the percentage of city and highway driving [29], the       2.3.3. End of ownership costs
+percentage of electric driving (for PHEVs), and the        End of ownership costs are applied as a credit to the
+cost of either gasoline or electricity in each city in     vehicle owner. We use the resale value of the vehicle,
+each month. For gas prices we use the monthly price        as determined by the depreciation model, for a private
+averaged over the last five full years (2019–2023) in      sale using a 5% discount rate.
+each city [30]. For electricity prices we use rate plans
+from a local electric utility in each city, and loca-
+                                                                                                (Resale Price )
+tion specific public charging prices, rather than aver-      End of Ownership Costs = −1 ∗                y
+                                                                                                   (1 + d)
+age electricity prices. Due to time-of-use pricing and
+                                                                                                               (6)
+consumer’s ability to adjust their charging timing in
+response to these prices, average electricity prices may
+                                                           2.3.4. Parameters
+not reflect the cost that a BEV owner would actually
+                                                           Although average annual mileage varies by vehicle
+pay to charge their vehicle [13].
+                                                           class and powertrain and generally decreases as
+    Insurance costs are based on the formula used
+                                                           vehicles age, we use a constant annual mileage
+by Liu et al [31], in which costs are dependent on
+                                                           (15 000 miles per year) throughout this study in order
+MSRP and powertrain; the mileage adjustment used
+by Parker et al [8], in which cost depends on annual       to compare fairly across classes, powertrains, and
+miles, and state level adjustments as used in Woody        ownership periods. In general, BEVs have a greater
+et al [13], in which the cost is modified based on the     cost savings for consumers with higher annual vehicle
+average insurance cost in each state.                      miles traveled (VMT), as they have lower operat-
+    For maintenance (i.e. planned replacement of           ing costs (fuel, maintenance, and repairs) than other
+parts) we use the component replacement schedule           powertrains [13].
+and corresponding component costs for each power-               In our base case charging scenario, we assume the
+train from Argonne National Laboratory’s BEAN              vehicle owner charges 80% at home at 20% at pub-
+model [18]. Replacement of the high voltage li-ion         lic chargers [33]. Of the home charging, we use 50%
+battery is not included in our base case maintenance       off-peak prices, 25% part-peak prices, and 25% peak
+schedule. For repairs (unplanned care and upkeep)          prices, where applicable. For public charging we use
+we use the formula from the BEAN model, in which           50% level 2 charging and 50% DC fast charging. We
+annual repair costs are dependent on the vehicle’s age,    explore 4 additional charging scenarios, with differ-
+class, powertrain, and MSRP.                               ent amounts of on- vs off-peak pricing and home vs
+    We collect data on recurring fees from city and        public charging, in section 3.4.
+state government websites and apply these to each               For our base case we present used vehicles pur-
+vehicle. Most states require annual or bi-annual           chased after 3 years of vehicle life (e.g., after a
+renewal of the vehicle’s registration. Of the 17 cit-      36 month lease) and sold after 10 years of vehicle life
+ies in this study, 12 have additional annual fees for      (i.e., a 7 year ownership period). We explore different
+BEVs, ranging from $50 to $250. For details on each        purchase years and ownership periods in section 3.5.
+TCO component see supplemental notes 4–11. Other           We assume all vehicles have sufficient lifetime to last
+recurring costs that are excluded from this study          through each ownership period.
+
+
+
+                                                4
+Environ. Res. Lett. 21 (2026) 024022                                                                                  M Woody et al
+
+
+
+                                       Table 1. Regression coefficients used to estimate retention rate.
+
+Variable                                         Coefficient                                  t value                  p value
+
+Intercept                                          2.456 89                              59.687 15                     0.000 00∗∗∗
+Miles per year                                    −0.000 02                            −225.436 83                     0.000 00∗∗∗
+Age                                                0.114 09                              23.500 32                     0.000 00∗∗∗
+ln(MSRP)                                          −0.207 01                             −52.281 85                     0.000 00∗∗∗
+Fuel = diesel                                      0.430 86                              29.487 50                     0.000 00∗∗∗
+Fuel = HEV                                         0.107 33                              16.118 27                     0.000 00∗∗∗
+Fuel = PHEV                                        0.191 38                               8.595 88                     0.000 00∗∗∗
+Fuel = BEV                                        −0.147 58                             −17.931 76                     0.000 00∗∗∗
+Class = SUV                                        0.021 43                               6.686 42                     0.000 00∗∗∗
+Class = pickup                                     0.134 26                              26.094 16                     0.000 00∗∗∗
+Seller = owner                                    −0.039 83                              −8.780 54                     0.000 00∗∗∗
+Age:ln(MSRP)                                      −0.021 55                             −45.852 73                     0.000 00∗∗∗
+Age:fuel = diesel                                 −0.034 65                             −20.536 63                     0.000 00∗∗∗
+Age:fuel = HEV                                    −0.002 64                              −3.265 54                     0.001 09 ∗∗
+Age:fuel = PHEV                                   −0.010 00                              −3.044 31                     0.002 33 ∗∗
+Age:fuel = BEV                                     0.005 89                               4.107 74                     0.000 04∗∗∗
+Age:class = SUV                                    0.001 72                               4.588 42                     0.000 00∗∗∗
+Age:class = pickup                                 0.029 41                              46.901 22                     0.000 00∗∗∗
+Age:seller = owner                                −0.010 09                             −20.770 56                     0.000 00∗∗∗
+
+Observations                                                                              259 685
+Adjusted R-squared                                                                        0.61660
+Signif. codes:                                                            ‘∗∗∗ ’ = 0.001, ‘∗∗ ’ = 0.01, ‘∗ ’ = 0.05
+
+
+
+3. Results and discussion                                                they correspond with Roberson et al’s finding that
+                                                                         vehicles generally retained more value post-2020 fol-
+3.1. Vehicle depreciation                                                lowing the Covid-19 pandemic than in prior years
+Table 1 shows the results of the linear regression                       (potentially due to increases in the average range of
+(equation (2)) used to estimate vehicle depreciation.                    BEVs). We also find higher initial retained value ‘off
+The categorical variables are relative to a gasoline                     the lot’ than previous studies. Though not the focus of
+vehicle (for fuel type), a sedan (for vehicle class),                    our study, this may be related to the significant price
+and a dealership (for seller type). Compared to                          increases, for new and especially for used vehicles,
+ICEVs, HEVs and PHEVs retain more value for the                          that occurred between 2021 and 2023 (see supple-
+first several years, though this difference eventu-                      mental note 12). For HEV and PHEV pickup trucks,
+ally disappears. BEVs have much lower initial value                      our regression results in a value greater than one
+retention than other powertrains, though they fol-                       at year one (figures 2(c) and (f)). It is improbable
+low similar depreciation patterns after several years.                   that this reflects real year one depreciation (since this
+Diesel vehicles have the highest retained value among                    would mean consumers could make a profit selling
+all the powertrains. Across vehicle classes, pickup                      their one-year-old used vehicles); however, we note
+trucks retain greater value initially and over time                      that this does not impact our TCO results, which rely
+than sedans or SUVs. Vehicles sold by a dealer                           on the MSRP for new vehicles (i.e. retained value
+retain more value than vehicles sold by an indi-                         equals one at year zero). For a consumer selling their
+vidual, and vehicles with a higher MSRP generally                        10 year-old vehicle as a private owner (figures 2(d)–
+lose value more quickly than vehicles with a lower                       (f)), our model estimates that they would recoup
+MSRP.                                                                    28%–41% of the vehicle’s MSRP for ICEVs, 29%–
+     The resulting regression is applied to the syn-                     42% for HEVs, 28%–40% for PHEVs, and 23%–32%
+thetic vehicles of each powertrain and class using                       for BEVs with the lower bound representing sedans
+the MSRP from Autonomie (adjusted to 2025 dol-                           and SUVs and the upper bound representing pickup
+lars) and with 15 000 annual VMT. The resulting                          trucks. A lower retained value does not necessarily
+depreciation curves are shown in figure 2. For a con-                    result in a lower purchase price, as MSRP generally
+sumer buying a 3 year old used vehicle from a deal-                      increases with increased amounts of electrification.
+ership (figures 2(a)–(c)), our model estimates that
+they would pay 70%–84% of the vehicle’s MSRP for                         3.2. Gasoline vs electric TCO
+ICEVs, 75%–89% for HEVs, 77%–91% for PHEVs                               For our base case we present used vehicles purchased
+and 58%–67% for BEVs, with the lower bound rep-                          (from a dealership) after 3 years of vehicle life (e.g.
+resenting sedans and SUVs and the upper bound rep-                       after a 36 month lease) and sold (by the owner) after
+resenting pickup trucks. These findings are somewhat                     10 years of vehicle life (i.e. a 7 year ownership period).
+higher than what is reported in the literature, but                      These results are compared to a new vehicle and a
+
+                                                          5
+Environ. Res. Lett. 21 (2026) 024022                                                                                       M Woody et al
+
+
+
+
+   Figure 2. Vehicle depreciation regression applied to the synthetic vehicles used in this study, with 15 000 annual miles, for (a)
+   sedans, (b) SUVs, and (c) pickup trucks with seller type set to ‘dealer’ (used for purchase of the vehicle), and (d) sedans, (e)
+   SUVs, and (f) pickup trucks with seller type set to ‘owner’ (used for the resale of the vehicle) When applied to the total cost of
+   ownership model, the initial purchase price uses the MSRP for a new vehicle (year 0), or the MSRP multiplied by the dealership
+   regression value (a)–(c) at years 3 or 6. The resale of the vehicle uses the MSRP multiplied by the owner regression values (d)–(f)
+   at years 7, 10, or 13.
+
+
+
+6 year-old vehicle over a 7 year ownership period                     in figures 3(a)–(c). The BEV switching from often
+(figure 3).                                                           the most expensive (for new vehicles) to always
+    For new vehicles, BEVs are more expensive to                      the least expensive (for used vehicles) is attribut-
+purchase, more expensive to insure, typically have                    able to changes in 2 major cost components. First
+additional annual fees, and have an additional cost                   is the purchase and sale prices. Due to BEVs exhib-
+for home charger installation. BEVs have lower costs                  iting greater initial depreciation than other power-
+for maintenance, repairs, and refueling. Across all                   trains, followed by slightly slower depreciation than
+vehicle classes, HEVs have the lowest TCO for new                     other powertrains, the net purchase cost (purchase-
+vehicles. The difference between the BEV and altern-                  resale) for BEVs is much lower for the used vehicles
+atives increases with vehicle size. For new compact                   than the new vehicles. Using the midsize SUV as an
+vehicles the ICEV and the BEV have a similar TCO.                     example, the net purchase cost for the new BEV is
+Over a longer ownership period, new compact and                       $34 100 vs a 3 year-old used BEV net purchase cost
+midsize sedan BEVs may have a lower TCO than                          of $18 300 ($15 800 difference). While this trend
+ICEVs [13]. However, for new midsize SUVs and                         exists for other powertrains, the magnitude is lower.
+pickup trucks BEVs have a much larger TCO than                        For the ICEV midsize SUV the net purchase cost
+ICEVs.                                                                (purchase-resale) for the new vehicle is $25 600 vs
+    For used vehicles, BEVs have the lowest TCO                       $17 800 ($7 800 difference) for the 3 year-old used
+across all vehicle classes. Between the new and used                  ICEV.
+vehicle scenarios, the total mileage is kept con-                         The second major factor is maintenance and
+stant. Therefore, many costs (charger, fuel, insur-                   repair costs. Across all powertrains, maintenance
+ance, purchase fees, and annual fees) are the same                    and repair costs are higher for used vehicles than
+
+
+                                                       6
+Environ. Res. Lett. 21 (2026) 024022                                                                                               M Woody et al
+
+
+
+
+   Figure 3. Seven-year total cost of ownership of internal combustion engine vehicles (ICEV), hybrid electric vehicles (HEV), plug-
+   in hybrid electric vehicles (PHEV), and battery electric vehicles (BEV), across vehicle classes, (a) for a new vehicle purchased at
+   year 0 of vehicle life and sold after 7 years of vehicle life, (b) for a used vehicle purchased after 3 years of vehicle life and sold after
+   10 years of vehicle life, and (c) for a used vehicle purchased after 6 years of vehicle life and sold after 13 years of vehicle life, using
+   U.S. average values and 15 000 annual miles.
+
+
+
+
+                                                           7
+Environ. Res. Lett. 21 (2026) 024022                                                                                     M Woody et al
+
+
+
+
+   Figure 4. Difference in the seven-year total cost of ownership of internal combustion engine vehicles (ICEV), hybrid electric
+   vehicles (HEV), plug-in hybrid electric vehicles (PHEV), and battery electric vehicles (BEV), across vehicle classes, for (a) the
+   new vehicle compared to the 3 year used vehicle, (b) the new vehicle compared to the 6 year used vehicle, and (c) the 3 year used
+   vehicle vs the 6 year used vehicle, using U.S. average values and 15 000 annual miles.
+
+
+
+
+new vehicles. However, since BEVs have lower                          the 3 year-old used BEV has a combined cost of $9600
+maintenance and repair costs than other powertrains,                  ($3700 difference). The new ICEV midsize SUV has
+the magnitude of the difference is lower for new and                  a combined maintenance and repair cost of $9200
+used BEVs than for new and used ICEVs, HEVs, and                      while the 3 year-old used ICEV has a combined cost of
+PHEVs. For example, the new BEV midsize SUV has a                     $14 200 ($5000 difference). Because our maintenance
+combined maintenance and repair cost of $5900 while                   costs are based on manufacturers’ recommended
+
+
+                                                       8
+Environ. Res. Lett. 21 (2026) 024022                                                                                        M Woody et al
+
+
+
+
+   Figure 5. Total cost of ownership for a used midsize SUV purchased after 3 years of vehicle life and sold after 10 years of vehicle
+   life in different U.S. cities. Other vehicle classes are shown in supplemental note 18.
+
+
+
+
+replacement schedules, the values may reflect a high                   This is largely due to the higher retained value for
+estimate (as consumers may replace parts less fre-                     pickup trucks (see figure 2) and may reflect the spe-
+quently than manufacturers recommend).                                 cific vehicle market in 2024 (when data were col-
+    Combining these effects shows that used BEVs                       lected) in which some used vehicles could be sold
+have a significantly lower TCO than new BEVs                           at or above their original MSRP. Across all power-
+($6700–$13 000 savings for the 3 year-old used vehicle                 trains and vehicle classes, the 6 year-old used vehicles
+compared to the new vehicle). For ICEVs, the differ-                   have a lower TCO than the 3 year-old used vehicles
+ence in TCO by buying a 3 year-old used sedan or SUV                   (figure 4(c)).
+is compared to a new sedan or SUV is $700–$3400,                            Sensitivity to battery size, battery replacement,
+while for HEVs and PHEVs the difference is approx-                     hybrid powertrain configuration, electricity prices,
+imately $1000 or less (figure 4(a)). There is a lar-                   and gasoline prices are shown in supplemental notes
+ger TCO savings offered by buying a 6 year-old used                    13–17. Our base case uses a 50 mile range PHEV and
+sedans or SUVs ($1300–$6900) (figure 4(b)). Pickup                     a 300 mile range BEV. With a smaller range BEV, the
+trucks follow a different trend than other vehicle                     savings offered by a used BEV increases compared
+classes; new pickup trucks have a lower TCO than                       to the base case. However, for 400 mile range BEVs,
+the 3 year-old used vehicles across all powertrains.                   the used BEV used only provides savings compared
+
+                                                        9
+Environ. Res. Lett. 21 (2026) 024022                                                                        M Woody et al
+
+
+
+                                             Table 2. Charging scenarios.
+
+No public charging                                    Home charging                              Public charging
+                                                            100%                                      0%
+                                         Off-peak         Part-peak         On-peak    Level 2        DC fast charging
+                                         80%              10%               10%        —              —
+
+Rare public charging                                  Home charging                              Public charging
+                                                              90%                                     10%
+                                         Off-peak         Part-peak         On-peak    Level 2        DC fast charging
+                                         80%              10%               10%        50%            50%
+
+Occasional public charging (base case)                Home charging                              Public charging
+                                                              80%                                     20%
+                                         Off-peak         Part-peak         On-peak    Level 2        DC fast charging
+                                         50%              25%               25%        50%            50%
+
+Frequent public charging                              Home charging                              Public charging
+                                                              60%                                     40%
+                                         Off-peak         Part-peak         On-peak    Level 2        DC fast charging
+                                         50%              25%               25%        75%            25%
+
+All public charging                                   Home charging                              Public charging
+                                                              0%                                     100%
+                                         Off-peak         Part-peak         On-peak    Level 2        DC fast charging
+                                         —                —                 —          75%            25%
+
+
+
+to alternative powertrains for small vehicle classes        $60 600; PHEV TCO ranges from $52 900 to $67 700;
+(compact, midsize sedan) and does not offer savings         and BEV TCO ranges from $44 400 to $59 500. Of
+for larger vehicles. In the U.S., BEV batteries have a      the cities investigated, Cleveland is the least expens-
+minimum 8 year or 100 000 mile warranty, though             ive city across all powertrains, whereas New York City
+some manufacturers have warranties up to 10 years           is the most expensive city for ICEVs and HEVs and
+or 175 000 miles [13]. If a battery requires replace-       San Francisco is the most expensive city for PHEVs
+ment within the warranty period, there would be             and BEVs. Different components drive these differ-
+no cost to the consumer. In a worst-case scenario           ent costs in each city. For example, San Francisco has
+(the battery requires replacement just after the war-       the highest electricity cost, Los Angeles has the highest
+ranty period ends), the additional cost would shift the     gasoline cost, New York City has the highest insur-
+used BEV from the lowest TCO to the highest TCO             ance cost, and Chicago has the highest additional
+option across all vehicle classes. The specific power-      annual fee for BEVs. Houston, Dallas, and Cleveland
+train configuration (parallel or power split) impacts       all have low electricity and gasoline prices. Notably,
+the fuel economy and MSRP for HEVs and PHEVs,               the BEV has a lower TCO than the ICEV, HEV, and
+though this does not significantly change our results.      PHEV alternatives in almost every city investigated
+We tested a 20% increase in electricity prices, find-       (figure 5). The only exceptions are San Francisco and
+ing that in the used vehicle market the BEV remains         Boston, where the TCO of the BEV is approximately
+the cheapest powertrain across all vehicle classes.         equal to the HEV.
+With a 20% increase in gasoline prices, the order-
+ing of powertrains is unchanged for used vehicles.          3.4. Charging patterns
+For new vehicles, the BEV becomes cheaper than              The cost a BEV owner pays for charging depends on
+the ICEV for compact and midsize sedans, though             their personal charging habits. We explore 5 differ-
+the HEV remains the cheapest powertrain across all          ent charging scenarios for different consumer arche-
+classes.                                                    types (table 2). The ‘no public charging’ and ‘rare pub-
+                                                            lic charging’ scenarios are cost-conscious consumers
+3.3. Regional cost variability                              who do most of their charging at home during off-
+TCO varies significantly from city to city. For a mid-      peak hours. The ‘occasional public charging’ scenario
+size SUV purchased after year 3 and sold after year         is the base case, in which a consumer generally charges
+10 of the vehicle’s lifetime, ICEV TCO ranges from          at home and off-peak, but does not as consistently
+$50 000 to $60 400; HEV TCO ranges from $50 600 to          as the cost-conscious consumers. The ‘frequent public
+
+                                             10
+Environ. Res. Lett. 21 (2026) 024022                                                                                         M Woody et al
+
+
+
+
+   Figure 6. (a) Fuel cost, and (b) total cost of ownership for a used midsize SUV purchased after 3 years of vehicle life and sold after
+   10 years of vehicle life under 5 different charging scenarios in 17 cities. The legend for BEVs refers to the charging scenario, as
+   explained in table 2. Note the y-axis in figure (b) does not start at zero.
+
+
+
+
+charging’ and ‘all public charging’ scenarios are con-                  an important consideration for potential BEV own-
+sumers that rely on public charging because their                       ers without dedicated access to a home charger.
+travel patterns require frequent charging en-route, or                  Woody et al found that without home charging access,
+they do not have access to home charging (the cost of                   new BEVs typically would not break even with con-
+a home charger is excluded from the ‘all public char-                   ventional alternatives [13]. However, for used BEVs
+ging’ scenario). As public charging is a greater part of                we find that even in the most expensive charging
+their charging routine, these consumers rely more on                    scenario—zero home charging access—the BEV has
+level 2 chargers, and less on DC fast chargers, (as a                   lower TCO than the alternatives in most locations
+percentage of public charging) than the other scen-                     (figure 6(b)).
+arios. For PHEVs we use the base case percentages for                       The impact of different charging patterns is much
+peak pricing and assume 100% of charging is done at                     greater in cities with large differences in their time-
+home.                                                                   of-use electricity rates. The two cities in which there
+    In most cities, a BEV owner that relies only on                     is the least variation based on charging patterns are
+public charging can expect to spend 2–4 times as                        the same two cities in which the BEVs and HEVs have
+much on charging as a consumer charging only at                         similar costs: Boston, which does not include time-
+home (figure 6(a)). Using only public charging, a                       of-use pricing, and San Francisco, which has peak
+BEV owner may spend more on fuel than an HEV                            home electricity prices that can exceed DC fast char-
+owner (though still less than an ICEV owner). This is                   ging prices.
+
+
+                                                        11
+Environ. Res. Lett. 21 (2026) 024022                                                                                    M Woody et al
+
+
+
+
+   Figure 7. Total cost of ownership (a) and (c) and total cost of ownership per year (b) and (d) for used midsize SUVs of each
+   powertrain that are purchased at vehicle age 3, and owned for a variable number of years (a) and (b) and vehicles that are owned
+   for 7 years, and are purchased at different vehicle ages (c) and (d). For example, yellow points on each figure all represent a
+   vehicle purchased at vehicle age 3 and owned for 7 years before resale. Other vehicle classes are shown in supplemental note 18.
+
+
+
+
+3.5. Vehicle ownership periods                                       different initial purchase years. Therefore, purchase
+Our base case compares used vehicles purchased after                 year 3 represents a vehicle purchased at year 3 and sold
+3 years of vehicle life and resold after 10 years, for a             at year 10 of the vehicle’s lifetime, while purchase year
+7 year ownership period. Here we investigate both the                18 represents a vehicle purchased at year 18 and sold
+purchase year and the ownership period. Figure 7(a)                  at year 25 of the vehicle’s lifetime. Because we use a
+compares midsize SUVs of each powertrain pur-                        constant annual VMT (15 000 miles), each of these
+chased after 3 years of vehicle life, but with ownership             scenarios contain the same number of miles over
+periods ranging from 1 to 15 years. Resale is included               the ownership period (105 000 miles). Figure 7(d)
+in the total ownership cost, so the value for an owner-              shows this cost per year. Up until year 10 of a
+ship period of 1 represents a vehicle that is purchased              vehicle’s lifetime, TCO decreases with vehicle pur-
+at vehicle year 3, driven for 1 year, and then resold                chase age. However, following year 10 of a vehicle’s
+at vehicle year 4. Figure 7(b) shows the total own-                  lifetime, TCO plateaus. This suggests that for a con-
+ership cost divided by the years of ownership. Note                  sumer focusing on used vehicles, there is little to
+that this is not the ownership cost each year, as the                no savings from buying a vehicle over 10 years
+purchase and resale components of TCO are distrib-                   old. After that point any decreases in purchase cost
+uted over the ownership period. The declining cost                   may be offset by increased maintenance and repair
+per year with longer ownership periods reflects both                 costs.
+the longer period of time over which the vehicle’s
+purchase is distributed and the discount rate that
+is applied to future costs. Figure 7(b) also shows                   4. Conclusion
+that over very short ownership periods (2 years or
+less) the BEV is more expensive, but it becomes the                  We show that used BEVs have a lower TCO than
+least expensive powertrain over 3 years or more of                   ICEVs, HEVs, and PHEVs. This is true across dif-
+ownership.                                                           ferent vehicle classes, different purchase years, dif-
+    Figure 7(c) compares used midsize SUVs of each                   ferent ownership periods, and across most charging
+powertrain with a 7 year ownership period, but with                  strategies and locations.
+
+                                                      12
+Environ. Res. Lett. 21 (2026) 024022                                                                  M Woody et al
+
+
+
+     There are several limitations to this analysis.       are important factors [36]. Focusing on the used BEV
+Because the vehicle depreciation curves were estim-        market can support these goals.
+ated from one year of data, the results represent a cer-        Different policy strategies are needed in differ-
+tain point of time and may not reflect how vehicles        ent locations. Using time-of-use electricity rates to
+will depreciate in the future, particularly with the       schedule charging can significantly lower the TCO
+removal of federal BEV incentives. While the over-         of BEVs. Municipalities without time-of-use pricing
+all sample size is large, it is limited for some of the    could work with local electric utilities to support
+more rare combinations of vehicle class and type           the creation of affordable vehicle charging options.
+(e.g., BEV pickups, PHEV sedans). Faster depreci-          Ensuring the availability of home charging is another
+ation rates for BEVs may in part be driven by (a)          important way to lower costs. Consumers who rent
+the rapid increase in the availability of new BEVs,        their homes, who or live in multi-unit dwellings, or
+suppressing demand for used BEVs, (b) the declin-          who do not have access to off-street parking may be
+ing cost of new BEVs, which compete with used BEVs         unable to access home charging [37] and face greater
+among BEV focused vehicle purchasers, and (c) lack         charging costs, as shown in figure 6. Programs to
+of consumer confidence in used BEV reliability, par-       install chargers in multi-unit dwellings, to incentivize
+ticularly for batteries. Since BEVs are expected to both   landlords to install chargers, or to create more afford-
+increase in availability and decrease in cost in the       able public charging options near residences could
+future, it is unclear whether this trend in depreci-       all help alleviate these concerns. State level subsidies
+ation will continue, or if BEVs will depreciate more       can lower costs and are available in many of the cities
+like conventional vehicles as the market matures and       in this study (though not included in our analysis).
+consumer perceptions change. The depreciation res-         Ensuring incentives are available at the point of sale—
+ults are also limited by the data that were available.     rather than as a tax credit—provides an important
+Our regression does not include the vehicle’s range        source of liquidity to consumers [38]. These incent-
+or manufacturer, both of which have been shown             ives are generally only available for new BEVs, though
+to influence depreciation rates. Additionally, we use      several states have incentives for used BEVs as part of
+listed prices, which may differ from transaction           vehicle scrappage programs or programs targeted to
+prices.                                                    low-income residents [39]. Targeted programs may
+     Despite these limitations, our results have import-   improve cost effectiveness, as historically many BEV
+ant implications for vehicle manufacturers, vehicle        purchasers would have purchased a BEV even without
+owners, and policy makers. For manufacturers, these        the subsidy [40].
+results suggest that consumers may not yet be com-              Providing TCO information may help increase
+fortable with used BEVs, especially since the TCO          consumer’s intent to purchase a BEV [41, 42].
+advantage held by used BEVs is reversed if the bat-        Outreach programs and publicization of vehicle TCO,
+tery needs to be replaced. Extended warranties on          particularly for used vehicles, may support BEV adop-
+BEV batteries, or battery health certificates for used     tion. These could be targeted in locations with low
+vehicles may increase consumer confidence in used          BEV TCO. However, for many consumers the down
+BEVs [34]. This in turn could reduce ‘resale anxiety’      payment is more important than the total cost, so
+[35] and increase sales of new BEVs.                       reducing BEV prices remains an important policy
+     For consumers, these results suggest that there is    goal to spur adoption.
+a large opportunity to minimize their total vehicle             Our results demonstrate that BEVs have achieved
+spending by purchasing a used BEV. Consumers               cost parity with conventional vehicles in the U.S.
+can also minimize their cost by purchasing smaller         used vehicle market. Supporting adoption of used
+vehicles, older vehicles (up until year 10 of vehicle      BEVs can help reduce household travel costs and
+lifetime), owning their vehicles longer, and for BEV       reduce personal GHG emissions. Future modeling
+owners, by charging at home during off-peak electri-       that combines TCO and lifecycle GHG emissions may
+city price periods, where possible. However, TCO is        help reveal optimal pathways for reducing vehicle
+only one of many factors consumers consider when           emissions [43]. Meeting emissions reduction goals for
+purchasing a vehicle; other factors include household      the transportation sector will require far more than
+needs, aesthetic preferences, and risk tolerance (par-     vehicle electrification [44, 45], but used BEVs having
+ticularly for used vehicles).                              a lower TCO than other powertrains is a noteworthy
+     For policy makers, these results have several         step towards transportation decarbonization.
+important implications. For climate impact, the total
+number of ICEVs replaced by new BEVs drives reduc-         Data availability statement
+tions in GHG emissions, so climate policies should
+focus on new vehicle adoption. However, ensuring           The data that support the findings of this study are
+there is a market for used BEVs may contribute to          available upon reasonable request from the authors.
+new BEV sales. Additionally, for reducing local air        The dataset is too large for public archiving.
+pollution and supporting environmental justice, the            Supplemental Information available at https://
+location of BEVs, and who can afford to drive them         doi.org/10.1088/1748-9326/ae38f8/data1.
+
+                                              13
+Environ. Res. Lett. 21 (2026) 024022                                                                                    M Woody et al
+
+
+
+   Figure Source Data available at https://doi.org/10.              [5] Pamidimukkala A, Kermanshachi S, Rosenberger J M and
+1088/1748-9326/ae38f8/data2.                                            Hladik G 2024 Barriers and motivators to the adoption of
+                                                                        electric vehicles: a global review Green Energy Intell. Transp.
+                                                                        3 100153
+Acknowledgments                                                     [6] Baek K-H, Kim G-P, Nam D-H, Kim J-S, Jang C-H and
+                                                                        Suh M-W 2021 Analysis of regional characteristics of total
+This work was sponsored by the Responsible Battery                      cost of ownership in California, the UK, and Republic of
+Coalition (Grant No. AWD021363) and the State                           Korea Int. J. Autom. Technol. 22 1363–72
+                                                                    [7] Breetz H L and Salon D 2018 Do electric vehicles need
+of Michigan Department of Labor and Economic                            subsidies? Ownership costs for conventional, hybrid,
+Opportunity and the University of Michigan Electric                     and electric vehicles in 14 U.S. cities Energy Policy
+Vehicle Center (498865-Sub of N034069). The                             120 238–49
+authors thank Parth Vaishnav, Christophe Mangin,                    [8] Parker N, Breetz H L, Salon D, Conway M W, Williams J
+                                                                        and Patterson M 2021 Who saves money buying electric
+and Alan Taub (University of Michigan), Collin                          vehicles? Heterogeneity in total cost of ownership Transp.
+Cademartori (Wake Forest University), and Jimmy                         Res. D 96 102893
+Douglas (Plug) for helpful conversations.                           [9] Ouyang D, Zhou S and Ou X 2021 The total cost of electric
+                                                                        vehicle ownership: a consumer-oriented study of China’s
+                                                                        post-subsidy era Energy Policy 149 112023
+Author contributions                                               [10] Wu G, Inderbitzin A and Bening C 2015 Total cost of owner-
+                                                                        ship of electric vehicles compared to conventional vehicles: a
+Maxwell Woody  0000-0002-6610-2777                                     probabilistic analysis and projection across market segments
+Conceptualization (equal), Data curation (equal),                       Energy Policy 80 196–214
+Formal analysis (lead), Funding                                    [11] Danielis R, Giansoldati M and Rotaris L 2018 A probabilistic
+                                                                        total cost of ownership model to evaluate the current and
+acquisition (supporting), Investigation (lead),                         future prospects of electric cars uptake in Italy Energy Policy
+Methodology (equal), Visualization (lead), Writing –                    119 268–81
+original draft (lead), Writing – review &                          [12] Franzò S, Nasca A and Chiesa V 2022 Factors affecting
+editing (equal)                                                         cost competitiveness of electric vehicles against alternative
+                                                                        powertrains: a total cost of ownership-based assessment in
+Sally Yin                                                               the Italian market J. Clean. Prod. 363 132559
+Methodology (equal), Software (equal)                              [13] Woody M, Adderly S A, Bohra R and Keoleian G A 2024
+                                                                        Electric and gasoline vehicle total cost of ownership across
+Antara Green                                                            US cities J. Ind. Ecol. 28 194–215
+                                                                   [14] Bureau of Transportation Statistics 2023 New and used pas-
+Data curation (equal), Methodology (equal)
+                                                                        senger car and light truck sales and leases (available at: www.
+Christian Hitt  0000-0003-4640-8610                                    bts.gov/content/new-and-used-passenger-car-sales-and-
+                                                                        leases-thousands-vehicles)
+Investigation (supporting), Writing – review &
+                                                                   [15] Schoettle B and Sivak M 2018 Resale values of electric and
+editing (supporting)                                                    conventional vehicles: recent trends and influence on the
+                                                                        decision to purchase a new vehicle (available at: www.umich.
+Alexander Liu                                                           edu/∼umtriswt)
+Data curation (equal), Software (equal)                            [16] Guo Z and Zhou Y 2019 Residual value analysis of
+                                                                        plug-in vehicles in the United States Energy Policy
+Sabina Tomkins  0000-0002-2632-8173                                    125 445–55
+Data curation (equal), Resources (equal),                          [17] Schloter L 2022 Empirical analysis of the depreciation of
+Software (equal), Supervision (supporting)                              electric vehicles compared to gasoline vehicles Transp. Policy
+                                                                        126 268–79
+Gregory A Keoleian  0000-0002-7096-1304                           [18] Burnham A et al 2021 Comprehensive total cost of owner-
+Conceptualization (equal), Funding                                      ship quantification for vehicles with different size classes and
+acquisition (equal), Project administration (lead),                     powertrains (available at: www.osti.gov/biblio/1780970-
+                                                                        comprehensive-total-cost-ownership-quantification-
+Supervision (equal), Writing – review &                                 vehicles-different-size-classes-powertrains)
+editing (equal)                                                    [19] Rush L, Zhou Y and Gohlke D 2022 Vehicle residual value
+                                                                        analysis by powertrain type and impacts on total cost of
+                                                                        ownership (available at: www.osti.gov/)
+References                                                         [20] Roberson L, Pantha S and Helveston J P 2024 Battery-
+                                                                        powered bargains? Assessing electric vehicle resale value in
+ [1] US EPA 2024 Sources of greenhouse gas emissions (available         the United States Environ. Res. Lett. 19 054053
+     at: www.epa.gov/ghgemissions/sources-greenhouse-gas-          [21] Islam E S et al 2023 Detailed simulation study to evaluate
+     emissions)                                                         future transportation decarbonization potential ANL/TAPS-
+ [2] U.S. Bureau of Labor Statistics 2023 Consumer expenditures         23/3 (Argonne National Laboratory) (available at: https://
+     2022 (available at: www.bls.gov/news.release/cesan.nr0.htm)        publications.anl.gov/anlpubs/2023/11/186057.pdf)
+ [3] Smith E, Woody M, Wallington T J, Hitt C, Kim H C,            [22] CarSheet 2025 CarSheet - The Ultimate Car Spreadsheet
+     Taub A I and Keoleian G A 2025 Greenhouse gas reduc-               (available at: https://carsheet.io/)
+     tions driven by vehicle electrification across powertrains,   [23] De Clerck Q, van Lier T, Messagie M, Macharis C, Van
+     classes, locations, and use patterns Environ. Sci. Technol.        Mierlo J and Vanhaverbeke L 2018 Total cost for society: a
+     59 19768–80                                                        persona-based analysis of electric and conventional vehicles
+ [4] U.S. Department of Energy 2023 The U.S. National blue-             Transp. Res. D 64 90–110
+     print for transportation decarbonization DOE/EE–2674          [24] Zabritski M 2024 State of the automotive finance mar-
+     (U.S. Department of Energy) (available at: www.energy.gov/         ket Q1 2024 (Experian) (available at: www.experian.com/
+     sites/default/files/2023-01/the-us-national-blueprint-for-         content/dam/noindex/na/us/automotive/finance-trends/
+     transportation-decarbonization.pdf)                                2024/experian-safm-q1-2024.pdf)
+
+                                                     14
+Environ. Res. Lett. 21 (2026) 024022                                                                                    M Woody et al
+
+
+
+[25] Santos G and Rembalski S 2021 Do electric vehicles need             from a survey experiment in Switzerland Environ. Res. Lett.
+     subsidies in the UK? Energy Policy 149 111890                       16 124027
+[26] Ledna C, Muratori M, Brooker A, Wood E and Greene D            [36] Vega-Perkins J, Newell J P and Keoleian G 2023 Mapping
+     2022 How to support EV adoption : tradeoffs between char-           electric vehicle impacts: greenhouse gas emissions, fuel costs,
+     ging infrastructure investments and vehicle subsidies in            and energy justice in the United States Environ. Res. Lett.
+     California Energy Policy 165 112931                                 18 14027
+[27] J D Power 2023 Owner Satisfaction Gets a Jolt from New         [37] Ge Y, Simeone C, Duvall A and Wood E 2021 There’s no
+     Models as Electric Vehicle Market Grows, J.D. Power Finds           place like home: residential parking, electrical access, and
+     (available at: www.jdpower.com/business/press-releases/             implications for the future of electric vehicle charging
+     2023-us-electric-vehicle-experience-evx-ownership-study)            infrastructure (available at: www.nrel.gov/docs/fy22osti/
+[28] Wu D, Guo F, Field F R, De Kleine R D, Kim H C,                     81065.pdf)
+     Wallington T J and Kirchain R E 2019 Regional                  [38] Green D, Melzer B T, Parker J A and Rojas A 2020
+     heterogeneity in the emissions benefits of electrified and          Accelerator or brake? Cash for clunkers, household liquidity,
+     lightweighted light-duty vehicles Environ. Sci. Technol.            and aggregate demand Am. Econ. J. Econ. Policy 12 178–211
+     53 10560–70                                                    [39] Woody M, Stolper S, Vaishnav P and Keoleian G A 2024
+[29] Federal Highway Administration 2024 Table HM-72—                    Vehicle scrappage policies for transportation decarboniza-
+     highway statistics 2022 (available at: www.fhwa.dot.gov/            tion Environ. Res.: Energy 1 033002
+     policyinformation/statistics/2022/hm72.cfm)                    [40] Xing J, Leard B and Li S 2021 What does an electric vehicle
+[30] U.S. Bureau of Labor Statistics 2024 Average energy prices          replace? J. Environ. Econ. Manage. 107 102432
+     for the United States, regions, census divisions, and selec-   [41] Ji D and Gan H 2022 Effects of providing total cost of own-
+     ted metropolitan areas (available at: www.bls.gov/regions/          ership information on below-40 young consumers’ intent
+     midwest/data/averageenergyprices_selectedareas_table.htm)           to purchase an electric vehicle: a case study in China Energy
+[31] Liu Z, Song J, Kubal J, Susarla N, Knehr K W, Islam E,              Policy 165 112954
+     Nelson P and Ahmed S 2021 Comparing total cost of own-         [42] Dumortier J, Siddiki S, Carley S, Cisney J, Krause R M,
+     ership of battery electric vehicles and internal combustion         Lane B W, Rupp J A and Graham J D 2015 Effects of provid-
+     engine vehicles Energy Policy 158 112564                            ing total cost of ownership information on consumers’
+[32] Mitropoulos L K, Prevedouros P D and Kopelias P 2017                intent to purchase a hybrid or plug-in electric vehicle Transp.
+     Total cost of ownership and externalities of conventional,          Res. A 72 71–86
+     hybrid and electric vehicle Transp. Res. Proc. 24 267–74       [43] Nakamoto Y, Tokito S and Hanaka T 2024 Strategic
+[33] Borlaug B, Salisbury S, Gerdes M and Muratori M 2020                roadmap for optimising vehicle emission reductions and
+     Levelized cost of charging electric vehicles in the United          electrification Environ. Res. Lett. 19 054016
+     States Joule 4 1470–85                                         [44] Woody M, Keoleian G and Vaishnav P 2023 Decarbonization
+[34] Weng A, Dufek E and Stefanopoulou A 2023 Battery pass-              potential of electrifying 50% of U.S. Light-duty vehicle sales
+     ports for promoting electric vehicle resale and repurposing         by 2030 Nat. Commun. 14 7077
+     Joule 7 837–42                                                 [45] Milovanoff A, Posen I D and MacLean H L 2020
+[35] Brückmann G, Wicki M and Bernauer T 2021 Is resale                  Electrification of light-duty vehicle fleet alone will not meet
+     anxiety an obstacle to electric vehicle adoption? Results           mitigation targets Nat. Clim. Change 10 1102–7
+
+
+
+
+                                                      15
+

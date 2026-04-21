@@ -1,0 +1,282 @@
+  Effects of Ionospheric Delay on the Position Accuracy of GNSS Receiver: A
+                   Case Study at Burdwan University, India
+            Adewumi Adebayo Segun1,2         , Sukabya Dan2       , Rajkumar Mandal2         and Anindya Bose2
+
+
+
+   1
+       Department of Pure and Applied Physics, Ladoke Akintola University of Technology, PMB 4000, Ogbomoso, Oyo State,
+                                                            Nigeria
+                 2GNSS Laboratory, Department of Physics, The University of Burdwan, Burdwan, 713 104, India
+
+
+                                        Corresponding author: asadewumi@lautech.edu.ng
+
+
+
+Abstract: The effects of ionospheric delay (ionodelay) on the positioning accuracy of GNSS receivers at the University of
+Burdwan, India are presented. One (1) Hz dual-frequency GPS constellation data were logged for 24 hours each day for a few days
+during the autumn season in October 2022 and the spring season in March 2023 using Leica GR 50 standard survey geodetic
+receiver and the logged files data were converted to Rinex observation data using RTKLIB converting software. GPS-GOPI
+software was used to obtain the Total Electron Content (TEC), the satellite bias (DCBsati), the receiver bias (DCBrx) and some
+other parameters that were used to estimate the ionodelay. The accuracy of position solution of the GNSS receiver on each
+observation day were determined through standard statistical estimate vis a vis Distance Root Mean Square (2DRMS), Circle Error
+Probable (CEP), Spherical Error Probable (SEP) and Mean Radial Spherical Error (MRSE) with use of GNSS positioning
+accuracy analysis tool (GLB GSOL software) and the results obtained were compared with each day ionodelay. The results
+of the analyses obtained reveal variations in TEC over observation days. The impacts of ionodelay on GPS PRN #6, PRN #7, PRN
+#10, and PRN #26 were determined on each day. Findings revealed that the TEC density along the satellites signal paths and
+visibility hours cause ionodelays of varying magnitude. It was observed that ionodelay was more prevalent on days characterized
+by solar and geomagnetic storms. The comparison of results reveals that the observation days in March 2023 were more susceptible
+to severe ionodelay than the observation days in October 2022, which might have been caused by the approach of the solar cycle
+towards its maximum equinox in March 2023. The accuracy of position solution of the receiver determined offline via 2DRMS,
+CEP, SEP, and RMSE shows more accurate values of position metrics in October 2022 than March 2023 at the same reference
+coordinate (RC) location using the same receiver. The 2D position solutions obtained show that the solutions for days with less
+ionodelay are more accurate than solutions for days with high ionodelay. Therefore, this study established the effects of ionospheric
+delay on the GNSS receivers’ accuracy and its dependence on season.
+
+Keywords: ionosphere, delay, GNSS, position, accuracy, performance
+
+1. Introduction
+The Earth's ionosphere or ionized upper atmosphere, is the solar-terrestrial environment, where electrons from solar
+radiation ignite atoms [1]. Ionospheric abnormalities result from uneven ion and electron distribution, leading to
+ionospheric delay (ionodelay), which causes rapid amplitude and phase changes in radio transmissions [2]. The
+ionosphere's dynamic changes compromised satellite navigation systems' ability to communicate, broadcast, and
+position accurately [3]. In addition to providing crucial data for ionosphere studies, ionospheric total electron content
+(TEC) is crucial for precise positioning and navigation in ionosphere studies. GNSS satellite-to-ground receiver
+electromagnetic waves experience group delay and phase advances due to the ionosphere's dispersive properties, and
+TEC can be determined by exploring these two delays [4]. Assessment of ionospheric TEC variations is now possible
+on global and regional scales using concurrent global observations, like GPS receiver extension networks, to monitor
+the ionosphere. The slant TEC (STEC) implies that the delay in GPS signals is proportional to the number of free
+electrons in a column with a one-square-metre cross-sectional area. Turbulence ionospheric delays cause small-scale
+errors of 2 m and large-scale errors of 10-30 m [5]. Therefore, this paper investigated the effects of ionospheric delay
+
+
+
+
+© The Author(s) 2025
+I. Adimula et al. (eds.), Proceedings of the 8th URSI-NG Annual Conference (URSI-NG 2024), Advances in
+Physics Research 12,
+https://doi.org/10.2991/978-94-6463-644-4_16
+                         Effects of Ionospheric Delay on the Position Accuracy of GNSS                            169
+
+
+on GNSS receivers’ position accuracy and its dependence on seasons using a dual-frequency geodetic survey-grade
+Leica receiver.
+
+2.   Ionodelay Calculation from GNSS Observations Data
+The ionospheric delay of the GNSS satellite signal is given by [6] and [7] as follows;
+
+                                        40.3
+                         𝑖𝑜𝑛𝑜𝑑𝑒𝑙𝑎𝑦 =           × 𝑉𝑇𝐸𝐶                                                       (1)
+                                         𝑓2
+
+
+                         𝑉𝑇𝐸𝐶 = 𝑆𝑇𝐸𝐶𝑡𝑟𝑢𝑒 × 𝑆(𝐸)                                                             (2)
+
+                          𝑆𝑇𝐸𝐶𝑡𝑟𝑢𝑒𝑖 = 𝑇𝐸𝐶𝑠 + 𝐷𝐶𝐵𝑠𝑎𝑡𝑖 + 𝐷𝐶𝐵𝑅𝑋                                                (3)
+
+                                       𝑅 ×𝑐𝑜𝑠 𝐸      2 0.5
+                            𝑆(𝐸) = {( 𝑒             ) }                                                     (4)
+                                         𝑅𝑒 +𝐻
+
+
+S(E) is the mapping function, 𝐷𝐶𝐵𝑠𝑎𝑡𝑖 is the satellite bias, and 𝐷𝐶𝐵𝑅𝑋 is the receiver bias, Re is the earth's mean
+radius, E is the satellite elevation angle, and H is the ionospheric pierce (IPP) height. The STEC in a dual frequency
+GNSS receiver may as well be calculated by combining the relative code and carrier phase delay measurements of
+dual-frequency GNSS signals given by [7] as follows;
+
+                                              𝑓22 ×𝑓12
+                           𝑆𝑇𝐸𝐶𝑃 =                            × (𝑃1 − 𝑃2 ) 𝑖𝑛 𝑇𝐸𝐶𝑈                         (5)
+                                     (𝑓22 −𝑓12 )×40.3×1016
+
+
+                                              𝑓22 ×𝑓12
+                           𝑆𝑇𝐸𝐶∅ =                            × (𝜆1 ∅1 − 𝜆2 ∅2 ) 𝑖𝑛 𝑇𝐸𝐶𝑈                   (6)
+                                      (𝑓12 −𝑓22 )×40.3×1016
+
+
+Where 𝑓1 is the (L1, E1,G1, etc.) band carrier frequency and 𝑓2 is the (L2, E2, G2, etc.) band carrier frequency of the
+GNSS considered in dual-frequency mode, P and ∅ are the pseudo range in metre and the carrier wave cycle, 𝜆 is the
+wavelength.
+
+3. Experimental Setup
+The experiment was setup to measure GNSS observation data using a Leica GR 50 survey-grade geodetic dual-
+frequency receiver at the GNSS Laboratory, Physics Department, the University of Burdwan, India for four days in
+both October 2022 and March 2023. A Leica AR 25 choke ring antenna was connected to the Leica GR 50 receiver,
+which was then connected to a computer desktop for data storage, as shown in Figure 1. Dual-frequency 1 Hz data
+logged for 24 hours each day were converted to Rinex 3.03 observation data using RTKLIB converter software [8].
+The generated data was processed with GPS-GOPI software [9] to obtain GPS satellites (GPS PRN #6, PRN #7, PRN
+#10, and PRN #26) data that was used to estimate STEC, mapping function and deduced the ionodelay of the GPS
+satellites under consideration on each observation day. The Rinex 3.03 observation data was also post processed using
+GNSS Positioning accuracy analysis tool (GLB GSOL software) to estimate the accuracy of the position solution of
+the GNSS receiver on each observation day vis a vis peak to peak deviation, 2DRMS, CEP, SEP and MRSE. The
+position accuracy parameter was calculated by using user defined known fixed values of latitude, longitude and
+altitude. The accuracy of the position solution result of each day was compared with ionodelay on each observation
+day. These results were then used to deduce the effects of ionodelay on GNSS receiver’s position accuracy. The goal
+of this study is to examine the effects of ionodelay on GNSS receiver’s position accuracy in some days in spring and
+autumn at the same RC location.
+170          A. A. Segun et al.
+
+
+
+
+                Fig. 1. Experimental Setup for GPS-based Ionospheric Delay study using Leica Geodetic Receiver.
+
+
+
+
+4. Results and Discussion
+Figures 2a and 2b show the TEC variations with time during the observation days in the two seasons. It was witnessed
+that the diurnal average TEC during the GPS visible hours on the observation days in October 2022 and March 2023
+showed similar patterns. The pre-noon hours saw a steady rise in TEC, indicating the sun's rising hours. Higher values
+were observed during the noon hours, between 7:00 and 10:00 UTC, followed by a perpetual decrease. The maximum
+TEC value was due to solar radiation reaching its optimum. October 27, 2022, had the lowest TEC values due to a
+geomagnetically quiet and non-solar stormy day. Days 25 and 29 had the highest TEC values due to higher solar and
+geomagnetic storms (as observed from the dst index). In March 2023, days 15 and 16 witnessed the minimum and
+maximum TEC values, respectively. Days 13, 14, and 16 were characterized as solar stormy days, while day 15 was
+non-solar stormy. Figures 3a and 3b show the ionodelay patterns of four GPS satellites (PRN #10 and PRN #26) and
+GPS (PRN #6 and #7) on October 25, 26, 27, and 29, 2022, and March 13 to 16, 2023, respectively. The GPS satellites
+experienced maximum ionodelays during the noon hours due to maximum TEC. GPS PRN #26 was mostly visible
+during noon hours, resulting in its highest ionodelay. The least ionodelay was observed on October 27, due to low TEC
+density. GPS PRNs #6 and #7 experienced greater ionodelay in March 2023, with the minimum ionodelay on March
+15. The highest delays occurred on March 16, 2023, due to higher solar storms causing severe satellite signal
+degradation. Generally, greater ionodelays were observed in March 2023 than in October 2022, which may be due to
+the solar cycle reaching maximum equinox during spring and the solar radiation or storm being at its peak in the spring
+season than in the autumn season.
+                            Effects of Ionospheric Delay on the Position Accuracy of GNSS                                          171
+
+
+
+
+                                                              (a)
+
+
+
+
+                                                              (b)
+
+Fig. 2. Total electron content variations obtained via the Leica GR 50 satellite receiver during GPS satellites visible hours of
+                                some observed days in (a) October, 2022 and (b) March, 2023.
+
+
+
+
+                                                              (a)
+172            A. A. Segun et al.
+
+
+
+
+                                                                (b)
+ Fig. 3. Variations in ionodelay with respect to time of (a) GPS PRN #10 and GPS PRN # 26 on the observation days in October
+                           2022 (b) GPS PRN #6, and PRN #7 on the observation days in March 2023.
+
+Tables 1 and 2 show the results of the accuracy of the position solution obtained using the GNSS positioning accuracy
+analysis tool (GLB GSOL software) for the October 2022 and March 2023 observation days. The results showed that
+days with less ionodelay had better accuracy of position solution than those with higher ionodelay. The results showed
+that ionodelay had a significant effect on position accuracy, as noticed from the results of accuracy of position solution
+obtained from the two season under consideration. In overall, better accuracy of position solution was observed in
+October 2022 than March 2023 due to ionodelay. This finding reveals that ionospheric delay has a significant effect
+on the position accuracy of the GNSS receiver.
+
+           Table 1: Accuracy of position solution of the GPS satellites in relation to observation days in October 2022.
+                            Peak to Peak Deviation                     Position accuracy metrics w.r.t RC position
+       DATE            Lat. (m)      Long.(m)      Alt. (m)     2DRMS (m)        CEP (m)           SEP(m)         RMSE (m)
+    10/25/2022          7.917       11.269         27.343           6.154           2.439           4.103            5.041
+    10/26/2022          7.847         13.197        30.994          7.351           2.779           4.109            5.056
+    10/27/2022          6.184         12.025        30.836          6.783           2.525           4.052            5.083
+    10/29/2022         11.358         15.874        60.022          7.950           3.170           6.142            7.850
+
+               Table 2: Accuracy of position solution of the GPS satellites in relation to observation days in March 2023 .
+                            Peak to Peak Deviation                    Position accuracy metrics w.r.t RC position
+
+       DATE            Lat. (m)      Long.(m)      Alt. (m)     2DRMS (m)          CEP (m)         SEP(m)        RMSE (m)
+
+    03/13/2023         12.625         19.670        32.266          7.599           3.158          6.268           7.944
+    03/14/2023         8.420          10.323        21.527          6.142           2.553          4.681           5.770
+    03/15/2023         9.071          13.122        28.784          6.860           2.845          5.587           7.065
+    03/16/2023         13.414         18.749        38.801          7.789           3.237          5.925           7.299
+                            Effects of Ionospheric Delay on the Position Accuracy of GNSS                                          173
+
+
+
+ Figure 4a and 4b show the results of the analysis of the 2d position solutions of the observation days in October
+ 2022 and March 2023. This analysis was done to validate the accuracy of the position solution and the effects
+ of ionodelay on GNSS receiver’s position accuracy. The 2D position solutions of the two figures show that the
+ solutions for days with less ionodelay are more accurate in relation to the precise point positioning location than
+ the solutions for days that have extensive ionodelay. It was also noticed from the 2d position solution scattered
+ plots that the 2d solutions obtained from October 2022 was more accurate than that of March 2023 which is
+ buttress the effect of ionodelay on the GNSS receiver’s positioning accuracy.
+
+
+
+
+                                                                  (a)
+
+
+
+
+                                                                  (b)
+   Fig. 4. 2d position solution scattered Plot of the processed observation data of the observation days in (a) October 2022 (b) March
+                                                                   2023
+ 5. Conclusion
+This paper investigates the impact of ionospheric delay on the accuracy of the position solution of the GNSS receivers.
+The study used 24-hour, 1-Hz, dual-frequency GPS satellite observation data from October 2022 and March 2023.
+The TEC values showed variations in TECs from day to day, with ionodelay affecting GPS PRN #6, PRN #7, PRN
+#10, and PRN #26 constellations. Ionodelay was more pronounced in the noon hours. The study also found out that
+the ionodelay experienced by satellites in March 2023 was greater than in October 2022. The 2D position solutions
+obtained showed that days with less ionodelay were more accurate in relation to precise point positioning (PPP)
+174            A. A. Segun et al.
+
+
+
+ location. To improve positioning accuracy, the repeatability of GNSS positioning experiments on the same RC is
+ necessary. The study establishes the effects of ionospheric delay on GNSS receivers' position accuracy and its reliance
+ on TEC density and season.
+
+ Acknowledgment: The authors acknowledged the Nigeria Tertiary Education Trust Fund (TETFUND) for financial support
+ through TETF/ES/UNIV/OYO STATE/TSAS/2020 grant and the GNSS Laboratory at Burdwan University, West Bengal, India,
+ for technical support.
+
+ Declaration of Interest: The authors have no competing interests to declare that are relevant to the contents of this manuscript
+
+ References
+ [1]       Kamide, Y., Chian, A. Handbook of the Solar-Terrestrial Environment, Ionosphere In: (eds.), pp.189-220, Springer,
+           Berlin, Heidelberg. (2007) https://doi.org/10.1007/978-3-540-46315-3_8.
+
+ [2]       Chen, Z, Liu, Y, Guo K, Wang J. Study of the Ionospheric Scintillation Radio Propagation Characteristics with Cosmic
+           Observations. Remote Sensing, Vol. 14, pp. 578. (2022) https://doi.org/10.3390 /rs14030578.
+
+ [3]       Otsuka, Y, Jin H, Shinagawa H., Hosokawa, K., Tsuda, T. Ionospheric Variability. In: Kusano, K. (eds) Solar-Terrestrial
+           Environmental Prediction. Springer, Singapore (2023). https://doi.org/10.100 7/978-981-19-7765-77.
+ [4]       Rui Zhang, Wei-wei Song, Yi-bin Yao Chuang Shi, Yi-dong Lou and Wen-ting Yi. Modeling regional ionospheric delay
+           with ground-based BeiDou and GPS observations in China. GPS Solution, Vol.19, pp. 649–658, (2015).
+           https://doi.org/10.1007/s10291-014-0419-z.
+ [5]       Gennady A. Zhbankov, Nikolay P. Danilkin, and Olga A. Maltseva. Influence of the ionosphere on the accuracy of the
+           satellite navigation system Acta Astronautica Science Direct Elsevier, vol. 190, pp. 194-201, (2022).   .
+ [6]       Desai MV and Shah SN. The GIVE ionospheric delay correction approach to improve positional accuracy of
+           NavIC/IRNSS single frequency receiver. Current Science Vol.114. pp. 1665–1676, (2018).
+           https://doi.org/10.18520/cs/v114/i08/1665-1676
+ [7]       Dan, S, Santra, A., Mahato, S, Koley, C, Banerjee, P., & Bose, A. On use of low cost, compact GNSS receiver
+           modules for ionosphere monitoring. Radio Science, Vol, 56, pp. 1-11. (2021). https://doi.org/10.1029/2021RS007344
+
+ [8]       RTKLIB: An Open Source Program Package for GNSS Positioning. (2020). http://www.rtklib.com/
+
+ [9]       GPS_TEC Ver. 3.02: A freeware program package for TEC derivation from GPS.(2020) https://seemala. blogspot.com/
+
+ .
+
+
+
+
+Open Access This chapter is licensed under the terms of the Creative Commons Attribution-
+NonCommercial 4.0 International License (http://creativecommons.org/licenses/by-nc/4.0/),
+which permits any noncommercial use, sharing, adaptation, distribution and reproduction in any
+medium or format, as long as you give appropriate credit to the original author(s) and the
+source, provide a link to the Creative Commons license and indicate if changes were made.
+      The images or other third party material in this chapter are included in the chapter's
+Creative Commons license, unless indicated otherwise in a credit line to the material. If material
+is not included in the chapter's Creative Commons license and your intended use is not
+permitted by statutory regulation or exceeds the permitted use, you will need to obtain
+permission directly from the copyright holder.
+

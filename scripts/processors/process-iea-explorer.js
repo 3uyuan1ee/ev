@@ -7,11 +7,32 @@ const RELEVANT_PARAMETERS = [
 ]
 
 export async function processIeaExplorer() {
-  console.log('\n📊 Processing EV Data Explorer 2025.xlsx...')
-  const workbook = XLSX.readFile(datasetPath('EV Data Explorer 2025.xlsx'))
-  const sheetName = workbook.SheetNames[0] // GEVO_EV_2025
-  const sheet = workbook.Sheets[sheetName]
-  const allRows = XLSX.utils.sheet_to_json(sheet, { defval: null })
+  console.log('\n📊 Processing IEA Global EV Outlook 2025 data...')
+  
+  // Check if XLSX exists; if not, try CSV
+  const xlsxPath = datasetPath('EV Data Explorer 2025.xlsx')
+  const csvPath = datasetPath('data/global_ev_outlook/GEVO_EV_2025_main.csv')
+  
+  let allRows
+  const fs = await import('fs/promises')
+  
+  try {
+    await fs.access(xlsxPath)
+    // XLSX path exists
+    const workbook = XLSX.readFile(xlsxPath)
+    const sheetName = workbook.SheetNames[0]
+    const sheet = workbook.Sheets[sheetName]
+    allRows = XLSX.utils.sheet_to_json(sheet, { defval: null })
+    console.log(`  Loaded from XLSX: ${allRows.length} rows`)
+  } catch {
+    // Fallback to CSV
+    console.log('  XLSX not found, reading from CSV...')
+    const Papa = (await import('papaparse')).default
+    const fsSync = (await import('fs')).default
+    const content = fsSync.readFileSync(csvPath, 'utf-8').replace(/^\uFEFF/, '')
+    allRows = Papa.parse(content, { header: true, skipEmptyLines: true, dynamicTyping: true }).data
+    console.log(`  Loaded from CSV: ${allRows.length} rows`)
+  }
 
   console.log(`  Total rows in main sheet: ${allRows.length}`)
 

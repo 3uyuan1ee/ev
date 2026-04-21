@@ -1,0 +1,944 @@
+                                                                   Journal of Cleaner Production 538 (2026) 147314
+
+
+                                                                       Contents lists available at ScienceDirect
+
+
+                                                               Journal of Cleaner Production
+                                                             journal homepage: www.elsevier.com/locate/jclepro
+
+
+
+
+The evolving structure of emissions in the transition to renewable
+electricity systems
+Maoxing Liu a,* , Jen Purdie b , Michael W. Jack a
+a
+    Department of Physics, University of Otago, Dunedin, New Zealand
+b
+    Centre for Sustainability Research, University of Otago, Dunedin, New Zealand
+
+
+
+
+A R T I C L E I N F O                                        A B S T R A C T
+
+Keywords:                                                    Deep decarbonization of national energy systems requires high percentages of renewable electricity supply and
+Life cycle assessment                                        significant electrification of transport and heat. As the proportion of renewable electricity supply increases,
+100 % renewable electricity system                           operational emissions will gradually decrease, making embodied emissions a more important component of the
+Electricity transmission and distribution
+                                                             total emissions of these future electricity systems. Embodied emissions from electricity systems remain largely
+Scenario analysis
+                                                             overlooked in existing energy and climate policy frameworks that prioritise operational emissions. Life cycle
+Carbon budget
+Electricity system decarbonization                           assessment (LCA) provides a systematic approach to evaluating both the operational and embodied emissions
+Embodied emissions                                           from these electricity systems. However, systematic LCA studies of future highly renewable electricity systems
+                                                             are scarce, and previous studies have omitted emissions associated with distribution and transmission infra­
+                                                             structure. To address these gaps, this study applies scenario-based LCA modelling to six future decarbonization
+                                                             scenarios for the New Zealand national electricity system, including a scenario that achieves 100 % renewable
+                                                             supply by 2045. Comparative analysis of two periods (2020–2035 vs. 2036–2050) shows operational and
+                                                             maintenance emissions drop from 85 % to 60 % of total life cycle emissions, while the share of embodied
+                                                             emissions more than doubles. Mitigation priorities should therefore shift from reducing fossil fuel use to
+                                                             improving and decarbonizing renewable energy technologies as their share grows. Including embodied emissions
+                                                             results in all five scenarios exceeding the electricity sector’s allocated carbon budget by around 2037. The
+                                                             framework and findings in this study are applicable to other countries pursuing deep decarbonization of their
+                                                             energy system.
+
+
+
+
+1. Introduction                                                                              2025a; IEA, 2024; Khan et al., 2018).
+                                                                                                 Electricity generation from fossil fuels like coal and natural gas
+    Electrification is central to assisting many countries to decarbonize                    produces significant GHG emissions during operation due to the direct
+their energy systems and achieving net-zero greenhouse gas (GHG)                             combustion of high-carbon fuels (Odeh et al., 2008; Rule et al., 2009). In
+emissions (Williams et al., 2021; Gong et al., 2025). Among various                          contrast, renewable electricity generation—such as hydro, wind, and
+decarbonization pathways, the combination of sectoral electrification                        solar—typically produces very low or near-zero operational emissions
+and growth of renewable electricity supply is considered one of the most                     (Lu et al., 2021; Xie et al., 2020; Li et al., 2019). However, from a life
+viable approaches (Williams et al., 2021; He et al., 2022; Cui et al.,                       cycle perspective, renewable power systems still generate significant
+2025). More specifically, electrification can convert end-use energy                         embodied emissions through infrastructure construction, material pro­
+consumption in different sectors (such as transportation and industrial,                     duction, and system maintenance (Li et al., 2019). Over the past decade,
+commercial and residential heat) into electricity, while renewable                           the renewable share of total global electricity generation has increased
+electricity systems ensure that the electricity itself is sourced from                       from 23 % to 32 % and is projected to reach 39 % by 2027, indicating a
+low-carbon sources. While electrification helps other sectors reduce                         rapid global transition toward renewable energy-based electricity sys­
+GHG emissions, it leads to a significant increase in electricity produc­                     tems (IEA, 2025a). As the proportion of renewable electricity continues
+tion, which can impact the GHG emissions of the electricity system (IEA,                     to increase, emissions from fossil fuel combustion will gradually
+
+
+
+    * Corresponding author. 730 Cumberland Street, Dunedin, 9016, New Zealand.
+      E-mail addresses: max.liu@postgrad.otago.ac.nz (M. Liu), michael.jack@otago.ac.nz (M.W. Jack).
+
+https://doi.org/10.1016/j.jclepro.2025.147314
+Received 30 September 2025; Received in revised form 6 December 2025; Accepted 9 December 2025
+Available online 17 December 2025
+0959-6526/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+M. Liu et al.                                                                                                          Journal of Cleaner Production 538 (2026) 147314
+
+
+decrease, making embodied emissions (infrastructure-related emissions)              proportions of renewable energy lead to lower GHG emissions per unit of
+a more important component of the total emissions of the future elec­               electricity and reduced economic costs. However, these focus on the
+tricity system (Rule et al., 2009; Weisser, 2007; Gan et al., 2023; Gao             generation side and overlook emissions from transmission and distri­
+et al., 2021). This requires an analysis of emissions generated                     bution components, even though these components can represent a
+throughout the life cycle of the electricity system, extending beyond               much larger share of total system impacts in highly renewable scenarios.
+electricity generation activities.                                                  Studies have shown that the transmission and distribution components
+    Life Cycle Assessment (LCA) is a systematic method for evaluating               can contribute between 1 and 11 g CO2-eq/kWh in countries such as
+the environmental impact of electricity systems throughout all stages of            Norway and the UK (Li et al., 2024; Jorge et al., 2013; Harrison et al.,
+their life cycle, including material production, infrastructure construc­           2010). Also, future electricity system research increasingly focuses on
+tion, operation and maintenance during use, and end-of-life disposal                high-renewable scenarios, where generation emissions decline and
+(Jordaan et al., 2020, 2021; Meier, 2002; Mahmud et al., 2022; Weber                embodied emissions take a larger share. Generation-only approaches
+et al., 2010). In the context of electricity systems, LCA has been applied          therefore produce lower estimates than full electricity system assess­
+at two distinct levels: technology-level LCA and system-level LCA.                  ments, especially in high-renewable scenarios. To better understand the
+    Previous studies have conducted technology-level LCAs for individ­              full GHG emissions of electricity systems, research needs to shift from a
+ual electricity generation technologies, such as solar photovoltaic (PV),           focus on generation to electricity consumption. This shift requires an
+wind turbines, or geothermal power plants (Xie et al., 2020; Messagie               LCA approach that captures emissions across the entire electricity sys­
+et al., 2014; Kadiyala et al., 2016; Pimentel Pincelli et al., 2024; Miller         tem and shows how the GHG emissions structure might evolve in future
+et al., 2019; Lausselet et al., 2021). Life cycle data indicate that 60–95 %        scenarios. Given the role of electrification in decarbonization strategies,
+of emissions from renewable electricity technologies occur during the               this more complete understanding of electricity system emissions is
+material production, manufacturing, and construction stages (NREL,                  critical.
+2021; Brittany et al., 2024). Technology-level LCA is well-suited for                   The key contribution of this paper is a quantitative evaluation of the
+providing detailed assessments of specific components or manufacturing              change in emission structure from operational to embodied of an elec­
+processes. For example, several studies have focused on the use of silicon          tricity system as it undergoes a transition to renewable sources.
+alternatives in PV panels (Wong et al., 2016; Sulkan et al., 2025) and              Worldwide, about 30 % of countries now generate more than half of
+wind turbine blade recycling (Alavi et al., 2025; Gennitsaris et al., 2023;         their electricity from renewable sources (IEA, 2024), reflecting the rapid
+Alsaleh et al., 2019), offering insights into material choices, production          global transition toward cleaner power systems. The analysis draws on
+steps, and end of life strategies. There are also resource specific elec­           data from New Zealand’s electricity system, which is geographically
+tricity system studies that examine how the development of particular               isolated, already has one of the highest renewable shares globally (over
+renewable energy technologies may influence the future electricity                  88 % in 2023), and is targeted to reach net-zero emissions by 2050
+system from an environmental perspective (Popp et al., 2025; Turconi                (MBIE, 2025; MBIE, 2024a), providing a valuable case study for exam­
+et al., 2014). While effective for assessing individual technologies,               ining deep decarbonization pathways. The study applies a
+technology-level LCA is inherently limited in its ability to capture                scenario-based LCA model that integrates primary generation activities
+system-level impacts—such as national grid dynamics, transmission                   and infrastructure emissions, including power plant, transmission and
+infrastructure requirements, and the effects of evolving generation                 distribution components to assess the life cycle GHG emissions of future
+mixes.                                                                              high renewable electricity system scenarios. The analysis also evaluates
+    Compared to technology-level LCA, system-level approaches provide               whether cumulative full system emissions (up to 2050) remain within
+a broader understanding of environmental impacts by accounting for                  allocated sectoral carbon budgets that are consistent with limiting
+overall electricity system dynamics. Several studies have primarily                 global warming to 1.5 ◦ C under the Paris Agreement.
+focused on generation activities, without considering transmission,                     Although based on New Zealand as a case study, this work is relevant
+distribution, or system-wide infrastructure(Gagnon et al., 2002; San­               to other countries in a number of ways. Firstly, the LCA framework
+toyo-Castelazo et al., 2011; Oates et al., 2013). Some studies have                 presented in this paper can be reproduced in other countries using local
+expanded the scope of system-level LCA to include indirect emissions                emission factors, material inventories and electricity datasets. In addi­
+associated with power plant construction, maintenance, decom­                       tion the scenario-based modelling structure can be straight forwardly
+missioning, and supporting network infrastructure (Jorge et al., 2012;              applied in countries that publish national electricity pathways (UK, US)
+Chen et al., 2013; Madrigal, 2015; Hondo, 2005). Country specific                   (Pieter Gagnon et al., 2024; NESO, 2025). Finally, many countries have
+studies including Pakistan (Akber et al., 2017), Turkey (Atilgan et al.,            decarbonization strategies that rely on future electricity systems with
+2016), Australia (May et al., 2006), Canada (Mallia et al., 2013), Japan            high percentages of renewable supply (REN21, 2024; IEA, 2025b; Su’ait
+(Hondo, 2005), Mauritius (Brizmohun et al., 2015), New Zealand                      et al., 2025) and therefore will be facing issues similar to New Zealand in
+(Madrigal, 2015) and Portugal (Kabayo et al., 2019) have conducted                  the coming decades. Although the timing may differ due to different
+detailed life cycle modelling of electricity systems composed of different          levels of fossil fuel reliance, the general findings related to a structural
+technologies and assessed the GHG emissions of different power gen­                 shift in emissions illustrated in this current study will be applicable to
+eration facilities. These valuable studies have analysed the environ­               these regions as they undergo this transition.
+mental impacts of current electricity systems, but they do not explore or
+assess future electricity system scenarios.                                         2. Methodology
+    A number of studies have examined future 100 % renewable energy
+systems (Breyer et al., 2022; Zhong et al., 2021). These largely focus on           2.1. Life cycle modelling of electricity systems
+the transition pathways required to reach this target, but tend to over­
+look the embodied emissions of the energy system. A limited number of                  The goal of this study is to assess the greenhouse gas (GHG) emis­
+studies (Gargiulo et al., 2020; Li et al., 2024; Jorge et al., 2013; Harrison       sions associated with New Zealand’s current and future electricity sys­
+et al., 2010) have attempted to assess future electricity systems from a            tem using a life cycle approach. The objective is to quantify both
+life cycle perspective. Studies from Spain (San Miguel et al., 2020),               operational and embodied emissions across the electricity supply chain
+Germany (Thonemann et al., 2019), and Italy (Gargiulo et al., 2020)                 over the 2020–2050 time and evaluate the system’s alignment with
+have developed life cycle models based on LCA databases to assess the               national climate targets under different future development scenarios.
+environmental impacts of electricity systems under future scenarios.                   This study builds on the initial LCA model developed by Bullen
+These assessments address the construction, operation, maintenance,                 (2020), but extends it by incorporating new future electricity scenarios,
+and decommissioning of power plants, and indicate that higher                       changing the model structure, and updating the model processes and
+
+                                                                                2
+M. Liu et al.                                                                                                     Journal of Cleaner Production 538 (2026) 147314
+
+
+data. In this study, two categories of emissions are reported: operational       process from coal mining to electricity generation at the power plant.
+and maintenance (O&M) emissions and embodied emissions. These                    Sub-bituminous coal has been chosen as a proxy for New Zealand’s coal
+terms represent the outputs of the life cycle model. Operational and             imports and mining, as it is the predominant type of coal used for
+maintenance emissions are defined as emissions arising from                      electricity generation in New Zealand. 62 % of the coal used for elec­
+generation-related activities (e.g., fuel combustion, fugitive emissions),       tricity generation is imported and 38 % is sourced from local mining
+basic power plant maintenance, and transmission and distribution                 operations (data from New Zealand’s Ministry of Business, Innovation
+(T&D) losses. The detailed scope of this category is described in Section        and Employment) (MBIE, 2024c). The source of the imported coal is
+2.1.1. Embodied emissions refer to infrastructure-related emissions,             Indonesia. For fugitive methane (CH4) emissions and combustion
+covering material production, equipment manufacturing, and con­                  emissions from New Zealand’s local coal mines, a New Zealand-specific
+struction of generation and network assets. The detailed scope of this           emission factor was used, which was derived from MBIE (MBIE, 2024c;
+category is described in Section 2.1.2.                                          MBIE, 2024d; MfE, 2025). The remaining data uses the default values
+    This study uses the GaBi (version 10.9.1.10) LCA modelling software,         from the Ecoinvent database. This study uses a conservative allocation
+combined with the Ecoinvent database (version 3.10), and supplements             method to calculate the thermal energy and electrical energy generated
+the modelling with New Zealand-specific data wherever possible, to               by coal combustion and combined heat and power plants (CHP),
+evaluate the GHG emissions of New Zealand’s future electricity system.           whereby the emissions per kWh of electricity from electricity-only
+    The system boundary is defined as cradle-to-gate, capturing emis­            power plants are also applied directly to the electricity generated from
+sions from extraction and processing, manufacturing and construction,            cogeneration plants (Tereshchenko et al., 2015; Gao et al., 2018). Until
+operation, use and maintenance, but excluding end-of-life processes              2030, the proportion of electricity generated from electricity-only plants
+such as decommissioning, recycling, or final disposal. See 2.1.1 and             relative to CHP plants is averaged over the period 2020–2024, as 60 %
+2.1.2 for a detailed explanation of the different stations.                      from electricity-only plants and 40 % from CHP. From 2030 onwards,
+    The functional unit for this study includes two components to reflect        due to the New Zealand Government’s plan to decommission Huntly
+different types of emissions assessed:                                           (New Zealand’s main source of coal-fired electricity generation), it is
+                                                                                 assumed that all electricity generated from coal after that date will come
+ • For operational and maintenance emissions, the functional unit is             from CHP plants (MBIE, 2025; MBIE, 2024b). Emission factors related to
+   1kWh of electricity delivered to the user.                                    coal combustion and fugitive emissions, as well as other assumed data,
+ • For embodied emissions related to infrastructure construction, the            are provided in Supplementary information 1.
+   functional unit is 1 MW of new-build generation capacity.
+                                                                                 2.1.1.2. Natural gas plant. New Zealand does not currently import
+   The geographic boundary is limited to New Zealand, and the time               natural gas. The Natural gas plant O&M model considers two sources of
+spans from 2020 to 2050, reflecting the scope of the government’s                natural gas: New Zealand offshore natural gas production and onshore
+Electricity Demand and Generation Scenarios (EDGS) (MBIE, 2024b).                natural gas production, assuming that each accounts for 50 % of New
+Electricity system data from 2020 to 2023 are based on historical re­            Zealand’s natural gas extraction (data based on the average values
+cords, while data from 2024 to 2050 are projected under different sce­           provided by MBIE for 2020 to 2024) and that the extraction process
+nario pathways.                                                                  generates emissions (CO2, CH4, CO, N2O, NMVOCS and NOx). Emissions
+   The scope of the LCA model includes the following stages:                     generated in extraction and transport of natural gas are based on New
+                                                                                 Zealand data, with emission factors calculated based on MBIE reports
+ • Extraction, processing, and transport of fossil fuels (e.g., coal and         (MBIE, 2024d; MBIE, 2024e). All emission factors and assumptions
+   natural gas), relevant to non-renewable electricity generation.               mentioned above are detailed in Supplementary information 2.
+ • Operation and maintenance activities of all electricity generation
+   technologies, including thermal, geothermal, hydro, wind, and both            2.1.1.3. Geothermal plant. The Life Cycle Inventory (LCI) of geothermal
+   utility-scale and distributed solar systems.                                  power generation in New Zealand is based on LCI data developed by
+ • Construction of new electricity generation infrastructure across all          Saçayon Madrigal, which incorporates New Zealand-specific emissions
+   technologies.                                                                 and discharge information (Madrigal, 2015). This is complemented by
+ • Construction of new transmission and distribution infrastructure.             inventory data from the Hellisheidi geothermal power plant in Iceland
+ • Transmission and distribution of electricity from the generation side         and study data from four geothermal fields in Italy(Bravi et al., 2014;
+   to the user side                                                              Karlsdóttir et al., 2015). To represent geothermal power generation in
+                                                                                 New Zealand, a dual flash plant configuration was chosen to reflect the
+   The inventory results are structured according to three major life            main technologies currently in use in New Zealand.
+cycle stages of the electricity system: (1) Operation and maintenance                Emission factors for discharges to air and water were derived from
+(see Section 2.1.1), (2) New build infrastructure (see Section 2.1.2), (3)       New Zealand data(Bullen, 2020). Fugitive emission factors were calcu­
+transmission and distribution (see Section 2.1.1.8).                             lated using government datasets (MBIE, 2024d). The detailed data for
+                                                                                 this section are provided in Supplementary information 3.
+2.1.1. Operational and Maintenance (O&M)
+    This section covers emissions associated with the operation and              2.1.1.4. Solar plant. Distributed solar generation includes electricity
+maintenance of electricity generation plants, including generation-              production from rooftop and smaller ground-mounted photovoltaic (PV)
+related activities, operational processes, system maintenance and                systems. Utility-scale solar generation consists of large-scale photovol­
+transmission and distribution losses. For coal and natural gas fired             taic (PV) arrays. The operational emissions primarily arise from panel
+power plants, the O&M model includes resource supply such as mining,             cleaning (water use and wastewater generation). The data in this section
+extraction, and fuel transport, system operation through fuel combus­            is based on the operation and maintenance data from the installation
+tion, and maintenance activities including the emission from mainte­             process of a 3kWp (kilowatt-peak) slanted-roof system using Ecoinvent
+nance vehicles and equipment. For all other generation technologies, the         3.10 database.
+O&M model accounts for the operation and maintenance of the elec­
+tricity plant itself.                                                            2.1.1.5. Hydro plant. The life cycle inventory of hydropower generation
+                                                                                 in New Zealand considers reservoir hydropower generation and run-of-
+2.1.1.1. Coal plant. The coal power plant O&M model covers the entire            river hydropower generation in the proportions estimated in the
+
+
+                                                                             3
+M. Liu et al.                                                                                                     Journal of Cleaner Production 538 (2026) 147314
+
+
+Saçayon Madrigal study (Madrigal, 2015), consisting of approximately             construction of new gas-fired electricity generation infrastructure in
+94 % reservoir systems and 6 % run-of-river systems.                             New Zealand is modelled using an adapted Ecoinvent process for the
+                                                                                 construction of a gas-fired power plant.
+2.1.1.6. Biomass plant. Biomass plant in this study is modelled as a                 The Ecoinvent dataset is modified to reflect New Zealand-specific
+wood chip fired co-generation plant, reflecting how biomass is typically         conditions: the electricity supply input is replaced with a process rep­
+used in New Zealand for industrial process heat with some co-generation          resenting the New Zealand medium voltage electricity market; the
+(MBIE, 2025; MBIE, 2024d). The inventory covers pre-combustion                   concrete input is updated using an Environmental Product Declaration
+stages (harvesting, chipping/milling, drying, and transport) and                 (EPD) for 30 MPa normal in-situ concrete sourced from New Plymouth
+on-site combustion. In line with IPCC guidelines and the Ministry for the        (EPD, 2019b); and the reinforcing steel input is replaced using an EPD
+Environment’s GHG Inventory methodology (MfE, 2024a), CO2 emis­                  for New Zealand-produced steel rod (EPD, 2019c).
+sions from the combustion of biogenic carbon are reported separately
+and are excluded from the Global Warming Potential results in the base           2.1.2.2. Geothermal infrastructure. The life cycle inventory for the
+case. This reflects the carbon-neutral assumption when biomass is                construction of new geothermal generation infrastructure in New Zea­
+sourced sustainably. However, methane and nitrous oxide from biomass             land is based on LCI data representing an 80 MW two-flash geothermal
+combustion are fully included in the Global Warming Potential calcu­             plant, developed by Saçayon Madrigal (2015). This model adapted in­
+lation, due to their direct climate impacts.                                     ventory data originally calculated for the 303 MW Hellisheidi
+                                                                                 geothermal plant in Iceland (Karlsdóttir et al., 2015), scaled to reflect
+2.1.1.7. Wind plant. The life cycle inventory for the wind plant O&M in          typical New Zealand field conditions, including well depth, number of
+New Zealand is modelled using the Ecoinvent dataset for a 3 MW                   wells, and collection pipeline lengths.
+onshore wind turbine (Australian process). A 3 MW turbine is used to                 The geothermal infrastructure inventory includes two components:
+represent the turbine scale for onshore wind infrastructure in New               initial construction of geothermal power plant facilities (well drilling,
+Zealand, which currently ranges from approximately 500 kW to 3 MW in             casing, collection pipelines, and power plant construction) and ongoing
+individual capacity (NZ Wind Energy Association, 2024).                          construction of geothermal make-up wells to maintain production ca­
+                                                                                 pacity over time. It is assumed that make-up wells are added at an
+2.1.1.8. Transmission and distribution losses. The transmission and dis­         average rate of 3 % of the initial number of production wells per year
+tribution losses in this section accounts for network electricity losses,        (Bullen, 2020).
+and sulphur hexafluoride (SF6) leakage during transmission and distri­               The Ecoinvent datasets used in the original model are modified with
+bution operations. Infrastructure-related components of the trans­               New Zealand-specific inputs where available: the electricity supply
+mission and distribution are described in Section 2.1.2.6.                       input is replaced with a New Zealand medium voltage electricity market
+    Based on MBIE data from 2020 to 2023 (MBIE, 2025), average                   process; the concrete input is replaced with EPD data for 30 MPa in-situ
+transmission losses are estimated at 3.2 % and distribution losses at 3.7        concrete sourced from Taupō (EPD, 2019b); and the cement input is
+% of net electricity generation, excluding distributed solar. These loss         updated using a 1:1 mix of EPD data from Golden Bay (EPD, 2019a) and
+rates are assumed constant across all future modelling years.                    Holcim (EPD, 2023).
+    Emissions from SF6 leakage are primarily driven by the equipment in
+the network. For modelling purposes, these total annual SF6 emissions            2.1.2.3. Wind infrastructure. A 4.5 MW turbine size is selected to
+are allocated evenly across all electricity flowing through the respective       represent new wind infrastructure installations. The model is based on
+network tier, expressed as an average intensity in kg CO2-eq/kWh.                Ecoinvent 3.9 Global processes for the construction of a 4.5 MW wind
+    In 2024, SF6 emissions from Transpower’s transmission network                turbine and its associated electricity network connection. The datasets
+were 3091 t CO2-eq. Dividing by the national net generation of 43,218            are modified to incorporate New Zealand-specific conditions: the con­
+GWh gives an average transmission SF6 intensity of 7.15 × 10− 5 kg CO2-          crete input in the wind network connection model is updated using an
+eq/kWh transmitted (MfE, 2025; Transpower, 2024). For distribution,              Environmental Product Declaration (EPD) for 30 MPa normal in-situ
+Powerco reported SF6 related emissions of 39.7 t CO2-eq in 2024 while            concrete supplied by Allied Concrete (EPD, 2019b). Transportation
+delivering 7446 GWh of electricity, giving an average distribution SF6           distances are also adjusted, with a trans-oceanic shipping distance of
+intensity of 5.33 × 10− 6 kg CO2-eq/kWh delivered (PowerCo, 2024).               5.66 × 106 tkm (tonne-kilometre) applied to represent turbine transport
+This value is used as a representative factor for modelling SF6 emissions        from China to Auckland, and a freight truck distance of 88,000 tkm
+across the entire New Zealand distribution network.                              applied to model transport from Auckland to the wind farm site.
+
+2.1.2. Infrastructure                                                            2.1.2.4. Solar infrastructure. The life cycle inventory for the construc­
+    Emissions from power plant infrastructure are considered only dur­           tion of new solar generation infrastructure in New Zealand covers both
+ing the manufacturing and construction phases, with impacts allocated            utility-scale and distributed solar systems.
+to the expected year of infrastructure completion. These emissions are               Reported greenhouse gas emissions from utility-scale photovoltaic
+often referred to as embodied emissions.                                         (PV) systems vary widely, ranging from 13.2 (Müller et al., 2021)to
+    For each generation technology, the same modelling approach as               131.2 (Mehedi et al., 2022)g CO2-eq/kWh, depending on material
+used in the O&M phase is adopted, based on Ecoinvent datasets sup­               composition, system configuration, and manufacturing processes. The
+plemented with New Zealand-specific data where available. Infrastruc­            monocrystalline silicon PERC bifacial technology was selected for this
+ture data for geothermal, utility solar and hydropower stations are              study to represent current and near-future PV deployment in New Zea­
+derived from literature sources and adjusted for local conditions. New           land. The life cycle inventory data for the PV modules and balance of
+construction of coal-fired and biomass-fired power plants is not                 system (BOS) components are adapted from Ref. (Pimentel Pincelli
+considered, as the future scenarios examined in this study do not include        et al., 2024),which reflects current industry practices and
+new capacity for these technologies. Infrastructure related to upstream          manufacturing locations. The corresponding embodied emission factor
+fuel supply (e.g., natural gas extraction, coal mining) is treated within        is 26.2 g CO2-eq/kWh (equivalent to 1.15 kt CO2-eq/MW), which falls
+the O&M model on a per kWh basis rather than within the infrastructure           within the range reported above. The system boundary excludes both
+construction inventory.                                                          energy storage units and the end-of-life stage (decommissioning, recy­
+                                                                                 cling, and landfill disposal).
+2.1.2.1. Natural gas infrastructure. The life cycle inventory for the                Distributed PV systems are modelled using the Ecoinvent 3.9
+
+
+                                                                             4
+M. Liu et al.                                                                                                           Journal of Cleaner Production 538 (2026) 147314
+
+
+database for 3 kWp multi-crystalline silicon (Multi-Si) and single-                phase (fuel combustion or gas fugitive) and the construction phase,
+crystalline silicon (Single-Si) rooftop PV panels, assuming a 50:50 split          while the EoL phase accounts for only about 0.5 % of the total emissions
+between the two technologies. The default electricity mix has been                 (Starczewska et al., 2025; Spath, 2000). In the hydropower sector, due to
+replaced with a New Zealand low voltage electricity process for this               cost, technical, and ecological trade-offs, complete dam removal is
+study.                                                                             usually considered an exceptional and unconventional operation; most
+                                                                                   studies assume that dams remain in their original state (or are partially
+2.1.2.5. Hydro infrastructure. The life cycle inventory for the construc­          modified) after their service life ends (NZSOLD, 2023). New Zealand
+tion of new hydropower infrastructure in New Zealand is based on LCI               currently has no official plan for the decommissioning of hydropower
+data from two Peruvian run-of-river hydropower plants located in the               facilities, and existing facilities that have been in service for over 80
+Andean mountains (Verán-Leigh et al., 2019). Run-of-river plants are              years are still being maintained and operated (Guan et al., 2025).
+selected to represent future hydropower development in New Zealand,                Therefore, this study did not consider the end-of-life phase for hydro­
+as there have been no major new reservoir-based hydropower projects                power plants.
+planned since the completion of the Clyde Dam in 1993. The two
+modelled plants, with installed capacities of 178 MW and 220 MW, are               2.1.3.2. Solar and wind. For solar and wind energy, LCA indicate that
+averaged to represent a 199 MW run-of-river facility.                              EoL treatment involving landfill disposal alone increases cradle-to-gate
+    Material categories, including steel inputs, are disaggregated based           stage total emissions by only approximately 1 % (Mehedi et al., 2022;
+on the proportions found in the Ecoinvent dataset for run-of-river hy­             Mohd Nordin et al., 2022; Santoyo-Castelazo et al., 2021). This implies
+dropower construction in Switzerland. Most background inputs are                   minimal difference between the benchmark boundary of this study and
+sourced from Ecoinvent ‘Global’ or ‘Rest-of-World’ datasets, with spe­             cradle-to-grave scenarios incorporating landfill disposal. However, EoL
+cific New Zealand modifications applied where available: cement inputs             impacts may become significant if mechanical (either partial or full)
+are replaced using a 1:1 mix of Environmental Product Declarations                 recycling or chemical treatment of components are implemented, and
+(EPDs) from Golden Bay Cement and Holcim (NZ) Ltd, and reinforcing                 these impacts are sensitive to material composition and recycling effi­
+steel is replaced using New Zealand-specific EPD data for steel rod (EPD,          ciency (Latunussa et al., 2016). Based on local data from New Zealand,
+2023; EPD, 2019c; EPD, 2019a).                                                     wind and solar stations are projected to begin decommissioning after
+                                                                                   2060 (Okebe et al., 2025). As the EoL management options remain un­
+2.1.2.6. Transmission and distribution (T&D) infrastructure. The Trans­            certain, these processes are excluded from the electricity system life
+mission model includes high-voltage transmission network infrastruc­               cycle model in this study. However, its potential future impact is dis­
+ture (e.g., utility poles, cables, etc.). Cables include underground cables        cussed in Section 4 of this paper.
+and overhead lines. The distribution model includes the construction of
+low-voltage transmission network infrastructure (utility poles, cables,            2.2. Life cycle impact assessment (LCIA) methodology
+substations, etc.).
+   As of 2020, Transpower operates approximately 12,000 km of                         The primary environmental impact category assessed in this study is
+transmission lines in New Zealand, and 29 distribution companies                   GHG emissions, expressed as Global Warming Potential over a 100-year
+operate 150,000 km of distribution lines (Electricty Authority, 2025).             time horizon (GWP100) (IPCC, 2023). The CML-2016 LCIA methodol­
+According to Transpower’s ‘Transmission Tomorrow’ and ‘Net Zero Grid               ogy (Rybaczewska-Błażejowska et al., 2024) is used to quantify impacts.
+Pathway’ (NZGP) plans, a large-scale upgrade of the grid will be                   Emissions are reported in kilograms of carbon dioxide equivalent (kg
+completed by 2050 to support decarbonization and growing electricity               CO2-eq). Other environmental indicators such as resource depletion,
+demand (Transpower, 2023; Transpower, 2024). In the first phase of the             acidification, or eutrophication are not assessed.
+NZGP (2028–2035), approved by MBIE, approximately 1383 km of                          GHG emissions per unit of electricity generation (emission intensity)
+transmission lines will be upgraded, including the main corridor be­               and cumulative emissions are used to analyse the emission variation of
+tween Bunnythorpe and Whakamaru, inter-island lines, and the Wairaki               the electricity system over time.
+region (Transpower, 2021). This study assumes an annual average up­
+grade rate for the transmission and distribution networks based on this            2.3. Future scenarios
+plan. Table 1 summarises the estimated annual upgrade lengths used in
+the LCA model.                                                                        This study evaluates six future electricity scenarios to assess the GHG
+
+2.1.3. End-of-life                                                                 Table 2
+   This study does not include the end-of-life (EoL) stage in the life cycle       Summary of New Zealand future Scenario and Key Assumptions.
+boundary as decommissioning for most technologies falls beyond the
+                                                                                    Scenario        Summary of Key Assumptions
+2050 timeframe considered. The justification for omission and the
+                                                                                    Reference       Moderate GDP and population growth, medium EV and
+typical impact of EoL are discussed by technology in the following
+                                                                                                    electrification uptake based on Ministry of Transport forecasts,
+subsections.                                                                                        historical peak demand patterns (700 MW buffer), and constrained
+                                                                                                    renewable build.
+2.1.3.1. Hydropower, geothermal, and natural gas. Published LCAs                    Growth          Higher GDP and population growth drives higher electricity
+                                                                                                    demand, but EV uptake is slower; renewable build is still
+studies show that for geothermal and natural gas power plants, the total
+                                                                                                    constrained, and technology costs are higher than in Reference.
+life cycle greenhouse gas emissions primarily come from the operational             Constraint      Lower economic and population growth with faster EV and
+                                                                                                    electrification uptake; demand is lower than Reference, but
+                                                                                                    generation is unconstrained with more flexibility to build projects.
+Table 1                                                                             Innovation      Medium economic growth with fast EV uptake; demand-side
+Summary of annual upgrades to Transmission and Distribution Infrastructure.                         technologies (e.g., smart meters, batteries) help shift peak loads;
+                                                                                                    generation is unconstrained, and renewables are 15 % cheaper.
+                      Length of Existing   Annual upgrade   Annual upgrade
+                                                                                    Environmental   Strong climate action scenario with high carbon prices; fast
+                      Lines in 2020(km)    percentage       length(km)
+                                                                                                    electrification and EV adoption; demand shifting through smart
+  Transmission        12,000               1.67 %            200                                    tech; unconstrained generation and biomass use allowed after
+    Infrastructure                                                                                  2032.
+  Distribution        150,000              1.67 %           2511                    Revolution      100 % renewable by 2045; no coal generation after 2035, no gas
+    Infrastructure                                                                                  generation after 2045.
+
+
+                                                                               5
+M. Liu et al.                                                                                                           Journal of Cleaner Production 538 (2026) 147314
+
+
+emissions of New Zealand’s electricity system from 2020 to 2050.                     The WEM/WAM projections for 2020–2050 represent the total
+Table 2 summarises their characteristics. Five scenarios are derived from        allowable CO2 equivalent emissions of the New Zealand economy from
+the Electricity Demand and Generation Scenarios (EDGS) published by              2020 to 2050 under the trajectory implied by the existing (and addi­
+MBIE (MBIE, 2024b). An additional sixth scenario is generated using the          tional) measures. The CCC Pathway Budget is based on New Zealand’s
+Linear Program Convolution Model (LPCon), developed and owned by                 own policy-driven projections.
+Meridian Energy Ltd (Purdie, 2022). The LPCon model simulates the NZ
+electricity market and grid on a fine spatial and temporal scale out to          2.4.2. Carbon budget of New Zealand electricity sector
+mid-century and is used under license for this study. The LPCon scenario            In this study, we used the grandfathering method (Knight, 2013) to
+used here represents a highly renewable pathway aiming for full                  calculate the carbon budget for New Zealand’s electricity sector, using
+decarbonization of New Zealand’s electricity sector by 2050. The                 the proportion of emissions from the electricity sector in New Zealand’s
+detailed assumptions for future scenarios are provided in Supplementary          overall carbon emissions in the past to represent the future proportion.
+information 4.                                                                   New Zealand’s 2020–2023 emissions from electricity generation were
+    Fig. 1 and Table 3 show the proportion of renewable energy, and              obtained from the National Greenhouse Gas Inventory (MfE, 2025). The
+structure of renewable energy in the power system under the six sce­             share of emissions from electricity generation activities and fugitive
+narios. Table 4 shows the cumulative new-build generation capacity by            emissions is estimated to account for approximately 5.3 % of New
+technology.                                                                      Zealand’s total greenhouse gas emissions, based on the average from
+                                                                                 2020 to 2023, excluding the COVID-affected year 2022. This percentage
+                                                                                 was used as a baseline for the electricity system sector’s share of national
+2.4. Global climate target and carbon budget
+                                                                                 emissions, as can be seen in equation (1) (CB = Carbon budget)
+
+   This study applies an equity-based approach to estimate New Zea­                                            NZ Electricity Emission2020
+                                                                                 Electricity CBgrandfather =                               × NZ CB(from CCC)
+land’s fair share of that global carbon budget. New Zealand’s national                                             NZ Emission2020
+carbon budgets used in this study are based on projections published by                                                                                            (1)
+the Climate Change Commission, and are further downscaled to the
+electricity sector to evaluate whether future emissions are consistent           3. Results
+with the 1.5 ◦ C target.
+                                                                                 3.1. Life cycle GHG emissions by generation source in New Zealand’s
+2.4.1. Carbon budget of New Zealand                                              electricity system
+    Under the New Zealand Climate Change Response Act 2002, He Pou
+a Rangi Climate Change Commission provides advice on the emissions                   The operational and maintenance (including transmission and dis­
+budget, which is a New Zealand emissions reduction plan commensurate             tribution losses) GHG emissions of different power generation technol­
+with limiting global warming to 1.5 ◦ C above pre-industrial levels (CCC,        ogies can be seen in Fig. 2, expressed per 1 kWh of delivered electricity.
+2024). Two scenarios were considered for the total national emissions            The emissions from non-renewable energy sources, such as coal and
+budget for the period 2020 to 2050. The Climate Change Commission                natural gas, are 1.156 kgCO2-eq/kWh and 0.537 kgCO2-eq/kWh,
+(CCC) ‘With Existing Measures’ (WEM) and ‘With Additional Measures’              respectively. The results are consistent with international studies, with
+(WAM) pathways provided New Zealand’s national emissions budget                  the coal value close to the global mean of 1.22 kg CO2-eq/kWh when
+directly based on projected domestic policies (MfE, 2024b). Of these, the        applying comparable life cycle impact assessment methods (CML2001)
+WEM scenario includes all policies and measures that have been                   (Wang et al., 2024). The differences mainly occur due to the type of
+implemented up to the year of the projection, essentially a baseline of no       technology and coal used in each study. The emission intensity for
+further climate policy, while the WAM scenario includes additional               natural gas is also comparable to previous studies, such as Martin et al.
+planned policies and measures over and above those already in place.
+
+
+
+
+                                     Fig. 1. Renewable share of electricity generation (2020–2050) under six scenarios.
+
+                                                                             6
+M. Liu et al.                                                                                                                  Journal of Cleaner Production 538 (2026) 147314
+
+
+Table 3
+Cumulative Electricity generation from 2020 to 2050 for the different scenarios.
+                            Contribution of each technology to electricity mix (GWh)
+
+                            Coal                Natural Gas              Hydropower               Geothermal           Solar                   Wind                Biomass
+
+  Reference                 39,000              76,800                   798,800                  345,500              120,200                 294,400             11,700
+  Growth                    41,800              80,500                   826,300                  362,100              72,600                  330,100             11,700
+  Constraint                37,400              73,900                   778,100                  326,500              177,800                 260,800             11,700
+  Innovation                27,100              74,600                   859,300                  394,400              172,500                 353,500             40,800
+  Environmental             26,900              62,400                   824,100                  390,200              181,100                 336,100             30,400
+  Revolution                15,200              35,700                   773,900                  326,300              150,700                 229,800             20,200
+
+
+
+
+Table 4
+Cumulative new-build electricity generation capacity from 2020 to 2050(MW).
+                             Hydropower                  Natural Gas               Wind                Utility Solar             Distributed Solar              Geothermal
+
+  Reference                  799                         1180                      3535                3065                      1397                           830
+  Growth                     1174                        1180                      4865                7041                      1775                           873
+  Constraint                 355                         349                       2517                1540                      883                            681
+  Innovation                 1180                        590                       4410                4514                      2703                           1022
+  Environmental              760                         659                       4864                5118                      2703                           980
+  Revolution                 59                          115                       3404                3165                      4357                           241
+
+
+
+
+Fig. 2. (a). Operational GHG Emission structure per 1 kWh of delivered electricity by generation source (excluding embodied emissions), showing proportion of
+O&M emissions and T&D losses Fig. 2(b). Embodied GHG Emissions (per MW) of installed capacity for New-build power stations by generation technology.
+
+
+(2022), who reported 0.503–0.524 kg CO2-eq/kWh (Martín-Gamboa                              with the carbon neutrality assumption (see Sec. 2.1.1.6).
+et al., 2018), and Ozturk (2021), who found 0.54 kg CO2-eq/kWh                                 In contrast, hydropower, wind, and solar plants have near-zero
+(Ozturk et al., 2019), indicating that the results of this study fall within               operational emissions, mainly from basic maintenance activities such
+the expected range. For fossil fuel–based power plants, emissions arise                    as cleaning and lubrication. Most emissions occur in the transmission
+almost entirely from generation activities (O&M emissions, see Fig. 2                      and distribution (T&D) stage. Losses in electricity transmission and
+(a)), while the transmission and distribution stage contribute only about                  distribution account for 7 % of net generation, while SF6 leakage from
+7 % of the total.                                                                          network equipment corresponds to 7.68 × 10− 5 kg CO2-eq/kWh. When
+    Among renewable energy sources, geothermal energy exhibits                             electricity is supplied entirely from wind or solar, the T&D stage dom­
+moderate operational performance, with emissions of approximately                          inates the emission profile, contributing 53 % of total operational and
+0.070 kgCO2-eq/kWh, indicating non-negligible fugitive CO2 emissions                       maintenance emissions for wind and 91 % for solar in this study.
+associated with geothermal fluid extraction in New Zealand. This is                            Fig. 2(b) illustrates the GHG emissions of each new-build power
+comparable to the New Zealand Geothermal Association’s reported                            station from the material preparation stage to the commissioning stage
+average of 0.069 kg CO2-eq/kWh in 2020 (NZGA, 2020). Biomass power                         (when power generation begins). Renewable power plants exhibit
+plants have emissions of about 0.051 kg CO2-eq/kWh, which is higher                        higher embodied (infrastructure-related) emissions than fossil fuel
+than the 0.029 kg CO2-eq/kWh reported by Scrucca et al. (2024)                             plants, reflecting the larger material requirements and construction ac­
+(Scrucca et al., 2024). The differences mainly arise from variations in                    tivities involved. In this study, distributed solar shows approximately
+wood chip production methods and transport fuel consumption.                               twice the infrastructure-related emissions of utility-scale solar. This
+Biogenic CO2 emissions from biomass combustion are excluded in line                        difference arises partly from material and system design requirements,
+
+
+                                                                                       7
+M. Liu et al.                                                                                                       Journal of Cleaner Production 538 (2026) 147314
+
+
+and partly from the data sources: the utility-scale solar plant is modelled       3.2.2. Emission structure of transition of electricity system (2020–2050)
+from an actual New Zealand project, whereas distributed solar is based                The structure of the emissions profile changes over time. In all future
+on a mix of local and generic data due to limited availability of infor­          scenarios, operational and maintenance emissions dominate in the first
+mation from real case studies.                                                    period, accounting for about 80 % of life cycle emissions. Embodied
+                                                                                  emissions increase in importance over time, ranging from 8 to 15 % in
+                                                                                  the first period to 10–40 % in the second period. Transmission and
+3.2. Scenario-based life cycle emission comparison                                distribution losses remain relatively stable at 5–6 % of total emissions
+                                                                                  across both periods. Fig. 4 shows the emission structure of electricity
+3.2.1. Cumulative emissions of 6 scenarios under different assessment             system across six scenarios for the periods 2020–2035 and 2036–2050.
+boundaries (2020–2050)                                                                Fig. 5 illustrates the emission structure transition in detail for the
+    Fig. 3 compares cumulative emissions from 2020 to 2050 across the             Revolution scenario, which represents a pathway to 100 % renewable
+six scenarios described in Section 2.3. Fossil fuel combustion and fugi­          electricity by phasing out coal in 2035 and natural gas in 2044 (See
+tive emissions are calculated by MBIE. All other variables are calculated         Section 2.3).
+by this study.                                                                        During the first period (2020–2035), operational and maintenance
+    This graph shows the difference between the Ministry of Business,             emissions constitute 82.9 % of total life cycle emissions, mainly from
+Innovation and Employment (MBIE) reporting approach and this study’s              fossil fuels: coal (27 %) and natural gas (29 %). In the 2036–2050 period,
+LCA based approach. MBIE’s values include only the primary generation             although coal is eliminated and gas largely phased out, operational and
+activities (fuel combustion and fugitive emissions), whereas the LCA              maintenance emissions still represent 51.5 % of the total, primarily
+results expand the boundary to cover operational and maintenance ac­              stemming from geothermal (41 %) and hydro (8 %). Concurrently,
+tivities, transmission and distribution (T&D) losses and embodied                 embodied emissions from infrastructure construction increase to 44 % of
+emissions from infrastructure construction.                                       the total. These results show that even in a 100 % renewable electricity
+    In this study, the fossil fuel and Geothermal O&M emissions are               system, operational emissions are still significant, while embodied
+larger than the emissions from primary generation activities (Fossil fuel         emissions from new-build renewable infrastructure become the signifi­
+combustion and fugitive in Fig. 3), because our model includes upstream           cant contributor. This quantified shift shows the structural transition of
+activities related to coal and gas production and supply in addition to           emissions sources in a highly renewable electricity system.
+combustion. Beyond generation activities, we also calculate operational
+and maintenance emissions from renewable power plants, which                      3.3. Emission budgets for New Zealand electricity generation
+contribute about 6–12 % of total cumulative emissions across the sce­
+narios. Transmission and distribution losses in this study include both           3.3.1. Life cycle emission intensity trends (2020–2050)
+electricity losses during transmission and distribution and SF6 leakage               Emission intensity, measured in kilograms of carbon dioxide equiv­
+from T&D equipment. Together, these losses contribute about 6 % of                alent per kilowatt-hour (kg CO2eq/kWh), reflects the climate impact of
+total cumulative emissions.                                                       delivering one unit of electricity. It is a key metric for tracking decar­
+    Embodied emissions were modelled for all new-build power stations             bonization progress in power systems, especially under a life cycle
+and network upgrades. These emissions contribute 9–25 % of total cu­              perspective that includes both operational and embodied emissions.
+mulative emissions across the six scenarios, making them a significant                Across all six scenarios, emission intensity declines substantially
+part of the life cycle emissions of the electricity system. In the Envi­          from about 0.14 kg CO2-eq/kWh (see Fig. 6) in 2020 to around 0.05 kg
+ronmental and Innovation scenarios, total life cycle emissions are 57 %           CO2-eq/kWh by 2050.
+and 50 % higher than MBIE’s reported emissions, which only relate to                  The Environmental, Innovation, and Revolution scenarios show the
+generation activities. This difference is mainly due to the larger number         steepest reductions, with intensities falling to 0.03–0.04 kg CO2-eq/kWh
+of projected new-build renewable power plants in all scenarios.                   by 2050. Higher fluctuations in intensity arise from years with
+
+
+
+
+Fig. 3. Cumulative GHG emissions of New Zealand’s electricity system (2020–2050) across six scenarios, comparing primary generation activities only (from MBIE
+report) with the current LCA approach (including O&M, T&D losses, and embodied emissions).
+
+                                                                              8
+M. Liu et al.                                                                                                          Journal of Cleaner Production 538 (2026) 147314
+
+
+
+
+                                    Fig. 4. Decomposition of electricity system GHG emissions (2020–2035 vs 2036–2050).
+
+
+
+
+Fig. 5. Life cycle GHG emissions in the revolution scenario for New Zealand’s electricity system (2020–2050), showing contributions by life cycle stage and gen­
+eration technology. The left panel represents the period 2020–2035, and the right panel represents 2036–2050. Text labels are only provided for percentages over 1
+%. The size ratio of the left and right figures represents the ratio of total GHG emissions for each period.
+
+
+concentrated construction of new renewable capacity, as embodied                    3.3.2. Cumulative emissions and alignment with Climate Change
+emissions are assigned to the year of installation. Two notable drops are           Commission budgets
+visible in the Revolution scenario around 2035 and 2045, corresponding                  Fig. 7 compares cumulative LCA emissions from the electricity sys­
+to the phase-out of coal and gas, respectively. A linear fit shows the              tem across six scenarios with the carbon budget allocated to New Zea­
+steepest long-term decline in emission intensity in the Revolution sce­             land’s electricity sector for 2020–2050. When embodied emissions are
+nario (0.004 kg CO2-eq/kWh per year), compared with a slower decline                included, five scenarios exceed the WAM budget (see Section 2.4.1) by
+in the Growth scenario (0.002 kg CO2-eq/kWh per year). In the final five            around 2037.
+years (2045–2050), emission intensity levels off at very different values               Among the six scenarios, the Revolution scenario shows the greatest
+across scenarios: close to 0.027 kg CO2-eq/kWh in the Revolution sce­               reduction in long-term cumulative emissions. By eliminating coal in
+nario and 0.053 kg CO2-eq/kWh in the Growth scenario. These declines                2035 and gas in 2044, it comes closest to aligning with the electricity
+demonstrate how rapid accelerated renewable deployment and fossil                   sector’s allocated carbon budget. The electricity sector budget itself is
+fuel phase-out directly drive reductions in electricity system emission             calculated from MBIE’s reported share of national emissions, which only
+intensity.                                                                          includes emissions from primary generation activities (fuel combustion
+
+
+                                                                                9
+M. Liu et al.                                                                                                            Journal of Cleaner Production 538 (2026) 147314
+
+
+
+
+                Fig. 6. Annual life cycle GHG emission intensity (kg CO2eq/kWh) of New Zealand’s electricity system (2020–2050) across six scenarios.
+
+
+
+
+Fig. 7. Cumulative GHG emissions (Mt CO2eq) of New Zealand’s electricity system under 6 scenarios (2020–2050), compared to electricity system share of New
+Zealand Climate Change Commission emission budgets.
+
+
+and fugitive emissions). This narrower boundary means that budgets                    activities to include infrastructure construction and transmission and
+derived in this way underestimate the full life cycle emissions of the                distribution networks.
+electricity sector. Comparing these broader system-wide results with the                  We compared the electricity system emissions from primary gener­
+carbon budget provides insight into the potential overshoot of the                    ation activities with a full LCA framework. Analysing emissions from
+budget by New Zealand’s future electricity system.                                    primary generation activities only reflects a narrow perspective suited to
+                                                                                      a traditional, fossil fuel-dominated electricity system, but fails to capture
+4. Discussion                                                                         the realities of an increasingly renewable grid. Our results (see Section
+                                                                                      3.2) provide a more detailed picture, revealing that total system emis­
+   This study assessed the life cycle GHG emissions of New Zealand’s                  sions can be 61–68 % higher than those estimated under a generation-
+electricity system under six future scenarios, covering both operational              based approach.
+and infrastructure sources. The analysis uses a LCA approach that pro­                    Comparison of emission structures across the six scenarios shows
+vides a full electricity system view, extending beyond generation                     that if coal and gas remain in the generation mix, they continue to be the
+
+
+                                                                                 10
+M. Liu et al.                                                                                                         Journal of Cleaner Production 538 (2026) 147314
+
+
+largest contributors to electricity system emissions through 2050.                      In addition to environmental effects, economic aspects of circular
+Although the proportion of coal and natural gas in the New Zealand                  economy options are also important. Studies(Sproul et al., 2025) show
+electricity system used in this study (less than 20 %) is significantly             that chemical recycling of wind turbine blades can cost up to five times
+lower than the global average (58 %), it will still be a primary factor             more than mechanical recycling, with the variation in cost occurring
+influencing the decarbonization of the electricity system (IEA, 2024). At           between different technologies and processes. At the same time, when
+the same time, as renewable generation expands in line with projected               recycling facilities operate at sufficient scale and material recovery rates
+development plans, embodied emissions from infrastructure construc­                 are high, recycling wind turbine blades or photovoltaic modules can be
+tion also rise and become increasingly important. While phasing out                 cost effective compared with landfill or incineration, and may even
+fossil fuels is essential, embodied emissions associated with renewables            provide net economic benefits (Khandelwal et al., 2025; Zhao et al.,
+cannot be overlooked in future electricity system planning.                         2025). Although recycling and reuse offer potential mitigation benefits,
+    In the 100 % renewable electricity (Revolution) scenario, a clear               the absence of mandatory recycling policies and the high technical and
+transition in emission structure emerges. From 2020 to 2035, opera­                 economic thresholds for component reuse currently limit the feasibility
+tional emissions account for more than 80 % of total life cycle emissions.          of large-scale implementation (IRENA, 2016; Nagle et al., 2022).
+These come mainly from coal, gas, and geothermal generation activities.
+From 2036 to 2050, coal and gas are phased out, leading to lower total              4.3. Policy implications
+emissions. The operational emissions share drops to about half of the
+total, with geothermal O&M emissions remaining the largest source at                4.3.1. Rapid phase out of fossil fuels before 2035
+41 %. During the second period, embodied emissions from infrastructure                  The evolving emission structure highlights how the mitigation
+construction make up 44 % of the total. Most of these come from solar               challenge for the electricity sector will change over time. Before 2035, in
+farm construction and upgrades to transmission and distribution sys­                all scenarios operational emissions are the main source so the priority is
+tems. In addition to the reduction in fossil fuel emissions, the second             moving to a 100 % renewable electricity system and rapidly phasing out
+period involves a much larger build programme for renewable power                   fossil fuels. Section 3.3.2 shows that under a gradual fossil-fuel phase-
+plants and supporting infrastructure compared to the first period, which            out, the electricity sector’s carbon budget will be nearly exhausted by
+explains the greater contribution of embodied emissions.                            2035, making it difficult to achieve New Zealand’s net-zero commit­
+                                                                                    ment. In contrast, the Revolution scenario demonstrates that imple­
+4.1. Future decarbonization of manufacturing                                        menting a stricter fossil-fuel retirement schedule can reduce sectoral
+                                                                                    emissions by 24 % before 2035. This finding contrasts with current
+    This study assumes that life cycle inventory data remain constant for           government directions including reversing the ban on offshore oil and
+all future years up to 2050. This static assumption may lead to a con­              gas exploration and removing barriers to building critical facilities to
+servative overestimation of total emissions, as the carbon intensity of             import liquefied natural gas (MfE, 2024c).
+industrial production is expected to decline over time. A full analysis of              This finding also has implications internationally. In particular for
+these effects is beyond the scope of this study, however it is useful to try        the two-thirds of countries that still generate more than 50 % of their
+and quantify the potential impacts of these improvements. According to              electricity from fossil fuels (Ember, 2025). Over the next decade, the
+international decarbonization roadmaps, the emission intensity of steel             central mitigation challenge for these countries will continue to be the
+production could decrease by about 60 % and that of concrete by around              structural transition of energy supply. Restricting fossil-fuel exploration
+50 % by 2050 (IEA, 2020; GCCA, 2021). Since steel and concrete                      and adopting competitive renewable energy auctions can accelerate the
+together account for 58 % of the embodied emissions in wind farm,                   clean-energy transition through coordinated policy and market design
+incorporating these reductions over time would lower the total emis­                (Kiefer et al., 2024). For countries with limited infrastructure invest­
+sions from wind farms by 21.4 %. For solar power, replacing the                     ment capacity, well-designed auction mechanisms can help reduce the
+monocrystalline modules used in this study with thin-film or                        levelized cost of renewable electricity and attract domestic and foreign
+amorphous-silicon modules could reduce manufacturing emissions by                   capital to accelerate grid decarbonization.
+about 35 % (Batić, 2025). If these improvements are applied within the
+Revolution scenario, the total system emissions would decrease by                   4.3.2. Shift focus to embodied emissions after 2035
+approximately 7 %, enabling the electricity sector to remain within its                 The results show that after 2035, as fossil-fuel combustion in power
+allocated carbon budget.                                                            generation declines sharply, operational emissions fall significantly.
+                                                                                    Further reductions then depend on lowering the carbon intensity of
+4.2. Impacts of end-of-life retirement/recycling of plant                           infrastructure materials, optimising construction processes, and
+                                                                                    improving the efficiency of grid expansion and management. Materials
+    End of life retirement/recycling of electricity system plant has not            used in large-scale power-station projects will remain the primary
+been considered in this study (for reasons outlined in Sec. 2.1.3).                 source of embodied emissions (Smoucha et al., 2016). Although New
+However different end of life approaches could lead to a wide range of              Zealand’s materials industry associations have set a 2050 net-zero target
+impacts. Within a circular economy context, the type of material cycle              (BRANZ, 2023), the pace of decarbonization in the materials sector must
+used at the end of life, open cycles (used in other products), partially            accelerate to align with the construction timeline of major renewable
+closed cycles (partly reused in the same system), and totally closed cy­            projects. Most large-scale infrastructure development is projected to
+cles (fully reused in the same system), will influence the total emissions          occur between 2035 and 2050, meaning that achieving low-carbon steel
+of renewable energy technologies (Akhlisah et al., 2025; Khandelwal                 and concrete production before this construction peak is critical to avoid
+et al., 2025; Ghisellini et al., 2025). For example, compared with landfill         a “carbon spike” during the build-out phase.
+disposal, partial recycling and reuse of renewable components could                     The government should also consider how to guide the application of
+further reduce system emissions. Previous research (Rossi et al., 2023)             new low-carbon materials in future power-station and transmission
+focusing on end-of-life impacts of renewable power technologies shows               projects. This includes developing performance standards for alternative
+that the effects on life-cycle emissions vary widely across systems. For            materials, fast-tracking certification processes, and integrating whole-
+solar systems, recycling can reduce total emissions by approximately                life embodied-carbon assessments into project approval frameworks.
+9–53 %, depending on the recovery rate and recycling process effi­                  In parallel, all new power-station projects fully comply with Step 5 of the
+ciency. For wind systems, the impact ranges from a 16 % reduction to a              Whole Life Embodied Carbon Emissions Reduction Framework (MBIE,
+13 % increase, mainly due to differences in composite-blade treatment               2020), where all new buildings must meet whole-life embodied-carbon
+and partial disposal practices.                                                     caps that align with national net-zero objectives (BRANZ, 2023).
+
+                                                                               11
+M. Liu et al.                                                                                                                Journal of Cleaner Production 538 (2026) 147314
+
+
+4.3.3. Geothermal emissions - policies advancing research and                       beyond electricity generation activities to capture overlooked embodied
+implementation of reinjection technologies                                          emissions. These insights underline that achieving a net-zero electricity
+    From 2020 to 2025 in New Zealand, fugitive geothermal emissions                 system is not only about replacing fossil fuels with renewables, but also
+were equivalent to 15 % of all electricity generation emissions (MBIE,              about addressing the full life cycle of emissions from electricity supply.
+2024d). Our LCA modelling shows that geothermal generation emissions                The countries pursuing deep decarbonization must ensure relevant
+form a significant part of total energy emissions in coming decades, from           sectors are aware of all emissions relevant to them, to drive decarbon­
+18 % in the first period, to 41 % in the second period (see section 3.2.2).         ization behaviours, and must also prepare for a second phase of chal­
+In our analysis we have assumed a dual flash Geothermal technology                  lenges where infrastructure and residual renewable emissions play a
+(see Sec 2.1.1.3) that partially reduces fugitive emissions. However, new           central role in determining whether electricity systems can truly deliver
+technology exists to substantially reduce fugitive emissions to almost              on climate targets.
+zero. The New Zealand Geothermal Association Emissions Working                          Further research will consider technological improvements in
+Group was established in 2021 to collaborate on issues associated with              renewable electricity systems that could lower life cycle emissions and
+emissions from geothermal energy plant, and several pilot projects have             explore dynamic life cycle inventory approaches for wind and solar
+trialled the technology (McLean, 2023), with Te Huka geothermal power               power plants to capture the effects of industrial decarbonization over
+plant successfully reinjecting 100 % of emissions in 2023 (Richardson               time. Secondly, when allocating carbon budgets, this study used the
+et al., 2023). Thus policies advancing the development and roll out of              grandfather clause method, but there are other sharing principles that
+this reinjection technology should take priority in decarbonization ef­             could be explored in future research to compare the differences in results
+forts. This also applies to other countries with significant geothermal             under these various methods. Finally, future work could also integrate
+and biomass shares. Capturing residual emissions from these technolo­               economic assessment to evaluate the cost and feasibility of circular
+gies will remain an essential complementary measure, particularly in the            economy measures overtime.
+post-2035 period.
+                                                                                    CRediT authorship contribution statement
+4.3.4. Accounting for growth in transmission and distribution infrastructure
+    The government scenarios on which this study is based are largely                  Maoxing Liu: Writing – original draft, Visualization, Software,
+focused on new electricity generation and don’t account for any po­                 Methodology, Data curation, Conceptualization. Jen Purdie: Writing –
+tential growth of transmission and distribution lines. However, industry            review & editing, Supervision, Resources, Methodology, Data curation,
+projections (Boston Consulting Group, 2022)show that there will need to             Conceptualization. Michael W. Jack: Writing – review & editing, Su­
+be a significant growth in transmission and distribution infrastructure to          pervision, Project administration, Methodology, Funding acquisition.
+meet future electricity demand and distributed generation growth due to
+decarbonization with an estimated annual investment of about $1                     Declaration of competing interest
+billion in transmission and a 30 % increase in distribution spending to an
+average of $2.4 billion per year through 2050. Estimates of the growth in               The authors declare that they have no known competing financial
+transmission and distribution networks should be accounted for in                   interests or personal relationships that could have appeared to influence
+future government scenarios. This also applies internationally, as                  the work reported in this paper.
+transmission and distribution systems globally expand with increased
+decarbonization electrification.                                                    Acknowledgements
+
+4.3.5. Include embodied emissions in electricity sector emissions accounting           Financial supprt for this research was provided by the New Zealand
+to drive infrastructure change                                                      Ministry of Buisness Innovation and Employment (Contract No.
+    This study compared the relationship between New Zealand’s elec­                UOOX2202).
+tricity system emissions and the electricity system share of the national
+carbon budget for the period 2030–2050, which was set to achieve New                Appendix A. Supplementary data
+Zealand’s share of the 1.5 ◦ C target under the Paris Agreement. The
+current government’s calculation of electricity system emissions only                  Supplementary data to this article can be found online at https://doi.
+considers activities directly related to electricity generation (MfE,               org/10.1016/j.jclepro.2025.147314.
+2025). Emissions from infrastructure such as power plant construction
+and transmission upgrades are counted in other sectors like                         Data availability
+manufacturing or building, rather than the electricity sector (MfE,
+2025). However, in the LCA approach used in this paper, these                           Data will be made available on request.
+embodied emissions are included within the electricity system boundary
+to capture the full environmental impact of electricity system infra­               References
+structure. One important advantage of the LCA approach is that the
+embodied emissions are associated with the electricity sector and this              Akber, M.Z., Thaheem, M.J., Arshad, H., 2017. Life cycle sustainability assessment of
+method of allocation is much more likely to drive changes within the                    electricity generation in Pakistan: policy regime for a sustainable energy mix. Energy
+                                                                                        Policy 111, 111–126. https://doi.org/10.1016/j.enpol.2017.09.022.
+sector. As economies move toward accelerated electrification, the
+                                                                                    Akhlisah, Z.N., et al., 2025. Environmental impacts of biomass energy: a life cycle
+embodied emissions from renewable energy infrastructure will repre­                     assessment perspective for circular economy. Renew. Sustain. Energy Rev. 226,
+sent an increasing share of total system emissions and should be care­                  116363. https://doi.org/10.1016/j.rser.2025.116363.
+                                                                                    Alavi, Z., et al., 2025. End-of-life wind turbine blade management across energy
+fully addressed and explicitly discussed in future national reports and
+                                                                                        transition: a life cycle analysis. Resour. Conserv. Recycl. 213, 108008. https://doi.
+policy frameworks.                                                                      org/10.1016/j.resconrec.2024.108008.
+                                                                                    Alsaleh, A., Sattler, M., 2019. Comprehensive life cycle assessment of large wind turbines
+                                                                                        in the US. Clean Technol. Environ. Policy 21 (4), 887–903. https://doi.org/10.1007/
+5. Conclusion and future work
+                                                                                        s10098-019-01678-0.
+                                                                                    Atilgan, B., Azapagic, A., 2016. An integrated life cycle sustainability assessment of
+    By modelling New Zealand’s electricity system, this study shows a                   electricity generation in Turkey. Energy Policy 93, 168–186. https://doi.org/
+pathway toward a net-zero electricity sector and highlights how miti­                   10.1016/j.enpol.2016.02.055.
+                                                                                    Batić, I., 2025. Impacts of different photovoltaic panel technologies on electrical energy
+gation priorities evolve across different stages of the transition. As the              production and CO2 emission reduction. Front. Energy Res. 13 (2025). https://doi.
+system approaches 100 % renewable generation, attention must shift                      org/10.3389/fenrg.2025.1519131.
+
+
+                                                                               12
+M. Liu et al.                                                                                                                                  Journal of Cleaner Production 538 (2026) 147314
+
+Boston Consulting Group, 2022. The Future is Electric- A decarbonisation roadmap for                 Harrison, G.P., et al., 2010. Life cycle assessment of the transmission network in Great
+     New Zealand’s electricity sector. Available from: https://web-assets.bcg.com/b3/7                    Britain. Energy Policy 38 (7), 3622–3631. https://doi.org/10.1016/j.
+     9/19665b7f40c8ba52d5b372cf7e6c/the-future-is-electric-full-report-october-2022.                      enpol.2010.02.039.
+     pdf.                                                                                            He, J., et al., 2022. Towards carbon neutrality: a study on China’s long-term low-carbon
+BRANZ, 2023. A net-zero carbon concrete industry for aotearoa New Zealand: roadmap                        transition pathways and strategies. Environ. Sci. Ecotechnol. 9, 100134. https://doi.
+     to 2050. Concrete NZ. Available from: https://cdn.ymaws.com/concretenz.org.nz/re                     org/10.1016/j.ese.2021.100134.
+     source/resmgr/docs/cnz/c_roadmap_concrete.pdf.                                                  Hondo, H., 2005. Life cycle GHG emission analysis of power generation systems:
+Bravi, M., Basosi, R., 2014. Environmental impact of electricity from selected geothermal                 japanese case. Energy 30 (11), 2042–2056. https://doi.org/10.1016/j.
+     power plants in Italy. J. Clean. Prod. 66, 301–308. https://doi.org/10.1016/j.                       energy.2004.07.020.
+     jclepro.2013.11.015.                                                                            IEA, 2020. Iron and steel technology roadmap. Paris. Available from: https://www.iea.
+Breyer, C., et al., 2022. On the history and future of 100% renewable energy systems                      org/reports/iron-and-steel-technology-roadmap.
+     research. IEEE Access 10, 78176–78218. https://doi.org/10.1109/                                 IEA, 2024. IEA, Paris. Available from: https://www.iea.org/reports/electricity-2024.
+     ACCESS.2022.3193402.                                                                            IEA, 2025a. Global Energy Review 2025. IEA, Paris. Available from: https://www.iea.
+Brittany, L., Smith, A.S., Mirletz, Heather, Heath, Garvin, 2024. Robert Margolis an                      org/reports/global-energy-review-2025.
+     Updated Life Cycle Assessment of Utility-Scale Solar Photovoltaic Systems Installed.            IEA, 2025b. Renewables 2025. International Energy Agency, Paris. Available from: http
+     the United States National Renewable Energy Laboratory. Available from: https                        s://www.iea.org/reports/renewables-2025.
+     ://www.nrel.gov/docs/fy24osti/87372.pdf.                                                        IPCC, 2023. Climate change 2023: synthesis report. Available from: https://www.ipcc.
+Brizmohun, R., Ramjeawon, T., Azapagic, A., 2015. Life cycle assessment of electricity                    ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf.
+     generation in Mauritius. J. Clean. Prod. 106, 565–575. https://doi.org/10.1016/j.               IRENA, 2016. End-of-Life management: solar photovoltaic panels. International
+     jclepro.2014.11.033.                                                                                 Renewable Energy Agency and International Energy Agency Photovoltaic Power
+Bullen, L., 2020. Life Cycle Based Environmental Impacts of Future New Zealand                            Systems. Available from: https://www.irena.org/-/media/Files/IRENA/Agency/
+     Electricity Supply [Thesis]. Massey University. Available from: http://hdl.handle.                   Publication/2016/IRENA_IEAPVPS_End-of-Life_Solar_PV_Panels_2016.pdf.
+     net/10179/16210.                                                                                Jordaan, S.M., Xu, Q., Hobbs, B.F., 2020. Grid-scale life cycle greenhouse gas
+CCC, 2024. New Zealand’s projected greenhouse gas emissions to 2050. New Zealand                          implications of renewable, storage, and carbon pricing options. Environmental
+     Climate Change Comission. Available from: https://environment.govt.nz/what                           Science & Technology 54 (17), 10435–10445. https://doi.org/10.1021/acs.
+     -government-is-doing/areas-of-work/climate-change/emissions-reductions/emissi                        est.0c01861.
+     ons-reduction-targets/new-zealands-projected-greenhouse-gas-emissions-to-2050/.                 Jordaan, S.M., Combs, C., Guenther, E., 2021. Life cycle assessment of electricity
+Chen, G., et al., 2013. Life cycle carbon emission flow analysis for electricity supply                   generation: a systematic review of spatiotemporal methods. Adv. Appl. Energy 3,
+     system: a case study of China. Energy Policy 61, 1276–1284. https://doi.org/                         100058. https://doi.org/10.1016/j.adapen.2021.100058.
+     10.1016/j.enpol.2013.05.123.                                                                    Jorge, R.S., Hawkins, T.R., Hertwich, E.G., 2012. Life cycle assessment of electricity
+Cui, Q., et al., 2025. How the synergy effect between renewable electricity deployment                    transmission and distribution—part 1: power lines and cables. Int. J. Life Cycle
+     and terminal electrification mitigates transportation sectors’ carbon emissions in                   Assess. 17 (1), 9–15. https://doi.org/10.1007/s11367-011-0335-1.
+     China? Transp. Policy 166, 135–147. https://doi.org/10.1016/j.                                  Jorge, R.S., Hertwich, E.G., 2013. Environmental evaluation of power transmission in
+     tranpol.2025.03.007.                                                                                 Norway. Appl. Energy 101, 513–520. https://doi.org/10.1016/j.
+Electricty Authority, 2025. New Zealand’s electricity sector. Available from: https://                    apenergy.2012.06.004.
+     www.ea.govt.nz/your-power/new-zealands-electricity-sector/?.                                    Kabayo, J., et al., 2019. Life-cycle sustainability assessment of key electricity generation
+Ember, 2025. Energy institute - Statistical review of world energy (2025) – with major                    systems in Portugal. Energy 176, 131–142. https://doi.org/10.1016/j.
+     processing by our world in data. Available from: https://ourworldindata.org/graph                    energy.2019.03.166.
+     er/share-electricity-renewables?tab=table.                                                      Kadiyala, A., Kommalapati, R., Huque, Z., 2016. Evaluation of the life cycle greenhouse
+EPD, 2023. Environmental Product declaration-general Purpose Portland Cement                              gas emissions from different biomass feedstock electricity generation systems.
+     (Ultracem) Bulk Supplied and Bagged (No. EPD Registration Number: S-P-00850).                        Sustainability 8 (11), 1181.
+     EPD Australasia. Available from: https://epd-australasia.com/epd/general-purp                   Karlsdóttir, M.R., et al., 2015. Life cycle inventory of a flash geothermal combined heat
+     ose-portland-cement-ultracem/.                                                                       and power plant located in Iceland. Int. J. Life Cycle Assess. 20 (4), 503–519.
+EPD, 2019a. Environmental Product declaration-EverSure™ GP Cement, EverFast™ HE                           https://doi.org/10.1007/s11367-014-0842-y.
+     Cement (No. No. S-P-01170). Australasia EPD. Available from: https://epd-australas              Khan, I., Jack, M.W., Stephenson, J., 2018. Analysis of greenhouse gas emissions in
+     ia.com/?s=Golden+Bay&post_type=epd.                                                                  electricity systems using time-varying carbon intensity. J. Clean. Prod. 184,
+EPD, 2019b. Environmental Product Declaration - Ready Mixed Concrete Using Holcim                         1091–1101. https://doi.org/10.1016/j.jclepro.2018.02.309.
+     Supplied Cement (No. EPD Registration Number: S-P-00555). EPD Australasia.                      Khandelwal, N., et al., 2025. Life cycle assessment and circular economy in emerging
+     Available from: https://www.alliedconcrete.co.nz/assets/technical-resources/files/                   green and sustainable energy sectors: a critical review. Sustain. Energy Technol.
+     Sustainability/Allied-Concrete-Environment-Product-Declaration-2019.pdf.                             Assessments 81, 104436. https://doi.org/10.1016/j.seta.2025.104436.
+EDP, 2019c. Environmental product declaration-SEISMIC® steel reinforcing bar, coil, rod              Kiefer, C.P., del Río, P., 2024. Analysing the impact of renewable energy auctions on
+     and wire (no. EPD registration number: S-P-01002). EPD Australasia. https://epd-                     market concentration. Renew. Energy 221, 119664. https://doi.org/10.1016/j.
+     australasia.com/epd/seismic-steel-reinforcing-bar-coil-rod-and-wire/.                                renene.2023.119664.
+Gagnon, L., Bélanger, C., Uchiyama, Y., 2002. Life-cycle assessment of electricity                  Knight, C., 2013. What is grandfathering? Environ. Polit. 22 (3), 410–427. https://doi.
+     generation options: the status of research in year 2001. Energy Policy 30 (14),                      org/10.1080/09644016.2012.740937.
+     1267–1278. https://doi.org/10.1016/S0301-4215(02)00088-5.                                       Latunussa, C.E.L., et al., 2016. Life cycle assessment of an innovative recycling process
+Gan, Y., et al., 2023. Greenhouse gas emissions embodied in the U.S. solar photovoltaic                   for crystalline silicon photovoltaic panels. Sol. Energy Mater. Sol. Cell. 156,
+     supply chain. Environ. Res. Lett. 18 (10), 104012. https://doi.org/10.1088/1748-                     101–111. https://doi.org/10.1016/j.solmat.2016.03.020.
+     9326/acf50d.                                                                                    Lausselet, C., Lund, K.M., Brattebø, H., 2021. LCA and scenario analysis of a Norwegian
+Gao, J., et al., 2018. Exergy and exergoeconomic analyses with modeling for CO2                           net-zero GHG emission neighbourhood: the importance of mobility and surplus
+     allocation of coal-fired CHP plants. Energy 152, 562–575. https://doi.org/10.1016/                   energy from PV technologies. Build. Environ. 189, 107528. https://doi.org/
+     j.energy.2018.03.171.                                                                                10.1016/j.buildenv.2020.107528.
+Gao, C., et al., 2021. Comprehensive comparison of multiple renewable power                          Li, R., et al., 2019. Integrated hybrid life cycle assessment and contribution analysis for
+     generation methods: a combination analysis of life cycle assessment and ecological                   CO2 emission and energy consumption of a concentrated solar power plant in China.
+     footprint. Renew. Sustain. Energy Rev. 147, 111255. https://doi.org/10.1016/j.                       Energy 174, 310–322. https://doi.org/10.1016/j.energy.2019.02.066.
+     rser.2021.111255.                                                                               Li, X., Li, W., Dong, Y., 2024. Importance of reducing GHG emissions in power
+Gargiulo, A., Carvalho, M.L., Girardi, P., 2020. Life cycle assessment of Italian electricity             transmission and distribution systems. Energy Rep. 11, 3149–3162. https://doi.org/
+     scenarios to 2030. Energies 13 (15), 3852.                                                           10.1016/j.egyr.2024.02.053.
+GCCA, 2021. The GCCA 2050 Cement and Concrete Industry Roadmap for Net Zero                          Lu, B., et al., 2021. Low-cost, low-emission 100% renewable electricity in Southeast Asia
+     Concrete. Available from: https://gccassociation.org/concretefuture/wp-content/u                     supported by pumped hydro storage. Energy 236, 121387. https://doi.org/10.1016/
+     ploads/2022/10/GCCA-Concrete-Future-Roadmap-Document-AW-2022.pdf.                                    j.energy.2021.121387.
+Gennitsaris, S., et al., 2023. Integrated LCA and DEA approach for circular economy-                 Madrigal, E.E.S., 2015. Assessment of the Life Cycle-based Environmental Impacts of
+     driven performance evaluation of wind turbine end-of-life treatment options. Appl.                   New Zealand Electricity [Thesis]. Massey University. Available from: http://hdl.han
+     Energy 339, 120951. https://doi.org/10.1016/j.apenergy.2023.120951.                                  dle.net/10179/10124.
+Ghisellini, P., Passaro, R., Ulgiati, S., 2025. Assessing the environmental sustainability           Mahmud, M.A.P., Farjana, S.H., 2022. Comparative life cycle environmental impact
+     and justice dimensions of nuclear electricity under circular economy and energy                      assessment of renewable electricity generation systems: a practical approach
+     transition frameworks. J. Clean. Prod. 491, 144818. https://doi.org/10.1016/j.                       towards Europe, North America and Oceania. Renew. Energy 193, 1106–1120.
+     jclepro.2025.144818.                                                                                 https://doi.org/10.1016/j.renene.2022.05.031.
+Gong, C.C., et al., 2025. Multilevel emission impacts of electrification and coal pathways           Mallia, E., Lewis, G., 2013. Life cycle greenhouse gas emissions of electricity generation
+     in China’s net-zero transition. Joule 9 (6), 101945. https://doi.org/10.1016/j.                      in the province of Ontario, Canada. Int. J. Life Cycle Assess. 18 (2), 377–391.
+     joule.2025.101945.                                                                                   https://doi.org/10.1007/s11367-012-0501-0.
+Guan, Y., et al., 2025. Overview of the application status and development trends of                 Martín-Gamboa, M., Iribarren, D., Dufour, J., 2018. Environmental impact efficiency of
+     hydropower and geothermal power in New Zealand. Energy and Built Environment 6                       natural gas combined cycle power plants: a combined life cycle assessment and
+     (3), 564–584. https://doi.org/10.1016/j.enbenv.2024.06.003.                                          dynamic data envelopment analysis approach. Sci. Total Environ. 615, 29–37.
+                                                                                                          https://doi.org/10.1016/j.scitotenv.2017.09.243.
+
+
+
+
+                                                                                                13
+M. Liu et al.                                                                                                                                Journal of Cleaner Production 538 (2026) 147314
+
+May, J.R., Brennan, D.J., 2006. Sustainability assessment of Australian electricity                 Ozturk, M., Dincer, I., 2019. Comparative environmental impact assessment of various
+    generation. Process Saf. Environ. Prot. 84 (2), 131–142. https://doi.org/10.1205/                   fuels and solar heat for a combined cycle. Int. J. Hydrogen Energy 44 (10),
+    psep.04265.                                                                                         5043–5053. https://doi.org/10.1016/j.ijhydene.2019.01.003.
+MBIE, 2020. Whole-Of-Life Embodied Carbon Emissions Reduction Framework. Building                   Pieter Gagnon, A.P., Cole, Wesley, Hamilton, Anne, 2024. Standard Scenarios Report: a
+    for Climate Change Programme, Wellington, New Zealand. Available from: htt                          U.S. Electricity Sector Outlook. National Renewable Energy Laboratory, 2024.
+    ps://www.mbie.govt.nz/dmsdocument/11794-whole-of-life-embodied-carbon-emi                           Available from: https://www.nrel.gov/docs/fy25osti/92256.pdf.
+    ssions-reduction-framework.                                                                     Pimentel Pincelli, I., Hinkley, J., Brent, A., 2024. Carbon, materials and energy footprint
+MBIE, 2024a. Energy in New Zealand 2024. Available from: https://www.mbie.govt.nz                       of a utility-scale solar plant in Aotearoa New Zealand. Sol. Energy 273, 112535.
+    /assets/energy-in-nz-2024.pdf.                                                                      https://doi.org/10.1016/j.solener.2024.112535.
+MBIE, 2024b. Electricity demand and generation scenarios 2024. Available from: htt                  Popp, C., Uhlig, C., Engelmann, M., 2025. Prospective life cycle analysis of a BIPV façade
+    ps://www.mbie.govt.nz/assets/electricity-demand-and-generation-scenarios-report                     − life cycle assessment of greenhouse gas emissions using future projections for a
+    -2024.pdf.                                                                                          case study. Energy Build. 330, 115336. https://doi.org/10.1016/j.
+MBIE, 2024c. Data tables for coal. Available from: https://www.mbie.govt.nz/assets/                     enbuild.2025.115336.
+    Data-Files/Energy/nz-energy-quarterly-and-energy-in-nz/Coal.xlsx.                               PowerCo, 2024. Powerco greenhouse gas emissions inventory report 2024. Available
+MBIE, 2024d. Energy sector greenhouse gas emissions - emissions data tables. Available                  from: https://www.powerco.co.nz/-/media/project/powerco/powerco-documen
+    from: https://www.mbie.govt.nz/assets/Data-Files/Energy/annual-emissions-data-t                     ts/what-we-do/sustainability-library/fy24-ghg-inventory-report—including-toitu-ce
+    able.xlsx.                                                                                          rtification.pdf.
+MBIE, 2024e. Data tables for natural gas. Available from: https://www.mbie.govt.nz                  Purdie, J., 2022. Modelling climate change impacts on inflows, lake storage and spill in
+    /assets/Data-Files/Energy/nz-energy-quarterly-and-energy-in-nz/gas.xlsx.                            snow-fed hydroelectric power catchments, Southern Alps, New Zealand. J. Hydrol.
+MBIE, 2025. Data tables for electricity. Available from: https://www.mbie.govt.nz/ass                   N. Z. 61, 151–178.
+    ets/Data-Files/Energy/nz-energy-quarterly-and-energy-in-nz/electricity-2025-q1.xls              REN21, 2024. Renewables 2024 global status report collection. Available from: www.
+    x.                                                                                                  ren21.net/gsr-2024/.
+McLean, K., 2023. Fostering a sustainable future for Aotearoa New Zealand through                   Richardson, I., et al., 2023. Non-Condensable Gas Reinjection at the Te Huka Geothermal
+    geothermal-NZGA strategic project update: CO2 reduction. New Zealand Geothermal                     Power Plant.
+    Association, pp. 6–11. Available from: https://www.nzgeothermal.org.nz/downlo                   Rossi, F., et al., 2023. Comparative scenario-based LCA of renewable energy technologies
+    ads/CO2-Emissions-Reduction-project.pdf.                                                            focused on the end-of-life evaluation. J. Clean. Prod. 405, 136931. https://doi.org/
+Mehedi, T.H., Gemechu, E., Kumar, A., 2022. Life cycle greenhouse gas emissions and                     10.1016/j.jclepro.2023.136931.
+    energy footprints of utility-scale solar energy systems. Appl. Energy 314, 118918.              Rule, B.M., Worth, Z.J., Boyle, C.A., 2009. Comparison of life cycle carbon dioxide
+    https://doi.org/10.1016/j.apenergy.2022.118918.                                                     emissions and embodied energy in four renewable electricity generation
+Meier, P.J., 2002. Life -cycle Assessment of Electricity Generation Systems and                         technologies in New Zealand. Environmental Science & Technology 43 (16),
+    Applications for Climate Change Policy Analysis [Thesis]. The University of                         6406–6413. https://doi.org/10.1021/es900125e.
+    Wisconsin - Madison, United States – Wisconsin. Available from: https://www.                    Rybaczewska-Błażejowska, M., Jezierski, D., 2024. Comparison of ReCiPe 2016, ILCD
+    proquest.com/dissertations-theses/life-cycle-assessment-electricity-generation/doc                  2011, CML-IA baseline and IMPACT 2002+ LCIA methods: a case study based on the
+    view/305534289/se-2?accountid=14700.                                                                electricity consumption mix in Europe. Int. J. Life Cycle Assess. 29 (10), 1799–1817.
+Messagie, M., et al., 2014. The hourly life cycle carbon footprint of electricity generation            https://doi.org/10.1007/s11367-024-02326-6.
+    in Belgium, bringing a temporal resolution in life cycle assessment. Appl. Energy               San Miguel, G., Cerrato, M., 2020. Life cycle sustainability assessment of the Spanish
+    134, 469–476. https://doi.org/10.1016/j.apenergy.2014.08.071.                                       electricity: past, present and future projections. Energies 13 (8), 1896.
+MfE, 2024a. Measuring Emissions: a Guide for Organisations: 2024 Detailed Guide.                    Santoyo-Castelazo, E., Gujba, H., Azapagic, A., 2011. Life cycle assessment of electricity
+    Ministry for the Environment. Available from: https://environment.govt.nz/assets                    generation in Mexico. Energy 36 (3), 1488–1499. https://doi.org/10.1016/j.
+    /publications/Measuring-Emissions-2024/Measuring-emissions_Detailed-guide                           energy.2011.01.018.
+    _2024_ME1829.pdf.                                                                               Santoyo-Castelazo, E., et al., 2021. Life cycle assessment for a grid-connected multi-
+MfE, 2024b. New Zealand’s projected greenhouse gas emissions to 2050. Available from:                   crystalline silicon photovoltaic system of 3 kWp: a case study for Mexico. J. Clean.
+    https://environment.govt.nz/what-government-is-doing/areas-of-work/climate                          Prod. 316, 128314. https://doi.org/10.1016/j.jclepro.2021.128314.
+    -change/emissions-reductions/emissions-reduction-targets/new-zealands-projected                 Scrucca, F., et al., 2024. Woodchips from forest residues as a sustainable and circular
+    -greenhouse-gas-emissions-to-2050/.                                                                 biofuel for electricity production: evidence from an environmental life cycle
+MfE, 2024c. Our Journey Towards Net zero-New Zealand’s Second Emissions Reduction                       assessment. Energies 17 (1), 105.
+    Plan 2026-30. Ministry for the Environment. Available from: https://environment.                Smoucha, E., Fitzpatrick, K., Buckingham, S., Knox, O.G.G., 2016. Life cycle analysis of
+    govt.nz/assets/publications/climate-change/ERP2/New-Zealands-second-emissions                       the embodied carbon emissions from 14 wind turbines with rated powers between
+    -reduction-plan-202630.pdf.                                                                         50Kw and 3.4Mw. J. Fund. Renew. Energy Appl. 6 (4). https://doi.org/10.4172/
+MfE, New Zealand’s Greenhouse Gas Inventory 1990–2023, 2025. Ministry for the                           2090-4541.1000211.
+    Environment, Wellington, New Zealand. Available from: https://environment.govt.                 Spath, P.L., 2000. M.K.M. Life Cycle Assessment of a Natural Gas Combined Cycle Power
+    nz/publications/new-zealands-greenhouse-gas-inventory-19902023/.                                    Generation System. National Renewable Energy Laboratory. Available from: https://
+Miller, I., et al., 2019. Parametric modeling of life cycle greenhouse gas emissions from               docs.nrel.gov/docs/fy00osti/27715.pdf.
+    photovoltaic power. Appl. Energy 238, 760–774. https://doi.org/10.1016/j.                       Sproul, E.G., Khalifa, S.A., Ennis, B.L., 2025. Environmental and economic assessment of
+    apenergy.2019.01.012.                                                                               wind turbine blade recycling approaches. ACS Sustainable Resource Management 2
+Mohd Nordin, A.H., et al., 2022. Energy and environmental impacts of a 37.57 MW dc                      (1), 39–49. https://doi.org/10.1021/acssusresmgt.4c00256.
+    ground-mounted large-scale photovoltaic system in Malaysia: a life-cycle approach.              Starczewska, M., et al., 2025. Life cycle assessment of enhanced geothermal systems with
+    J. Clean. Prod. 335, 130326. https://doi.org/10.1016/j.jclepro.2021.130326.                         CO2 as a working fluid—polish case study. Clean Technol. Environ. Policy 27 (4),
+Müller, A., et al., 2021. A comparative life cycle assessment of silicon PV modules:                    1863–1875. https://doi.org/10.1007/s10098-024-03081-w.
+    impact of module design, manufacturing location and inventory. Sol. Energy Mater.               Sulkan, C., et al., 2025. Evaluation of environmental footprint: life cycle assessment of
+    Sol. Cell. 230, 111277. https://doi.org/10.1016/j.solmat.2021.111277.                               laboratory-scale thermal and chemical processes used for materials extraction from
+Nagle, A.J., et al., 2022. Life cycle assessment of the use of decommissioned wind blades               waste silicon solar panels. Sol. Energy Mater. Sol. Cell. 285, 113556. https://doi.org/
+    in second life applications. J. Environ. Manag. 302, 113994. https://doi.org/                       10.1016/j.solmat.2025.113556.
+    10.1016/j.jenvman.2021.113994.                                                                  Su’ait, M.S., Ludin, N.A., Sopian, K., 2025. Introduction to renewable energy
+NESO, 2025. Future energy scenarios: pathways to net zero. National Energy System                       technologies and energy transition strategies. In: Renewable Energy Technologies
+    Operator. Available from: https://www.neso.energy/document/364541/download.                         and Strategies in the Global Energy Transition. American Chemical Society,
+NREL, 2021. Life Cycle Greenhouse Gas Emissions from Electricity Generation: Update.                    pp. 1–14.
+    National Renewable Energy Laboratory. Available from: https://docs.nrel.gov/docs/               Tereshchenko, T., Nord, N., 2015. Uncertainty of the allocation factors of heat and
+    fy21osti/80580.pdf.                                                                                 electricity production of combined cycle power plant. Appl. Therm. Eng. 76,
+NZ Wind Energy Association, 2024. Wind Turbine Technology, pp. 1–2. Available from:                     410–422. https://doi.org/10.1016/j.applthermaleng.2014.11.019.
+    https://www.windenergy.org.nz/wp-content/uploads/2024/06/FactSheet-Turbin                       Thonemann, N., Maga, D., 2019. Life cycle assessment of German energy scenarios. In:
+    e_Technology.pdf.                                                                                   Schebek, L., Herrmann, C., Cerdas, F. (Eds.), Progress in Life Cycle Assessment.
+NZGA, 2020. Annual NZGA geothermal review 2021. Available from: https://www.                            Springer International Publishing, Cham, pp. 165–175.
+    nzgeothermal.org.nz/downloads/2020-Ann-NZGA-Review-FINAL.pdf.                                   Transpower, 2021. NZGP1 scenarios update. Available from: https://static.transpower.
+NZSOLD, 2023. New Zealand Society on Large Dams. Available from: https://nzsold.org.                    co.nz/public/uncontrolled_docs/Transpower_NZGP_Scenarios%20Update_Dec2021.
+    nz/wp-content/uploads/2024/01/NZSOLD_DamSafetyGuidelines2023.pdf.                                   pdf?VersionId=TYXBFEkibX0ZjIGg5Rt59NPTl4sSIR5y.
+Oates, D.L., Jaramillo, P., 2013. Production cost and air emissions impacts of coal cycling         Transpower, 2023. Transmission tomorrow. Available from: https://static.transpower.
+    in power systems with large-scale wind penetration. Environ. Res. Lett. 8 (2),                      co.nz/public/2023-06/Transpower_TransmissionTomorrow_2023_03.pdf.
+    024022. https://doi.org/10.1088/1748-9326/8/2/024022.                                           Transpower, 2024. Optimising the transition. Available from: https://static.transpower.
+Odeh, N.A., Cockerill, T.T., 2008. Life cycle analysis of UK coal fired power plants.                   co.nz/public/uncontrolled_docs/Transpower%20Integrated%20Report%20FY24%
+    Energy Convers. Manag. 49 (2), 212–220. https://doi.org/10.1016/j.                                  20final.pdf?VersionId=oNm6pCCevisSlDEhFTcNKsIjHFFZSpbR.
+    enconman.2007.06.014.                                                                           Transpower, 2024. Net zero grid pathways. 2024. Available from: https://www.transp
+Okebe, J., Brent, A., 2025. Towards a viable roadmap for solar and wind waste recycling                 ower.co.nz/nzgp.
+    in Aotearoa New Zealand. Archives of Sustainable Energy Systems 1. https://doi.                 Turconi, R., et al., 2014. Environmental impacts of future low-carbon electricity systems:
+    org/10.26686/ases.v1.9918.                                                                          detailed life cycle assessment of a Danish case study. Appl. Energy 132, 66–73.
+                                                                                                        https://doi.org/10.1016/j.apenergy.2014.06.078.
+
+
+                                                                                               14
+M. Liu et al.                                                                                                                              Journal of Cleaner Production 538 (2026) 147314
+
+Verán-Leigh, D., Vázquez-Rowe, I., 2019. Life cycle assessment of run-of-river                  Wong, J.H., Royapoor, M., Chan, C.W., 2016. Review of life cycle analyses and embodied
+    hydropower plants in the Peruvian andes: a policy support perspective. Int. J. Life                energy requirements of single-crystalline and multi-crystalline silicon photovoltaic
+    Cycle Assess. 24 (8), 1376–1395. https://doi.org/10.1007/s11367-018-01579-2.                       systems. Renew. Sustain. Energy Rev. 58, 608–618. https://doi.org/10.1016/j.
+Wang, Y., et al., 2024. Life cycle environmental impact assessment of natural gas                      rser.2015.12.241.
+    distributed energy system. Sci. Rep. 14 (1), 3292. https://doi.org/10.1038/s41598-            Xie, J.-b., et al., 2020. Assessments of carbon footprint and energy analysis of three wind
+    024-53495-1.                                                                                       farms. J. Clean. Prod. 254, 120159. https://doi.org/10.1016/j.jclepro.2020.120159.
+Weber, C.L., et al., 2010. Life cycle assessment and grid electricity: what do we know and        Zhao, Y., et al., 2025. Exploring recycling strategies for retired wind turbine blades: the
+    what can we know? Environmental Science & Technology 44 (6), 1895–1901.                            impact of policy subsidies and technological investments using a game-theoretic
+    https://doi.org/10.1021/es9017909.                                                                 approach. J. Clean. Prod. 490, 144628. https://doi.org/10.1016/j.
+Weisser, D., 2007. A guide to life-cycle greenhouse gas (GHG) emissions from electric                  jclepro.2024.144628.
+    supply technologies. Energy 32 (9), 1543–1559. https://doi.org/10.1016/j.                     Zhong, J., Bollen, M., Rönnberg, S., 2021. Towards a 100% renewable energy electricity
+    energy.2007.01.008.                                                                                generation system in Sweden. Renew. Energy 171, 812–824. https://doi.org/
+Williams, J.H., et al., 2021. Carbon-neutral pathways for the United States. AGU Adv. 2                10.1016/j.renene.2021.02.153.
+    (1). https://doi.org/10.1029/2020AV000284.
+
+
+
+
+                                                                                             15
+
