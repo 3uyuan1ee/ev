@@ -285,6 +285,13 @@ function getQuestion(survey) {
 .results-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
+  gap: var(--space-5);
+}
+
+@media (max-width: 640px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
 }
 </style>
