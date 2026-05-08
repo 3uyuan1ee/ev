@@ -76,6 +76,34 @@ export async function processEvVsPetrol() {
   await writeJson(dataPath('act1', 'tco-global-reference.json'), tcoRef)
 
   // === Output 3: policy-heatmap-timeseries.json ===
+  // Load IEA EV sales share data to override synthetic CSV market share values
+  let ieaSalesShare = {}
+  try {
+    const ieaData = JSON.parse(fs.readFileSync(dataPath('act2', 'ev-growth-by-region.json'), 'utf-8'))
+    // Build lookup: country -> year -> share
+    for (const region of (ieaData.regions || [])) {
+      const shares = region.EV_sales_share?.historical || []
+      for (const s of shares) {
+        if (!ieaSalesShare[region.region]) ieaSalesShare[region.region] = {}
+        ieaSalesShare[region.region][s.year] = s.value
+      }
+    }
+    // Carry-forward: extend IEA data to 2025 using last known year's value
+    // (IEA historical data ends at 2024, but heatmap includes 2025 projections)
+    for (const [country, yearMap] of Object.entries(ieaSalesShare)) {
+      const years = Object.keys(yearMap).map(Number).sort()
+      const lastYear = years[years.length - 1]
+      const lastValue = yearMap[lastYear]
+      // Extend to 2025 if not already present
+      if (lastYear < 2025 && lastValue !== undefined) {
+        yearMap[2025] = lastValue
+      }
+    }
+    console.log(`  IEA sales share override loaded for ${Object.keys(ieaSalesShare).length} regions (with carry-forward to 2025)`)
+  } catch (e) {
+    console.log('  ⚠ Could not load IEA sales share data, using CSV values')
+  }
+
   const policyHeatmap = { countries: [], yearRange: [2010, 2025] }
   for (const [country, countryRows] of Object.entries(byCountry)) {
     const info = getCountryInfo(country)
@@ -90,8 +118,11 @@ export async function processEvVsPetrol() {
     for (const [yr, yrRows] of Object.entries(byYear)) {
       const totalEvSales = yrRows.reduce((s, r) => s + (Number(r.ev_sales) || 0), 0)
       const totalVehicleSales = yrRows.reduce((s, r) => s + (Number(r.total_vehicle_sales) || 0), 0)
-      const evMarketShare = totalVehicleSales > 0
+      const csvMarketShare = totalVehicleSales > 0
         ? roundTo((totalEvSales / totalVehicleSales) * 100, 2) : 0
+      // Override with IEA data if available (more authoritative than synthetic CSV)
+      const ieaShare = ieaSalesShare[country]?.[Number(yr)]
+      const evMarketShare = ieaShare !== undefined ? ieaShare : csvMarketShare
       // Macro indicators from ICE rows (same across segments)
       const iceRows = yrRows.filter(r => r.powertrain_type === 'ICE')
       const n = iceRows.length || 1

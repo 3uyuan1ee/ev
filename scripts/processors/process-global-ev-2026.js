@@ -95,7 +95,8 @@ export async function processGlobalEv2026() {
     countryAgg[r.country].price.push(r.avg_ev_price_usd)
   }
 
-  // Grid CO2 intensity (kg CO2/kWh) - sourced from IEA/Ember 2024 data
+  // Grid CO2 intensity (kg CO2/kWh) - sourced from Ember Global Electricity Review 2025, Table: CO2 intensity of electricity generation
+  // https://ember-climate.org/publications/global-electricity-review-2025/
   const gridCO2Map = {
     'Australia': 0.58, 'Canada': 0.13, 'China': 0.54, 'France': 0.06,
     'Germany': 0.35, 'India': 0.72, 'Japan': 0.47, 'Norway': 0.03,
@@ -104,9 +105,11 @@ export async function processGlobalEv2026() {
 
   // Comparison basis: same midsize vehicle class across all countries
   // ICEV: ~7 L/100km (midsize sedan), BEV: country-specific from data
-  // This isolates the grid CO₂ variable — real-world advantage varies
-  // by local market composition (India's small-car fleet has lower ICEV emissions)
-  const FUEL_CO2_PER_LITER = 2.31  // kg CO₂ per liter gasoline (IPCC)
+  // Note: real-world ICEV efficiency varies by country due to fleet composition.
+  // India (small cars dominant) may be ~5-6 L/100km, US (large SUVs) ~9-10 L/100km.
+  // Using a uniform 7 L/100km provides a standardized midsize baseline but
+  // overstates EV advantage in India and understates it in the US.
+  const FUEL_CO2_PER_LITER = 2.31  // kg CO₂ per liter gasoline (IPCC AR6)
   const ICEV_L_PER_100KM = 7.0     // midsize sedan baseline
 
   const countriesOutput = Object.entries(countryAgg).map(([country, agg]) => {

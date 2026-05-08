@@ -68,7 +68,9 @@ function fitExponentialDecay(data) {
   const { r2, aic } = computeGoodness(data.map(d => d.price), predictions, 2)
 
   const se = Math.sqrt(residuals.reduce((s, r) => s + r * r, 0) / (n - 2))
-  const t95 = 2.042 // t-value for 95% CI with ~30 df
+  // Approximate t-value for 95% CI: for n > 20, t ≈ 2.0 is close enough
+  // Exact value depends on degrees of freedom (n-2)
+  const t95 = n > 30 ? 2.042 : 2.0 + 0.5 / (n - 2)
 
   return {
     name: 'Exponential Decay',
@@ -90,6 +92,9 @@ function fitExponentialDecay(data) {
 
 // ─── Model 2: Bounded Exponential (floor + exp decay) ───
 // Nonlinear least squares via Levenberg-Marquardt
+// $50/kWh floor: based on estimated raw material costs (lithium, nickel, cobalt, graphite)
+// for NMC chemistry. See: BloombergNEF 2024, " Lithium-Ion Battery Costs & Survey"
+// This is a rough lower bound — actual costs vary by chemistry and commodity prices.
 function fitBoundedExponential(data, floorPrice = 50) {
   const year0 = data[0].year
   const L = floorPrice
@@ -216,9 +221,11 @@ function fitExperienceCurve(priceData, evStockData) {
     // Extrapolate: estimate future stock from last known growth rate
     const lastYear = Math.max(...Array.from(stockByYear.keys()))
     const lastStock = stockByYear.get(lastYear)
-    // Use ~25% annual growth for extrapolation
-    const growthRate = 0.25
-    const estStock = lastStock * Math.pow(1 + growthRate, year - lastYear)
+    // Use ~25% annual growth with gradual saturation (logistic decay)
+    // As market matures, growth rate declines — this prevents unrealistic long-term projections
+    const baseGrowthRate = 0.25
+    const saturationRate = baseGrowthRate * Math.pow(0.92, year - lastYear) // ~8% annual decay
+    const estStock = lastStock * Math.pow(1 + saturationRate, year - lastYear)
     return predictFromStock(estStock)
   }
 
@@ -343,6 +350,12 @@ export async function buildBatteryTrendV2() {
     console.log(`  [3] Experience Curve: INSUFFICIENT DATA`)
   }
 
+  // 3b. Fit recent-data model for prediction (avoids early high-price dominance)
+  const recentData = data.filter(d => d.year >= 2015)
+  const recentBoundedModel = fitBoundedExponential(recentData, 50)
+  console.log(`  [4] Recent Bounded Exponential (2015+): R²=${recentBoundedModel.r2}, AIC=${recentBoundedModel.aic}`)
+  console.log(`      ${recentBoundedModel.formula}`)
+
   // 4. Generate predictions to 2035
   const lastYear = data[data.length - 1].year
   const futureYears = []
@@ -350,17 +363,19 @@ export async function buildBatteryTrendV2() {
 
   const buildPredictions = (model) => futureYears.map(year => {
     const ci = model.predictCI(year)
+    const predicted = roundTo(model.predict(year), 2)
     return {
       year,
-      priceUsdPerKwh: roundTo(model.predict(year), 2),
+      priceUsdPerKwh: predicted,
       confidenceLower: roundTo(Math.max(ci.lower, 0), 2),
-      confidenceUpper: roundTo(ci.upper, 2),
+      confidenceUpper: isFinite(ci.upper) ? roundTo(ci.upper, 2) : roundTo(predicted * 2, 2),
     }
   })
 
   const expPredictions = buildPredictions(expModel)
   const boundedPredictions = buildPredictions(boundedModel)
   const expCurvePredictions = expCurveModel ? buildPredictions(expCurveModel) : []
+  const recentBoundedPredictions = buildPredictions(recentBoundedModel)
 
   // 5. Build output
   const result = {
@@ -394,18 +409,18 @@ export async function buildBatteryTrendV2() {
         }
       } : {}),
     },
-    // Backward compat: default model
+    // Default model: recent bounded exponential (2015+ data, better near-term accuracy)
     predicted: {
-      model: 'exponential_decay',
-      parameters: expModel.parameters,
-      r2: expModel.r2,
-      data: expPredictions,
+      model: 'bounded_exponential_recent',
+      parameters: recentBoundedModel.parameters,
+      r2: recentBoundedModel.r2,
+      data: recentBoundedPredictions,
     },
     anomalyYears: [2022],
     milestones: [
       { year: 1991, label: '$9,210/kWh — Lithium-ion era begins' },
-      { year: 2010, label: '$1,160/kWh — First modern EVs (Nissan Leaf)' },
-      { year: 2015, label: '$373 — Tesla Model S era, cost halved' },
+      { year: 2010, label: '$551/kWh — First modern EVs (Nissan Leaf)' },
+      { year: 2015, label: '$332 — Tesla Model S era, cost halved' },
       { year: 2020, label: '$140 — Chinese A00-class achieves price parity' },
       { year: 2024, label: '$78 — Below $100 cost parity threshold' },
     ],
@@ -423,6 +438,7 @@ export async function buildBatteryTrendV2() {
   if (expCurveModel) {
     console.log(`  Experience Curve:    R²=${expCurveModel.r2}, AIC=${expCurveModel.aic}, 2030: $${roundTo(expCurveModel.predict(2030), 2)}/kWh`)
   }
+  console.log(`  Recent Bounded (default): R²=${recentBoundedModel.r2}, AIC=${recentBoundedModel.aic}, 2025: $${roundTo(recentBoundedModel.predict(2025), 2)}/kWh, 2030: $${roundTo(recentBoundedModel.predict(2030), 2)}/kWh`)
   console.log('\n  ✅ Battery trend processing complete\n')
 }
 

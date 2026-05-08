@@ -71,7 +71,9 @@ export async function processIeaGrowth() {
     rows.push({ region, parameter, mode, powertrain, category, year, value })
   }
 
-  // Map "European Union" to "Europe"
+  // Map "European Union" to "Europe" (note: UK, Norway, Switzerland are not in EU
+  // but are often grouped under "Europe" in IEA data — this renaming may slightly
+  // overcount EU-specific policy effects as "European")
   for (const r of rows) {
     if (r.region === 'European Union') r.region = 'Europe'
   }
@@ -131,7 +133,8 @@ export async function processIeaGrowth() {
       }
     }
 
-    // Calculate CAGR for historical EV sales
+    // Calculate CAGR for historical EV sales (note: uses only first/last endpoints,
+    // ignoring intermediate volatility — may over/understate if growth was non-monotonic)
     const salesHist = regionData.EV_sales?.historical || []
     if (salesHist.length >= 2) {
       const first = salesHist[0]
