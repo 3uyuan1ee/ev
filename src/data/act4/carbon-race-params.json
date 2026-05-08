@@ -1,5 +1,10 @@
 {
   "source": "Woody_2026 + literature averages + IEA grid data",
+  "methodologyNotes": {
+    "bevAnnualEmissionsBaseline": "BEV annualEmissionsTonnesPerYear values are calibrated for US average grid (0.39 kg CO2/kWh). The useCarbonRace composable scales these by (gridCO2 / 0.39) to model different countries. This is a simplification — actual charging emissions depend on when/where charging occurs.",
+    "icevBaseline": "ICEV annual emissions assume ~7 L/100km gasoline consumption, a midsize baseline. Actual values vary by vehicle size and driving patterns.",
+    "cleanPercentDefinition": "Grid 'clean percentage' represents the share of electricity from renewables + nuclear, NOT directly derived from CO2/kWh. Two grids with the same clean% can have different CO2/kWh due to fuel mix (e.g., hydro vs solar vs nuclear)."
+  },
   "vehicleProfiles": [
     {
       "id": "compact",
