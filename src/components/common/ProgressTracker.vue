@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { DollarSign, Zap, Scale, Leaf } from 'lucide-vue-next'
+import { DollarSign, Leaf, Zap, Scale } from 'lucide-vue-next'
 import { useI18n } from '@/i18n/useI18n'
 
 const { t } = useI18n()
@@ -16,9 +16,9 @@ const emit = defineEmits(['navigate'])
 
 const acts = computed(() => [
   { id: 1, label: t('progress.act1Label'), icon: DollarSign, color: 'act-1' },
-  { id: 2, label: t('progress.act2Label'), icon: Zap, color: 'act-2' },
-  { id: 3, label: t('progress.act3Label'), icon: Scale, color: 'act-3' },
-  { id: 4, label: t('progress.act4Label'), icon: Leaf, color: 'act-4' },
+  { id: 2, label: t('progress.act2Label'), icon: Leaf, color: 'act-2' },
+  { id: 3, label: t('progress.act3Label'), icon: Zap, color: 'act-3' },
+  { id: 4, label: t('progress.act4Label'), icon: Scale, color: 'act-4' },
 ])
 
 const progressPercent = computed(() => {
@@ -115,11 +115,11 @@ const progressPercent = computed(() => {
 
 .act-btn.active.act-3 {
   background: var(--color-act3);
-  color: var(--color-text-primary);
 }
 
 .act-btn.active.act-4 {
   background: var(--color-act4);
+  color: var(--color-text-primary);
 }
 
 .act-btn.visited {

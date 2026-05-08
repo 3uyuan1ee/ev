@@ -83,7 +83,7 @@ export function useTcoCalculator(controls, getVehicleConfig, getChargingStrategy
       const fuel = annualCosts.fuel * scale * eScale
       const maintenance = (annualCosts.maintenance + annualCosts.repair) * scale * Math.pow(1.05, ageFactor - 1)
       const insurance = annualCosts.insurance * Math.pow(0.97, ageFactor - 1)
-      const tax = annualCosts.tax
+      const tax = annualCosts.tax  // Registration/taxes are flat annual fees, not mileage-dependent
 
       cumulative += y === 0 ? purchasePrice : (fuel + maintenance + insurance + tax)
 

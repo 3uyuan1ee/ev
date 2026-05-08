@@ -95,13 +95,14 @@ const chartOption = computed(() => {
     }
   })
 
-  // Add dashed overlay lines for projection portion (2024-2030)
+  // Add dashed overlay lines for projection portion (2025-2030)
+  // Start from 2025 (idx >= 15) to avoid double-counting 2024
   const projectionOverlays = displayRegions
     .filter(r => r.EV_sales.projection?.length > 0)
     .map(r => {
       const color = regionColors[r.region] || '#9B9590'
       const data = allYears.map((year, idx) => {
-        if (idx < 14) return null // before 2024
+        if (idx < 15) return null // before 2025
         return buildSeriesData(r)[idx]
       })
       return {

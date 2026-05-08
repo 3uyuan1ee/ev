@@ -32,7 +32,7 @@ onUnmounted(() => {
   <div ref="sentinelRef" class="end-sentinel" />
 
   <!-- Fixed cover that slides up into view -->
-  <div class="end-cover" :style="{ opacity: progress, pointerEvents: progress < 0.05 ? 'none' : 'auto' }">
+  <div class="end-cover" :style="{ opacity: progress, pointerEvents: progress < 0.5 ? 'none' : 'auto' }">
     <div class="end-dark" />
     <div
       class="end-content"
@@ -125,7 +125,7 @@ onUnmounted(() => {
 
 <style scoped>
 .end-sentinel {
-  height: 170vh;
+  height: 120vh;
   pointer-events: none;
 }
 

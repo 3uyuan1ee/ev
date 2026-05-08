@@ -73,7 +73,7 @@ watch(activeAct, (newAct) => {
     <Act1Section />
   </section>
 
-  <!-- Act 2 -->
+  <!-- Act 2: 碳回报 (was Act 4) -->
   <section :ref="setRef(1)" id="act-2" class="act-section" :aria-label="t('app.ariaAct2')">
     <div class="act-header">
       <div class="section-inner">
@@ -82,10 +82,10 @@ watch(activeAct, (newAct) => {
         <p class="act-subtitle">{{ t('app.act2Subtitle') }}</p>
       </div>
     </div>
-    <Act2Section />
+    <Act4Section />
   </section>
 
-  <!-- Act 3 -->
+  <!-- Act 3: 规模竞赛 (was Act 2) -->
   <section :ref="setRef(2)" id="act-3" class="act-section" :aria-label="t('app.ariaAct3')">
     <div class="act-header">
       <div class="section-inner">
@@ -94,10 +94,10 @@ watch(activeAct, (newAct) => {
         <p class="act-subtitle">{{ t('app.act3Subtitle') }}</p>
       </div>
     </div>
-    <Act3Section />
+    <Act2Section />
   </section>
 
-  <!-- Act 4 -->
+  <!-- Act 4: 政策杠杆 (was Act 3) -->
   <section :ref="setRef(3)" id="act-4" class="act-section" :aria-label="t('app.ariaAct4')">
     <div class="act-header">
       <div class="section-inner">
@@ -106,7 +106,7 @@ watch(activeAct, (newAct) => {
         <p class="act-subtitle">{{ t('app.act4Subtitle') }}</p>
       </div>
     </div>
-    <Act4Section />
+    <Act3Section />
   </section>
 
   <!-- End Cover -->

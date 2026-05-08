@@ -1,37 +1,16 @@
 <script setup>
-import { usePolicyTimeline } from '@/composables/act3/usePolicyTimeline'
 import { useI18n } from '@/i18n/useI18n'
 import InsightCard from '@/components/common/InsightCard.vue'
 import NarrativeSection from '@/components/common/NarrativeSection.vue'
 import CollapsibleSection from '@/components/common/CollapsibleSection.vue'
 import DataSourceBadge from '@/components/common/DataSourceBadge.vue'
 import ChartContainer from '@/components/common/ChartContainer.vue'
-import TimelinePlayer from '@/components/common/TimelinePlayer.vue'
-import PolicyHeatmap from './PolicyHeatmap.vue'
-import PolicyTimeline from './PolicyTimeline.vue'
+import ChargingInfraChart from './ChargingInfraChart.vue'
 import PolicySandbox from './PolicySandbox.vue'
 import PolicySensitivityChart from './PolicySensitivityChart.vue'
-import { Globe, FlaskConical, Mountain, Battery } from 'lucide-vue-next'
+import { Plug, FlaskConical, Mountain, Battery } from 'lucide-vue-next'
 
 const { t } = useI18n()
-
-const {
-  selectedYear, isPlaying, playSpeed, selectedCountry,
-  minYear, maxYear, yearData, countryTimeline,
-  togglePlayback, selectCountry
-} = usePolicyTimeline()
-
-function onSpeedChange(speed) {
-  // Speed change handled via timeline composable
-}
-
-function onCountrySelect(country) {
-  selectCountry(country)
-}
-
-function closeTimeline() {
-  selectCountry(null)
-}
 </script>
 
 <template>
@@ -39,56 +18,32 @@ function closeTimeline() {
     <div class="section-inner">
       <!-- Insight Card (always visible) -->
       <InsightCard :citation="t('act3.insightCitation')">
-        <template #icon><Globe :size="20" /></template>
+        <template #icon><Plug :size="20" /></template>
         <template #title>{{ t('act3.insightTitle') }}</template>
         <span v-html="t('act3.insightBody')" />
       </InsightCard>
 
-      <!-- Global Ranking Heatmap with Timeline (always visible - the signature chart) -->
+      <!-- Charging Infrastructure (signature chart) -->
       <div class="chart-section">
         <div class="chart-title-row">
-          <h2 class="chart-title">{{ t('act3.heatmapChartTitle') }}</h2>
-          <DataSourceBadge source-key="dataSource.act3" />
+          <h2 class="chart-title">{{ t('chart.chargingInfraTitle') }}</h2>
+          <DataSourceBadge source-key="dataSource.act2" />
         </div>
-        <p class="chart-desc">{{ t('act3.heatmapChartDesc') }}</p>
-
-        <TimelinePlayer
-          v-model="selectedYear"
-          :min="minYear"
-          :max="maxYear"
-          :is-playing="isPlaying"
-          :speed="playSpeed"
-          label="Year"
-          @play="togglePlayback"
-          @pause="togglePlayback"
-          @speed-change="onSpeedChange"
-        />
-
-        <ChartContainer :min-height="500">
+        <p class="chart-desc">{{ t('chart.chargingInfraDesc') }}</p>
+        <ChartContainer :min-height="400">
           <template #default>
-            <PolicyHeatmap
-              :year-data="yearData"
-              :selected-country="selectedCountry"
-              @select-country="onCountrySelect"
-            />
+            <ChargingInfraChart />
           </template>
         </ChartContainer>
-
-        <!-- Country Drill-down -->
-        <PolicyTimeline
-          v-if="countryTimeline"
-          :timeline="countryTimeline"
-          @close="closeTimeline"
-        />
       </div>
 
-      <!-- Bridge paragraph to Chapter 4 -->
+      <!-- Bridge paragraph -->
       <NarrativeSection class="act3-bridge">
         <p v-html="t('act3.narrativeP1')" />
         <p v-html="t('act3.bridgeP')" />
       </NarrativeSection>
 
-      <!-- Fold 1: Policy Sandbox (default OPEN) -->
+      <!-- Fold 1: Policy Sandbox (default CLOSED) -->
       <CollapsibleSection
         :title="t('collapsible.chapter3Fold1Title')"
         :default-open="false"

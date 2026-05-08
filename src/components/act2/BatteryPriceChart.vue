@@ -37,14 +37,12 @@ const option = computed(() => {
     return pd ? (pd.confidenceUpper ?? pd.priceUsdPerKwh * 1.5) : null
   })
 
-  // Lower confidence band — use the model floor or a reasonable lower bound
+  // Lower confidence band
   const lowerBandData = allYears.map(yr => {
     if (yr === lastActual.year) return lastActual.priceUsdPerKwh
     const pd = predictedData.find(d => d.year === yr)
     if (!pd) return null
-    // If confidenceLower is 0 or missing, use max(price * 0.5, 30) as reasonable floor
-    const cl = pd.confidenceLower
-    return (cl && cl > 0) ? cl : Math.max(pd.priceUsdPerKwh * 0.5, 30)
+    return pd.confidenceLower || null
   })
 
   const primaryColor = chartPalette.value[0]

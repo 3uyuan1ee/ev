@@ -42,11 +42,11 @@ const chartOption = computed(() => {
         const item = data[d.dataIndex]
         if (!item) return ''
         return `<strong>${item.country}</strong><br/>
-          ${t('chart.heatmapTooltipMarketShare')} <strong>${item.evMarketShare.toFixed(2)}%</strong><br/>
-          ${t('chart.heatmapTooltipEvSales')} ${item.evSales?.toLocaleString() || 'N/A'}<br/>
-          ${t('chart.heatmapTooltipChargingStations')} ${item.chargingStations?.toLocaleString() || 'N/A'}<br/>
-          ${t('chart.heatmapTooltipSubsidy')} $${item.evSubsidyUsd?.toLocaleString() || 0}<br/>
-          ${t('chart.heatmapTooltipRegulationScore')} ${item.emissionRegulationScore?.toFixed(1) || 'N/A'}`
+          ${t('chart.heatmapTooltipMarketShare').replace('{value}', item.evMarketShare.toFixed(1))}<br/>
+          ${t('chart.heatmapTooltipEvSales').replace('{value}', item.evSales?.toLocaleString() || 'N/A')}<br/>
+          ${t('chart.heatmapTooltipChargingStations').replace('{value}', item.chargingStations?.toLocaleString() || 'N/A')}<br/>
+          ${t('chart.heatmapTooltipSubsidy').replace('{value}', item.evSubsidyUsd?.toLocaleString() || '0')}<br/>
+          ${t('chart.heatmapTooltipRegulationScore').replace('{value}', item.emissionRegulationScore?.toFixed(1) || 'N/A')}`
       }
     },
     grid: {

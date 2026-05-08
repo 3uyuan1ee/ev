@@ -9,7 +9,7 @@ export function useTcoControls() {
     vehicleType: 'midsize_suv',
     powertrains: ['icev', 'bev'],    // selected powertrains to compare
     condition: 'used_3yr',           // new / used_3yr / used_6yr
-    annualMileage: 15000,            // km/yr (range: 10000–25000)
+    annualMileage: 15000,            // mi/yr (range: 10000–25000, US-market calibrated)
     chargingStrategy: 'occasional',  // affects BEV/PHEV energy cost
     ownershipYears: 7,               // range: 1–15
     subsidy: null,                   // null = auto-fill default
