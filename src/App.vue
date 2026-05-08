@@ -23,6 +23,22 @@ const { registerSession, trackPageview } = useAnalytics()
 // Register visitor session on mount
 onMounted(() => {
   registerSession()
+
+  // Mobile tap support for inline annotations (.anno elements in v-html)
+  document.addEventListener('click', (e) => {
+    const anno = e.target.closest('.anno')
+    if (anno) {
+      e.preventDefault()
+      document.querySelectorAll('.anno.active').forEach(el => {
+        if (el !== anno) el.classList.remove('active')
+      })
+      anno.classList.toggle('active')
+    } else {
+      document.querySelectorAll('.anno.active').forEach(el => {
+        el.classList.remove('active')
+      })
+    }
+  })
 })
 
 // Track section views

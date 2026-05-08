@@ -134,3 +134,78 @@
   color: var(--color-text-secondary);
   line-height: var(--line-height-small);
 }
+
+/* ============================================================
+   Inline Annotations (source + methodology)
+   Renders inside v-html via <span class="anno" data-type="source|method" data-tip="...">
+   ============================================================ */
+.anno {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  line-height: 1;
+  border-radius: 50%;
+  cursor: help;
+  vertical-align: super;
+  margin-left: 2px;
+  position: relative;
+  user-select: none;
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  transition: background var(--duration-micro) ease-out;
+}
+
+.anno[data-type="source"] {
+  background: rgba(142, 141, 186, 0.15);
+  color: var(--color-mauve);
+}
+
+.anno[data-type="method"] {
+  background: rgba(233, 128, 116, 0.15);
+  color: var(--color-coral);
+}
+
+.anno[data-type="source"]:hover,
+.anno[data-type="source"].active {
+  background: rgba(142, 141, 186, 0.30);
+}
+
+.anno[data-type="method"]:hover,
+.anno[data-type="method"].active {
+  background: rgba(233, 128, 116, 0.30);
+}
+
+.anno::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card-hover);
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: normal;
+  width: max-content;
+  max-width: 280px;
+  z-index: var(--z-tooltip);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease-out;
+  color: var(--color-text-secondary);
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+}
+
+.anno:hover::after,
+.anno.active::after {
+  opacity: 1;
+  pointer-events: auto;
+}

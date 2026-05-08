@@ -44,7 +44,7 @@ const chartOption = computed(() => {
       left: 60,
       right: 60,
       top: 50,
-      bottom: 30
+      bottom: 45
     },
     xAxis: {
       type: 'category',
@@ -168,7 +168,7 @@ const chartOption = computed(() => {
 }
 
 .detail-chart {
-  height: 320px;
+  height: 420px;
   padding: var(--space-2);
 }
 </style>

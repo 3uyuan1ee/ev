@@ -1,0 +1,719 @@
+{
+  "countries": [
+    {
+      "country": "Norway",
+      "label": "NO"
+    },
+    {
+      "country": "Sweden",
+      "label": "SE"
+    },
+    {
+      "country": "Denmark",
+      "label": "DK"
+    },
+    {
+      "country": "China",
+      "label": "CN"
+    },
+    {
+      "country": "Netherlands",
+      "label": "NL"
+    },
+    {
+      "country": "United Kingdom",
+      "label": "UK"
+    },
+    {
+      "country": "France",
+      "label": "FR"
+    },
+    {
+      "country": "Germany",
+      "label": "DE"
+    },
+    {
+      "country": "USA",
+      "label": "US"
+    },
+    {
+      "country": "World",
+      "label": "World"
+    }
+  ],
+  "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "series": [
+    {
+      "country": "Norway",
+      "label": "NO",
+      "data": [
+        {
+          "year": 2010,
+          "share": 0.28
+        },
+        {
+          "year": 2011,
+          "share": 1.4
+        },
+        {
+          "year": 2012,
+          "share": 3.1
+        },
+        {
+          "year": 2013,
+          "share": 5.8
+        },
+        {
+          "year": 2014,
+          "share": 15
+        },
+        {
+          "year": 2015,
+          "share": 22
+        },
+        {
+          "year": 2016,
+          "share": 29
+        },
+        {
+          "year": 2017,
+          "share": 39
+        },
+        {
+          "year": 2018,
+          "share": 49
+        },
+        {
+          "year": 2019,
+          "share": 56
+        },
+        {
+          "year": 2020,
+          "share": 75
+        },
+        {
+          "year": 2021,
+          "share": 86
+        },
+        {
+          "year": 2022,
+          "share": 89
+        },
+        {
+          "year": 2023,
+          "share": 90
+        },
+        {
+          "year": 2024,
+          "share": 92
+        }
+      ]
+    },
+    {
+      "country": "Sweden",
+      "label": "SE",
+      "data": [
+        {
+          "year": 2010,
+          "share": 0.0013
+        },
+        {
+          "year": 2011,
+          "share": 0.054
+        },
+        {
+          "year": 2012,
+          "share": 0.31
+        },
+        {
+          "year": 2013,
+          "share": 0.53
+        },
+        {
+          "year": 2014,
+          "share": 1.4
+        },
+        {
+          "year": 2015,
+          "share": 2.4
+        },
+        {
+          "year": 2016,
+          "share": 3.4
+        },
+        {
+          "year": 2017,
+          "share": 5.1
+        },
+        {
+          "year": 2018,
+          "share": 7.6
+        },
+        {
+          "year": 2019,
+          "share": 11
+        },
+        {
+          "year": 2020,
+          "share": 32
+        },
+        {
+          "year": 2021,
+          "share": 43
+        },
+        {
+          "year": 2022,
+          "share": 54
+        },
+        {
+          "year": 2023,
+          "share": 60
+        },
+        {
+          "year": 2024,
+          "share": 58
+        }
+      ]
+    },
+    {
+      "country": "Denmark",
+      "label": "DK",
+      "data": [
+        {
+          "year": 2011,
+          "share": 0.25
+        },
+        {
+          "year": 2012,
+          "share": 0.29
+        },
+        {
+          "year": 2013,
+          "share": 0.28
+        },
+        {
+          "year": 2014,
+          "share": 0.91
+        },
+        {
+          "year": 2015,
+          "share": 2.3
+        },
+        {
+          "year": 2016,
+          "share": 0.84
+        },
+        {
+          "year": 2017,
+          "share": 0.6
+        },
+        {
+          "year": 2018,
+          "share": 2.1
+        },
+        {
+          "year": 2019,
+          "share": 4.2
+        },
+        {
+          "year": 2020,
+          "share": 16
+        },
+        {
+          "year": 2021,
+          "share": 35
+        },
+        {
+          "year": 2022,
+          "share": 38
+        },
+        {
+          "year": 2023,
+          "share": 46
+        },
+        {
+          "year": 2024,
+          "share": 56
+        }
+      ]
+    },
+    {
+      "country": "China",
+      "label": "CN",
+      "data": [
+        {
+          "year": 2010,
+          "share": 0.01
+        },
+        {
+          "year": 2011,
+          "share": 0.034
+        },
+        {
+          "year": 2012,
+          "share": 0.073
+        },
+        {
+          "year": 2013,
+          "share": 0.095
+        },
+        {
+          "year": 2014,
+          "share": 0.4
+        },
+        {
+          "year": 2015,
+          "share": 1
+        },
+        {
+          "year": 2016,
+          "share": 1.5
+        },
+        {
+          "year": 2017,
+          "share": 2.4
+        },
+        {
+          "year": 2018,
+          "share": 4.7
+        },
+        {
+          "year": 2019,
+          "share": 5
+        },
+        {
+          "year": 2020,
+          "share": 5.7
+        },
+        {
+          "year": 2021,
+          "share": 15
+        },
+        {
+          "year": 2022,
+          "share": 29
+        },
+        {
+          "year": 2023,
+          "share": 38
+        },
+        {
+          "year": 2024,
+          "share": 48
+        }
+      ]
+    },
+    {
+      "country": "Netherlands",
+      "label": "NL",
+      "data": [
+        {
+          "year": 2010,
+          "share": 0.025
+        },
+        {
+          "year": 2011,
+          "share": 0.16
+        },
+        {
+          "year": 2012,
+          "share": 1
+        },
+        {
+          "year": 2013,
+          "share": 5.5
+        },
+        {
+          "year": 2014,
+          "share": 3.9
+        },
+        {
+          "year": 2015,
+          "share": 3.5
+        },
+        {
+          "year": 2016,
+          "share": 11
+        },
+        {
+          "year": 2017,
+          "share": 6.4
+        },
+        {
+          "year": 2018,
+          "share": 6.2
+        },
+        {
+          "year": 2019,
+          "share": 15
+        },
+        {
+          "year": 2020,
+          "share": 25
+        },
+        {
+          "year": 2021,
+          "share": 29
+        },
+        {
+          "year": 2022,
+          "share": 35
+        },
+        {
+          "year": 2023,
+          "share": 44
+        },
+        {
+          "year": 2024,
+          "share": 48
+        }
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "label": "UK",
+      "data": [
+        {
+          "year": 2010,
+          "share": 0.013
+        },
+        {
+          "year": 2011,
+          "share": 0.062
+        },
+        {
+          "year": 2012,
+          "share": 0.13
+        },
+        {
+          "year": 2013,
+          "share": 0.16
+        },
+        {
+          "year": 2014,
+          "share": 0.59
+        },
+        {
+          "year": 2015,
+          "share": 1.1
+        },
+        {
+          "year": 2016,
+          "share": 1.4
+        },
+        {
+          "year": 2017,
+          "share": 1.9
+        },
+        {
+          "year": 2018,
+          "share": 2.6
+        },
+        {
+          "year": 2019,
+          "share": 3.3
+        },
+        {
+          "year": 2020,
+          "share": 11
+        },
+        {
+          "year": 2021,
+          "share": 19
+        },
+        {
+          "year": 2022,
+          "share": 23
+        },
+        {
+          "year": 2023,
+          "share": 24
+        },
+        {
+          "year": 2024,
+          "share": 28
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "label": "FR",
+      "data": [
+        {
+          "year": 2010,
+          "share": 0.012
+        },
+        {
+          "year": 2011,
+          "share": 0.12
+        },
+        {
+          "year": 2012,
+          "share": 0.33
+        },
+        {
+          "year": 2013,
+          "share": 0.53
+        },
+        {
+          "year": 2014,
+          "share": 0.69
+        },
+        {
+          "year": 2015,
+          "share": 1.2
+        },
+        {
+          "year": 2016,
+          "share": 1.4
+        },
+        {
+          "year": 2017,
+          "share": 1.7
+        },
+        {
+          "year": 2018,
+          "share": 2
+        },
+        {
+          "year": 2019,
+          "share": 2.7
+        },
+        {
+          "year": 2020,
+          "share": 11
+        },
+        {
+          "year": 2021,
+          "share": 17
+        },
+        {
+          "year": 2022,
+          "share": 20
+        },
+        {
+          "year": 2023,
+          "share": 25
+        },
+        {
+          "year": 2024,
+          "share": 24
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "label": "DE",
+      "data": [
+        {
+          "year": 2010,
+          "share": 0.0049
+        },
+        {
+          "year": 2011,
+          "share": 0.052
+        },
+        {
+          "year": 2012,
+          "share": 0.11
+        },
+        {
+          "year": 2013,
+          "share": 0.23
+        },
+        {
+          "year": 2014,
+          "share": 0.45
+        },
+        {
+          "year": 2015,
+          "share": 0.73
+        },
+        {
+          "year": 2016,
+          "share": 0.74
+        },
+        {
+          "year": 2017,
+          "share": 1.6
+        },
+        {
+          "year": 2018,
+          "share": 2
+        },
+        {
+          "year": 2019,
+          "share": 3
+        },
+        {
+          "year": 2020,
+          "share": 14
+        },
+        {
+          "year": 2021,
+          "share": 26
+        },
+        {
+          "year": 2022,
+          "share": 31
+        },
+        {
+          "year": 2023,
+          "share": 24
+        },
+        {
+          "year": 2024,
+          "share": 19
+        }
+      ]
+    },
+    {
+      "country": "USA",
+      "label": "US",
+      "data": [
+        {
+          "year": 2010,
+          "share": 0.012
+        },
+        {
+          "year": 2011,
+          "share": 0.15
+        },
+        {
+          "year": 2012,
+          "share": 0.42
+        },
+        {
+          "year": 2013,
+          "share": 0.71
+        },
+        {
+          "year": 2014,
+          "share": 0.77
+        },
+        {
+          "year": 2015,
+          "share": 0.7
+        },
+        {
+          "year": 2016,
+          "share": 0.99
+        },
+        {
+          "year": 2017,
+          "share": 1.3
+        },
+        {
+          "year": 2018,
+          "share": 2.3
+        },
+        {
+          "year": 2019,
+          "share": 2.1
+        },
+        {
+          "year": 2020,
+          "share": 2.3
+        },
+        {
+          "year": 2021,
+          "share": 4.7
+        },
+        {
+          "year": 2022,
+          "share": 7.4
+        },
+        {
+          "year": 2023,
+          "share": 9.5
+        },
+        {
+          "year": 2024,
+          "share": 10
+        }
+      ]
+    },
+    {
+      "country": "World",
+      "label": "World",
+      "data": [
+        {
+          "year": 2010,
+          "share": 0.012
+        },
+        {
+          "year": 2011,
+          "share": 0.073
+        },
+        {
+          "year": 2012,
+          "share": 0.18
+        },
+        {
+          "year": 2013,
+          "share": 0.29
+        },
+        {
+          "year": 2014,
+          "share": 0.44
+        },
+        {
+          "year": 2015,
+          "share": 0.68
+        },
+        {
+          "year": 2016,
+          "share": 0.96
+        },
+        {
+          "year": 2017,
+          "share": 1.5
+        },
+        {
+          "year": 2018,
+          "share": 2.5
+        },
+        {
+          "year": 2019,
+          "share": 2.7
+        },
+        {
+          "year": 2020,
+          "share": 4.4
+        },
+        {
+          "year": 2021,
+          "share": 9.3
+        },
+        {
+          "year": 2022,
+          "share": 15
+        },
+        {
+          "year": 2023,
+          "share": 18
+        },
+        {
+          "year": 2024,
+          "share": 22
+        }
+      ]
+    }
+  ]
+}

@@ -53,7 +53,7 @@ const chartOption = computed(() => {
       left: 120,
       right: 40,
       top: 60,
-      bottom: 30
+      bottom: 45
     },
     xAxis: {
       type: 'value',

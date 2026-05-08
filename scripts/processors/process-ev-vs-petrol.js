@@ -29,29 +29,33 @@ export async function processEvVsPetrol() {
   const tcoRef = { lastUpdated: 2025, countries: [] }
   for (const [country, countryRows] of Object.entries(byCountry)) {
     const info = getCountryInfo(country)
-    // Take ICE rows (macro indicators are the same across powertrain types per country/year)
-    const iceRows = countryRows.filter(r => r.powertrain_type === 'ICE')
-    if (iceRows.length === 0) continue
 
-    // Group by year
-    const byYear = {}
-    for (const r of iceRows) {
+    // Group all rows by year (use all powertrain types for correct EV market share)
+    const byYearAll = {}
+    for (const r of countryRows) {
       const yr = r.year
-      if (!byYear[yr]) byYear[yr] = []
-      byYear[yr].push(r)
+      if (!byYearAll[yr]) byYearAll[yr] = []
+      byYearAll[yr].push(r)
     }
 
-    // Average across segments per year
     const yearlyData = []
-    for (const [yr, yrRows] of Object.entries(byYear)) {
-      const n = yrRows.length
+    for (const [yr, yrRows] of Object.entries(byYearAll)) {
+      const totalEvSales = yrRows.reduce((s, r) => s + (Number(r.ev_sales) || 0), 0)
+      const totalVehicleSales = yrRows.reduce((s, r) => s + (Number(r.total_vehicle_sales) || 0), 0)
+      const evMarketShare = totalVehicleSales > 0
+        ? roundTo((totalEvSales / totalVehicleSales) * 100, 2) : 0
+      // Macro indicators are same across segments — use ICE row as reference
+      const iceRow = yrRows.find(r => r.powertrain_type === 'ICE') || yrRows[0]
+      const n = yrRows.filter(r => r.powertrain_type === 'ICE').length || 1
+      const iceRows = yrRows.filter(r => r.powertrain_type === 'ICE')
+
       yearlyData.push({
         year: Number(yr),
-        fuelPrice: roundTo(yrRows.reduce((s, r) => s + (r.fuel_price_usd_per_liter || 0), 0) / n, 4),
-        electricityPrice: roundTo(yrRows.reduce((s, r) => s + (r.electricity_price_usd_per_kwh || 0), 0) / n, 6),
-        evSubsidy: roundTo(yrRows.reduce((s, r) => s + (r.ev_subsidy_usd || 0), 0) / n, 0),
-        evMarketShare: roundTo(yrRows.reduce((s, r) => s + (r.ev_market_share || 0), 0) / n, 4),
-        chargingStations: roundTo(yrRows.reduce((s, r) => s + (r.charging_stations || 0), 0) / n, 0),
+        fuelPrice: roundTo(iceRows.reduce((s, r) => s + (r.fuel_price_usd_per_liter || 0), 0) / n, 4),
+        electricityPrice: roundTo(iceRows.reduce((s, r) => s + (r.electricity_price_usd_per_kwh || 0), 0) / n, 6),
+        evSubsidy: roundTo(iceRows.reduce((s, r) => s + (r.ev_subsidy_usd || 0), 0) / n, 0),
+        evMarketShare,
+        chargingStations: roundTo(iceRows.reduce((s, r) => s + (r.charging_stations || 0), 0) / n, 0),
       })
     }
 
@@ -75,28 +79,32 @@ export async function processEvVsPetrol() {
   const policyHeatmap = { countries: [], yearRange: [2010, 2025] }
   for (const [country, countryRows] of Object.entries(byCountry)) {
     const info = getCountryInfo(country)
-    const iceRows = countryRows.filter(r => r.powertrain_type === 'ICE')
-    if (iceRows.length === 0) continue
 
     const byYear = {}
-    for (const r of iceRows) {
+    for (const r of countryRows) {
       if (!byYear[r.year]) byYear[r.year] = []
       byYear[r.year].push(r)
     }
 
     const yearlyData = []
     for (const [yr, yrRows] of Object.entries(byYear)) {
-      const n = yrRows.length
+      const totalEvSales = yrRows.reduce((s, r) => s + (Number(r.ev_sales) || 0), 0)
+      const totalVehicleSales = yrRows.reduce((s, r) => s + (Number(r.total_vehicle_sales) || 0), 0)
+      const evMarketShare = totalVehicleSales > 0
+        ? roundTo((totalEvSales / totalVehicleSales) * 100, 2) : 0
+      // Macro indicators from ICE rows (same across segments)
+      const iceRows = yrRows.filter(r => r.powertrain_type === 'ICE')
+      const n = iceRows.length || 1
       yearlyData.push({
         year: Number(yr),
-        emissionRegulationScore: roundTo(yrRows.reduce((s, r) => s + (r.emission_regulation_score || 0), 0) / n, 4),
-        evSubsidyUsd: roundTo(yrRows.reduce((s, r) => s + (r.ev_subsidy_usd || 0), 0) / n, 0),
-        evMarketShare: roundTo(yrRows.reduce((s, r) => s + (r.ev_market_share || 0), 0) / n, 4),
-        chargingStations: roundTo(yrRows.reduce((s, r) => s + (r.charging_stations || 0), 0) / n, 0),
-        evSales: roundTo(yrRows.reduce((s, r) => s + (r.ev_sales || 0), 0) / n, 0),
-        evGrowthRateYoy: roundTo(yrRows.reduce((s, r) => s + (r.ev_growth_rate_yoy || 0), 0) / n, 2),
-        gdpPerCapita: roundTo(yrRows.reduce((s, r) => s + (r.gdp_per_capita || 0), 0) / n, 0),
-        urbanPopulationPercent: roundTo(yrRows.reduce((s, r) => s + (r.urban_population_percent || 0), 0) / n, 1),
+        emissionRegulationScore: roundTo(iceRows.reduce((s, r) => s + (r.emission_regulation_score || 0), 0) / n, 4),
+        evSubsidyUsd: roundTo(iceRows.reduce((s, r) => s + (r.ev_subsidy_usd || 0), 0) / n, 0),
+        evMarketShare,
+        chargingStations: roundTo(iceRows.reduce((s, r) => s + (r.charging_stations || 0), 0) / n, 0),
+        evSales: totalEvSales,
+        evGrowthRateYoy: roundTo(iceRows.reduce((s, r) => s + (r.ev_growth_rate_yoy || 0), 0) / n, 2),
+        gdpPerCapita: roundTo(iceRows.reduce((s, r) => s + (r.gdp_per_capita || 0), 0) / n, 0),
+        urbanPopulationPercent: roundTo(iceRows.reduce((s, r) => s + (r.urban_population_percent || 0), 0) / n, 1),
       })
     }
     yearlyData.sort((a, b) => a.year - b.year)

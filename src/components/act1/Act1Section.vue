@@ -11,7 +11,7 @@ import TcoControls from './TcoControls.vue'
 import { useTcoControls } from '@/composables/act1/useTcoControls'
 import { useTcoCalculator } from '@/composables/act1/useTcoCalculator'
 import { useI18n } from '@/i18n/useI18n'
-import { Zap, Calculator, Layers, BookOpen } from 'lucide-vue-next'
+import { Zap, Calculator, Layers } from 'lucide-vue-next'
 
 const { t } = useI18n()
 
@@ -75,7 +75,7 @@ const powertrainLabels = computed(() =>
       <!-- Fold 1: TCO Calculator (default OPEN) -->
       <CollapsibleSection
         :title="t('collapsible.chapter1Fold1Title')"
-        :default-open="true"
+        :default-open="false"
         class="fold-tco"
       >
         <template #summary>{{ t('collapsible.chapter1Fold1Summary') }}</template>
@@ -105,34 +105,6 @@ const powertrainLabels = computed(() =>
               :breakeven-pt2-label="breakevenPt2Label"
             />
           </main>
-        </div>
-      </CollapsibleSection>
-
-      <!-- Fold 2: Methodology & evidence (default CLOSED) -->
-      <CollapsibleSection
-        :title="t('collapsible.chapter1Fold2Title')"
-        :default-open="false"
-        class="fold-method"
-      >
-        <template #summary>{{ t('collapsible.chapter1Fold3Summary') }}</template>
-        <template #icon><BookOpen :size="18" /></template>
-
-        <div class="methodology-content">
-          <DataSourceBadge source-key="dataSource.act1" />
-          <div class="methodology-notes">
-            <h4>Three Regression Models Compared</h4>
-            <ul>
-              <li><strong>Exponential Decay</strong> P(t) = a·e<sup>-bt</sup> — classical decline, R²=0.963, AIC=424.6</li>
-              <li><strong>Bounded Exponential</strong> P(t) = 50 + a·e<sup>-bt</sup> — material cost floor at $50/kWh, R²=0.972 (best fit by AIC), AIC=416.8</li>
-              <li><strong>Experience Curve</strong> P(stock) = a·stock<sup>b</sup> — Wright's Law using IEA cumulative EV stock, 17.4% cost reduction per doubling</li>
-            </ul>
-            <h4>Key Papers</h4>
-            <ul>
-              <li><a href="https://doi.org/10.1088/1748-9326/ae38f8" target="_blank">Woody et al. 2026</a> — First used-vehicle TCO comparison across 5 classes, 17 US cities</li>
-              <li><a href="https://doi.org/10.1016/j.etran.2025.100512" target="_blank">Baek et al. 2026</a> — Long-term TCO projections to 2050 by powertrain type</li>
-              <li>BEUC 2025 — European EV price parity timeline analysis</li>
-            </ul>
-          </div>
         </div>
       </CollapsibleSection>
     </div>
@@ -176,8 +148,7 @@ const powertrainLabels = computed(() =>
 }
 
 .fold-tco,
-.fold-class,
-.fold-method {
+.fold-class {
   margin-bottom: var(--space-5);
 }
 
@@ -191,49 +162,6 @@ const powertrainLabels = computed(() =>
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
-}
-
-.fold-note {
-  padding: var(--space-4);
-  color: var(--color-text-secondary);
-  text-align: center;
-}
-
-.methodology-content {
-  padding: var(--space-4);
-}
-
-.methodology-notes {
-  margin-top: var(--space-4);
-}
-
-.methodology-notes h4 {
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-primary);
-  margin: var(--space-3) 0 var(--space-2);
-}
-
-.methodology-notes ul {
-  padding-left: var(--space-5);
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-small);
-  line-height: 1.7;
-}
-
-.methodology-notes li {
-  margin-bottom: var(--space-1);
-}
-
-.methodology-notes a {
-  color: var(--color-mauve);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
-}
-
-.methodology-notes a:hover {
-  border-bottom-color: var(--color-mauve);
 }
 
 @media (min-width: 1024px) {

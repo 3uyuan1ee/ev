@@ -17,6 +17,7 @@ import { processIeaGrowth } from './processors/process-iev-growth.js'
 import { processChargingInfrastructure } from './processors/process-charging-data.js'
 import { processEnergyData } from './processors/process-energy-data.js'
 import { buildPolicyModel } from './processors/build-policy-model.js'
+import { processEvAdoptionRace } from './processors/process-ev-adoption-race.js'
 import { writeJson, dataPath } from './lib/utils.js'
 
 async function main() {
@@ -59,6 +60,7 @@ async function main() {
     await processChargingInfrastructure()
     await processEnergyData()
     await buildPolicyModel(evVsPetrolResult.rows)
+    await processEvAdoptionRace()
 
     // Done
     const elapsed = ((Date.now() - startTime) / 1000).toFixed(1)

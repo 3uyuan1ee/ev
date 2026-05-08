@@ -61,4 +61,21 @@
   --color-powertrain-icev: #F07568;
   --color-powertrain-hev: #E8D4B8;
   --color-powertrain-phev: #F09A8E;
+
+  /* Inline annotations */
+  .anno[data-type="source"] {
+    background: rgba(168, 167, 208, 0.2);
+    color: #A8A7D0;
+  }
+
+  .anno[data-type="method"] {
+    background: rgba(233, 128, 116, 0.2);
+    color: #E98074;
+  }
+
+  .anno::after {
+    background: #2A2830;
+    border-color: #4A4550;
+    color: #B0A8A0;
+  }
 }

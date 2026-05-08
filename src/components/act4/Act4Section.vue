@@ -48,7 +48,7 @@ const { t } = useI18n()
       <!-- Fold 1: Grid cleanliness (default OPEN) -->
       <CollapsibleSection
         :title="t('collapsible.chapter4Fold1Title')"
-        :default-open="true"
+        :default-open="false"
         class="fold-grid"
       >
         <template #summary>{{ t('collapsible.chapter4Fold1Summary') }}</template>

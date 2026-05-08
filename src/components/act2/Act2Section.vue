@@ -4,11 +4,11 @@ import NarrativeSection from '@/components/common/NarrativeSection.vue'
 import CollapsibleSection from '@/components/common/CollapsibleSection.vue'
 import ChartContainer from '@/components/common/ChartContainer.vue'
 import EvGrowthAreaChart from './EvGrowthAreaChart.vue'
+import EvAdoptionRace from './EvAdoptionRace.vue'
 import ChargingInfraChart from '@/components/act3/ChargingInfraChart.vue'
-import ChinaMarketStreamgraph from './ChinaMarketStreamgraph.vue'
-import BrandBubbleChart from './BrandBubbleChart.vue'
-import { TrendingDown, Factory, Plug } from 'lucide-vue-next'
+import { TrendingDown, Flag, Plug } from 'lucide-vue-next'
 import { useI18n } from '@/i18n/useI18n'
+import DataSourceBadge from '@/components/common/DataSourceBadge.vue'
 
 const { t } = useI18n()
 </script>
@@ -17,7 +17,7 @@ const { t } = useI18n()
   <div class="act2-section">
     <div class="section-inner">
       <!-- Insight Card (always visible) -->
-      <InsightCard :citation="t('act2.insightCitation')">
+      <InsightCard class="act2-insight" :citation="t('act2.insightCitation')">
         <template #icon><TrendingDown :size="20" /></template>
         <template #title>{{ t('act2.insightTitle') }}</template>
         <span v-html="t('act2.insightBody')" />
@@ -25,7 +25,10 @@ const { t } = useI18n()
 
       <!-- EV Growth by Region (always visible - the signature chart) -->
       <div class="chart-section">
-        <h2 class="chart-title">{{ t('act2.evGrowthChartTitle') }}</h2>
+        <div class="chart-title-row">
+          <h2 class="chart-title">{{ t('act2.evGrowthChartTitle') }}</h2>
+          <DataSourceBadge source-key="dataSource.act2" />
+        </div>
         <p class="chart-desc">{{ t('act2.evGrowthChartDesc') }}</p>
         <ChartContainer :min-height="400">
           <template #default>
@@ -40,40 +43,27 @@ const { t } = useI18n()
         <p v-html="t('act2.bridgeP')" />
       </NarrativeSection>
 
-      <!-- Fold 1: China market (default OPEN) -->
+      <!-- Fold 1: EV Adoption Race -->
       <CollapsibleSection
         :title="t('collapsible.chapter2Fold1Title')"
-        :default-open="true"
-        class="fold-china"
+        :default-open="false"
+        class="fold-race"
       >
         <template #summary>{{ t('collapsible.chapter2Fold1Summary') }}</template>
-        <template #icon><Factory :size="18" /></template>
+        <template #icon><Flag :size="18" /></template>
 
         <NarrativeSection>
           <p v-html="t('act2.narrativeP2')" />
-          <p v-html="t('act2.narrativeP3')" />
         </NarrativeSection>
 
-        <div class="two-column">
-          <div class="chart-section">
-            <h2 class="chart-title">{{ t('act2.chinaChartTitle') }}</h2>
-            <p class="chart-desc">{{ t('act2.chinaChartDesc') }}</p>
-            <ChartContainer :min-height="420">
-              <template #default>
-                <ChinaMarketStreamgraph />
-              </template>
-            </ChartContainer>
-          </div>
-
-          <div class="chart-section">
-            <h2 class="chart-title">{{ t('act2.brandChartTitle') }}</h2>
-            <p class="chart-desc">{{ t('act2.brandChartDesc') }}</p>
-            <ChartContainer :min-height="350">
-              <template #default>
-                <BrandBubbleChart />
-              </template>
-            </ChartContainer>
-          </div>
+        <div class="chart-section">
+          <h2 class="chart-title">{{ t('act2.raceChartTitle') }}</h2>
+          <p class="chart-desc">{{ t('act2.raceChartDesc') }}</p>
+          <ChartContainer :min-height="420">
+            <template #default>
+              <EvAdoptionRace />
+            </template>
+          </ChartContainer>
         </div>
       </CollapsibleSection>
 
@@ -105,8 +95,12 @@ const { t } = useI18n()
   padding: var(--space-6) 0;
 }
 
+.act2-insight {
+  margin-bottom: var(--space-5);
+}
+
 .chart-section {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
 }
 
 .chart-title-row {
@@ -132,7 +126,7 @@ const { t } = useI18n()
   margin-bottom: var(--space-6);
 }
 
-.fold-china,
+.fold-race,
 .fold-charging,
 .fold-world {
   margin-bottom: var(--space-5);

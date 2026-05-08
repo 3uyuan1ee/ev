@@ -91,7 +91,7 @@ function closeTimeline() {
       <!-- Fold 1: Policy Sandbox (default OPEN) -->
       <CollapsibleSection
         :title="t('collapsible.chapter3Fold1Title')"
-        :default-open="true"
+        :default-open="false"
         class="fold-sandbox"
       >
         <template #summary>{{ t('collapsible.chapter3Fold1Summary') }}</template>
