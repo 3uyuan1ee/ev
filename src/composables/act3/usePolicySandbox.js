@@ -37,7 +37,7 @@ const predictedShare = computed(() => {
     const transformed = transformValue(f.name, raw)
     sum += f.coefficient * transformed
   })
-  return Math.max(0, sum) // clamp to 0
+  return Math.min(Math.max(0, sum), 100) // clamp to [0, 100]
 })
 
 /**

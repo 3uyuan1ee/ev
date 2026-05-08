@@ -4,14 +4,16 @@
       "country": "China",
       "iso3": "CHN",
       "gridCO2PerKwh": 0.54,
+      "icevLitersPer100km": 7,
       "avgEnergyConsumptionKwh": 18.8,
       "co2ReductionMt": 150.8,
-      "evCarbonAdvantage": 36.9
+      "evCarbonAdvantage": 37.2
     },
     {
       "country": "Canada",
       "iso3": "CAN",
       "gridCO2PerKwh": 0.13,
+      "icevLitersPer100km": 7,
       "avgEnergyConsumptionKwh": 18,
       "co2ReductionMt": 150.2,
       "evCarbonAdvantage": 85.5
@@ -20,38 +22,43 @@
       "country": "Australia",
       "iso3": "AUS",
       "gridCO2PerKwh": 0.58,
+      "icevLitersPer100km": 7,
       "avgEnergyConsumptionKwh": 18.9,
       "co2ReductionMt": 156.5,
-      "evCarbonAdvantage": 31.9
+      "evCarbonAdvantage": 32.2
     },
     {
       "country": "Germany",
       "iso3": "DEU",
       "gridCO2PerKwh": 0.35,
+      "icevLitersPer100km": 7,
       "avgEnergyConsumptionKwh": 18.4,
       "co2ReductionMt": 150.7,
-      "evCarbonAdvantage": 60
+      "evCarbonAdvantage": 60.2
     },
     {
       "country": "India",
       "iso3": "IND",
       "gridCO2PerKwh": 0.72,
+      "icevLitersPer100km": 7,
       "avgEnergyConsumptionKwh": 18.3,
       "co2ReductionMt": 151,
-      "evCarbonAdvantage": 18.2
+      "evCarbonAdvantage": 18.5
     },
     {
       "country": "United States",
       "iso3": "USA",
       "gridCO2PerKwh": 0.39,
+      "icevLitersPer100km": 7,
       "avgEnergyConsumptionKwh": 18.7,
       "co2ReductionMt": 147.2,
-      "evCarbonAdvantage": 54.7
+      "evCarbonAdvantage": 54.9
     },
     {
       "country": "Norway",
       "iso3": "NOR",
       "gridCO2PerKwh": 0.03,
+      "icevLitersPer100km": 7,
       "avgEnergyConsumptionKwh": 18.5,
       "co2ReductionMt": 158.2,
       "evCarbonAdvantage": 96.6
@@ -60,29 +67,33 @@
       "country": "France",
       "iso3": "FRA",
       "gridCO2PerKwh": 0.06,
+      "icevLitersPer100km": 7,
       "avgEnergyConsumptionKwh": 18.4,
       "co2ReductionMt": 159.1,
-      "evCarbonAdvantage": 93.1
+      "evCarbonAdvantage": 93.2
     },
     {
       "country": "United Kingdom",
       "iso3": "GBR",
       "gridCO2PerKwh": 0.23,
+      "icevLitersPer100km": 7,
       "avgEnergyConsumptionKwh": 18.6,
       "co2ReductionMt": 154.6,
-      "evCarbonAdvantage": 73.4
+      "evCarbonAdvantage": 73.5
     },
     {
       "country": "Japan",
       "iso3": "JPN",
       "gridCO2PerKwh": 0.47,
+      "icevLitersPer100km": 7,
       "avgEnergyConsumptionKwh": 18.6,
       "co2ReductionMt": 153.9,
-      "evCarbonAdvantage": 45.7
+      "evCarbonAdvantage": 45.9
     }
   ],
   "globalAverage": {
     "gridCO2PerKwh": 0.35,
-    "evCarbonAdvantage": 59.6
-  }
+    "evCarbonAdvantage": 59.8
+  },
+  "methodologyNote": "EV carbon advantage = (1 - BEV_op_emissions / ICEV_op_emissions) × 100%. Same midsize sedan class: ICEV 7 L/100km × 2.31 kg CO₂/L = 16.17 kg/100km; BEV = gridCO₂ × avgEnergy. Operational emissions only (excludes manufacturing). Real-world advantage varies by local vehicle fleet composition."
 }

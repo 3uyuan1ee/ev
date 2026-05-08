@@ -102,14 +102,19 @@ export async function processGlobalEv2026() {
     'United Kingdom': 0.23, 'United States': 0.39,
   }
 
+  // Comparison basis: same midsize vehicle class across all countries
+  // ICEV: ~7 L/100km (midsize sedan), BEV: country-specific from data
+  // This isolates the grid CO₂ variable — real-world advantage varies
+  // by local market composition (India's small-car fleet has lower ICEV emissions)
+  const FUEL_CO2_PER_LITER = 2.31  // kg CO₂ per liter gasoline (IPCC)
+  const ICEV_L_PER_100KM = 7.0     // midsize sedan baseline
+
   const countriesOutput = Object.entries(countryAgg).map(([country, agg]) => {
     const info = getCountryInfo(country)
     const avgCo2 = roundTo(agg.co2.reduce((a, b) => a + b, 0) / agg.co2.length, 1)
     const avgEnergy = roundTo(agg.energy.reduce((a, b) => a + b, 0) / agg.energy.length, 1)
     const gridCO2 = gridCO2Map[country] || 0.45
-    // ICEV emits ~2.3 kg CO2/L, average consumption ~7L/100km
-    // EV emits gridCO2 * energyConsumption kWh/100km
-    const icevEmissionsPer100km = 2.3 * 7 // ~16.1 kg
+    const icevEmissionsPer100km = FUEL_CO2_PER_LITER * ICEV_L_PER_100KM
     const bevEmissionsPer100km = gridCO2 * avgEnergy
     const evCarbonAdvantage = roundTo((1 - bevEmissionsPer100km / icevEmissionsPer100km) * 100, 1)
 
@@ -117,6 +122,7 @@ export async function processGlobalEv2026() {
       country,
       iso3: info ? info.iso3 : '',
       gridCO2PerKwh: gridCO2,
+      icevLitersPer100km: ICEV_L_PER_100KM,
       avgEnergyConsumptionKwh: avgEnergy,
       co2ReductionMt: avgCo2,
       evCarbonAdvantage,
@@ -129,6 +135,7 @@ export async function processGlobalEv2026() {
   await writeJson(dataPath('act4', 'grid-cleanliness-comparison.json'), {
     countries: countriesOutput,
     globalAverage: { gridCO2PerKwh: globalAvgCO2, evCarbonAdvantage: globalAvgAdvantage },
+    methodologyNote: 'EV carbon advantage = (1 - BEV_op_emissions / ICEV_op_emissions) × 100%. Same midsize sedan class: ICEV 7 L/100km × 2.31 kg CO₂/L = 16.17 kg/100km; BEV = gridCO₂ × avgEnergy. Operational emissions only (excludes manufacturing). Real-world advantage varies by local vehicle fleet composition.',
   })
 
   return { rows }
