@@ -91,7 +91,7 @@ const topFeatures = computed(() => featureImportance.value.slice(0, 3))
       </div>
       <div class="prediction-meta">
         <span class="meta-item">
-          {{ t('act3.sandboxModelMeta', { r2: model.r2, n: model.n }) }}
+          {{ t('act3.sandboxModelMeta', { r2: model.r2, cvR2: model.cvR2, n: model.n }) }}
         </span>
       </div>
     </div>

@@ -5636,321 +5636,363 @@
       "brand": "Mercedes",
       "vehicleType": "Bus",
       "totalSales": 61348042,
-      "avgPriceUsd": 54899,
+      "avgPriceUsd": 54727,
       "avgBatteryKwh": 81,
-      "countryCount": 132
+      "countryCount": 132,
+      "isSynthetic": true
     },
     {
       "brand": "Hyundai",
       "vehicleType": "Car",
       "totalSales": 57656597,
-      "avgPriceUsd": 55359,
+      "avgPriceUsd": 55345,
       "avgBatteryKwh": 80,
-      "countryCount": 137
+      "countryCount": 137,
+      "isSynthetic": true
     },
     {
       "brand": "Ford",
       "vehicleType": "Bus",
       "totalSales": 49743609,
-      "avgPriceUsd": 55324,
+      "avgPriceUsd": 54137,
       "avgBatteryKwh": 82.4,
-      "countryCount": 109
+      "countryCount": 109,
+      "isSynthetic": true
     },
     {
       "brand": "Toyota",
       "vehicleType": "Car",
       "totalSales": 53179861,
-      "avgPriceUsd": 58457,
+      "avgPriceUsd": 59076,
       "avgBatteryKwh": 80.4,
-      "countryCount": 116
+      "countryCount": 116,
+      "isSynthetic": true
     },
     {
       "brand": "Ford",
       "vehicleType": "SUV",
       "totalSales": 52171197,
-      "avgPriceUsd": 54372,
+      "avgPriceUsd": 54921,
       "avgBatteryKwh": 80.3,
-      "countryCount": 115
+      "countryCount": 115,
+      "isSynthetic": true
     },
     {
       "brand": "Tesla",
       "vehicleType": "Truck",
       "totalSales": 62084374,
-      "avgPriceUsd": 57352,
+      "avgPriceUsd": 58692,
       "avgBatteryKwh": 81.1,
-      "countryCount": 127
+      "countryCount": 127,
+      "isSynthetic": true
     },
     {
       "brand": "Volkswagen",
       "vehicleType": "SUV",
       "totalSales": 58359445,
-      "avgPriceUsd": 54530,
+      "avgPriceUsd": 54524,
       "avgBatteryKwh": 83.5,
-      "countryCount": 130
+      "countryCount": 130,
+      "isSynthetic": true
     },
     {
       "brand": "BYD",
       "vehicleType": "Bus",
       "totalSales": 48497299,
-      "avgPriceUsd": 53198,
+      "avgPriceUsd": 52529,
       "avgBatteryKwh": 78.6,
-      "countryCount": 114
+      "countryCount": 114,
+      "isSynthetic": true
     },
     {
       "brand": "Nissan",
       "vehicleType": "Bus",
       "totalSales": 59038508,
-      "avgPriceUsd": 55111,
+      "avgPriceUsd": 55678,
       "avgBatteryKwh": 80.1,
-      "countryCount": 124
+      "countryCount": 124,
+      "isSynthetic": true
     },
     {
       "brand": "Mercedes",
       "vehicleType": "SUV",
       "totalSales": 56202160,
-      "avgPriceUsd": 51820,
+      "avgPriceUsd": 52420,
       "avgBatteryKwh": 81.7,
-      "countryCount": 129
+      "countryCount": 129,
+      "isSynthetic": true
     },
     {
       "brand": "Mercedes",
       "vehicleType": "Car",
       "totalSales": 60930518,
-      "avgPriceUsd": 57641,
+      "avgPriceUsd": 55820,
       "avgBatteryKwh": 80.5,
-      "countryCount": 140
+      "countryCount": 140,
+      "isSynthetic": true
     },
     {
       "brand": "BYD",
       "vehicleType": "SUV",
       "totalSales": 42859986,
-      "avgPriceUsd": 58075,
+      "avgPriceUsd": 57662,
       "avgBatteryKwh": 78.7,
-      "countryCount": 97
+      "countryCount": 97,
+      "isSynthetic": true
     },
     {
       "brand": "Tesla",
       "vehicleType": "Bus",
       "totalSales": 46406429,
-      "avgPriceUsd": 56455,
+      "avgPriceUsd": 55544,
       "avgBatteryKwh": 78.1,
-      "countryCount": 108
+      "countryCount": 108,
+      "isSynthetic": true
     },
     {
       "brand": "Ford",
       "vehicleType": "Truck",
       "totalSales": 61992359,
-      "avgPriceUsd": 55414,
+      "avgPriceUsd": 55759,
       "avgBatteryKwh": 77.9,
-      "countryCount": 139
+      "countryCount": 139,
+      "isSynthetic": true
     },
     {
       "brand": "BYD",
       "vehicleType": "Truck",
       "totalSales": 59209417,
-      "avgPriceUsd": 54203,
+      "avgPriceUsd": 54676,
       "avgBatteryKwh": 77.6,
-      "countryCount": 131
+      "countryCount": 131,
+      "isSynthetic": true
     },
     {
       "brand": "Kia",
       "vehicleType": "Truck",
       "totalSales": 55689602,
-      "avgPriceUsd": 55526,
+      "avgPriceUsd": 55436,
       "avgBatteryKwh": 79,
-      "countryCount": 123
+      "countryCount": 123,
+      "isSynthetic": true
     },
     {
       "brand": "Volkswagen",
       "vehicleType": "Truck",
       "totalSales": 59720602,
-      "avgPriceUsd": 58806,
+      "avgPriceUsd": 59673,
       "avgBatteryKwh": 78.6,
-      "countryCount": 136
+      "countryCount": 136,
+      "isSynthetic": true
     },
     {
       "brand": "Volkswagen",
       "vehicleType": "Car",
       "totalSales": 56188110,
-      "avgPriceUsd": 55183,
+      "avgPriceUsd": 54370,
       "avgBatteryKwh": 80.3,
-      "countryCount": 125
+      "countryCount": 125,
+      "isSynthetic": true
     },
     {
       "brand": "Nissan",
       "vehicleType": "SUV",
       "totalSales": 60529741,
-      "avgPriceUsd": 55570,
+      "avgPriceUsd": 54008,
       "avgBatteryKwh": 78.1,
-      "countryCount": 141
+      "countryCount": 141,
+      "isSynthetic": true
     },
     {
       "brand": "Hyundai",
       "vehicleType": "Bus",
       "totalSales": 50051519,
-      "avgPriceUsd": 55000,
+      "avgPriceUsd": 54473,
       "avgBatteryKwh": 78,
-      "countryCount": 115
+      "countryCount": 115,
+      "isSynthetic": true
     },
     {
       "brand": "Tesla",
       "vehicleType": "SUV",
       "totalSales": 57519102,
-      "avgPriceUsd": 55522,
+      "avgPriceUsd": 53690,
       "avgBatteryKwh": 79.1,
-      "countryCount": 115
+      "countryCount": 115,
+      "isSynthetic": true
     },
     {
       "brand": "Nissan",
       "vehicleType": "Truck",
       "totalSales": 54460147,
-      "avgPriceUsd": 55499,
+      "avgPriceUsd": 56465,
       "avgBatteryKwh": 79,
-      "countryCount": 128
+      "countryCount": 128,
+      "isSynthetic": true
     },
     {
       "brand": "Kia",
       "vehicleType": "SUV",
       "totalSales": 55229550,
-      "avgPriceUsd": 57084,
+      "avgPriceUsd": 57479,
       "avgBatteryKwh": 76.7,
-      "countryCount": 130
+      "countryCount": 130,
+      "isSynthetic": true
     },
     {
       "brand": "Hyundai",
       "vehicleType": "Truck",
       "totalSales": 54885097,
-      "avgPriceUsd": 55873,
+      "avgPriceUsd": 55268,
       "avgBatteryKwh": 79,
-      "countryCount": 131
+      "countryCount": 131,
+      "isSynthetic": true
     },
     {
       "brand": "Nissan",
       "vehicleType": "Car",
       "totalSales": 60913903,
-      "avgPriceUsd": 57806,
+      "avgPriceUsd": 57152,
       "avgBatteryKwh": 78.5,
-      "countryCount": 129
+      "countryCount": 129,
+      "isSynthetic": true
     },
     {
       "brand": "BMW",
       "vehicleType": "Car",
       "totalSales": 45591258,
-      "avgPriceUsd": 54439,
+      "avgPriceUsd": 54482,
       "avgBatteryKwh": 78.2,
-      "countryCount": 111
+      "countryCount": 111,
+      "isSynthetic": true
     },
     {
       "brand": "Kia",
       "vehicleType": "Car",
       "totalSales": 68499452,
-      "avgPriceUsd": 53139,
+      "avgPriceUsd": 53171,
       "avgBatteryKwh": 77.6,
-      "countryCount": 146
+      "countryCount": 146,
+      "isSynthetic": true
     },
     {
       "brand": "Toyota",
       "vehicleType": "SUV",
       "totalSales": 58529144,
-      "avgPriceUsd": 57987,
+      "avgPriceUsd": 58832,
       "avgBatteryKwh": 82.2,
-      "countryCount": 134
+      "countryCount": 134,
+      "isSynthetic": true
     },
     {
       "brand": "Ford",
       "vehicleType": "Car",
       "totalSales": 56872164,
-      "avgPriceUsd": 55470,
+      "avgPriceUsd": 55289,
       "avgBatteryKwh": 77.7,
-      "countryCount": 118
+      "countryCount": 118,
+      "isSynthetic": true
     },
     {
       "brand": "BMW",
       "vehicleType": "SUV",
       "totalSales": 51488461,
-      "avgPriceUsd": 53935,
+      "avgPriceUsd": 53793,
       "avgBatteryKwh": 81.5,
-      "countryCount": 117
+      "countryCount": 117,
+      "isSynthetic": true
     },
     {
       "brand": "BYD",
       "vehicleType": "Car",
       "totalSales": 59465552,
-      "avgPriceUsd": 55673,
+      "avgPriceUsd": 55186,
       "avgBatteryKwh": 79.2,
-      "countryCount": 131
+      "countryCount": 131,
+      "isSynthetic": true
     },
     {
       "brand": "Toyota",
       "vehicleType": "Truck",
       "totalSales": 54944695,
-      "avgPriceUsd": 56435,
+      "avgPriceUsd": 55770,
       "avgBatteryKwh": 82.2,
-      "countryCount": 124
+      "countryCount": 124,
+      "isSynthetic": true
     },
     {
       "brand": "Toyota",
       "vehicleType": "Bus",
       "totalSales": 58646060,
-      "avgPriceUsd": 52464,
+      "avgPriceUsd": 51388,
       "avgBatteryKwh": 80.7,
-      "countryCount": 123
+      "countryCount": 123,
+      "isSynthetic": true
     },
     {
       "brand": "BMW",
       "vehicleType": "Truck",
       "totalSales": 57968312,
-      "avgPriceUsd": 56048,
+      "avgPriceUsd": 56298,
       "avgBatteryKwh": 78.1,
-      "countryCount": 136
+      "countryCount": 136,
+      "isSynthetic": true
     },
     {
       "brand": "Tesla",
       "vehicleType": "Car",
       "totalSales": 55337686,
-      "avgPriceUsd": 57143,
+      "avgPriceUsd": 55607,
       "avgBatteryKwh": 76.4,
-      "countryCount": 123
+      "countryCount": 123,
+      "isSynthetic": true
     },
     {
       "brand": "Hyundai",
       "vehicleType": "SUV",
       "totalSales": 61842323,
-      "avgPriceUsd": 56428,
+      "avgPriceUsd": 56061,
       "avgBatteryKwh": 81.3,
-      "countryCount": 131
+      "countryCount": 131,
+      "isSynthetic": true
     },
     {
       "brand": "Volkswagen",
       "vehicleType": "Bus",
       "totalSales": 52160257,
-      "avgPriceUsd": 55487,
+      "avgPriceUsd": 56110,
       "avgBatteryKwh": 81.1,
-      "countryCount": 117
+      "countryCount": 117,
+      "isSynthetic": true
     },
     {
       "brand": "Mercedes",
       "vehicleType": "Truck",
       "totalSales": 54781671,
-      "avgPriceUsd": 55392,
+      "avgPriceUsd": 54681,
       "avgBatteryKwh": 83.1,
-      "countryCount": 117
+      "countryCount": 117,
+      "isSynthetic": true
     },
     {
       "brand": "Kia",
       "vehicleType": "Bus",
       "totalSales": 58493162,
-      "avgPriceUsd": 55015,
+      "avgPriceUsd": 54336,
       "avgBatteryKwh": 83.1,
-      "countryCount": 122
+      "countryCount": 122,
+      "isSynthetic": true
     },
     {
       "brand": "BMW",
       "vehicleType": "Bus",
       "totalSales": 62471499,
-      "avgPriceUsd": 56133,
+      "avgPriceUsd": 56387,
       "avgBatteryKwh": 79.9,
-      "countryCount": 129
+      "countryCount": 129,
+      "isSynthetic": true
     }
-  ]
+  ],
+  "isSynthetic": true,
+  "sourceNote": "Data from global_ev_market_2026.csv — synthetic/forecast projections, not observed market data."
 }

@@ -569,6 +569,7 @@
     {
       "region": "Europe",
       "color": "#8E8DBA",
+      "dataNote": "IEA data covers EU27 member states only",
       "EV_sales": {
         "historical": [
           {

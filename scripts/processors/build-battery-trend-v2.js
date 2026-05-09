@@ -44,7 +44,8 @@ function computeGoodness(actual, predicted, numParams) {
     ssRes += (actual[i] - predicted[i]) ** 2
   }
   const r2 = 1 - ssRes / ssTot
-  const aic = n * Math.log(ssRes / n) + 2 * numParams
+  // AIC = n*ln(SSR) + 2k where k = numParams + 1 (variance parameter)
+  const aic = n * Math.log(ssRes) + 2 * (numParams + 1)
   return { r2: roundTo(r2, 6), aic: roundTo(aic, 2) }
 }
 
@@ -68,9 +69,9 @@ function fitExponentialDecay(data) {
   const { r2, aic } = computeGoodness(data.map(d => d.price), predictions, 2)
 
   const se = Math.sqrt(residuals.reduce((s, r) => s + r * r, 0) / (n - 2))
-  // Approximate t-value for 95% CI: for n > 20, t ≈ 2.0 is close enough
-  // Exact value depends on degrees of freedom (n-2)
-  const t95 = n > 30 ? 2.042 : 2.0 + 0.5 / (n - 2)
+  // Approximate t-value for 95% CI (df = n-2)
+  const df = n - 2
+  const t95 = df >= 30 ? 2.042 : 2.0 + 1.0 / (df - 1)
 
   return {
     name: 'Exponential Decay',
@@ -81,8 +82,9 @@ function fitExponentialDecay(data) {
     predictCI: (year) => {
       const t = year - year0
       const lnP = intercept + slope * t
+      const PHYSICAL_FLOOR = 30 // Minimum plausible battery cell cost ($/kWh)
       return {
-        lower: Math.exp(lnP - t95 * se),
+        lower: Math.max(Math.exp(lnP - t95 * se), PHYSICAL_FLOOR),
         upper: Math.exp(lnP + t95 * se),
       }
     },
@@ -92,10 +94,11 @@ function fitExponentialDecay(data) {
 
 // ─── Model 2: Bounded Exponential (floor + exp decay) ───
 // Nonlinear least squares via Levenberg-Marquardt
-// $50/kWh floor: based on estimated raw material costs (lithium, nickel, cobalt, graphite)
-// for NMC chemistry. See: BloombergNEF 2024, " Lithium-Ion Battery Costs & Survey"
-// This is a rough lower bound — actual costs vary by chemistry and commodity prices.
-function fitBoundedExponential(data, floorPrice = 50) {
+// $60/kWh floor: conservative estimate for LFP chemistry raw material costs.
+// BloombergNEF 2024 estimates NMC materials at $70-100/kWh, LFP at $50-70/kWh.
+// Using $60 as a blended chemistry floor (weighted toward LFP for future mix).
+// Source: BloombergNEF "Lithium-Ion Battery Costs & Survey" (H2 2024); IEA GECM 2024.
+function fitBoundedExponential(data, floorPrice = 60) {
   const year0 = data[0].year
   const L = floorPrice
 
@@ -119,14 +122,19 @@ function fitBoundedExponential(data, floorPrice = 50) {
       const da = expTerm
       const db = -a * t * expTerm
 
-      JtJ[0][0] += da * da + lambda
+      // Marquardt modification: scale lambda by diagonal curvature
+      JtJ[0][0] += da * da
       JtJ[0][1] += da * db
       JtJ[1][0] += db * da
-      JtJ[1][1] += db * db + lambda
+      JtJ[1][1] += db * db
       JtR[0] += da * residual
       JtR[1] += db * residual
       ssRes += residual * residual
     }
+
+    // Marquardt modification: add lambda * diag(JtJ) for scaled damping
+    JtJ[0][0] += lambda * JtJ[0][0]
+    JtJ[1][1] += lambda * JtJ[1][1]
 
     const det = JtJ[0][0] * JtJ[1][1] - JtJ[0][1] * JtJ[1][0]
     if (Math.abs(det) < 1e-20) { lambda *= 10; continue }
@@ -170,10 +178,13 @@ function fitBoundedExponential(data, floorPrice = 50) {
     formula: `P(t) = $${L} + ${roundTo(a, 0)} × exp(-${roundTo(b, 4)} × t)`,
     parameters: { a: roundTo(a, 4), b: roundTo(b, 6), floor: L, year0 },
     predict,
-    predictCI: (year) => ({
-      lower: Math.max(predict(year) - 2 * residSd, L),
-      upper: predict(year) + 2 * residSd,
-    }),
+    predictCI: (year) => {
+      const PHYSICAL_FLOOR = 30
+      return {
+        lower: Math.max(predict(year) - 2 * residSd, PHYSICAL_FLOOR),
+        upper: predict(year) + 2 * residSd,
+      }
+    },
     r2, aic, residuals,
   }
 }
@@ -242,8 +253,9 @@ function fitExperienceCurve(priceData, evStockData) {
     parameters: { a: roundTo(a, 4), b: roundTo(b, 6), doublingRate, yearStart: paired[0].year },
     predict,
     predictCI: (year) => {
+      const PHYSICAL_FLOOR = 30
       const p = predict(year)
-      return { lower: Math.max(p - 2 * residSd, 1), upper: p + 2 * residSd }
+      return { lower: Math.max(p - 2 * residSd, PHYSICAL_FLOOR), upper: p + 2 * residSd }
     },
     r2, aic, residuals,
     pairedDataPoints: paired.length,
@@ -337,7 +349,7 @@ export async function buildBatteryTrendV2() {
   console.log(`  [1] ${expModel.name}: R²=${expModel.r2}, AIC=${expModel.aic}`)
   console.log(`      ${expModel.formula}`)
 
-  const boundedModel = fitBoundedExponential(data, 50)
+  const boundedModel = fitBoundedExponential(data, 60)
   console.log(`  [2] ${boundedModel.name}: R²=${boundedModel.r2}, AIC=${boundedModel.aic}`)
   console.log(`      ${boundedModel.formula}`)
 
@@ -352,7 +364,7 @@ export async function buildBatteryTrendV2() {
 
   // 3b. Fit recent-data model for prediction (avoids early high-price dominance)
   const recentData = data.filter(d => d.year >= 2015)
-  const recentBoundedModel = fitBoundedExponential(recentData, 50)
+  const recentBoundedModel = fitBoundedExponential(recentData, 60)
   console.log(`  [4] Recent Bounded Exponential (2015+): R²=${recentBoundedModel.r2}, AIC=${recentBoundedModel.aic}`)
   console.log(`      ${recentBoundedModel.formula}`)
 
@@ -367,7 +379,7 @@ export async function buildBatteryTrendV2() {
     return {
       year,
       priceUsdPerKwh: predicted,
-      confidenceLower: roundTo(Math.max(ci.lower, 0), 2),
+      confidenceLower: roundTo(Math.max(ci.lower, 30), 2),
       confidenceUpper: isFinite(ci.upper) ? roundTo(ci.upper, 2) : roundTo(predicted * 2, 2),
     }
   })
@@ -426,7 +438,7 @@ export async function buildBatteryTrendV2() {
     ],
     thresholds: [
       { value: 100, label: 'Cost parity threshold ($100/kWh)' },
-      { value: 50, label: 'Material cost floor estimate ($50/kWh)' },
+      { value: 60, label: 'Material cost floor estimate ($60/kWh, LFP-blended)' },
     ],
   }
 

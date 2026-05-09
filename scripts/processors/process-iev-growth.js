@@ -50,7 +50,7 @@ export async function processIeaGrowth() {
   }
 
   // Target regions for visualization
-  const targetRegions = ['World', 'China', 'United States', 'Europe', 'India', 'Norway', 'Rest of the world']
+  const targetRegions = ['World', 'China', 'United States', 'European Union', 'Europe', 'India', 'Norway', 'Rest of the world']
 
   // Parse all relevant rows
   const rows = []
@@ -65,17 +65,19 @@ export async function processIeaGrowth() {
     const value = parseFloat(cols[idx.value])
 
     if (isNaN(year) || isNaN(value)) continue
-    if (!targetRegions.includes(region) && region !== 'European Union') continue
+    if (!targetRegions.includes(region)) continue
     if (mode !== 'Cars') continue  // Focus on cars for now
 
     rows.push({ region, parameter, mode, powertrain, category, year, value })
   }
 
-  // Map "European Union" to "Europe" (note: UK, Norway, Switzerland are not in EU
-  // but are often grouped under "Europe" in IEA data — this renaming may slightly
-  // overcount EU-specific policy effects as "European")
+  // IEA uses "European Union" for EU27 countries. Map to "Europe" for
+  // compatibility with downstream chart components (EvAdoptionRace,
+  // EvGrowthAreaChart). Add dataNote to clarify data scope.
   for (const r of rows) {
-    if (r.region === 'European Union') r.region = 'Europe'
+    if (r.region === 'European Union') {
+      r.region = 'Europe'
+    }
   }
 
   // Aggregate: get EV sales, EV stock, EV sales share for Cars, BEV+PHEV aggregate
@@ -102,6 +104,7 @@ export async function processIeaGrowth() {
 
   for (const region of regions) {
     const regionData = { region, color: regionColors[region] || '#9B9590' }
+    if (region === 'Europe') regionData.dataNote = 'IEA data covers EU27 member states only'
 
     for (const metric of metrics) {
       const metricRows = rows.filter(r =>
@@ -133,8 +136,11 @@ export async function processIeaGrowth() {
       }
     }
 
-    // Calculate CAGR for historical EV sales (note: uses only first/last endpoints,
-    // ignoring intermediate volatility — may over/understate if growth was non-monotonic)
+    // CAGR (Compound Annual Growth Rate) for historical EV sales.
+    // This is an **endpoint-based** CAGR: it uses ONLY the first and last data points
+    // (CAGR = (V_final / V_initial) ^ (1 / n) - 1) and ignores intermediate volatility.
+    // As a result, it does not reflect year-over-year fluctuations, dips, or spikes —
+    // it only captures the smoothed long-run growth trajectory between two endpoints.
     const salesHist = regionData.EV_sales?.historical || []
     if (salesHist.length >= 2) {
       const first = salesHist[0]

@@ -13,7 +13,12 @@ export async function processPaperData() {
     console.log(`  Sheets: ${workbook.SheetNames.join(', ')}`)
   } catch {
     console.log('  Paper data.xlsx not found, using fallback data')
-    return { batteryPrice: getFallbackBatteryPrice(), classSummary: getFallbackClassSummary() }
+    return {
+      batteryPrice: getFallbackBatteryPrice().map(d => ({ ...d, isFallback: true })),
+      classSummary: getFallbackClassSummary().map(d => ({ ...d, isFallback: true })),
+      source: 'hardcoded_fallback',
+      isFallback: true,
+    }
   }
 
   // === Battery Price sheet ===
@@ -39,26 +44,46 @@ function extractBatteryPrice(workbook, sheetNames) {
   const sheet = workbook.Sheets[batterySheetName]
   const rows = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: null })
 
-  // Try to find year and price columns
-  const actual = []
-  for (let i = 0; i < rows.length; i++) {
-    const row = rows[i]
-    // Look for rows where first or second column looks like a year (2010-2025)
-    for (let col = 0; col < Math.min(row.length, 5); col++) {
-      const val = row[col]
-      if (typeof val === 'number' && val >= 2010 && val <= 2025) {
-        const year = val
-        // Price is typically in the next or previous numeric column
-        for (let priceCol = 0; priceCol < Math.min(row.length, 5); priceCol++) {
-          if (priceCol === col) continue
-          const price = row[priceCol]
-          if (typeof price === 'number' && price > 50 && price < 2000) {
-            actual.push({ year, priceUsdPerKwh: price })
-            break
-          }
-        }
-        break
+  // Identify columns by header names (first row)
+  const header = rows[0] || []
+  const priceKeywords = ['price', 'cost', 'usd', 'kwh']
+  let yearCol = header.findIndex(h => typeof h === 'string' && /year/i.test(h))
+  let priceCol = header.findIndex(h => {
+    if (typeof h !== 'string') return false
+    const lower = h.toLowerCase()
+    return priceKeywords.some(kw => lower.includes(kw))
+  })
+
+  // If no explicit header, fall back to scanning the first data row
+  if (yearCol < 0 || priceCol < 0) {
+    for (let i = 1; i < rows.length && (yearCol < 0 || priceCol < 0); i++) {
+      const row = rows[i]
+      for (let c = 0; c < (row?.length || 0); c++) {
+        const val = row[c]
+        if (yearCol < 0 && typeof val === 'number' && val >= 2010 && val <= 2025) yearCol = c
       }
+    }
+    // If priceCol still unknown, pick the first numeric column that is not yearCol
+    if (priceCol < 0) {
+      const probeRow = rows.find(r => Array.isArray(r) && r.length > 1)
+      if (probeRow) {
+        for (let c = 0; c < probeRow.length; c++) {
+          if (c === yearCol) continue
+          if (typeof probeRow[c] === 'number') { priceCol = c; break }
+        }
+      }
+    }
+  }
+
+  // Extract data using identified column indices
+  const actual = []
+  for (let i = 1; i < rows.length; i++) {
+    const row = rows[i]
+    if (!row) continue
+    const year = yearCol >= 0 ? row[yearCol] : undefined
+    const price = priceCol >= 0 ? row[priceCol] : undefined
+    if (typeof year === 'number' && year >= 2010 && year <= 2025 && typeof price === 'number') {
+      actual.push({ year, priceUsdPerKwh: price })
     }
   }
 
@@ -93,30 +118,46 @@ function extractClassSummary(workbook, sheetNames) {
   const sheet = workbook.Sheets[classSheetName]
   const rows = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: null })
 
-  // Try to extract year + class percentages
-  const data = []
+  // Identify columns by header names (first row)
+  const header = rows[0] || []
   const classLabels = ['A00', 'A0', 'A', 'B', 'C']
 
-  for (const row of rows) {
-    // Find year-like value
-    let yearIdx = -1
-    for (let i = 0; i < row.length; i++) {
-      if (typeof row[i] === 'number' && row[i] >= 2015 && row[i] <= 2025) {
-        yearIdx = i
-        break
+  // Find year column
+  let yearCol = header.findIndex(h => typeof h === 'string' && /year/i.test(h))
+
+  // Find segment columns by name
+  const segColMap = {}
+  for (let c = 0; c < header.length; c++) {
+    const h = String(header[c] || '').toUpperCase()
+    for (const seg of classLabels) {
+      // Match 'A00' exactly, or 'A0' (not 'A00'), or standalone 'A', or 'B', or 'C'
+      if (seg === 'A00' && (h === 'A00' || h.includes('A00'))) {
+        segColMap[seg] = c
+      } else if (seg === 'A0' && (h === 'A0' || (h.includes('A0') && !h.includes('A00')))) {
+        segColMap[seg] = c
+      } else if (seg === 'A' && (h === 'A' || (h.includes('A') && !h.includes('A0') && !h.includes('A00')))) {
+        segColMap[seg] = c
+      } else if ((seg === 'B' || seg === 'C') && h.includes(seg)) {
+        segColMap[seg] = c
       }
     }
-    if (yearIdx < 0) continue
+  }
 
-    const year = row[yearIdx]
+  // Extract data
+  const data = []
+  for (let i = 1; i < rows.length; i++) {
+    const row = rows[i]
+    if (!row) continue
+
+    // Find year — from identified column or scan
+    const year = yearCol >= 0 ? row[yearCol] : row.find(v => typeof v === 'number' && v >= 2015 && v <= 2025)
+    if (typeof year !== 'number' || year < 2015 || year > 2025) continue
+
     const segments = {}
-    let segIdx = 0
-    for (let i = 0; i < row.length && segIdx < classLabels.length; i++) {
-      if (i === yearIdx) continue
-      const val = row[i]
-      if (typeof val === 'number' && val >= 0 && val <= 1) {
-        segments[classLabels[segIdx]] = val
-        segIdx++
+    for (const seg of classLabels) {
+      if (segColMap[seg] !== undefined) {
+        const val = row[segColMap[seg]]
+        if (typeof val === 'number') segments[seg] = val
       }
     }
 

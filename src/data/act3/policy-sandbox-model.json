@@ -1,6 +1,7 @@
 {
   "model": {
     "type": "multiple_linear_regression",
+    "description": "OLS with output clamped to [0%, 100%]. Correlation analysis — does not imply causation.",
     "features": [
       {
         "name": "ev_subsidy_usd",
@@ -76,73 +77,112 @@
       }
     ],
     "intercept": 0.04444506,
-    "r2": 0.6545,
-    "rmse": 4.4626,
-    "n": 400
+    "r2": 0.7056,
+    "cvR2": 0.6707,
+    "rmse": 4.1196,
+    "n": 400,
+    "vif": [
+      {
+        "feature": "ev_subsidy_usd",
+        "label": "Subsidy (USD)",
+        "vif": 1.48,
+        "r2": 0.325
+      },
+      {
+        "feature": "charging_stations",
+        "label": "Charging Stations",
+        "vif": 4.25,
+        "r2": 0.7649
+      },
+      {
+        "feature": "fuel_price_usd_per_liter",
+        "label": "Fuel Price (USD/L)",
+        "vif": 4.75,
+        "r2": 0.7897
+      },
+      {
+        "feature": "electricity_price_usd_per_kwh",
+        "label": "Electricity Price (USD/kWh)",
+        "vif": 1.93,
+        "r2": 0.4819
+      },
+      {
+        "feature": "emission_regulation_score",
+        "label": "Regulation Score",
+        "vif": 10.77,
+        "r2": 0.9071
+      },
+      {
+        "feature": "gdp_per_capita",
+        "label": "GDP per Capita (USD)",
+        "vif": 2.45,
+        "r2": 0.5917
+      }
+    ]
   },
   "actualVsPredicted": [
     {
       "country": "Australia",
       "year": 2010,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -7.1879,
-      "residual": 7.1945
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Australia",
       "year": 2011,
       "actualMarketShare": 0.02,
-      "predictedMarketShare": -4.3569,
-      "residual": 4.3769
+      "predictedMarketShare": 0,
+      "residual": 0.02
     },
     {
       "country": "Australia",
       "year": 2012,
       "actualMarketShare": 0.0267,
-      "predictedMarketShare": -4.0343,
-      "residual": 4.061
+      "predictedMarketShare": 0,
+      "residual": 0.0267
     },
     {
       "country": "Australia",
       "year": 2013,
       "actualMarketShare": 0.0567,
-      "predictedMarketShare": -3.6536,
-      "residual": 3.7103
+      "predictedMarketShare": 0,
+      "residual": 0.0567
     },
     {
       "country": "Australia",
       "year": 2014,
       "actualMarketShare": 0.0833,
-      "predictedMarketShare": -3.7418,
-      "residual": 3.8251
+      "predictedMarketShare": 0,
+      "residual": 0.0833
     },
     {
       "country": "Australia",
       "year": 2015,
       "actualMarketShare": 0.1233,
-      "predictedMarketShare": -2.9782,
-      "residual": 3.1015
+      "predictedMarketShare": 0,
+      "residual": 0.1233
     },
     {
       "country": "Australia",
       "year": 2016,
       "actualMarketShare": 0.16,
-      "predictedMarketShare": -2.3886,
-      "residual": 2.5486
+      "predictedMarketShare": 0,
+      "residual": 0.16
     },
     {
       "country": "Australia",
       "year": 2017,
       "actualMarketShare": 0.29,
-      "predictedMarketShare": -1.4645,
-      "residual": 1.7545
+      "predictedMarketShare": 0,
+      "residual": 0.29
     },
     {
       "country": "Australia",
       "year": 2018,
       "actualMarketShare": 0.42,
-      "predictedMarketShare": -0.3501,
-      "residual": 0.7701
+      "predictedMarketShare": 0,
+      "residual": 0.42
     },
     {
       "country": "Australia",
@@ -421,50 +461,50 @@
       "country": "Brazil",
       "year": 2010,
       "actualMarketShare": 0,
-      "predictedMarketShare": -5.4945,
-      "residual": 5.4945
+      "predictedMarketShare": 0,
+      "residual": 0
     },
     {
       "country": "Brazil",
       "year": 2011,
       "actualMarketShare": 0,
-      "predictedMarketShare": -3.7974,
-      "residual": 3.7974
+      "predictedMarketShare": 0,
+      "residual": 0
     },
     {
       "country": "Brazil",
       "year": 2012,
       "actualMarketShare": 0,
-      "predictedMarketShare": -3.1049,
-      "residual": 3.1049
+      "predictedMarketShare": 0,
+      "residual": 0
     },
     {
       "country": "Brazil",
       "year": 2013,
       "actualMarketShare": 0.0033,
-      "predictedMarketShare": -3.0534,
-      "residual": 3.0568
+      "predictedMarketShare": 0,
+      "residual": 0.0033
     },
     {
       "country": "Brazil",
       "year": 2014,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -2.3163,
-      "residual": 2.3229
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Brazil",
       "year": 2015,
       "actualMarketShare": 0.02,
-      "predictedMarketShare": -1.7054,
-      "residual": 1.7254
+      "predictedMarketShare": 0,
+      "residual": 0.02
     },
     {
       "country": "Brazil",
       "year": 2016,
       "actualMarketShare": 0.0267,
-      "predictedMarketShare": -1.3677,
-      "residual": 1.3943
+      "predictedMarketShare": 0,
+      "residual": 0.0267
     },
     {
       "country": "Brazil",
@@ -533,50 +573,50 @@
       "country": "Canada",
       "year": 2010,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -3.3074,
-      "residual": 3.314
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Canada",
       "year": 2011,
       "actualMarketShare": 0.11,
-      "predictedMarketShare": -2.9835,
-      "residual": 3.0935
+      "predictedMarketShare": 0,
+      "residual": 0.11
     },
     {
       "country": "Canada",
       "year": 2012,
       "actualMarketShare": 0.2133,
-      "predictedMarketShare": -2.5104,
-      "residual": 2.7237
+      "predictedMarketShare": 0,
+      "residual": 0.2133
     },
     {
       "country": "Canada",
       "year": 2013,
       "actualMarketShare": 0.29,
-      "predictedMarketShare": -2.3291,
-      "residual": 2.6191
+      "predictedMarketShare": 0,
+      "residual": 0.29
     },
     {
       "country": "Canada",
       "year": 2014,
       "actualMarketShare": 0.3533,
-      "predictedMarketShare": -1.6418,
-      "residual": 1.9951
+      "predictedMarketShare": 0,
+      "residual": 0.3533
     },
     {
       "country": "Canada",
       "year": 2015,
       "actualMarketShare": 0.4567,
-      "predictedMarketShare": -1.3806,
-      "residual": 1.8372
+      "predictedMarketShare": 0,
+      "residual": 0.4567
     },
     {
       "country": "Canada",
       "year": 2016,
       "actualMarketShare": 0.5967,
-      "predictedMarketShare": -0.4592,
-      "residual": 1.0559
+      "predictedMarketShare": 0,
+      "residual": 0.5967
     },
     {
       "country": "Canada",
@@ -645,29 +685,29 @@
       "country": "China",
       "year": 2010,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -4.6824,
-      "residual": 4.689
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "China",
       "year": 2011,
       "actualMarketShare": 0.0367,
-      "predictedMarketShare": -3.4944,
-      "residual": 3.5311
+      "predictedMarketShare": 0,
+      "residual": 0.0367
     },
     {
       "country": "China",
       "year": 2012,
       "actualMarketShare": 0.0567,
-      "predictedMarketShare": -2.0927,
-      "residual": 2.1493
+      "predictedMarketShare": 0,
+      "residual": 0.0567
     },
     {
       "country": "China",
       "year": 2013,
       "actualMarketShare": 0.1933,
-      "predictedMarketShare": -1.1958,
-      "residual": 1.3892
+      "predictedMarketShare": 0,
+      "residual": 0.1933
     },
     {
       "country": "China",
@@ -981,43 +1021,43 @@
       "country": "India",
       "year": 2010,
       "actualMarketShare": 0.0033,
-      "predictedMarketShare": -4.5191,
-      "residual": 4.5224
+      "predictedMarketShare": 0,
+      "residual": 0.0033
     },
     {
       "country": "India",
       "year": 2011,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -2.2952,
-      "residual": 2.3018
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "India",
       "year": 2012,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -2.0884,
-      "residual": 2.0951
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "India",
       "year": 2013,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -1.3828,
-      "residual": 1.3895
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "India",
       "year": 2014,
       "actualMarketShare": 0.0367,
-      "predictedMarketShare": -0.8306,
-      "residual": 0.8673
+      "predictedMarketShare": 0,
+      "residual": 0.0367
     },
     {
       "country": "India",
       "year": 2015,
       "actualMarketShare": 0.0467,
-      "predictedMarketShare": -0.5342,
-      "residual": 0.5809
+      "predictedMarketShare": 0,
+      "residual": 0.0467
     },
     {
       "country": "India",
@@ -1093,78 +1133,78 @@
       "country": "Indonesia",
       "year": 2010,
       "actualMarketShare": 0.0033,
-      "predictedMarketShare": -7.3071,
-      "residual": 7.3105
+      "predictedMarketShare": 0,
+      "residual": 0.0033
     },
     {
       "country": "Indonesia",
       "year": 2011,
       "actualMarketShare": 0,
-      "predictedMarketShare": -6.2114,
-      "residual": 6.2114
+      "predictedMarketShare": 0,
+      "residual": 0
     },
     {
       "country": "Indonesia",
       "year": 2012,
       "actualMarketShare": 0,
-      "predictedMarketShare": -5.8945,
-      "residual": 5.8945
+      "predictedMarketShare": 0,
+      "residual": 0
     },
     {
       "country": "Indonesia",
       "year": 2013,
       "actualMarketShare": 0.0033,
-      "predictedMarketShare": -5.7295,
-      "residual": 5.7328
+      "predictedMarketShare": 0,
+      "residual": 0.0033
     },
     {
       "country": "Indonesia",
       "year": 2014,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -5.3535,
-      "residual": 5.3602
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Indonesia",
       "year": 2015,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -4.9764,
-      "residual": 4.983
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Indonesia",
       "year": 2016,
       "actualMarketShare": 0.02,
-      "predictedMarketShare": -4.197,
-      "residual": 4.217
+      "predictedMarketShare": 0,
+      "residual": 0.02
     },
     {
       "country": "Indonesia",
       "year": 2017,
       "actualMarketShare": 0.02,
-      "predictedMarketShare": -3.6555,
-      "residual": 3.6755
+      "predictedMarketShare": 0,
+      "residual": 0.02
     },
     {
       "country": "Indonesia",
       "year": 2018,
       "actualMarketShare": 0.0267,
-      "predictedMarketShare": -3.4328,
-      "residual": 3.4595
+      "predictedMarketShare": 0,
+      "residual": 0.0267
     },
     {
       "country": "Indonesia",
       "year": 2019,
       "actualMarketShare": 0.0767,
-      "predictedMarketShare": -1.84,
-      "residual": 1.9167
+      "predictedMarketShare": 0,
+      "residual": 0.0767
     },
     {
       "country": "Indonesia",
       "year": 2020,
       "actualMarketShare": 0.0833,
-      "predictedMarketShare": -1.0188,
-      "residual": 1.1022
+      "predictedMarketShare": 0,
+      "residual": 0.0833
     },
     {
       "country": "Indonesia",
@@ -1317,8 +1357,8 @@
       "country": "Japan",
       "year": 2010,
       "actualMarketShare": 0.0367,
-      "predictedMarketShare": -0.4375,
-      "residual": 0.4742
+      "predictedMarketShare": 0,
+      "residual": 0.0367
     },
     {
       "country": "Japan",
@@ -1429,64 +1469,64 @@
       "country": "Mexico",
       "year": 2010,
       "actualMarketShare": 0.0033,
-      "predictedMarketShare": -8.2199,
-      "residual": 8.2232
+      "predictedMarketShare": 0,
+      "residual": 0.0033
     },
     {
       "country": "Mexico",
       "year": 2011,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -5.4518,
-      "residual": 5.4585
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Mexico",
       "year": 2012,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -4.9125,
-      "residual": 4.9192
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Mexico",
       "year": 2013,
       "actualMarketShare": 0.02,
-      "predictedMarketShare": -4.2036,
-      "residual": 4.2236
+      "predictedMarketShare": 0,
+      "residual": 0.02
     },
     {
       "country": "Mexico",
       "year": 2014,
       "actualMarketShare": 0.02,
-      "predictedMarketShare": -3.6089,
-      "residual": 3.6289
+      "predictedMarketShare": 0,
+      "residual": 0.02
     },
     {
       "country": "Mexico",
       "year": 2015,
       "actualMarketShare": 0.02,
-      "predictedMarketShare": -3.2252,
-      "residual": 3.2452
+      "predictedMarketShare": 0,
+      "residual": 0.02
     },
     {
       "country": "Mexico",
       "year": 2016,
       "actualMarketShare": 0.0267,
-      "predictedMarketShare": -2.4151,
-      "residual": 2.4418
+      "predictedMarketShare": 0,
+      "residual": 0.0267
     },
     {
       "country": "Mexico",
       "year": 2017,
       "actualMarketShare": 0.0467,
-      "predictedMarketShare": -1.6509,
-      "residual": 1.6975
+      "predictedMarketShare": 0,
+      "residual": 0.0467
     },
     {
       "country": "Mexico",
       "year": 2018,
       "actualMarketShare": 0.0633,
-      "predictedMarketShare": -0.6618,
-      "residual": 0.7251
+      "predictedMarketShare": 0,
+      "residual": 0.0633
     },
     {
       "country": "Mexico",
@@ -1765,36 +1805,36 @@
       "country": "Poland",
       "year": 2010,
       "actualMarketShare": 0.01,
-      "predictedMarketShare": -2.643,
-      "residual": 2.653
+      "predictedMarketShare": 0,
+      "residual": 0.01
     },
     {
       "country": "Poland",
       "year": 2011,
       "actualMarketShare": 0.01,
-      "predictedMarketShare": -0.7363,
-      "residual": 0.7463
+      "predictedMarketShare": 0,
+      "residual": 0.01
     },
     {
       "country": "Poland",
       "year": 2012,
       "actualMarketShare": 0.0233,
-      "predictedMarketShare": -0.3825,
-      "residual": 0.4058
+      "predictedMarketShare": 0,
+      "residual": 0.0233
     },
     {
       "country": "Poland",
       "year": 2013,
       "actualMarketShare": 0.0233,
-      "predictedMarketShare": -0.0503,
-      "residual": 0.0736
+      "predictedMarketShare": 0,
+      "residual": 0.0233
     },
     {
       "country": "Poland",
       "year": 2014,
       "actualMarketShare": 0.0267,
-      "predictedMarketShare": -0.309,
-      "residual": 0.3357
+      "predictedMarketShare": 0,
+      "residual": 0.0267
     },
     {
       "country": "Poland",
@@ -2437,71 +2477,71 @@
       "country": "Thailand",
       "year": 2010,
       "actualMarketShare": 0,
-      "predictedMarketShare": -5.9242,
-      "residual": 5.9242
+      "predictedMarketShare": 0,
+      "residual": 0
     },
     {
       "country": "Thailand",
       "year": 2011,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -4.7107,
-      "residual": 4.7173
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Thailand",
       "year": 2012,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -3.8744,
-      "residual": 3.8811
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Thailand",
       "year": 2013,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -3.6788,
-      "residual": 3.6855
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Thailand",
       "year": 2014,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -3.2756,
-      "residual": 3.2823
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Thailand",
       "year": 2015,
       "actualMarketShare": 0.02,
-      "predictedMarketShare": -2.7046,
-      "residual": 2.7246
+      "predictedMarketShare": 0,
+      "residual": 0.02
     },
     {
       "country": "Thailand",
       "year": 2016,
       "actualMarketShare": 0.0267,
-      "predictedMarketShare": -2.5448,
-      "residual": 2.5715
+      "predictedMarketShare": 0,
+      "residual": 0.0267
     },
     {
       "country": "Thailand",
       "year": 2017,
       "actualMarketShare": 0.0467,
-      "predictedMarketShare": -2.1259,
-      "residual": 2.1725
+      "predictedMarketShare": 0,
+      "residual": 0.0467
     },
     {
       "country": "Thailand",
       "year": 2018,
       "actualMarketShare": 0.0467,
-      "predictedMarketShare": -1.3971,
-      "residual": 1.4438
+      "predictedMarketShare": 0,
+      "residual": 0.0467
     },
     {
       "country": "Thailand",
       "year": 2019,
       "actualMarketShare": 0.14,
-      "predictedMarketShare": -0.0152,
-      "residual": 0.1552
+      "predictedMarketShare": 0,
+      "residual": 0.14
     },
     {
       "country": "Thailand",
@@ -2549,57 +2589,57 @@
       "country": "Turkey",
       "year": 2010,
       "actualMarketShare": 0.0033,
-      "predictedMarketShare": -3.3481,
-      "residual": 3.3515
+      "predictedMarketShare": 0,
+      "residual": 0.0033
     },
     {
       "country": "Turkey",
       "year": 2011,
       "actualMarketShare": 0,
-      "predictedMarketShare": -1.5585,
-      "residual": 1.5585
+      "predictedMarketShare": 0,
+      "residual": 0
     },
     {
       "country": "Turkey",
       "year": 2012,
       "actualMarketShare": 0.0033,
-      "predictedMarketShare": -1.3051,
-      "residual": 1.3084
+      "predictedMarketShare": 0,
+      "residual": 0.0033
     },
     {
       "country": "Turkey",
       "year": 2013,
       "actualMarketShare": 0.01,
-      "predictedMarketShare": -1.0594,
-      "residual": 1.0694
+      "predictedMarketShare": 0,
+      "residual": 0.01
     },
     {
       "country": "Turkey",
       "year": 2014,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -1.2271,
-      "residual": 1.2338
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Turkey",
       "year": 2015,
       "actualMarketShare": 0.0067,
-      "predictedMarketShare": -0.9288,
-      "residual": 0.9354
+      "predictedMarketShare": 0,
+      "residual": 0.0067
     },
     {
       "country": "Turkey",
       "year": 2016,
       "actualMarketShare": 0.02,
-      "predictedMarketShare": -0.2807,
-      "residual": 0.3007
+      "predictedMarketShare": 0,
+      "residual": 0.02
     },
     {
       "country": "Turkey",
       "year": 2017,
       "actualMarketShare": 0.0367,
-      "predictedMarketShare": -0.3293,
-      "residual": 0.366
+      "predictedMarketShare": 0,
+      "residual": 0.0367
     },
     {
       "country": "Turkey",
@@ -2773,78 +2813,78 @@
       "country": "United States",
       "year": 2010,
       "actualMarketShare": 0.1067,
-      "predictedMarketShare": -7.1277,
-      "residual": 7.2344
+      "predictedMarketShare": 0,
+      "residual": 0.1067
     },
     {
       "country": "United States",
       "year": 2011,
       "actualMarketShare": 0.1933,
-      "predictedMarketShare": -6.2181,
-      "residual": 6.4114
+      "predictedMarketShare": 0,
+      "residual": 0.1933
     },
     {
       "country": "United States",
       "year": 2012,
       "actualMarketShare": 0.3367,
-      "predictedMarketShare": -5.7988,
-      "residual": 6.1355
+      "predictedMarketShare": 0,
+      "residual": 0.3367
     },
     {
       "country": "United States",
       "year": 2013,
       "actualMarketShare": 0.5233,
-      "predictedMarketShare": -5.0556,
-      "residual": 5.5789
+      "predictedMarketShare": 0,
+      "residual": 0.5233
     },
     {
       "country": "United States",
       "year": 2014,
       "actualMarketShare": 0.6633,
-      "predictedMarketShare": -4.8351,
-      "residual": 5.4984
+      "predictedMarketShare": 0,
+      "residual": 0.6633
     },
     {
       "country": "United States",
       "year": 2015,
       "actualMarketShare": 0.7733,
-      "predictedMarketShare": -4.0848,
-      "residual": 4.8581
+      "predictedMarketShare": 0,
+      "residual": 0.7733
     },
     {
       "country": "United States",
       "year": 2016,
       "actualMarketShare": 0.83,
-      "predictedMarketShare": -3.6227,
-      "residual": 4.4527
+      "predictedMarketShare": 0,
+      "residual": 0.83
     },
     {
       "country": "United States",
       "year": 2017,
       "actualMarketShare": 1.4733,
-      "predictedMarketShare": -2.8064,
-      "residual": 4.2797
+      "predictedMarketShare": 0,
+      "residual": 1.4733
     },
     {
       "country": "United States",
       "year": 2018,
       "actualMarketShare": 1.7733,
-      "predictedMarketShare": -2.4327,
-      "residual": 4.206
+      "predictedMarketShare": 0,
+      "residual": 1.7733
     },
     {
       "country": "United States",
       "year": 2019,
       "actualMarketShare": 1.7633,
-      "predictedMarketShare": -1.2335,
-      "residual": 2.9968
+      "predictedMarketShare": 0,
+      "residual": 1.7633
     },
     {
       "country": "United States",
       "year": 2020,
       "actualMarketShare": 2.2467,
-      "predictedMarketShare": -0.5582,
-      "residual": 2.8049
+      "predictedMarketShare": 0,
+      "residual": 2.2467
     },
     {
       "country": "United States",
@@ -2884,44 +2924,44 @@
   ],
   "sensitivityAnalysis": [
     {
-      "feature": "emission_regulation_score",
-      "label": "Regulation Score",
-      "partialR2": 0.0401,
-      "marginalEffect": 0.248366,
+      "feature": "ev_subsidy_usd",
+      "label": "Subsidy (USD)",
+      "partialR2": 0.0305,
+      "marginalEffect": 0.00068,
       "importanceRank": 1
     },
     {
-      "feature": "ev_subsidy_usd",
-      "label": "Subsidy (USD)",
-      "partialR2": 0.0332,
-      "marginalEffect": 0.00068,
+      "feature": "emission_regulation_score",
+      "label": "Regulation Score",
+      "partialR2": 0.0284,
+      "marginalEffect": 0.248366,
       "importanceRank": 2
     },
     {
       "feature": "gdp_per_capita",
       "label": "GDP per Capita (USD)",
-      "partialR2": 0.0208,
+      "partialR2": 0.0171,
       "marginalEffect": 1.742193,
       "importanceRank": 3
     },
     {
-      "feature": "charging_stations",
-      "label": "Charging Stations",
-      "partialR2": 0.0112,
-      "marginalEffect": 0.611015,
+      "feature": "fuel_price_usd_per_liter",
+      "label": "Fuel Price (USD/L)",
+      "partialR2": 0.0164,
+      "marginalEffect": 4.674598,
       "importanceRank": 4
     },
     {
-      "feature": "fuel_price_usd_per_liter",
-      "label": "Fuel Price (USD/L)",
-      "partialR2": 0.0105,
-      "marginalEffect": 4.674598,
+      "feature": "charging_stations",
+      "label": "Charging Stations",
+      "partialR2": 0.0151,
+      "marginalEffect": 0.611015,
       "importanceRank": 5
     },
     {
       "feature": "electricity_price_usd_per_kwh",
       "label": "Electricity Price (USD/kWh)",
-      "partialR2": 0.0023,
+      "partialR2": 0.003,
       "marginalEffect": 6.444347,
       "importanceRank": 6
     }

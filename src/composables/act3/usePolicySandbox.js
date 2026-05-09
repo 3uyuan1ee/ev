@@ -29,6 +29,7 @@ function transformValue(featureName, rawValue) {
 /**
  * Predicted EV market share using the linear model:
  * share = intercept + Σ(coefficient × transform(value))
+ * Output clamped to [0, 100] to prevent impossible values.
  */
 const predictedShare = computed(() => {
   let sum = model.intercept
@@ -37,7 +38,7 @@ const predictedShare = computed(() => {
     const transformed = transformValue(f.name, raw)
     sum += f.coefficient * transformed
   })
-  return Math.min(Math.max(0, sum), 100) // clamp to [0, 100]
+  return Math.min(Math.max(sum, 0), 100)
 })
 
 /**
@@ -49,7 +50,7 @@ const defaultShare = computed(() => {
     const transformed = transformValue(f.name, f.range.default)
     sum += f.coefficient * transformed
   })
-  return Math.max(0, sum)
+  return Math.min(Math.max(sum, 0), 100)
 })
 
 /**
@@ -65,7 +66,7 @@ const featureImportance = computed(() => {
       name: f.name,
       label: f.label,
       coefficient: f.coefficient,
-      impact: delta, // positive = increases share, negative = decreases
+      impact: delta,
       absImpact: Math.abs(delta)
     }
   })
@@ -95,12 +96,15 @@ const sensitivityData = computed(() => {
       sumMax += other.coefficient * transformed
     })
 
+    const atMin = Math.min(Math.max(sumMin, 0), 100)
+    const atMax = Math.min(Math.max(sumMax, 0), 100)
+
     return {
       name: f.name,
       label: f.label,
-      atMin: Math.max(0, sumMin),
-      atMax: Math.max(0, sumMax),
-      delta: Math.max(0, sumMax) - Math.max(0, sumMin),
+      atMin,
+      atMax,
+      delta: atMax - atMin,
       unit: getUnit(f.name)
     }
   }).sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta))

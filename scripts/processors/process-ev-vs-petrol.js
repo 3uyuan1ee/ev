@@ -78,6 +78,7 @@ export async function processEvVsPetrol() {
   // === Output 3: policy-heatmap-timeseries.json ===
   // Load IEA EV sales share data to override synthetic CSV market share values
   let ieaSalesShare = {}
+  const extrapolatedKeys = new Set() // track "country:year" pairs that were extrapolated
   try {
     const ieaData = JSON.parse(fs.readFileSync(dataPath('act2', 'ev-growth-by-region.json'), 'utf-8'))
     // Build lookup: country -> year -> share
@@ -88,15 +89,41 @@ export async function processEvVsPetrol() {
         ieaSalesShare[region.region][s.year] = s.value
       }
     }
-    // Carry-forward: extend IEA data to 2025 using last known year's value
-    // (IEA historical data ends at 2024, but heatmap includes 2025 projections)
+    // Extrapolate IEA data to 2025 using 3-year moving average growth rate
+    // (IEA historical data typically ends at 2024, but heatmap includes 2025 projections)
     for (const [country, yearMap] of Object.entries(ieaSalesShare)) {
       const years = Object.keys(yearMap).map(Number).sort()
       const lastYear = years[years.length - 1]
-      const lastValue = yearMap[lastYear]
       // Extend to 2025 if not already present
-      if (lastYear < 2025 && lastValue !== undefined) {
-        yearMap[2025] = lastValue
+      if (lastYear < 2025) {
+        const lastValue = yearMap[lastYear]
+        if (lastValue === undefined) continue
+
+        // Calculate 3-year moving average growth rate from the last 3 available year-over-year changes
+        const recentYears = years.slice(-4) // need 4 years to compute 3 YoY growth rates
+        let growthRates = []
+        for (let i = 1; i < recentYears.length; i++) {
+          const prevVal = yearMap[recentYears[i - 1]]
+          const currVal = yearMap[recentYears[i]]
+          if (prevVal > 0 && currVal !== undefined) {
+            growthRates.push((currVal - prevVal) / prevVal)
+          }
+        }
+        // Fallback: if we have fewer than 3 growth rates, use whatever is available
+        if (growthRates.length === 0) {
+          // Zero-growth fallback (original behavior)
+          yearMap[2025] = lastValue
+          extrapolatedKeys.add(`${country}:2025`)
+        } else {
+          const avgGrowthRate = growthRates.reduce((s, r) => s + r, 0) / growthRates.length
+          // Apply growth rate iteratively for each missing year up to 2025
+          let projected = lastValue
+          for (let yr = lastYear + 1; yr <= 2025; yr++) {
+            projected = roundTo(projected * (1 + avgGrowthRate), 4)
+            yearMap[yr] = projected
+            extrapolatedKeys.add(`${country}:${yr}`)
+          }
+        }
       }
     }
     console.log(`  IEA sales share override loaded for ${Object.keys(ieaSalesShare).length} regions (with carry-forward to 2025)`)
@@ -122,6 +149,7 @@ export async function processEvVsPetrol() {
         ? roundTo((totalEvSales / totalVehicleSales) * 100, 2) : 0
       // Override with IEA data if available (more authoritative than synthetic CSV)
       const ieaShare = ieaSalesShare[country]?.[Number(yr)]
+      const isExtrapolated = extrapolatedKeys.has(`${country}:${yr}`)
       const evMarketShare = ieaShare !== undefined ? ieaShare : csvMarketShare
       // Macro indicators from ICE rows (same across segments)
       const iceRows = yrRows.filter(r => r.powertrain_type === 'ICE')
@@ -131,6 +159,7 @@ export async function processEvVsPetrol() {
         emissionRegulationScore: roundTo(iceRows.reduce((s, r) => s + (r.emission_regulation_score || 0), 0) / n, 4),
         evSubsidyUsd: roundTo(iceRows.reduce((s, r) => s + (r.ev_subsidy_usd || 0), 0) / n, 0),
         evMarketShare,
+        ...(isExtrapolated ? { isExtrapolated: true } : {}),
         chargingStations: roundTo(iceRows.reduce((s, r) => s + (r.charging_stations || 0), 0) / n, 0),
         evSales: totalEvSales,
         evGrowthRateYoy: roundTo(iceRows.reduce((s, r) => s + (r.ev_growth_rate_yoy || 0), 0) / n, 2),

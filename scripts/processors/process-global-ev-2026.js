@@ -10,8 +10,11 @@ function parseCsv(filePath) {
 }
 
 export async function processGlobalEv2026() {
-  console.log('\n📊 Processing global_ev_market_2026.csv...')
+  console.log('\n📊 Processing global_ev_market_2026.csv (synthetic/forecast data)...')
   const rows = parseCsv(datasetPath('data/market_sales/global_ev_market_2026.csv'))
+
+  // Mark all data as synthetic — this CSV contains 2026 projections, not observed data
+  for (const r of rows) r._isSynthetic = true
 
   const vehicleTypes = [...new Set(rows.map(r => r.vehicle_type))].sort()
   const countries = [...new Set(rows.map(r => r.country))].sort()
@@ -71,17 +74,27 @@ export async function processGlobalEv2026() {
     brandTypeMap[key].batteries.push(r.battery_capacity_kwh)
   }
 
-  const globalAggregation = Object.values(brandTypeMap).map(g => ({
-    brand: g.brand,
-    vehicleType: g.vehicleType,
-    totalSales: g.sales.reduce((a, b) => a + b, 0),
-    avgPriceUsd: roundTo(g.prices.reduce((a, b) => a + b, 0) / g.prices.length, 0),
-    avgBatteryKwh: roundTo(g.batteries.reduce((a, b) => a + b, 0) / g.batteries.length, 1),
-    countryCount: g.sales.length,
-  }))
+  const globalAggregation = Object.values(brandTypeMap).map(g => {
+    const totalSales = g.sales.reduce((a, b) => a + b, 0)
+    // Sales-weighted average price (C3 fix: simple average misrepresents market)
+    const weightedPrice = totalSales > 0
+      ? g.sales.reduce((s, sales, i) => s + sales * g.prices[i], 0) / totalSales
+      : g.prices.reduce((a, b) => a + b, 0) / g.prices.length
+    return {
+      brand: g.brand,
+      vehicleType: g.vehicleType,
+      totalSales,
+      avgPriceUsd: roundTo(weightedPrice, 0),
+      avgBatteryKwh: roundTo(g.batteries.reduce((a, b) => a + b, 0) / g.batteries.length, 1),
+      countryCount: g.sales.length,
+      isSynthetic: true,
+    }
+  })
 
   await writeJson(dataPath('act2', 'brand-competition.json'), {
     vehicleTypes, countries, brands, data, globalAggregation,
+    isSynthetic: true,
+    sourceNote: 'Data from global_ev_market_2026.csv — synthetic/forecast projections, not observed market data.',
   })
 
   // === Output 2: grid-cleanliness-comparison.json (semi-auto) ===
@@ -103,21 +116,30 @@ export async function processGlobalEv2026() {
     'United Kingdom': 0.23, 'United States': 0.39,
   }
 
-  // Comparison basis: same midsize vehicle class across all countries
-  // ICEV: ~7 L/100km (midsize sedan), BEV: country-specific from data
-  // Note: real-world ICEV efficiency varies by country due to fleet composition.
-  // India (small cars dominant) may be ~5-6 L/100km, US (large SUVs) ~9-10 L/100km.
-  // Using a uniform 7 L/100km provides a standardized midsize baseline but
-  // overstates EV advantage in India and understates it in the US.
+  // Comparison basis: country-specific ICEV fuel consumption
+  // ICEV efficiency varies by country due to fleet composition (m6 fix):
+  //   US: large SUVs/trucks dominant → ~9.5 L/100km
+  //   Canada: similar to US → ~9.0 L/100km
+  //   Australia: large sedans/SUVs → ~8.5 L/100km
+  //   Europe/Japan: compact dominant → ~6.5 L/100km
+  //   China: mix → ~7.0 L/100km
+  //   India: small cars dominant → ~5.5 L/100km
+  //   Norway: high EV share, remaining ICE ~7.0 L/100km
+  // Source: IEA Global Fuel Economy Initiative 2024; ICCT country profiles
+  const ICEV_FUEL_MAP = {
+    'United States': 9.5, 'Canada': 9.0, 'Australia': 8.5,
+    'Germany': 6.5, 'France': 6.5, 'United Kingdom': 6.5,
+    'Japan': 6.5, 'China': 7.0, 'India': 5.5, 'Norway': 7.0,
+  }
   const FUEL_CO2_PER_LITER = 2.31  // kg CO₂ per liter gasoline (IPCC AR6)
-  const ICEV_L_PER_100KM = 7.0     // midsize sedan baseline
 
   const countriesOutput = Object.entries(countryAgg).map(([country, agg]) => {
     const info = getCountryInfo(country)
     const avgCo2 = roundTo(agg.co2.reduce((a, b) => a + b, 0) / agg.co2.length, 1)
     const avgEnergy = roundTo(agg.energy.reduce((a, b) => a + b, 0) / agg.energy.length, 1)
     const gridCO2 = gridCO2Map[country] || 0.45
-    const icevEmissionsPer100km = FUEL_CO2_PER_LITER * ICEV_L_PER_100KM
+    const icevLiters = ICEV_FUEL_MAP[country] || 7.0
+    const icevEmissionsPer100km = FUEL_CO2_PER_LITER * icevLiters
     const bevEmissionsPer100km = gridCO2 * avgEnergy
     const evCarbonAdvantage = roundTo((1 - bevEmissionsPer100km / icevEmissionsPer100km) * 100, 1)
 
@@ -125,7 +147,7 @@ export async function processGlobalEv2026() {
       country,
       iso3: info ? info.iso3 : '',
       gridCO2PerKwh: gridCO2,
-      icevLitersPer100km: ICEV_L_PER_100KM,
+      icevLitersPer100km: icevLiters,
       avgEnergyConsumptionKwh: avgEnergy,
       co2ReductionMt: avgCo2,
       evCarbonAdvantage,
@@ -138,7 +160,7 @@ export async function processGlobalEv2026() {
   await writeJson(dataPath('act4', 'grid-cleanliness-comparison.json'), {
     countries: countriesOutput,
     globalAverage: { gridCO2PerKwh: globalAvgCO2, evCarbonAdvantage: globalAvgAdvantage },
-    methodologyNote: 'EV carbon advantage = (1 - BEV_op_emissions / ICEV_op_emissions) × 100%. Same midsize sedan class: ICEV 7 L/100km × 2.31 kg CO₂/L = 16.17 kg/100km; BEV = gridCO₂ × avgEnergy. Operational emissions only (excludes manufacturing). Real-world advantage varies by local vehicle fleet composition.',
+    methodologyNote: 'EV carbon advantage = (1 - BEV_op_emissions / ICEV_op_emissions) × 100%. ICEV fuel consumption varies by country fleet composition (US ~9.5 L/100km, Europe ~6.5, India ~5.5). BEV = gridCO₂ × avgEnergy. Operational emissions only (excludes manufacturing). Data is synthetic/forecast.',
   })
 
   return { rows }

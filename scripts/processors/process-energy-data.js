@@ -8,6 +8,7 @@
 import fs from 'fs/promises'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import Papa from 'papaparse'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '../..')
@@ -30,16 +31,11 @@ async function writeJson(filePath, data) {
 }
 
 function parseCsv(raw) {
-  const lines = raw.replace(/^\uFEFF/, '').trim().split('\n')
-  const header = lines[0].split(',').map(h => h.trim())
+  const content = raw.replace(/^\uFEFF/, '').trim()
+  const parsed = Papa.parse(content, { header: true, skipEmptyLines: true, dynamicTyping: true })
   return {
-    header,
-    rows: lines.slice(1).map(line => {
-      const cols = line.split(',').map(c => c.trim())
-      const obj = {}
-      header.forEach((h, i) => { obj[h] = cols[i] })
-      return obj
-    })
+    header: parsed.meta.fields || [],
+    rows: parsed.data,
   }
 }
 
@@ -56,9 +52,10 @@ async function processEnergySubstitution() {
   ]
 
   const data = worldRows.map(r => {
-    const entry = { year: parseInt(r.Year) }
+    const year = typeof r.Year === 'number' ? r.Year : parseInt(r.Year)
+    const entry = { year }
     for (const type of energyTypes) {
-      const val = parseFloat(r[type])
+      const val = typeof r[type] === 'number' ? r[type] : parseFloat(r[type])
       if (!isNaN(val)) entry[type.toLowerCase().replace(/\s+/g, '_')] = roundTo(val, 1)
     }
     return entry
@@ -83,8 +80,8 @@ async function processLeadPetrolBan() {
 
   for (const r of rows) {
     const entity = r.Entity
-    const year = parseInt(r.Year)
-    const banned = r[banCol] === 'Yes' || r[banCol] === 'True' || r[banCol] === '1'
+    const year = typeof r.Year === 'number' ? r.Year : parseInt(r.Year)
+    const banned = r[banCol] === 'Yes' || r[banCol] === 'True' || r[banCol] === '1' || r[banCol] === 1 || r[banCol] === true
     if (banned && !isNaN(year) && entity && !seenCountries.has(entity)) {
       seenCountries.add(entity)
       bans.push({ country: entity, year })
