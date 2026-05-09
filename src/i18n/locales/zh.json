@@ -1,7 +1,7 @@
 {
   "app": {
     "heroTitle": "电动化十字路口",
-    "heroSubtitle": "电池成本已经大幅降低。但全球 95% 的存量汽车仍在烧油。为什么？",
+    "heroSubtitle": "电池成本已经大幅降低。但全球大部分的存量汽车仍在烧油。为什么？",
     "act1Number": "第一章",
     "act1Title": "成本解耦",
     "act1Subtitle": "电池成本已经大幅降低了，为什么路上还有大量燃油车？",
@@ -296,7 +296,7 @@
     "energyLeadBanYAxis": "禁用国家数"
   },
   "act2": {
-    "insightTitle": "一个国家独占 60%，其余 190 个分剩下的 40%——全球 EV 市场的分布为何如此不均？",
+    "insightTitle": "全球 EV 市场的分布为何如此不均？",
     "insightCitation": "IEA 2025 · Noll 2026 · 中国充电联盟",
     "insightBody": "2024 年，中国独占全球 EV 销量的 60% 以上<span class=\"anno\" data-type=\"source\" data-tip=\"数据来源：IEA Global EV Outlook 2025 — 2024年全球EV销量约1750万辆，中国占约1130万辆 (64.5%)\">ⓘ</span>。但比绝对数量更值得注意的是结构性差异：挪威仅有 <strong class=\"highlight-number\">11,889</strong> 个公共充电桩（2019 年数据），EV 市场份额却超过 <strong class=\"highlight-number\">90%</strong>；中国有 343 万个充电桩（2024 年数据），份额 48%。全球前 10 大汽车市场的一半，EV 渗透率仍低于 5%。<a class=\"cite\" href=\"https://doi.org/10.1038/s41560-025-01955-x\" target=\"_blank\">Noll et al. 2026</a> 表明，即便在非洲，太阳能离网充电也能让 BEV 在 2040 年前可行——电动车本身已经足够便宜，太阳能充电技术也已成熟，缺的是让消费者买得起车的贷款和分期方案。瓶颈是<em>融资</em>，不是技术。<strong>是什么解释了这种巨大的差异？</strong>",
     "narrativeP1": "根据 <a class=\"cite\" href=\"https://www.iea.org/reports/global-ev-outlook-2025\" target=\"_blank\">IEA 2025</a>，全球 EV 销量从 2012 年的 12 万辆增至 2024 年的约 1700 万辆<span class=\"anno\" data-type=\"source\" data-tip=\"数据来源：IEA GEVO_EV_2025_main.csv (16,437行) — 25国EV销量/存量 2010-2024\">ⓘ</span>。但这一增长极不均衡。挪威仅靠 1.2 万个充电桩就实现了 >90% 的渗透率——<a class=\"cite\" href=\"https://doi.org/10.1016/j.eist.2016.11.002\" target=\"_blank\">Figenbaum (2017)</a> 的分析表明，这背后是自 1990 年以来逐步构建的免税政策<span class=\"anno\" data-type=\"source\" data-tip=\"Figenbaum 2017 (Environ. Innov. Soc. Transit.) — 挪威EV政策包括：购置税免除、增值税免除、通行费免除、渡轮费免除、公交车道使用权，自1990年起逐步实施，25年持续累积效应让EV购置成本低于同级别燃油车\">ⓘ</span>，让 EV 的购置成本低于燃油车。中国走了另一条路：343 万个充电桩 + 补贴 + 产业链垂直整合。这两种截然不同的路径提出了一个问题：<strong>是什么因素真正驱动了 EV 的普及？</strong>充电基础设施是关键，还是其他变量在起作用？",

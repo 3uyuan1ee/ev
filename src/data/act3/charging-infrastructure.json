@@ -30,97 +30,97 @@
           "ac": 0,
           "dc": 0,
           "total": 22500,
-          "bevSales": null
+          "bevSales": 14604
         },
         {
           "year": 2014,
           "ac": 0,
           "dc": 0,
           "total": 30900,
-          "bevSales": null
+          "bevSales": 21732
         },
         {
           "year": 2015,
           "ac": 0,
           "dc": 0,
           "total": 49000,
-          "bevSales": null
+          "bevSales": 52243
         },
         {
           "year": 2016,
           "ac": 52778,
           "dc": 38096,
           "total": 141254,
-          "bevSales": null
+          "bevSales": 167572
         },
         {
           "year": 2017,
           "ac": 86469,
           "dc": 61375,
           "total": 213903,
-          "bevSales": null
+          "bevSales": 456097
         },
         {
           "year": 2018,
           "ac": 190000,
           "dc": 110000,
           "total": 300000,
-          "bevSales": null
+          "bevSales": 717414
         },
         {
           "year": 2019,
           "ac": 289000,
           "dc": 206000,
           "total": 496000,
-          "bevSales": null
+          "bevSales": 730509
         },
         {
           "year": 2020,
           "ac": 0,
           "dc": 301840,
           "total": 686000,
-          "bevSales": null
+          "bevSales": 1152000
         },
         {
           "year": 2021,
           "ac": 0,
           "dc": 444360,
           "total": 966000,
-          "bevSales": null
+          "bevSales": 1512000
         },
         {
           "year": 2022,
           "ac": 0,
           "dc": 660480,
           "total": 1376000,
-          "bevSales": null
+          "bevSales": 1980000
         },
         {
           "year": 2023,
           "ac": 0,
           "dc": 716500,
           "total": 1433000,
-          "bevSales": null
+          "bevSales": 2520000
         },
         {
           "year": 2024,
           "ac": 0,
           "dc": 1161160,
           "total": 2233000,
-          "bevSales": null
+          "bevSales": 3240000
         },
         {
           "year": 2025,
           "ac": 0,
           "dc": 1853820.0000000002,
           "total": 3433000,
-          "bevSales": null
+          "bevSales": 4320000
         }
       ],
       "yearRange": "2010-2025",
       "dataPoints": 16,
       "maxTotal": 3433000,
-      "maxBevSales": 0
+      "maxBevSales": 4320000
     },
     {
       "country": "Norway",

@@ -70,7 +70,7 @@ async function processChina() {
   const data = []
 
   // Build column map from header rows (rows 0–1)
-  // Format: [source_header, , AC, DC, AC/DC, Total, , source_url, ...]
+  // Format: [source_header, , AC, DC, AC/DC, Total, BEV, ...]
   const headerRow = lines[1] || lines[0]
   const mappedCols = buildColumnMap(headerRow, {
     year:   /year/i,           // year column is second (index 1) but has no header — fallback below
@@ -78,7 +78,6 @@ async function processChina() {
     dc:     /^dc$/i,
     acdc:   /^ac.?dc$/i,
     total:  /^total$/i,
-    bev:    /bev/i,
   })
   // China year column has empty header — fall back to index 1 if not found
   if (mappedCols.year == null) mappedCols.year = 1
@@ -89,12 +88,18 @@ async function processChina() {
     if (isNaN(year)) continue
     const total = col(cols, mappedCols, 'total') || col(cols, mappedCols, 'acdc') || 0
     if (total <= 0) continue
+    
+    // BEV sales data is at index 6 (7th column, 0-indexed)
+    // From the CSV, we can see BEV numbers are in column 6
+    const bevSales = cols.length > 6 && cols[6] ? parseFloat(cols[6]) : null
+    const finalBevSales = isNaN(bevSales) ? null : bevSales
+    
     data.push({
       year,
       ac: col(cols, mappedCols, 'ac'),
       dc: col(cols, mappedCols, 'dc'),
       total,
-      bevSales: col(cols, mappedCols, 'bev') || null,
+      bevSales: finalBevSales,
     })
   }
   return data
