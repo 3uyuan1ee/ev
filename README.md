@@ -1,38 +1,43 @@
-# ev
+# EV Crossroads
 
-This template should help get you started developing with Vue 3 in Vite.
+An interactive data storytelling web app that helps you decide: **EV or ICEV?**
 
-## Recommended IDE Setup
+Built as a four-act scrollytelling experience — from total cost of ownership analysis, through carbon payback timing and battery price trends, to the policy levers shaping the transition.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+**Live site**: [ev.3uyuan1ee.me](https://ev.3uyuan1ee.me/)
 
-## Recommended Browser Setup
+## Highlights
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **Interactive TCO calculator** — compare BEV/PHEV/HEV/ICEV costs across vehicle classes, mileage, ownership years, and charging strategies
+- **Carbon crossover detector** — cumulative BEV vs ICEV emissions with grid cleanliness presets
+- **Triple battery model** — exponential decay, bounded exponential (Levenberg-Marquardt), and experience curve (Wright's Law) with confidence intervals
+- **Policy sandbox** — OLS regression with 6-factor sliders, VIF diagnostics, and 5-fold cross-validation
+- **Academic-grade sourcing** — inline `.anno` annotations citing 30+ papers and IEA/OWID datasets
 
-## Customize configuration
+## Tech Stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Vue 3 · Vite 7 · ECharts 6 · D3 7 · @vueuse/core
 
-## Project Setup
+No router, no state library — composable singletons + IntersectionObserver for section tracking.
 
-```sh
+## Data Pipeline
+
+```
+dataset/ (CSV, XLSX) → scripts/preprocess.js (12 processors) → src/data/**/*.json → Vue components
+```
+
+Statistical models (OLS, nonlinear least squares, experience curve fitting) are implemented in pure JavaScript with no external dependencies.
+
+## Development
+
+```bash
 npm install
+npm run dev      # preprocess data + start Vite dev server
+npm run build    # preprocess data + production build
 ```
 
-### Compile and Hot-Reload for Development
+Requires Node.js `^20.19.0 || >=22.12.0`.
 
-```sh
-npm run dev
-```
+## License
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+MIT
